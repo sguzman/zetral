@@ -1,7 +1,6 @@
 name: Numerical verification
 on:
-  pull_request:
-    paths: ['experiments/**', '.github/workflows/numerical-verification.yml']
+  workflow_call:
   workflow_dispatch:
 permissions:
   contents: read
