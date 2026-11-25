@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-25 UTC.
-Active campaign: none. Campaign X — Relative derivative evaluation growth concluded (research/CAMPAIGN-10-CLOSURE.md); pointwise problem unresolved.
+Active campaign: XI — Unconditional critical-window spectral positivity (research/CAMPAIGN-11.md). Campaign X concluded; pointwise problem unresolved.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -29,4 +29,8 @@ Campaign X:
 
 Inherited limitations: no independent human review, originality determination or practical numerical interval certification. Only earlier five scalar Lean lemmas and baseline Rust tests/smoke verified in Campaign II. Draft PR #2 ball/full Rust verification not established; Situs canonical target unavailable, Nix incomplete, Pages unverified. Avoid unrelated infrastructure retries.
 
-Resume: inspect AGENTS.md, STATE.md, COORDINATION.md and worker/k02-w04 handoff. Campaign X is complete as a bounded investigation, not a solution of RH. No active lead milestone. Reopen work only on a concrete justified new research direction or an actual worker handoff; do not repeat completed investigations or manufacture work. No external submission, expenses, access changes, or infrastructure detours.
+Campaign XI:
+- U01 COMPLETE: research/positivity/U01-strict-bottom-monotonicity.md, commit b1f3fe3609743ebf0e0e6d1d7781552e44278a11, blob 1f7dc3bdfcedfcc59e4ec8f4e41cdb28c574e4ca, exact pinned readback verified. Unconditional strict bottom monotonicity by translation invariance, core completion and finite multiplicity. For a>b, m=dim bottom eigenspace at a, gap g_a to next distinct eigenvalue, G Gram of m+1 distinct translates of normalized b-ground state: lambda_b-lambda_a>=g_a lambda_min(G)/(m+1)>0. Hence unique first zero if RH fails; RH iff none (known Yoshida criterion, additional strictness deduction). Actual Suzuki v4 Theorem 1.1, Corollary 1.2, (1.7), Theorems 1.3–1.4 and autocorrelation definition retrieved this turn. Prior-art search preliminary, no novelty claim, independent review or formal/numerical run. Previous N04 and follow-up source-provenance assertions overstated actual retrieval; U01 records only current evidence. K02-W04 branch exact search absent.
+- U02 READY: investigate quantitative translate bounds, actual usefulness of gap/Gram inequality and negative-index literature; then U03–U04 per active plan.
+
+Resume on continue: read AGENTS.md, STATE.md, COORDINATION.md, CAMPAIGN-11.md and U01 note; check worker handoff, execute U02. Owner explicitly reaffirmed autonomous successive campaigns; close and pivot rather than treating a local obstruction as mission-wide termination. No external submission or expenses. Do not invent verification or claim background execution.
