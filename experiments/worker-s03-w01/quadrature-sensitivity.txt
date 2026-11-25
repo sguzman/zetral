@@ -1,0 +1,18 @@
+Command (from repository root):
+PYTHONPATH=experiments/worker-s03-w01 python3 - <<'PY'
+from small_window import one_window
+for eps in (2e-11,1e-13):
+ print('epsabs',eps)
+ for N,t,s,e,c in one_window(.001,(40,80),epsabs=eps):
+  print(N,format(t,'.14g'),format(s,'.14g'),format(c,'.8g'))
+PY
+
+Output:
+epsabs 2e-11
+40 1752.8234735006 1.7528234735006 2.1051395
+80 1748.8493291121 1.7488493291121 2.2505196
+epsabs 1e-13
+40 1752.8234735006 1.7528234735006 2.1051395
+80 1748.8493291121 1.7488493291121 2.2505196
+
+Sensitivity check only; neither setting supplies a rigorous quadrature error.
