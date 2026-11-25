@@ -1,0 +1,23 @@
+# BC01 — Guarded arithmetic beyond log(11)
+
+Campaign LXIV, 2026-11-25. Target h=12/5. Candidate analytic/computational extension of inherited formulas, not original-form verification or a positivity result at the new window.
+
+## Shift and exact witness
+
+The prime powers strictly below exp(h) are 2,3,4,5,7,8,9,11. The new coefficient is b11=log(11)/sqrt(11); outward 10^30 interval [722992627858100003289780066423,722992627858100003289780066522]/10^30, hence b11<724/1000. The exact endpoint 111/10 is larger than exp(h) and smaller than 13. On x in (1,111/10), each shift is multiplication/division by its prime power, with zero extension. For a positive piecewise constant weight W, the Schur test uses sum_m b_m(W(mx)+W(x/m))<=C W(x) a.e.; symmetry of shifts for dx/x gives the operator norm bound C. Restriction to the smaller window preserves it. Refining by all shifted breakpoints checks the inequality throughout each open cell; boundary points are null. The iteration constructs integer W values heuristically, but the final inequality is checked exactly. All eight rational upper coefficients are checked by interval log/sqrt.
+
+[Witness code](../../experiments/bc01-eleven-witness.js) c6e1c0d8eea15272d7bed8f234200791949f89bd; [full witness](../../experiments/results/bc01-endpoint-111-10-witness.json) eb0a0e4da51d390cb7fa7d5544eade824813467e. Step 16, 24461 original weight cells, 33139 refined cells, C=2762/1000. Worst cell (176/175,566433/563200). Replayed within generator; code and full witness exact pinned readbacks.
+
+## Entry and tail extension
+
+For normalized cosine modes e_n=nu_n cos(pi*n*x/h)/sqrt(h), nu_0=1, nu_n=sqrt(2) otherwise, a shift s=log(11) contributes 2 b11 nu_n nu_k I/h in a same-parity block, since reflection x->h-x interchanges the adjoint entries and gives (-1)^(n+k)=1. I=integral_0^(h-s) cos(omega_n(x+s))cos(omega_k*x) dx. Product-to-sum gives I=h-s at n=k=0, I=((h-s)cos(omega_n*s)-sin(omega_n*s)/omega_n)/2 at n=k>0, and I=(omega_k sin(omega_k*s)-omega_n sin(omega_n*s))/(omega_n^2-omega_k^2) at n!=k. Opposite-parity symmetrized entry vanishes by reflection. The inherited generic shift loop already computes this for arbitrary positive s<h. Direct product-to-sum with endpoint phases left unsimplified overlaps the outward 10^66 intervals for ten selected entries including zero, diagonal, reversed, high and odd modes; this checks the new contribution, not every full entry.
+
+Generator [bc01-log13-regime.js](../../experiments/bc01-log13-regime.js) 90b510fe59a9f57c0ca68971b7be9174fc590322. Dedicated regime rejects h<=log(11), h>=log(13), and h>=log(111/10), using disjoint outward bounds. All eight shifts feed P, psum and dj. In the inherited tail formula p_j=2 sqrt(2)b_j/pi; the leading oscillatory sum, p=sum_j p_j in CL, and dj's sum p_j k sin(omega_k s_j) now include 11. C8, direction coefficients and rank weights consume these common quantities, and g uses the new Schur bound 2.762. The gamma/archimedean, pole, EM truncation and geometric integral arguments depend on h and generic shifts, not the count seven. No extra hard-coded shift count found in this generator; downstream allocation and replay consume components, and their compatibility with new raw data remains to be tested. This is a scoped extension audit, not an independent derivation of inherited operator normalization or tail theorems.
+
+[Entry probe](../../experiments/bc01-entry-probe.js) 99f6fe1b30f9d8606398b7271098c90be2de23a1 and [raw](../../experiments/results/bc01-11-entry-probe.json) f0dc70e8eae611966b93643d84b0df5c5129457e exact readbacks. All 10 interval overlaps pass.
+
+## High-mode guard
+
+[Guard code](../../experiments/bc01-guard-probe.js) 204d897c96ef3385e5787943509f133906076221; [raw](../../experiments/results/bc01-12-5-guard.json) 71bd404aa713b75b9f608d97c7ab59d90c59189f. Exact 10^66 bounds: h-log(11)>0.0021047272016, log(111/10)-h>0.0069451083182, log(13)-h>0.1649493574615. Both parities have positive g at all tested low counts 41–50. At 41, lower bounds exceed 0.07597313675 even and 0.08809713326 odd; g increases thereafter by its explicit formula. Begin BC02 with 41 low, J4096 or J8192, M8192, T768, even first. Guard is not a positive Schur comparison. Generator default 45 is an alternate guard-tested support; override with 41 for continuity.
+
+Reproduce with node experiments/bc01-eleven-witness.js; node experiments/bc01-guard-probe.js; node experiments/bc01-entry-probe.js. Executed equivalent source bodies in cloud JS; no local Node CLI or CI run claimed. New files exact pinned readback. No novelty, external review, RH proof, or candidate frontier advancement. 
