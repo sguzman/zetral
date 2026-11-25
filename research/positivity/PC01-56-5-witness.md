@@ -1,0 +1,7 @@
+# PC01 — Extend guarded eight-shift regime to h=241/100
+
+The previous endpoint 111/10 is insufficient at h=2.41. Reused exact rational witness algorithm at endpoint 56/5; all eight shift weights unchanged. Step 16 bound 2776/1000, 24627 refined cells. Full output d1272d80d764a81428cd8371f63c5479870352f9, blob 8b3d89fba9a51cdac43337e8079351d44519d97f, exact byte readback.
+
+[Guarded EM generator](../../experiments/pc01-post-log11-em.js) c9fe43acbdae7986e16c002d5dc1409bd0356298 retains endpoint 111/10 and its bound below that endpoint and selects the new witness otherwise. Requires strict outward guards above log11 and below log(56/5) and log13; witness bound and cell count checked each run. Order-40 EM and generic eight-shift entries retained. [Guard probe](../../experiments/pc01-guard-probe.js) dc037dda09559bd096e748623a5d3bad946dd8bd; [raw](../../experiments/results/pc01-241-100-guards.json) 90dd59d0e16dbdcb9eef3f3e4d637a92acf5cb06. Both parities positive for low counts 41–50; at 41, g>0.0578140394 even and >0.0699380545 odd. All new files exact pinned readback.
+
+Next PC02: even h=241/100 J128 KEM20 M8192 T768 41 low; regenerate geometric and oscillatory factors using new guarded generator and test joint replay. Odd only after even passes. Candidate frontier remains 2.40. No full comparison at 2.41 or RH claim. Independent original-form review and originality determination remain outstanding.
