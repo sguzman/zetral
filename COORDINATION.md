@@ -16,6 +16,8 @@ Protocol established 2026-11-25 UTC. This file is the lead's assignment ledger, 
 | N02 | Lead | COMPLETE | Coercivity audit, obstruction and revised conditional prolate route | research/evaluation/N02-* |
 | N03 | Lead | COMPLETE | RH-only nested-window exceptional-set theorem and scalar obstruction | research/evaluation/N03-* |
 | N04 | Lead | COMPLETE | Consolidation and pointwise regularity assessment | research/evaluation/campaign-10-*; STATE.md; coordination ledger |
+| U01 | Lead | COMPLETE | Strict bottom monotonicity and finite-translate inequality | research/positivity/U01-* |
+| U02 | Lead | READY | Quantitative translation and negative-index assessment | research/positivity/U02-* |
 | C04-W01 | Codex | ACCEPTED — audit/diagnostic only | Independent C02 audit and X=2 feasibility | Original branch preserved; files integrated on main |
 | S03-W01 | Codex | ACCEPTED — diagnostics only | Independent small-window finite-root investigation | Original branch preserved; files integrated on main |
 | S04-W02 | Codex | ACCEPTED — scoped AI proof audit | Independent Campaign V audit and coefficient checks | Original branch preserved; files integrated on main |
@@ -81,3 +83,5 @@ For a Goal invocation, complete every explicit worker assignment plus each genui
 Lead reviews the exact submitted commit, verifies claims against artifacts and checks, then records ACCEPTED / REVISION_REQUESTED / BLOCKED in this ledger. Only accepted work enters main and research state; negative findings are acceptable evidence. No external submission or novelty claim without the established review process.
 
 Campaign X closure: N04 complete at 7c95e3b8da58622cb3cee6ad3a590c264384eafc; consolidated relative-evaluation note and explicit pointwise regularity criteria. No active lead campaign or new assignment; existing K02-W04 audit remains independent and unacknowledged. No new work without a justified direction or evidence.
+
+Campaign XI active following owner clarification: campaign closure is not mission termination. U01 complete at b1f3fe3609743ebf0e0e6d1d7781552e44278a11, exact readback; lead owns U02–U04. Worker K02-W04 still assigned, exact branch search empty. No accepted new worker result. Worker may select independent useful follow-ups within active campaign after disposition of explicit assignment.
