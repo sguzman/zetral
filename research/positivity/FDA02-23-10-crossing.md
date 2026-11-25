@@ -1,0 +1,10 @@
+# FDA02 — Candidate h=23/10 crossing
+
+2026-11-25. Actual full V8 interval runs at h=23/10, J4096, M6656, T576, 32 low directions per parity, lattice 10^66, prime norm bound 2.520 on endpoint 10, twelfth-order rate and eighth-order signed residual. New generator FDA01, even shares (9400,476,84,8,8,8,8,8)/10000, inherited odd shares. Exact weighted interval deduction.
+
+- Even experiments/results/fda02-23-10-even.json c50c35fd22b481f5ce68b2383bab5908ada4f335: all 32 leading minors positive; first numerator 177157169975411804837954/10^66; first energy interval [209774574456948564520662,209792701788562241789533]/10^66; first weighted radius 9066745898384228000/10^66; approximate relative residual 0.99820593.
+- Odd experiments/results/fda02-23-10-odd.json 89b6205fc1e459049675245718ff044895e5bc36: all 32 leading minors positive; first numerator 886113158707618844708866729/10^66; first weighted radius 14174665675528681623/10^66; approximate relative residual 0.93674364.
+
+Both raw data exactly read back from pinned contents endpoints. Relative to the ATM03 weighted even radius 28588096588/10^54, the new radius is about 3153x smaller, and first energy interval width is about 3154x smaller. Joint changes to J, primitive precision, basis and allocation do not isolate a single causal factor. The old hypothetical budget was not a certificate; the new full matrices pass independently of that budget. The relative residual diagnostics are not certified eigenvalue gaps. Candidate frontier advances from 2.25 to 2.30 under inherited identification. Independent original-form normalization, full independent implementation and human/formal review still outstanding. No actual negative spectrum, RH proof, priority or literature record claim.
+
+Reproduce: node experiments/fda01-precision66-regimes.js --even 23 10 4096 6656 576 32 and --odd. FDA03 targeted refinement no longer needed to pass this window; assess measured residual bottleneck and exact margin before further expansion; FDA04 stored replay.
