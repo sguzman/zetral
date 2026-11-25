@@ -20,4 +20,12 @@ jobs:
           grep -q 'Situs' AGENTS.md
           grep -q 'No original' site/index.html
           grep -q '</html>' site/index.html
-      # Lean, Rust and paper checks will be added when their artifacts exist.
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pinned Rust
+        run: rustup toolchain install 1.85.0 --profile minimal
+      - name: Test arithmetic baseline
+        run: cargo +1.85.0 test --manifest-path experiments/Cargo.toml
+
