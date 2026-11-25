@@ -45,6 +45,10 @@ const g=[ONE];for(let m=1;m<=degree+1;m++){
 }
 const jcoef=g.slice(1).map(x=>div(x,TWO)),jerr=R(5n,2n**BigInt(degree));
 function jval(x){let y=ZERO;for(let k=degree;k>=0;k--)y=add(jcoef[k],mul(x,y));return widen(y,jerr[1])}
+let jprime=R(5n*BigInt(degree+2),2n**BigInt(degree));
+for(let m=1;m<=degree;m++)jprime=add(jprime,mul(R(BigInt(m)),[0n,absup(jcoef[m])]));
+const Jbound=mul(TWO,add([0n,absup(jval(ONE))],jprime));
+if(Jbound[1]>4n*Q)throw Error('kernel bound');
 const samples=Array.from({length:M},(_,i)=>jval(R(BigInt(2*i+1),BigInt(2*M))));
 const coeff=[],symbols=[],a=[];
 for(let n=0;n<=N;n++){
@@ -87,13 +91,13 @@ for(const ncut of [8,16,32]){
    s[b]=add(s[b],add(add(L2,mul(TWO,mul(v,L1))),mul(h,square(v))));
   }
  }
- const eps=sqrtI(div(R(512n),mul(R(BigInt(3*ncut**3)),square(square(pi)))))[1];
+ const eps=sqrtI(div(mul(R(32n),square(Jbound)),mul(R(BigInt(3*ncut**3)),square(square(pi)))))[1];
  for(let b=0;b<2;b++){
   let lifted=mul(TWO,s[b]),norm=sqrtI(lifted);
   let out=square([max([0n,norm[0]-eps]),norm[1]+eps]);
   rows.push({N:ncut,restored:!!b,lifted:lifted.map(String),epsilonUpper:String(eps),continuum:out.map(String),uncertain});
  }
 }
-return {scale:String(Q),M,degree,rows};
+return {scale:String(Q),M,degree,Jupper:String(Jbound[1]),rows};
 }
 console.log(JSON.stringify(lifted(),null,2));
