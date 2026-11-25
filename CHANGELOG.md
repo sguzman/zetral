@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXII
+## Campaigns XII–XXIII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -16,7 +16,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XIX — Boundary profiles and spectral prefactors](research/CAMPAIGN-19.md) | Closed mathematically. Conditional multiscale asymptotics, oscillations, Cauchy attenuation and [inverse parity trace](research/positivity/BPF04-audit-inverse-trace.md); no actual off-line zero or independent proof verification. |
 | [XX — Quantitative inverse spectral recovery](research/CAMPAIGN-20.md) | Closed mathematically. Conditional sampled recovery, exact synthetic integer intervals, and [audit](research/positivity/QIR04-audit-and-disposition.md); actual certified arithmetic spectral observations unavailable. |
 | [XXI — Log-energy boundary spectrum](research/CAMPAIGN-21.md) | Closed mathematically. Absolute strip bound, generalized I+compact operator, and [Hardy/Cauchy factors](research/positivity/LBS03-hardy-factorization.md); finite separated leading set still required. |
-| [XXII — Sobolev parity trace and global zero recovery](research/CAMPAIGN-22.md) | Active. Exact trace-class parity identity and analytic inverse. |
+| [XXII — Sobolev parity trace and global zero recovery](research/CAMPAIGN-22.md) | Closed mathematically. [Global trace inverse](research/positivity/STS02-laplace-zero-recovery.md), arithmetic-only prime-inclusive certificate and exact Volterra inverse; classical explicit-formula realization, not a new RH proof. |
+| [XXIII — Sobolev endpoint spectrum](research/CAMPAIGN-23.md) | Active. Individual generalized maximal-scale spectral asymptotics without finite/gap assumptions. |
 
 ## Campaigns I–XI — archived README
 
