@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XLVIII
+## Campaigns XII–XLIX
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -42,7 +42,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XLV — Digamma Neumann bracketing](research/CAMPAIGN-45.md) | Closed (candidate). Stronger complement, [exact positive boundary corrections](research/positivity/DNB02-exact-positive-boundary-resolvent.md), weighted Schur diagnostic fails on tested partitions. |
 | [XLVI — Monotone boundary lower operators](research/CAMPAIGN-46.md) | Closed (candidate). [Executed strict certificates](research/positivity/MBL03-executed-prime-free-lower-certificates.md) at prime-free physical lengths 1/4, 3/8, 7/16; 1/2 inconclusive. No record positivity range. |
 | [XLVII — Positive boundary complementary inverse](research/CAMPAIGN-47.md) | Closed (candidate). [Executed strict positivity](research/positivity/PBCI03-executed-prime-inclusive-certificates.md) at physical h=7/10 including prime 2; larger even comparisons inconclusive. |
-| [XLVIII — Localized prime exchange](research/CAMPAIGN-48.md) | Active. Retain localized positive prime-complement structure. |
+| [XLVIII — Localized prime exchange](research/CAMPAIGN-48.md) | Closed (candidate). [Executed strict positivity](research/positivity/LPE03-executed-localized-prime-certificates.md) at physical h=4/5, larger even comparisons inconclusive. |
+| [XLIX — Full boundary positive columns](research/CAMPAIGN-49.md) | Active. Exact positive compression reproduces selected columns; infinite-sum numerical tests pending. |
 
 ## Campaigns I–XI — archived README
 
