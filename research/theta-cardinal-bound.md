@@ -8,17 +8,17 @@ Assume RH and use Suzuki's sampling isomorphism and inverse compression (arXiv:2
 
     0 <= t_(a,n)-gamma_n <= K_n X^(5/2) exp(-2 pi X).
 
-Equivalently for every 0<c<2 pi the error is O_(n,c)(exp(-c exp(2a))). In particular it is O_(n,B)(exp(-B a)) for every fixed B>0. No assertion of optimality, uniformity in n, or computable a priori error certificate from finite arithmetic input. Multiplicities need not be one.
+Consequently for every 0<c<2 pi the error is O_(n,c)(exp(-c exp(2a))). In particular it is O_(n,B)(exp(-B a)) for every fixed B>0. No assertion of optimality, uniformity in n, or computable a priori error certificate from finite arithmetic input. Multiplicities need not be one.
 
 ## 1. Fourier kernel, normalization and tail lemma
 
-Use F[f](z)=integral_R f(x) exp(izx) dx as in Suzuki. Let A(z)=xi(1/2-iz), the classical even xi transform. The classical even smooth Fourier kernel Phi obeys, for x>0,
+Use F[f](z)=integral_R f(x) exp(izx) dx as in Suzuki. Let xi_0(s)=s(s-1) pi^(-s/2) Gamma(s/2) zeta(s)/2 and A(z)=xi_0(1/2-iz). Suzuki uses twice xi_0, which has the same zeros and multiplicities. The classical even smooth Fourier kernel Phi obeys, for x>0,
 
     Phi(x)=sum_(k>=1) (4 pi^2 k^4 exp(9x/2)-6 pi k^2 exp(5x/2))
                         exp(-pi k^2 exp(2x)),
     A(z)=F[Phi](z).
 
-Source: Lagarias–Montague, The Integral of the Riemann xi-Function, arXiv:1106.4348, (1.1)–(1.2); also Romik, arXiv:1902.06330. The normalization agrees with the usual xi(s)=s(s-1) pi^(-s/2) Gamma(s/2) zeta(s)/2. Even if a different constant normalization is used, the cardinal normalization below cancels it.
+Source: Lagarias–Montague, The Integral of the Riemann xi-Function, arXiv:1106.4348v3, (1.1)–(1.2); also Romik, arXiv:1902.06330. The normalization agrees with the usual xi(s)=s(s-1) pi^(-s/2) Gamma(s/2) zeta(s)/2. Using Suzuki's convention instead doubles both the kernel and the cardinal normalizer, leaving q_gamma unchanged.
 
 For y=exp(2|x|)>=1 the series gives |Phi(x)|<=C y^(9/4) exp(-pi y): factor out exp(-pi y), bound the remaining sum by sum (k^4+k^2) exp[-pi(k^2-1)], and use y^(5/4)<=y^(9/4). Smoothness and evenness are the classical theta identity.
 
