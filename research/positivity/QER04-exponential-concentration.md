@@ -1,0 +1,33 @@
+# QER04 — Exponential spectral concentration and Campaign XIII closure
+
+2026-11-25. Internal candidate deductions. Sections 1–3 below assume RH; the local quotient construction of QER01–02 does not. No proof of RH, individual node convergence, human review, formal verification, numerical certification or established priority. Actual source retrieved this turn: Suzuki arXiv:2610.32704v1 https://arxiv.org/html/2610.32704v1 §2.3 (2.8)–(2.9) (weighted sampling) and Theorem 3.3/§4 (positive-metric compression, not the edge result); arXiv:2606.09096v4 HTML opening. Skelly, Localized Weil Operators Across the Spectral Edge, https://www.alphaxiv.org/abs/2611.localized-weil-spectral-edge, search abstract/overview only (related edge characteristics and weights, global statements under a finite-off-line-zero hypothesis); full comparison outstanding.
+
+## 1. Compactly supported exponential probes
+
+Assume RH. Let Gamma be the distinct real ordinates, nu=sum_gamma m_gamma delta_gamma, and mu_a=sum_(t in sigma(D_a)) kappa_t^-1 delta_t. QER02–03 give for every compact smooth f supported in (-a,a)
+    int |F[f]|^2 dmu_a = int |F[f]|^2 dnu - lambda_1(a)||f||_2^2,
+with lambda_1(a)>0. The Fourier convention is F[f](t)=int f(x)e^(itx) dx, so Plancherel uses 1/(2pi). QER03 yields a uniform unit-interval measure bound O(log(2+|u|)) for mu_a and nu for all sufficiently large a.
+
+Fix b>0, a nonnegative smooth bump psi supported in (-b,b) with integral 1, and rho_b=(2b)^-1 1_[-b,b]. Let g_n=psi*rho_b^{*n}, compact smooth supported in [-b(n+1),b(n+1)]. Its Fourier transform is G_n(t)=F[psi](t) sinc(bt)^n, with sinc(0)=1. Choose n=floor(a/(2b)) and a>2b, ensuring support strictly inside (-a,a). For any fixed delta>0 let r=sup_(|v|>=b delta)|sinc(v)|<1 (strict inequality and decay). Then for |t|>=delta,
+    |G_n(t)|^2 <= r^(2n-2) min(1,(b|t|)^-2).
+For |t|<=c/sqrt(n) with a sufficiently small fixed c>0, |G_n(t)|^2>=c0>0 uniformly: continuity of F[psi] at 0 and sinc(v)>=1-v^2/6, followed by (1-C/n)^(2n)>=c1 for large n. In particular Z_n=int |G_n|^2 dt>=c2/sqrt(n). These facts suffice; no asymptotic equivalent for Z_n needed.
+
+For f(x)=g_n(x)e^(-iux), its transform is G_n(t-u). For u in a bounded set a distance at least delta from Gamma, the sampling sum against nu is <=C r^(2n-2), since the remaining min(1,(b|gamma-u|)^-2) is summable against the standard logarithmic unit-interval zero count, uniformly in bounded u. Since lambda_1>=0, the same upper bound holds for the mu_a integral. The lower bound near u gives
+    mu_a([u-c/sqrt(n),u+c/sqrt(n)]) <= C' r^(2n-2).
+Cover any fixed compact set K disjoint from Gamma by O(sqrt(n)) such intervals with centers in K (e.g. maximal separated subset); all centers share a positive delta. Absorb the polynomial factor in a smaller exponential rate to get mu_a(K)<=C_K exp(-c_K a). Each individual spectral weight there obeys this bound, regardless of how many nodes occur. Also choose one fixed u outside Gamma and use f as a minmax trial: lambda_1(a)<=q_a[f]/||f||_2^2<=C sqrt(n)r^(2n-2), hence 0<lambda_1(a)<=C exp(-c a). Constants depend on the chosen gap and b. No unconditional use of real-sample identity.
+
+## 2. Exponential convergence of cluster masses
+
+Let I=[l,r0] be a bounded nondegenerate interval whose endpoints are off Gamma. Set K_n(t)=|G_n(t)|^2/Z_n, a probability density, and W_n(t)=int_I K_n(t-u)du. Integrate the exact sampling identity for the modulated g_n over u in I, divide by Z_n, use Tonelli for positive terms and Plancherel:
+    int W_n dmu_a = int W_n dnu - lambda_1(a)|I|/(2pi).
+Choose delta>0 so the closed delta-neighborhoods of both endpoints are disjoint from Gamma. They carry exponentially small mu_a mass by section 1 and zero nu mass. For t inside I at least delta from its endpoints, |1-W_n(t)|<=int_(|v|>=delta)K_n(v)dv<=C sqrt(n) r^(2n-2). For t outside I at distance>=delta, W_n(t) obeys the same bound, and for sufficiently large |t| it obeys the sharper C sqrt(n)r^(2n-2)/(1+t^2) by integrating the pointwise probe estimate over the fixed I. On bounded sets, both measures have uniformly bounded mass; on the tails the latter estimate is summable by the logarithmic unit-interval growth. Therefore int |W_n-1_I| dmu_a and int |W_n-1_I| dnu are exponentially small. Endpoint atoms cause no issue since their masses are exponentially small too. Together with the exponential bound on lambda_1 this proves
+    |mu_a(I)-sum_(gamma in I)m_gamma| <= C_I exp(-c_I a).
+The estimate holds for any fixed interval with endpoints away from Gamma, including a single-ordinate cluster. It does not track each node or each individual weight inside a cluster, and all constants can degenerate with shrinking separation.
+
+## 3. Disposition and limitations
+
+Campaign XIII mathematically complete. QER01: essentially self-adjoint compact-resolvent quotient with simple real generator zeros (unconditional); QER02: exact spectral sampling and cardinal interpolation (unconditional); QER03: fixed-window quotient norm-resolvent approximation and finite residual block (unconditional), plus vague zeta-weight convergence under RH; QER04: exponential suppression of off-ordinate weight and exponential convergence of fixed cluster masses under RH. These are internal candidate results; no independent validation of QER01–04. Related work requires full comparison. No lower bound on individual spurious weights obtained. A measure may converge exponentially while a fixed extraneous atom retains an exponentially small positive mass. The actual support problem is unresolved, not disguised as solved.
+
+## 4. Scientifically motivated next route
+
+Campaign XIV: global semiboundedness and off-critical-line growth. Investigate whether a uniform lower bound on lambda_1(a) would already force RH, using the translated autocorrelation of a fixed smooth test and its one-sided Laplace transform. Off-real zero ordinates create candidate poles in the right half-plane; a globally shifted positive form would imply bounded correlations by Cauchy–Schwarz. First establish unconditional zero-sum normalization, meromorphic continuation and pole noncancellation with explicit source hypotheses; then quantitative lower growth if off-line zeros exist, upper growth controls, and implications for the edge measures. This is a different approach to the actual arithmetic positivity obstruction, not another iteration of the RH-conditional support bound. No claim of proof or novelty for the new direction yet.
