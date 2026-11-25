@@ -11,7 +11,7 @@ const pi=sub(mul(R(16n),atanSmall(R(1n,5n))),mul(R(4n),atanSmall(R(1n,239n))));
 function expneg(x){let p=O,s=O;for(let j=1;j<=20;j++){p=div(mul(p,x),R(BigInt(j)));s=add(s,j%2?neg(p):p)}const next=div(mul(p,x),R(21n));return[s[0]-next[1],s[1]]}
 function expAny(x){let k=0;while(x[1]>Q/2n){x=div(x,T);k++}let e=expneg(x);for(let i=0;i<k;i++)e=sqr(e);return[e[0]<0n?0n:e[0],e[1]>Q?Q:e[1]]}
 function atanPositive(x){if(x[0]<0n)throw Error('atan domain');if(x[1]<=Q)return atanSmall(x);return sub(div(pi,T),atanSmall(div(O,x)))}
-const h=R(4n,5n),h2=sqr(h),J=4096,rJ=R(2n*BigInt(J)+1n,2n),exp2h=expAny(mul(T,h)),oneMinusExp2h=sub(O,exp2h);
+const h=R(4n,5n),h2=sqr(h),J=4096,rJ=R(4n*BigInt(J)+1n,2n),exp2h=expAny(mul(T,h)),oneMinusExp2h=sub(O,exp2h);
 const sqrt2=[1414213562373095048n,1414213562373095050n];if(sqrt2[0]**2n>2n*Q*Q||sqrt2[1]**2n<2n*Q*Q)throw Error('sqrt2');
 function ratesumF(x,eta){let partial=Z;for(let j=0;j<J;j++){const r=R(BigInt(4*j+1),2n),q=expAny(mul(r,h)),w=sub(O,eta===1?q:neg(q));partial=add(partial,div(w,add(sqr(r),x)))}
  let f0tail,expTail;

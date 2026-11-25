@@ -34,10 +34,10 @@ node experiments/fbc02-infinite-rate-enclosures.js
 
 Raw integer endpoints are in `experiments/results/fbc02-infinite-rate-enclosures.json`. For n=0,1,4,16,64,256,512 the even and odd F_eta values and K_nn entries are enclosed. Representative diagonal entry intervals are:
 
-- n=0, even: [3.987404472631136000, 3.987404621606385000]; odd: [17.509562053161208000, 17.509562202136458000].
-- n=64, even: [0.008116245316481334, 0.008116541036587441]; odd: [0.008116250112627938, 0.008116545832734046].
-- n=512, even: [0.001212562458958234, 0.001212755954844956]; odd: [0.001212562460129859, 0.001212755956016581].
+- n=0, even: [3.987251912676209992, 3.987251949924576413]; odd: [17.509409493206280987, 17.509409530454647405].
+- n=64, even: [0.007812460342226234, 0.007812534698935011]; odd: [0.007812465138372839, 0.007812539495081616].
+- n=512, even: [0.000976529360592774, 0.000976595633416976]; odd: [0.000976529361764399, 0.000976595634588601].
 
-Representative off-diagonal intervals (even parity) include K_(0,8) in [0.08649797983581822,0.08649819050624584], K_(8,32) in [0.025304262698298587,0.02530460007557714], and K_(64,256) in [0.003419111873669919,0.003419431423442406]. These entries use the FBC01 partial-fraction formula; the direct positive diagonal series is used for n=k.
+Representative off-diagonal intervals (even parity) include K_(0,8) in [0.086282234880405803,0.086282287556775938], K_(8,32) in [0.024999335533854524,0.024999419944719776], and K_(64,256) in [0.003124958219168314,0.003125041465324186]. These entries use the FBC01 partial-fraction formula; the direct positive diagonal series is used for n=k.
 
 This establishes a practical scalar interval route for constructing the finite full-boundary Gram and low/high columns. It is not itself a positivity test. The omitted-tail interval width is controlled by the first nonexponential mesh term, about 1/a², while the exponential tail is negligible at this J and h. The next step is to feed these entry enclosures into the full-column compression test and combine its high-mode residual with the localized-prime n^-1 cancellation from LPE02. No full-boundary positivity certificate is claimed here.
