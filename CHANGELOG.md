@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXXIX
+## Campaigns XII–XLI
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -33,7 +33,9 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXXVI — Arithmetic jump operator](research/CAMPAIGN-36.md) | Closed mathematically (candidate). Pole-free ground-state scale, exact rank-one inertia, gap and necessary pole alignment; [audit](research/positivity/AJP04-audit-and-prime-tower-pivot.md). Basic positivity and capacity overlap external unreviewed work. Ordinary upper rate remains unresolved. |
 | [XXXVII — Prime-power tower inverses](research/CAMPAIGN-37.md) | Closed (candidate). Quantified pole-free bottom, exact weighted prime graph and cross-prime noncommutation; no graph gap or joint capacity bound. [Audit](research/positivity/PTI04-audit-and-relative-heat-pivot.md). |
 | [XXXVIII — Relative heat invariants](research/CAMPAIGN-38.md) | Closed (candidate). Absolute threshold, all-positive-time relative trace, [prime threshold recovery](research/positivity/RHI02-prime-threshold-invariants.md), classical spectral shift and capacity. No full positivity certificate. |
-| [XXXIX — Analytic pole moments](research/CAMPAIGN-39.md) | Active; analytic-vector bounds and finite-moment capacity recovery. |
+| [XXXIX — Analytic pole moments](research/CAMPAIGN-39.md) | Closed (candidate). Analytic vectors, convergent relative heat germ, exterior capacity enclosures and [interior finite-data obstruction](research/positivity/APM04-audit-and-interior-obstruction.md). |
+| [XL — Moment visibility and inertia](research/CAMPAIGN-40.md) | Closed (candidate). Complete finite arithmetic seed visibility and [heat-matrix spectral-depth bounds](research/positivity/MVI03-heat-matrix-inertia-and-moment-enclosures.md). No executed heat matrix or positivity certificate. |
+| [XLI — Certified arithmetic moment evaluation](research/CAMPAIGN-41.md) | Active; explicit real-line cutoff constant established, periodic truncation and benchmark pending. |
 
 ## Campaigns I–XI — archived README
 
