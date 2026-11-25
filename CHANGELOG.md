@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXVII
+## Campaigns XII–XXVIII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -21,7 +21,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXIV — Vanishing metric and ordinary spectral escape](research/CAMPAIGN-24.md) | Closed mathematically. Joint Gram limit, ordinary lower prefactors, [necessary escape and abstract countermodel](research/positivity/VMR03-excess-depth-escape.md); no ordinary upper exponent. |
 | [XXV — Prime-shift boundary cancellation](research/CAMPAIGN-25.md) | Closed mathematically. Sharp norm defect and [whole-subspace localization](research/positivity/PBC03-spatial-frequency-escape.md); no smaller ordinary exponent. |
 | [XXVI — Weighted prime-shift rigidity](research/CAMPAIGN-26.md) | Closed mathematically. Conditional saturation intensity, [necessary prime coherence](research/positivity/WPR02-local-phase-coherence.md), and a lattice countermodel; actual coherence exclusion unresolved. |
-| [XXVII — Twisted prime phase-limit spectrum](research/CAMPAIGN-27.md) | Active. Candidate variational characterization of the maximal ordinary depth. |
+| [XXVII — Twisted prime phase-limit spectrum](research/CAMPAIGN-27.md) | Closed mathematically. [Ordinary variational characterization](research/positivity/TPH02-ordinary-variational-characterization.md) and [global saturation criterion](research/positivity/TPH03-global-coherence-criterion.md); attainable set unresolved. |
+| [XXVIII — Carrier-centered zero geometry](research/CAMPAIGN-28.md) | Active. Local zero-side restrictions on twisted phase limits. |
 
 ## Campaigns I–XI — archived README
 
