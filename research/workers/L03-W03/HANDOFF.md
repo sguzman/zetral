@@ -1,14 +1,14 @@
 # L03-W03 worker handoff
 
 - ID: L03-W03
-- Status: IN_PROGRESS
+- Status: READY_FOR_REVIEW
 - Starting commit: `93d17ac` (current `origin/main`, Campaign VIII)
-- Scope: independently attempt to falsify Campaign VII L01–L03. Check the rank-one boundary coefficient and phase sign, the weak escape witness and weighted tail, signed min–max insertion, collision and divergent phase conclusions; compare Suzuki v1 and v4 sources. Do not duplicate Campaign VIII K01/K02 or make novelty/certification claims.
-- Acceptance: trace each imported claim to the exact source passage or label it an internal derivation; preserve any counterexample or gap; record exact commands and unchecked scope.
-- Completed: assignment acknowledged; source and result audit not yet complete.
-- Evidence: forthcoming under this directory.
-- Exact commands: `git fetch origin main`; `git switch -c worker/l03-w03 origin/main`; `git rev-parse HEAD`.
-- Checked: current AGENTS.md, STATE.md, COORDINATION.md, and CAMPAIGN-08.md.
-- Not checked: L01–L03 details and primary-source passages.
+- Scope: independently attempt to falsify Campaign VII L01–L03. Check the rank-one boundary coefficient and phase sign, weak escape witness and weighted tail, signed min–max insertion, collision and divergent phase conclusions; compare Suzuki v1 and v4 sources. Did not duplicate Campaign VIII K01/K02 or make novelty/certification claims.
+- Acceptance: exact source passages distinguished from internal deductions; report counterexamples or gaps; record commands and unchecked scope.
+- Completed: independently recalculated the boundary coefficient/sign; checked the eta bound's consequence from weak escape; audited cutoff-tail powers, block compression, signed insertion, reciprocal conversion, collisions, divergent phase and nonresonant eigenvector argument. No counterexample found in this scope.
+- Evidence: `research/workers/L03-W03/AUDIT.md`.
+- Exact commands: see AUDIT.md for primary-source fetch; `git rev-parse HEAD` -> `543845fdfe41bdcb6d4e5c3ca606920587044a70` before evidence commit.
+- Checked: Suzuki v1 source §§2.3, 3.1, Theorem 3.3, §4, Theorem 1.2; Suzuki v4 Theorem 1.5, §§7.8–7.9; internal algebra and ordered spectral reasoning in L01–L03.
+- Not checked: complete constants/derivative details of the theta-tail lemma; numerical or interval certification; formal verification; exhaustive prior art; human review.
 - Blockers: none identified.
-- Next: read consolidated Campaign VII note and independently check the assigned algebra/source claims.
+- Next: lead review and disposition. Any subsequent K03 task must not duplicate lead-owned K01/K02.
