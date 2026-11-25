@@ -4,11 +4,13 @@ A Spectral Mathematics Research Project.
 
 Open research into the spectral, arithmetic and dynamical structures underlying the Riemann zeta function, organized around the Hilbert–Pólya program.
 
-**Status:** Campaign I concluded with explicit blockers. A conditional fixed-index convergence bound is presented as a self-reviewed candidate proof; novelty and independent verification remain outstanding. AI-assisted research with human direction.
+**Status:** Campaign I concluded with explicit blockers. Campaign II (rigorous verification and novelty assessment) is active. A conditional fixed-index convergence bound is presented as a self-reviewed candidate proof; novelty and independent verification remain outstanding. AI-assisted research with human direction.
 
 - [Research state](STATE.md)
 - [Agent protocol](AGENTS.md)
 - [Campaign I](research/CAMPAIGN-01.md)
+- [Campaign II](research/CAMPAIGN-02.md)
+- [Adversarial proof audit](research/verification/V01-adversarial-audit.md)
 - [Literature](literature/README.md)
 - [Candidate manuscript (LaTeX)](papers/theta-cardinal-bound.tex)
 - [Detailed proof](research/theta-cardinal-bound.md)
