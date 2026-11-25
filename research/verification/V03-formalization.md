@@ -21,7 +21,7 @@ Not formalized: orthogonality/projection geometry in a Hilbert space; compact se
 - Lean 4.19.0 chosen as a stable matching release rather than importing the large RH development. Mathlib exact revision c44e0c8ee63ca166450922a373c7409c5d26b00b. Upstream lean-toolchain and lake-manifest.json fetched via GitHub at that exact revision and read directly. Root lock constructed using that transitive manifest plus the direct Mathlib dependency. The generated root lock has not been validated by Lake.
 - Checked local PATH: lean, lake, elan, nix, cargo, rustc all absent. Direct HTTPS request to GitHub Lean release failed with DNS resolution error. Cannot execute local Lean in this environment.
 - CI workflow on the draft branch installs Elan, requests the locked Mathlib cache, checks for lock changes, builds the library and runs #print axioms for all five theorems. Axiom log parser rejects unexpected axioms and sorryAx, and requires a report for each theorem. Workflow installer/action tags are not fully pinned; no Nix environment claimed. No CI execution verified.
-- All six files on the draft branch were remotely read back and compared with intended contents. PR creation succeeded. Initial PR-head workflow-run lookup returned an empty list. Do not infer a failure or a passing result.
+- All six files on the draft branch were remotely read back and compared with intended contents. PR creation succeeded. Initial lookup returned an empty list; a subsequent lookup reported Lean verification run 45624869814 and Research checks run 45624869538 in progress. No conclusion yet; no passing result asserted.
 
 ## Resume
 
