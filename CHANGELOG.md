@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–LI
+## Campaigns XII–LII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -45,7 +45,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XLVIII — Localized prime exchange](research/CAMPAIGN-48.md) | Closed (candidate). [Executed strict positivity](research/positivity/LPE03-executed-localized-prime-certificates.md) at physical h=4/5, larger even comparisons inconclusive. |
 | [XLIX — Full boundary positive columns](research/CAMPAIGN-49.md) | Closed (candidate). Exact infinite-rate matrix enclosures; three failed sufficient comparisons. |
 | [L — Exact complementary residual certificates](research/CAMPAIGN-50.md) | Closed (candidate). [Executed matrix-tail strict positivity](research/positivity/ECR03-matrix-valued-asymptotic-tail.md) through physical h=1; larger even comparisons inconclusive. |
-| [LI — Direction-adapted Schur diagnostics](research/CAMPAIGN-51.md) | Active. Rational congruence and direction-specific error accounting; diagnostics pending. |
+| [LI — Direction-adapted Schur certification](research/CAMPAIGN-51.md) | Closed (candidate). [Executed full strict positivity](research/positivity/DSC03-derivative-corrected-rate-tails.md) through physical h=1.38. |
+| [LII — Finite prime graph fibers](research/CAMPAIGN-52.md) | Active. Exact combined graph norm bound 1.221 through log 5; prime-power-four test pending. |
 
 ## Campaigns I–XI — archived README
 
