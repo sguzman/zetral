@@ -1,0 +1,10 @@
+# Campaign IX — Microscopic resonant spectral splitting
+
+Opened 2026-11-25 under standing authorization. Assume RH for the Suzuki global framework. Objective: resolve the two local roots approaching a fixed positive ordinate when the additional phase root approaches that ordinate. Use the exact characteristic and evaluation residue already established in Campaign VIII. Do not claim fixed-phase microscopic tuning without proof.
+
+- R01: isolate the phase-pi pole at the simple local eigenvalue t_a->gamma. Prove or refute t_a-gamma=o(1/M_a) from K02's exact sampled estimate and P_a'->Delta'. Use u_(t_a)=-t_a P_a'(t_a)E_(t_a)v and derivative bounds to determine the asymptotic residue weight ||E_(t_a)e_a||^2. Preserve xi multiplicity and distinguish actual local t_a from gamma.
+- R02: subtract this simple pole from m_a(z); prove uniform analytic control of the regular part near gamma. Derive exact local root equation and identify the finite-a resonance tuning in tau=tan(theta/2). Establish the scaled two-root law for detuning of order 1/M_a if supported, with ordered roots, real signs and uniformity for bounded detunings. Check all signs and coefficients; no claim that fixed tau=gamma is tuned at that precision.
+- R03: investigate fixed-phase detuning and eigenvector mixing, including regimes larger than the microscopic scale and possible obstructions to a fixed-phase splitting rate. Try a rigorous analytic comparison or bounded synthetic example, not a fake arithmetic solve. Review any worker audit and source literature on rank-one avoided crossings; distinguish standard perturbation theory from any arithmetic-specific coefficient. No exhaustive priority claim.
+- R04: consolidate strongest justified statements and limitations; assess next productive direction or stop at a real mission-wide blocker.
+
+Lead owns R01/R02. K02-W04 independent kernel audit remains assigned; after disposition a worker may select a distinct bounded R03 verification package, not duplicate lead work. All global conclusions conditional on RH. No external submission, expenses, access changes or unrelated infrastructure changes.
