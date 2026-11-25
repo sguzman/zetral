@@ -69,3 +69,16 @@ so (\|K-K_N\|\ge e^{-8}) for arbitrarily large (N). The finite-rate corrections 
 ## Limits
 
 The proof assumes the DNB01 digamma expansion and DNB02 resolvent-kernel identity, both written in the repository, and checks their coefficient relation and the fixed-partition operator estimates. It is an analytic deduction, not machine verification or a new independent primary-source audit. It does not bound the correction uniformly over refining partitions, certify the prime-plus-pole operator, or establish positivity/RH.
+
+## Explicit bound for the campaign's one-cell windows
+
+The kernel constant admits a simple global estimate. From (e^{2s}\ge1+2s),
+\[
+1-e^{-2s}\ge\frac{2s}{1+2s},\qquad
+s k(s)\le\frac{1+2s}{2}e^{-s/2}.
+\]
+The right side has its maximum at (s=3/2), with value (2e^{-3/4}<1) (for example, (e^{3/4}>1+3/4+(3/4)^2/2>2)). Hence (C_h<1/(1-e^{-h})). For (h\ge2), (e^{-h}\le e^{-2}<1/4), so a one-cell correction satisfies
+\[
+\|K\|<\frac{4\pi}{1-e^{-h}}<\frac{16\pi}{3}.
+\]
+In particular, the boundary correction is uniformly bounded over all current candidate windows (h\in[2,12/5]), even though the convergence (K_J\to K) is not in operator norm. This constant is a coarse analytic bound, not a numerical estimate of the correction's actual norm.
