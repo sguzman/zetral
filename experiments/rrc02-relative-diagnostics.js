@@ -103,7 +103,7 @@ function expAny(x){
 }
 function sinh(x){const e=expAny(x);return div(sub(div(ONE,e),e),TWO)}
 
-const argv=process.argv.slice(2),HNUM=Number(argv[0]||33),HDEN=Number(argv[1]||20),J=Number(argv[2]||1024),M=Number(argv[3]||1536),S=Number(argv[4]||49),T=Number(argv[5]||96),rows=[];
+const argv=process.argv.slice(2),HNUM=Number(argv[0]||33),HDEN=Number(argv[1]||20),BASISMODE=argv[6]||"frozen",J=Number(argv[2]||1024),M=Number(argv[3]||1536),S=Number(argv[4]||49),T=Number(argv[5]||96),rows=[];
 const absup=a=>max([a[1],-a[0]]),mid=a=>Number(a[0]+a[1])/2e30;
 function trig(x,sine){
  const k=(x[0]+x[1])/(4n*pi[0]),y=sub(x,mul(R(2n*k),pi)),yy=square(y);
@@ -235,8 +235,8 @@ for(const [hn,hd] of [[BigInt(HNUM),BigInt(HDEN)]]){
   // Strict diagonal dominance of V^t V proves invertibility exactly.
   const XTcandidate=Vcandidate.map(v=>ts.map((_,j)=>{const z=dot(v,X.map(x=>x[j])),m=(z[0]+z[1])/2n;return[m,m]}));
   const frozen=JSON.parse(require("fs").readFileSync("experiments/results/pmw03-precise-prime-five.json","utf8")).rows.find(r=>r.h==="33/20"&&!r.odd);
-  const V=frozen.basis.map(row=>row.map(v=>[BigInt(v),BigInt(v)]));
-  const XT=(T===96&&hn===33n&&hd===20n)?frozen.trial.map(row=>row.map(v=>[BigInt(v),BigInt(v)])):V.map(v=>ts.map((_,j)=>{const z=dot(v,X.map(x=>x[j])),m=(z[0]+z[1])/2n;return[m,m]}));
+  const V=BASISMODE==="candidate"?Vcandidate:frozen.basis.map(row=>row.map(v=>[BigInt(v),BigInt(v)]));
+  const XT=(BASISMODE==="frozen"&&T===96&&hn===33n&&hd===20n)?frozen.trial.map(row=>row.map(v=>[BigInt(v),BigInt(v)])):V.map(v=>ts.map((_,j)=>{const z=dot(v,X.map(x=>x[j])),m=(z[0]+z[1])/2n;return[m,m]}));
   for(let i=0;i<dlow;i++){const diag=dot(V[i],V[i]);let off=0n;for(let j=0;j<dlow;j++)if(i!==j)off+=absup(dot(V[i],V[j]));if(diag[0]<=off)throw Error("singular rational basis");}
   const coeff=V.map((v,i)=>v.concat(XT[i].map(neg)));
   const brows=all.map(n=>all.map(k=>entry(n,k)));

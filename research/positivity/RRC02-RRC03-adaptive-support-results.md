@@ -18,6 +18,8 @@ The rational basis determinant is nonzero (checked directly from the saved integ
 
 Keeping `J=1024` and `M=1536` fixed, I tested `T=128,160,192` with `S=80,96,112`, respectively, so the exact diagonal rate sums covered all finite trial modes. All three even lower comparisons fail at the final exact LDL pivot. After division by Q, those pivots are approximately `-2.13e-9`, `-8.00e-9`, and `-3.04e-8`. In this bounded series, increasing T did not improve the certified lower matrix at h=1.7. These failures concern the sufficient Schur lower comparison and do not establish a negative actual eigenvalue.
 
+I also reran the h=1.7, T=128 case using a newly selected fixed-point Jacobi low basis rather than reusing the h=1.65 basis. Its exact lower matrix fails at the fourth pivot (`-4.4631e-4/Q`), also inconclusive. The same adaptive basis at h=1.65, T=128 passes, with first pivot about `6.7861e-19` after division by Q. Thus the h=1.65 result is not specific to the frozen low basis, while neither tested basis resolves h=1.7.
+
 ## Reproduction
 
 From the repository root, the parameterized runner uses the frozen PMW03 low basis and computes the finite trial for each requested window:
@@ -28,10 +30,12 @@ node experiments/rrc02-relative-diagnostics.js 33 20 1024 1536 80 128 > /tmp/rrc
 node experiments/rrc02-relative-diagnostics.js 17 10 1024 1536 80 128 > /tmp/rrc03-h17-t128.json
 node experiments/rrc02-relative-diagnostics.js 17 10 1024 1536 96 160 > /tmp/rrc03-h17-t160.json
 node experiments/rrc02-relative-diagnostics.js 17 10 1024 1536 112 192 > /tmp/rrc03-h17-t192.json
-python3 experiments/rrc03-verify-lower-matrices.py experiments/results/rrc02-t128.json experiments/results/rrc03-h17-t128.json experiments/results/rrc03-h17-t160.json experiments/results/rrc03-h17-t192.json
+node experiments/rrc02-relative-diagnostics.js 33 20 1024 1536 80 128 candidate > /tmp/rrc02-t128-candidate-basis.json
+node experiments/rrc02-relative-diagnostics.js 17 10 1024 1536 80 128 candidate > /tmp/rrc03-h17-t128-candidate-basis.json
+python3 experiments/rrc03-verify-lower-matrices.py experiments/results/rrc02-t128.json experiments/results/rrc02-t128-candidate-basis.json experiments/results/rrc03-h17-t128.json experiments/results/rrc03-h17-t160.json experiments/results/rrc03-h17-t192.json experiments/results/rrc03-h17-t128-candidate-basis.json
 ```
 
-The four completed raw configurations are in `experiments/results/rrc02-relative-diagnostics.json`, `rrc02-t128.json`, and `rrc03-h17-{t128,t160,t192}.json`. The h=33/20 baseline and T=128 outputs, and the h=17/10 T=128 and T=160 outputs, byte-match fresh executions in this Node runtime; the T=192 execution also byte-matches when run separately. No RH proof, actual negative restored eigenvalue, independent review, or priority claim is established.
+The raw configurations are in `experiments/results/rrc02-relative-diagnostics.json`, `rrc02-t128.json`, `rrc02-t128-candidate-basis.json`, and `rrc03-h17-{t128,t160,t192}.json` plus `rrc03-h17-t128-candidate-basis.json`. The h=33/20 baseline and T=128 outputs, and the h=17/10 T=128 and T=160 outputs, byte-match fresh executions in this Node runtime; the T=192 and adaptive-basis outputs also byte-match when run separately. No RH proof, actual negative restored eigenvalue, independent review, or priority claim is established.
 
 ## Next direction
 
