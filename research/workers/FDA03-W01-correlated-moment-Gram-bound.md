@@ -1,6 +1,6 @@
 # FDA03-W01 — Vector-box Gram bounds for signed moments
 
-Date: 2026-11-25 UTC. This is an independent worker diagnostic of the stored FDA02 even interval data, not a replay of the arithmetic generator.
+Date: 2026-11-25 UTC. This is an independent worker diagnostic of the stored FDA02 even and odd interval data, not a replay of the arithmetic generator.
 
 ## Bound
 
@@ -55,4 +55,4 @@ The odd grouped excess sums to \(2,392,080,538,315,701/10^{66}\). Its seven save
 
 ## Scope and conclusion
 
-This proves a general enclosure lemma and gives an exact-arithmetic application to the archived moment boxes. It reduces the seven signed-moment interval deductions and the exact assembled even comparison remains positive. The parity power-sum and remainder bounds are unchanged. The exact certificate is conditional on the archived intervals; original-form normalization, independent interval generation, odd-parity grouped assembly, and human/formal review remain open. No RH or operator-construction conclusion follows.
+This proves a general enclosure lemma and gives an exact-arithmetic application to the archived moment boxes. It reduces the seven signed-moment interval deductions, and both exact assembled parity comparisons remain positive. The parity power-sum and remainder bounds are unchanged. The certificates are conditional on the archived intervals; original-form normalization, independent interval generation, and human/formal review remain open. No RH or operator-construction conclusion follows.
