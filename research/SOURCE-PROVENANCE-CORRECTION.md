@@ -18,3 +18,15 @@ The following HTML sources were actually opened and inspected after the correcti
 3. D. P. L. Castrigiano, *Unbounded Wiener–Hopf Operators and Isomorphic Singular Integral Operators*, 2021, DOI 10.1007/s11785-021-01110-w, https://link.springer.com/article/10.1007/s11785-021-01110-w . HTML section 2.1, lines 109–110, confirms the classical Hardy-space Fourier half-axis characterization. No claim of a fresh full outer-factorization proof from this source; LBS03 supplies its own candidate weighted-factor argument.
 
 Only these specific source checks are now supported. They do not establish originality or independently verify the project's subsequent deductions. Other previously cited literature leads remain subject to the correction above. No PDF was analyzed in this recovery turn.
+
+## Subsequent verification — Campaign XXX, 2026-11-25
+
+Earlier descriptions of fresh searches/inspection in PBC01/PBC03, WPR03, TPH04 and CZG02–04 should not be treated as independently reproducible merely from their prose; the retained conversation record does not establish all those source calls. The following HTML returns were obtained directly in the Campaign XXX turn, without relying on those claims:
+
+- NIST DLMF https://dlmf.nist.gov/25.16, lines 44–46 and 81–91: definition of psi and PNT asymptotic, equations 25.16.1 and 25.16.3.
+- Analytic Number Theory Exponent Database https://teorth.github.io/expdb/blueprint/zerofree-chapter.html, lines 205–212, Theorem 13.9: Korobov–Vinogradov zero-free region.
+- https://teorth.github.io/expdb/blueprint/chap-prime_counting_function.html, lines 102–108, Theorem 14.4: classical Korobov–Vinogradov prime summatory error.
+- https://teorth.github.io/expdb/blueprint/zero-density-chapter.html, lines 466–475, Theorem 11.14: Ingham's second bound on the density exponent. The definition of the exponent must also be read before using it.
+- Guth–Maynard, https://arxiv.org/abs/2405.20552, v2, abstract line 16 and version line 8: improved large-value estimates near N^(3/4) and associated zero-density consequences. Only the abstract was checked here.
+
+These are direct checks of the named classical inputs, not proof verification or a novelty review. No PDF was analyzed. Older unsupported source-inspection claims remain superseded by this notice.
