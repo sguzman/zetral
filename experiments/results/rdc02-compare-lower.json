@@ -1,0 +1,49 @@
+{
+  "synthetic": {
+    "old": "-1/10",
+    "new": "1/40",
+    "exactSchur": "7/30",
+    "H": "8",
+    "B": "1",
+    "update": "1/8",
+    "gain": "1/8"
+  },
+  "comparisons": [
+    {
+      "h": "11/5",
+      "odd": false,
+      "scale": "1000000000000000000000000000000000000000000000000000000",
+      "identicalBasis": true,
+      "identicalOriginalTrial": true,
+      "correctionModes": 18,
+      "oldFirstMinor": "14475264850738776",
+      "newFirstMinor": "14489516362703558",
+      "firstDelta": "14251511964782",
+      "positiveDiagonalChanges": 28,
+      "negativeDiagonalChanges": 0,
+      "strictLoewnerImprovement": false,
+      "firstNonpositiveDifferenceMinor": 1,
+      "oldRelative": 0.9538397886265109,
+      "newRelative": 0.9655271781002506,
+      "scope": "difference of conservative lower matrices, not difference of exact Schur complements"
+    },
+    {
+      "h": "11/5",
+      "odd": true,
+      "scale": "1000000000000000000000000000000000000000000000000000000",
+      "identicalBasis": true,
+      "identicalOriginalTrial": true,
+      "correctionModes": 18,
+      "oldFirstMinor": "66741443790295666652",
+      "newFirstMinor": "66858186783608279913",
+      "firstDelta": "116742993312613261",
+      "positiveDiagonalChanges": 28,
+      "negativeDiagonalChanges": 0,
+      "strictLoewnerImprovement": false,
+      "firstNonpositiveDifferenceMinor": 3,
+      "oldRelative": 0.9058798859675143,
+      "newRelative": 0.9123422062915871,
+      "scope": "difference of conservative lower matrices, not difference of exact Schur complements"
+    }
+  ]
+}
