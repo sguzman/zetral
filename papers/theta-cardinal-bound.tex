@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\F}{\mathcal F}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\title{A theta-cardinal bound for spectral convergence\newline in Suzuki's localized Weil spaces}
+\author{Zetral Research Project}
+\date{25 November 2026 --- candidate proof, version 0.1}
+\begin{document}
+\maketitle
+\begin{abstract}
+Assuming the Riemann hypothesis and the sampling and inverse-compression theorems of Suzuki, we derive a fixed-index upper bound of order $X^{5/2}e^{-2\pi X}$ for the difference between the exact localized positive differentiation eigenvalue and its limiting distinct zeta-zero ordinate, where $X=e^{2a}$. The argument combines divided-out theta kernels, compact truncation and a quadratic Rayleigh--Ritz estimate. No simplicity assumption is needed. This AI-assisted research note has not undergone independent review or machine verification; originality is not established.
+\end{abstract}
+\section{Setting and statement}
+Write $\xi_0(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)/2$ and $A(z)=\xi_0(1/2-iz)$. Suzuki uses $2\xi_0$; the zeros and the normalized cardinal functions are unchanged. Assume RH throughout. Let $\Gamma$ denote the set of distinct real ordinates, $m_\rho$ their multiplicities, and $0<\gamma_1<\gamma_2<\cdots$ the positive ordinates. In particular,
+\[
+M=\sum_{\rho\in\Gamma}m_\rho/\rho^2<\infty.
+\]
+Use $\F u(z)=\int_{\R}u(x)e^{izx}\,dx$. In the weighted sampling model of Suzuki \cite[Eq.~(2.8)]{suzuki}, the local form completion embeds isometrically as a closed subspace $M_a$ of $\ell^2(\Gamma,m)$, containing the sample vectors of $C_c^\infty(-a,a)$. Let $P_a$ project onto $M_a$. The global inverse operator $C$ is diagonal with entries $1/\rho$. Suzuki's Theorem 3.3 identifies the inverse of the phase-$\pi$ self-adjoint local differentiation extension with the compression of $C$ to $M_a$. Thus its positive eigenvalues $t_{a,n}$ are reciprocals of the decreasing positive eigenvalues $\mu_{a,n}$ of that compression. We import these results, rather than re-proving them.
+\begin{theorem}
+For each fixed $n$, there exist $K_n,a_n>0$ such that, for $a\ge a_n$ and $X=e^{2a}$,
+\[
+0\le t_{a,n}-\gamma_n\le K_n X^{5/2}e^{-2\pi X}.
+\]
+\end{theorem}
+The constants may depend on the target zeros and their xi derivatives. The bound is not a uniform estimate as $n$ grows, nor a computable certificate for finite-dimensional numerical roots.
+\section{A quadratic Ritz estimate}
+\begin{lemma}
+Let $C$ be compact self-adjoint, $L=\inf\sigma(C)$, and $E$ the span of its first $n$ positive eigenvectors, with corresponding eigenvalues $\lambda_1\ge\cdots\ge\lambda_n>0$. For an orthogonal projection $P$ onto a closed space $V$, put $\delta=\norm{(I-P)|_E}$. If $\delta<1$ and $(\lambda_n-L)\delta^2<\lambda_n$, the $n$th positive Ritz value $\mu_n$ exists and
+\[
+0\le\lambda_n-\mu_n\le(\lambda_n-L)\delta^2.
+\]
+\end{lemma}
+\begin{proof}
+Let $Q$ project onto $E$ and let $B=QP|_E$. Then $(1-\delta^2)I\le B\le I$ and $PE$ has dimension $n$. For $u\in E$ and $v=Pu$, one has $\norm{v}^2=\langle Bu,u\rangle$ and $\norm{(I-Q)v}^2=\langle(B-B^2)u,u\rangle\le\delta^2\norm{v}^2$. Since $E$ reduces $C$, the Rayleigh quotient on $PE$ is at least $\lambda_n-(\lambda_n-L)\delta^2>0$. Apply max--min on $PE\subset V$ for the lower bound and on the full space for the upper bound.
+\end{proof}
+This is a special case of established squared-angle Ritz estimates \cite{ritz}.
+\section{Cardinal functions with theta decay}
+The classical even smooth theta kernel \cite[Eqs.~(1.1)--(1.2)]{theta} satisfies $\F\Phi=A$ and, for $x>0$,
+\[
+\Phi(x)=\sum_{k\ge1}(4\pi^2k^4e^{9x/2}-6\pi k^2e^{5x/2})e^{-\pi k^2e^{2x}}.
+\]
+With $y=e^{2|x|}$, its series gives $|\Phi(x)|\ll y^{9/4}e^{-\pi y}$ by factoring out $e^{-\pi y}$ and bounding the remaining convergent series at $y=1$. For any fixed real $\alpha$ and $Y\ge1$,
+\[
+\int_Y^\infty v^{\alpha-1}e^{-\pi v}\,dv\ll_\alpha Y^{\alpha-1}e^{-\pi Y};
+\]
+substitute $v=Y+w$ and bound $(1+w/Y)^{\alpha-1}$ by $(1+w)^{\max(\alpha-1,0)}$.
+Fix a real zero $\gamma$ of multiplicity $m$. Set $f_0=\Phi$ and, for $0\le r<m$, set
+\[
+f_{r+1}(x)=-i e^{-i\gamma x}\int_{-\infty}^x e^{i\gamma t}f_r(t)\,dt.
+\]
+Inductively, $\F f_r(z)=A(z)/(z-\gamma)^r$ and $|f_r(x)|\ll_{\gamma,r}y^{9/4-r}e^{-\pi y}$. Indeed, for $r<m$ the transform vanishes at $\gamma$, so the integral may be replaced by the negative outward right tail when $x\ge0$. The left tail is used when $x\le0$. The displayed tail estimate reduces the power of $y$ by one. Differentiating gives $(i\partial_x-\gamma)f_{r+1}=f_r$. Integration by parts with vanishing endpoints proves the transform identity, first on the real axis and then by entire continuation; the decay ensures entire transforms. This closes the induction.
+
+Normalize $q_\gamma=f_m/(\sqrt m\,A^{(m)}(\gamma)/m!)$. Its sample vector is the unit coordinate vector $e_\gamma=m^{-1/2}\mathbf1_{\{\gamma\}}$. The quotient has removed exactly the multiplicity at $\gamma$ and retains all other zeros. We have
+\[
+|q_\gamma(x)|\ll_\gamma y^{9/4-m}e^{-\pi y},\qquad
+|q'_\gamma(x)|\ll_\gamma y^{13/4-m}e^{-\pi y}.
+\]
+The derivative estimate follows from the differential identity above. No local space membership of the untruncated kernel is needed.
+\section{Truncation and proof of the theorem}
+Choose a smooth transition $\eta$ equal to zero on $(-\infty,1/2]$ and one on $[1,\infty)$, with values in $[0,1]$. For $a\ge1$, put $h=X^{-1}$ and $\chi_a(x)=\eta((a-|x|)/h)$. Then $u=\chi_a q_\gamma\in C_c^\infty(-a,a)$ and the omitted tail is $r=(1-\chi_a)q_\gamma$. The inner edge of the transition satisfies $Y=e^{2(a-h)}=Xe^{-2/X}\ge X-2$. Hence powers of $Y$ and $X$ are comparable, and $e^{-\pi Y}\le e^{2\pi}e^{-\pi X}$.
+
+The product rule gives
+\[
+\norm{r'}_1\le\int_{|x|\ge a-h}|q'_\gamma(x)|\,dx+\int|\chi'_a q_\gamma|\,dx
+\ll_\gamma X^{9/4-m}e^{-\pi X}.
+\]
+The first integral uses the tail estimate. The second uses $|\chi'_a|\ll h^{-1}$ on strips of total length $h$ and the bound on $q_\gamma$. Integrating by parts at every nonzero ordinate gives $|\F r(\rho)|\le\norm{r'}_1/|\rho|$. Consequently, for the sample vector $v$ of $u$,
+\[
+\norm{v-e_\gamma}_{\ell^2(\Gamma,m)}^2\le M\norm{r'}_1^2
+\ll_\gamma X^{9/2-2m}e^{-2\pi X}\le C_\gamma X^{5/2}e^{-2\pi X}.
+\]
+Projection minimizes distance. For $E=\operatorname{span}(e_{\gamma_1},\ldots,e_{\gamma_n})$, Cauchy--Schwarz therefore gives $\delta_a^2=\norm{(I-P_a)|_E}^2\ll_n X^{5/2}e^{-2\pi X}$. In the lemma take $\lambda_n=1/\gamma_n$ and $L=-1/\gamma_1$. Put $B_n=\lambda_n-L$. For sufficiently large $a$, $B_n\delta_a^2\le\lambda_n/2$. Reciprocating the Ritz bounds yields
+\[
+0\le t_{a,n}-\gamma_n\le 2B_n\gamma_n^2\delta_a^2,
+\]
+which proves the theorem under the stated imports and RH.
+\section{Scope, computation, and review status}
+The conclusion implies decay faster than every fixed exponential in $a$, but asserts no optimal lower bound. It concerns the exact phase-$\pi$ operator, not the ordinary $L^2$ Weil-form operator. The witnesses use actual zeros; their use in a proof does not provide zero-independent computable constants or change the arithmetic definition of the local operator. The repository's high-precision reference calculations reproduce the rounded entries of Suzuki's Tables 1 and 2; finite Fourier truncation and numerical error prevent interpreting those data as measurements of the exact cutoff error alone. Rust execution remains unverified.
+
+The theta kernel, cardinal interpolation, and quadratic Ritz estimates are established tools. Recent theta-window estimates for the bottom of Weil forms are closely related; the repository's prior-art audit lists these separately from the differentiation spectrum. No priority or novelty is asserted. This candidate proof was generated and self-reviewed with AI assistance, under human research direction; independent mathematical review and Lean verification remain outstanding. The repository preserves the detailed derivation, source audit, and numerical data: \url{https://github.com/sguzman/zetral}.
+\begin{thebibliography}{9}
+\bibitem{suzuki} M. Suzuki, \emph{Spectral convergence associated with Weil's quadratic form}, arXiv:2610.32704v1 (2026).
+\bibitem{theta} J. C. Lagarias and D. Montague, \emph{The integral of the Riemann xi-function}, arXiv:1106.4348v3 (2011).
+\bibitem{ritz} A. V. Knyazev and M. E. Argentati, \emph{Rayleigh--Ritz majorization error bounds with applications to FEM}, SIAM J. Matrix Anal. Appl. 31 (2010), doi:10.1137/08072574X.
+\end{thebibliography}
+\end{document}
