@@ -27,3 +27,19 @@ This replaces CAC01's global symbol loss 3/2 by an actual large-frequency digamm
 It is strictly stronger than CAC01's bound for h<pi. The Neumann comparison also gives a mode-dependent diagonal weight growing as log n rather than a single scalar. A weighted Schur inverse estimate can exploit that fact, but requires actual cosine coefficients of the residual and correct treatment of the pole. This is developed separately.
 
 At a=1/2, h=1/m, S_a=log 2/sqrt 2. The earlier coarse bound lost 1.5 irrespective of m. The new explicit error loss 1.5/(pi m)^2 tends to zero; the cell count for positive complement drops from the earlier tested 24 to a much smaller scale (exact threshold to be computed, not assumed here). Neither estimate alone certifies full positivity. No off-line zero, numerical spectrum, RH proof, or independent review.
+
+## Executed stronger-complement diagnostic
+
+Actual V8 run of experiments/dnb01-stronger-complement-witness.js commit e16b89d915c375f2030ee5325b0d79724787652f, raw exact output and rational witnesses experiments/results/dnb01-stronger-complement-witness.json commit 304ef2a690714d591193a64c06352033f8938160. Both exact readbacks. Reproduce: node experiments/dnb01-stronger-complement-witness.js. Uses the CAC03 exact nested-cell moment intervals and rational witness evaluations, now with d equal to the lower endpoint of delta_N. All rows use a=1/2; the coefficient -3/(2 pi² m²) follows from CAC01's already checked high-frequency digamma estimate. No separate Node process run or Rust execution claimed.
+
+m | lower endpoint of delta_N (rounded down) | upper bound on cheap Schur quotient (rounded up)
+---|---:|---:
+6 | 0.112695504423294722 | -1.9443
+8 | 0.402853232214692761 | -0.70064
+16 | 1.098387651852125986 | -0.03727
+24 | 1.504294841270936270 | -0.01536
+32 | 1.792131642181443260 | -0.006175
+64 | 2.485428025183731546 | -0.001103
+128 | 3.178612506354262585 | -0.00006766
+
+Thus a six-cell partition already has a strictly positive complement with this bound, compared with the previous 24-cell tested threshold. At every tested resolution, the new lower Schur matrix H-d^-1 R*R still has a negative direction, as certified by the fine contrast lower bound on R*R and exact rational witness. At m=128 its witness quotient upper endpoint is -0.000067669181678969. The smaller magnitude of this failed-test quotient is not a spectral eigenvalue estimate. A stronger scalar bound alone has not certified positivity. This motivates a genuinely mode-weighted inverse estimate or retaining positive boundary corrections. DNB01 complete as candidate.
