@@ -52,7 +52,25 @@ Hence (K_J\) is an increasing, uniformly bounded sequence of positive operators.
 \]
 This proves the fixed-partition strong-limit claim without an operator-norm tail estimate.
 
-Using the exact digamma multiplier expansion above, monotone convergence on the positive correction forms identifies the compressed archimedean form with its cellwise Neumann form plus ⟨Kf,f⟩. Since (K) is bounded, these forms have the same domain (after a common lower-bounded scalar shift). This conclusion is for a fixed finite partition; the bound (mC_0) is not uniform as cells are refined.
+### Form-domain identity, including the infinite rate sum
+
+For L >= 0, set `phi_j(L) = L(L+r_j^2)^-1 = I-r_j^2(L+r_j^2)^-1` and `c_j=2/r_j>0`. Let
+
+    q_{L,J}(f) = alpha_0 ||f||^2 + sum_{j<J} c_j <phi_j(L)f,f>,
+
+and define `q_L(f)=lim_{J->infinity} q_{L,J}(f)`, allowing +infinity. Resolvent order gives `q_{L_N,J}(f) <= q_{L_0,J}(f)`. The exact resolvent difference and `c_j*r_j^2=2*r_j` give
+
+    q_{L_0,J}(f) - q_{L_N,J}(f) = <K_J f,f>,
+
+where `K_J=sum_{j<J} 2*r_j*D_{r_j}`. The fixed-partition estimate proves `0 <= K_J <= C I`, with `C=m*C_0`, for all J. Therefore, in the extended sense, for every f in L2(R),
+
+    q_{L_N}(f) <= q_{L_0}(f) <= q_{L_N}(f) + C ||f||^2.
+
+These inequalities show `D(q_{L_N})=D(q_{L_0})`: finiteness of either form forces finiteness of the other. For f in this common domain, strong convergence `K_J -> K` gives
+
+    q_{L_0}(f) = q_{L_N}(f) + <K f,f>.
+
+Taking f to be the zero extension of a physical-window vector gives the equality between the compressed archimedean form and its cellwise Neumann form plus the bounded boundary correction. The argument is for each fixed finite partition; `C=m*C_0` is not uniform over arbitrary refinements.
 
 ## Operator-norm convergence fails
 
