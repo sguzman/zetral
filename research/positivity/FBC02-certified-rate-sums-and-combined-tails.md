@@ -43,3 +43,25 @@ Sum over low columns for a trace majorant. No assumption that boundary and prime
 Use exact low/cross full boundary entries, full low digamma, exact prime/pole overlaps. The positive column penalties are the full boundary Gram G_b, the prime Gram G_p, and inverse positive pole coefficient h/2 in scaled coordinates. An approximate minimizer is allowed, but every trial coefficient is frozen as an exact rational. The entire penalty and finite weighted residual Gram are outward evaluated, then the combined analytic tail and matrix-radius correction are subtracted. The high diagonal lower weights remain those of PBCI02. Positive interval LDL pivots and positive high weights certify strict positivity on the full fixed window. Numerical output and any failures will be recorded in FBC03.
 
 Fresh related-work check retrieved the abstract of arXiv:2608.24827 (reports support-length 1.6 certificate) and the search excerpt of *Full-source Schur certificates for Weil positivity at support radius two*, rstation.ai/problems/riemann_hypothesis/papers/60, which reports a full-source response/digamma displacement approach. Neither external certificate was independently evaluated. No claim of novel general Schur or rate-sum methods. FBC02 complete as candidate.
+
+## 4. Second signed coefficient and optional leading cancellation
+
+The first FBC03 execution revealed that a sum of absolute low-index remainder constants can dominate a small even Schur margin. A sharper expansion combines the second coefficient as well.
+
+For the full boundary combination set b_j=c_j nu_j, S0=sum b_j, S2=sum b_j x_j F_eta(x_j), x_j=omega_j². For n>M, x=x_n and D=1-(K_b/(M+1))²>0, the exact rational formula yields
+    sum c_j K_nj=(2 sqrt2/h)[ F(x) S0-S2/x
+         + F(x) sum b_j x_j/(x-x_j)
+         - sum b_j x_j² F(x_j)/(x(x-x_j)) ].
+With |F(x)-pi/(4 sqrt(x))|<=(1+E_h)/x, it follows that the boundary contribution is bounded by C_b1/n+C_b2/n², where the new
+    C_b2=(2 sqrt2 h/pi²)[(1+E_h)|S0|+|S2|
+       + F_upper sum |b_j| x_j/D
+       + sum |b_j| x_j² F(x_j)/(D x_(M+1))],
+    F_upper=pi/(4 sqrt(x_(M+1)))+(1+E_h)/x_(M+1).
+The last two terms bound the exact remaining expression after multiplying by x. This retains the signed cancellation of S2; no cancellation is assumed in the remainder.
+
+Similarly for prime weights a_j nu_j, set A0=sum a_j nu_j and A1=sum a_j nu_j j sin(theta_j). Expanding 1/(n²-j²)=1/n²+j²/[n²(n²-j²)] gives the same C_p1 as above and the sharper
+    C_p2=(2 b sqrt2/pi)[ |A1|+
+       sum |a_j nu_j| j² [1/(M+1)+j/(M+1)²]/(1-(K_p/(M+1))²)].
+Thus both the constant and oscillatory leading terms, and both second coefficients, are combined with signs before absolute values. The pole coefficient is still exact. Use the same parity tail formula with these improved C1,C2.
+
+A numerical trial may enforce sum_j nu_j Y_b(j,k)=nu_k and sum_j nu_j Y_p(j,k)=nu_k, either by a constrained finite quadratic minimization or by a large finite quadratic penalty. This is optional; rounding the resulting trial to a rational may leave nonzero leading terms, which are recomputed and bounded rather than assumed zero. Any trial remains admissible. The exact verification is unchanged. The tighter formula will be tested separately; no improvement asserted in advance.
