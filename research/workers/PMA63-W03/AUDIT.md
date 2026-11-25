@@ -47,6 +47,15 @@ Comparing with the `fa3`, `fa5`, `fa7`, and `fa9` expressions in the generator's
 
 `fa9` and its coefficient agree with the expansion. The leading integral and first-derivative terms also agree.
 
+Combining the three discrepancies, the exact difference between the implemented center and the correctly truncated center is
+\[
+C_{\rm code}-C_{\rm EM}
+=-\frac75\frac{ux}{d^4}
++\frac{31}{63}\frac{x^2(x-15u)}{d^6}
++\frac{127}{302400}g_x^{(7)}(R).
+\]
+This isolates the sign of the bias without asymptotic notation.
+
 ## Direction and consequence at the campaign cutoffs
 
 For Campaign LXIII parameters `h=239/100`, `T=768`, and `J>=4096` (covering LB02 at `J=4096` and LB03 at `J=8192`), only `0<=n<=T` can enter a diagonal finite-block entry. Since `h>2`, `pi<4`, and `R>8191`,
