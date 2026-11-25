@@ -12,3 +12,6 @@ Campaign I — spectral convergence. Access date: 2026-11-24 Mexico.
 - [Theta-cardinal prior art](theta-prior-art.md)
 
 The convergence source is pinned to v1 and its screw-function antecedent to v4. Other source limitations are documented in the antecedent audit. RH is externally certified; Zetral has not independently built that proof, and formal interfaces will retain explicit RH hypotheses until a checked import is feasible. The candidate bound is documented separately; no novelty or independent verification claimed.
+
+## Campaign II verification
+- [V02 targeted novelty assessment](../research/verification/V02-novelty-assessment.md): exact operator comparisons, recovered Kim v3, direct Suzuki 2025 basis antecedent and new multiplicity-test lead. Novelty remains unresolved.
