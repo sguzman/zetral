@@ -416,3 +416,8 @@ Lead owns AIR03–04; worker scopes unchanged.
 - Campaign LVII RESUMED at PPW02; use corrected 48/97 Machin and AIR03 rate enclosure, first h=2 with prior 2.071 norm bound (below log8); actual 8 above log8, 9 above log9 using PPW01 exact witnesses. PPW02–04 pending.
 
 Lead owns PPW02–04. Worker scopes unchanged.
+
+
+- PPW02 checkpoint research/positivity/PPW02-prime-power-regime-tests.md 09800f2db75a2173d211e3aa953fca686fe2f25f; source experiments/ppw02-prime-power-regimes.js 6357dd69980430ff9da0d448259f9b9d15a3b308, actual V8 even J=2048 raw a0c3bf36610dbf31a46cd8263c6a75220b7d0ca7 inconclusive; J=3072 even raw b172361c1501bea15b1607b4dea8bc6092b7d40c and odd raw ec56c967f2eec3a645d3744eb83b3e75a53f89d7 pass all 18 each. T=384,M=4608,S=193, scale 10^42. Candidate full strict positivity reaches h=2 (below log8, actual shifts 2,3,4,5,7), first even 4931612314173/10^42 and odd 13192247427684152/10^42, not eigenvalue margins. All source/raw/note exact readbacks. Integrated actual 8/9 shifts and recomputed norm witness for regime. Next bounded h=21/10 crossing with 8, norm upper 2.303, then 9 only if justified. No actual negative spectrum, separate runtime, independent verification, RH proof, literature record, expenses or new worker acceptance. README unchanged.
+
+Lead owns PPW02–04. Worker scopes unchanged.
