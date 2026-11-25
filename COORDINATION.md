@@ -12,10 +12,12 @@ Protocol established 2026-11-25 UTC. This file is the lead's assignment ledger, 
 
 | ID | Owner | Status | Task | Exclusive write scope |
 |---|---|---|---|---|
-| C03 | Lead | READY | Exact characteristic-function error and root-count theorem | research/certification/C03-*; STATE.md; coordination ledger |
-| C04-W01 | Codex | ASSIGNED, not yet acknowledged | Independent C02 audit and bounded small-window residual feasibility experiment | research/workers/C04-W01/; experiments/worker-c04-w01/ |
+| C03 | Lead | COMPLETE, proof persisted | Exact characteristic-function error and root-count theorem | research/certification/C03-*; STATE.md; coordination ledger |
+| C04-W01 | Codex | ASSIGNED; owner launched cloud Goal, branch not yet visible | Independent C02 audit and bounded small-window residual feasibility experiment | research/workers/C04-W01/; experiments/worker-c04-w01/ |
 
-C04-W01 is preparatory evidence for C04, not ownership or completion of C04 itself. C03 and C04-W01 can proceed independently. No worker execution or result is asserted yet.
+C04-W01 is preparatory evidence for C04, not ownership or completion of C04 itself. C03 and C04-W01 can proceed independently. Owner reported launching the Goal in a cloud workspace on 2026-11-25. The C03 checkpoint found no commit at worker/c04-w01; no worker artifact or result verified yet. The worker may use cloud instead of local tooling, following applicable resource/build rules.
+
+C03 lead result: research/certification/C03-contour-root-certification.md (2fc93d54a1c12e1b573ec7a9ea4deeee09c41cd2). Lead next reviews C04 evidence and works on independent contour/analytic feasibility; worker scope unchanged.
 
 ## C04-W01 work order
 
