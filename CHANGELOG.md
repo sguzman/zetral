@@ -2,15 +2,16 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XIV
+## Campaigns XII–XVII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
-| [XII — Derivative-chain rigidity](research/CAMPAIGN-12.md) | Arithmetic moment constraints and multiplicity estimates; general simplicity unresolved. Full DCR03 archival transfer remains pending. |
+| [XII — Derivative-chain rigidity](research/CAMPAIGN-12.md) | Arithmetic moment constraints and multiplicity estimates; general simplicity unresolved. Full DCR03 text recovered and verified. |
 | [XIII — Spectral-edge quotient](research/CAMPAIGN-13.md) | Candidate self-adjoint quotient operator, weighted interpolation, and RH-conditional exponential spectral concentration. Individual node convergence unresolved. |
 | [XIV — Global semiboundedness and off-line growth](research/CAMPAIGN-14.md) | Closed mathematically. Candidate semiboundedness equivalence, all-window lower exponent, exact restricted growth rate, and [limiting negative index](research/positivity/GSG04-global-inertia.md). Unrestricted matching upper bound unresolved. |
 | [XV — Quantitative negative-index resolution](research/CAMPAIGN-15.md) | Closed mathematically. Constructive thresholds, exact normalized indexed exponents, and [frequency-escape obstruction](research/positivity/NIR04-frequency-escape.md). Ordinary interior exponent remains open. |
-| [XVI — Frequency localization and escape](research/CAMPAIGN-16.md) | Active. Support-expanding frequency partition and escape analysis. |
+| [XVI — Frequency localization and escape](research/CAMPAIGN-16.md) | Closed mathematically. Exact frequency frame, negative-packet selection, exceptional prime resonances and [local concentration certificates](research/positivity/FES04-local-concentration-certificates.md). Escape remains unexcluded. |
+| [XVII — Compact positivity certificates](research/CAMPAIGN-17.md) | Active. Exact preconditioning and certified finite-rank sign tests. |
 
 ## Campaigns I–XI — archived README
 
