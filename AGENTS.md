@@ -10,3 +10,6 @@ Research integrity:
 - Never claim CI or publication succeeded without verification. Do not publish private material. Disclose AI assistance and human review status.
 - Situs is canonical for the situated ontology. Do not create a duplicate registry here. Do not generalize beyond the research need.
 - Prefer Rust for experiments; use Nix for reproducibility and Lean 4/Mathlib for formal results. No npm. Avoid unrelated infrastructure.
+
+## Multi-agent coordination
+When a local Codex worker is active, read COORDINATION.md alongside STATE.md before each batch. The lead owns campaign direction, acceptance and main's shared state; the worker follows its assigned branch and exclusive file scope. Use committed/pushed handoffs, not claims of live communication. Worker results are not accepted until lead review; do not count parallel work twice. See COORDINATION.md for the active assignment and roles.
