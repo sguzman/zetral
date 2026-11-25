@@ -1,0 +1,50 @@
+[
+  {
+    "h": "43/20",
+    "odd": false,
+    "dimension": 24,
+    "trialColumns": 201,
+    "firstMinor": "2894228406561947971",
+    "positiveMinors": 24,
+    "allStoredMinorsMatch": true,
+    "allLowerEntriesMatch": true,
+    "exactBasisInvertible": true,
+    "scope": "stored intervals only; not their analytic generation"
+  },
+  {
+    "h": "43/20",
+    "odd": true,
+    "dimension": 24,
+    "trialColumns": 200,
+    "firstMinor": "12949750047165093883906",
+    "positiveMinors": 24,
+    "allStoredMinorsMatch": true,
+    "allLowerEntriesMatch": true,
+    "exactBasisInvertible": true,
+    "scope": "stored intervals only; not their analytic generation"
+  },
+  {
+    "h": "11/5",
+    "odd": false,
+    "dimension": 28,
+    "trialColumns": 229,
+    "firstMinor": "14475264850738776",
+    "positiveMinors": 28,
+    "allStoredMinorsMatch": true,
+    "allLowerEntriesMatch": true,
+    "exactBasisInvertible": true,
+    "scope": "stored intervals only; not their analytic generation"
+  },
+  {
+    "h": "11/5",
+    "odd": true,
+    "dimension": 28,
+    "trialColumns": 228,
+    "firstMinor": "66741443790295666652",
+    "positiveMinors": 28,
+    "allStoredMinorsMatch": true,
+    "allLowerEntriesMatch": true,
+    "exactBasisInvertible": true,
+    "scope": "stored intervals only; not their analytic generation"
+  }
+]
