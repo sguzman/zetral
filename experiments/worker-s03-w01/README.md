@@ -1,15 +1,19 @@
-# S03-W01 small-window diagnostic
+# S03-W01 finite small-window diagnostics
 
-This is an independent binary64 check of Campaign V's cosine scaling limit using the finite arithmetic phase-pi characteristic. All selected windows satisfy `L=2a < log(2)`, so the prime-power sum is empty. No zeta zeros are inputs.
+This directory contains two related non-certified diagnostics. Both use only the finite prime-free arithmetic form and no known-zero inputs. Neither proves an exact local root or a root count.
 
-Run:
+## Initial cutoff check
+
+`small_window.py` tests the cosine scaling direction at `a=0.003, 0.001, 0.0003` for N=20,40,80, plus N=160 at `a=0.001`. The raw results are in `results.csv`. It uses Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0, binary64 arithmetic, `quad` and `brentq`.
+
+## Updated S02 comparison
+
+`displacement_prediction.py` follows the refreshed main work order at `a=exp(-5), exp(-10), exp(-20)`, computes the first two sign-changing finite characteristic roots, and compares `c(a)*(a*t-s_n)` to `Si(2*s_n)/2`. Its output is `s02-comparison.csv`. Reproduce with:
 
 ```sh
-python3 experiments/worker-s03-w01/small_window.py
+PYTHONDONTWRITEBYTECODE=1 python3 experiments/worker-s03-w01/displacement_prediction.py
 ```
 
-Environment: Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0. The script assembles the finite Gram matrices from the subtracted diagonal integral and C02 divided-difference off-diagonal formula, solves the Riesz systems for `exp(+x)`, and locates the first sign-changing zero of the finite phase-pi scalar. It uses `scipy.integrate.quad` with absolute tolerance `2e-11`, limit 500, and `brentq` with the default `xtol=2e-12` set in the script. `cond_2` is NumPy's 2-norm condition estimate.
+This script uses mpmath 1.3.0 at 35 decimal digits for scaled-variable integral assembly and finite solves, then binary64 for the scaled characteristic scan and SciPy root refinement. At `a=exp(-20), N=64`, a separate run at 50 digits matched all 14 printed digits. `quadrature-sensitivity.txt` records the initial experiment's separate tolerance comparison. These are numerical stability checks, not validated errors. The root scan finds sign changes only; finite-to-exact, quadrature, solve and asymptotic errors are not rigorously bounded.
 
-Results are raw in `results.csv`. They are first sign-changing candidate roots of finite characteristic functions, not certified zeros of the exact local characteristic. Finite-basis truncation, quadrature error, root scanning/isolation error, and exact asymptotic error are distinct. No validated error enclosure or root count is supplied. The finite N=20-to-80 change in `a*t` is about 0.012–0.016; changing the quadrature absolute tolerance from `2e-11` to `1e-13` at `a=0.001`, N=40 and 80 did not change the printed 14-digit roots, but this is a stability check rather than a rigorous quadrature bound.
-
-The asymptotic target is `pi/2`. At N=80 the scaled roots at N=80 are 1.79368, 1.74885 and 1.71670 for `a=0.003,0.001,0.0003`, with absolute offsets 0.22289, 0.17805 and 0.14590. They trend toward `pi/2` as the window shrinks, but are still far from it and move with N. This is consistent with a slow small-a limit and illustrates that the lead's coarse `O(1/log(1/a))` theorem is not a useful finite-window error bar. At `a=0.001`, N=80 to 160 changes `a*t` by another 0.00201. The three windows do not independently determine a second-order coefficient.
+The largest-cutoff first-root scaled displacement is 0.5278, 0.8260, 0.9315 at `a=exp(-5), exp(-10), exp(-20)`, compared with 0.9260 predicted. The second-root values are 0.4214, 0.8084, 0.9709, compared with 0.8374, and remain cutoff-sensitive. See `research/workers/S03-W01/RESULT.md` for derivation, source normalization check and limitations.
