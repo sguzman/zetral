@@ -1,0 +1,52 @@
+[
+  {
+    "h": "47/20",
+    "odd": false,
+    "n": 37,
+    "baselineEntries": 1369,
+    "baselineRadiusMatches": 37,
+    "selectedEntries": 1369,
+    "exactMinorMatches": 37,
+    "marginNumerator": "136301",
+    "marginDenominator": "1000000",
+    "nextGridFails": true,
+    "firstRadius": "9108994930850981740",
+    "shares": [
+      "919778",
+      "45999",
+      "4557",
+      "79",
+      "3",
+      "1",
+      "1",
+      "29582"
+    ],
+    "denominator": "1000000",
+    "scope": "stored interval reconstruction and independent integer row elimination; not independent operator evaluation"
+  },
+  {
+    "h": "47/20",
+    "odd": true,
+    "n": 37,
+    "baselineEntries": 1369,
+    "baselineRadiusMatches": 37,
+    "selectedEntries": 1369,
+    "exactMinorMatches": 37,
+    "marginNumerator": "204083",
+    "marginDenominator": "1000000",
+    "nextGridFails": true,
+    "firstRadius": "14249700153389741050",
+    "shares": [
+      "9550",
+      "400",
+      "45",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "denominator": "10000",
+    "scope": "stored interval reconstruction and independent integer row elimination; not independent operator evaluation"
+  }
+]
