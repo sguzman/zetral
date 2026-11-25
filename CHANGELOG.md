@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXXII
+## Campaigns XII–XXXIII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -26,7 +26,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXIX — Harmonic phase families and indexed ordinary spectrum](research/CAMPAIGN-29.md) | Closed mathematically. [Indexed ordinary characterization](research/positivity/HPS03-separated-carrier-indexed-converse.md) and [parity pairing at scale exp(a)](research/positivity/HPS04-audit-parity-characterization.md); coefficients unresolved. |
 | [XXX — Parity pairing of spectral escape](research/CAMPAIGN-30.md) | Closed mathematically. [Exact finite-fast parity transfer](research/positivity/PPE03-fast-zero-exact-interpolation.md); ordinary growth-rate pairing above tail deviation scale. |
 | [XXXI — Finite zero excision and ordinary spectral inertia](research/CAMPAIGN-31.md) | Closed mathematically. [Additive finite and residual rate counts](research/positivity/FZE03-additive-rate-decomposition.md). |
-| [XXXII — Same-window ordinary spectral decoupling](research/CAMPAIGN-32.md) | Active. Relative depth comparisons at matching scales. |
+| [XXXII — Same-window ordinary spectral decoupling](research/CAMPAIGN-32.md) | Closed mathematically. [Ordered-union depth theorem](research/positivity/SWD02-ordered-union-depths.md) and [spectral-band decomposition](research/positivity/SWD03-resolvent-and-projection-split.md). |
+| [XXXIII — Deviation-resolved local density and anomalous ordinary rates](research/CAMPAIGN-33.md) | Active. Local density envelopes and carrier constraints on residual rates. |
 
 ## Campaigns I–XI — archived README
 
