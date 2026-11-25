@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XLVI
+## Campaigns XII–XLVII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -40,7 +40,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XLIII — Certified block singularity lifting](research/CAMPAIGN-43.md) | Closed (candidate). Step/affine lifts and [executed two-parity block residual benchmark](research/positivity/BSL03-executed-two-parity-residual-benchmark.md); positive finite Ritz block, no full certificate. |
 | [XLIV — Cell-average coercivity](research/CAMPAIGN-44.md) | Closed (candidate). Exact Schur reduction and [executed failed sufficient test](research/positivity/CAC03-nested-cell-schur-witness.md) at four partitions; not negative restored eigenvalues. |
 | [XLV — Digamma Neumann bracketing](research/CAMPAIGN-45.md) | Closed (candidate). Stronger complement, [exact positive boundary corrections](research/positivity/DNB02-exact-positive-boundary-resolvent.md), weighted Schur diagnostic fails on tested partitions. |
-| [XLVI — Monotone boundary lower operators](research/CAMPAIGN-46.md) | Active; [indexed spectral convergence and finite strict-sign completeness](research/positivity/MBL01-monotone-lower-operator-convergence.md); numerical lower model pending. |
+| [XLVI — Monotone boundary lower operators](research/CAMPAIGN-46.md) | Closed (candidate). [Executed strict certificates](research/positivity/MBL03-executed-prime-free-lower-certificates.md) at prime-free physical lengths 1/4, 3/8, 7/16; 1/2 inconclusive. No record positivity range. |
+| [XLVII — Positive complementary inverse](research/CAMPAIGN-47.md) | Active; retain boundary corrections in high-mode inverse and test a larger window. |
 
 ## Campaigns I–XI — archived README
 
