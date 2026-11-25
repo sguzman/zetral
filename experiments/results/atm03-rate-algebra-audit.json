@@ -1,0 +1,148 @@
+{
+  "cases": [
+    {
+      "r": "1",
+      "x": "0",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "1",
+      "x": "1",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "1",
+      "x": "3",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "1",
+      "x": "11",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "1",
+      "x": "100",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "2",
+      "x": "0",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "2",
+      "x": "1",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "2",
+      "x": "3",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "2",
+      "x": "11",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "2",
+      "x": "100",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "5",
+      "x": "0",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "5",
+      "x": "1",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "5",
+      "x": "3",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "5",
+      "x": "11",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "5",
+      "x": "100",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "17",
+      "x": "0",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "17",
+      "x": "1",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "17",
+      "x": "3",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "17",
+      "x": "11",
+      "f": true,
+      "fd": true,
+      "fa": true
+    },
+    {
+      "r": "17",
+      "x": "100",
+      "f": true,
+      "fd": true,
+      "fa": true
+    }
+  ],
+  "checks": 60,
+  "rateNumerator": "2831718",
+  "rateDenominator": "2730",
+  "alphaNumerator": "36812334"
+}
