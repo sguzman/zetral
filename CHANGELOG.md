@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXIX
+## Campaigns XII–XXX
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -23,7 +23,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXVI — Weighted prime-shift rigidity](research/CAMPAIGN-26.md) | Closed mathematically. Conditional saturation intensity, [necessary prime coherence](research/positivity/WPR02-local-phase-coherence.md), and a lattice countermodel; actual coherence exclusion unresolved. |
 | [XXVII — Twisted prime phase-limit spectrum](research/CAMPAIGN-27.md) | Closed mathematically. [Ordinary variational characterization](research/positivity/TPH02-ordinary-variational-characterization.md) and [global saturation criterion](research/positivity/TPH03-global-coherence-criterion.md); attainable set unresolved. |
 | [XXVIII — Carrier-centered zero geometry](research/CAMPAIGN-28.md) | Closed mathematically. [Local zero-side restrictions](research/positivity/CZG03-negative-pair-and-density-obstructions.md), moderate carrier exclusion, conditional narrowing and rarity; extreme carriers unresolved. |
-| [XXIX — Harmonic phase families and indexed ordinary spectrum](research/CAMPAIGN-29.md) | Active. Simultaneous carrier channels and indexed lower bounds. |
+| [XXIX — Harmonic phase families and indexed ordinary spectrum](research/CAMPAIGN-29.md) | Closed mathematically. [Indexed ordinary characterization](research/positivity/HPS03-separated-carrier-indexed-converse.md) and [parity pairing at scale exp(a)](research/positivity/HPS04-audit-parity-characterization.md); coefficients unresolved. |
+| [XXX — Parity pairing of spectral escape](research/CAMPAIGN-30.md) | Active. Opposite-carrier parity transfer at anomalous smaller scales. |
 
 ## Campaigns I–XI — archived README
 
