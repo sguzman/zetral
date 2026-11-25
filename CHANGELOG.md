@@ -112,3 +112,7 @@ Open research into the spectral, arithmetic and dynamical structures underlying 
 - [Public atlas (deployment unverified)](https://sguzman.github.io/zetral/)
 
 The canonical situated ontology belongs in Situs, not this repository. Initial focus: Suzuki's spectral convergence construction and quantitative error questions, with explicit RH dependencies and prior-art checks.
+
+## Arithmetic integrity checkpoint
+
+Campaign LVI closed (candidate): [corrected adaptive certificate](research/positivity/P7W03-sixth-residual-and-eighth-rate-expansion.md) at physical h=1.95; earlier affected Machin remainder implementations require corrected replay. [LVII](research/CAMPAIGN-57.md) paused after [PPW01 norm witnesses](research/positivity/PPW01-executed-prime-power-norm-witnesses.md); [LVIII](research/CAMPAIGN-58.md) active for arithmetic integrity and frozen replay.
