@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXXIV
+## Campaigns XII–XXXV
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -28,7 +28,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXXI — Finite zero excision and ordinary spectral inertia](research/CAMPAIGN-31.md) | Closed mathematically. [Additive finite and residual rate counts](research/positivity/FZE03-additive-rate-decomposition.md). |
 | [XXXII — Same-window ordinary spectral decoupling](research/CAMPAIGN-32.md) | Closed mathematically. [Ordered-union depth theorem](research/positivity/SWD02-ordered-union-depths.md) and [spectral-band decomposition](research/positivity/SWD03-resolvent-and-projection-split.md). |
 | [XXXIII — Deviation-resolved local density and anomalous ordinary rates](research/CAMPAIGN-33.md) | Closed mathematically. [Local density envelope](research/positivity/LDE02-deviation-density-envelope.md) and carrier-local necessity; unconditional density improvement unresolved. |
-| [XXXIV — Local zero-measure cancellation and strip projection](research/CAMPAIGN-34.md) | Active. Analytic projection of high-carrier local complex zero measures. |
+| [XXXIV — Local zero-measure cancellation and strip projection](research/CAMPAIGN-34.md) | Closed mathematically. [Arithmetic strip sweep](research/positivity/LZC02-arithmetic-sweep.md) and [moving-window countermodel](research/positivity/LZC03-moving-window-obstruction.md). |
+| [XXXV — Fixed discrete zero-system obstruction](research/CAMPAIGN-35.md) | Active. Test count, symmetry and signed projection constraints on a single discrete abstract system. |
 
 ## Campaigns I–XI — archived README
 
