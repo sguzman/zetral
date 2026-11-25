@@ -465,3 +465,6 @@ Resume on continue: ATM03 execute new generator even h=23/10,J3072,M6656,T576,lo
 - Campaign LXI ACTIVE research/CAMPAIGN-61.md c4a1f8bf4a264186492850e0973ab7c9e5e2235e. Lead owns FDA01–04, worker scopes unchanged.
 
 Resume on continue: FDA01 higher lattice/coupled primitive audit and source, FDA02 measured h=23/10 even J4096 and weighted shares; persist and replay. 
+
+
+- Campaign LXI checkpoint: FDA01 complete research/positivity/FDA01-precision66-arithmetic.md 43269cc8e5e9adfd00cb154a1a5619d17b4f7afc, generator experiments/fda01-precision66-regimes.js 0eb7bccfe645b269c9d2d9354f812547121a9c2f, 10^66 lattice, coupled primitives, weighted radius and even rational shares. Actual independent exact primitive checks 34/34 source afcdca9a85a56b95603c1cb2e4f0483e7c024ac3 raw f63b238bac2ee197f7994ba72c234c0b4f7a8ad8; all exact pinned readbacks. Candidate h=2.25 remains. Full 2.30 run pending; no independent original normalization/full verifier, human/formal review, priority or RH proof. Resume FDA02 even J4096 M6656 T576 32 low h=23/10; odd if even passes, then targeted refinement/audit.
