@@ -1,0 +1,51 @@
+{
+  "checks": [
+    "Machin pi",
+    "atan 1/5",
+    "atan 1/239",
+    "atanPos 1/8",
+    "atanPos 1/2",
+    "atanPos 3/4",
+    "atanPos 1/1",
+    "atanPos 3/2",
+    "atanPos 4/1",
+    "log 1/1",
+    "log 9/8",
+    "log 3/2",
+    "log 2/1",
+    "log 3/1",
+    "log 7/1",
+    "log 8/1",
+    "expneg 0/1",
+    "expneg 1/8",
+    "expneg 1/2",
+    "expneg 1/1",
+    "expneg 3/1",
+    "expneg 8/1",
+    "cos 0",
+    "sin 0",
+    "cos 1",
+    "sin 1",
+    "cos 3",
+    "sin 3",
+    "cos 6",
+    "sin 6",
+    "sqrt 2",
+    "sqrt 3",
+    "sqrt 5",
+    "sqrt 7"
+  ],
+  "passed": 34,
+  "oldAtanUpperBelowReference": true,
+  "oldPiUpperBelowReference": true,
+  "correctedPi": [
+    "3141592653589793238462643383279502884197169399375105200",
+    "3141592653589793238462643383279502884197169399375106452"
+  ],
+  "oldPi": [
+    "3141592653589793238462643383279502866495394721567091952",
+    "3141592653589793238462643383279502877615393801494243012"
+  ],
+  "scale": "1000000000000000000000000000000000000000000000000000000",
+  "scope": "finite exact rational reference tests; not exhaustive interval proof"
+}
