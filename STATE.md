@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-25 UTC.
-Active campaign: XI — Unconditional critical-window spectral positivity (research/CAMPAIGN-11.md). Campaign X concluded; pointwise problem unresolved.
+Active campaign: XV — Quantitative negative-index resolution (research/CAMPAIGN-15.md). Campaigns XI–XIV mathematically closed; see the superseding checkpoint at the end.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -35,4 +35,14 @@ Campaign XI:
 - U03 READY: regularized inverse and evaluation spectral weights near hypothetical critical window, parity and invisible modes.
 - K02-W04 NOW IN_PROGRESS: actual worker branch and HANDOFF.md retrieved, blob e810b943540d58624249d4d92e28d70bd4f60bc2; acknowledged at starting commit 3444bb1, audit unfinished, no acceptance. Earlier missing-branch reports are historical.
 
-Resume on continue: read AGENTS.md, STATE.md, COORDINATION.md, CAMPAIGN-11.md and U01–U02 notes; check worker handoff, execute U03. Owner explicitly reaffirmed autonomous successive campaigns; close and pivot rather than treating a local obstruction as mission-wide termination. No external submission or expenses. Do not invent verification or claim background execution.
+## Superseding checkpoint — Campaign XV
+
+Historical campaign notes above are retained, including stale historical dispositions. For current detailed record use COORDINATION.md and CHANGELOG.md.
+- XI completed: U03 d755df75cbb7a885c6e2d2ca52ccc94a400fe011; U04 1126c25b856ca6882b134d819cb163f1474b7bbd.
+- XII completed: DCR01 44988b52f7a57ce5a63c21b24617631e885e93a0; DCR02 a80af516ac27b3230cd51d1e91477e7cc507dad2; DCR03 full extracted text recovered a19349493232c5fe20866af24eb779390da430d9. No general simplicity proof.
+- XIII completed: QER01 71d19b2506235fbe4d936e2ef7cd8e96b7a91fd2, QER02 9601a1e33642803f2740917f0decb95fa0de2dc5, QER03 b6545201a4b737bb578b179533755b878c29355c, QER04 5a71982e52f82480236853ebfcb279f16d65ee0b. Spectral-edge quotient, sampling, conditional weighted convergence; no individual-node exclusion.
+- XIV completed: GSG01 b0dfa41fdf915a28609f27b49d46da958e60e21a, GSG02 8c13ba11fdd649d10254855b9c10968cee239e26, GSG03 79fdda9caa51deecbbce8c1a20f336e0e4873a99, GSG04 3cd4475d2611a9dea4233547e028d1f9a883fa8f. Global semiboundedness criterion, growth bounds, global negative index equals distinct off-line pairs. Unrestricted matching growth upper bound unresolved; no novelty claim.
+- XV active, plan 87e306c54f6f727b83a99bfc372e1a760bdf17c7. NIR01 COMPLETE: 3269932f09dec298971978047b069f4f75f44bf4, research/positivity/NIR01-constructive-interpolation.md. Exact finite-band sampling, exponential tail, negative Gram margin, explicit sufficient window and kth eigenvalue lower exponent >=2d_min for selected k pairs. NIR02 READY: gap-dependent constants, uncertainty and conditioning; NIR03: matching indexed bounds and parity; NIR04 consolidation. Do not repeat lower growth bound already obtained.
+- Four prior worker audits passed scoped lead AI review; U02-W03/W04 await review, artifact integration pending. No human or formal verification of these candidate research results, no RH proof or observed off-line zero. No external submission, expenses or rule changes. Keep README stable; record chronology in CHANGELOG.md, active state here, worker handoffs in COORDINATION.md.
+
+Resume on continue: read AGENTS, STATE, COORDINATION, CAMPAIGN-15 and NIR01; execute NIR02.
