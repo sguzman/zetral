@@ -28,6 +28,7 @@ Input: `experiments/results/fda02-23-10-even.json` at scale \(Q=10^{66}\), pinne
 
 ```sh
 python experiments/fda03w01-correlated-moment-bounds.py
+python experiments/fda03w01-correlated-moment-bounds.py --odd
 ```
 
 The exact lattice excess bounds, in that order, are:
@@ -46,9 +47,11 @@ Their sum is \(1,435,608,140,382,105/10^{66}\). On the same saved input, summing
 
 ## Full saved-data assembly
 
-The script now also replaces all seven rank-one intervals in the even lower comparison by their grouped Loewner upper matrices. Each central Gram entry is rounded to the nearest \(10^{-66}\) lattice point; a diagonal allowance of \(7\cdot32/(2Q)=112/Q\) covers the seven symmetric rounding errors in operator norm. It subtracts the unchanged saved upper bound for the finite correction and eighth-order diagonal remainder, symmetrizes the remaining intervals by intersection, and applies the saved positive diagonal weights to their exact residual radii. Fraction-free Bareiss elimination then gives **32/32 positive leading minors** for the resulting symmetric integer lower matrix on the \(2Q\) lattice. The first leading minor is exactly `354314337079607328911479` on that lattice.
+The script replaces all seven rank-one intervals in both parity lower comparisons by their grouped Loewner upper matrices. Each central Gram entry is rounded to the nearest \(10^{-66}\) lattice point; a diagonal allowance of \(7\cdot32/(2Q)=112/Q\) covers the seven symmetric rounding errors in operator norm. It subtracts the unchanged saved upper bound for the finite correction and eighth-order diagonal remainder, symmetrizes the remaining intervals by intersection, and applies the saved positive diagonal weights to their exact residual radii. Fraction-free Bareiss elimination gives **32/32 positive leading minors** in each resulting symmetric integer lower matrix on the \(2Q\) lattice. The first leading minors are exactly `354314337079607328911479` (even) and `1772226317410453528341101842` (odd).
 
-The script writes `experiments/results/fda03w01-grouped-even-reassembly.json`, including the full exact lower matrix, all 32 Bareiss leading minors, the coefficient upper bounds, and the row radii. Re-running the command above regenerates this file deterministically. This is an exact positivity certificate for the *saved interval comparison data under this alternative assembly*. The archived primitive and moment intervals, high-block interval, finite matrix, and remainder remain premises inherited from the lead's generator; this work does not independently validate those inputs or the original-form normalization.
+The script writes `experiments/results/fda03w01-grouped-even-reassembly.json`; pass `--odd` to write `experiments/results/fda03w01-grouped-odd-reassembly.json`. Each contains the full exact lower matrix, all 32 Bareiss leading minors, the coefficient upper bounds, and the row radii. Re-running either command regenerates its file deterministically. This is an exact positivity certificate for the *saved interval comparison data under this alternative assembly*. The odd input is pinned on source main `98de91ec03b7e2b3fc36bea49ce5e4fc56e09ded` at blob `9233e0650b366dbcec831af18a01ef8813e7305b`.
+
+The odd grouped excess sums to \(2,392,080,538,315,701/10^{66}\). Its seven saved componentwise weighted rank-radius bound is approximately \(5.55613099\times10^{-34}\), and its maximum full weighted row radius is approximately \(1.71383885\times10^{-27}\). As in even parity, these scale comparisons are diagnostic; the exact 32-minor replay is the certificate relative to the saved intervals.
 
 ## Scope and conclusion
 

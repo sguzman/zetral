@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Exact diagnostic for vector-box bounds on FDA02 rank-one moment terms.
 
-Usage: python experiments/fda03w01-correlated-moment-bounds.py
+Usage: python experiments/fda03w01-correlated-moment-bounds.py [--odd]
 
 This reads the archived FDA02 even interval JSON.  It does not recompute the
 operator or validate the interval generator.  All arithmetic below is exact
@@ -10,16 +10,18 @@ lattice only for the final displayed bound.
 """
 
 import json
+import sys
 from fractions import Fraction
 from math import isqrt
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "experiments/results/fda02-23-10-even.json"
 MOMENTS = ["S0", "V2", "S2", "V4", "S4", "V6", "S6"]
 COMPONENTS = ["leading", "second", "third", "fourth", "fifth", "sixth", "seventh"]
-OUTPUT = ROOT / "experiments/results/fda03w01-grouped-even-reassembly.json"
+PARITY = "odd" if "--odd" in sys.argv else "even"
+DATA = ROOT / f"experiments/results/fda02-23-10-{PARITY}.json"
+OUTPUT = ROOT / f"experiments/results/fda03w01-grouped-{PARITY}-reassembly.json"
 
 
 def ceil_sqrt_fraction(x: Fraction) -> int:
@@ -55,7 +57,7 @@ def main() -> None:
     family_bounds = []
     coefficient_uppers = []
 
-    print(f"scale={Q}; moments={len(MOMENTS)}; dimension={len(row['ks'])}")
+    print(f"parity={PARITY}; scale={Q}; moments={len(MOMENTS)}; dimension={len(row['ks'])}")
     for moment, component in zip(MOMENTS, COMPONENTS):
         vector_intervals = [list(map(int, t[moment])) for t in row["tails"]]
         centers = [(lo + hi) // 2 for lo, hi in vector_intervals]
@@ -175,7 +177,8 @@ def main() -> None:
     print(f"grouped-assembly positive pivots={sum(signs)}/{n}; first pivot on 2Q lattice={first}")
     result = {
         "sourceMain": "98de91ec03b7e2b3fc36bea49ce5e4fc56e09ded",
-        "inputBlob": "1f948873e66234188409e0f95fee5447d782a137",
+        "inputBlob": "1f948873e66234188409e0f95fee5447d782a137" if PARITY == "even" else "9233e0650b366dbcec831af18a01ef8813e7305b",
+        "parity": PARITY,
         "scale": str(Q),
         "matrixScale": f"2*{Q}",
         "dimension": n,
