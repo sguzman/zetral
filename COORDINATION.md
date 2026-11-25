@@ -334,3 +334,9 @@ Lead owns MBL01–04. Worker scopes unchanged; no new worker acceptance.
 - Campaign XLVII ACTIVE research/CAMPAIGN-47.md commit acf98575cbe5c3c1a2c7869c8bae8a18aba7e915 exact readback. Next PBCI01 low Neumann block with retained positive complementary rank corrections and weighted tails, then PBCI02 exact parity arithmetic and PBCI03 bounded actual test. Extended turn completed MBL02–04 plus supplemental CAC diagnostics; no new worker acceptance, actual restored negative eigenvalue, off-line zero, RH proof, priority claim or expense. Worker audit integration pending. README unchanged.
 
 Lead owns PBCI01–04. Worker scopes unchanged; no new worker acceptance.
+
+## Campaign XLVII partial checkpoint
+
+- Campaign XLVII checkpoint: PBCI01 research/positivity/PBCI01-positive-complement-variational-bound.md commit f1b24574d2d0c034d8b781d634e987f37fca434e; PBCI02 research/positivity/PBCI02-parity-prime-exact-matrices.md commit 6c1e772035e3ac1af6859a8ebc6783ec18095a71, both exact readbacks. Positive finite-rank complementary inverse upper bound by arbitrary rational trial Y with weighted residual tail; low block and cross entries retain all finite lower model terms. Exact first-prime parity overlap formulas, disjoint strip norm ||P||=log 2/sqrt 2 for log 2<h<=log 3, combined rate/pole n^-2 and prime n^-1 coefficient tail bounds; finite interval LDL protocol. No new numerical benchmark or positivity range, independent review, actual restored negative eigenvalue, RH proof or worker acceptance. Next PBCI03 bounded numerical test, PBCI04 audit. README unchanged.
+
+Lead owns PBCI01–04. Worker scopes unchanged; no new worker acceptance.
