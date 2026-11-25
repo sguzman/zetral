@@ -52,3 +52,21 @@ with the pole term omitted for T. All constants are explicit. In particular for 
 This follows from w_n increasing and the integral bound sum_(n>K)n^-2<=1/K. It is uniform in the number of cells except through h and S_a. It is a positive-semidefinite tail enclosure, not a claim of cancellation.
 
 For finite certified approximate mode matrices Z_n with ||R_n-Z_n||<=epsilon_n, the first K correction terms have matrix error at most sum_(n<=K)(2||Z_n||epsilon_n+epsilon_n²)/w_n, in addition to weight and arithmetic interval errors. Adding the tail bound produces a rigorous sufficient Schur lower matrix with no full second-moment integration. Alternatively a negative quotient of H-z I minus only a finite subset of exact weighted mode Gram terms already falsifies this particular sufficient lower test, by the same reasoning as CAC03. Neither failure nor success of an uncertified numerical matrix can be interpreted as a spectral result. A bounded executed diagnostic is recorded separately.
+
+## Executed weighted diagnostic
+
+Actual V8 execution of experiments/dnb03-weighted-witness.js (commit 2f4d3de4ed21ac2ea3839d0c021a8b49e8466483), with raw exact integer output in experiments/results/dnb03-weighted-witness.json (commit a1ade89516092cab89be9d66b030b20a21ba14d2). Both exact readbacks. Reproduce with node experiments/dnb03-weighted-witness.js. No separate Node process or Rust execution claimed.
+
+Use the already certified rational witnesses and Ritz intervals from DNB01, a=1/2, m=6,8,16,24,32. Take n=1,...,4 and rates j=0,...,1023. Equation (1) is evaluated by its two geometric recurrences, with outward-rounded fixed-point integers at scale 10^18; exp(-r h) is enclosed by halving the argument to <=1/2, alternating series, then repeated squaring. The sine of the prime fractional shift is reduced by integer multiples of pi and enclosed by its alternating series. All remaining constants use the earlier certified Machin pi, logarithm, harmonic gamma, exponential, and checked square-root enclosures. The omitted archimedean rate tail is bounded by the explicit operator bound in section 1. The exact pole is omitted from the calculated vector but its norm is bounded by section 2; the triangle inequality gives a lower bound on the true mode-vector norm. Normalize by the certified squared norm of the rational witness. Use the lower endpoint of the explicit w_n^lo as an exact rational positive lower weight in the comparison form (so the inverse denominator is that fixed rational, not an unjustified upper estimate of the true inverse).
+
+Since the weighted correction is a sum of positive Grams, its first four terms already give a lower bound on the complete correction. The resulting upper bounds on the Rayleigh quotient of the chosen sufficient Schur lower matrix, rounded up for display, are:
+
+m | upper bound on tested quotient
+---|---:
+6 | -2.92014
+8 | -0.95962
+16 | -0.05785
+24 | -0.01738
+32 | -0.003284
+
+Every endpoint is negative; raw integer endpoints and individual mode lower bounds are preserved. These are failures of the particular diagonal-weight sufficient certificate, NOT negative eigenvalues of the actual restored operator. The low local modes are already enough to obstruct this approximation at these resolutions; increasing the number of residual modes cannot fix the specific failed lower test. Higher resolutions, different lower models, and the exact negative-pole correlation have not been ruled out. No full Schur inverse evaluated. DNB03 complete as a candidate derivation and executed negative diagnostic.
