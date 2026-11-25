@@ -1,14 +1,14 @@
 # K02-W04 worker handoff
 
 - ID: K02-W04
-- Status: IN_PROGRESS
-- Starting commit: `3444bb1` (Campaign XI main; K02-W04 remains explicitly assigned)
-- Scope: independently attempt to falsify Campaign VIII K01/K02. Recheck exact evaluation-resolvent scalar including conjugation and boundary sign; compact analytic estimates, projection identities, mixed kernel bounds, derivative and microscopic scaling, and the limiting two-variable kernel including multiplicity constants. No novelty claim or overlap with N01/N02.
-- Acceptance: record source passages actually inspected, derivations and any gap; distinguish imported results from internal deductions; push evidence and exact command/provenance.
-- Completed: assignment acknowledged. Mathematical audit not yet complete.
-- Evidence: forthcoming under this directory.
-- Exact commands: `git fetch origin main`; `git switch -c worker/k02-w04 origin/main`; `git rev-parse HEAD`.
-- Checked: current AGENTS.md, STATE.md, COORDINATION.md, Campaign XI, U01, Campaign VIII findings from STATE.md.
-- Not checked: K01/K02 proofs and primary sources.
+- Status: READY_FOR_REVIEW
+- Starting commit: `3444bb1` (Campaign XI main; carried K02-W04 assignment)
+- Scope: independently attempt to falsify K01/K02. Checked exact evaluation-resolvent scalar including conjugation and boundary sign; compact analytic continuation; projection identities; mixed and sampled kernels; derivative and microscopic scaling; multiplicity constant. No novelty claim or overlap with N01/N02.
+- Acceptance: record actual source passages, deductions, gaps, exact source access and unchecked claims.
+- Completed: rederived the scalar identity with the imaginary characteristic denominator sign explicit; verified pole cancellation; proved the (1/m_\gamma) sample normalization from the weighted coordinate norm; rederived the microscopic profile and checked compact continuation and sampled/mixed projection estimates. No flaw found in checked scope.
+- Evidence: `research/workers/K02-W04/AUDIT.md`.
+- Exact commands: see AUDIT.md for source-fetch command; `git rev-parse HEAD` -> `06aa665efcf5ab55a150833b740cb68300433bd0` before evidence commit.
+- Checked: Suzuki v1 §§2.2–2.3, §3.1–3.2, Theorem 3.3, Theorem 1.2; Suzuki v4 §7.9; internal derivations K01–K02.
+- Not checked: full L02 theta-tail derivation; numeric/interval or formal verification; all K03 determinant details; fixed-separation unnormalized mixed limit; exhaustive prior art; human review.
 - Blockers: none identified.
-- Next: inspect the exact K01/K02 notes and rederive the kernel formulas.
+- Next: lead review; then select a distinct bounded worker task in the active Campaign XI if available.
