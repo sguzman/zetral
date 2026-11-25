@@ -32,3 +32,6 @@ jobs:
 
       - name: Precision smoke run
         run: cargo +1.85.0 run --release --manifest-path experiments/Cargo.toml --bin precision -- 3 18 320 160 100
+  numerical:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    uses: ./.github/workflows/numerical-verification.yml
