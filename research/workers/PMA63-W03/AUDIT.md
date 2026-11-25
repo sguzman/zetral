@@ -102,7 +102,11 @@ For each diagonal frequency, write the exact diagonal as `C_EM + rho`, with `|rh
 \[
 C_{\rm code}-\epsilon=C_{\rm EM}-\delta-\epsilon\le C_{\rm EM}+\rho.
 \]
-The returned upper endpoint need not be an upper bound. In the generator the archimedean diagonal is added only when `n===k`; it is diagonal in the Neumann basis. If a downstream interval matrix routine needs a two-sided input interval, clip each exact diagonal value to `[lo,hi]`, where `lo` is the returned lower endpoint. The clipped matrix lies in the reported entry intervals and is Loewner-below the exact matrix, because each removed diagonal excess is nonnegative. Congruence by the stored rational coefficient matrix preserves this order. The row-radius lower-matrix step then applies to the clipped matrix. Consequently this bug invalidates the reported two-sided diagonal/derived interval widths, but it need not invalidate a strict positivity lower comparison, conditional on the other matrix intervals, the tail bounds, and the exact rational elimination being valid. This audit does not independently certify those other ingredients or reproduce any LB comparison.
+The returned upper endpoint need not be an upper bound. In the generator the archimedean diagonal is added only when `n===k`; it is diagonal in the Neumann basis. If a downstream interval matrix routine needs a two-sided input interval, clip each exact diagonal value to `[lo,hi]`, where `lo` is the returned lower endpoint. The clipped matrix lies in the reported entry intervals and is Loewner-below the exact matrix, because each removed diagonal excess is nonnegative. Congruence by the stored rational coefficient matrix preserves this order. For the resulting symmetric interval matrix with midpoints `M_ij` and radii `E_ij`, the code's exact positive diagonal weights `d_i` use
+\[
+2|x_ix_j|\le (d_j/d_i)|x_i|^2+(d_i/d_j)|x_j|^2,
+\]
+so `e_i=sum_j ceil(E_ij d_j/d_i)` yields the lower matrix `M-diag(e)`. This is the lower-radius construction in generator lines 476–486. It applies to the clipped matrix. Consequently this bug invalidates the reported two-sided diagonal/derived interval widths, but it need not invalidate a strict positivity lower comparison, conditional on the other matrix intervals, the tail bounds, and the exact rational elimination being valid. This audit does not independently certify those other ingredients or reproduce any LB comparison.
 
 ## Required correction and scope
 
