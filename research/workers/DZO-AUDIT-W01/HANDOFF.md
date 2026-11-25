@@ -21,13 +21,15 @@ Read the current DZO01–04 notes and independently recomputed the key carrier a
 
 ## Evidence and reproducibility
 
+As a follow-up import check, I also read LZC01 §§2–4. The kernel multiplier \(\cosh(vs)/\cosh(cs)\), positivity for \(|v|<c\), and mass one are mutually consistent. Given LZC01's analytic-test identity, Fubini against the positive kernel and Fourier uniqueness yield a constant projection density \(1/(2\pi)\). This verifies the local-projection input DZO03 uses; it does not verify LZC01's inherited arithmetic form identity or classical-count assumptions.
+
 - Evidence reviewed: `research/positivity/DZO01-lacunary-continuous-construction.md`, `DZO02-discrete-rate-counterexample.md`, `DZO03-projection-and-entire-product.md`, and `DZO04-audit-and-arithmetic-boundary.md` at starting commit `8bbf9ae`.
 - Exact review commands: `git show origin/main:research/positivity/DZO01-lacunary-continuous-construction.md` (and corresponding DZO02–04 paths); in the worker worktree, `cat research/positivity/DZO02-discrete-rate-counterexample.md` and `cat research/positivity/DZO03-projection-and-entire-product.md`.
 - No numerical or formal verification was run or needed for this symbolic audit.
 
 ## Checked / unchecked
 
-- **Checked:** Internal Fourier signs and cosh factors; density positivity/count scaling at the stated level; quantile error exponent; selected-trial band factors; fixed-spaced interpolation; discrepancy exponent algebra; canonical-product convergence/order estimates.
-- **Not checked:** Every tail estimate line-by-line in the full lacunary lemma; all details of LZC01's imported strip kernel proof; a full independent derivation of the local-limit transfer; primary-source arithmetic identities; any claim that the model is zeta or satisfies its Euler product; formal proof, numerical experiment, exhaustive literature search, or human review.
+- **Checked:** Internal Fourier signs and cosh factors; density positivity/count scaling at the stated level; quantile error exponent; selected-trial band factors; fixed-spaced interpolation; discrepancy exponent algebra; canonical-product convergence/order estimates; LZC01's local kernel/projection calculation as used by DZO03.
+- **Not checked:** Every tail estimate line-by-line in the full lacunary lemma; a full independent derivation of the local-limit transfer; primary-source arithmetic identities and inherited classical-count assumptions; any claim that the model is zeta or satisfies its Euler product; formal proof, numerical experiment, exhaustive literature search, or human review.
 - **Finding:** No flaw identified in this scoped AI-assisted audit. The construction remains an abstract zero system, not a zeta counterexample or Hilbert–Pólya operator construction.
 - **Next recommendation:** Lead review the handoff. The research frontier is now arithmetic-specific: identify which prime-power/Euler-product constraint excludes (or fails to exclude) the abstract density mechanism. Do not describe the present model as an arithmetic realization.
