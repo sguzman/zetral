@@ -116,3 +116,10 @@ The canonical situated ontology belongs in Situs, not this repository. Initial f
 ## Arithmetic integrity checkpoint
 
 Campaign LVI closed (candidate): [corrected adaptive certificate](research/positivity/P7W03-sixth-residual-and-eighth-rate-expansion.md) at physical h=1.95; earlier affected Machin remainder implementations require corrected replay. [LVII](research/CAMPAIGN-57.md) paused after [PPW01 norm witnesses](research/positivity/PPW01-executed-prime-power-norm-witnesses.md); [LVIII](research/CAMPAIGN-58.md) active for arithmetic integrity and frozen replay.
+
+
+## Latest positivity checkpoints
+
+- [LXI](research/CAMPAIGN-61.md): candidate h=2.30, 32/32 each parity, independent stored replay.
+- [LXII](research/CAMPAIGN-62.md): [candidate h=2.35](research/positivity/LPA04-47-20-crossing.md), 37/37 each parity, exact stored replay; earlier high-mode and tail-bound failures preserved. Independent original operator verification remains open.
+- [LXIII](research/CAMPAIGN-63.md): active, next target 2.39 below log(11).
