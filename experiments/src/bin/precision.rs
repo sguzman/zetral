@@ -15,7 +15,7 @@ fn legendre(p:u32,n:usize,z:&F)->(F,F) {
         let v=(mul(z,&b)*(2*k-1) as i32-a*(k-1) as i32)/k as i32;
         a=b; b=v;
     }
-    let derivative=(mul(z,&b)-a)*n as i32/(sq(z)-1);
+    let derivative=(mul(z,&b)-a)*n as i32/(sq(z)-1_i32);
     (b,derivative)
 }
 fn nodes(p:u32,n:usize,pi:&F)->Vec<(F,F)> {
@@ -33,8 +33,8 @@ fn nodes(p:u32,n:usize,pi:&F)->Vec<(F,F)> {
         assert!(ok,"Gauss node Newton iteration did not converge");
         let (_,d)=legendre(p,n,&z);
         let w=f(p,1)/((f(p,1)-sq(&z))*sq(&d));
-        out.push(((f(p,1)-&z)/2,w.clone()));
-        out.push(((f(p,1)+&z)/2,w));
+        out.push(((f(p,1)-&z)/2_i32,w.clone()));
+        out.push(((f(p,1)+&z)/2_i32,w));
     }
     out
 }
@@ -42,29 +42,29 @@ fn matrix(p:u32,x:u64,n:i32,rule:&[(F,F)],pi:&F)->(F,Vec<Vec<F>>) {
     let l=F::with_val(p,x).ln();
     let mut h=vec![f(p,0);n as usize+1];let mut d=h.clone();
     for (u,w) in rule {
-        let t=mul(&l,u); let half=t.clone()/2;
-        let k=half.clone().exp()/(t.clone().sinh()*2);
-        let a=half.clone().cosh()*2;
+        let t=mul(&l,u); let half: F=t.clone()/2_i32;
+        let k=half.clone().exp()/(t.clone().sinh()*2_i32);
+        let a=half.clone().cosh()*2_i32;
         let c=(-half).exp();
         let wl=mul(w,&l);
         for j in 0..=n as usize {
-            let ang=mul(pi,u)*2*j as i32;
+            let ang=mul(pi,u)*2_i32*j as i32;
             let s=ang.clone().sin();let co=ang.cos();
-            let sdiag=(f(p,1)-u)*2*co;
+            let sdiag=(f(p,1)-u)*2_i32*co;
             h[j]+=mul(&wl,&mul(&sub(&a,&k),&s));
-            d[j]+=mul(&wl,&(mul(&a,&sdiag)-mul(&k,&(sdiag-c.clone()*2))));
+            d[j]+=mul(&wl,&(mul(&a,&sdiag)-mul(&k,&(sdiag-c.clone()*2_i32))));
         }
     }
     for (q,prime) in prime_powers(x) {
         let u=F::with_val(p,q).ln()/&l;
         let weight=F::with_val(p,prime).ln()/F::with_val(p,q).sqrt();
         for j in 0..=n as usize {
-            let ang=mul(pi,&u)*2*j as i32;
+            let ang=mul(pi,&u)*2_i32*j as i32;
             h[j]-=mul(&weight,&ang.clone().sin());
-            d[j]-=mul(&weight,&((f(p,1)-&u)*2*ang.cos()));
+            d[j]-=mul(&weight,&((f(p,1)-&u)*2_i32*ang.cos()));
         }
     }
-    let offset=(pi.clone()*4).ln()+F::with_val(p,Constant::Euler)+(l.clone()/2).tanh().ln();
+    let offset=(pi.clone()*4_i32).ln()+F::with_val(p,Constant::Euler)+(l.clone()/2_i32).tanh().ln();
     for v in &mut d {*v-= &offset;}
     let signed=|j:i32| h[j.unsigned_abs() as usize].clone()*j.signum();
     let g=(-n..=n).map(|i|(-n..=n).map(|j|
@@ -89,10 +89,10 @@ fn solve(l:&[Vec<F>],rhs:&[F])->Vec<F> {
     y
 }
 fn coefficients(p:u32,l:&F,pi:&F,n:i32,g:&[Vec<F>])->(Vec<F>,Vec<F>) {
-    let factor=l.clone().sqrt()*(l.clone()/2).sinh()*2;
+    let factor: F=l.clone().sqrt()*(l.clone()/2_i32).sinh()*2_i32;
     let mut re=Vec::new();let mut im=Vec::new();
     for k in -n..=n {
-        let v=pi.clone()*2*k;let den=sq(&v)+sq(l);
+        let v=pi.clone()*2_i32*k;let den=sq(&v)+sq(l);
         let a=factor.clone()*parity(k)/den;
         re.push(mul(&a,l)); im.push(mul(&a,&v));
     }
@@ -100,7 +100,7 @@ fn coefficients(p:u32,l:&F,pi:&F,n:i32,g:&[Vec<F>])->(Vec<F>,Vec<F>) {
     (solve(&ch,&re),solve(&ch,&im))
 }
 fn characteristic(p:u32,t:&F,l:&F,pi:&F,n:i32,re:&[F],im:&[F])->F {
-    let tl=mul(t,l)/2;
+    let tl: F=mul(t,l)/2_i32;
     let mut r=f(p,0);let mut i=f(p,0);
     for k in -n..=n {
         let arg=tl.clone()+pi.clone()*k;
@@ -120,15 +120,15 @@ fn roots(p:u32,l:&F,pi:&F,n:i32,re:&[F],im:&[F],steps_per_unit:u32)->Vec<F> {
         let root=if fr==0 {Some(right.clone())} else if (fl>0 && fr<0)||(fl<0 && fr>0) {
             let(mut a,mut b,mut fa)=(left.clone(),right.clone(),fl.clone());
             for _ in 0..(p.min(180)-8) {
-                let m=add(&a,&b)/2;let fm=w(&m);
+                let m=add(&a,&b)/2_i32;let fm=w(&m);
                 if fm==0 {a=m.clone();b=m;break;}
                 if (fa>0 && fm>0)||(fa<0 && fm<0) {a=m;fa=fm;}else{b=m;}
             }
-            Some(add(&a,&b)/2)
+            Some(add(&a,&b)/2_i32)
         } else {None};
         if let Some(t)=root {
             // All basis transforms vanish at outside-band Fourier-grid points.
-            let grid=mul(&t,l)/(pi.clone()*2);let nearest=grid.clone().round();
+            let grid: F=mul(&t,l)/(pi.clone()*2_i32);let nearest=grid.clone().round();
             let tol=F::with_val(p,1)>> (p.min(180)-24);
             if !(nearest.clone().abs()>n && sub(&grid,&nearest).abs()<tol) {out.push(t);}
             if out.len()==6 {break;}
