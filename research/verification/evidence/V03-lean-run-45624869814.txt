@@ -1,0 +1,26 @@
+Selected verbatim lines from GitHub Actions job 139242271802, retrieved 2026-11-25 UTC. Full log remains at https://github.com/sguzman/zetral/actions/runs/45624869814/job/139242271802 . These excerpts are not a full log.
+
+2026-11-25T13:33:57.3300558Z HEAD is now at 073d6d2 Merge b729aa47b6b2dfd439d652e6be1f71eec813b24a into 4dc48f4d3675d3ca62d58a7a99f81e2b87c884c7
+2026-11-25T13:34:04.0395588Z Lean (version 4.19.0, x86_64-unknown-linux-gnu, commit 6caaee842e94, Release)
+2026-11-25T13:34:04.0864503Z Lake version 5.0.0-6caaee8 (Lean version 4.19.0)
+2026-11-25T13:34:37.1417848Z info: mathlib: checking out revision 'c44e0c8ee63ca166450922a373c7409c5d26b00b'
+2026-11-25T13:34:38.5240024Z info: plausible: checking out revision '77e08eddc486491d7b9e470926b3dbe50319451a'
+2026-11-25T13:34:39.1254806Z info: LeanSearchClient: checking out revision '25078369972d295301f5a1e53c3e5850cf6d9d4c'
+2026-11-25T13:34:39.7995128Z info: importGraph: checking out revision 'e6a9f0f5ee3ccf7443a0070f92b62f8db12ae82b'
+2026-11-25T13:34:40.7939083Z info: proofwidgets: checking out revision 'c4919189477c3221e6a204008998b0d724f49904'
+2026-11-25T13:34:42.4154074Z info: aesop: checking out revision '5d50b08dedd7d69b3d9b3176e0d58a23af228884'
+2026-11-25T13:34:42.9974643Z info: Qq: checking out revision 'fa4f7f15d97591a9cf3aa7724ba371c7fc6dda02'
+2026-11-25T13:34:46.1157733Z info: batteries: checking out revision 'f5d04a9c4973d401c8c92500711518f7c656f034'
+2026-11-25T13:34:46.6048004Z info: Cli: checking out revision '02dbd02bc00ec4916e99b04b2245b30200e200d0'
+2026-11-25T13:35:24.3640568Z info: ././././Zetral.lean:99:0: 'Zetral.reciprocal_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:24.3641608Z info: ././././Zetral.lean:100:0: 'Zetral.trial_leakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:24.3642665Z info: ././././Zetral.lean:101:0: 'Zetral.trial_leakage_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:24.3643677Z info: ././././Zetral.lean:102:0: 'Zetral.rayleigh_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:24.3644772Z info: ././././Zetral.lean:103:0: 'Zetral.direct_ritz_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:24.3673860Z Build completed successfully.
+2026-11-25T13:35:29.5301540Z 'Zetral.reciprocal_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:29.5302384Z 'Zetral.trial_leakage' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:29.5303199Z 'Zetral.trial_leakage_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:29.5304021Z 'Zetral.rayleigh_defect' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:29.5304859Z 'Zetral.direct_ritz_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-25T13:35:30.8904684Z Artifact lean-axiom-report.zip successfully finalized. Artifact ID 15027512346
