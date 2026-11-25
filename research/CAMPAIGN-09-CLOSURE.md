@@ -1,0 +1,5 @@
+# Campaign IX closure
+
+25 November 2026. R01–R04 lead milestones complete. Consolidated candidate research note: research/resonance/campaign-09-resonance.md. Under RH and inherited Suzuki imports/candidate identities, obtained microscopic pole residue, tuned two-root law and eigenvector mixing, larger-detuning asymptotics, and fixed-phase classification by L_a=||u'_0||_q^2/M_a. The actual fixed-phase limit remains unresolved; synthetic obstruction concerns abstract paired models only. No human review, formal verification, numerical solve or originality claim. K02-W04 branch absent at R04; independent review of VIII/IX pending.
+
+Campaign X will investigate derivative evaluation norms with a differentiated theta-kernel witness and explicit sufficient upper control of M_a. The November preprint arXiv:2611.13129v1 treats the lower Fuchs-ladder bound as a hypothesis, not a theorem. Mori's Paper IV summary is a lead only. If the available lower bounds are insufficient and no viable alternative emerges, record the obstruction and stop this bounded campaign rather than inventing a rate.
