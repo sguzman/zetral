@@ -13,11 +13,12 @@ Protocol established 2026-11-25 UTC. This file is the lead's assignment ledger, 
 | ID | Owner | Status | Task | Exclusive write scope |
 |---|---|---|---|---|
 | C03 | Lead | COMPLETE, proof persisted | Exact characteristic-function error and root-count theorem | research/certification/C03-*; STATE.md; coordination ledger |
-| C04-W01 | Codex | ASSIGNED; owner launched cloud Goal, branch not yet visible | Independent C02 audit and bounded small-window residual feasibility experiment | research/workers/C04-W01/; experiments/worker-c04-w01/ |
+| C04 | Lead | COMPLETE, analytic alternative | Prime-free exact-local enclosure and small-window cosine limit | research/certification/C04-*; STATE.md; coordination ledger |
+| C04-W01 | Codex | IN_PROGRESS, handoff verified | Independent C02 audit and bounded small-window residual feasibility experiment | research/workers/C04-W01/; experiments/worker-c04-w01/ |
 
-C04-W01 is preparatory evidence for C04, not ownership or completion of C04 itself. C03 and C04-W01 can proceed independently. Owner reported launching the Goal in a cloud workspace on 2026-11-25. The C03 checkpoint found no commit at worker/c04-w01; no worker artifact or result verified yet. The worker may use cloud instead of local tooling, following applicable resource/build rules.
+C04-W01 supplies independent audit and realistic-window feasibility evidence, not ownership of C04 itself. C04's lead analytic alternative is complete; C04-W01 remains useful as an independent assignment. C03 and C04-W01 can proceed independently. Owner reported launching the Goal in a cloud workspace on 2026-11-25. The C04 checkpoint fetched worker/c04-w01 research/workers/C04-W01/HANDOFF.md (blob ba0555cee65f50a30bb0c755f4a8417863886b44). Worker acknowledged scope, reports Rust unavailable and no independent mathematical or numerical results yet. No contribution accepted. The worker may use cloud instead of local tooling, following applicable resource/build rules.
 
-C03 lead result: research/certification/C03-contour-root-certification.md (2fc93d54a1c12e1b573ec7a9ea4deeee09c41cd2). Lead next reviews C04 evidence and works on independent contour/analytic feasibility; worker scope unchanged.
+C03 lead result: research/certification/C03-contour-root-certification.md (2fc93d54a1c12e1b573ec7a9ea4deeee09c41cd2). Lead completed the independent C04 analytic example in research/certification/C04-prime-free-certificate.md (b9997407d3ef65a68ff958a283e25b5e485d2bf1), at an extreme prime-free window distinct from X=2. Next C05 consolidation; worker scope unchanged. Pending worker review is not a reason to halt independent lead work.
 
 ## C04-W01 work order
 
