@@ -1,0 +1,19 @@
+{
+  "shares": [
+    "9400",
+    "476",
+    "84",
+    "8",
+    "8",
+    "8",
+    "8",
+    "8"
+  ],
+  "fullPass": 8,
+  "zeroFirstRadiusPass": 32,
+  "firstRadius": "28588096588",
+  "maxTestedSafeFirstRadius": "2855864459",
+  "firstEnergyUpper": "238234022506",
+  "otherRadiusRetained": true,
+  "scope": "counterfactual diagnostic, not a certificate"
+}
