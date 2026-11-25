@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XLIV
+## Campaigns XII–XLVI
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -38,7 +38,9 @@ This is the chronological campaign record, not the public project overview. For 
 | [XLI — Certified arithmetic moment evaluation](research/CAMPAIGN-41.md) | Closed (candidate). Explicit periodic cutoff/error bound and [executed prime-inclusive moment benchmark](research/positivity/CME03-executed-arithmetic-moment-benchmark.md); observed finite-cutoff sign artifact, no full positivity certificate. |
 | [XLII — Boundary-driven Fourier acceleration](research/CAMPAIGN-42.md) | Closed (candidate). First-moment jump resonance and [executed singularity-lifted second moments](research/positivity/BFA03-singularity-lift-second-moment.md), 94.8% narrower restored second-moment enclosure on constant trial. |
 | [XLIII — Certified block singularity lifting](research/CAMPAIGN-43.md) | Closed (candidate). Step/affine lifts and [executed two-parity block residual benchmark](research/positivity/BSL03-executed-two-parity-residual-benchmark.md); positive finite Ritz block, no full certificate. |
-| [XLIV — Cell-average coercivity](research/CAMPAIGN-44.md) | Active; [certified positive complement](research/positivity/CAC01-cell-average-complement-coercivity.md) and [exact Schur inertia](research/positivity/CAC02-exact-cell-schur-inertia.md); full cell matrix test pending. |
+| [XLIV — Cell-average coercivity](research/CAMPAIGN-44.md) | Closed (candidate). Exact Schur reduction and [executed failed sufficient test](research/positivity/CAC03-nested-cell-schur-witness.md) at four partitions; not negative restored eigenvalues. |
+| [XLV — Digamma Neumann bracketing](research/CAMPAIGN-45.md) | Closed (candidate). Stronger complement, [exact positive boundary corrections](research/positivity/DNB02-exact-positive-boundary-resolvent.md), weighted Schur diagnostic fails on tested partitions. |
+| [XLVI — Monotone boundary lower operators](research/CAMPAIGN-46.md) | Active; [indexed spectral convergence and finite strict-sign completeness](research/positivity/MBL01-monotone-lower-operator-convergence.md); numerical lower model pending. |
 
 ## Campaigns I–XI — archived README
 
