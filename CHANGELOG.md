@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XVIII
+## Campaigns XII–XIX
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -12,7 +12,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XV — Quantitative negative-index resolution](research/CAMPAIGN-15.md) | Closed mathematically. Constructive thresholds, exact normalized indexed exponents, and [frequency-escape obstruction](research/positivity/NIR04-frequency-escape.md). Ordinary interior exponent remains open. |
 | [XVI — Frequency localization and escape](research/CAMPAIGN-16.md) | Closed mathematically. Exact frequency frame, negative-packet selection, exceptional prime resonances and [local concentration certificates](research/positivity/FES04-local-concentration-certificates.md). Escape remains unexcluded. |
 | [XVII — Compact positivity certificates](research/CAMPAIGN-17.md) | Closed mathematically. Exact compact inertia, residual enclosures, parity and [discrete finite-rank reduction](research/positivity/CPC04-discrete-finite-rank.md); no executed numerical certificate. |
-| [XVIII — Discrete certificate validation](research/CAMPAIGN-18.md) | Active. Bounded reproducible arithmetic-only certificate benchmark. |
+| [XVIII — Discrete certificate validation](research/CAMPAIGN-18.md) | Closed. Integer-only [audited benchmark](research/positivity/DCV04-audit-and-disposition.md) at A=1/8; exact arithmetic executed, Rust unavailable, classical positivity range already larger. |
+| [XIX — Boundary profiles and spectral prefactors](research/CAMPAIGN-19.md) | Active. Conditional finite-off-line spectral asymptotics beyond exponential rates. |
 
 ## Campaigns I–XI — archived README
 
