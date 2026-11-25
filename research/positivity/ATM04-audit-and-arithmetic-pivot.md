@@ -1,0 +1,9 @@
+# ATM04 — Audit and arithmetic pivot
+
+2026-11-25. Close Campaign LX as a candidate finite-window research campaign.
+
+ATM01 exact rational local witness and tail shares integrated. ATM02 matched h=9/4 crossing successful in both sectors (30/30 each) under inherited original-form normalization; h=23/10 failed even. ATM03 twelfth-order rate refinement executed, arithmetic radius reduced 56.6x at half J but even comparison still fails. Exact reconstruction of the stored original lower matrix, exact rational outward reweighting, and weighted radius deductions were actually executed; the midpoint and full matrix distinction is essential. With shares (9400,476,84,8,8,8,8,8)/10000 the exact midpoint passes 32/32; full lower comparison fails at ninth minor. Retaining other radii and reducing first radius hypothetically to 2855864459/10^54 gives an exact positive matrix, whereas actual radius is 28588096588/10^54. This is a sensitivity diagnostic only. See ATM03 note and raw artifacts.
+
+Audit status: actual stored matrices and exact integer arithmetic checked in scope, no independent complete operator verifier, external human/formal review or original-form normalization. No odd h=2.30 run; do not infer actual negative spectrum or new certified positivity. Candidate frontier remains 2.25. README unchanged. No priority or RH proof claim.
+
+Scientific pivot: rather than blindly adding modes, target first-direction uncertainty. New Campaign LXI will evaluate higher lattice and coupled primitive truncations with the twelfth-order bound, measure first upper-form interval width, and if necessary derive a correlated or direct quadratic-form enclosure. Acceptance of a larger window requires both full parity comparisons and preserved replay artifacts, not the midpoint or counterfactual budget.
