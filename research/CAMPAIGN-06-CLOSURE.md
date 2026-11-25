@@ -1,0 +1,7 @@
+# Campaign VI closure
+
+25 November 2026. Four lead milestones complete: P01 phase-dependent lattice and central root; P02 explicit correction and strict phase flow; P03 all-phase uniform expansion and elementary transition enclosure; P04 consolidation and next direction.
+
+Consolidated candidate note: research/phase/campaign-06-phase-spectrum.md. The local expansion is unconditional in the sense of no RH assumption, using published local extension theorems. Independent human review and priority remain unresolved. No numerical phase sweep, new formal verification or practical exact Fourier certificate. S04-W02 independent AI proof audit remains assigned, unacknowledged (worker ref absent at P04). Do not equate the analytic checks with independent review.
+
+Next: Campaign VII, arbitrary-phase inverse perturbations and large-window spectral limits under RH. The source recheck of Suzuki October v1 Theorem 3.3 explicitly singles out phase pi, and June v4 §7.8 already discusses global phase boundary functions. Seek an exact local rank-one inverse relation, determine what can actually be transferred to the global limit, and investigate the normalization and possible escaping directions/outliers. This is directly connected to the original Hilbert–Pólya research question. Do not assume local Fourier evaluations extend continuously to the global sample space. Preserve unconditional local results separately. No external submission or claim of novelty.
