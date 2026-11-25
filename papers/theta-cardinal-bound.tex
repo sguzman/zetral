@@ -9,11 +9,11 @@
 \newcommand{\norm}[1]{\lVert#1\rVert}
 \title{A theta-cardinal bound for spectral convergence\newline in Suzuki's localized Weil spaces}
 \author{Zetral Research Project}
-\date{25 November 2026 --- candidate proof, version 0.1}
+\date{25 November 2026 --- candidate proof, version 0.2}
 \begin{document}
 \maketitle
 \begin{abstract}
-Assuming the Riemann hypothesis and the sampling and inverse-compression theorems of Suzuki, we derive a fixed-index upper bound of order $X^{5/2}e^{-2\pi X}$ for the difference between the exact localized positive differentiation eigenvalue and its limiting distinct zeta-zero ordinate, where $X=e^{2a}$. The argument combines divided-out theta kernels, compact truncation and a quadratic Rayleigh--Ritz estimate. No simplicity assumption is needed. This AI-assisted research note has not undergone independent review or machine verification; originality is not established.
+Assuming the Riemann hypothesis and the sampling and inverse-compression theorems of Suzuki, we derive a fixed-index upper bound of order $X^{5/2}e^{-2\pi X}$ for the difference between the exact localized positive differentiation eigenvalue and its limiting distinct zeta-zero ordinate, where $X=e^{2a}$. The argument combines divided-out theta kernels, compact truncation and a quadratic Rayleigh--Ritz estimate. No simplicity assumption is needed. Explicit constants are supplied. Five supporting scalar lemmas have been checked in Lean; the analytic and spectral proof has not been formally verified or independently reviewed. Originality is not established.
 \end{abstract}
 \section{Setting and statement}
 Write $\xi_0(s)=s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)/2$ and $A(z)=\xi_0(1/2-iz)$. Suzuki uses $2\xi_0$; the zeros and the normalized cardinal functions are unchanged. Assume RH throughout. Let $\Gamma$ denote the set of distinct real ordinates, $m_\rho$ their multiplicities, and $0<\gamma_1<\gamma_2<\cdots$ the positive ordinates. In particular,
@@ -40,7 +40,7 @@ Let $Q$ project onto $E$ and let $B=QP|_E$. Then $(1-\delta^2)I\le B\le I$ and $
 \end{proof}
 This is a special case of established squared-angle Ritz estimates \cite{ritz}.
 \section{Cardinal functions with theta decay}
-The classical even smooth theta kernel \cite[Eqs.~(1.1)--(1.2)]{theta} satisfies $\F\Phi=A$ and, for $x>0$,
+The classical even smooth theta kernel \cite[Eqs.~(1.1)--(1.2), Lemma~3.1]{theta} satisfies $\F\Phi=A$ and, for $x>0$,
 \[
 \Phi(x)=\sum_{k\ge1}(4\pi^2k^4e^{9x/2}-6\pi k^2e^{5x/2})e^{-\pi k^2e^{2x}}.
 \]
@@ -79,13 +79,47 @@ Projection minimizes distance. For $E=\operatorname{span}(e_{\gamma_1},\ldots,e_
 0\le t_{a,n}-\gamma_n\le 2B_n\gamma_n^2\delta_a^2,
 \]
 which proves the theorem under the stated imports and RH.
+\section{Explicit constants}
+The theta series gives $|\Phi(x)|\le128y^{9/4}e^{-\pi y}$. Indeed $k\le2^{k-1}$ and $k^2-1\ge3(k-1)$ for integers $k\ge1$, so $k^4e^{-\pi(k^2-1)}\le4^{-(k-1)}$. Summing and using $4\pi^2+6\pi<88$ proves the stated bound. For $\alpha\le9/4$ and $Y\ge1$,
+\[
+\int_Y^\infty v^{\alpha-1}e^{-\pi v}\,dv
+\le\frac{Y^{\alpha-1}e^{-\pi Y}}{\pi-5/4}.
+\]
+This follows from $v=Y+w$ and $(1+w/Y)^{\alpha-1}\le e^{5w/4}$. Each outward integration in the divided-kernel recurrence contributes a factor at most $1/[2(\pi-5/4)]<1/3$. Write
+\[
+d_\gamma=|A^{(m)}(\gamma)|/m!,\qquad D_\gamma=\frac{128}{3^m\sqrt m\,d_\gamma}.
+\]
+Then $|q_\gamma|\le D_\gamma y^{5/4}e^{-\pi y}$ and $|q'_\gamma|\le D_\gamma(|\gamma|+3)y^{9/4}e^{-\pi y}$, since $m\ge1$. Choose the transition $\eta$ nondecreasing, so $\int|\chi'_a|=2$. The function $y^{5/4}e^{-\pi y}$ decreases for $y\ge1$. Applying the tail bound at $Y\ge X-2$ to the derivative and using the total variation bound on the transition gives
+\[
+\norm{r'}_1\le H_\gamma X^{5/4}e^{-\pi X},\qquad
+H_\gamma=D_\gamma e^{2\pi}\left(2+\frac{|\gamma|+3}{\pi-5/4}\right).
+\]
+The paired Hadamard product of the even order-one function $A$ gives $A(z)/A(0)=\prod_{\gamma>0}(1-z^2/\gamma^2)^{m_\gamma}$. Its convergence on compact sets follows from reciprocal-square summability; evenness removes the linear exponential. Differentiation at zero gives $M=-A''(0)/A(0)$. Set
+\[
+S_n=M\sum_{j=1}^n H_{\gamma_j}^2,\qquad K_n=2B_n\gamma_n^2 S_n.
+\]
+The preceding projection argument gives the theorem with this $K_n$ whenever
+\[
+X\ge e^2,\qquad B_n S_n X^{5/2}e^{-2\pi X}\le1/(2\gamma_n).
+\]
+ One sufficient threshold is $X\ge\max(e^2,\log(2\gamma_n B_n S_n)/\pi)$, using $X^{5/2}\le e^{\pi X}$ for $X\ge1$. The constants require the ordinates, exact multiplicities and nonzero derivatives, but not an infinite zero list. Certified enclosures for these inputs would make the estimate effective for a specified index; finite-prime-only computability is not established.
 \section{Scope, computation, and review status}
-The conclusion implies decay faster than every fixed exponential in $a$, but asserts no optimal lower bound. It concerns the exact phase-$\pi$ operator, not the ordinary $L^2$ Weil-form operator. The witnesses use actual zeros; their use in a proof does not provide zero-independent computable constants or change the arithmetic definition of the local operator. The repository's high-precision reference calculations reproduce the rounded entries of Suzuki's Tables 1 and 2; finite Fourier truncation and numerical error prevent interpreting those data as measurements of the exact cutoff error alone. Rust execution remains unverified.
+The bound concerns the exact phase-$\pi$ differentiation extension, not the ordinary $L^2$ Weil-form minimum or a finite Fourier root. It asserts neither optimality nor uniformity in the index. The reference calculations reproduce the reported rounded tables; Rust 1.85.0 passes three baseline tests and the six-root smoke test at $X=3,N=18$. At $X=11,n=1$, a non-certified 50--60 digit evaluation of the explicit constant estimates the upper bound as $3.372\times10^{-11}$. The ball-arithmetic script is staged in draft PR 2, but its execution was not verified. Neither this estimate nor numerical agreement is a certified enclosure, and finite Fourier approximation, quadrature and root-isolation errors remain uncontrolled by the theorem.
 
-The theta kernel, cardinal interpolation, and quadratic Ritz estimates are established tools. Recent theta-window estimates for the bottom of Weil forms are closely related; the repository's prior-art audit lists these separately from the differentiation spectrum. No priority or novelty is asserted. This candidate proof was generated and self-reviewed with AI assistance, under human research direction; independent mathematical review and Lean verification remain outstanding. The repository preserves the detailed derivation, source audit, and numerical data: \url{https://github.com/sguzman/zetral}.
+The divided entire-function basis in Suzuki's earlier Weil-space work \cite{suzuki2025}, Fourier interpolation \cite{brs}, and squared-angle Ritz estimates \cite{ritz} are antecedents. Rapid-window estimates for the bottom of the Weil form, including Zhu \cite{zhu} and the reported bounds of Mori \cite{mori}, are close in technique but concern different spectral quantities. The spectral determinant construction of Connes--Consani--Moscovici \cite{ccm} and the numerical realization of Kim et al. \cite{kim} also differ from the specific exact phase-$\pi$ cutoff rate. The repository's targeted prior-art audit did not identify an equivalent theorem in the inspected material; incomplete full-text access and the absence of exhaustive citation-index review preclude any priority claim.
+
+Five scalar inequalities supporting the variational and reciprocal steps were kernel-checked with Lean 4.19.0 and pinned Mathlib in two CI runs. Their axiom reports contain only \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}. The geometric, analytic and operator-theoretic premises remain unformalized. This note was generated and internally reviewed with AI assistance under human research direction; independent mathematical review remains necessary before academic submission. The detailed proofs, audits, logs and data are at \url{https://github.com/sguzman/zetral}.
 \begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{0pt}
 \bibitem{suzuki} M. Suzuki, \emph{Spectral convergence associated with Weil's quadratic form}, arXiv:2610.32704v1 (2026).
 \bibitem{theta} J. C. Lagarias and D. Montague, \emph{The integral of the Riemann xi-function}, arXiv:1106.4348v3 (2011).
 \bibitem{ritz} A. V. Knyazev and M. E. Argentati, \emph{Rayleigh--Ritz majorization error bounds with applications to FEM}, SIAM J. Matrix Anal. Appl. 31 (2010), doi:10.1137/08072574X.
+\bibitem{suzuki2025} M. Suzuki, \emph{On the Hilbert space derived from the Weil distribution}, Canadian Journal of Mathematics, published online 2025, doi:10.4153/S0008414X25101739.
+\bibitem{brs} A. Bondarenko, D. Radchenko, K. Seip, \emph{Fourier interpolation with zeros of zeta and L-functions}, Constructive Approximation 57 (2023), doi:10.1007/s00365-022-09599-w.
+\bibitem{zhu} X. Zhu, \emph{Weil positivity in compact windows}, arXiv:2608.24827v2 (2026).
+\bibitem{mori} R. Mori, \emph{Unconditional doubly exponential upper bounds for windowed Weil quadratic forms}, repository summary (accessed 25 November 2026), \url{https://github.com/moriryota/weil-window-upper-bounds}.
+\bibitem{ccm} A. Connes, C. Consani, H. Moscovici, \emph{Zeta spectral triples}, arXiv:2511.22755v1 (2025).
+\bibitem{kim} T. Kim et al., \emph{A numerical realization of Suzuki's Weil-quadratic-form operator}, arXiv:2607.24830v3 (2026).
 \end{thebibliography}
 \end{document}
