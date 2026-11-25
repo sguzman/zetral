@@ -1,0 +1,9 @@
+# S04-W02 — Lead acceptance
+
+25 November 2026. Pinned worker head c5fdbe9b10a2f911bc6ee99f4402d7ec3d7d102d, baseline 8d5365a21c3148398be99430dcd19ce7b85f97c3. GitHub compare returned two commits and four added files, all within scope. All four were inspected and integrated by exact blob identity into main; worker branch preserved.
+
+Accepted as an independent AI audit of the Campaign V local candidate proof, within the worker's stated checked scope. The worker reconstructed the shift-form normalization and B actions, scalar resolvent identity, compact-uniform remainder, characteristic signs and c-to-ell conversion. The nested-integral code computes the two regularized difference quotients directly rather than using the closed Si/Cin expression for B exp(isy). Its recorded H2, d, e and q for n=1..4 agree with the S03 values at their displayed precision. The lead inspected the script and compared the archived numbers with S03; did not rerun the expensive nested quadrature. This is a different computational expression for the same coefficient, not validated interval arithmetic or an independent finite-operator eigenvalue solve.
+
+No material error identified in the checked calculations. Source inspection is reported by the worker in AUDIT.md; the lead reopened Suzuki v4 and v1 this turn for the L03 comparison. The worker did not prove the imported theorems or fully audit every domain detail. This acceptance is not human peer review, proof certification, exhaustive originality assessment, nor an audit of Campaign VI or VII. Do not count the latter campaigns as independently reviewed because they depend on some Campaign V estimates.
+
+Next worker opportunity: independent bounded audit of L01–L03's rank-one coefficient and signed spectral limit; do not repeat the lead's derivation or the completed small-window checks. See COORDINATION.md for assignment and constraints.
