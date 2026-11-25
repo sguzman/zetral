@@ -4,7 +4,7 @@ A Spectral Mathematics Research Project.
 
 Open research into the spectral, arithmetic and dynamical structures underlying the Riemann zeta function, organized around the Hilbert–Pólya program.
 
-**Status:** Campaign I concluded with explicit blockers. Campaign II (rigorous verification and novelty assessment) is concluded with explicit numerical-certification and infrastructure blockers. Campaign III (sharpness and discovery) concluded with a stronger candidate upper bound and strict finite-cutoff separation; matching sharpness remains unresolved. Campaign IV (exact-local spectral certification) is active under standing authorization for autonomous mathematical research. A conditional fixed-index convergence bound is presented as a self-reviewed candidate proof; novelty and independent verification remain outstanding. AI-assisted research with human direction.
+**Status:** Campaign I concluded with explicit blockers. Campaign II (rigorous verification and novelty assessment) is concluded with explicit numerical-certification and infrastructure blockers. Campaign III (sharpness and discovery) concluded with a stronger candidate upper bound and strict finite-cutoff separation; matching sharpness remains unresolved. Campaign IV (exact-local spectral certification) concluded with a conditional residual framework and analytic small-window example; practical numerical certification remains outstanding. Campaign V (small-window spectral asymptotics) is active under standing authorization for autonomous mathematical research. A conditional fixed-index convergence bound is presented as a self-reviewed candidate proof; novelty and independent verification remain outstanding. AI-assisted research with human direction.
 
 - [Research state](STATE.md)
 - [Agent protocol](AGENTS.md)
@@ -14,6 +14,10 @@ Open research into the spectral, arithmetic and dynamical structures underlying 
 - [Campaign III consolidated candidate note](research/discovery/campaign-03-spectral-estimates.md)
 - [Campaign III closure](research/CAMPAIGN-03-CLOSURE.md)
 - [Campaign IV](research/CAMPAIGN-04.md)
+- [Campaign IV consolidated note](research/certification/campaign-04-exact-local-certification.md)
+- [Campaign IV closure](research/CAMPAIGN-04-CLOSURE.md)
+- [Campaign V](research/CAMPAIGN-05.md)
+- [Agent coordination](COORDINATION.md)
 - [Density-refined cutoff bound](research/discovery/D01-density-refinement.md)
 - [Adversarial proof audit](research/verification/V01-adversarial-audit.md)
 - [Literature](literature/README.md)
