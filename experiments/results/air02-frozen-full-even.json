@@ -1,0 +1,10 @@
+{
+  "h": "39/20",
+  "odd": false,
+  "positiveMinors": 18,
+  "firstMinor": "324428117300970",
+  "allComponentsMatch": true,
+  "allPrincipalMinorsMatch": true,
+  "heuristicTrialSelection": false,
+  "heuristicBasisSelection": false
+}
