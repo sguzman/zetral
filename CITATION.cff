@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this research, please cite the specific result and commit or release."
+title: Zetral
+authors:
+  - family-names: Guzman
+    given-names: Salvador
+repository-code: "https://github.com/sguzman/zetral"
+type: software
