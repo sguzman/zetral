@@ -23,18 +23,31 @@ const sqrt2=[1414213562373095048n,1414213562373095050n];if(sqrt2[0]**2n>2n*Q*Q||
 const prime=div(ln2,sqrt2),threshold=sub(ONE,ln2);
 const N=2048n, h=R(1n,N);
 const cache=new Map();function at(j){let k=j.toString();if(!cache.has(k))cache.set(k,F(R(j,N)));return cache.get(k)}
-let first=ZERO,second=ZERO,uncertain=0;
+let first=ZERO,second=ZERO,restored1=ZERO,restored2=ZERO,uncertain=0;
+const expQuarter=expneg(R(1n,4n));
+const poleFactor=mul(R(4n),sub(div(ONE,expQuarter),expQuarter));
+function pole(d){const z=div(sub(R(1n,2n),d),TWO),e=expneg(z);return mul(div(poleFactor,TWO),add(e,div(ONE,e)))}
 for(let j=1n;j<N/2n;j++){
  const l=R(j,N),r=R(j+1n,N),a=at(j),b=at(j+1n),c=at(N-j),d=at(N-j-1n);
  let p=ZERO;if(r[1]<threshold[0])p=prime;else if(l[0]<threshold[1]){p=[0n,prime[1]];uncertain++}
  let val=sub(add(alpha,add([b[0],a[1]],[c[0],d[1]])),p);
  first=add(first,mul(h,val));second=add(second,mul(h,square(val)));
+ const pl=pole(l),pr=pole(r),av=add(val,[pr[0],pl[1]]);
+ restored1=add(restored1,mul(h,av));restored2=add(restored2,mul(h,square(av)));
 }
-const logN=mul(R(11n),ln2),A=R(15n),B=R(4n,3n);
-const tail1=mul(h,add(A,mul(B,add(logN,ONE))));
-const tail2=mul(h,add(add(square(A),mul(mul(TWO,mul(A,B)),add(logN,ONE))),mul(square(B),add(add(square(logN),mul(TWO,logN)),TWO))));
+const logN=mul(R(11n),ln2),B=R(1n,2n);
+// For 0<d<=1/N, T1>=-6 and T1<=0.5 log(1/d).
+// A1=T1+pole, 0<=pole<=3: A1>=-6 and A1<=3+0.5 log(1/d).
+// Therefore integrate the majorants 6+B log(1/d) and 36+B^2 log^2(1/d);
+// for A use 6+3+B log and 36+(3+B log)^2.
+const logInt=add(logN,ONE),logSqInt=add(add(square(logN),mul(TWO,logN)),TWO);
+const tail1=mul(h,add(R(6n),mul(B,logInt)));
+const tail2=mul(h,add(R(36n),mul(square(B),logSqInt)));
+const aTail1=mul(h,add(R(9n),mul(B,logInt)));
+const aTail2=mul(h,add(R(45n),add(mul(R(3n),logInt),mul(square(B),logSqInt))));
 first=mul(TWO,add(first,[-tail1[1],tail1[1]]));second=mul(TWO,add(second,[0n,tail2[1]]));
-let out={scale:Q.toString(),N:N.toString(),alpha:alpha.map(String),prime:prime.map(String),threshold:threshold.map(String),uncertain,m1:first.map(String),m2:second.map(String),tail1:tail1.map(String),tail2:tail2.map(String)};
+restored1=mul(TWO,add(restored1,[-aTail1[1],aTail1[1]]));restored2=mul(TWO,add(restored2,[0n,aTail2[1]]));
+let out={scale:Q.toString(),N:N.toString(),alpha:alpha.map(String),prime:prime.map(String),threshold:threshold.map(String),uncertain,m1:first.map(String),m2:second.map(String),A_m1:restored1.map(String),A_m2:restored2.map(String),tail1:tail1.map(String),tail2:tail2.map(String),A_tail1:aTail1.map(String),A_tail2:aTail2.map(String),poleMax:pole(ZERO).map(String)};
 if(first[0]>first[1]||second[0]>second[1]||second[0]<0n)throw Error("invalid");return out;
 }
 console.log(JSON.stringify(benchmark(),null,2));
