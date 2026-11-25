@@ -1,4 +1,4 @@
-name: Bootstrap checks
+name: Research checks
 on:
   push:
   pull_request:
@@ -14,11 +14,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for f in README.md AGENTS.md STATE.md research/CAMPAIGN-01.md literature/README.md site/index.html; do
+          for f in README.md AGENTS.md STATE.md research/CAMPAIGN-01.md literature/README.md site/index.html papers/theta-cardinal-bound.tex research/CAMPAIGN-01-CLOSURE.md; do
             test -s "$f"
           done
           grep -q 'Situs' AGENTS.md
-          grep -q 'No original' site/index.html
+          grep -q 'Candidate result' site/index.html
           grep -q '</html>' site/index.html
   rust:
     runs-on: ubuntu-latest
