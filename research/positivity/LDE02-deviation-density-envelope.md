@@ -40,7 +40,7 @@ For the original form let b_j be the supremum, over j distinct nonreal conjugate
 Applying the finite-cover estimate to the remaining deviation closure gives upper rate at most max(2b,H_tail), capped at one: outside D_infty the local theta_* is zero, inside it the envelope is at most H_tail. If a tail point is not in the remaining closure it simply does not contribute. Let b decrease to b_j, using the coarse upper bound if b_j=1/2. We obtain for every fixed j with at least j pairs
     2b_j <= s_j^-(full) <= s_j^+(full)
          <= min(1,max(2b_j,H_tail)).                    (3)
-The same proof in either parity counts one fast negative-direction constraint per quartet; use the corresponding b_j for that parity as in NIR03. This includes the possibility that b_j=0 but infinitely many pairs accumulate at zero: then H_tail can still be positive.
+The same proof in either parity counts one fast negative-direction constraint per quartet; use the corresponding b_j for that parity as in NIR03. If infinitely many pairs accumulate at zero, B_tail may be zero, but b_j is strictly positive for every fixed j for which at least j pairs exist (choose any j such pairs). In this case H_tail may still be positive.
 
 In particular the following single tail-profile condition suffices for all ordinary indexed rates to match their zero deviations:
     theta_*(d)<=2(B_tail-d) for every d in D_infty.       (H)
