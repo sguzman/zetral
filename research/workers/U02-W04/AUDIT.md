@@ -34,6 +34,8 @@ However, the accessible source does not state a formula equating that finite neg
 - A criterion that detects a zero vector in a completed form does not itself count negative directions before or after the zero crossing.
 - Finite codimension implies finiteness of the negative index under the positive-tail hypothesis, but does not identify its value with an arithmetic zero count.
 
+The finite bound follows from a short abstract argument. Let \(B\) be a Hermitian form on a complex vector space \(H\), and suppose a subspace \(V\) has codimension \(d<\infty\) and satisfies \(B(v,v)>0\) for every nonzero \(v\in V\). Any negative-definite subspace \(L\) has \(L\cap V=\{0\}\); hence its projection into \(H/V\) is injective and \(\dim L\le d\). The radical \(\{x:B(x,y)=0\;\forall y\in H\}\) also intersects \(V\) trivially, since any radical vector has \(B(x,x)=0\). Thus its dimension is at most \(d\) as well. Applied to Suzuki’s account of \(K_N(a)\subset K(a)\), this gives \(n_-(K(a))\le \operatorname{codim}K_N(a)\le 2N+1\) and radical dimension at most \(2N+1\), for an \(N\) supplied by the positive-tail estimate. The argument is independent of the completion; it gives a bound, not an exact inertia formula.
+
 This is distinct from Bombieri’s Theorems 8–9, which explicitly count negative eigenvalues of specified finite truncation matrices. Bombieri’s infinite-limit sections further warn that a negative truncation eigenvalue may converge to zero, producing a linear-relation alternative. No comparison in this audit proves equality between either author’s forms and Zetral’s \(A_a\).
 
 ## Relevance to U02 and limits
