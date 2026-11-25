@@ -4,7 +4,7 @@ A Spectral Mathematics Research Project.
 
 Open research into the spectral, arithmetic and dynamical structures underlying the Riemann zeta function, organized around the Hilbert–Pólya program.
 
-**Status:** Campaign I concluded with explicit blockers. Campaign II (rigorous verification and novelty assessment) is active. A conditional fixed-index convergence bound is presented as a self-reviewed candidate proof; novelty and independent verification remain outstanding. AI-assisted research with human direction.
+**Status:** Campaign I concluded with explicit blockers. Campaign II (rigorous verification and novelty assessment) is concluded with explicit numerical-certification and infrastructure blockers. A conditional fixed-index convergence bound is presented as a self-reviewed candidate proof; novelty and independent verification remain outstanding. AI-assisted research with human direction.
 
 - [Research state](STATE.md)
 - [Agent protocol](AGENTS.md)
@@ -15,7 +15,11 @@ Open research into the spectral, arithmetic and dynamical structures underlying 
 - [Candidate manuscript (LaTeX)](papers/theta-cardinal-bound.tex)
 - [Detailed proof](research/theta-cardinal-bound.md)
 - [Numerical reproduction](experiments/reproduction-report.md)
-- [Campaign closure](research/CAMPAIGN-01-CLOSURE.md)
+- [Campaign I closure](research/CAMPAIGN-01-CLOSURE.md)
+- [Campaign II closure](research/CAMPAIGN-02-CLOSURE.md)
+- [Explicit constants](research/verification/V04-effective-constants.md)
+- [Verified scalar Lean lemmas](formal/Zetral.lean)
+- [Numerical certification limitations](research/verification/V05-numerical-certification.md)
 - [Public atlas (deployment unverified)](https://sguzman.github.io/zetral/)
 
 The canonical situated ontology belongs in Situs, not this repository. Initial focus: Suzuki's spectral convergence construction and quantitative error questions, with explicit RH dependencies and prior-art checks.
