@@ -27,7 +27,7 @@ No extension operator or boundary trace condition at positive order is being ass
 
 ## 2. Explicit archimedean loss
 
-Use alpha0=psi(1/4)-log pi and k from STS03. Elementary constants give |alpha0|<7 (gamma<1, pi<4, log 2<1, log pi<log 4< 1.4). For 0<u<=1, concavity of 1-exp(-2u) and 1-exp(-2)>3/4 give k(u)<=4/(3u); for u>=1, k(u)<=4 exp(-u/2)/3. In alpha(omega)-alpha0=2 int k(u)(1-cos(omega u))du, split at r=1/max(1,|omega|) and 1. Use 1-cos v<=v²/2 on the first interval and <=2 otherwise. The three bounds are 2/3, (16/3)log max(1,|omega|), and 32/3 (the last drops exp(-1/2)). Therefore
+Use alpha0=psi(1/4)-log pi and k from STS03. Elementary constants give |alpha0|<7 (gamma<1, pi<4, log 2<0.7, log pi<log 4<1.4). For 0<u<=1, concavity of 1-exp(-2u) and 1-exp(-2)>3/4 give k(u)<=4/(3u); for u>=1, k(u)<=4 exp(-u/2)/3. In alpha(omega)-alpha0=2 int k(u)(1-cos(omega u))du, split at r=1/max(1,|omega|) and 1. Use 1-cos v<=v²/2 on the first interval and <=2 otherwise. The three bounds are 2/3, (16/3)log max(1,|omega|), and 32/3 (the last drops exp(-1/2)). Therefore
     |alpha(omega)|<=19+6 log sqrt(1+omega²).
 For 0<delta<=1/4 the multiplier loss constant is bounded by
     sup_(y>=0) (19+6y) exp(-delta y)
