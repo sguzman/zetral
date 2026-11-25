@@ -1,0 +1,21 @@
+# PPW04 — Prime-power eight/nine audit and residual-directed pivot
+
+2026-11-25. Scoped AI lead audit, not independent human/formal review. Campaign LVII closes with a candidate full restored fixed-window positivity result at h=11/5=2.2. The original-form normalization and full independently implemented verifier remain open.
+
+## Actual prime nine crossing
+
+Source experiments/ppw03-rational-nine-witness.js 020a6f57831082d14cc283c3f3027d387f45545d; raw experiments/results/ppw03-rational-nine-witness.json 9306d074e47df1330e5557edadd3b3ef7fa6745c. Actual V8 execution, exact content readbacks. Replace the integer endpoint 11 in the multiplicative partition by exact 91/10; retain actual shifts 2,3,4,5,7,8,9 and the rational upper weights already used in PPW01. The weighted Schur check on all refined cells gives upper norm 2378/1000 (6125 positive weight cells, 7543 verified cells at step 16), versus 2714/1000 on [1,11]. Proof applies to [1,91/10] with measure dx/x, and compression to every shorter physical interval. Exact interval guard h<log(91/10) and h>log9 establishes the applicability for h=11/5. No shift 11 or nonzero Lambda(10). The rational witness is a sufficient norm upper bound, not the exact norm.
+
+Source experiments/ppw03-local-nine-regime.js f6e3fa98503f66e376bedb2a9a96c11025b5c1a9, exact readback. Retain corrected 10^54 arithmetic, tenth-order rate enclosures, eight-term residual bound and all actual prime terms, with J=4096,T=512,M=6144,S=257,28 low modes per parity. Actual V8 executions:
+- experiments/results/ppw03-11-5-local-even.json c592d4b3bb85b8ed56e80e50b24a605918309774, all 28 principal minors positive; first 14475264850738776/10^54; approximate relative residual diagnostic 0.95384.
+- experiments/results/ppw03-11-5-local-odd.json dd6b9084c470840d0da6574182b06c6797cd80ad, all 28 positive; first 66741443790295666652/10^54; approximate relative diagnostic 0.90588.
+
+Full compact raw JSONs exact readbacks through repository contents endpoint. Reproduce: node experiments/ppw03-local-nine-regime.js --even 11 5 4096 6144 512 28 and --odd. Both parities include actual prime power 9 with weight log3/3. No claim of ordinary eigenvalue gaps equal to first minors.
+
+## Scoped audit and closure
+
+The C8 geometric remainder has the correct pole sign -delta³ and includes every finite high row; the eight Cauchy weights have reciprocal sum one. The last remainder contributes 64q/(15(M-1)^15 g) by parity integral bound and q-direction Cauchy. The first five rank matrices are unchanged; V6 and S6 add their own positive rank-one matrices. The new norm witness repeats exact positive weight/interval checks, not a sampled continuum approximation. AIR01/03 and PPW03 primitive reference checks remain the basis for arithmetic. No independently derived complete original explicit-formula normalization in this audit.
+
+Actual separate integer-only reconstruction from stored intervals: experiments/ppw04-stored-interval-replay.js 799007d1c58f2c5156c3f872edf34199086e54f7, raw 3eb812fa1e7595aeae8ec7331491026d554941dc, both exact readbacks. All four stored matrices at 2.15 and 2.2 reproduce every entry and all 104 exact principal minors, with exact rational basis invertibility. This is independent final-matrix arithmetic, not independent interval generation or separate runtime. The first full even 2.15 raw readback via the normal file reader failed (empty content); deterministic rerun and repository contents API matched the full 1,201,473-character string. No raw loss. No RH proof, actual negative restored spectrum, literature record, priority claim, human or formal review, separate Node/Rust execution, expenses or new worker acceptance.
+
+Close LVII. The near-one relative diagnostic at 2.2 and exceedingly small even upper energy motivate selecting rational trials to maximize the sufficient residual lower comparison itself rather than merely solving the finite Galerkin equation or escalating cutoffs. New bounded campaign LIX will derive a residual-directed trial correction, test its algebra independently and compare with the existing trial on a fixed physical window. If useful, then test modest extension within current arithmetic regimes. Positive inverse-error correction and more precise window-specific prime witnesses remain alternative candidates. README unchanged.
