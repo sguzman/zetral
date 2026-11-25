@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–LV
+## Campaigns XII–LVI
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -49,7 +49,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [LII — Finite prime graph fibers](research/CAMPAIGN-52.md) | Closed (candidate). [Executed strict positivity](research/positivity/PGF03-executed-prime-power-four-certificates.md) through physical h=1.45, including prime power 4. |
 | [LIII — Rational moment residual tails](research/CAMPAIGN-53.md) | Closed (candidate). [Executed sixth-order arithmetic positivity](research/positivity/RMT03-executed-higher-moment-certificates.md) through physical h=1.6. |
 | [LIV — Rational prime norm witness](research/CAMPAIGN-54.md) | Closed (candidate). Exact norm upper 1.547 through log6; prime-5 full comparisons inconclusive. |
-| [LV — Relative residual control](research/CAMPAIGN-55.md) | Active. Rational energy scaling and positive residual-inverse comparison; diagnostics pending. |
+| [LV — Relative residual control](research/CAMPAIGN-55.md) | Closed (candidate). [Executed fine-lattice positivity](research/positivity/RRC03-executed-fine-lattice-certificates.md) through physical h=1.78 including prime 5. |
+| [LVI — Prime-seven norm witnesses](research/CAMPAIGN-56.md) | Active. Exact norm upper 1.792 through log7, 2.071 through log8; larger full comparisons inconclusive; higher residual/rate derivation pending execution. |
 
 ## Campaigns I–XI — archived README
 
