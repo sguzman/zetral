@@ -2,12 +2,14 @@
 
 Campaign: I — spectral convergence. See research/CAMPAIGN-01.md.
 Date: 2026-11-24 (Mexico).
-Status: bootstrapping.
+Status: bootstrap partially complete; literature work may proceed independently.
 No original mathematical results, formal proofs or numerical reproductions claimed.
 
-B01: charter, protocol, source seed, queue authored; verify remote readback.
-B02: pending; Situs is canonical. A repository lookup at sguzman/situs returned 404 and installed repository search found no match. Do not assume this means Situs does not exist; it may be local or differently named. No duplicate ontology created.
-B03: pending; CI/Pages verification not yet performed.
-R01–R06: pending.
+- B01 COMPLETE: charter, protocol, source seed and bounded queue committed and read back from main.
+- B02 BLOCKED on access/location: Situs is canonical. Lookup of sguzman/situs returned 404 and installed-repository search found no match. Do not infer nonexistence; Situs may be local or differently named. No duplicate ontology created.
+- B03 PARTIAL: site/index.html, CI and Pages workflow, CITATION.cff committed and read back. CI checks file presence and basic site markers only. No verified workflow run or deployed site; combined status returned no statuses and the connector's run lookup only covers pull-request runs. Repository Settings > Pages > Source must be GitHub Actions; current setting unknown. Lean/Rust/Nix/LaTeX checks are deferred until corresponding real artifacts exist.
+- R01 READY; R02–R06 pending.
 
-Resume: verify bootstrap files, configure minimal CI and Pages, and resolve the actual Situs location/access without inventing a substitute. If Situs needs human access, report that specific blocker; independent bootstrap may proceed. Research must preserve explicit RH dependencies.
+Resume on "continue": execute R01 (source-pinned literature and exact statements, including Suzuki and relevant RH proof verification). Revisit B02/B03 when access or verification is available; do not block independent research or create a substitute ontology. Check Actions/Pages status where available. Track exact source versions and explicit RH dependencies. No scope expansion.
+
+Bootstrap readback verified nine files on main, including the state file before this update. Last initial bootstrap commit: 1e01ace074ef4e86c5e7f1d4620a47529fb1bda6.
