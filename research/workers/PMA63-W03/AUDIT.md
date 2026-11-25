@@ -72,6 +72,38 @@ and therefore the wrong positive `fa7` coefficient also lowers the code center. 
 
 This distinction matters: `widen(center,error)` is **not** a two-sided interval enclosure of the exact archimedean diagonal, because the omitted algebraic center bias is of order `x/R^6`, while the stated symmetric remainder is `O(x/R^14)`. However, the audited discrepancies have a downward sign at the LB02/LB03 support; consequently the lower endpoint `center-error` can still be a valid lower bound for that diagonal if the inherited symmetric Euler–Maclaurin remainder estimate is valid. This note does not independently verify that remainder estimate or downstream matrix lower-bound propagation. Any reported two-sided interval widths and diagnostics based on this `widen` call are not valid enclosures as written.
 
+## Twelfth-order remainder and lower-bound propagation
+
+The inherited `A_1-A_2` trapezoid identity applies Euler–Maclaurin with steps 1 and 2. Using the periodic Bernoulli remainder bound `|B_12({t})|<=|B_12|`, the two remainders add to at most
+\[
+C_{12}\int_R^\infty |f^{(12)}(r)|dr,
+\qquad C_{12}=\frac{2(1+2^{11})|B_{12}|}{12!}.
+\]
+This is the constant recorded in AIR03/ATM03. For `g_x(r)=x/[r(r^2+x)]`, exact differentiation gives
+\[
+g_x^{(12)}(r)=12!\frac{x}{r^{15}}\frac{p(x/r^2)}{(1+x/r^2)^{13}},
+\]
+where
+\[
+p(t)=91-637t+2002t^2-572t^3+1573t^4+1703t^5+1716t^6+1287t^7+715t^8+286t^9+78t^{10}+13t^{11}+t^{12}.
+\]
+Coefficientwise, `|p(t)|<=91(1+t)^13` for `t>=0`: each absolute coefficient is bounded by the corresponding coefficient of `91(1+t)^13`. Hence
+\[
+|g_x^{(12)}(r)|\le \frac{91\,12!\,x}{r^{15}}=\frac{14!x}{2r^{15}}.
+\]
+After integration and the factor 2 in the digamma series, the resulting diagonal remainder is exactly bounded by
+\[
+2C_{12}\int_R^\infty\frac{14!x}{2r^{15}}dr
+=\frac{36812334}{2730}\frac{x}{R^{14}},
+\]
+the generator's stated error. Thus the twelfth-order error constant is consistent with the combined trapezoid remainder and this derivative majorant.
+
+For each diagonal frequency, write the exact diagonal as `C_EM + rho`, with `|rho|<=epsilon`, and the implemented center as `C_code=C_EM-delta`, where the explicit bias above gives `delta>=0` at the campaign support. Therefore the returned lower endpoint obeys
+\[
+C_{\rm code}-\epsilon=C_{\rm EM}-\delta-\epsilon\le C_{\rm EM}+\rho.
+\]
+The returned upper endpoint need not be an upper bound. In the generator the archimedean diagonal is added only when `n===k`; it is diagonal in the Neumann basis. If a downstream interval matrix routine needs a two-sided input interval, clip each exact diagonal value to `[lo,hi]`, where `lo` is the returned lower endpoint. The clipped matrix lies in the reported entry intervals and is Loewner-below the exact matrix, because each removed diagonal excess is nonnegative. Congruence by the stored rational coefficient matrix preserves this order. The row-radius lower-matrix step then applies to the clipped matrix. Consequently this bug invalidates the reported two-sided diagonal/derived interval widths, but it need not invalidate a strict positivity lower comparison, conditional on the other matrix intervals, the tail bounds, and the exact rational elimination being valid. This audit does not independently certify those other ingredients or reproduce any LB comparison.
+
 ## Required correction and scope
 
 For true intervals, change the `fa3` middle sign, change the two `fa5` middle signs, and use a negative `fa7` coefficient. Then independently verify the twelfth-order remainder bound and re-run/replay affected raw comparisons before relying on their interval diagnostics. This audit did not edit the lead-owned generator, rerun any full comparison, or establish positivity/negativity of the restored form. It identifies an algebraic mismatch in a component of the candidate's comparison data, not a counterexample to the underlying operator.
