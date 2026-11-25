@@ -101,8 +101,7 @@ S_n=M\sum_{j=1}^n H_{\gamma_j}^2,\qquad K_n=2B_n\gamma_n^2 S_n.
 The preceding projection argument gives the theorem with this $K_n$ whenever
 \[
 X\ge e^2,\qquad B_n S_n X^{5/2}e^{-2\pi X}\le1/(2\gamma_n).
-\]
- One sufficient threshold is $X\ge\max(e^2,\log(2\gamma_n B_n S_n)/\pi)$, using $X^{5/2}\le e^{\pi X}$ for $X\ge1$. The constants require the ordinates, exact multiplicities and nonzero derivatives, but not an infinite zero list. Certified enclosures for these inputs would make the estimate effective for a specified index; finite-prime-only computability is not established.
+\] One sufficient threshold is $X\ge\max(e^2,\log(2\gamma_n B_n S_n)/\pi)$, using $X^{5/2}\le e^{\pi X}$ for $X\ge1$. The constants require the ordinates, exact multiplicities and nonzero derivatives, but not an infinite zero list. Certified enclosures for these inputs would make the estimate effective for a specified index; finite-prime-only computability is not established.
 \section{Scope, computation, and review status}
 The bound concerns the exact phase-$\pi$ differentiation extension, not the ordinary $L^2$ Weil-form minimum or a finite Fourier root. It asserts neither optimality nor uniformity in the index. The reference calculations reproduce the reported rounded tables; Rust 1.85.0 passes three baseline tests and the six-root smoke test at $X=3,N=18$. At $X=11,n=1$, a non-certified 50--60 digit evaluation of the explicit constant estimates the upper bound as $3.372\times10^{-11}$. The ball-arithmetic script is staged in draft PR 2, but its execution was not verified. Neither this estimate nor numerical agreement is a certified enclosure, and finite Fourier approximation, quadrature and root-isolation errors remain uncontrolled by the theorem.
 
