@@ -1,0 +1,10 @@
+# Campaign VIII — Normalized reproducing kernels and spectral functions
+
+Opened 2026-11-25 under standing authorization. Conditional on RH for the global sample space. Objective: investigate Suzuki v4 §7.9's open off-diagonal kernel singularity and relation to boundary functions, using Campaign VII's escaping evaluation vector. Source trail: v4 (7.7)–(7.8), v1 (2.5), (3.1), Theorems 1.2 and 3.3, §5. Do not claim a general solution or novelty before proof.
+
+- K01: exact adjoint-evaluation resolvent relation. For u_z=A_a^-1 exp(-izx) and v=u_0, (I-z C_a)u_z is in ker S*=span(v). Determine its scalar coefficient using boundary form / phase-pi spectral characteristic normalized at zero, check conjugations with q linear first. Establish where invertible and how poles cancel. Use weak escape to derive a normalized kernel limit off the global ordinates and rigorous compact-uniform bounds; do not merely infer from strong convergence of C_a on fixed vectors.
+- K02: extend or delimit the normalized kernel limit at ordinates and on complex compact sets using analyticity, the existing phase-pi characteristic convergence, Riesz bounds or maximum modulus; investigate diagonal boundedness at sampled points and off-diagonal divergence/vanishing. Distinguish simple distinct ordinates from xi multiplicities. If the natural normalization fails somewhere, identify why.
+- K03: derive arbitrary-phase entire characteristic convergence or normalized regularized determinants, compare with Suzuki v1 Theorem 1.2 / §5 and v4 §7.8–7.9. Check extra factor and phase-zero normalization carefully, with bounded independent analytic check if useful. Review worker audit when available; no duplicate known phase-pi result or unvalidated numerical certificate.
+- K04: consolidate strongest supported theorem and remaining obstacles; choose next bounded productive direction or stop on genuine mission-wide blocker.
+
+L03-W03 remains independent and pending; after disposition it may choose a nonconflicting verification package for K03. Lead owns K01/K02. No external submission, expenses, access changes or unrelated infrastructure work. Local unconditional campaigns unaffected.
