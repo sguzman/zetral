@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXXVI
+## Campaigns XII–XXXVII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -30,7 +30,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXXIII — Deviation-resolved local density and anomalous ordinary rates](research/CAMPAIGN-33.md) | Closed mathematically. [Local density envelope](research/positivity/LDE02-deviation-density-envelope.md) and carrier-local necessity; unconditional density improvement unresolved. |
 | [XXXIV — Local zero-measure cancellation and strip projection](research/CAMPAIGN-34.md) | Closed mathematically. [Arithmetic strip sweep](research/positivity/LZC02-arithmetic-sweep.md) and [moving-window countermodel](research/positivity/LZC03-moving-window-obstruction.md). |
 | [XXXV — Fixed discrete zero-system obstruction](research/CAMPAIGN-35.md) | Closed mathematically. [Fixed discrete obstruction](research/positivity/DZO04-audit-and-arithmetic-boundary.md) with prescribed anomalous ordinary growth, globally sparse nonreal nodes, and matched local projection bounds; not zeta. |
-| [XXXVI — Arithmetic jump operator and rank-two pole removal](research/CAMPAIGN-36.md) | Active. Exploit actual arithmetic positivity and parity rank-one restoration. |
+| [XXXVI — Arithmetic jump operator](research/CAMPAIGN-36.md) | Closed mathematically (candidate). Pole-free ground-state scale, exact rank-one inertia, gap and necessary pole alignment; [audit](research/positivity/AJP04-audit-and-prime-tower-pivot.md). Basic positivity and capacity overlap external unreviewed work. Ordinary upper rate remains unresolved. |
+| [XXXVII — Prime-power tower inverses](research/CAMPAIGN-37.md) | Active; exact compressed chain inverse and boundary transport. Joint capacity control unresolved. |
 
 ## Campaigns I–XI — archived README
 
