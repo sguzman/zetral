@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXV
+## Campaigns XII–XXVI
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -19,7 +19,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXII — Sobolev parity trace and global zero recovery](research/CAMPAIGN-22.md) | Closed mathematically. [Global trace inverse](research/positivity/STS02-laplace-zero-recovery.md), arithmetic-only prime-inclusive certificate and exact Volterra inverse; classical explicit-formula realization, not a new RH proof. |
 | [XXIII — Sobolev endpoint spectrum](research/CAMPAIGN-23.md) | Closed mathematically. Candidate trace-norm and individual generalized maximal-scale spectral asymptotics without finite/gap assumptions, including infinite and unattained maximal sets; [audit](research/positivity/SES04-audit-and-metric-bridge.md). Ordinary matching upper bound unresolved. |
 | [XXIV — Vanishing metric and ordinary spectral escape](research/CAMPAIGN-24.md) | Closed mathematically. Joint Gram limit, ordinary lower prefactors, [necessary escape and abstract countermodel](research/positivity/VMR03-excess-depth-escape.md); no ordinary upper exponent. |
-| [XXV — Prime-shift boundary cancellation](research/CAMPAIGN-25.md) | Active. Arithmetic boundary limit and norm defect. |
+| [XXV — Prime-shift boundary cancellation](research/CAMPAIGN-25.md) | Closed mathematically. Sharp norm defect and [whole-subspace localization](research/positivity/PBC03-spatial-frequency-escape.md); no smaller ordinary exponent. |
+| [XXVI — Weighted prime-shift rigidity](research/CAMPAIGN-26.md) | Active. Near-extremal weighted geometry and arithmetic phase coherence. |
 
 ## Campaigns I–XI — archived README
 
