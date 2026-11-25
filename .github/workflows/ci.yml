@@ -32,6 +32,40 @@ jobs:
 
       - name: Precision smoke run
         run: cargo +1.85.0 run --release --manifest-path experiments/Cargo.toml --bin precision -- 3 18 320 160 100
-  numerical:
+  ball-certificate:
     if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
-    uses: ./.github/workflows/numerical-verification.yml
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned ball arithmetic
+        run: python -m pip install --only-binary=:all: python-flint==0.8.0
+      - name: Check conditional exact-cutoff enclosure
+        run: |
+          set -euo pipefail
+          python experiments/reference/v05_ball_certificate.py | tee "$RUNNER_TEMP/v05-ball-certificate.txt"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: exact-cutoff-certificate
+          path: ${{ runner.temp }}/v05-ball-certificate.txt
+  rust-reproduction:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build pinned Rust toolchain
+        run: |
+          rustup toolchain install 1.85.0 --profile minimal
+          cargo +1.85.0 build --release --manifest-path experiments/Cargo.toml --bin precision
+      - name: Reproduce all reference configurations
+        run: |
+          set -euo pipefail
+          python3 experiments/reference/v05_compare_rust.py | tee "$RUNNER_TEMP/v05-rust-roots.csv"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rust-reference-comparison
+          path: ${{ runner.temp }}/v05-rust-roots.csv
