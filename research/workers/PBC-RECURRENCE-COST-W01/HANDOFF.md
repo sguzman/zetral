@@ -34,7 +34,7 @@ For a fixed `f in C_c^infinity(I_a)`, modulation preserves its L2 norm and shift
 
 `L(M_q f) <= C_f(1+log(2+q)) <= C_f(1+exp(2a) log Q)`,
 
-where the first inequality follows from `2+|s-q| <= (2+q)(1+|s|)` and rapid decay of `Ff(s)`. Also, for this fixed smooth `f`, `L(M_q f)/log q -> ||f||_2^2` as `q->infinity`, by dominated convergence. Thus the direct finite-dimensional Dirichlet guarantee can require logarithmic energy on the `exp(2a)` scale at fixed operator accuracy. This is much larger than the `exp(a)` operator scale and supplies no low-energy approximate eigenvector.
+where the first inequality follows from `2+|s-q| <= (2+q)(1+|s|)` and rapid decay of `Ff(s)`. Also, for this fixed smooth `f`, `L(M_q f)/log q -> ||f||_2^2` as `q->infinity`, by dominated convergence. Thus the direct finite-dimensional Dirichlet guarantee permits a logarithmic-energy upper bound as large as the `exp(2a)` scale at fixed operator accuracy. This bound is much larger than the `exp(a)` operator scale and does not guarantee a low-energy approximate eigenvector. It does not prove that the first or any useful recurrence actually has such a large energy cost.
 
 This is an upper bound on one guaranteed recurrence denominator, not a lower bound on the first useful recurrence. Special arithmetic relations may give much smaller `q`; conversely this argument alone gives no bound uniform in a varying family of test functions. It quantifies why PBC02's qualitative recurrence establishes a norm defect but does not by itself resolve PBC03's eigenstate localization or ordinary negative spectrum.
 
