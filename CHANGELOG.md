@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXI
+## Campaigns XII–XXII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -15,7 +15,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XVIII — Discrete certificate validation](research/CAMPAIGN-18.md) | Closed. Integer-only [audited benchmark](research/positivity/DCV04-audit-and-disposition.md) at A=1/8; exact arithmetic executed, Rust unavailable, classical positivity range already larger. |
 | [XIX — Boundary profiles and spectral prefactors](research/CAMPAIGN-19.md) | Closed mathematically. Conditional multiscale asymptotics, oscillations, Cauchy attenuation and [inverse parity trace](research/positivity/BPF04-audit-inverse-trace.md); no actual off-line zero or independent proof verification. |
 | [XX — Quantitative inverse spectral recovery](research/CAMPAIGN-20.md) | Closed mathematically. Conditional sampled recovery, exact synthetic integer intervals, and [audit](research/positivity/QIR04-audit-and-disposition.md); actual certified arithmetic spectral observations unavailable. |
-| [XXI — Log-energy boundary spectrum](research/CAMPAIGN-21.md) | Active. Generalized boundary spectral prefactors without uniform lower-remainder density. |
+| [XXI — Log-energy boundary spectrum](research/CAMPAIGN-21.md) | Closed mathematically. Absolute strip bound, generalized I+compact operator, and [Hardy/Cauchy factors](research/positivity/LBS03-hardy-factorization.md); finite separated leading set still required. |
+| [XXII — Sobolev parity trace and global zero recovery](research/CAMPAIGN-22.md) | Active. Exact trace-class parity identity and analytic inverse. |
 
 ## Campaigns I–XI — archived README
 
