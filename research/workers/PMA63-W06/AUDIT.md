@@ -88,3 +88,7 @@ The constant-(g(M+1)) baseline obeys
 by bounding the parity sum by the full integral from (m=M-1) to infinity. Therefore multiplying `total` by the outward enclosure of (g(M+1)) yields a ratio bound to that baseline. If its upper endpoint is below one, the new tail allowance is strictly smaller. This comparison is valid conditional on the directed fixed-point primitives and positive lower enclosures. Each `g(a)` is evaluated with interval arithmetic; using its lower endpoint in a positive denominator is conservative.
 
 This proof is analytic and was not machine checked. It assumes the written (g) formula, correct outward evaluation of (g), and the retained positive guards. It does not establish the upstream moment inequalities or the complete operator comparison. No RH, negative-spectrum, or Hilbert–Pólya construction claim follows.
+
+## Focused computational replay
+
+The analytic bound was also exercised with the source factor routine at (h=239/100,J=4096,M=8192,T=768), both parities. Run `node research/workers/PMA63-W06/verify-geometric-factors.js`. It regenerates all eight intervals per sector, compares them exactly to the stored LB03 factor objects, and confirms every upper endpoint is below one. This replay tests the source routine and stored outputs against each other; it is not an independent arithmetic implementation, so the analytic proof above supplies the independent justification.
