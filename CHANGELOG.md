@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–LIII
+## Campaigns XII–LV
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -47,7 +47,9 @@ This is the chronological campaign record, not the public project overview. For 
 | [L — Exact complementary residual certificates](research/CAMPAIGN-50.md) | Closed (candidate). [Executed matrix-tail strict positivity](research/positivity/ECR03-matrix-valued-asymptotic-tail.md) through physical h=1; larger even comparisons inconclusive. |
 | [LI — Direction-adapted Schur certification](research/CAMPAIGN-51.md) | Closed (candidate). [Executed full strict positivity](research/positivity/DSC03-derivative-corrected-rate-tails.md) through physical h=1.38. |
 | [LII — Finite prime graph fibers](research/CAMPAIGN-52.md) | Closed (candidate). [Executed strict positivity](research/positivity/PGF03-executed-prime-power-four-certificates.md) through physical h=1.45, including prime power 4. |
-| [LIII — Rational moment tails](research/CAMPAIGN-53.md) | Active. Shared third signed moment and fourth remainder; implementation pending. |
+| [LIII — Rational moment residual tails](research/CAMPAIGN-53.md) | Closed (candidate). [Executed sixth-order arithmetic positivity](research/positivity/RMT03-executed-higher-moment-certificates.md) through physical h=1.6. |
+| [LIV — Rational prime norm witness](research/CAMPAIGN-54.md) | Closed (candidate). Exact norm upper 1.547 through log6; prime-5 full comparisons inconclusive. |
+| [LV — Relative residual control](research/CAMPAIGN-55.md) | Active. Rational energy scaling and positive residual-inverse comparison; diagnostics pending. |
 
 ## Campaigns I–XI — archived README
 
