@@ -1,4 +1,4 @@
-# CAC04 — Cell-complement audit and uniform coupling direction
+# Supplemental CAC04 — Cell-complement audit and uniform coupling observation
 
 2026-11-25. AI-assisted scoped lead audit, not independent verification. No RH proof or full positivity certificate.
 
@@ -8,4 +8,4 @@ CAC03's single prime at length one has disjoint end-strip shifts, giving exact n
 
 Fresh search retrieved Hernandez-Santamaria, Jarohs, Saldana and Sinsch, FEM for 1D-problems involving the logarithmic Laplacian: Error estimates and numerical implementation, arXiv:2311.13079, DOI 10.1016/j.camwa.2025.05.013, https://www.sciencedirect.com/science/article/pii/S0898122125002093. The abstract reports logarithmic energy-norm convergence; no full paper or PDF analyzed and no novelty comparison asserted. General Schur complement and FEM techniques are established.
 
-Campaign XLIV closes as a bounded investigation: CAC01–02 mathematical candidates, CAC03 executed feasibility/obstruction results, full positivity objective unmet. The next justified direction is to bound the off-diagonal cell coupling uniformly in mesh size, use exact arithmetic shift leakage and simultaneous prime alignment, and quantify the Schur enclosure convergence on a fixed interval. Unlike computing another unverified large matrix, this addresses why refinement might eventually succeed and how expensive it must be. No new worker acceptance. README unchanged.
+This is a supplemental audit written after an interrupted handoff, NOT the canonical campaign closure (see CAC04-audit-and-neumann-bracketing-pivot.md and the completed DNB campaign). CAC01–02 mathematical candidates, CAC03 executed feasibility/obstruction results, full positivity objective unmet. A possible supplementary direction would be to bound the off-diagonal cell coupling uniformly in mesh size, use exact arithmetic shift leakage and simultaneous prime alignment, and quantify the Schur enclosure convergence on a fixed interval. Unlike computing another unverified large matrix, this addresses why refinement might eventually succeed and how expensive it must be. No new worker acceptance. README unchanged.
