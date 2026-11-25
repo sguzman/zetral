@@ -4,7 +4,7 @@ A Spectral Mathematics Research Project.
 
 Open research into the spectral, arithmetic and dynamical structures underlying the Riemann zeta function, organized around the Hilbert–Pólya program.
 
-**Status:** Campaign I concluded with explicit blockers. Campaign II (rigorous verification and novelty assessment) is concluded with explicit numerical-certification and infrastructure blockers. Campaign III (sharpness and discovery) concluded with a stronger candidate upper bound and strict finite-cutoff separation; matching sharpness remains unresolved. Campaign IV (exact-local spectral certification) concluded with a conditional residual framework and analytic small-window example; practical numerical certification remains outstanding. Campaign V (small-window spectral asymptotics) concluded with an unconditional candidate two-term correction for the phase-pi differentiation spectrum. Campaign VI (phase-dependent small-window spectrum) concluded with a uniform fixed-index all-phase candidate expansion without RH. Campaign VII (phase perturbations and large-window spectra) is active under standing authorization; its global comparison is conditional on RH. A conditional fixed-index convergence bound is presented as a self-reviewed candidate proof; novelty and independent verification remain outstanding. AI-assisted research with human direction.
+**Status:** Campaign I concluded with explicit blockers. Campaign II (rigorous verification and novelty assessment) is concluded with explicit numerical-certification and infrastructure blockers. Campaign III (sharpness and discovery) concluded with a stronger candidate upper bound and strict finite-cutoff separation; matching sharpness remains unresolved. Campaign IV (exact-local spectral certification) concluded with a conditional residual framework and analytic small-window example; practical numerical certification remains outstanding. Campaign V (small-window spectral asymptotics) concluded with an unconditional candidate two-term correction for the phase-pi differentiation spectrum. Campaign VI (phase-dependent small-window spectrum) concluded with a uniform fixed-index all-phase candidate expansion without RH. Campaign VII concluded with a conditional arbitrary-phase spectral limit and an additional phase-dependent mode. Campaign VIII (normalized reproducing kernels and spectral functions) is active under standing authorization; its global framework assumes RH. A conditional fixed-index convergence bound is presented as a self-reviewed candidate proof; novelty and independent verification remain outstanding. AI-assisted research with human direction.
 
 - [Research state](STATE.md)
 - [Agent protocol](AGENTS.md)
@@ -23,6 +23,9 @@ Open research into the spectral, arithmetic and dynamical structures underlying 
 - [Uniform phase-spectrum candidate note](research/phase/campaign-06-phase-spectrum.md)
 - [Campaign VI closure](research/CAMPAIGN-06-CLOSURE.md)
 - [Campaign VII](research/CAMPAIGN-07.md)
+- [Arbitrary-phase spectral-limit candidate note](research/large-phase/campaign-07-phase-limit.md)
+- [Campaign VII closure](research/CAMPAIGN-07-CLOSURE.md)
+- [Campaign VIII](research/CAMPAIGN-08.md)
 - [Agent coordination](COORDINATION.md)
 - [Density-refined cutoff bound](research/discovery/D01-density-refinement.md)
 - [Adversarial proof audit](research/verification/V01-adversarial-audit.md)
