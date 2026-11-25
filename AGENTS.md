@@ -1,6 +1,6 @@
 # Zetral research operating protocol
 
-Read STATE.md and research/CAMPAIGN-01.md before every work batch. "Continue" authorizes the next unfinished approved milestone, not scope expansion. Work until a meaningful checkpoint, persist artifacts and state, verify remote readback, then report only actual changes, remaining work, and required human action. Stop at acceptance criteria or a real blocker. No invented progress, extra tasks, or claims of background execution.
+Read STATE.md and the active campaign file named there before every work batch. "Continue" authorizes the next unfinished approved milestone, not scope expansion. Work until a meaningful checkpoint, persist artifacts and state, verify remote readback, then report only actual changes, remaining work, and required human action. Stop at acceptance criteria or a real blocker. No invented progress, extra tasks, or claims of background execution.
 
 Research integrity:
 - Distinguish cited theorem, assumption, conjecture, numerical evidence, informal derivation, and machine-checked theorem. Record exact assumptions, sources, theorem identifiers and versions.
