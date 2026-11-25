@@ -1,0 +1,24 @@
+{
+  "h": "23/10",
+  "evenMinors": 32,
+  "oddMinors": 32,
+  "basisDimensions": [
+    32,
+    32
+  ],
+  "allStoredDeterminantsMatch": true,
+  "primitiveAudit": {
+    "checked": 35,
+    "improved": 28,
+    "largestIntegerWidthRatio": "603906051",
+    "examples": [
+      {
+        "j": "12287",
+        "x": "0",
+        "oldWidth": "603906051",
+        "stableWidth": "1"
+      }
+    ]
+  },
+  "scope": "independent stored integer matrices and rational derivative samples only; not a full operator verifier"
+}
