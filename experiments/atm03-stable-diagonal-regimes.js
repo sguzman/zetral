@@ -314,7 +314,7 @@ for(const [hn,hd] of [[params.hn,params.hd]]){
   for(let j=0;j<J;j++){
    const f=div(ONE,add(rate2[j],x));
    base=add(base,f);exp=add(exp,mul(q[j],f));
-   if(n<2*S){const d=div(rate2[j],square(add(rate2[j],x))); // ATM03: no rounded tiny reciprocal squarebd=add(bd,d);ed=add(ed,mul(q[j],d));
+   if(n<2*S){const d=div(rate2[j],square(add(rate2[j],x)));bd=add(bd,d);ed=add(ed,mul(q[j],d));
     if(n>0)da=add(da,div(mul(TWO,mul(x,f)),rate[j]));}
   }
   const den0=add(R02,x),den02=square(den0);
