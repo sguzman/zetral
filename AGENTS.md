@@ -13,3 +13,7 @@ Research integrity:
 
 ## Multi-agent coordination
 When a local Codex worker is active, read COORDINATION.md alongside STATE.md before each batch. The lead owns campaign direction, acceptance and main's shared state; the worker follows its assigned branch and exclusive file scope and may autonomously select independent bounded follow-ups under the standing worker goal in COORDINATION.md. Use committed/pushed handoffs, not claims of live communication. Worker results are not accepted until lead review; do not count parallel work twice. See COORDINATION.md for active assignments, the long-lived worker goal, autonomous work selection and stopping criteria.
+
+## Public README policy
+
+The owner explicitly requires README.md to remain a concise, stable, public-facing project overview, not a chronological changelog or running agent status report. Put campaign chronology and completed-work summaries in CHANGELOG.md or campaign-specific notes, active working state in STATE.md, and worker handoffs in COORDINATION.md. Update the README only when the project purpose, major research directions, or curated entry points materially change. Never append per-turn progress, routine campaign closures, or long lists of milestone links to it. Keep claims appropriately qualified and preserve historical records elsewhere.
