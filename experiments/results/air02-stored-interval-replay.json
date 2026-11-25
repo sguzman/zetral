@@ -1,0 +1,26 @@
+[
+  {
+    "h": "39/20",
+    "odd": false,
+    "dimension": 18,
+    "trialColumns": 143,
+    "firstMinor": "324428117300970",
+    "positiveMinors": 18,
+    "allStoredMinorsMatch": true,
+    "allLowerEntriesMatch": true,
+    "exactBasisInvertible": true,
+    "scope": "stored intervals only; not their analytic generation"
+  },
+  {
+    "h": "39/20",
+    "odd": true,
+    "dimension": 18,
+    "trialColumns": 142,
+    "firstMinor": "1018398794729507825",
+    "positiveMinors": 18,
+    "allStoredMinorsMatch": true,
+    "allLowerEntriesMatch": true,
+    "exactBasisInvertible": true,
+    "scope": "stored intervals only; not their analytic generation"
+  }
+]
