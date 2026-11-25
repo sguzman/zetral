@@ -1,0 +1,10 @@
+# Campaign X — Relative derivative evaluation growth
+
+Opened 2026-11-25 under standing authorization. Assume RH for the weighted global sampling space. The objective is to decide or sharply delimit the fixed-phase scalar L_a=||u'_0||_q^2/||u_0||_q from Campaign IX. This is a specific quantitative arithmetic problem, not another derivation of the already completed tuned splitting law.
+
+- N01: establish a compactly supported odd witness from Phi' (theta inverse Fourier kernel derivative). Check F[Phi'](z)=-iz A_0(z), F[Phi']'(0)=-i A_0(0), tail derivatives through order two, and weighted sampling bound. Derive a lower estimate on ||u'_0|| and exact sufficient upper threshold for M_a using lambda_a>0 and M_a^2<=2a/lambda_a. Candidate threshold: if lambda_a>=exp(-(4pi-epsilon) X) eventually, X=exp(2a), then L_a->infinity; prove powers and constants rather than assume. Also consider direct bounds weaker than full coercivity.
+- N02: audit relevant quantitative lower-bound literature, especially arXiv:2611.13129v1 Hypothesis 3.4 and Mori prolate-weil-bounds Paper IV. Check coordinate scaling, exponent and extra hypotheses against N01 threshold. Do not treat numerical ladder observations or conditional tail estimates as a theorem about lambda_a under RH alone. State exactly what follows under any additional hypothesis.
+- N03: investigate a direct relative bound bypassing full coercivity, e.g. translation differences of compact local evaluation extremizers in nested windows or estimates in the odd/even sectors. Seek a rigorous result or explicit obstruction. If no viable proof route, document negative finding and do not manufacture a new campaign.
+- N04: consolidate justified conclusions, including conditional fixed-phase consequences, and decide whether further work is supported by actual evidence. No RH proof, novelty claim, or numerical certification without real evidence.
+
+Lead owns N01/N02. K02-W04 remains pending; worker may independently audit earlier results or choose a nonconflicting bounded task after disposition. No external submission, expenses, access changes or unrelated infrastructure work.
