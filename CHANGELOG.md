@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XLII
+## Campaigns XII–XLIV
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -36,7 +36,9 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXXIX — Analytic pole moments](research/CAMPAIGN-39.md) | Closed (candidate). Analytic vectors, convergent relative heat germ, exterior capacity enclosures and [interior finite-data obstruction](research/positivity/APM04-audit-and-interior-obstruction.md). |
 | [XL — Moment visibility and inertia](research/CAMPAIGN-40.md) | Closed (candidate). Complete finite arithmetic seed visibility and [heat-matrix spectral-depth bounds](research/positivity/MVI03-heat-matrix-inertia-and-moment-enclosures.md). No executed heat matrix or positivity certificate. |
 | [XLI — Certified arithmetic moment evaluation](research/CAMPAIGN-41.md) | Closed (candidate). Explicit periodic cutoff/error bound and [executed prime-inclusive moment benchmark](research/positivity/CME03-executed-arithmetic-moment-benchmark.md); observed finite-cutoff sign artifact, no full positivity certificate. |
-| [XLII — Boundary-driven Fourier acceleration](research/CAMPAIGN-42.md) | Active; [jump/prime resonance tail](research/positivity/BFA01-jump-and-prime-resonance-tail.md) and [executed corrected first-moment enclosure](research/positivity/BFA02-explicit-accelerated-first-moment.md); second-moment correction pending. |
+| [XLII — Boundary-driven Fourier acceleration](research/CAMPAIGN-42.md) | Closed (candidate). First-moment jump resonance and [executed singularity-lifted second moments](research/positivity/BFA03-singularity-lift-second-moment.md), 94.8% narrower restored second-moment enclosure on constant trial. |
+| [XLIII — Certified block singularity lifting](research/CAMPAIGN-43.md) | Closed (candidate). Step/affine lifts and [executed two-parity block residual benchmark](research/positivity/BSL03-executed-two-parity-residual-benchmark.md); positive finite Ritz block, no full certificate. |
+| [XLIV — Cell-average coercivity](research/CAMPAIGN-44.md) | Active; [certified positive complement](research/positivity/CAC01-cell-average-complement-coercivity.md) and [exact Schur inertia](research/positivity/CAC02-exact-cell-schur-inertia.md); full cell matrix test pending. |
 
 ## Campaigns I–XI — archived README
 
