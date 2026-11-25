@@ -1,0 +1,13 @@
+{
+  "h": "23/10",
+  "odd": true,
+  "n": 32,
+  "entries": 1024,
+  "exactRadiusMatches": 32,
+  "exactMinorMatches": 32,
+  "marginNumerator": "63256",
+  "marginDenominator": "1000000",
+  "nextGridFails": true,
+  "firstRadius": "14174665675528681623",
+  "scope": "stored components and exact row elimination; not independent operator evaluation"
+}
