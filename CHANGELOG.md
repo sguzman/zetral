@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–LVI
+## Campaigns XII–LVII
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -50,7 +50,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [LIII — Rational moment residual tails](research/CAMPAIGN-53.md) | Closed (candidate). [Executed sixth-order arithmetic positivity](research/positivity/RMT03-executed-higher-moment-certificates.md) through physical h=1.6. |
 | [LIV — Rational prime norm witness](research/CAMPAIGN-54.md) | Closed (candidate). Exact norm upper 1.547 through log6; prime-5 full comparisons inconclusive. |
 | [LV — Relative residual control](research/CAMPAIGN-55.md) | Closed (candidate). [Executed fine-lattice positivity](research/positivity/RRC03-executed-fine-lattice-certificates.md) through physical h=1.78 including prime 5. |
-| [LVI — Prime-seven norm witnesses](research/CAMPAIGN-56.md) | Active. Exact norm upper 1.792 through log7, 2.071 through log8; larger full comparisons inconclusive; higher residual/rate derivation pending execution. |
+| [LVI — Rational prime-seven norm witnesses](research/CAMPAIGN-56.md) | Closed (candidate). [Executed adaptive strict positivity](research/positivity/P7W03-sixth-residual-and-eighth-rate-expansion.md) through physical h=1.95 including prime 7. |
+| [LVII — Prime-power eight and nine](research/CAMPAIGN-57.md) | Active. Exact rational norm witnesses 2.303 through log9 and 2.714 through log11; spectral tests pending. |
 
 ## Campaigns I–XI — archived README
 
