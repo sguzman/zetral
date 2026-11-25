@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XXX
+## Campaigns XII–XXXI
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -24,7 +24,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XXVII — Twisted prime phase-limit spectrum](research/CAMPAIGN-27.md) | Closed mathematically. [Ordinary variational characterization](research/positivity/TPH02-ordinary-variational-characterization.md) and [global saturation criterion](research/positivity/TPH03-global-coherence-criterion.md); attainable set unresolved. |
 | [XXVIII — Carrier-centered zero geometry](research/CAMPAIGN-28.md) | Closed mathematically. [Local zero-side restrictions](research/positivity/CZG03-negative-pair-and-density-obstructions.md), moderate carrier exclusion, conditional narrowing and rarity; extreme carriers unresolved. |
 | [XXIX — Harmonic phase families and indexed ordinary spectrum](research/CAMPAIGN-29.md) | Closed mathematically. [Indexed ordinary characterization](research/positivity/HPS03-separated-carrier-indexed-converse.md) and [parity pairing at scale exp(a)](research/positivity/HPS04-audit-parity-characterization.md); coefficients unresolved. |
-| [XXX — Parity pairing of spectral escape](research/CAMPAIGN-30.md) | Active. Opposite-carrier parity transfer at anomalous smaller scales. |
+| [XXX — Parity pairing of spectral escape](research/CAMPAIGN-30.md) | Closed mathematically. [Exact finite-fast parity transfer](research/positivity/PPE03-fast-zero-exact-interpolation.md); ordinary growth-rate pairing above tail deviation scale. |
+| [XXXI — Finite zero excision and ordinary spectral inertia](research/CAMPAIGN-31.md) | Active. Separate finite fast-zero modes from residual escape. |
 
 ## Campaigns I–XI — archived README
 
