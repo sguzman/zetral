@@ -1,0 +1,196 @@
+{
+  "scale": "1000000000000000000",
+  "witnessSource": "dnb01-stronger-complement-witness.json",
+  "results": [
+    {
+      "m": 6,
+      "K": 4,
+      "J": 1024,
+      "ritz": [
+        "290987724223147809",
+        "290995331844333370"
+      ],
+      "weightedCorrectionLower": "3211143274908774555",
+      "criterionUpper": "-2920147943064441185",
+      "failure": true,
+      "modes": [
+        {
+          "n": 1,
+          "weightLower": "112695504423294722",
+          "rhoLower": "347721539646880133",
+          "ratePlusPoleErrorUpper": "23864850740491362"
+        },
+        {
+          "n": 2,
+          "weightLower": "809008971972063068",
+          "rhoLower": "61488082415562249",
+          "ratePlusPoleErrorUpper": "16078662012306732"
+        },
+        {
+          "n": 3,
+          "weightLower": "1215060429522602074",
+          "rhoLower": "48126131521467713",
+          "ratePlusPoleErrorUpper": "13483265769578521"
+        },
+        {
+          "n": 4,
+          "weightLower": "1502947724279214122",
+          "rhoLower": "15082011886522842",
+          "ratePlusPoleErrorUpper": "12185567648214416"
+        }
+      ]
+    },
+    {
+      "m": 8,
+      "K": 4,
+      "J": 1024,
+      "ritz": [
+        "304200338980084743",
+        "304207946274268844"
+      ],
+      "weightedCorrectionLower": "1263830394722060978",
+      "criterionUpper": "-959622448447792134",
+      "failure": true,
+      "modes": [
+        {
+          "n": 1,
+          "weightLower": "402853232214692761",
+          "rhoLower": "489092361849075394",
+          "ratePlusPoleErrorUpper": "22735914150705326"
+        },
+        {
+          "n": 2,
+          "weightLower": "1097781449205851020",
+          "rhoLower": "39172551385297064",
+          "ratePlusPoleErrorUpper": "16896272601245250"
+        },
+        {
+          "n": 3,
+          "weightLower": "1503576378875351125",
+          "rhoLower": "13509552073865321",
+          "ratePlusPoleErrorUpper": "14949725418091891"
+        },
+        {
+          "n": 4,
+          "weightLower": "1791373888873599552",
+          "rhoLower": "9120297595818568",
+          "ratePlusPoleErrorUpper": "13976451826515212"
+        }
+      ]
+    },
+    {
+      "m": 16,
+      "K": 4,
+      "J": 1024,
+      "ritz": [
+        "47069095838159732",
+        "47076702541991599"
+      ],
+      "weightedCorrectionLower": "104936434416233242",
+      "criterionUpper": "-57859731874241643",
+      "failure": true,
+      "modes": [
+        {
+          "n": 1,
+          "weightLower": "1098387651852125986",
+          "rhoLower": "111533373370008772",
+          "ratePlusPoleErrorUpper": "27952903633989799"
+        },
+        {
+          "n": 2,
+          "weightLower": "1791980091519874519",
+          "rhoLower": "270389397405005",
+          "ratePlusPoleErrorUpper": "25033082861248649"
+        },
+        {
+          "n": 3,
+          "weightLower": "2197527655018372822",
+          "rhoLower": "7125992130570727",
+          "ratePlusPoleErrorUpper": "24059809270334932"
+        },
+        {
+          "n": 4,
+          "weightLower": "2485238586856770619",
+          "rhoLower": "0",
+          "ratePlusPoleErrorUpper": "23573172474878074"
+        }
+      ]
+    },
+    {
+      "m": 24,
+      "K": 4,
+      "J": 1024,
+      "ritz": [
+        "24938181497667152",
+        "24945788176989061"
+      ],
+      "weightedCorrectionLower": "42332866712913605",
+      "criterionUpper": "-17387078535924544",
+      "failure": true,
+      "modes": [
+        {
+          "n": 1,
+          "weightLower": "1504294841270936270",
+          "rhoLower": "63056135285283139",
+          "ratePlusPoleErrorUpper": "37062987496108515"
+        },
+        {
+          "n": 2,
+          "weightLower": "2197639914767683001",
+          "rhoLower": "0",
+          "ratePlusPoleErrorUpper": "35116440314297237"
+        },
+        {
+          "n": 3,
+          "weightLower": "2603141669715995782",
+          "rhoLower": "1081507108571686",
+          "ratePlusPoleErrorUpper": "34467591253693478"
+        },
+        {
+          "n": 4,
+          "weightLower": "2890836568561828652",
+          "rhoLower": "0",
+          "ratePlusPoleErrorUpper": "34143166723391598"
+        }
+      ]
+    },
+    {
+      "m": 32,
+      "K": 4,
+      "J": 1024,
+      "ritz": [
+        "14125996721321914",
+        "14133603551968671"
+      ],
+      "weightedCorrectionLower": "17418060049440617",
+      "criterionUpper": "-3284456497471946",
+      "failure": true,
+      "modes": [
+        {
+          "n": 1,
+          "weightLower": "1792131642181443260",
+          "rhoLower": "31109740540405578",
+          "ratePlusPoleErrorUpper": "47146344934027874"
+        },
+        {
+          "n": 2,
+          "weightLower": "2485390137518339361",
+          "rhoLower": "0",
+          "ratePlusPoleErrorUpper": "45686434548144333"
+        },
+        {
+          "n": 3,
+          "weightLower": "2890875859474087214",
+          "rhoLower": "170529821508061",
+          "ratePlusPoleErrorUpper": "45199797752849819"
+        },
+        {
+          "n": 4,
+          "weightLower": "3178565146772522353",
+          "rhoLower": "0",
+          "ratePlusPoleErrorUpper": "44956479355202563"
+        }
+      ]
+    }
+  ]
+}
