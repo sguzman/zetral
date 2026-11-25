@@ -2,6 +2,8 @@
 
 25 November 2026. Conditional on RH for the real weighted sampling norm and positive local form. The bounds below are internal candidate deductions, not a proof of RH, independent human review, formal certification, or established originality.
 
+**N02 follow-up (25 November 2026):** The sufficient coercivity criterion in §4 is mathematically valid as an implication but incompatible with the even-sector upper bound in Andrews–Connes–La Gatta, arXiv:2611.13129v1, Theorem 3.1. Do not pursue that criterion as an attainable estimate. See [N02 coercivity audit](N02-coercivity-audit.md) for the normalization check, obstruction, and improved conditional prolate witness.
+
 ## 1. Source inputs and normalization
 
 Direct primary-source retrieval in this turn:
