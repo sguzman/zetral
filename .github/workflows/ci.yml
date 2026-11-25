@@ -1,0 +1,23 @@
+name: Bootstrap checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check research artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in README.md AGENTS.md STATE.md research/CAMPAIGN-01.md literature/README.md site/index.html; do
+            test -s "$f"
+          done
+          grep -q 'Situs' AGENTS.md
+          grep -q 'No original' site/index.html
+          grep -q '</html>' site/index.html
+      # Lean, Rust and paper checks will be added when their artifacts exist.
