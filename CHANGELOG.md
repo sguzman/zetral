@@ -2,7 +2,7 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
-## Campaigns XII–XIX
+## Campaigns XII–XX
 
 | Campaign | Outcome and limitations |
 | --- | --- |
@@ -13,7 +13,8 @@ This is the chronological campaign record, not the public project overview. For 
 | [XVI — Frequency localization and escape](research/CAMPAIGN-16.md) | Closed mathematically. Exact frequency frame, negative-packet selection, exceptional prime resonances and [local concentration certificates](research/positivity/FES04-local-concentration-certificates.md). Escape remains unexcluded. |
 | [XVII — Compact positivity certificates](research/CAMPAIGN-17.md) | Closed mathematically. Exact compact inertia, residual enclosures, parity and [discrete finite-rank reduction](research/positivity/CPC04-discrete-finite-rank.md); no executed numerical certificate. |
 | [XVIII — Discrete certificate validation](research/CAMPAIGN-18.md) | Closed. Integer-only [audited benchmark](research/positivity/DCV04-audit-and-disposition.md) at A=1/8; exact arithmetic executed, Rust unavailable, classical positivity range already larger. |
-| [XIX — Boundary profiles and spectral prefactors](research/CAMPAIGN-19.md) | Active. Conditional finite-off-line spectral asymptotics beyond exponential rates. |
+| [XIX — Boundary profiles and spectral prefactors](research/CAMPAIGN-19.md) | Closed mathematically. Conditional multiscale asymptotics, oscillations, Cauchy attenuation and [inverse parity trace](research/positivity/BPF04-audit-inverse-trace.md); no actual off-line zero or independent proof verification. |
+| [XX — Quantitative inverse spectral recovery](research/CAMPAIGN-20.md) | Active. Conditional finite-window spectral observations and stability of inverse recovery. |
 
 ## Campaigns I–XI — archived README
 
