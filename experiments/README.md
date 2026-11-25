@@ -19,3 +19,6 @@ This was an independent reference run, not execution of the Rust crate. No certi
 
 ## Arbitrary-precision checkpoint
 See [moment reduction and reproduction instructions](moment-reduction.md), [24 reproduced roots](results/n18-precision.csv), and [independent diagnostic](reference/independent_check.py). Two mpmath reference runs agree at the displayed precision and match published Table 1 rounding for all X at N=18. Rust MPFR implementation is pending compilation; Table 2 and independent entry comparison remain pending.
+
+## Reproduction completed (reference implementation)
+[Reproduction report](reproduction-report.md) and [Table 2 data](results/table2-reproduction.csv): all twelve sixth-root differences and all four N=18 condition numbers match the published rounding; selected direct Gram entries and refined scans agree. Rust execution remains unverified. No numerical certificate claimed.
