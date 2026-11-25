@@ -1,0 +1,21 @@
+{
+  "polynomialChecks": [
+    "f first",
+    "fd first",
+    "f third",
+    "fd third",
+    "f fifth",
+    "fd fifth",
+    "g third",
+    "g fifth"
+  ],
+  "midpointCoefficients": [
+    "1/12",
+    "-7/720",
+    "31/30240"
+  ],
+  "emErrorConstant": "43/201600",
+  "FerrorCoefficient": "43/5",
+  "alphaErrorCoefficient": "387/5",
+  "scope": "algebra only; analytic proof in AIR03"
+}
