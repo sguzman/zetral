@@ -8,7 +8,8 @@ This is the chronological campaign record, not the public project overview. For 
 | --- | --- |
 | [XII — Derivative-chain rigidity](research/CAMPAIGN-12.md) | Arithmetic moment constraints and multiplicity estimates; general simplicity unresolved. Full DCR03 archival transfer remains pending. |
 | [XIII — Spectral-edge quotient](research/CAMPAIGN-13.md) | Candidate self-adjoint quotient operator, weighted interpolation, and RH-conditional exponential spectral concentration. Individual node convergence unresolved. |
-| [XIV — Global semiboundedness and off-line growth](research/CAMPAIGN-14.md) | Active at GSG04; candidate semiboundedness equivalence, all-window lower exponent, and exact restricted growth rate. Unrestricted matching upper bound unresolved. |
+| [XIV — Global semiboundedness and off-line growth](research/CAMPAIGN-14.md) | Closed mathematically. Candidate semiboundedness equivalence, all-window lower exponent, exact restricted growth rate, and [limiting negative index](research/positivity/GSG04-global-inertia.md). Unrestricted matching upper bound unresolved. |
+| [XV — Quantitative negative-index resolution](research/CAMPAIGN-15.md) | Active. Constructive thresholds and higher negative eigenvalue estimates. |
 
 ## Campaigns I–XI — archived README
 
