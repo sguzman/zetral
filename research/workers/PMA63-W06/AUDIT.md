@@ -18,7 +18,7 @@ where (P) is the selected prime norm upper bound and (L) is the fixed pole loss 
 g'(n)=\frac1n+\frac{3h^2}{\pi^2n^3}>0.
 \]
 
-Thus (g) is increasing. The guard in the source establishes a positive lower enclosure at the first omitted index (M+1), and at every subsequent block start. Positivity at (M+1) plus monotonicity ensures all actual tail denominators are positive.
+Thus (g) is increasing. The source checks a positive lower enclosure at the first omitted index (M+1) and at each of the 64 finite-block starts. The final tail denominator is also evaluated; successful division requires that its interval exclude zero. Positivity at (M+1) plus monotonicity establishes positivity of all exact tail denominators.
 
 Define (a_0=m) and (a_{k+1}=\lceil9a_k/8\rceil) for (0\le k<64). Write (a=a_k,b=a_{k+1}). The source's block contribution is the interval evaluation of
 
