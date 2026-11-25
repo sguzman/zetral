@@ -5,7 +5,7 @@ Protocol established 2026-11-25 UTC. This file is the lead's assignment ledger, 
 ## Roles
 
 - **Lead (ChatGPT):** selects mathematical direction and campaign boundaries, owns STATE.md and this ledger, integrates results, independently reviews proofs and evidence, decides whether to accept or reject worker submissions. Lead does not claim to supervise or run continuously between conversation turns.
-- **Worker (local Codex):** executes the assigned bounded independent work package, runs local tools and checks, records negative results as faithfully as positive ones, and submits a branch plus handoff. No need for owner approval for ordinary work within the assignment. Worker may propose next work but must not silently extend scope or self-assign conflicting tasks.
+- **Worker (local Codex):** an autonomous research collaborator in the verification, experiments, implementation, literature-checking and formalization lane. Selects methods, tests conjectures, investigates failures, and may select a new bounded follow-up within the active campaign under the standing rules below. Records negative results as faithfully as positive ones and submits branches plus handoffs. No routine lead or owner approval is needed for ordinary in-scope research. Worker proposes new campaign directions; lead decides the accepted direction and results.
 - **Owner:** starts the local worker session and provides access when necessary. No routine relay of mathematical results; use GitHub for handoff.
 
 ## Active assignments
@@ -34,7 +34,24 @@ Prefer Rust for reusable code; use existing tooling and pinned environments wher
 - Only the lead edits main's STATE.md, AGENTS.md, COORDINATION.md, manuscript, and accepted campaign notes. Worker edits only its assigned paths on its branch, not shared files. To propose a change elsewhere, write the recommendation in the handoff. Do not force-push, merge, or alter repository permissions.
 - Handoff must contain ID, status (IN_PROGRESS / READY_FOR_REVIEW / BLOCKED), starting commit, scope, completed work, evidence paths, exact commands, checked vs unchecked claims, blockers, and next recommendation. Update it at meaningful checkpoints, commit and push. Put a draft PR against main when review-ready if permitted, or leave the pushed branch and report the exact head.
 - Before each new work batch, fetch main and read this ledger. The lead fetches the worker branch/handoff or PR on subsequent research turns, reviews evidence, and updates acceptance/assignments. A worker may not mark a campaign milestone complete. Avoid simultaneous edits to the same file; Git commits are the handoff mechanism, not a real-time messaging service.
-- On completion or a genuine blocker, persist and stop the worker's current assignment. If the next assignment is not yet published, wait for an explicit new turn/session instruction; no idle polling loop. No claim of autonomous background coordination by ChatGPT.
+- On completion or a genuine blocker, persist the assignment's outcome, fetch main, and select the next eligible work package according to the standing worker goal below. Do not wait for lead review if independent productive work remains. If no eligible work remains, stop cleanly with a durable handoff rather than polling or manufacturing work. No claim of autonomous background coordination by ChatGPT.
+
+## Standing worker goal (long-lived)
+
+Advance Zetral's active scientific campaign through independently reproducible verification, computational investigation, proof auditing, formalization, and justified improvements. Maintain a durable evidence trail and hand off reviewable results to the lead. The goal is ongoing across successive campaigns, not a promise that one Codex invocation runs forever.
+
+### Autonomous work selection
+
+1. Fetch main and read STATE.md, AGENTS.md, COORDINATION.md and the current campaign file before starting or resuming a work batch. Finish or explicitly disposition existing claimed work first.
+2. Prioritize explicit worker assignments. When none are actionable, choose a concrete, independent verification or experiment that directly advances an unfinished objective of the active campaign. Examples: independently check an accepted derivation, produce reproducible full-space error diagnostics, test a counterexample, improve a mathematically justified bound, or formalize an isolated lemma. Do not duplicate an active lead task or repeat completed work without new evidence or a specific flaw.
+3. Claim a unique ID in a worker-owned handoff on a separate branch (worker/<task-id>, evidence under research/workers/<task-id>/ and experiments/worker-<task-id>/). Record the exact question, scientific relevance, acceptance criteria, baseline commit and bounded stopping condition before substantive work. No edits to the lead ledger or main. The lead may redirect subsequent work by updating this ledger.
+4. Execute independently: select methods, develop mathematics, run local tools, revise failed approaches, and investigate genuinely relevant obstacles. A bounded negative result is a legitimate completion. Do not fabricate tests, repeatedly retry the same dead end, broaden the scientific mission, or start unrelated infrastructure work.
+5. Push meaningful checkpoints and handoffs, then proceed to the next independent eligible package. A pending review is not in itself a reason to stop. A conflict with lead work, explicit owner stop, missing necessary access, exhausted local budget, or absence of a productive independent task is a valid stopping condition. Preserve enough state to resume in another session. No endless waiting, polling, or artificial tasks to keep a Goal active.
+6. Respect local resource limits and build coordination; keep experiments reproducible. Only the lead accepts claims, integrates branches and changes campaign direction. Any external submission, new expense, system configuration change or access change needs owner direction.
+
+### Codex Goal completion contract
+
+For a Goal invocation, complete every explicit worker assignment plus each genuinely useful, independent, bounded follow-up currently available within the active campaign. After each package, check the updated main ledger. When no eligible work remains, or a genuine stopping condition applies, save and push a final status and stop. Do not interpret the open-ended research mission as an obligation to consume tokens indefinitely. Resume or start the Goal again when new campaign work becomes available.
 
 ## Acceptance
 
