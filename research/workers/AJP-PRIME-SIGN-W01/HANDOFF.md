@@ -34,6 +34,10 @@ The local PBC01 note states the same convention for (P_a=\sum c_n(T_{\tau_n}+T_{
 
 ## Evidence
 
+## Closest source precedent
+
+In the same primary source, §5.2 proves that the normalized archimedean form \\(\\mathcal L\\) is Markovian and irreducible, hence has a positivity-improving semigroup; §5.3 uses this for simplicity of its ground state. The proof uses a strictly positive \\(|x-y|^{-1}\\) jump kernel plus a nonnegative boundary potential. This result concerns the archimedean comparison form and its small-window application (the prime sum is empty for \\(a<\\tfrac12\\log2\\)); it does not itself establish the all-window prime-augmented \\(T_a\\) of Campaign XXXVI. The identity above shows how each finite prime term contributes a positive discrete difference energy, modulo a scalar shift, so it is a compatible ingredient for extending that Dirichlet-form argument once the campaign's exact pole-removed decomposition and closed domain are established.
+
 - Primary source inspected: [arXiv:2606.09096v4 HTML](https://arxiv.org/html/2606.09096v4), §2.3, equations (2.2)–(2.5), especially (2.5); the translated prime integral is displayed in the derivation immediately before (2.5). The source states the formula on (H_0^1(-a,a)).
 - Repository cross-check: `research/positivity/PBC01-prime-endpoint-limit.md`, §1; `research/positivity/PBC02-pole-cancellation-defect.md`, §1.
 - Exact source access: web search service opened the arXiv HTML directly on 2026-11-25. No numerical, formal, or external computation was performed.
