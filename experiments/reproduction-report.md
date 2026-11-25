@@ -1,0 +1,14 @@
+# R03 numerical reproduction report
+
+Executed 2026-11-24 Mexico / 2026-11-25 UTC. Primary comparison: Suzuki arXiv:2610.32704v1 §6 Tables 1 and 2, https://arxiv.org/html/2610.32704v1#S6 (rechecked this session).
+
+- Table 1: 24/24 root candidates match published 10-decimal rounding (previous checkpoint).
+- Table 2: 12/12 sixth-root errors and 4/4 N=18 condition numbers match published rounding. Cholesky succeeded in all 12 configurations. See results/table2-reproduction.csv.
+- 28 direct-versus-moment Gram entry comparisons (7 index pairs at each X) using original sinc overlap formula and the same order-160 quadrature agree within 2.54e-80 absolute. This independently checks the algebra, not the common quadrature truncation error.
+- At each configuration sign scans with spacing .01 and .005 yielded the same six candidates to observed difference 1.89e-39. This reflects bisection refinement using the same approximate characteristic function; it is not a root-counting or evaluation certificate.
+
+Method: mpmath 1.3.0, 80 decimal digits, generated Gauss-Legendre order 160, complex LU, positive-definiteness diagnostic, symmetric eigensolver for condition estimates, rational sinc evaluation away from removable poles. The known sixth ordinate is used only to subtract from the computed sixth candidate, not to choose or find roots. Raw CSV includes 35 significant digits, not certified digits. First execution timed out after ten configurations; a second execution restricted to X=11,N=16,18 completed the final two. The full reference script is preserved verbatim; run python experiments/reference/table2_check.py (allow several minutes). It is a temporary independent numerical diagnostic, not the production Rust implementation. No exact grid hit at a removable pole occurred for these inputs; general-purpose evaluation must handle that case. Scan stops after six candidates and does not count later roots.
+
+Rust verification disposition: checked runtime PATH and neither cargo nor rustc was present. GitHub combined commit status returned an empty list; available workflow-run lookup covers PR events, not the push run. Thus the authored Rust code remains uncompiled/unverified in this environment. CI and Pages remain unverified; public URL could not be opened in this session. R03 numerical reproduction criterion is fulfilled with a recorded Rust verification blocker, not a claim of full production implementation. No rigorous bounds, novelty, exact local eigenvalue certification or completeness established.
+
+R04 focus: distinguish finite Fourier error from exact cutoff error; exploit inverse compression and projection defect estimates for exact local eigenvalues. The severe condition numbers make it important not to fit a cutoff-rate conjecture directly to these finite-N results.
