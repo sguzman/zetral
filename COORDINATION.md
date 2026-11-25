@@ -13,11 +13,12 @@ Protocol established 2026-11-25 UTC. This file is the lead's assignment ledger, 
 | ID | Owner | Status | Task | Exclusive write scope |
 |---|---|---|---|---|
 | S01 | Lead | COMPLETE | Scaled logarithmic operator and unconditional local expansion | research/asymptotics/S01-* |
-| S02 | Lead | READY | Explicit first-order root correction | research/asymptotics/S02-*; STATE.md; coordination ledger |
+| S02 | Lead | COMPLETE | Explicit positive sine-integral correction and second-order remainder | research/asymptotics/S02-* |
+| S03 | Lead | READY | Second-order analytical check, prior-art comparison, worker review | research/asymptotics/S03-*; STATE.md; coordination ledger |
 | C04-W01 | Codex | ACCEPTED — audit/diagnostic only | Independent C02 audit and X=2 feasibility | Original branch preserved; files integrated on main |
-| S03-W01 | Codex | ASSIGNED, not acknowledged | Independent small-window diagnostics and source audit | research/workers/S03-W01/; experiments/worker-s03-w01/ |
+| S03-W01 | Codex | IN_PROGRESS, handoff verified | Independent small-window diagnostics and source audit | research/workers/S03-W01/; experiments/worker-s03-w01/ |
 
-C04-W01 completed at worker head 566a0a3ab2b35dd06e751a3f3f98126edfa7bdb1. Lead reviewed all four files, confirmed scope via compare, and reproduced all numeric outputs at displayed precision. Exact files integrated on main; see research/workers/C04-W01/LEAD-REVIEW.md. Accepted as independent AI audit and ordinary numerical diagnostics, not interval certification or human review. S01 complete at 0930297b8ac71c92e2b5d0358987e55e7789b9ee. S02 lead work and S03-W01 are independent.
+C04-W01 completed at worker head 566a0a3ab2b35dd06e751a3f3f98126edfa7bdb1. Lead reviewed all four files, confirmed scope via compare, and reproduced all numeric outputs at displayed precision. Exact files integrated on main; see research/workers/C04-W01/LEAD-REVIEW.md. Accepted as independent AI audit and ordinary numerical diagnostics, not interval certification or human review. S01 complete at 0930297b8ac71c92e2b5d0358987e55e7789b9ee. S02 complete at 12d5d3883b3725424bbd81c9cde846ddcc4e9a26: predicted c(a)*(a*t-s_n) -> Si((2n-1)pi)/2, with O(c^-1) error in scaled displacement. First two coefficients 0.9259685259912330851805267 and 0.8373808994899806329742194. See research/asymptotics/S02-sine-integral-correction.md. S03-W01 handoff fetched on worker/s03-w01 (blob 71e56b3e61e6a6879a0510ed94b45d2b946a46a1), IN_PROGRESS, no numerical results yet. Worker can compare this explicit prediction to independent diagnostics, while lead works on analytical second-order refinement. No duplicated finite arithmetic sweep.
 
 ## S03-W01 work order
 
