@@ -380,3 +380,16 @@ $$
 \gg \gamma^{-19/8}e^{\pi\gamma/4}.
 $$
 This is a fixed-$\gamma$ consequence of K02; it is not uniform as $\gamma\to\infty$. The lower bound alone does not determine whether this scale tends to zero when $\gamma=\gamma(a)$ grows with $a$, because no matching upper bound for $M_a$ or uniform joint kernel estimate is supplied.
+
+
+### Growing-index mixed rows in the commuting model
+
+The regular-node commuting model also gives an exact obstruction to inferring uniform high-index behavior from its fixed-index limits. For the finite cutoff $N$, let $a_{k,N}=-1/(t_kP_N'(t_k))$ for $k\le N$. The construction has $u_N(0)=v_N$ and $u_N(t_k)=e_{+k}$, so its sample-to-origin kernel row satisfies
+$$
+|J_N(t_k,0)|=|a_{k,N}|.
+$$
+For each fixed $k$, $a_{k,N}\to a_k=-1/(t_k\Delta'(t_k))$ as $N\to\infty$, and the regular-node asymptotic proves $|a_k|\to\infty$ as $k\to\infty$. For every $k$, choose an increasing cutoff $N_k\ge k$ large enough that $|a_{k,N_k}-a_k|\le1$; this is possible by the fixed-$k$ convergence. Then
+$$
+|J_{N_k}(t_k,0)|\ge |a_k|-1\longrightarrow\infty.
+$$
+Thus every fixed sample-to-origin row has a finite limit as the cutoff tends to infinity, but a diagonal sequence of growing sample indices has diverging rows. The limit is not uniform over the sample index, even in this exact model with commuting projections and the exact vector resolvent/interpolation identities. This is not a counterexample to the actual local Weil-form kernel. It shows that a growing-index conclusion requires a uniform estimate beyond the fixed-index compact convergence in K02.
