@@ -16,3 +16,7 @@ Axiom reports for both theorems are `[propext, Classical.choice, Quot.sound]`; n
 ## Scope limits
 
 This does not establish that any input radius is valid, that the source radii are symmetric, or that the numerical campaign's interval calculations are outward rounded. It only establishes exact ceiling-division facts for natural numbers and a positive denominator. GR-W01's real weighted row estimate remains a separate abstract lemma.
+
+## Finite row-sum corollary
+
+The module also proves `nat_sum_ceil_div_majorizes`: for any finite index set and positive common denominator `d`, the sum of the original natural numerators is at most `d` times the sum of their natural ceiling quotients. Instantiating the numerators as `radius(i,j) * weight(j)` and `d = weight(i)` yields the exact cleared-denominator statement for a rounded row allowance. This conclusion uses only integer order and distributivity; it does not require a rational-order coercion theorem.
