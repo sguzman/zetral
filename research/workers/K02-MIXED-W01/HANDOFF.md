@@ -21,3 +21,5 @@
 - Stronger synthetic countermodel added: paired nodes with `N_+(T)=T log T/(2 pi)+O(1)` and an even real entire order-one canonical product. Tuned near-collisions force the exact sample interpolation weights to make `M_N -> infinity` and `h_N` weakly escape, while the full commuting-projection resolvent model still has finite fixed-sample mixed limits. This is not zeta: its artificial close pairs and lack of arithmetic/Weil structure are explicit.
 
 - Growth claim made explicit: Jensen's formula and Stieltjes integration by parts show `log M_Delta(r) = Theta(r log r)` from the synthetic `N_+(T)=T log T/(2 pi)+O(1)` law, hence order one and infinite exponential type.
+
+- General lemma added: for any simple signed node product with `sum gamma_n^-2 < infinity`, the commuting resolvent/sample construction has a finite fixed-sample mixed limit. If the canonical-product residue sequence `a_n=-1/(gamma_n Delta'(gamma_n))` is not in `ell^2`, the model also has `M_N -> infinity`, weak escape, and vanishing compressed inverse. Close-pair clustering is one sufficient way to force this condition, not a required mechanism.

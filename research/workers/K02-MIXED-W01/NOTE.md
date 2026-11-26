@@ -201,3 +201,18 @@ Thus \(\log M_\Delta(r)\ge 2c r\log r+O(r)\). For the upper bound, \(|1-z^2/\gam
  =O(r\log r).
 \]
 Consequently \(\log M_\Delta(r)\asymp r\log r\): the canonical product has order one and infinite exponential type. The finite set below the asymptotic counting range changes only lower-order terms.
+
+## Residue-sequence lemma (close pairs are only one mechanism)
+
+The commuting construction does not depend on the paired-node recipe. Let any strictly increasing positive sequence \((\gamma_n)\) satisfy \(\sum_n\gamma_n^{-2}<\infty\), define \(\Delta(z)=\prod_n(1-z^2/\gamma_n^2)\), and assume only that its zeros are simple (automatic for distinct nodes and a convergent canonical product). For each \(N\), set \(P_N(z)=\prod_{n\le N}(1-z^2/\gamma_n^2)\), \(C e_{\pm n}=\pm e_{\pm n}/\gamma_n\), and let \(\Pi_N\) project onto the first \(N\) signed pairs. With
+\[
+ a_{n,N}=-\frac{1}{\gamma_nP_N'(\gamma_n)},\quad
+ (v_N)_{+n}=(v_N)_{-n}=a_{n,N},\quad
+ u_N(z)=P_N(z)(I-z\Pi_NC\Pi_N)^{-1}v_N,
+\]
+all poles are removable and \(u_N(\pm\gamma_n)=e_{\pm n}\) for \(n\le N\). For every fixed \(n\), \(a_{n,N}\to a_n=-1/(\gamma_n\Delta'(\gamma_n))\). Therefore, for fixed \(k\) and real \(z\notin\Gamma\),
+\[
+ \langle u_N(z),e_k\rangle\longrightarrow
+ -\frac{\Delta(z)}{\gamma_k\Delta'(\gamma_k)(1-z/\gamma_k)},
+\]
+a finite limit, regardless of whether the residue sequence \((a_n)\) is square-summable. If \(\sum_n|a_n|^2=\infty\), then \(M_N=\|v_N\|\to\infty\): for each fixed K, \(\liminf_N M_N^2\ge2\sum_{n\le K}|a_n|^2\), and K is arbitrary. Consequently \(h_N=v_N/M_N\rightharpoonup0\), and compactness of C gives \(\|\Pi_NC\Pi_Nh_N\|\to0\). Thus the exact criterion needed by this model for simultaneous divergent normalization and weak escape is a non-\(\ell^2\) residue sequence; near-collisions are a convenient sufficient way to produce one. This lemma is entirely a diagonal spectral construction and does not impose a Weil-form or arithmetic identity.
