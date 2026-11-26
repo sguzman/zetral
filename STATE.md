@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-26 UTC.
-Active campaign: LXXV — Guarded extension (research/CAMPAIGN-75.md). Current candidate frontier h=2.50; U75-01 complete; U75-02 even trial persisted; next fresh even residuals.
+Active campaign: LXXV — Guarded extension (research/CAMPAIGN-75.md). Current candidate frontier h=2.50; U75-01 complete; U75-02 even trial persisted; even residual blocks complete; next exact aggregation.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -287,3 +287,5 @@ LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8
 - U75-02 residual checkpoint: blocks 002–006 generated and byte-verified, covering modes 1128..6246; commits 54d26dbf199d5f0fd3c33c19832aeb5cae407c95, e95466a99e94e50bd792680b87ae0955fd59a32d, ede332649317bc1a1e3d1205033c045a485f73e3, 862c4816639931cf240152299675b44c5d9793fe, 9c4aab50383882c381b76f1a8f2b7a80394bf1a1. Total 3072/10189 fresh even residual modes; next 6248, block 007. No comparison yet.
 
 - U75-02 residual checkpoint: blocks 007–012 generated and byte-verified, modes 6248..12390; commits 04dddf5cc58b3167e6bcdaad4a13fec94d0bc48a, 435d1545579eaf16a849b2b28b7d79e29558df11, 30e9714b4dba79910830d28a653272d3c22a4883, 4ee746e9abdf4d211926dae1b8d210b32b842854, 5bcbe319635405594e70fdc0ef327f11aadaea69, 58d4e9a5178534d82e27dff085158cf875f6b517. Total 6144/10189 fresh even residual modes, next 12392, block 013. No comparison yet.
+
+- U75-02 all fresh even residual blocks COMPLETE: 013–020 generated and byte-verified, commits c03d0cb8705995036b3be5bcc25d2d5155f65c0d, 943153dae8a0319794676dc1ca151cc68cd00be6, c7100a333113a80e363926368de8bc039b93ba0f, 24a36b62767ccdda069b0711434c0d0b14540481, 884a6783a07a6f5a3774653f36e8a01c2f047ef0, 7dfd6488969ae1167e93b1d54ff89ad1803602cd, 9779894aa73967fe6e6e9ed70eb0f6e42362e960, ef97da83c555054d832a7a90706cb3c662fcdd79. Tool-call limit interrupted first batch after 018; 019 absent on direct lookup, then 019–020 completed. Total 10189/10189 modes, 104..20480 in 20 disjoint blocks (19*512+461). Next exact aggregation, then fraction-free transform and rank-aware replay. No comparison yet.
