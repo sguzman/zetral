@@ -686,3 +686,17 @@ The certified decimal ceilings from the current root isolations are:
 | 24 | `<0.233246` |
 
 The gains decrease as `N` grows, while the exact LDL arithmetic remains fast through `N=24`. Further dimensions remain possible, but a basis with better approximation of the ground state may give more progress per added profile.
+
+## Mass-orthogonal Jacobi basis audit
+
+The monomial profile basis can be replaced by
+
+`h_j(x)=(1-x^2)^(1/4) P_j^(-1/2,1/2)(1-2x^2)`,
+
+where `P_j^(alpha,beta)` is the Jacobi polynomial. With `y=1-x^2`, even-function integration becomes integration against `y^(1/2)(1-y)^(-1/2)dy` on `[0,1]`. Jacobi orthogonality therefore makes the mass Gram matrix diagonal:
+
+`<h_i,h_j>=0` for `i!=j`, and `||h_j||_2^2=pi*m_j`,
+
+where `m_0=1/2` and `m_(j+1)=m_j*((2j+1)/(2j+2))^2`.
+
+The change of basis from `g_j=(1-x^2)^(j+1/4)` is triangular with rational coefficients, so the log-form matrix remains rational up to the common `pi` factor and the generalized Ritz spectrum is unchanged. This may be useful for stable floating-point trial optimization. For the current exact certificate, it has not improved the result: the transformation only changes coordinates of the same rational pencil, while the monomial-basis LDL certificate already works directly through `N=24`. No stronger cap or faster exact certificate is claimed from this basis change.
