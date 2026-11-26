@@ -92,6 +92,19 @@ positive integer allocations as a subset. It is a necessary-condition
 obstruction for the stored bounds, not a result about other trial spaces,
 larger cutoffs, tighter analytic remainders, or the original operator.
 
+The exact integer comparisons also give
+\[
+\frac{7}{20}<\frac{H_{\max}}{P_{\min}}<\frac{9}{25},
+\]
+where (H_{\max}) is the upper bound on (v^T(U-F)v) and (P_{\min}) is the
+unavoidable allocation penalty lower bound. Numerically their ratio is about
+`0.35630259`. If all retained penalty coefficients were uniformly scaled, they
+would have to fall below roughly 35.63% of their current values just to remove
+this obstruction; alternatively the available headroom would need to increase
+by at least a factor of about 2.81. Neither change alone guarantees a positive
+44-dimensional comparison, because omitted corrections and directions still
+need to be handled.
+
 Reproduce this allocation bound with:
 
 ```sh

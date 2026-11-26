@@ -112,6 +112,10 @@ def main():
     unavoidable_penalty_lower = root_floor_sum**2
     gap = unavoidable_penalty_lower - headroom_upper
     assert gap > 0
+    # Exact brackets for the uniform scale at which this necessary obstruction
+    # could disappear. These are rational comparisons, not float assumptions.
+    assert headroom_upper * 20 > unavoidable_penalty_lower * 7  # ratio > 7/20
+    assert headroom_upper * 25 < unavoidable_penalty_lower * 9  # ratio < 9/25
 
     print("weak-direction integer vector:", v)
     print("U quadratic interval:", Uq)
@@ -123,6 +127,8 @@ def main():
     print("sum of integer square-root lower bounds:", root_floor_sum)
     print("unavoidable current-bound penalty lower bound:", unavoidable_penalty_lower)
     print("strict excess over maximum headroom:", gap)
+    print("headroom / unavoidable penalty is strictly between 7/20 and 9/25")
+    print("uniform retained-penalty scale threshold (float diagnostic):", headroom_upper / unavoidable_penalty_lower)
     print("conclusion: every positive real allocation with total budget D leaves v^T L v < 0")
 
 
