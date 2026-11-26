@@ -20,7 +20,14 @@ verification boundaries. Preserve the precision and truncation failures;
 this one finite block does not establish full-form positivity. The next
 priority is B1 analytic extension: derive a uniform tail inequality without
 finite endpoint checks, or rigorously falsify the proposed sign hypothesis.
-on hold until the original-form continuous mapping is independently audited.
+The theta-cardinal rate is now ruled out as a direct shortcut: it is RH-
+conditional, fixed-index, zero-dependent, and concerns a different operator.
+The absolute prime-power coefficient mass is asymptotic to `2 exp(h/2)`, so
+triangle/absolute-mass estimates cannot be uniform. Along `h=2 pi m`, `n=m`,
+the normalized sine component has absolute limit `1/2`; automatic phase
+cancellation fails. See `research/positivity/B1-01-theta-cutoff-scope.md`.
+Next derive a uniform endpoint-main-term/error expansion for all relevant
+`alpha=n*pi/h` and propagate it through the square and rank allocation.
 
 ### B1 — Analytical extension beyond finite cutoffs
 
@@ -33,13 +40,21 @@ on hold until the original-form continuous mapping is independently audited.
   LXXV tests `h=2.51`. Read `research/theta-cardinal-bound.md`,
   `research/reconstruction.md`, the current campaign proof assumptions, and
   the accepted endpoint/guard certificates before deriving a tail estimate.
-  LXXVI now audits the independent arithmetic-form mapping first; resume this
-  route after that mapping is either verified or precisely blocked.
+  LXXVI's source-form audit has certified a finite even principal block, but
+  not the full map. A first scope audit established that the theta-cardinal
+  estimate in `research/theta-cardinal-bound.md` cannot directly supply this
+  inequality. Absolute coefficient summation grows like `2 exp(h/2)`, while
+  selected phases remain endpoint-coherent. Continue with a uniform
+  endpoint-main-term/error bound for the growing arithmetic shift family;
+  preserve the full original-form mapping as an explicit dependency.
 - **Design / falsification:** Isolate the exact residual after the finite
   low-mode and prime-power terms. Seek a sign theorem, monotone envelope, or
   summable majorant uniform in the endpoint. Test the proposed bound against
   exact rational interval evaluations at all existing frontier and adjacent
-  failing grids; actively search for sign changes in the omitted tail.
+  failing grids; actively search for sign changes in the omitted tail. First
+  quantify how the shift count and constants change when h crosses each
+  prime-power threshold; do not reuse an eight-shift bound outside its proven
+  regime.
 - **Information gain:** A valid uniform tail result changes the finite
   certificate ladder into an analytic statement; a counterexample localizes
   the obstruction and rules out that generalization.
