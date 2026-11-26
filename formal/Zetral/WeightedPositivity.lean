@@ -109,8 +109,75 @@ theorem nat_rounded_row_dominance_psd {α : Type*} [Field α]
     exact le_trans (real_row_allowance_le_nat_rounded radius weight i hweight)
       (hdiag i)
 
+/-- Quantitative weighted diagonal dominance gives a uniform quadratic-form
+lower bound. A common excess `gap` above each row allowance is a spectral
+coercivity constant. -/
+theorem weighted_row_dominance_gap {α : Type*} [Field α] [LinearOrder α]
+    [IsStrictOrderedRing α]
+    (error radius : ι → ι → α) (diagonal weight x : ι → α) (gap : α)
+    (hsymm : ∀ i j, radius i j = radius j i)
+    (hradius : ∀ i j, 0 ≤ radius i j)
+    (hweight : ∀ i, 0 < weight i)
+    (herror : ∀ i j, |error i j| ≤ radius i j)
+    (hdiag : ∀ i, rowAllowance radius weight i + gap ≤ diagonal i) :
+    gap * (∑ i : ι, x i ^ 2) ≤
+      (∑ i : ι, diagonal i * x i ^ 2) +
+        (∑ i : ι, ∑ j : ι, error i j * x i * x j) := by
+  have hrows :
+      (∑ i : ι, (rowAllowance radius weight i + gap) * x i ^ 2) ≤
+        ∑ i : ι, diagonal i * x i ^ 2 := by
+    apply Finset.sum_le_sum
+    intro i hi
+    exact mul_le_mul_of_nonneg_right (hdiag i) (sq_nonneg (x i))
+  have hrows_eq :
+      (∑ i : ι, (rowAllowance radius weight i + gap) * x i ^ 2) =
+        (∑ i : ι, rowAllowance radius weight i * x i ^ 2) +
+          gap * (∑ i : ι, x i ^ 2) := by
+    calc
+      (∑ i : ι, (rowAllowance radius weight i + gap) * x i ^ 2) =
+          (∑ i : ι, rowAllowance radius weight i * x i ^ 2) +
+            ∑ i : ι, gap * x i ^ 2 := by
+              simp only [add_mul, Finset.sum_add_distrib]
+      _ = (∑ i : ι, rowAllowance radius weight i * x i ^ 2) +
+            gap * (∑ i : ι, x i ^ 2) := by rw [← Finset.mul_sum]
+  have herr := symmetric_entry_error_row_bound error radius weight x
+    hsymm hradius hweight herror
+  rw [hrows_eq] at hrows
+  linarith
+
+/-- Quantitative integer-radius version: a common margin between each
+integer upward-rounded row and the diagonal lower bound is a certified
+quadratic-form lower bound. -/
+theorem nat_rounded_row_dominance_gap {α : Type*} [Field α]
+    [LinearOrder α] [IsStrictOrderedRing α]
+    (error : ι → ι → α) (radius : ι → ι → ℕ) (weight : ι → ℕ)
+    (diagonal x : ι → α) (gap : α)
+    (hsymm : ∀ i j, radius i j = radius j i)
+    (hweight : ∀ i, 0 < weight i)
+    (herror : ∀ i j, |error i j| ≤ (radius i j : α))
+    (hdiag : ∀ i,
+      (natRoundedRowAllowance radius weight i : α) + gap ≤ diagonal i) :
+    gap * (∑ i : ι, x i ^ 2) ≤
+      (∑ i : ι, diagonal i * x i ^ 2) +
+        (∑ i : ι, ∑ j : ι, error i j * x i * x j) := by
+  apply weighted_row_dominance_gap error
+    (fun i j => (radius i j : α)) diagonal (fun i => (weight i : α)) x gap
+  · intro i j
+    exact_mod_cast hsymm i j
+  · intro i j
+    exact_mod_cast Nat.zero_le (radius i j)
+  · intro i
+    exact_mod_cast hweight i
+  · exact herror
+  · intro i
+    have hrow := real_row_allowance_le_nat_rounded (α := α)
+      radius weight i hweight
+    exact le_trans (add_le_add_right hrow gap) (hdiag i)
+
 end Zetral.WeightedRadius
 
 #print axioms Zetral.WeightedRadius.weighted_row_dominance_psd
 #print axioms Zetral.WeightedRadius.real_row_allowance_le_nat_rounded
 #print axioms Zetral.WeightedRadius.nat_rounded_row_dominance_psd
+#print axioms Zetral.WeightedRadius.weighted_row_dominance_gap
+#print axioms Zetral.WeightedRadius.nat_rounded_row_dominance_gap

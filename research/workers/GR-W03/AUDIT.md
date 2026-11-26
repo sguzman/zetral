@@ -23,3 +23,9 @@ This is intentionally stacked on GR-W01 branch `worker/gr-w01-weighted-radius-le
 The module also defines `natRoundedRowAllowance`: for natural radii `r(i,j)` and positive natural weights `d(i)`, its row `i` is `∑ j, ceilDiv(r(i,j) * d(j), d(i))`. `real_row_allowance_le_nat_rounded` proves this rounded integer row dominates the exact real weighted row after embedding the natural data into any linearly ordered field. The end-to-end theorem `nat_rounded_row_dominance_psd` then proves positive semidefiniteness directly from a diagonal lower bound on that integer row sum and real entrywise perturbation bounds by the natural radii.
 
 This formalizes the arithmetic implication from upward-rounded weighted entries to the abstract finite quadratic-form certificate. The association between a particular BigInt/JavaScript implementation and these Nat inputs remains a manual source trace; source input validation, interval generation and campaign numerical claims remain unverified here.
+
+## Quantitative margin
+
+`weighted_row_dominance_gap` strengthens the form estimate: if every diagonal coefficient exceeds its real row allowance by a common `gap`, then `gap * ∑ i, x(i)^2` is bounded by the full quadratic form. `nat_rounded_row_dominance_gap` gives the same conclusion when the diagonal hypotheses are checked against the integer rounded rows.
+
+This is a quadratic-form coercivity bound. To call `gap` a least-eigenvalue lower bound for an actual matrix, that matrix must also be symmetric; symmetry of `error` is not a hypothesis of these form inequalities. For a strictly positive gap, the stated inequality is positive for every nonzero vector.
