@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-26 UTC.
-Active campaign: LXXIV — Guarded extension (research/CAMPAIGN-74.md). Current candidate frontier h=2.49; U74-01 complete; next U74-02 fresh even trial and residuals.
+Active campaign: LXXIV — Guarded extension (research/CAMPAIGN-74.md). Current candidate frontier h=2.49; U74-01 complete; U74-02 even trial and residual aggregate complete; next exact comparison.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -263,3 +263,6 @@ LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8
 
 
 - LXXIV U74-01 COMPLETE: [witness/guard source](https://github.com/sguzman/zetral/blob/74dc2a9e1dcefc998e9dd5f3094bec47a5de38eb/experiments/u74-witness-guard.js), guard result 3419fe55d4d4d5c022adab4728b92a4e5b969832. Rational endpoint 49/4, bound 2995/1000, step 16, 40780 cells, 787122 serialized characters across three byte-verified parts af8bedaf7bb78ae0c7f1b42cf09a22e07304069d, 0f01f132931e0762648aa5da878f22e69b1455d9, 1fdea0f39026cc07407d0a23db1bd77b32e6b2d4. Positive endpoint slacks, log(49/4)-2.50 >0.00552593699; first common positive tested low support 50. Next U74-02: fresh even trial h=5/2, J128/KEM20/T1024/M20480/lowCount50, then new finite residuals. Candidate frontier stays 2.49. No independent original-form verification, CI, standalone CLI, formal/human review, RH or originality claim.
+
+
+- U74-02 IN_PROGRESS: fresh even T1024/M20480/J128/KEM20/lowCount50 trial at h=5/2, 463 complement directions, 50/50 positive lower energy diagonals. [Staged generator](https://github.com/sguzman/zetral/commit/bf534e8e772628aec6a3fb282b265847b4632bcb); trial serialized 1946115 characters in five byte-verified parts, commits 7ea1303debf7b60e32134bdb6883ba3dc95a1992, e2efdedb458198b64f0784d648b5838ac1015f06, a41610be63816a60be99df30606d38c5476b2974, 5a0a1fe8c4c2b20a82d7031154f9098bdea9d96c, b4f3d46a6f91823bdd54d28bfafe2abe9ef9f8d1. All 20 disjoint even residual blocks 100..20480 (19x512+463 modes), each generated and byte-verified, 10191 modes total. Half aggregates d056fdcf1e1900c5d709a01ac8265a36ec980f52 and 8e6d9ebc9757afdf1f99179e3e25222e8d708cf0, full aggregate 814ad4431d540e5e3a8bd5ab328fcc08076e25b1 (blob 7d0789e9b71eed8d141d153bdd235018f55ebd21), exact coverage and addition, all byte-verified. Combined half-audit call hit tool-call limit; second half completed separately. Next adapt assembly, fraction-free integer transform, rank-aware interval tightening and exact replay to n=50 and h=5/2; no residual regeneration necessary. Candidate frontier remains 2.49. No exact positivity claim at 2.50, CI, original-form independent verification or formal/human review.
