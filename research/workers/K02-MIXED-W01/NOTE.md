@@ -741,3 +741,23 @@ Consequently \(D_a(G)\le\sqrt{S_a(G)}\le G\varepsilon_a\), where \(\varepsilon_a
 \le C_K\bigl(G_a^2\varepsilon_a+G_ad_a\bigr).
 \]
 Thus any prescribed range satisfying \(G_a^2\varepsilon_a+G_ad_a\to0\) has uniform normalized mixed-kernel decay. Since \(\varepsilon_a,d_a\to0\), some unquantified \(G_a\to\infty\) satisfies this criterion. This does not give a numerical growth rate without quantitative bounds on \(\varepsilon_a\) and \(d_a\).
+
+
+### Mean-square row criterion from the Hilbert–Schmidt bound
+
+The pointwise estimate and \(S_a(G)\le G^2\varepsilon_a^2\) give, for \(N(G)>0\),
+\[
+\frac1{N(G)}
+\sum_{\gamma\in\Gamma_G}
+\left(\sup_{z\in K}\frac{|J_a(\gamma,z)|}{M_a}\right)^2
+\le
+2C_K^2G^2\left(\frac{S_a(G)}{N(G)}+d_a^2\right)
+\le
+2C_K^2\left(\frac{G^4\varepsilon_a^2}{N(G)}+G^2d_a^2\right),
+\]
+where \(\varepsilon_a=\|C-B_a\|_{\mathrm{HS}}\). Therefore, if \(G_a\to\infty\) and
+\[
+\frac{G_a^4\varepsilon_a^2}{N(G_a)}\to0,\qquad G_ad_a\to0,
+\]
+the mean-square normalized mixed-kernel row norm tends to zero. Chebyshev's inequality then implies that for every fixed \(\eta>0\), the proportion of ordinates \(\gamma\le G_a\) with
+\(\sup_{z\in K}|J_a(\gamma,z)|/M_a>\eta\) tends to zero. This is a density-one conclusion. If one additionally assumes simplicity, Riemann–von Mangoldt gives \(N(G)\asymp G\log G\), so a sufficient condition is \(G_a^3\varepsilon_a^2/\log G_a\to0\) together with \(G_ad_a\to0\). No simplicity or asymptotic for \(N(G)\) is used in the general statement.

@@ -62,3 +62,5 @@
   A compact sufficient specialization is \(G_ad_a\to0\) and \(G_a^2S_a(G_a)/N(G_a)\to0\); choose \(\tau_a=\eta_a/G_a\) with \(\eta_a\to0\) but larger than the square root of the aggregate-defect ratio.
 
 - Hilbert–Schmidt refinement: using the sample eigenbasis \(Ce_\gamma=\gamma^{-1}e_\gamma\), proved \(S_a(G)\le G^2\|(I-\Pi_a)C\|_{\rm HS}^2\le G^2\|C-B_a\|_{\rm HS}^2\). Hence \(D_a(G)\le G\varepsilon_a\), and the mixed row criterion becomes \(C_K(G_a^2\varepsilon_a+G_ad_a)\). K01 records \(\|C-B_a\|_{\rm HS}\to0\), so an existential window follows; an explicit range still requires quantitative rates.
+
+- Mean-square refinement: averaged the pointwise mixed-row bound and used \(S_a(G)\le G^2\varepsilon_a^2\) to obtain mean square \(\le2C_K^2(G^4\varepsilon_a^2/N(G)+G^2d_a^2)\). If this tends to zero, Chebyshev gives normalized mixed-row decay for a density-one subset of ordinates. Under RH plus simplicity, \(N(G)\asymp G\log G\), yielding the sufficient condition \(G^3\varepsilon_a^2/\log G\to0\) and \(Gd_a\to0\). No estimate for these rates is established.
