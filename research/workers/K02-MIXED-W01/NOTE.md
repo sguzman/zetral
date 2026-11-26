@@ -572,3 +572,21 @@ This follows directly from \(|F^{(k)}(t)|\le\mathcal D_{a,k}(I)\|f\|_q\) and \(\
 \sqrt{\frac{2a^{2k+1}}{(2k+1)\lambda_a}},
 \]
 when \(I\subset\mathbb R\). Thus the intrinsic statement is independent of a named \(\lambda_a\), while estimating its derivative norm remains the unresolved quantitative input.
+
+
+### Kernel identity and fixed-compact derivative scale
+
+For real \(t\), the local evaluation representer is \(u_t\), since \(q(f,u_t)=\widehat f(t)\). Differentiating in \(t\), the Riesz representer of \(E_t^{(k)}\) is \(u_t^{(k)}\). Thus
+\[
+\|E_t^{(k)}\|_{\mathcal H_a^*}^2
+=q(u_t^{(k)},u_t^{(k)})
+=\left.\partial_{\bar w}^{\,k}\partial_z^{\,k}J_a(w,z)\right|_{w=z=t},
+\]
+using K02's convention \(J_a(w,z)=q(u_{\bar w},u_{\bar z})\), with the form inner product linear in its first argument. K02's locally uniform derivative convergence therefore gives, on every fixed compact real interval \(I\),
+\[
+\sup_{t\in I}\left|
+\frac{\|E_t^{(k)}\|_{\mathcal H_a^*}^2}{M_a^2}
+-|\Delta^{(k)}(t)|^2
+\right|\longrightarrow0.
+\]
+In particular, at any fixed simple zero \(\gamma\) of the canonical product, \(\|E_\gamma'\|/M_a\to|\Delta'(\gamma)|>0\). This identifies the fixed-ordinate scale in the intrinsic cluster criterion from the known normalized-kernel limit. It does not give a uniform estimate for \(t=\gamma_a\to\infty\), nor can it be applied to a shrinking pair of sample nodes unless such pairs actually occur in the fixed sample set. Hence it closes the fixed-compact derivative-norm asymptotic, but not the growing-window projection-defect problem.
