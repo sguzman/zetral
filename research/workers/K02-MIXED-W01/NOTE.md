@@ -237,130 +237,91 @@ The computed residues grow strongly with the node index over this range, and the
 
 ## Regular quantiles: residue asymptotic (analytic derivation)
 
-The regular-node diagnostic above admits an analytic asymptotic; artificial close pairs are not needed to make the canonical-product residues large in this abstract model. Define (F(t)=t\log t/(2\pi)) for (t\ge1), and let (t_n=F^{-1}(n)), (n\ge1). Then (N_+(T)=\lfloor F(T)\rfloor= T\log T/(2\pi)+O(1)), and (\sum_n t_n^{-2}<\infty). The product
-
-\[
+Define $F(t)=t\log t/(2\pi)$ for $t\ge1$, and let $t_n=F^{-1}(n)$. Then $N_+(T)=\lfloor F(T)\rfloor=T\log T/(2\pi)+O(1)$ and $\sum_n t_n^{-2}<\infty$. Thus
+$$
 \Delta(z)=\prod_{n\ge1}(1-z^2/t_n^2)
-\]
-
-therefore converges locally uniformly and has simple zeros (\pm t_n). Its positive-node residue magnitude is
-
-\[
+$$
+converges locally uniformly and has simple zeros $\pm t_n$. Its residue magnitude is
+$$
 |a_n|=\left|\frac1{t_n\Delta'(t_n)}\right|
-=\frac12\exp(-S_n),\qquad
-S_n=\sum_{j\ge1,\ j\ne n}\log\left|1-\frac{t_n^2}{t_j^2}\right|.
-\]
+=\frac12e^{-S_n},\quad
+S_n=\sum_{j\ne n}\log|1-t_n^2/t_j^2|.
+$$
 
-Set (c=1/(2\pi)), (g=t_n), (T(u)=F^{-1}(u)), and (Q_g(u)=\log|1-g^2/T(u)^2|), for (u\ge0), (u\ne n). The integral corresponding to this sampled sum is
-
-\[
+Put $c=1/(2\pi)$, $g=t_n$, $T(u)=F^{-1}(u)$, and $Q_g(u)=\log|1-g^2/T(u)^2|$. The corresponding integral is
+$$
 I(g)=\int_0^\infty Q_g(u)\,du
-=cg\int_{1/g}^\infty (\log g+\log x+1)f(x)\,dx,
-\quad f(x)=\log|1-x^{-2}|.
-\]
-
-The two convergent integrals needed here are
-
-\[
-\int_0^\infty f(x)\,dx=0,\qquad
-\int_0^\infty \log x\,f(x)\,dx=-\frac{\pi^2}{2}.
-\]
-
-For the second, split at (1), expand (\log(1-x^2)) and (\log(1-x^{-2})) into their convergent logarithmic series, and use (\int_0^1x^q(-\log x)dx=(q+1)^{-2}). This gives
-\[
-\int_0^1\log x\log(1-x^2)dx=4-2\log2-\frac{\pi^2}{4},\quad
-\int_1^\infty\log x\log(1-x^{-2})dx=-\frac{\pi^2}{4}+2\log2;
-\]
-the remaining term is (-2\int_0^1\log^2x\,dx=-4), yielding (-\pi^2/2). The first integral follows by the same split, or direct integration. Since (f(x)=-2\log x+O(x^2)) as (x\downarrow0), replacing lower limit (1/g) by zero contributes (O((\log g)^2)) after multiplication by (cg). Thus
-
-\[
+=cg\int_{1/g}^\infty(\log g+\log x+1)f(x)\,dx,\quad
+f(x)=\log|1-x^{-2}|.
+$$
+Direct integration gives $\int_0^\infty f(x)\,dx=0$. Splitting the logarithmic moment at $1$ and expanding the logarithms into series gives
+$$
+\int_0^1\log x\log(1-x^2)\,dx=4-2\log2-\frac{\pi^2}{4},
+\quad
+\int_1^\infty\log x\log(1-x^{-2})\,dx=-\frac{\pi^2}{4}+2\log2.
+$$
+The remaining term is $-2\int_0^1\log^2x\,dx=-4$, so $\int_0^\infty\log x\,f(x)\,dx=-\pi^2/2$. Since $f(x)=-2\log x+O(x^2)$ near zero, extending the lower limit to zero costs $O((\log g)^2)$ after multiplication by $cg$. Therefore
+$$
 I(g)=-\frac{\pi g}{4}+O((\log g)^2).
-\]
+$$
 
-For completeness, the sum-integral error is (S_n-I(g)=O(\log g)). The function (Q_g) is monotone decreasing on ([0,n)) and increasing on ((n,\infty)). Compare (Q_g(j)) with its integral on the unit cell ([j-1/2,j+1/2]), omitting the singular sample (j=n). Outside the central cell, the total variation is (O(\log g)): (Q_g(0)=2\log g+O(1)), while (Q_g(n\pm1/2)=-\log n+O(1)), using (gF'(g)=n(1+1/\log g)). The omitted initial half-cell has integral (O(\log g)). On the central cell, Taylor expansion of (F^{-1}) at (n) gives (Q_g(n+s)=\log|s|-\log n+O(1)), uniformly for (0<|s|\le1/2), so its integral is (O(\log n)=O(\log g)). The bounded-variation rectangle estimate on all other cells then gives the stated error. Combining estimates,
-
-\[
+The sum-integral error is $S_n-I(g)=O(\log g)$. The function $Q_g$ decreases on $[0,n)$ and increases on $(n,\infty)$. Compare the sample $Q_g(j)$ with its integral over the unit cell $[j-1/2,j+1/2]$, omitting the singular sample $j=n$. Outside the central cell, total variation is $O(\log g)$: $Q_g(0)=2\log g+O(1)$ and $Q_g(n\pm1/2)=-\log n+O(1)$, since $gF'(g)=n(1+1/\log g)$. The omitted initial half-cell has integral $O(\log g)$. Taylor expansion of $F^{-1}$ at $n$ gives $Q_g(n+s)=\log|s|-\log n+O(1)$ for $0<|s|\le1/2$, so the central-cell integral is also $O(\log g)$. Bounded-variation rectangle estimates on the remaining cells yield the claimed error. Hence
+$$
 \boxed{\log|a_n|=\frac{\pi t_n}{4}+O((\log t_n)^2).}
-\]
-
-This implies (|a_n|\to\infty), hence ((a_n)\notin\ell^2). In the existing commuting-projection construction, the general residue-sequence lemma therefore gives (M_N\to\infty), weak escape, and \(\|B_Nh_N\|\to0\), while each fixed-sample mixed kernel still has a finite limit. This is an exact analytic statement about the regular canonical product and its abstract diagonal realization. It is not an arithmetic construction, a Weil-form model, or a statement about zeta ordinates.
-
-The derivation uses elementary monotone quadrature and integral estimates; it has not been formalized or independently reviewed. The computer table above remains only a diagnostic corroboration, not a premise in the proof.
+$$
+In particular $|a_n|\to\infty$, so $(a_n)\notin\ell^2$. The commuting-projection construction already given then has $M_N\to\infty$, weak escape, and $\|B_Nh_N\|\to0$, while each fixed-sample mixed kernel has a finite limit. This is an analytic canonical-product model, not a Weil-form or zeta construction. The computer table above is diagnostic corroboration only; the proof does not use it. The derivation is not formalized or independently reviewed.
 
 ### Smooth counting laws with a linear term
 
-The same proof applies to the exact quantiles of (F_{c,d,b}(t)=c,t\log t+d,t+b), where (c>0), on any half-line (t\ge t_0) on which (F'>0), with (b) chosen so (F(t_0)=0). Define (t_n=F^{-1}(n)) and the corresponding genus-zero product. In the density integral the scaled weight becomes
-
-\[
-cg\int_{t_0/g}^\infty (\log g+\log x+1+d/c)f(x)\,dx.
-\]
-
-The constant (1+d/c) multiplies (\int_0^\infty f(x)dx=0), just like (\log g). The logarithmic moment remains (-\pi^2/2); the omitted lower tail is (O((\log g)^2)), and the same monotone cell comparison gives (O(\log g)) sum-integral error. Therefore
-
-\[
-\log\left|\frac1{t_n\Delta'(t_n)}\right|=\frac{c\pi^2}{2}t_n+O((\log t_n)^2).
-\]
-
-For (c=1/(2\pi)), this is again (\pi t_n/4+O((\log t_n)^2)), independent of (d). The smooth Riemann–von Mangoldt main term has precisely this form, with (d=-(1+\log(2\pi))/(2\pi)). This robustness statement concerns exact smooth quantiles only. An (O(\log T)) counting discrepancy does not automatically transfer the residue asymptotic to actual zeros: controlling the discrete logarithmic potential under perturbations, especially near arbitrarily small gaps, remains open here.
+The same calculation applies to exact quantiles of
+$$
+F_{c,d,b}(t)=c\,t\log t+d\,t+b,\qquad c>0,
+$$
+on a half-line where $F'>0$, with $F(t_0)=0$. In the density integral, the scaled weight is $cg(\log g+\log x+1+d/c)$. The constant and $\log g$ terms vanish because $\int_0^\infty f(x)\,dx=0$, leaving the logarithmic moment $-\pi^2/2$. The lower-tail and quadrature errors remain $O((\log g)^2)$ and $O(\log g)$ respectively. Therefore
+$$
+\log\left|\frac1{t_n\Delta'(t_n)}\right|
+=\frac{c\pi^2}{2}t_n+O((\log t_n)^2).
+$$
+For $c=1/(2\pi)$ this is $\pi t_n/4+O((\log t_n)^2)$, independent of $d$. The smooth Riemann–von Mangoldt main term has this form, with $d=-(1+\log(2\pi))/(2\pi)$. This concerns exact smooth quantiles; an $O(\log T)$ counting discrepancy alone does not transfer the result to actual zeros.
 
 ## Stability under bounded node displacements; conditional zeta application
 
-The exponential lower growth does not require the perturbed nodes to have regular small gaps. Let (F(t)=c,t\log t+d,t), (c>0), and (t_n=F^{-1}(n)) for all sufficiently large (n). Suppose a strictly increasing positive sequence satisfies
+Let $F(t)=c\,t\log t+d\,t+b$, $c>0$, and $t_n=F^{-1}(n)$ for large $n$. Suppose a strictly increasing positive sequence has $\gamma_n=t_n+O(1)$. Put $g=\gamma_n$, $q_g(t)=\log|1-g^2/t^2|$, and
+$$
+S_n^\gamma=\sum_{j\ne n}q_g(\gamma_j).
+$$
+Choose a fixed sufficiently large $L$ and split at $|j-n|\le L\log g$. In this local block, $|t_j-t_n|=O(1)$ and hence $|\gamma_j-g|=O(1)$. Thus $0<|1-g^2/\gamma_j^2|<1$ for large $g$, so every local logarithm is nonpositive. This remains true for arbitrarily small positive gaps.
 
-\[
-\gamma_n=t_n+O(1).
-\]
+For the far indices compare $q_g(\gamma_j)$ with $q_{t_n}(t_j)$. The interpolation path stays away from the singular diagonal when $L$ is large, and
+$$
+|\partial_xq_x(y)|=\frac{2x}{|y^2-x^2|},\qquad
+|\partial_yq_x(y)|=\frac{2x^2}{|y(y^2-x^2)|}.
+$$
+Bounded displacements change the far sum by $O((\log g)^2)$. Indeed, for $j<n/2$ the derivative sums are bounded by $\sum O(1/t_j)$; for $n/2\le j\le2n$ they are bounded by $\sum_{|j-n|>L\log g}O((\log g)/|j-n|)$; for $j>2n$ they are bounded by $\sum O(g/t_j^2+g^2/t_j^3)$. Each is $O((\log g)^2)$ since $t_j\asymp j/\log j$.
 
-Set (g=\gamma_n) and (q_g(t)=\log|1-g^2/t^2|). Split the logarithmic derivative sum
-
-\[
-S_n^\gamma=\sum_{j\ne n}q_g(\gamma_j)
-\]
-
-at (L\log g) indices from (n), with fixed (L) sufficiently large in terms of the uniform displacement bound. If (0<|j-n|\le L\log g), inverse-function differentiation gives (|t_j-t_n|=O(1)), and hence (|\gamma_j-g|=O(1)). For large (g), every such local factor has (0<|1-g^2/\gamma_j^2|<1), so its logarithm is nonpositive. These local terms may be discarded for an upper bound on (S_n^\gamma), even if some of the gaps are extremely small.
-
-For the complementary indices, compare (q_g(\gamma_j)) with (q_{t_n}(t_j)). The interpolation path between ((t_n,t_j)) and ((g,\gamma_j)) stays away from the singular diagonal when (L) is chosen large. The partial derivatives
-
-\[
-|\partial_x q_x(y)|=\frac{2x}{|y^2-x^2|},\qquad
-|\partial_y q_x(y)|=\frac{2x^2}{|y(y^2-x^2)|}
-\]
-
-and the bounded displacement show that the total far-sum change is (O((\log g)^2)): for (j<n/2), sum (O(1/t_j)); for (n/2\le j\le2n), sum (O((\log g)/|j-n|)) over (|j-n|>L\log g); for (j>2n), sum (O(g/t_j^2+g^2/t_j^3)). Each displayed sum is (O((\log g)^2)) using (t_j\asymp j/\log j).
-
-The removed baseline block is itself (O((\log g)^2)) in absolute value: uniformly for (1\le|j-n|\le L\log g),
-
-\[
-q_{t_n}(t_j)=\log(|j-n|/n)+O(1),
-\]
-
-whose sum over (O(\log g)) indices is (O((\log g)^2)). The exact-quantile asymptotic above therefore gives
-
-\[
-S_n^\gamma\le -\frac{c\pi^2}{2}t_n+O((\log g)^2)
+The removed baseline block also has total absolute value $O((\log g)^2)$: uniformly for $1\le|j-n|\le L\log g$,
+$$
+q_{t_n}(t_j)=\log(|j-n|/n)+O(1).
+$$
+Using the smooth-quantile asymptotic above and discarding the nonpositive actual local terms gives
+$$
+S_n^\gamma\le-\frac{c\pi^2}{2}t_n+O((\log g)^2)
 =-\frac{c\pi^2}{2}g+O((\log g)^2).
-\]
-
-Consequently, for the simple-node product (\Delta_\gamma(z)=\prod_j(1-z^2/\gamma_j^2)),
-
-\[
+$$
+Consequently, for $\Delta_\gamma(z)=\prod_j(1-z^2/\gamma_j^2)$,
+$$
 \boxed{\log\left|\frac1{\gamma_n\Delta_\gamma'(\gamma_n)}\right|
-\ge \frac{c\pi^2}{2}\gamma_n-O((\log\gamma_n)^2).}
-\]
+\ge\frac{c\pi^2}{2}\gamma_n-O((\log\gamma_n)^2).}
+$$
+Thus bounded displacement, without any positive lower bound on neighboring gaps, forces these residues to diverge and prevents square summability. This is a one-sided estimate; close pairs can make residues larger.
 
-Thus bounded displacement alone, with no positive lower bound on neighboring gaps, implies that these residues are not square-summable (indeed their magnitudes tend to infinity). The estimate is one-sided: arbitrarily close pairs can make residues still larger, so no matching upper bound is claimed.
-
-Under RH and the additional assumption that all nontrivial zeros are simple, the Riemann–von Mangoldt formula for the positive ordinates gives
-
-\[
+Under RH and simplicity of all nontrivial zeros, the Riemann–von Mangoldt formula for their positive ordinates is
+$$
 N(T)=\frac{T}{2\pi}\log T-\frac{1+\log(2\pi)}{2\pi}T+O(\log T).
-\]
-
-Writing (t_n) for the quantiles of the two displayed main terms, (N(\gamma_n)=n) and the mean-value theorem imply \(\gamma_n=t_n+O(1)\), since (F'(T)\asymp\log T\). Taking (c=1/(2\pi)) in the one-sided estimate yields, conditionally on RH and simplicity,
-
-\[
+$$
+Since $N(\gamma_n)=n$ and $F'(T)\asymp\log T$, the mean-value theorem gives $\gamma_n=t_n+O(1)$ for the quantiles of the displayed main terms. With $c=1/(2\pi)$, the bound becomes
+$$
 \log\left|\frac1{\gamma_n\Delta_\Gamma'(\gamma_n)}\right|
-\ge \frac{\pi}{4}\gamma_n-O((\log\gamma_n)^2),
-\]
-
-so the canonical-product residue sequence for the distinct zeta ordinates is not in \(\ell^2\). This is a conditional consequence of RH plus simplicity and the classical zero-counting formula. It is not a proof of either hypothesis and does not identify the commuting toy operator with the local Weil-form operator; no Hilbert–Pólya conclusion follows from it alone. The bounded-displacement estimates are analytic deductions in this note, not machine-checked or independently reviewed.
+\ge\frac{\pi}{4}\gamma_n-O((\log\gamma_n)^2).
+$$
+So, conditionally on RH plus simplicity, the canonical-product residue sequence for the distinct zeta ordinates is not in $\ell^2$. This does not prove either hypothesis or identify the commuting toy operator with the local Weil-form operator. The bounded-displacement proof is analytic but has not been machine-checked or independently reviewed.
