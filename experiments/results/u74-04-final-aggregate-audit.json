@@ -1,0 +1,18 @@
+[
+  {
+    "parity": "even",
+    "count": 10191,
+    "chunks": 2,
+    "matchedEndpoints": 5000,
+    "start": 100,
+    "end": 20480
+  },
+  {
+    "parity": "odd",
+    "count": 10190,
+    "chunks": 2,
+    "matchedEndpoints": 5000,
+    "start": 101,
+    "end": 20479
+  }
+]
