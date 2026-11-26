@@ -257,6 +257,7 @@ function bernoulliNumbers(nmax) {
 }
 const bernoulli=bernoulliNumbers(160);
 const emX=rat(517n,4n); // 129.25
+const emDebug=[];
 function hurwitzZetaInterval(s) {
   let total=ZERO;
   for(let n=0;n<128;n++) {
@@ -270,7 +271,9 @@ function hurwitzZetaInterval(s) {
     const rising=fracInterval(risingFactorial(BigInt(s),2*m-1));
     const coefficient=fracInterval(fdiv(bernoulli[2*m],frac(factorial(2*m))));
     const xpower=divI(ONE,powI(emX,s+2*m-1));
-    tail=add(tail,mul(mul(coefficient,rising),xpower));
+    const emTerm=mul(mul(coefficient,rising),xpower);
+    if(s===2 && [1,2,40,79,80].includes(m)) emDebug.push({m,coefficient:coefficient.map(decimal),rising:rising.map(decimal),xpower:xpower.map(decimal),term:emTerm.map(decimal)});
+    tail=add(tail,emTerm);
   }
   const r=160;
   const risingBound=fracInterval(risingFactorial(BigInt(s),r-1));
@@ -352,6 +355,7 @@ result.status="outward-rounded fixed-point interval evaluation of independent G0
 result.parameters.oddIntegrationByParts=Nodd; result.parameters.hurwitzTailTerms=80; result.parameters.hurwitzPrefix=128; result.parameters.exponentialEndpointTerms=39;
 result.intervals.oddArchimedean=archOdd.map(decimal); result.intervals.oddPrimeTerm=oddPrime.map(decimal); result.intervals.oddSubtractedKernel=oddKernel.map(decimal); result.intervals.oddFullEntry=oddEntry.map(decimal); result.intervals.oddCompressedSharedInterval=oddCompressed.map(decimal); result.intervals.oddTailBound= remainderBound.map(decimal);
 result.intervals.zeta2=zeta.get(2).map(decimal); result.intervals.zeta221=zeta.get(221).map(decimal); result.intervals.endpointZero=endpointZero.map(decimal); result.intervals.endpointH=endpointH.map(decimal); result.intervals.E1=E.get(1).map(decimal); result.intervals.E220=E.get(220).map(decimal);
+result.debugHurwitzS2=emDebug;
 result.oddIntervalOverlapsSharedCompressedInterval=oddEntry[0]<=oddCompressed[1]&&oddCompressed[0]<=oddEntry[1];
 result.oddDirectIntervalContainedInSharedCompressedInterval=oddEntry[0]>=oddCompressed[0]&&oddEntry[1]<=oddCompressed[1];
 result.oddContainmentMargins=[decimal(oddEntry[0]-oddCompressed[0]),decimal(oddCompressed[1]-oddEntry[1])];
