@@ -26,3 +26,7 @@ This checks the stored transformed interval result and grid arithmetic only. It 
 ## Recommendation
 
 Keep U71-03 open. Use the failing exact pivot and scan results to guide a new odd-sector congruence or energy allocation. Re-run the independent exact grid audit on any proposed positive-margin candidate before U71-04 can support campaign closure.
+
+## Coordination update
+
+Main advanced to `f4a293f9af98465642a8b62d92c992cb8e00ebbf` during the audit and is adding U71-03 odd artifacts. The U71-03 data branch referenced above has a divergent file at the same path as main's `trial-part1.txt`; its handoff now records the collision. Keep the worker branch separate and reconcile/rename artifacts before any integration. This audit handoff itself adds a unique path.
