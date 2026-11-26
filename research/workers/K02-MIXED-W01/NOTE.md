@@ -775,3 +775,29 @@ Consequently, for any \(0<\theta<1\), the number of disjoint pairs in \(\Gamma_G
 \frac{4S_a(G)}{(1-\theta)^2}.
 \]
 Thus an aggregate trace-defect estimate tending to \(o(N(G))\) rules out a positive proportion of disjoint pairs at the corresponding \(K_a^{-1}\) scale. This is a conditional connection: the coercivity-dependent scale \(K_a\) is not quantitatively known here, and no zeta close-pair count at that scale is asserted.
+
+
+### Error-adaptive explicit choice of the normalized window
+
+The Hilbert–Schmidt criterion gives a direct choice once \(\varepsilon_a=\|C-B_a\|_{\mathrm{HS}}\) and \(d_a\) are known. Set
+\[
+\widetilde\varepsilon_a=\varepsilon_a+a^{-6},\qquad
+\widetilde d_a=d_a+a^{-4},\qquad
+G_a=\max\!\left(1,\left\lfloor
+\min\{a,\widetilde\varepsilon_a^{-1/3},\widetilde d_a^{-1/2}\}
+\right\rfloor\right).
+\]
+Because \(\varepsilon_a,d_a\to0\), all three entries in the minimum tend to infinity, so \(G_a\to\infty\). Moreover
+\[
+G_a^2\varepsilon_a\le \widetilde\varepsilon_a^{1/3}\to0,
+\qquad
+G_ad_a\le \widetilde d_a^{1/2}\to0.
+\]
+Substitution into the previous estimate yields the explicit error-adaptive bound
+\[
+\sup_{\substack{\gamma\in\Gamma\\0<\gamma\le G_a}}\sup_{z\in K}
+\frac{|J_a(\gamma,z)|}{M_a}
+\le C_K\left(\widetilde\varepsilon_a^{1/3}
++\widetilde d_a^{1/2}\right)\longrightarrow0.
+\]
+This is an explicit window as a function of the two exact operator errors, rather than an abstract threshold diagonal. It still does not give a rate in \(a\) alone unless quantitative estimates for \(\varepsilon_a\) and \(d_a\) are supplied.
