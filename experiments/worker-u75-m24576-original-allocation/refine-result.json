@@ -1,0 +1,1590 @@
+{
+  "storedAllocationPositiveMinors": 41,
+  "heuristic": "Trace-based positive-share allocation scans plus a rank/diagonal exponent grid. Exact Bareiss leading-minor signs are computed for every candidate; Number Cholesky is diagnostic only.",
+  "scan": [
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.0418097114753343e-05
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.0418097114753343e-05
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -2.336127128689969e-05
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -3.8745099661498674e-05
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00010161564095075078
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00012888724545573367
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00014653329540454917
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00014653329540454917
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00014653329540454917
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00022328606307860666
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00022328606307860666
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00028056148746414725
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0006388710744028787
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0006537561968895229
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0006537561968895229
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0006537654464977991
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0009926812509791802
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0009985080745936298
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00209218607898222
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.002289049664715022
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.004924259189063385
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0062584077496267805
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0062584077496267805
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.006354844010894245
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007080787603357923
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007468054792475784
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007468054792475784
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007468054792475784
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.009743280069292846
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.009945388469208673
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.01071478974322923
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.01380824716254857
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.016135727167457477
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.019678535099482638
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.021878545572497236
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.021878545572497236
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.03487404997204961
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.039625196828775196
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.05699457782237989
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.05699457782237989
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.07038764886671037
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.11691955756326783
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.11691955774000927
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.3425833721326781
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7367127874112036
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7367127874112036
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7596902222694784
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7596902222694784
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7596902222694784
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7723488196637672
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.8633148556087029
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9029561161234478
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9029561161234478
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9029561161234478
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9761902010321877
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.0122672059329862
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.1559943045172272
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.1559943045172272
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.217966434517582
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.217966434517582
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.3958248682636105
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.4193287442411147
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.4193287442411147
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.5921451967838611
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.8848160946444024
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.8848160946444024
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.8848160946444024
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -1.992625165628351
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -2.314328215057418
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -2.3152782162685157
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -3.2804547266438893
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -3.591464412141705
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -6.397523808714995
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -34.1355409819736
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -41.678968378446505
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -180.38790739048886
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 50,
+      "approximatePass": false,
+      "approximateMinPivot": -180.38790739048886
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -1.0418097114753343e-05
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00010161564095075078
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00012888724545573367
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00014653329540454917
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00022328606307860666
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0006388710744028787
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0006537561968895229
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.001728230620147599
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.002289049664715022
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0062584077496267805
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007080787603357923
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007468054792475784
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.009945388469208673
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.01071478974322923
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.01380824716254857
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.021878545572497236
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.052185447161224294
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.05699457782237989
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.11691955774000927
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7367127874112036
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7596902222694784
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.8633148556087029
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9029561161234478
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9761902010321877
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -1.1559943045172272
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -1.217966434517582
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.75,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -1.45098768982843
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -1.5921451967838611
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -1.6876420145632767
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.6,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -1.8848160946444024
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -1.992625165628351
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -2.314328215057418
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -3.591464412141705
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -41.678968378446505
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 49,
+      "approximatePass": false,
+      "approximateMinPivot": -180.38790739048886
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -1.0418097114753343e-05
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00010161564095075078
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00010161564095075078
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00012888724545573367
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00012888724545573367
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0006388710744028787
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007080787603357923
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.009945388469208673
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.01071478974322923
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.013773613297409091
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.013773613297409091
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.01380824716254857
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.01380824716254857
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.021878545572497236
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.05699457782237989
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.07038764886671037
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.8633148556087029
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9761902010321877
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9761902010321877
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -1.5921451967838611
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -1.5921451967838611
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -1.6876420145632767
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.15,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -1.6876420145632767
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.3,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -1.992625165628351
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -2.3152782162685157
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -3.591464412141705
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -41.678968378446505
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.45,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 48,
+      "approximatePass": false,
+      "approximateMinPivot": -180.38790739048886
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.24823351505448152
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.26442057014314807
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.26442057014314807
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.27890047936682755
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.3,
+      "diagonalExponent": 0,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.28488965847481024
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.30510213913102546
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.3052910562443149
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.35,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.3052910562443149
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.3128657794802138
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.31286578264651976
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.31971173991185264
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.275,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.31971173991185264
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.35026338574655275
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.35026338574655275
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.3629102334113495
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.25,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.3725619943932313
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.5706503832808456
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.5706503832808456
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.5706503832808456
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.225,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.5706503832808456
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -1.6653580350135555
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -1.6653580350135555
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -1.6653580350135555
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.2,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -1.6653580350135555
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.025,
+      "positiveMinors": 11,
+      "approximatePass": false,
+      "approximateMinPivot": -0.12072465256727863
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.05,
+      "positiveMinors": 11,
+      "approximatePass": false,
+      "approximateMinPivot": -0.12072465256727863
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0.075,
+      "positiveMinors": 11,
+      "approximatePass": false,
+      "approximateMinPivot": -0.12072465256727863
+    },
+    {
+      "family": "fine-exponent-grid",
+      "eighthMass": 0.9,
+      "rankExponent": 0.15,
+      "diagonalExponent": 0,
+      "positiveMinors": 11,
+      "approximatePass": false,
+      "approximateMinPivot": -0.12072672217285244
+    }
+  ],
+  "selectedMass": 0.3,
+  "selectedAllocation": [
+    "655879723298",
+    "34705276689",
+    "8057340971",
+    "1000846439",
+    "303254849",
+    "40172642",
+    "13385113",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230770",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769",
+    "5769230769"
+  ],
+  "exactReplay": {
+    "positiveMinors": 50,
+    "failedPivotSign": "negative",
+    "marginNumerator": null,
+    "marginDenominator": "1000000",
+    "nextGridFails": null,
+    "baselineEntries": 2704,
+    "baselineRadii": 52
+  },
+  "scope": "Exact finite grid search over explicit positive share families. Coarse grid: 213 candidates; fine grid: 168 candidates. No allocation-independent or global-optimality claim."
+}
