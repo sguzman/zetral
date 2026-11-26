@@ -69,6 +69,18 @@ These formulas expose parity and factor-of-two errors independently of the
 compressed representation. They do not yet identify LXXV's every-other-
 frequency ks arrays with these bases or match the common entry scaling.
 
+For direct checks of the first diagonal entries, the correlation simplifies:
+
+    S_00(t) = 2(1-t/L)
+    S_11(t) = 2(1-t/L) cos(2 pi t/L)
+    S_1,-1(t) = -sin(2 pi t/L)/pi.
+
+Consequently, the normalized constant even entry is G_00, and the first
+normalized odd diagonal is G_11-G_1,-1. These are explicit one-dimensional
+arithmetic-form evaluations using the displayed integral and finite prime-
+power sum. They provide the first numerical targets, but they have not yet
+been evaluated or matched to the production entries.
+
 ## Disposition
 
 The direct tail and parity polarization agree symbolically with the prior
