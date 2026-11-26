@@ -100,3 +100,11 @@
 - Acceptance: an explicit bump choice, simple-gap counting bound, multiplicity handling, exact RH/source assumptions, and resulting necessary condition on (a/\log T); otherwise document the precise gap.
 - Stop condition: stop if Montgomery's simple-zero proportion does not control the needed row energies without an additional hypothesis.
 - K02-MP04 COMPLETE: under RH, Montgomery Corollary 2 gives at least \((2/3+o(1))N_{\rm mult}(T)\) simple zeros; this also lower-bounds their number against the smaller distinct-ordinate denominator used by K02. Averaging consecutive simple gaps shows at least half are \(\le(6\pi+o(1))/\log T\). For every fixed bound (q_T\le Q), choose one nonnegative bump supported in \((-\delta_Q,\delta_Q)\), \(\delta_Q=\min(1/4,1/(12Q))\); then its Fourier transform is bounded below on every such scaled gap, giving \(\liminf\mathcal P_a(T)/N_{\rm dist}(T)\ge1/6\), with multiplicity weights handled by the simple row and simple neighbor. This removes global simplicity for that Q-adapted bump. Limitation: does not rule out other bump choices at the same bounded ratio and does not handle (q_T\to\infty). Details/source in NOTE.md.
+
+### Follow-up bounded task K02-MP05 (claimed 2026-11-26)
+
+- Baseline: worker head `397101a5782281dc1b76d83f5eb80b24442fc75e`.
+- Question: test whether Riemann–von Mangoldt leading count and simplicity alone force a lower bound for the bump energy when (q_T=2a/\log T\to\infty).
+- Scope: explicit synthetic signed node set with canonical product, exact leading count, and pair-energy estimate; no zeta or operator claim.
+- Acceptance: prove a countermodel or a lower bound with all signed-tail estimates; distinguish pair-energy condition from the separate operator escape condition.
+- Stop condition: stop if the high-node sum cannot be bounded uniformly in the row cutoff.
