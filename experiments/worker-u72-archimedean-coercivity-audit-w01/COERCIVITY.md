@@ -750,6 +750,12 @@ The exact rational trial quotient stored in `jacobi_trial64_certificate.py` lies
 
 The N=80 Jacobi trial, with the same `10^-6` rational coefficient rounding, is certified separately by `jacobi_trial80_certificate.py` and improves the variational endpoint to `mu_1<0.233218`. Its exact rational quotient and all 80 fixed coefficients are embedded in the script. The cap improvement over N=64 is about `1.7e-6`; this continuation still has diminishing gains and provides no convergence rate. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial80_certificate.py`.
 
+The next `N=96` trial was retained because its exact rational quotient clears the next decimal threshold. `jacobi_trial96_certificate.py` proves
+
+`mu_1 <= rational_part - log(2) - pi/2 < 0.233217`,
+
+where the complete rational vector and exact quotient are stored in the script. The verified quotient is approximately `0.2332166260735941`; the actual improvement over the N=80 candidate is about `9.4e-7`, so returns are now below `10^-6` per 16 added profiles. The candidate search uses the same double-precision generalized solve and `10^-6` rounding, but no optimizer accuracy is used in the proof. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial96_certificate.py`.
+
 ### Independent check of the form-core density step
 
 I checked the nested-profile core argument above separately from its original derivation. For even `h in C_c^infty(-1,1)`, the quotient `h(x)/g_0(x)` vanishes near `|x|=1`; near `x=0`, even smoothness gives a smooth function of `x^2`. Thus it is a smooth function `phi(y)` of `y=1-x^2` on `[0,1]`. C¹ polynomial approximation can be obtained by uniformly approximating `phi'` by polynomials and integrating, with the additive constant fixed at `phi(0)`. If `P_n -> phi` in C¹, multiplication by `g_0` gives convergence in `H^s(R)` for any fixed `0<s<1/2`, since multiplication by `P_n(1-x^2)-phi(1-x^2)` has operator norm on `H^s` controlled by its `W^{1,infty}` norm. These products are exactly finite linear combinations of the `g_j`.
