@@ -342,3 +342,60 @@ verify the odd diagonal or other entries, nor all of the LXXV comparison. The
 comparison interval is from the shared compressed implementation, so
 source-form independence applies to the new evaluation, not to the
 comparator's construction.
+
+### U76-05: first odd diagonal, direct paired series
+
+For the normalized first odd cosine-sector basis vector
+`phi_1(x)=sqrt(2/h) cos(pi*x/h)` on `[0,h]`, put `w=pi/h`. Its even
+autocorrelation is
+
+    S_11(t) = 2 F(t),
+    F(t) = (1-t/h) cos(wt) - sin(wt)/pi.
+
+Indeed, direct overlap integration gives
+`S_11(t)=2(1-t/h)cos(wt)-2 sin(wt)/pi`. Define
+`K(t)=exp(-t/2)/(1-exp(-2t))`. Since `S_11(t)-2exp(-t/2)=2(F(t)-exp(-t/2))`,
+the subtracted-kernel term is the paired Laplace series
+
+    D_11 = 2 sum_{j>=0} M(a_j),
+    a_j=2j+1/2,
+    M(a)=integral_0^h exp(-a t) [F(t)-exp(-t/2)] dt.
+
+Pairing is required: it incorporates the subtraction at zero into each
+summand, which vanishes linearly at `t=0`. The summand also has the elementary
+closed form
+
+    M(a) = C(a) - T(a)/h - S(a)/pi - (1-exp(-(a+1/2)h))/(a+1/2),
+    C(a) = a(1+exp(-ah))/(a^2+w^2),
+    S(a) = w(1+exp(-ah))/(a^2+w^2),
+    T(a) = ((1+exp(-ah))(a^2-w^2)
+             + a h exp(-ah)(a^2+w^2))/(a^2+w^2)^2.
+
+Here `C`, `S`, and `T` are respectively the integrals of `exp(-at)cos(wt)`,
+`exp(-at)sin(wt)`, and `t exp(-at)cos(wt)` on `[0,h]`; the formulas use
+`wh=pi`. The archimedean contribution is also elementary: with
+`A(a)=C(a)-T(a)/h-S(a)/pi`, it equals
+
+    A_11 = 2 [ A(-1/2) + A(1/2) ].
+
+Thus the full independent diagonal is
+`G_11=A_11-P_11-(log(4pi)+gamma)-D_11-log(tanh(h/2))`, where
+`P_11=sum_q Lambda(q)/sqrt(q) S_11(log q)` over the same eight prime powers.
+
+A simple but weak tail bound follows from `g(t)=F(t)-exp(-t/2)`, `g(0)=0`,
+and
+
+    |g'(t)| <= C_h = 2/h + pi/h + 1/2,  0<=t<=h.
+
+It gives `|M(a)|<=C_h/a^2`, hence after J terms
+
+    |2 sum_{j>=J} M(a_j)|
+      <= 2 C_h [1/a_J^2 + 1/(2a_J)],  a_J=2J+1/2.
+
+This proves convergence but is only O(1/J); by itself it is unusable for
+matching the approximately 10^-53 stored interval: since `a_J=2J+1/2`, the
+bound is asymptotic to `C_h/(2J)`, requiring J on the order of 10^53 for that
+tail scale. The analytic formula is a new independent reduction, not yet a
+numerical result. The next task is to accelerate or replace this tail bound
+(for example, subtract endpoint Laplace asymptotics with a rigorously bounded
+remainder) before spending a runner computation on an interval comparison.

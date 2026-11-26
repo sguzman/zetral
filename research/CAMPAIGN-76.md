@@ -242,3 +242,16 @@ direct interval width is `2.9006e-66`; it lies inside the comparator interval
 with lower/upper margins `1.0241471898e-60` and `1.2057649096e-60`. This passes
 one scalar entry only. The first odd diagonal, all other entries, and
 full-matrix aggregation remain open.
+
+## U76-05 odd-diagonal analytical checkpoint — 2026-11-26
+
+For the normalized first odd basis vector, the direct correlation gives
+`S_11=2F`, with `F(t)=(1-t/h)cos(pi*t/h)-sin(pi*t/h)/pi`. The subtracted
+kernel is the paired Laplace series `2 sum_j integral_0^h exp(-(2j+1/2)t)
+(F(t)-exp(-t/2))dt`; each summand has an elementary closed form and the
+archimedean term is elementary. A derivative estimate yields an absolute
+O(1/J) tail, but that rate is too slow for a useful interval comparison. Next
+derive an accelerated remainder (or exact special-function sum), then run an
+outward-rounded comparison for this odd diagonal. Details and constants are
+in `research/positivity/U76-01-direct-arithmetic-Gram.md`. No odd-entry
+numeric comparison is claimed.

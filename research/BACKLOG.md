@@ -17,8 +17,10 @@ places it wholly inside the shared compressed interval; Actions run
 constant even continuous component now has an exact paired exponential-series
 formula, closed rational part, and explicit geometric remainder bound in
 `research/positivity/U76-01-direct-arithmetic-Gram.md`. Its next acceptance
-step is an independently derived and outward-enclosed odd first diagonal,
-then expansion to the remaining matrix entries. Keep B1 analytical extension
+step is an accelerated rigorous tail for the newly derived odd-diagonal paired
+Laplace series; its elementary O(1/J) bound is too weak to certify useful
+precision. Then outward-enclose that entry and expand to the remaining matrix
+entries. Keep B1 analytical extension
 on hold until the original-form continuous mapping is independently audited.
 
 ### B1 — Analytical extension beyond finite cutoffs

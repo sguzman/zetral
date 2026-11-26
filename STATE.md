@@ -1,11 +1,15 @@
 # Research state
 
 Date: 2026-11-26 UTC.
-Active campaign: LXXVI — Independent original-form audit (research/CAMPAIGN-76.md). LXXV is closed as a finite candidate at h=2.51; its stored-component audit passed, but independent original-form evaluation remains incomplete. U76-02 matched the prime term symbolically on the support-length-h cosine basis. U76-04 now gives a 70-decimal outward-rounded direct-form interval for the constant-even entry, wholly contained in the stored compressed interval; locked-Nix Actions run 45905468198 and local replay match exactly after removing runtime metadata. This is a single-entry pass only. Next derive and certify the first odd diagonal, then extend to off-diagonals and both full parity matrices. See latest checkpoint below.
+Active campaign: LXXVI — Independent original-form audit (research/CAMPAIGN-76.md). LXXV is closed as a finite candidate at h=2.51; its stored-component audit passed, but independent original-form evaluation remains incomplete. U76-02 matched the prime term symbolically on the support-length-h cosine basis. U76-04 gives a 70-decimal direct-form interval for the constant-even entry, wholly contained in the stored compressed interval. U76-05 derives the first odd diagonal as a paired Laplace series, but its elementary O(1/J) tail is too weak for interval matching. Next derive a useful accelerated tail bound before computation; then continue the odd and full-matrix audit. See latest checkpoint below.
 
 ## U76-04 latest mathematical checkpoint — 2026-11-26
 
 For the even constant cosine basis entry, the direct correlation gives the exact archimedean term `16(cosh(h/2)-1)/h`. Its subtracted-kernel component has an exact paired exponential series and accelerated closed form. A fixed-point interval calculation at scale `10^70` gives a direct-form enclosure of width `2.9006e-66`, wholly contained in the shared compressed interval with exact margins `1.0241471898e-60` and `1.2057649096e-60`. Actions run 45905468198 and a local locked-Nix replay have matching canonical JSON hash `ac9b7eea5e6b3189ade829be49e07a93a7fe15de66ce5f713d4b058c3d7e71f2` after runtime metadata is removed. This certifies only the `G_00` entry. Next derive and outward-enclose the first odd diagonal; no full matrix audit is established.
+
+## U76-05 odd-diagonal analytical checkpoint — 2026-11-26
+
+The first odd diagonal now has an independent paired Laplace-series formula, elementary summand, and exact archimedean expression in `research/positivity/U76-01-direct-arithmetic-Gram.md`. A direct derivative bound proves an O(1/J) tail, but it cannot practically match the stored interval. Next subtract endpoint Laplace asymptotic terms with a rigorous remainder, or find an equivalent accelerated sum. No odd-entry numerical comparison is claimed.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
