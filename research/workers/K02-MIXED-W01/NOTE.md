@@ -539,3 +539,15 @@ Consequently
 {\sum_{j=0}^k|c_j|/|c_0|}.}
 \]
 The \(k=1\) case recovers the unit-weight pair bound. For clusters, the exact denominator records their internal geometry; merely bounding all nodes by a radius does not control this ratio if some cluster points nearly collide with one another. This is a conditional geometric obstruction, not a claim about the existence or distribution of zeta clusters, and the constants still depend on the unknown coercivity lower bound \(\lambda_a\).
+
+
+### Multiplicity-weighted cluster version
+
+The same argument does not require the selected sample locations to be simple. Let \(x_0=\gamma,x_1,\ldots,x_k\) be distinct locations with multiplicities \(m_0=m_\gamma,m_1,\ldots,m_k\), and define \(c_j\) as above. The target vector \(g_\gamma\) has value \(1/m_\gamma\) at \(\gamma\), and projection error \(\delta_a(\gamma)\) gives pointwise coordinate errors at most \(\delta_a(\gamma)/\sqrt{m_j}\). Also \(\|f\|_q\le1/\sqrt{m_\gamma}\), so the divided-difference derivative bound is \(K_{a,k}/(k!\sqrt{m_\gamma})\). Therefore
+\[
+\boxed{\displaystyle
+\delta_a(\gamma)\ge
+\frac{\bigl[\,|c_0|/m_\gamma-K_{a,k}/(k!\sqrt{m_\gamma})\,\bigr]_+}
+{\sum_{j=0}^k |c_j|/\sqrt{m_j}}.}
+\]
+For \(k=1\), this reduces exactly to the unequal-multiplicity pair inequality above. Thus the cluster obstruction remains valid without assuming RH-level simplicity, though the locations must be distinct and the coercivity constant remains an input.
