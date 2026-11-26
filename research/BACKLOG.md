@@ -17,11 +17,13 @@ places it wholly inside the shared compressed interval; Actions run
 constant even continuous component now has an exact paired exponential-series
 formula, closed rational part, and explicit geometric remainder bound in
 `research/positivity/U76-01-direct-arithmetic-Gram.md`. Its next acceptance
-step is the U76-08 direct `G_02` check against a 2x2 shared compressed
-comparator, followed by an independent audit of the U76-07 endpoint/zeta
-enclosures. The first odd diagonal is now contained in its shared compressed
-interval on Actions run 45909728639. Preserve the implementation failures and
-do not treat two diagonal matches as a full matrix audit. Keep B1 analytical extension
+step is derive and enclose `G_22` to complete the even 2x2 principal block,
+then independently audit the U76-07/U76-08 endpoint and zeta enclosures. The
+direct `G_02` interval is contained in its 2x2 shared compressed comparator on
+Actions run 45911794868. Preserve the precision and truncation failures; three
+scalar matches still do not constitute a full matrix audit. After the 2x2
+cross-check, reassess B1 analytic extension against Campaign LXXVI's remaining
+matrix scope and select the higher-value route.
 on hold until the original-form continuous mapping is independently audited.
 
 ### B1 — Analytical extension beyond finite cutoffs

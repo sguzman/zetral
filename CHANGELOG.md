@@ -18,6 +18,8 @@ U76-04 replaced that scalar diagnostic with a 70-decimal outward-rounded interva
 
 U76-05 derives the first odd diagonal directly as a paired Laplace series. U76-06 accelerates it by endpoint integration by parts. U76-07 outward-encloses the direct G_11 entry at 90 decimals and places it wholly inside the shared compressed interval on Actions run 45909728639, with containment margins about 2.39e-63 and 2.10e-63. The same run reproduces the G_00 enclosure. The complete parity matrices remain unaudited, and no positivity or RH conclusion follows. Several failed interval-driver implementations are preserved in the campaign record.
 
+U76-08 derived and outward-enclosed the first even off-diagonal `G_02`. Actions run 45911794868 at 200-digit precision and N=260 places the direct interval inside the shared 2x2 compressed interval, with margins about 2.774e-64 and 2.773e-64. The endpoint remainder is below 1.33e-70. This validates one off-diagonal entry only; `G_22` and the rest of the full matrix remain open.
+
 ## Campaigns XII–LVII
 
 | Campaign | Outcome and limitations |

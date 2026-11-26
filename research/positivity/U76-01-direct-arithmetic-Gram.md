@@ -529,7 +529,7 @@ There is no diagonal subtraction, pole, or hyperbolic-tail term. Since
 The initial parameters `a_0=1/2` and `a_1=5/2` are evaluated in closed
 form. For `j>=2`, put `f(t)=sin(w_2 t)`. Its derivatives agree at both
 endpoints, and only odd derivatives are nonzero there:
-`f^(k)(0)=f^(k)(h)=(-1)^((k-1)/2) w_2^k`. Thus for N=220,
+`f^(k)(0)=f^(k)(h)=(-1)^((k-1)/2) w_2^k`. For general N,
 
     sum_(j>=2) L(a_j)
       = sum_(odd k=1,...,N-1) (-1)^((k-1)/2) w_2^k
@@ -541,7 +541,25 @@ endpoints, and only odd derivatives are nonzero there:
 The first omitted rate is adequate because `a_2=9/2>w_2` at h=2.51;
 the two smaller rates were isolated rather than included in the geometric
 remainder. A dedicated 2x2 extraction of the existing compressed matrix is a
-comparator only. No G_02 interval or comparison is yet claimed. The next test
-is whether the direct interval from this formula lies wholly inside that
-shared comparator; a failure must first be separated into formula mapping,
-tail, and interval-driver causes.
+comparator only.
+
+The test passed on locked-Nix Actions run `45911794868` at 200-decimal
+precision and `N=260`. The direct interval is
+
+    [0.05592879022448369226373413920780570606199821422788744230022838300814163796500312680328752153799146861030345323714421311358549060898188506891825243733786473163882241013498540336079095742604852997987615,
+     0.05592879022448369226373413920780570606199821422788744230022838300826118180813535413698260255792203506202837992413400902249526989008927098380800594728592025894477492584284133500327984355405849402412307]
+
+inside the shared 2x2 interval, with margins approximately
+`2.774051416379650031268032875e-64` and
+`2.773277388181918646458630173e-64`. The endpoint remainder
+`w_2^260 Z^(2)_261` is enclosed below `1.32780e-70`. Runner readback is
+commit `2cfe2e1d1a98998aabf99152cf98de17f4e8c858`; interval JSON blob
+`5a3ca848cae3d25f02be13195abefd983d379d36`; comparator JSON blob
+`f400f2e930ae96f9a25a21245f85d7673411c1fa`.
+
+At `N=220`, the endpoint remainder did not allow containment. At 90-digit
+working scale, high-order endpoint `Z_r` and `E_r` values fell below one
+fixed-point unit; multiplying their zero-touching enclosures by derivative
+factors around `10^87` produced a broad interval. Working at 200 digits and
+using `N=260` resolved this numerical obstruction. No `G_22` value or full
+even-block audit is yet established.

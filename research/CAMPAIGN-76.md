@@ -334,3 +334,22 @@ mathematical discrepancy from the shared-basis map or an interval-driver bug.
 The hosted comparator uses `lowCount=2`; it remains shared code and is not an
 independent evaluation. No full-block or positivity claim is in scope for
 this scalar check.
+
+**Result:** the containment test passed on Actions run `45911794868` using
+200-decimal fixed-point intervals and `N=260`. The direct interval is
+
+    [0.05592879022448369226373413920780570606199821422788744230022838300814163796500312680328752153799146861030345323714421311358549060898188506891825243733786473163882241013498540336079095742604852997987615,
+     0.05592879022448369226373413920780570606199821422788744230022838300826118180813535413698260255792203506202837992413400902249526989008927098380800594728592025894477492584284133500327984355405849402412307]
+
+and lies inside the 2x2 shared compressed interval. Containment margins are
+about `2.77405e-64` and `2.77328e-64`; the endpoint-expansion remainder is
+bounded above by `1.32780e-70`. Actions pushed the readback at
+`2cfe2e1d1a98998aabf99152cf98de17f4e8c858`; the exact comparator and result
+blobs are listed in `STATE.md` and the direct Gram note.
+
+Two failures narrowed the numerical method. At `N=220`, the remainder was
+too wide for containment. At 90-digit precision, high-order `Z_r` and `E_r`
+intervals touched zero before multiplication by derivatives of size roughly
+`10^87`, inflating the width to about `10^-3`. Raising working precision to
+200 digits and `N` to 260 resolved both. This is not a full even-block audit;
+the next entry is `G_22`.
