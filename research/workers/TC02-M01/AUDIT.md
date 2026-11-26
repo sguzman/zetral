@@ -17,8 +17,8 @@ two powers of M to the numerator, while `g` and the tail sums change too.
 I evaluated a deliberately conditional frozen-tail model: hold each stored
 `r8`, `rd`, `ph`, the witness, basis and upper energy fixed; replace the
 guard by its exact new value; retain the `+1`; and omit the `g(M+1)` ratio.
-The first integer M where the modeled eighth loss falls below the stored
-upper-energy endpoint is `12497` (modeled loss ratio `0.8031006683` relative
+The first integer M where this frozen-tail upper model for the eighth loss
+falls below the stored upper-energy endpoint is `12497` (modeled loss ratio `0.8031006683` relative
 to the T832 loss; at `12496`, `0.8039366543`). The model is reproducible with
 `experiments/worker-TC02-M01/frozen_tail_threshold.py`.
 

@@ -3,8 +3,10 @@
 
 This is explicitly a frozen-tail sensitivity model, not a regenerated
 certificate. It preserves the T832 witness and the two stored C8 values,
-changes only the M-dependent guard and (M-1)^15 factor, and drops the
-increasing g(M+1) denominator (a conservative choice within this model).
+uses the frozen M0 numerator as an upper bound (CL(M)/M decreases for fixed
+tails), changes the guard and (M-1)^15 factor, and drops the increasing
+g(M+1) denominator. It is therefore an upper model only while the tails and
+other fixed data remain frozen.
 """
 from decimal import Decimal, getcontext
 
