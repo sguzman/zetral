@@ -302,3 +302,65 @@ The constant (1+d/c) multiplies (\int_0^\infty f(x)dx=0), just like (\log g). Th
 \]
 
 For (c=1/(2\pi)), this is again (\pi t_n/4+O((\log t_n)^2)), independent of (d). The smooth Riemann–von Mangoldt main term has precisely this form, with (d=-(1+\log(2\pi))/(2\pi)). This robustness statement concerns exact smooth quantiles only. An (O(\log T)) counting discrepancy does not automatically transfer the residue asymptotic to actual zeros: controlling the discrete logarithmic potential under perturbations, especially near arbitrarily small gaps, remains open here.
+
+## Stability under bounded node displacements; conditional zeta application
+
+The exponential lower growth does not require the perturbed nodes to have regular small gaps. Let (F(t)=c,t\log t+d,t), (c>0), and (t_n=F^{-1}(n)) for all sufficiently large (n). Suppose a strictly increasing positive sequence satisfies
+
+\[
+\gamma_n=t_n+O(1).
+\]
+
+Set (g=\gamma_n) and (q_g(t)=\log|1-g^2/t^2|). Split the logarithmic derivative sum
+
+\[
+S_n^\gamma=\sum_{j\ne n}q_g(\gamma_j)
+\]
+
+at (L\log g) indices from (n), with fixed (L) sufficiently large in terms of the uniform displacement bound. If (0<|j-n|\le L\log g), inverse-function differentiation gives (|t_j-t_n|=O(1)), and hence (|\gamma_j-g|=O(1)). For large (g), every such local factor has (0<|1-g^2/\gamma_j^2|<1), so its logarithm is nonpositive. These local terms may be discarded for an upper bound on (S_n^\gamma), even if some of the gaps are extremely small.
+
+For the complementary indices, compare (q_g(\gamma_j)) with (q_{t_n}(t_j)). The interpolation path between ((t_n,t_j)) and ((g,\gamma_j)) stays away from the singular diagonal when (L) is chosen large. The partial derivatives
+
+\[
+|\partial_x q_x(y)|=\frac{2x}{|y^2-x^2|},\qquad
+|\partial_y q_x(y)|=\frac{2x^2}{|y(y^2-x^2)|}
+\]
+
+and the bounded displacement show that the total far-sum change is (O((\log g)^2)): for (j<n/2), sum (O(1/t_j)); for (n/2\le j\le2n), sum (O((\log g)/|j-n|)) over (|j-n|>L\log g); for (j>2n), sum (O(g/t_j^2+g^2/t_j^3)). Each displayed sum is (O((\log g)^2)) using (t_j\asymp j/\log j).
+
+The removed baseline block is itself (O((\log g)^2)) in absolute value: uniformly for (1\le|j-n|\le L\log g),
+
+\[
+q_{t_n}(t_j)=\log(|j-n|/n)+O(1),
+\]
+
+whose sum over (O(\log g)) indices is (O((\log g)^2)). The exact-quantile asymptotic above therefore gives
+
+\[
+S_n^\gamma\le -\frac{c\pi^2}{2}t_n+O((\log g)^2)
+=-\frac{c\pi^2}{2}g+O((\log g)^2).
+\]
+
+Consequently, for the simple-node product (\Delta_\gamma(z)=\prod_j(1-z^2/\gamma_j^2)),
+
+\[
+\boxed{\log\left|\frac1{\gamma_n\Delta_\gamma'(\gamma_n)}\right|
+\ge \frac{c\pi^2}{2}\gamma_n-O((\log\gamma_n)^2).}
+\]
+
+Thus bounded displacement alone, with no positive lower bound on neighboring gaps, implies that these residues are not square-summable (indeed their magnitudes tend to infinity). The estimate is one-sided: arbitrarily close pairs can make residues still larger, so no matching upper bound is claimed.
+
+Under RH and the additional assumption that all nontrivial zeros are simple, the Riemann–von Mangoldt formula for the positive ordinates gives
+
+\[
+N(T)=\frac{T}{2\pi}\log T-\frac{1+\log(2\pi)}{2\pi}T+O(\log T).
+\]
+
+Writing (t_n) for the quantiles of the two displayed main terms, (N(\gamma_n)=n) and the mean-value theorem imply \(\gamma_n=t_n+O(1)\), since (F'(T)\asymp\log T\). Taking (c=1/(2\pi)) in the one-sided estimate yields, conditionally on RH and simplicity,
+
+\[
+\log\left|\frac1{\gamma_n\Delta_\Gamma'(\gamma_n)}\right|
+\ge \frac{\pi}{4}\gamma_n-O((\log\gamma_n)^2),
+\]
+
+so the canonical-product residue sequence for the distinct zeta ordinates is not in \(\ell^2\). This is a conditional consequence of RH plus simplicity and the classical zero-counting formula. It is not a proof of either hypothesis and does not identify the commuting toy operator with the local Weil-form operator; no Hilbert–Pólya conclusion follows from it alone. The bounded-displacement estimates are analytic deductions in this note, not machine-checked or independently reviewed.
