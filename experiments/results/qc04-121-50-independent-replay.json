@@ -1,0 +1,52 @@
+[
+  {
+    "h": "121/50",
+    "odd": false,
+    "n": 41,
+    "baselineEntries": 1681,
+    "baselineRadiusMatches": 41,
+    "selectedEntries": 1681,
+    "exactMinorMatches": 41,
+    "marginNumerator": "107417",
+    "marginDenominator": "1000000",
+    "nextGridFails": true,
+    "firstRadius": "4249003",
+    "shares": [
+      "591288589593",
+      "89531310560",
+      "2623724338",
+      "150253458",
+      "2605989",
+      "122949",
+      "5665",
+      "316403387448"
+    ],
+    "denominator": "1000000000000",
+    "scope": "stored interval reconstruction and independent integer row elimination; not independent operator evaluation"
+  },
+  {
+    "h": "121/50",
+    "odd": true,
+    "n": 41,
+    "baselineEntries": 1681,
+    "baselineRadiusMatches": 41,
+    "selectedEntries": 1681,
+    "exactMinorMatches": 41,
+    "marginNumerator": "108408",
+    "marginDenominator": "1000000",
+    "nextGridFails": true,
+    "firstRadius": "3555440",
+    "shares": [
+      "845156282410",
+      "121095716873",
+      "3376632693",
+      "173304938",
+      "2760012",
+      "138699",
+      "8292",
+      "30195156083"
+    ],
+    "denominator": "1000000000000",
+    "scope": "stored interval reconstruction and independent integer row elimination; not independent operator evaluation"
+  }
+]
