@@ -1,12 +1,13 @@
 {
-  "status": "blocked_by_artifact_gap",
-  "attempted": "Reconstruct the M24576 original baseline and replay the stored allocation with unit direction factors.",
-  "available": [
-    "M24576 aggregate-104-24576 residual finite matrix",
-    "M24576 trial-patch C8 values",
-    "rank-tightened replay summary"
-  ],
-  "gap": "The M24576 rank-tightened replay JSON contains only the final transformed matrix, not the untransformed componentIntervals, eighth bounds, or radiusWeights required by the exact-replay routine. The supplied M24576 assemble module targets an obsolete source schema (its source anchors are absent in the current staged script). Consequently the original baseline cannot be reconstructed from the checked-in M24576 artifacts alone.",
-  "evidence": "Calling the supplied assembler with u75-t1024-m24576-staged.js throws Error('source anchors'); exact replay input cannot be formed from the replay summary.",
-  "limits": "This is a reproducibility/artifact limitation, not evidence for or against original-coordinate positivity. No pivot claims are made."
+  "baselineEntriesReproduced": true,
+  "baselineRadiusCorrectionsReproduced": true,
+  "positiveMinors": 52,
+  "failedMinor": null,
+  "originalEnergyGridMarginNumerator": "0",
+  "energyGridDenominator": "1000000",
+  "nextGridFails": true,
+  "transformedPositiveMinors": 52,
+  "transformedEnergyGridMarginNumerator": "95427",
+  "transformedEnergyGridDenominator": "1000000",
+  "scope": "Exact replay of the stored finite intervals in original trial coordinates, using the stored allocation and unit direction factors. A finite certificate comparison only; not an analytic positivity proof or an RH/operator construction."
 }
