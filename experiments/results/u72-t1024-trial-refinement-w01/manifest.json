@@ -1,0 +1,357 @@
+{
+  "T": 1024,
+  "M": 16384,
+  "J": 128,
+  "KEM": 20,
+  "lowCount": 47,
+  "sectors": {
+    "even": {
+      "trial_modes": 466,
+      "residual_modes": 8146,
+      "chunks": [
+        {
+          "file": "even-finite-94-1116.json",
+          "start": 94,
+          "end": 1116,
+          "count": 512,
+          "bytes": 272254,
+          "sha256": "53f1f70a71545340a2585d7085260ad58094e0e5656958a06bc92d22940cd9e4"
+        },
+        {
+          "file": "even-finite-1118-2140.json",
+          "start": 1118,
+          "end": 2140,
+          "count": 512,
+          "bytes": 275246,
+          "sha256": "250177380e937456b6f1a9289623b81353dac6381482ea4e15a4eea9e868467e"
+        },
+        {
+          "file": "even-finite-2142-3164.json",
+          "start": 2142,
+          "end": 3164,
+          "count": 512,
+          "bytes": 272776,
+          "sha256": "a8f93cf7494f678bd0207c6ff9af2ae6aa259935b9ed3206556a532863578413"
+        },
+        {
+          "file": "even-finite-3166-4188.json",
+          "start": 3166,
+          "end": 4188,
+          "count": 512,
+          "bytes": 271250,
+          "sha256": "511a6af9e1eac4c9ffddbe6306041d6b81483361d1ffa4c2297a9a879a8ce93a"
+        },
+        {
+          "file": "even-finite-4190-5212.json",
+          "start": 4190,
+          "end": 5212,
+          "count": 512,
+          "bytes": 270028,
+          "sha256": "7790118f309be7db4cb40129f90c86f792fd1bedaa4a35f44c1bff7639f48633"
+        },
+        {
+          "file": "even-finite-5214-6236.json",
+          "start": 5214,
+          "end": 6236,
+          "count": 512,
+          "bytes": 269050,
+          "sha256": "4afa9adf4b33120526f24ace1de368256984930ac20a80f0054eb23f6a3aca33"
+        },
+        {
+          "file": "even-finite-6238-7260.json",
+          "start": 6238,
+          "end": 7260,
+          "count": 512,
+          "bytes": 268350,
+          "sha256": "d67d2934b466286b7982e32f4e0b7e0727739bc165c1bef8c04a75a4d2bbe0e5"
+        },
+        {
+          "file": "even-finite-7262-8284.json",
+          "start": 7262,
+          "end": 8284,
+          "count": 512,
+          "bytes": 267770,
+          "sha256": "d6db0f0f0ae74c1a33175900e1845b3a9d67ca36ab281d5ca3eb497d8533880f"
+        },
+        {
+          "file": "even-finite-8286-9308.json",
+          "start": 8286,
+          "end": 9308,
+          "count": 512,
+          "bytes": 267292,
+          "sha256": "deac36fd58b309bc3bd37d3623ca33fd41e45089307002c4a5a82554c5ffcaaa"
+        },
+        {
+          "file": "even-finite-9310-10332.json",
+          "start": 9310,
+          "end": 10332,
+          "count": 512,
+          "bytes": 266739,
+          "sha256": "3d0386e24d39a7d0dd1be14bca047322da5d740316cd1cd06cb97509b7b3b342"
+        },
+        {
+          "file": "even-finite-10334-11356.json",
+          "start": 10334,
+          "end": 11356,
+          "count": 512,
+          "bytes": 266254,
+          "sha256": "edafc5cc4cd0eee3ca3996bc97d304c5f474f02ee10fce6cc340289fd195d88e"
+        },
+        {
+          "file": "even-finite-11358-12380.json",
+          "start": 11358,
+          "end": 12380,
+          "count": 512,
+          "bytes": 265872,
+          "sha256": "23ad0890c04777fb80ac41575b2d55b70bc3486bbc451535a5a95557785d7a03"
+        },
+        {
+          "file": "even-finite-12382-13404.json",
+          "start": 12382,
+          "end": 13404,
+          "count": 512,
+          "bytes": 265456,
+          "sha256": "238d3d972350d769b23650ca1fa75466fbf82c71b16cfdfb16b869a6faf00fcb"
+        },
+        {
+          "file": "even-finite-13406-14428.json",
+          "start": 13406,
+          "end": 14428,
+          "count": 512,
+          "bytes": 265130,
+          "sha256": "ee3666bd21456ffd44cbcb5963ec5b8d6fcd72c3d97d6ebbfab27b3c5caa33ca"
+        },
+        {
+          "file": "even-finite-14430-15452.json",
+          "start": 14430,
+          "end": 15452,
+          "count": 512,
+          "bytes": 264846,
+          "sha256": "814a52567941b2e8041a1f1a83d484ca6fd64c01f7d48c4359c825240d5500f0"
+        },
+        {
+          "file": "even-finite-15454-16384.json",
+          "start": 15454,
+          "end": 16384,
+          "count": 466,
+          "bytes": 264350,
+          "sha256": "9a8b468f86ad3f468ad21ec1e64acc6af3fdc9c193a806cc2ec26e6c95e665e0"
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "trial.json",
+          "bytes": 1750399,
+          "sha256": "0fc221b5739a8749ce9ee9b39b2dec37755a061ec9669e40ba3bf2764a9272c8"
+        },
+        {
+          "file": "raw.json",
+          "bytes": 3911761,
+          "sha256": "6619c25e8d8295b9780904ac31a83958334cfa065cb030af48c0bcf8ea964168"
+        },
+        {
+          "file": "factors.json",
+          "bytes": 1363,
+          "sha256": "a7d344495a012b030f4598103dacf7d64efe7e14d66c2f29f45b3fcc4fffb373"
+        },
+        {
+          "file": "transform.json",
+          "bytes": 2154444,
+          "sha256": "6dce250317696b0b65a78cffe8f965ee4db0c963f7012f3df4cf1f2c48b73559"
+        },
+        {
+          "file": "seed-replay.json",
+          "bytes": 145899,
+          "sha256": "8338e07ca6fd5172c7075bc33b6c9410bfe9bb3369cee6273089b5209fe203cf"
+        },
+        {
+          "file": "slsqp-allocation.json",
+          "bytes": 4445,
+          "sha256": "06c4a6139ab51bfae079ee7fc749e6e0250919efc3a6576ec8f5b0add1196254"
+        },
+        {
+          "file": "slsqp-replay.json",
+          "bytes": 145909,
+          "sha256": "c21c72a135f97a3662f1add5f8785e7435152f0f0b25cbe6559f575776d904f9"
+        }
+      ],
+      "seed_positive_minors": 3,
+      "slsqp_positive_minors": 3,
+      "slsqp_margin": null
+    },
+    "odd": {
+      "trial_modes": 465,
+      "residual_modes": 8145,
+      "chunks": [
+        {
+          "file": "odd-finite-95-1117.json",
+          "start": 95,
+          "end": 1117,
+          "count": 512,
+          "bytes": 275712,
+          "sha256": "558cf3b3a4ee3fcc0b64afdf25ea446a138e1b069ba2a0a9388b599f93f93eff"
+        },
+        {
+          "file": "odd-finite-1119-2141.json",
+          "start": 1119,
+          "end": 2141,
+          "count": 512,
+          "bytes": 278292,
+          "sha256": "edf1045c36dbcd4bec7e613f07e89b7e1e03f56e17e0ad54d055cf11e8ef3902"
+        },
+        {
+          "file": "odd-finite-2143-3165.json",
+          "start": 2143,
+          "end": 3165,
+          "count": 512,
+          "bytes": 275774,
+          "sha256": "1b3a806532e3fffade4cc7224de01ea51c332c3de51e47631d8ed975fd56e098"
+        },
+        {
+          "file": "odd-finite-3167-4189.json",
+          "start": 3167,
+          "end": 4189,
+          "count": 512,
+          "bytes": 274148,
+          "sha256": "40da387c3442c443d7528d4b4556fc8b945ca7a16643b39516524a5867d295f7"
+        },
+        {
+          "file": "odd-finite-4191-5213.json",
+          "start": 4191,
+          "end": 5213,
+          "count": 512,
+          "bytes": 273042,
+          "sha256": "a91ae4ec7314b51678d8fa82331eb4fa9c489c6d8402845f392a36fa0a902cf3"
+        },
+        {
+          "file": "odd-finite-5215-6237.json",
+          "start": 5215,
+          "end": 6237,
+          "count": 512,
+          "bytes": 272086,
+          "sha256": "50cc1a35533aa0f896f0d2c714cd947c39d66ba7ed9d336b1947dd0b2b49e778"
+        },
+        {
+          "file": "odd-finite-6239-7261.json",
+          "start": 6239,
+          "end": 7261,
+          "count": 512,
+          "bytes": 271396,
+          "sha256": "4fe1731d6d5aaeed1425da460be659129b45abde9b8943d3a46fcf34b14f02ac"
+        },
+        {
+          "file": "odd-finite-7263-8285.json",
+          "start": 7263,
+          "end": 8285,
+          "count": 512,
+          "bytes": 270754,
+          "sha256": "5ae32804743a9a972bafba46ba9dcf99674baa3dfd22307d7ef788e42621c89b"
+        },
+        {
+          "file": "odd-finite-8287-9309.json",
+          "start": 8287,
+          "end": 9309,
+          "count": 512,
+          "bytes": 270206,
+          "sha256": "714040a6371fa055f7b9ad6b075bb04d6aa698745ef3690336339d16361b0f02"
+        },
+        {
+          "file": "odd-finite-9311-10333.json",
+          "start": 9311,
+          "end": 10333,
+          "count": 512,
+          "bytes": 269701,
+          "sha256": "6abd9d8d5ac6324f90158a5f393c339a31850787a38245ae2aa50e493a1d43d9"
+        },
+        {
+          "file": "odd-finite-10335-11357.json",
+          "start": 10335,
+          "end": 11357,
+          "count": 512,
+          "bytes": 269266,
+          "sha256": "ca48aa96ee0eeca855bbb86095d2292a8d52d4f926bbc5e48827fc44ce9b0237"
+        },
+        {
+          "file": "odd-finite-11359-12381.json",
+          "start": 11359,
+          "end": 12381,
+          "count": 512,
+          "bytes": 268916,
+          "sha256": "bca67e9f8173dbc36c328111e68ffe07e05012c55fe18feadabd1ee12c050871"
+        },
+        {
+          "file": "odd-finite-12383-13405.json",
+          "start": 12383,
+          "end": 13405,
+          "count": 512,
+          "bytes": 268530,
+          "sha256": "caccf7bb6a1961baef8ecdb9bf95740768b213e0d4b7b6e2867f091230f28f98"
+        },
+        {
+          "file": "odd-finite-13407-14429.json",
+          "start": 13407,
+          "end": 14429,
+          "count": 512,
+          "bytes": 268188,
+          "sha256": "054a91fd35ba5262848d6db583dee4e01bbda673f5707947b587052ab3b51a2f"
+        },
+        {
+          "file": "odd-finite-14431-15453.json",
+          "start": 14431,
+          "end": 15453,
+          "count": 512,
+          "bytes": 267890,
+          "sha256": "4cb1f4c2bc8683b02e8819c24c95e92adb8046a66979950d9903561d91eae7cf"
+        },
+        {
+          "file": "odd-finite-15455-16383.json",
+          "start": 15455,
+          "end": 16383,
+          "count": 465,
+          "bytes": 267436,
+          "sha256": "80217b2df163ce3202dded4b2386f736726b7710999c5554765a5872767e024f"
+        }
+      ],
+      "artifacts": [
+        {
+          "file": "trial.json",
+          "bytes": 1761963,
+          "sha256": "535bf4ef0c5b9967e8a2197f02c23714ffa556f9ff4a819bf280007577f3d206"
+        },
+        {
+          "file": "raw.json",
+          "bytes": 3965805,
+          "sha256": "f7e70065dd66a5d657de1a5105fa8e4de035867032636464d66468ece2578e42"
+        },
+        {
+          "file": "factors.json",
+          "bytes": 1362,
+          "sha256": "5ecf79e2684ba93e96d28757de1930892f081ffe3fe08c2e239a443cd759c429"
+        },
+        {
+          "file": "transform.json",
+          "bytes": 2178273,
+          "sha256": "615911360ce737a6d0f3a665c627ef01ad9aefc5137141390458495e0d217409"
+        },
+        {
+          "file": "seed-replay.json",
+          "bytes": 146068,
+          "sha256": "309682c2f4ae88d9a681115d1b21c2d72c5ab9aebed275ac60f60aed6b8a9122"
+        },
+        {
+          "file": "slsqp-allocation.json",
+          "bytes": 4444,
+          "sha256": "2750d819c954889e6a161e354d5d5a8640be39ea1fff06afe28b52d0acf2884f"
+        },
+        {
+          "file": "slsqp-replay.json",
+          "bytes": 146055,
+          "sha256": "e52e609b151c169dbdfc15667117810b857bd2b85d333b54725d7d09240bf33d"
+        }
+      ],
+      "seed_positive_minors": 4,
+      "slsqp_positive_minors": 4,
+      "slsqp_margin": null
+    }
+  }
+}
