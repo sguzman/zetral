@@ -22,8 +22,8 @@ The current main guard artifact has blob `c0492416069b5277b91851c706e780c2ba053f
 
 ## Combined interpretation
 
-Together with the independent BigInt Bareiss audit in [HANDOFF.md](HANDOFF.md), the stored witness and guard bytes are reproducible and the odd transformed interval matrix is positive definite. The exact normalized (10^{-6}) grid test still fails at its first nonzero grid step, so the guarded extension to (h=2.47) is not established by this worker's odd replay.
+Together with the independent BigInt Bareiss audit and exact replay reconstruction in [HANDOFF.md](HANDOFF.md), the stored witness and guard bytes are reproducible. The earlier worker five-direction matrix had zero grid margin; the latest main two-row odd transform is independently reconstructed and has positive margin 8/10^6. This confirms the stored candidate arithmetic, not the analytic assumptions or an original-form evaluation.
 
 Checked here: artifact identity, exact metadata, exhaustive guard row count and first passing support as recorded by the generator, and the separate stored-matrix pivot/grid replay.
 
-Not checked here: a second implementation of the cellwise witness inequalities, a fresh derivation of the EM/residual estimates, the arithmetic entries from original-form definitions, source theorem imports, or a successful odd-sector grid margin. No RH, novelty, or candidate-pass claim is made.
+Not checked here: a second implementation of the cellwise witness inequalities, a fresh derivation of the EM/residual estimates, the arithmetic entries from original-form definitions, source theorem imports, or a fresh independent derivation of the two-row transform from the original-form requirements. The latest transformed replay is checked separately in HANDOFF.md. No RH, novelty, or candidate-pass claim is made.
