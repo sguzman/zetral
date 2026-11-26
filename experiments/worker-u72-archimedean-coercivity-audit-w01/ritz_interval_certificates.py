@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact isolation of 3- and 6-profile Mellin generalized Ritz values.
+"""Exact isolation of 3-, 6-, and 12-profile Mellin generalized Ritz values.
 
 Only fractions are used. The generalized eigenvalues of (A,M) are isolated by
 exact LDL^T inertia at rational endpoints. Machin's formula and the positive
@@ -55,6 +55,7 @@ def main() -> None:
     cases = [
         (3, F(2498100869, 10**9), F(249810087, 10**8)),
         (6, F(2497505224, 10**9), F(2497505225, 10**9)),
+        (12, F(2497265582, 10**9), F(2497265583, 10**9)),
     ]
     bounds: dict[int, tuple[F, F]] = {}
     for n, lower, upper in cases:
@@ -85,6 +86,7 @@ def main() -> None:
         print(f"  rho_{n} < {float(cap):.12f}")
     assert bounds[3][1] - pi_lo / 2 - log2_lo < F(234158, 10**6)
     assert bounds[6][1] - pi_lo / 2 - log2_lo < F(233562, 10**6)
+    assert bounds[12][1] - pi_lo / 2 - log2_lo < F(233323, 10**6)
 
 
 if __name__ == "__main__":

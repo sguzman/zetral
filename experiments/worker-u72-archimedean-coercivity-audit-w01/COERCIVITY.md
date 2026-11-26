@@ -632,4 +632,15 @@ For `N=6`, with `ell=2497505224/10^9` and `u=2497505225/10^9`, the lower-endpoin
 
 and `rho_6<0.233562`.
 
-The reusable `ritz_interval_certificates.py` reconstructs the matrices and verifies each pivot sign entirely with `Fraction`; Machin's formula and the positive atanh series certify the decimal Ritz caps. The six-profile Ritz enclosure is slightly sharper than the explicit six-profile vector bound, but the explicit twelve-profile trial cap `0.233324` remains the best certified upper bound currently recorded. No interval Ritz eigenvalue for `N>6` is included.
+The reusable `ritz_interval_certificates.py` reconstructs the matrices and verifies each pivot sign entirely with `Fraction`; Machin's formula and the positive atanh series certify the decimal Ritz caps. The six-profile Ritz enclosure is slightly sharper than the explicit six-profile vector bound. The same exact LDL procedure now also handles `N=12` below.
+
+
+For `N=12`, the exact LDL signs at `ell=2497265582/10^9` are all positive, while those at `u=2497265583/10^9` are eleven positive pivots followed by one negative pivot. Thus
+
+`2497265582/10^9 < lambda_min(A_12,M_12) < 2497265583/10^9`,
+
+and
+
+`mu_1 <= rho_12 < 2497265583/10^9 - log(2) - pi/2 < 0.233323`.
+
+This Ritz cap is sharper than the explicit twelve-profile vector cap: their common scalar `-log(2)-pi/2` cancels, and the rational Ritz upper endpoint `2497265583/10^9` is smaller than the exact vector rational part `1583706824907594442232592989897201/634175928969695803725059349324000`. The interval certificate currently covers `N=3,6,12` only.
