@@ -699,4 +699,10 @@ where `P_j^(alpha,beta)` is the Jacobi polynomial. With `y=1-x^2`, even-function
 
 where `m_0=1/2` and `m_(j+1)=m_j*((2j+1)/(2j+2))^2`.
 
-The change of basis from `g_j=(1-x^2)^(j+1/4)` is triangular with rational coefficients, so the log-form matrix remains rational up to the common `pi` factor and the generalized Ritz spectrum is unchanged. This may be useful for stable floating-point trial optimization. For the current exact certificate, it has not improved the result: the transformation only changes coordinates of the same rational pencil, while the monomial-basis LDL certificate already works directly through `N=24`. No stronger cap or faster exact certificate is claimed from this basis change.
+The change of basis from `g_j=(1-x^2)^(j+1/4)` is triangular with rational coefficients, so the log-form matrix remains rational up to the common `pi` factor and the generalized Ritz spectrum is unchanged. This may be useful for stable floating-point trial optimization. The monomial-basis LDL certificate already works directly through `N=24`.
+
+An exploratory `N=32` search in the Jacobi coordinates produced a fixed rational trial vector with a slightly sharper bound. The candidate was obtained from a double-precision generalized symmetric eigenproblem for the rational-part matrix against the diagonal mass matrix, with the first coefficient normalized to one and all 32 coefficients rounded to the nearest multiple of `10^-6`. No accuracy claim about that numerical optimizer is needed: `jacobi_trial_certificate.py` rebuilds both matrices and evaluates the stored rational vector entirely with `Fraction`, verifies exact Jacobi orthogonality, and uses rational lower bounds for `pi` and `log(2)`. It certifies
+
+`mu_1 <= rational_part - log(2) - pi/2 < 0.233233`,
+
+where the exact rational part is printed by the script. The script fixes all 32 rational coefficients explicitly, so its proof is independent of SciPy availability, floating-point eigensolver errors, and rounding behavior. This improves the previous `N=24` cap `<0.233246` by about `1.3e-5`; it does not improve the lower bound or construct an operator. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial_certificate.py`.
