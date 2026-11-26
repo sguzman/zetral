@@ -1,0 +1,25 @@
+{
+  "h": "61/25",
+  "odd": false,
+  "n": 43,
+  "baselineEntries": 1849,
+  "baselineRadiusMatches": 43,
+  "selectedEntries": 1849,
+  "exactMinorMatches": 43,
+  "marginNumerator": "37523",
+  "marginDenominator": "1000000",
+  "nextGridFails": true,
+  "firstRadius": "4003830",
+  "shares": [
+    "608091648591",
+    "79167847044",
+    "1966718603",
+    "100587445",
+    "1546371",
+    "61654",
+    "6328",
+    "310671583964"
+  ],
+  "denominator": "1000000000000",
+  "scope": "stored interval reconstruction and independent integer row elimination; not independent operator evaluation"
+}
