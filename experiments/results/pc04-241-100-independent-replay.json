@@ -1,0 +1,60 @@
+[
+  {
+    "h": "241/100",
+    "odd": false,
+    "n": 41,
+    "baselineEntries": 1681,
+    "baselineRadiusMatches": 41,
+    "selectedEntries": 1681,
+    "exactMinorMatches": 41,
+    "marginNumerator": "11655",
+    "marginDenominator": "1000000",
+    "nextGridFails": true,
+    "firstRadius": "3994192",
+    "shares": [
+      "362977857779",
+      "68321603462",
+      "2521491351",
+      "177458818",
+      "4101489",
+      "240862",
+      "8029",
+      "565997238210"
+    ],
+    "denominator": "1000000000000",
+    "scope": "stored interval reconstruction and independent integer row elimination; not independent operator evaluation",
+    "rawBlob": "1cd262f9991fb3c7b852b3d00322512f9a4243b2",
+    "replayBlob": "047e3b0b6133769b72fe32bc4ca66c7a17ffd71a",
+    "rawBytes": 3889063,
+    "replayBytes": 1402601
+  },
+  {
+    "h": "241/100",
+    "odd": true,
+    "n": 41,
+    "baselineEntries": 1681,
+    "baselineRadiusMatches": 41,
+    "selectedEntries": 1681,
+    "exactMinorMatches": 41,
+    "marginNumerator": "196153",
+    "marginDenominator": "1000000",
+    "nextGridFails": true,
+    "firstRadius": "3069146",
+    "shares": [
+      "791251936422",
+      "139259498724",
+      "4902161925",
+      "296533947",
+      "5390524",
+      "318277",
+      "16502",
+      "64284143679"
+    ],
+    "denominator": "1000000000000",
+    "scope": "stored interval reconstruction and independent integer row elimination; not independent operator evaluation",
+    "rawBlob": "72ca31e640ae60e009c410835f16b78d5fcc3720",
+    "replayBlob": "0ec3662e757e33e3eae91fcfdbb4a7fd23ef3d60",
+    "rawBytes": 2816216,
+    "replayBytes": 1249089
+  }
+]
