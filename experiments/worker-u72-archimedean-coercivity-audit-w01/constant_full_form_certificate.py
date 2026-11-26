@@ -183,6 +183,22 @@ def main() -> None:
     mu6_hi = rational6 - pi_lo / 2 - ln2_lo
     assert mu6_hi < F(233562, 1_000_000)
 
+    # A twelve-profile rational trial, checked by the same exact matrix formula.
+    coeffs12 = [F(1), F(-12112, 1000), F(191158, 1000), F(-1674893, 1000),
+                F(8937056, 1000), F(-30707153, 1000), F(70094353, 1000),
+                F(-107384582, 1000), F(109133785, 1000), F(-70568085, 1000),
+                F(26281696, 1000), F(-4291498, 1000)]
+    mass12 = sum((coeffs12[i] * coeffs12[j] * gram_ratio(i, j)
+                  for i in range(12) for j in range(12)), F(0))
+    energy12 = sum((coeffs12[i] * coeffs12[j] * gram_ratio(i, j)
+                    * rational_moment(i, j)
+                    for i in range(12) for j in range(12)), F(0))
+    rational12 = energy12 / mass12
+    assert rational12 == F(1583706824907594442232592989897201,
+                           634175928969695803725059349324000)
+    mu12_hi = rational12 - pi_lo / 2 - ln2_lo
+    assert mu12_hi < F(233324, 1_000_000)
+
     # Exact positive-series lower bound for q_alpha on the constant function.
     arch_inc_lo = F(0)
     for j in range(300):
@@ -297,6 +313,8 @@ def main() -> None:
     print("  two-profile upper is below 0.234669:", mu1_hi < F(234669, 1_000_000))
     print("  certified six-profile Suzuki mu_1 upper:", float(mu6_hi))
     print("  six-profile upper is below 0.233562:", mu6_hi < F(233562, 1_000_000))
+    print("  certified twelve-profile Suzuki mu_1 upper:", float(mu12_hi))
+    print("  twelve-profile upper is below 0.233324:", mu12_hi < F(233324, 1_000_000))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
     print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)

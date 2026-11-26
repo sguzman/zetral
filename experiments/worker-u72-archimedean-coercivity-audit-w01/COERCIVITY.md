@@ -575,3 +575,19 @@ and hence
 `mu_1 <= 1920119516153329/768815005763376 - log(2) - pi/2 < 0.233562`.
 
 `constant_full_form_certificate.py` reconstructs both rational matrices and verifies this cap with exact rational lower bounds on `log(2)` and `pi`; its run reported `0.23356174652192577`. This remains a Rayleigh upper bound from Suzuki's asymptotic, not a lower bound or an evaluation of the true minimizer. The finite linear combination remains in `H^s` for every `s<3/4` and is approximable by smooth compactly supported admissible profiles.
+
+## Twelve-profile rational trial
+
+A larger explicit span gives a slightly sharper cap. With the same `g_j` and `m_ij,r_ij` above, take `g=sum_(j=0)^11 c_j*g_j`, where the fixed rational coefficients are
+
+`(1,-12112/1000,191158/1000,-1674893/1000,8937056/1000,-30707153/1000,70094353/1000,-107384582/1000,109133785/1000,-70568085/1000,26281696/1000,-4291498/1000)`.
+
+Exact reconstruction gives
+
+`(c^T (m_ij*r_ij)c)/(c^T m c) = 1583706824907594442232592989897201/634175928969695803725059349324000`,
+
+so
+
+`mu_1 <= 1583706824907594442232592989897201/634175928969695803725059349324000 - log(2) - pi/2 < 0.233324`.
+
+The exact coefficient ratio and rational endpoint enclosure are both checked by `constant_full_form_certificate.py`. No property of a floating-point optimizer is used in the inequality; this is just one explicit trial vector in the twelve-dimensional subspace. The resulting bracket is `0.2046<mu_1<0.233324`, with the exact upper expression above. As before, this is only a Rayleigh bound derived using Suzuki's small-window asymptotic.
