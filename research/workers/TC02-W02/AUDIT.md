@@ -48,7 +48,7 @@ form.
 
 ## No-allocation obstruction for the stored T832 bounds
 
-The same vector yields a stronger necessary-condition check. Write (H=U-F)
+The same vector yields a stronger necessary-condition check. Write $H=U-F$
 for the upper-energy matrix minus the finite-residual matrix. Exact interval
 quadratic arithmetic gives
 
@@ -56,27 +56,27 @@ quadratic arithmetic gives
 v^T H v <= 10966863453333417539072951774069409600627486121868702452100.
 ```
 
-The seven rate corrections in the generator have the form (f_k r_k r_k^T)
-with (f_k\ge0) (see `experiments/atm03-stable-diagonal-regimes.js`, lines
+The seven rate corrections in the generator have the form $f_k r_k r_k^T$
+with $f_k\ge0$ (see `experiments/atm03-stable-diagonal-regimes.js`, lines
 463–466); the eighth correction is diagonal and nonnegative, and the row-radius
 correction is also nonnegative. For the rank corrections named `second`,
 `fourth`, and `sixth`, interval evaluation and the positive lower endpoints of
-their factor ratios give exact nonnegative coefficients (b_k). For the first
+their factor ratios give exact nonnegative coefficients $b_k$. For the first
 two eighth-coordinate corrections, the saved `eighthUpper` values and the
-positive lower endpoint of the eighth factor give coefficients (b_{8,i}).
-Using the total allocation denominator (D=10^{12}), their individual losses
-along (v) are bounded below by (D b_j/x_j), where (x_j) denotes the
+positive lower endpoint of the eighth factor give coefficients $b_{8,i}$.
+Using the total allocation denominator $D=10^{12}$, their individual losses
+along $v$ are bounded below by $D b_j/x_j$, where $x_j$ denotes the
 corresponding rank share or eighth-coordinate weight.
 
-The rank shares and all eighth-coordinate weights together sum to (D). The
+The rank shares and all eighth-coordinate weights together sum to $D$. The
 continuous Cauchy bound therefore gives
 
-\[
+$$
 \sum_j D b_j/x_j \;\ge\; (\sum_j\sqrt{b_j})^2.
-\]
+$$
 
 To avoid any floating square-root dependence, the script uses the exact integer
-lower bound (S=\sum_j\lfloor\sqrt{b_j}\rfloor). It obtains
+lower bound $S=\sum_j\lfloor\sqrt{b_j}\rfloor$. It obtains
 
 ```text
 S = 175441256152138039175746614531
@@ -86,17 +86,19 @@ S^2 - upper bound on v^T H v
 ```
 
 Thus, for the fixed T832 finite components, factor bounds, and this tail
-allocation scheme, **no positive real allocation with total budget (D)** can
-make the lower-comparison quadratic nonnegative along (v). This includes all
+allocation scheme, **no positive real allocation with total budget $D$** can
+make the lower-comparison quadratic nonnegative along $v$. This includes all
 positive integer allocations as a subset. It is a necessary-condition
 obstruction for the stored bounds, not a result about other trial spaces,
 larger cutoffs, tighter analytic remainders, or the original operator.
+Since $D$ cancels from the continuous Cauchy bound, increasing only the
+integer share-grid resolution cannot remove this obstruction.
 
 The exact integer comparisons also give
-\[
+$$
 \frac{7}{20}<\frac{H_{\max}}{P_{\min}}<\frac{9}{25},
-\]
-where (H_{\max}) is the upper bound on (v^T(U-F)v) and (P_{\min}) is the
+$$
+where $H_{\max}$ is the upper bound on $v^T(U-F)v$ and $P_{\min}$ is the
 unavoidable allocation penalty lower bound. Numerically their ratio is about
 `0.35630259`. If all retained penalty coefficients were uniformly scaled, they
 would have to fall below roughly 35.63% of their current values just to remove
@@ -123,7 +125,7 @@ The script independently concatenates `experiments/results/tc02-49-20-even-m1228
 
 The separate `t832_allocation_obstruction.py` performs the exact headroom and
 Cauchy lower-bound argument above. It omits nonnegative rank terms, tail
-coordinates outside the support of (v), and row radii, which can only weaken
+coordinates outside the support of $v$, and row radii, which can only weaken
 the obstruction. It allows a continuous allocation simplex, which is more
 permissive than the integer replay allocations. The positivity of all omitted
 rank and diagonal corrections follows from their outer-product / nonnegative
