@@ -4,7 +4,7 @@ Date: 2026-11-26 UTC. Baseline: `89352f906744efe6afecda3cf69410030660dc52` (LXV 
 
 ## Result
 
-Lean kernel verification establishes three scalar lemmas over a field with compatible linear order.
+Lean kernel verification establishes five lemmas over a field with compatible linear order.
 
 For positive weights \(w_i,w_j\),
 
@@ -26,9 +26,18 @@ Finally, if an entry error \(e\) satisfies \(|e|\le r\), then
 
 This is the pointwise signed-error estimate used when each symmetric off-diagonal interval radius is allocated to its two weighted diagonal row errors.
 
+The finite-sum theorem checks the complete real-valued weighted row-radius step. For a symmetric radius matrix (r_{ij}=r_{ji}), positive weights (w_i>0), and an entry-error matrix bounded entrywise by (|e_{ij}|le r_{ij}), it proves
+
+\[
+\sum_{i,j}e_{ij}x_ix_j\ge
+-\sum_i\left(\sum_j r_{ij}\frac{w_j}{w_i}\right)x_i^2
+\]
+
+for every vector (x). The proof sums the signed-entry inequality over ordered pairs, swaps indices in the second half using radius symmetry, and identifies the result with the row allowance.
+
 ## Scope limit
 
-The formal file proves the scalar and single-entry statements only. It does not formalize summation over a matrix, use of symmetry to identify the two row contributions, diagonal interval radii, the source's exact outward rounding/ceil operations, or any PC65/LXVI/LXVII data. Those finite-sum and source-validity steps remain to be checked separately. No candidate comparison, original-form evaluation, RH deduction, or operator construction is certified here.
+The formal file does not check the source's outward interval rounding/ceil operations, the midpoint contribution or diagonal interval radii, or any campaign data. In particular, it assumes the matrix error is symmetric and each entry is bounded by the supplied symmetric radius. No candidate comparison, original-form evaluation, RH deduction, or operator construction is certified here.
 
 ## Reproduction and provenance
 
@@ -45,6 +54,8 @@ The successful target build reports:
 weighted_abs_cross: [propext, Classical.choice, Quot.sound]
 weighted_radius_cross: [propext, Classical.choice, Quot.sound]
 signed_entry_error_lower: [propext, Classical.choice, Quot.sound]
+symmetric_share_eq_row: [propext, Classical.choice, Quot.sound]
+symmetric_entry_error_row_bound: [propext, Classical.choice, Quot.sound]
 ```
 
 No `sorryAx` or custom axiom appears. The `Classical.choice` dependency comes from the Mathlib field/order hierarchy and finite build environment; all displayed axioms are standard Lean/Mathlib foundations. The module is parameterized by field/order typeclasses and does not evaluate any campaign constants.
