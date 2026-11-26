@@ -508,3 +508,40 @@ cancellation, the width guard caught double subtraction in the isolated
 `M(1/2)` term. The fixed-point precision was raised to 90 digits and the
 isolated term corrected before the successful run. These were implementation
 failures, not mathematical counterexamples.
+
+### U76-08: first even off-diagonal, analytic setup
+
+For the normalized cosine vectors `phi_0=1/sqrt(h)` and
+`phi_2=sqrt(2/h)cos(2 pi x/h)`, the direct overlap formula gives
+
+    S_02(t)=-(sqrt(2)/pi) sin(w_2 t),  w_2=2 pi/h.
+
+There is no diagonal subtraction, pole, or hyperbolic-tail term. Since
+`w_2 h=2 pi`,
+
+    L(a)=integral_0^h exp(-a t)sin(w_2 t)dt
+        =w_2(1-exp(-a h))/(a^2+w_2^2),
+    A_02=-(sqrt(2)/pi)[L(-1/2)+L(1/2)],
+    P_02=sum_q Lambda(q)/sqrt(q) S_02(log q),
+    D_02=-(sqrt(2)/pi) sum_(j>=0) L(2j+1/2),
+    G_02=A_02-P_02-D_02.
+
+The initial parameters `a_0=1/2` and `a_1=5/2` are evaluated in closed
+form. For `j>=2`, put `f(t)=sin(w_2 t)`. Its derivatives agree at both
+endpoints, and only odd derivatives are nonzero there:
+`f^(k)(0)=f^(k)(h)=(-1)^((k-1)/2) w_2^k`. Thus for N=220,
+
+    sum_(j>=2) L(a_j)
+      = sum_(odd k=1,...,N-1) (-1)^((k-1)/2) w_2^k
+            (Z^(2)_(k+1)-E^(2)_(k+1)) + R,
+    Z^(2)_r=2^-r zeta(r,9/4),
+    E^(2)_r=sum_(j>=2) exp(-a_j h)/a_j^r,
+    |R|<=w_2^N Z^(2)_(N+1).
+
+The first omitted rate is adequate because `a_2=9/2>w_2` at h=2.51;
+the two smaller rates were isolated rather than included in the geometric
+remainder. A dedicated 2x2 extraction of the existing compressed matrix is a
+comparator only. No G_02 interval or comparison is yet claimed. The next test
+is whether the direct interval from this formula lies wholly inside that
+shared comparator; a failure must first be separated into formula mapping,
+tail, and interval-driver causes.

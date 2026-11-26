@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/u76-odd-series-interval.yml'
       - 'experiments/u76-odd-series-interval.js'
+      - 'experiments/u76-compressed-entry-probe-2.js'
 permissions:
   contents: write
 concurrency:
@@ -22,10 +23,13 @@ jobs:
         run: |
           set -euo pipefail
           nix develop --command node --version
+          nix develop --command node --check experiments/u76-compressed-entry-probe-2.js
+          nix develop --command node experiments/u76-compressed-entry-probe-2.js
           nix develop --command node --check experiments/u76-odd-series-interval.js
           nix develop --command node experiments/u76-odd-series-interval.js 2>&1 | tee experiments/results/u76-odd-series-interval.log
           jq -e '.oddDirectIntervalContainedInSharedCompressedInterval == true' experiments/results/u76-odd-series-interval.json > /dev/null
-          jq '{parameters, intervals: {oddArchimedean:.intervals.oddArchimedean, oddPrimeTerm:.intervals.oddPrimeTerm, oddSubtractedKernel:.intervals.oddSubtractedKernel, oddTailBound:.intervals.oddTailBound, oddFullEntry:.intervals.oddFullEntry, oddCompressedSharedInterval:.intervals.oddCompressedSharedInterval}, overlap:.oddIntervalOverlapsSharedCompressedInterval, contained:.oddDirectIntervalContainedInSharedCompressedInterval, margins:.oddContainmentMargins, caveat}' experiments/results/u76-odd-series-interval.json > experiments/results/u76-odd-series-summary.json
+          jq -e '.evenOffDiagonalContained == true' experiments/results/u76-odd-series-interval.json > /dev/null
+          jq '{parameters, intervals: {oddFullEntry:.intervals.oddFullEntry, oddCompressedSharedInterval:.intervals.oddCompressedSharedInterval, oddTailBound:.intervals.oddTailBound, evenOffDiagonalFullEntry:.intervals.evenOffDiagonalFullEntry, evenOffDiagonalCompressedSharedInterval:.intervals.evenOffDiagonalCompressedSharedInterval, evenOffDiagonalTailBound:.intervals.evenOffDiagonalTailBound}, contained:{odd:.oddDirectIntervalContainedInSharedCompressedInterval,evenOffDiagonal:.evenOffDiagonalContained}, margins:{odd:.oddContainmentMargins,evenOffDiagonal:.evenOffDiagonalMargins}, caveat}' experiments/results/u76-odd-series-interval.json > experiments/results/u76-odd-series-summary.json
       - name: Preserve failure details
         if: failure()
         uses: actions/upload-artifact@v4
@@ -34,6 +38,7 @@ jobs:
           path: |
             experiments/results/u76-odd-series-interval.log
             experiments/results/u76-odd-series-interval.json
+            experiments/results/u76-compressed-entry-probe-2.json
           if-no-files-found: ignore
       - name: Commit successful runner readback
         if: success()
@@ -41,7 +46,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add experiments/results/u76-odd-series-interval.json experiments/results/u76-odd-series-summary.json
+          git add experiments/results/u76-odd-series-interval.json experiments/results/u76-odd-series-summary.json experiments/results/u76-compressed-entry-probe-2.json
           if git diff --cached --quiet; then
             echo 'Runner outputs match the committed artifacts.'
             exit 0

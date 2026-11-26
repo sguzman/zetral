@@ -17,9 +17,9 @@ places it wholly inside the shared compressed interval; Actions run
 constant even continuous component now has an exact paired exponential-series
 formula, closed rational part, and explicit geometric remainder bound in
 `research/positivity/U76-01-direct-arithmetic-Gram.md`. Its next acceptance
-step is an independent audit of the U76-07 odd-entry interval implementation,
-then derive and enclose the next direct Gram entry before scaling to a principal
-block. The first odd diagonal is now contained in its shared compressed
+step is the U76-08 direct `G_02` check against a 2x2 shared compressed
+comparator, followed by an independent audit of the U76-07 endpoint/zeta
+enclosures. The first odd diagonal is now contained in its shared compressed
 interval on Actions run 45909728639. Preserve the implementation failures and
 do not treat two diagonal matches as a full matrix audit. Keep B1 analytical extension
 on hold until the original-form continuous mapping is independently audited.

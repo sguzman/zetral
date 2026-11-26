@@ -315,3 +315,22 @@ found double subtraction in the isolated `M(1/2)` formula and was rejected by
 the width guard. The corrected exact-term conversion and isolated term pass
 the hosted containment check. Next independently audit the interval formulas
 and implement the next direct Gram entry before increasing block size.
+
+## U76-08 precise question — first even off-diagonal
+
+Does an outward-rounded direct evaluation of `G_02` from the original Weil
+arithmetic form lie wholly inside the shared compressed `A[0,1]` interval at
+`h=251/100`? The direct correlation is
+`S_02(t)=-(sqrt(2)/pi)sin(2 pi t/h)`, with no diagonal subtraction. The
+continuous kernel sum is accelerated by isolating `a_0=1/2` and `a_1=5/2`,
+then using the endpoint expansion on `a_j>=9/2`; the exact formula and tail
+bound are in `research/positivity/U76-01-direct-arithmetic-Gram.md`.
+
+The primary uncertainty is whether the direct correlation, normalization,
+prime term, and continuous term map to the same matrix entry selected by the
+compressed routine. Acceptance is strict interval containment plus a direct
+derivation of every term. A mismatch is accepted only after distinguishing a
+mathematical discrepancy from the shared-basis map or an interval-driver bug.
+The hosted comparator uses `lowCount=2`; it remains shared code and is not an
+independent evaluation. No full-block or positivity claim is in scope for
+this scalar check.

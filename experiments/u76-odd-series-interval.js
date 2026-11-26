@@ -258,20 +258,20 @@ function bernoulliNumbers(nmax) {
   return B;
 }
 const bernoulli=bernoulliNumbers(160);
-const emX=rat(517n,4n); // 129.25
 const emDebug=[];
-function hurwitzZetaInterval(s) {
+function hurwitzZetaInterval(s, startNumerator=5n) {
   let prefix=ZERO;
   for(let n=0;n<128;n++) {
-    prefix=add(prefix,fracInterval(fpow(frac(4n,BigInt(4*n+5)),s)));
+    prefix=add(prefix,fracInterval(fpow(frac(4n,BigInt(4*n)+startNumerator),s)));
   }
-  let tail=add(fracInterval(frac(4n**BigInt(s-1),BigInt(s-1)*517n**BigInt(s-1))),
-               fracInterval(frac(4n**BigInt(s),2n*517n**BigInt(s))));
+  const xNumerator=4n*128n+startNumerator;
+  let tail=add(fracInterval(frac(4n**BigInt(s-1),BigInt(s-1)*xNumerator**BigInt(s-1))),
+               fracInterval(frac(4n**BigInt(s),2n*xNumerator**BigInt(s))));
   for(let m=1;m<=80;m++) {
     const rising=risingFactorial(BigInt(s),2*m-1);
     const coefficient=fdiv(bernoulli[2*m],frac(factorial(2*m)));
     const exponent=s+2*m-1;
-    const xreciprocal=frac(4n**BigInt(exponent),517n**BigInt(exponent));
+    const xreciprocal=frac(4n**BigInt(exponent),xNumerator**BigInt(exponent));
     const emTerm=fmul(fmul(coefficient,rising),xreciprocal);
     if(s===2 && [1,2,40,79,80].includes(m)) emDebug.push({m,coefficient:fracInterval(coefficient).map(decimal),rising:fracInterval(rising).map(decimal),xreciprocal:fracInterval(xreciprocal).map(decimal),term:fracInterval(emTerm).map(decimal)});
     tail=add(tail,fracInterval(emTerm));
@@ -280,7 +280,7 @@ function hurwitzZetaInterval(s) {
   const risingBound=risingFactorial(BigInt(s),r-1);
   const twoPiPower=powI(scale(pi,2n),r);
   const exponent=s+r-1;
-  const rationalRemainder=frac(4n*risingBound[0]*4n**BigInt(exponent),517n**BigInt(exponent));
+  const rationalRemainder=frac(4n*risingBound[0]*4n**BigInt(exponent),xNumerator**BigInt(exponent));
   const remainder=divI(fracInterval(rationalRemainder),twoPiPower);
   const raw=add(prefix,tail);
   return [raw[0]-remainder[1],raw[1]+remainder[1]];
@@ -328,6 +328,7 @@ for(const {q,p} of primePowers) {
 }
 const Nodd=220;
 const zeta=new Map(); for(let r=2;r<=Nodd+1;r++) zeta.set(r,scale(hurwitzZetaInterval(r),1n,2n**BigInt(r)));
+const zeta22=new Map(); for(let r=2;r<=Nodd+1;r++) zeta22.set(r,scale(hurwitzZetaInterval(r,9n),1n,2n**BigInt(r)));
 let endpointZero=ZERO, endpointH=ZERO;
 const E=new Map();
 for(let r=1;r<=Nodd;r++) {
@@ -336,6 +337,14 @@ for(let r=1;r<=Nodd;r++) {
   const a40=rat(161n,2n), first=divI(expNeg(mul(hOdd,a40)),powI(a40,r));
   const etail=divI(first,sub(ONE,expNeg(scale(hOdd,2n))));
   E.set(r,[es[0],es[1]+etail[1]]);
+}
+const E22=new Map();
+for(let r=1;r<=Nodd;r++) {
+  let es=ZERO;
+  for(let j=2;j<=40;j++) { const a=rat(BigInt(4*j+1),2n); es=add(es,divI(expNeg(mul(hOdd,a)),powI(a,r))); }
+  const a41=rat(165n,2n), first=divI(expNeg(mul(hOdd,a41)),powI(a41,r));
+  const etail=divI(first,sub(ONE,expNeg(scale(hOdd,2n))));
+  E22.set(r,[es[0],es[1]+etail[1]]);
 }
 for(let k=1;k<Nodd;k++) endpointZero=add(endpointZero,mul(endpointDerivative(k,false),zeta.get(k+1)));
 for(let k=0;k<Nodd;k++) endpointH=add(endpointH,mul(endpointDerivative(k,true),E.get(k+1)));
@@ -351,7 +360,7 @@ oddKernel=[oddKernel[0]-remainderBound[1],oddKernel[1]+remainderBound[1]];
 const oddEntry=add(sub(sub(sub(archOdd,oddPrime),pole),oddKernel),hyperbolicTail);
 const compressedOdd=JSON.parse(fs.readFileSync("experiments/results/u76-compressed-entry-probe.json","utf8")).output.find(x=>x.odd);
 const oddScale=BigInt(compressedOdd.scale), oddCompressed=compressedOdd.A[0][0].map(x=>BigInt(x)*(Q/oddScale));
-result.status="outward-rounded fixed-point interval evaluation of independent G00 and first-odd formulas";
+result.status="outward-rounded fixed-point interval evaluation of independent G00, G11, and G02 formulas";
 result.parameters.oddIntegrationByParts=Nodd; result.parameters.hurwitzTailTerms=80; result.parameters.hurwitzPrefix=128; result.parameters.exponentialEndpointTerms=39;
 result.intervals.oddArchimedean=archOdd.map(decimal); result.intervals.oddPrimeTerm=oddPrime.map(decimal); result.intervals.oddSubtractedKernel=oddKernel.map(decimal); result.intervals.oddFullEntry=oddEntry.map(decimal); result.intervals.oddCompressedSharedInterval=oddCompressed.map(decimal); result.intervals.oddTailBound= remainderBound.map(decimal);
 result.intervals.zeta2=zeta.get(2).map(decimal); result.intervals.zeta221=zeta.get(221).map(decimal); result.intervals.endpointZero=endpointZero.map(decimal); result.intervals.endpointH=endpointH.map(decimal); result.intervals.E1=E.get(1).map(decimal); result.intervals.E220=E.get(220).map(decimal);
@@ -360,7 +369,38 @@ result.oddIntervalOverlapsSharedCompressedInterval=oddEntry[0]<=oddCompressed[1]
 result.oddDirectIntervalContainedInSharedCompressedInterval=oddEntry[0]>=oddCompressed[0]&&oddEntry[1]<=oddCompressed[1];
 result.oddContainmentMargins=[decimal(oddEntry[0]-oddCompressed[0]),decimal(oddCompressed[1]-oddEntry[1])];
 result.caveat="The direct arithmetic formulas are evaluated independently; comparators come from the shared compressed implementation. All finite arithmetic is fixed-point outward-rounded; Hurwitz-zeta uses the stated Euler-Maclaurin integral-remainder majorant.";
+
+// First even off-diagonal G_02, with no diagonal subtraction term.
+const sqrtTwo=sqrtIntegerInterval(2n), w02=scale(wOdd,2n), coeff02=neg(divI(sqrtTwo,pi));
+function sineLaplace(a) {
+  const ah=mul(a,hOdd),e=a[0]<0n?divI(ONE,expNeg(neg(ah))):expNeg(ah);
+  return divI(mul(w02,sub(ONE,e)),add(mul(a,a),mul(w02,w02)));
+}
+const arch02=mul(coeff02,add(sineLaplace(rat(-1n,2n)),sineLaplace(rat(1n,2n))));
+let prime02=ZERO;
+for(const {q,p} of primePowers) {
+  const x=mul(w02,logInteger(q)), si=trigTaylor(x,false);
+  prime02=add(prime02,mul(mul(mul(logInteger(p),divI(ONE,sqrtIntegerInterval(q))),coeff02),si));
+}
+let sineSeries=sineLaplace(rat(1n,2n));
+ sineSeries=add(sineSeries,sineLaplace(rat(5n,2n)));
+for(let k=1;k<Nodd;k+=2) {
+  const derivative=scale(powI(w02,k),BigInt(k%4===1?1:-1));
+  sineSeries=add(sineSeries,mul(derivative,sub(zeta22.get(k+1),E22.get(k+1))));
+}
+const sineRemainder=mul(powI(w02,Nodd),zeta22.get(Nodd+1));
+sineSeries=[sineSeries[0]-sineRemainder[1],sineSeries[1]+sineRemainder[1]];
+const kernel02=mul(coeff02,sineSeries), entry02=sub(sub(arch02,prime02),kernel02);
+const compressedEven2=JSON.parse(fs.readFileSync("experiments/results/u76-compressed-entry-probe-2.json","utf8")).output.find(x=>!x.odd);
+const scale02=BigInt(compressedEven2.scale), compressed02=compressedEven2.A[0][1].map(x=>BigInt(x)*(Q/scale02));
+result.parameters.evenOffDiagonalIsolatedRates=["1/2","5/2"]; result.parameters.evenOffDiagonalTailStart="9/2";
+result.intervals.evenOffDiagonalArchimedean=arch02.map(decimal); result.intervals.evenOffDiagonalPrimeTerm=prime02.map(decimal); result.intervals.evenOffDiagonalSubtractedKernel=kernel02.map(decimal); result.intervals.evenOffDiagonalTailBound=sineRemainder.map(decimal); result.intervals.evenOffDiagonalFullEntry=entry02.map(decimal); result.intervals.evenOffDiagonalCompressedSharedInterval=compressed02.map(decimal);
+result.evenOffDiagonalOverlap=entry02[0]<=compressed02[1]&&compressed02[0]<=entry02[1];
+result.evenOffDiagonalContained=entry02[0]>=compressed02[0]&&entry02[1]<=compressed02[1];
+result.evenOffDiagonalMargins=[decimal(entry02[0]-compressed02[0]),decimal(compressed02[1]-entry02[1])];
 const serialized = JSON.stringify(result, null, 2) + "\n";
 fs.writeFileSync("experiments/results/u76-odd-series-interval.json", serialized);
 console.log(serialized);
 if(oddEntry[1]-oddEntry[0]>Q/10n**50n) throw new Error("odd-entry interval is wider than 10^-50; inspect saved interval components");
+if(entry02[1]-entry02[0]>Q/10n**50n) throw new Error("G02 interval is wider than 10^-50; inspect saved interval components");
+if(!result.evenOffDiagonalContained) throw new Error("direct G02 interval is not contained in the shared compressed interval");
