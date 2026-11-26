@@ -1,0 +1,58 @@
+[
+  {
+    "parity": "even",
+    "h": "5/2",
+    "n": 50,
+    "M": 20480,
+    "T": 1024,
+    "independentConstruction": "untransformed componentIntervals; no row congruence or transformed eighth bounds",
+    "baselineReconstruction": {
+      "matrixEntries": 2500,
+      "radii": 50,
+      "matchesStored": true,
+      "positiveLeadingMinors": 48,
+      "firstFailure": 49,
+      "failedPivotNegative": true
+    },
+    "proposalOriginalCoordinates": {
+      "positiveLeadingMinors": 7,
+      "firstFailure": 8,
+      "failedPivotNegative": true,
+      "marginGrid": null
+    },
+    "transformedReplay": {
+      "positiveLeadingMinors": 50,
+      "marginNumerator": "127110",
+      "marginDenominator": "1000000"
+    },
+    "interpretation": "Finite comparison only. A failure here would show the proposal needs its row transform for this certificate; it would not refute the underlying analytic inequality or imply an operator consequence."
+  },
+  {
+    "parity": "odd",
+    "h": "5/2",
+    "n": 50,
+    "M": 20480,
+    "T": 1024,
+    "independentConstruction": "untransformed componentIntervals; no row congruence or transformed eighth bounds",
+    "baselineReconstruction": {
+      "matrixEntries": 2500,
+      "radii": 50,
+      "matchesStored": true,
+      "positiveLeadingMinors": 44,
+      "firstFailure": 45,
+      "failedPivotNegative": true
+    },
+    "proposalOriginalCoordinates": {
+      "positiveLeadingMinors": 25,
+      "firstFailure": 26,
+      "failedPivotNegative": true,
+      "marginGrid": null
+    },
+    "transformedReplay": {
+      "positiveLeadingMinors": 50,
+      "marginNumerator": "211333",
+      "marginDenominator": "1000000"
+    },
+    "interpretation": "Finite comparison only. A failure here would show the proposal needs its row transform for this certificate; it would not refute the underlying analytic inequality or imply an operator consequence."
+  }
+]
