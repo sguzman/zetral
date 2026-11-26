@@ -8,6 +8,19 @@ analytic theorems and from any RH implication.
 
 ## Priority order
 
+### Current execution note — LXXVI (2026-11-26)
+
+The corrected support-h diagnostic was replayed successfully on Actions run
+45901442328; runner output matches local canonical JSON after removing runtime
+metadata, but remains floating-point evidence without an error enclosure. The
+constant even continuous component now has an exact paired exponential-series
+formula and explicit absolute tail bound in
+`research/positivity/U76-01-direct-arithmetic-Gram.md`. Its next acceptance
+step is outward-rounded evaluation of the finite partial sum and comparison
+with the compressed continuous decomposition, followed by the odd first
+diagonal. Keep B1 analytical extension
+on hold until the original-form continuous mapping is independently audited.
+
 ### B1 — Analytical extension beyond finite cutoffs
 
 - **Question / hypothesis:** Can the certified finite quadratic-form positivity

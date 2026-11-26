@@ -8,6 +8,10 @@ LXXV closed as a finite candidate at h=2.51 after the hosted exact stored-compon
 
 The first low-entry mismatch used the wrong support length. Correcting to the length-h cosine basis identifies the index-parity sectors and gives a symbolic match for the prime-power term. Direct double-precision midpoint values on that basis are within roughly 10^-12 of the compressed exact intervals, but the continuous-term identity and rigorous quadrature enclosure remain open. The earlier comparison is preserved as a failed convention check. See the direct Gram derivation and diagnostics in research/positivity/U76-01-direct-arithmetic-Gram.md.
 
+The revised support-h diagnostic completed on locked-Nix Actions run 45901442328 and runner commit f077faf81d270491db7b5a8851ec796f643717ff. Its canonical JSON matches the local result after removing runtime metadata. This is reproducibility evidence for a floating-point midpoint calculation, not a rigorous enclosure or original-form certificate. The continuous-term identity remains the next mathematical target.
+
+An analytical reduction now evaluates the constant even archimedean entry exactly and expresses its subtracted-kernel term as a convergent paired exponential series with O(j^-2) summands and an explicit absolute tail bound. Outward-rounded evaluation of the finite sum and comparison to the compressed entry formula are still open; see the U76-03 checkpoint in the direct Gram note.
+
 ## Campaigns XII–LVII
 
 | Campaign | Outcome and limitations |

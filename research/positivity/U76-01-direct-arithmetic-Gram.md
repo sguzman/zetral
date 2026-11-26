@@ -181,3 +181,60 @@ experiments/results/u76-support-h-direct-diagnostic.json.
 Next derive the archimedean and subtracted-kernel entry identity, replace
 midpoint estimates with outward-rounded quadrature, and extend to principal
 blocks. No original-form certificate or full 52-by-52 match is established.
+
+## U76-03: exact series for the constant even continuous component
+
+For the normalized constant basis vector on [0,h], the correlation is
+`S_00(t)=2(1-t/h)`. The archimedean term therefore has the elementary exact
+value
+
+    A_00 = integral_0^h 4 cosh(t/2)(1-t/h) dt
+          = 16 (cosh(h/2)-1)/h.
+
+Using `K(t)=exp(-t/2)/(1-exp(-2t))`, the subtracted-kernel integral is
+
+    D_00 = integral_0^h [S_00(t)-2 exp(-t/2)] K(t) dt
+          = 2 sum_{j>=0} [J_h(2j+1/2)-E_h(2j+1)],
+
+where
+
+    J_h(a) = 1/a - (1-exp(-a h))/(h a^2),
+    E_h(b) = (1-exp(-b h))/b.
+
+This follows by expanding `(1-exp(-2t))^-1=sum_{j>=0} exp(-2jt)` for `t>0`
+and integrating each paired summand. The pairing is essential: the two
+separate sums diverge, while their difference is O_h(j^-2). The integral is
+locally finite because `S_00(t)-2exp(-t/2)=O(t)` cancels the `1/(2t)` kernel
+singularity. The formula is an exact series representation of this one
+continuous component; it is not yet a numerical enclosure. A certified
+implementation must bound the paired-series tail uniformly and enclose the
+exponentials, then combine this result with the exact archimedean term, pole,
+tail, and prime terms. No interval computation is claimed here.
+
+An explicit absolute tail bound follows from writing each pair as
+
+    J_h(a)-E_h(b) = 1/(2ab)-1/(h a^2)
+                     + exp(-a h)/(h a^2)+exp(-b h)/b,
+    a=2j+1/2, b=a+1/2.
+
+For every h>0, `exp(-a h)<=1` and `exp(-b h)<=1/(b h)`, so
+
+    |J_h(a)-E_h(b)| <= (1/2+3/h)/a^2.
+
+Consequently, truncating D_00 after j=0,...,J-1 leaves absolute error at
+most
+
+    2(1/2+3/h) [1/(2J+1/2)^2 + 1/(2(2J+1/2))].
+
+Here the final bracket bounds the decreasing sum by its first omitted term
+plus the integral from J to infinity. This tail estimate is rigorous but
+coarse; it does not enclose the finite partial sum, whose exponentials still
+need outward-rounded evaluation. At h=251/100, the constant is finite and
+explicit, so the bound can be made arbitrarily small as J grows.
+
+This is the first explicit continuous-term reduction independent of the
+compressed entry routine. The odd first diagonal and general off-diagonal
+entries still require separate formulas. The reduced problem now has a
+specific falsification target: independently enclose `A_00-D_00` and compare
+it with the compressed code's `K(0,0)` plus its pole and diagonal corrections,
+keeping the prime contribution separate.

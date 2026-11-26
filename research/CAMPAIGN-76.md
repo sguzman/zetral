@@ -195,8 +195,32 @@ rederived entrywise.
 
 The revised direct script and result are
 experiments/u76-support-h-direct-diagnostic.js and
-experiments/results/u76-support-h-direct-diagnostic.json. The Actions
-workflow has been extended to run it under locked Nix but has not yet been
-dispatched with this new support convention. Next derive the continuous
-component identity and add a rigorous interval quadrature for the two low
-entries; full 52-by-52 reconstruction remains premature.
+experiments/results/u76-support-h-direct-diagnostic.json. Actions run
+45901442328 succeeded under locked Nix and pushed runner commit
+f077faf81d270491db7b5a8851ec796f643717ff. The runner's support-h result,
+after deleting only its runtime label, has canonical JSON SHA-256
+76b7ec4950448c32ec504947dd024114e7bb21ea679617f3ebb6d713f4da809e, identical
+to the local file. This verifies cross-runtime reproducibility of the
+floating-point diagnostic only; it supplies neither an interval enclosure nor
+an independent evaluation of the continuous terms. Next derive the
+continuous-component identity and add rigorous interval quadrature for the
+two low entries; full 52-by-52 reconstruction remains premature.
+
+## U76-03 analytical checkpoint — 2026-11-26
+
+For the constant even cosine vector on `[0,h]`, the correlation is
+`S_00(t)=2(1-t/h)`. The archimedean integral evaluates exactly to
+`16(cosh(h/2)-1)/h`. Expanding the denominator of the subtracted kernel and
+pairing terms gives the exact series
+`D_00=2 sum_{j>=0}(J_h(2j+1/2)-E_h(2j+1))`, where
+`J_h(a)=1/a-(1-exp(-a h))/(h a^2)` and `E_h(b)=(1-exp(-b h))/b`.
+The pair is O_h(j^-2); the unpaired sums diverge. This supplies an independent
+closed series for one continuous component, but no numerical enclosure or
+comparison to the compressed decomposition has been performed. An absolute
+tail bound after J terms is proved in the direct Gram note:
+`2(1/2+3/h)[(2J+1/2)^-2+1/(2(2J+1/2))]`. The next step is outward-rounded
+evaluation of the finite partial sum and comparison with the compressed
+continuous decomposition, followed by a derivation of the odd first diagonal.
+The method is analytically distinct from
+the midpoint diagnostic and may falsify a term or normalization in the
+compressed entry path.
