@@ -732,3 +732,5 @@ The finite-dimensional optimality gap can also be checked exactly. `jacobi_ritz5
 `2.4971641855 < lambda_min(A_56,M_56) < 2.4971641856`.
 
 The stored rational trial quotient `2.497164185544405...` is verified as an exact rational to lie inside this same interval. Thus this trial is within `10^-10` of the exact N=56 Ritz minimum; the exact Ritz endpoint also gives `rho_56<0.233220679`. This refines finite-dimensional optimality only and does not give a rate for convergence of `rho_N` to `mu_1`. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_ritz56_certificate.py`.
+
+At N=64 the Jacobi trial search and exact fixed-vector certificate improve the cap to `mu_1<0.233220`. The certificate stores all rational coefficients and the exact rational Rayleigh part; no optimizer accuracy is assumed in the proof. The gain beyond N=56 is small. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial64_certificate.py`.
