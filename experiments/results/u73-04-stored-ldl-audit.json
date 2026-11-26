@@ -1,0 +1,33 @@
+{
+  "auditSourceBlob": "6812761998f45508a2b6ed7d297756c6496cbe16",
+  "results": [
+    {
+      "sourcePath": "experiments/results/u73-249-100-even-t1024-m20480-rank-tightened-replay.json",
+      "sourceBlob": "2f0cb21a3262218348b08de29a3bf8b3cd6d0943",
+      "h": "249/100",
+      "odd": false,
+      "n": 49,
+      "matchedPrincipalMinors": 49,
+      "marginNumerator": "164539",
+      "marginDenominator": "1000000",
+      "passingGridPositiveMinors": 49,
+      "nextGridPositiveMinors": 48,
+      "nextGridFailedMinorSign": -1,
+      "scope": "Stored integer matrix only; symmetric fraction-free LDL with exact division. Interval reconstruction and original-form evaluation not established."
+    },
+    {
+      "sourcePath": "experiments/results/u73-249-100-odd-t1024-m20480-rank-tightened-replay.json",
+      "sourceBlob": "5baa081111d10606bfec740ebbdf9180f80b9bf5",
+      "h": "249/100",
+      "odd": true,
+      "n": 49,
+      "matchedPrincipalMinors": 49,
+      "marginNumerator": "236761",
+      "marginDenominator": "1000000",
+      "passingGridPositiveMinors": 49,
+      "nextGridPositiveMinors": 48,
+      "nextGridFailedMinorSign": -1,
+      "scope": "Stored integer matrix only; symmetric fraction-free LDL with exact division. Interval reconstruction and original-form evaluation not established."
+    }
+  ]
+}
