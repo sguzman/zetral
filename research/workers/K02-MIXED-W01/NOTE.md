@@ -234,3 +234,55 @@ I evaluated the finite sum in binary64 and approximated the omitted j>M tail by 
 | 100 | 98.819041 | 98.812021 | 98.809948 | 98.809340 |
 
 The computed residues grow strongly with the node index over this range, and the cutoff drift for these fixed nodes decreases with M. This suggests that regular T log(T) quantiles may already have non-square-summable canonical-product residues, so artificial close pairs might not be needed to make M_N diverge in the commuting model. This is not established: the density-integral tail omits sum-integral corrections, binary64 was used, and no uniform-in-n error bound or asymptotic for the infinite-product residues was derived. It is a diagnostic and candidate asymptotic question, not a theorem or evidence about zeta ordinates. A proof would require controlling the singular discrete sum near j=n and the tail uniformly as n grows.
+
+## Regular quantiles: residue asymptotic (analytic derivation)
+
+The regular-node diagnostic above admits an analytic asymptotic; artificial close pairs are not needed to make the canonical-product residues large in this abstract model. Define (F(t)=t\log t/(2\pi)) for (t\ge1), and let (t_n=F^{-1}(n)), (n\ge1). Then (N_+(T)=\lfloor F(T)\rfloor= T\log T/(2\pi)+O(1)), and (\sum_n t_n^{-2}<\infty). The product
+
+\[
+\Delta(z)=\prod_{n\ge1}(1-z^2/t_n^2)
+\]
+
+therefore converges locally uniformly and has simple zeros (\pm t_n). Its positive-node residue magnitude is
+
+\[
+|a_n|=\left|\frac1{t_n\Delta'(t_n)}\right|
+=\frac12\exp(-S_n),\qquad
+S_n=\sum_{j\ge1,\ j\ne n}\log\left|1-\frac{t_n^2}{t_j^2}\right|.
+\]
+
+Set (c=1/(2\pi)), (g=t_n), (T(u)=F^{-1}(u)), and (Q_g(u)=\log|1-g^2/T(u)^2|), for (u\ge0), (u\ne n). The integral corresponding to this sampled sum is
+
+\[
+I(g)=\int_0^\infty Q_g(u)\,du
+=cg\int_{1/g}^\infty (\log g+\log x+1)f(x)\,dx,
+\quad f(x)=\log|1-x^{-2}|.
+\]
+
+The two convergent integrals needed here are
+
+\[
+\int_0^\infty f(x)\,dx=0,\qquad
+\int_0^\infty \log x\,f(x)\,dx=-\frac{\pi^2}{2}.
+\]
+
+For the second, split at (1), expand (\log(1-x^2)) and (\log(1-x^{-2})) into their convergent logarithmic series, and use (\int_0^1x^q(-\log x)dx=(q+1)^{-2}). This gives
+\[
+\int_0^1\log x\log(1-x^2)dx=4-2\log2-\frac{\pi^2}{4},\quad
+\int_1^\infty\log x\log(1-x^{-2})dx=-\frac{\pi^2}{4}+2\log2;
+\]
+the remaining term is (-2\int_0^1\log^2x\,dx=-4), yielding (-\pi^2/2). The first integral follows by the same split, or direct integration. Since (f(x)=-2\log x+O(x^2)) as (x\downarrow0), replacing lower limit (1/g) by zero contributes (O((\log g)^2)) after multiplication by (cg). Thus
+
+\[
+I(g)=-\frac{\pi g}{4}+O((\log g)^2).
+\]
+
+For completeness, the sum-integral error is (S_n-I(g)=O(\log g)). The function (Q_g) is monotone decreasing on ([0,n)) and increasing on ((n,\infty)). Compare (Q_g(j)) with its integral on the unit cell ([j-1/2,j+1/2]), omitting the singular sample (j=n). Outside the central cell, the total variation is (O(\log g)): (Q_g(0)=2\log g+O(1)), while (Q_g(n\pm1/2)=-\log n+O(1)), using (gF'(g)=n(1+1/\log g)). The omitted initial half-cell has integral (O(\log g)). On the central cell, Taylor expansion of (F^{-1}) at (n) gives (Q_g(n+s)=\log|s|-\log n+O(1)), uniformly for (0<|s|\le1/2), so its integral is (O(\log n)=O(\log g)). The bounded-variation rectangle estimate on all other cells then gives the stated error. Combining estimates,
+
+\[
+\boxed{\log|a_n|=\frac{\pi t_n}{4}+O((\log t_n)^2).}
+\]
+
+This implies (|a_n|\to\infty), hence ((a_n)\notin\ell^2). In the existing commuting-projection construction, the general residue-sequence lemma therefore gives (M_N\to\infty), weak escape, and \(\|B_Nh_N\|\to0\), while each fixed-sample mixed kernel still has a finite limit. This is an exact analytic statement about the regular canonical product and its abstract diagonal realization. It is not an arithmetic construction, a Weil-form model, or a statement about zeta ordinates.
+
+The derivation uses elementary monotone quadrature and integral estimates; it has not been formalized or independently reviewed. The computer table above remains only a diagnostic corroboration, not a premise in the proof.
