@@ -1,5 +1,5 @@
 {
-  "runtime": "v22.23.4",
+  "runtime": "v22.20.0",
   "support": "[0,h], h=2.51",
   "basis": "phi_0=1/sqrt(h); phi_n=sqrt(2/h) cos(pi*n*x/h) for n>0",
   "method": "composite midpoint quadrature, IEEE-754 double; no rigorous error enclosure",
