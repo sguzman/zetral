@@ -665,3 +665,24 @@ which gives the current bound
 `mu_1 <= rho_20 < 2497200928/10^9 - log(2) - pi/2 < 0.233258`.
 
 The exact Ritz intervals are now certified for `N=3,6,12,16,20`.
+
+For `N=24`, exact LDL pivots at `ell=2497188692/10^9` are all positive; at `u=2497188693/10^9`, the first twenty-three are positive and the last is negative. Therefore
+
+`2497188692/10^9 < lambda_min(A_24,M_24) < 2497188693/10^9`,
+
+and
+
+`mu_1 <= rho_24 < 2497188693/10^9 - log(2) - pi/2 < 0.233246`.
+
+The certified decimal ceilings from the current root isolations are:
+
+| Dimension `N` | Certified Ritz cap |
+|---:|---:|
+| 3 | `<0.234158` |
+| 6 | `<0.233562` |
+| 12 | `<0.233323` |
+| 16 | `<0.233279` |
+| 20 | `<0.233258` |
+| 24 | `<0.233246` |
+
+The gains decrease as `N` grows, while the exact LDL arithmetic remains fast through `N=24`. Further dimensions remain possible, but a basis with better approximation of the ground state may give more progress per added profile.
