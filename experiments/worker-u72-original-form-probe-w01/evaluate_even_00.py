@@ -4,7 +4,7 @@ import json, sys, mpmath as mp
 raw=json.load(open(sys.argv[1],encoding='utf-8')); r=raw['rows'][0]
 assert raw['scale']==str(10**66)
 assert (r['h'],r['odd'],r['J'],r['T'],r['M'],r['KEM'])==('62/25',False,128,832,16384,20)
-mp.mp.dps=90; Q=int(raw['scale']); h=mp.mpf(62)/25; z=mp.mpf(1)/4
+mp.mp.dps=int(sys.argv[2]) if len(sys.argv)>2 else 90; Q=int(raw['scale']); h=mp.mpf(62)/25; z=mp.mpf(1)/4
 low,trial=r['ks'],r['ts']; modes=low+trial
 w=[mp.pi*n/h for n in modes]; x=[a*a for a in w]; norm=[1 if n==0 else mp.sqrt(2) for n in modes]
 N=100
@@ -49,4 +49,4 @@ for i in range(nmode):
 bounds=[tuple(mp.mpf(t)/Q for t in r['componentIntervals']['upper'][a][a]) for a in range(3)]
 # Explicit geometric bound on omitted exponential-series terms, maximized at omega=0.
 rN=2*N+mp.mpf('0.5'); tail=mp.exp(-h*rN)/(rN**2*(1-mp.exp(-2*h)))
-print(json.dumps({'precision_decimal_digits':mp.mp.dps,'directions':[{'index':a,'value':mp.nstr(q[a],75),'staged_interval':[mp.nstr(bounds[a][0],75),mp.nstr(bounds[a][1],75)],'inside':bool(bounds[a][0]<=q[a]<=bounds[a][1])} for a in range(3)],'exponential_sum_terms':N,'omitted_exponential_tail_bound':mp.nstr(tail,8),'status':'high-precision diagnostic only; special-function rounding not outward certified'},indent=2))
+print(json.dumps({'precision_decimal_digits':mp.mp.dps,'directions':[{'index':a,'value':mp.nstr(q[a],mp.mp.dps-10),'staged_interval':[mp.nstr(bounds[a][0],75),mp.nstr(bounds[a][1],75)],'inside':bool(bounds[a][0]<=q[a]<=bounds[a][1])} for a in range(3)],'exponential_sum_terms':N,'omitted_exponential_tail_bound':mp.nstr(tail,8),'status':'high-precision diagnostic only; special-function rounding not outward certified'},indent=2))

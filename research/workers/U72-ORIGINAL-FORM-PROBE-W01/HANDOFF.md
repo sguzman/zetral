@@ -17,7 +17,7 @@ All three 90-decimal values lie inside their staged exact enclosures:
 | 1 | `1.11969070720270518523857216818239678034798548762631761221524750225007836961e-34` | `[1.11969070720270518523857211085178e-34, 1.11969070720270518523857222488641e-34]` |
 | 2 | `3.24677386982397360353212834961736648169245211537379124679739587213089239836e-34` | `[3.24677386982397360353212832159699e-34, 3.24677386982397360353212837992711e-34]` |
 
-This is an independent numerical consistency check of three directions, not an exact proof and not an independent audit of the full matrix.
+This is an independent numerical consistency check of three directions, not an exact proof and not an independent audit of the full matrix. Repeating at 120 decimal digits leaves all three inside their intervals; differences from the 90-digit outputs are `2.87e-91`, `8.06e-91`, and `4.85e-91`, respectively. mpmath interval context was also checked, but it has no interval `digamma` or `polygamma` implementation, so this stability check does not upgrade the evidence to a rigorous enclosure.
 
 ## Independent formula path
 
@@ -40,7 +40,7 @@ git show origin/worker/u72-02-even-reconstruction:experiments/results/u72-62-25-
 python experiments/worker-u72-original-form-probe-w01/evaluate_even_00.py /tmp/u72raw.json
 ```
 
-Recorded environment: Python 3.12.14, mpmath 1.3.0. The script and output are `experiments/worker-u72-original-form-probe-w01/evaluate_even_00.py` and `experiments/results/u72-original-form-probe-w01/entries-00-02.json`.
+Recorded environment: Python 3.12.14, mpmath 1.3.0. The script and output are `experiments/worker-u72-original-form-probe-w01/evaluate_even_00.py` `experiments/results/u72-original-form-probe-w01/entries-00-02.json`, and the 120-digit replay `experiments/results/u72-original-form-probe-w01/entries-00-02-120dps.json`.
 
 ## Limits
 
