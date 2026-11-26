@@ -101,7 +101,10 @@ analytic theorems and from any RH implication.
   independent interpretation of the original quadratic form?
 - **Evidence and prerequisites:** LXXV is closed at h=2.51; its scoped audit
   reconstructs stored components but does not independently evaluate the
-  original Weil form. Campaign LXXVI is the active source-form audit.
+  original Weil form. Campaign LXXVI is the active source-form audit; its
+  symbolic correlation and parity reduction is in
+  research/positivity/U76-01-direct-arithmetic-Gram.md. The low-entry numerical
+  evaluation and compressed-basis mapping remain unverified.
 - **Design / falsification:** Reconstruct from source formulas rather than the
   stored assembled matrices; independently regenerate witness and guards;
   verify every mode range and rational endpoint; compare with adjacent failing
