@@ -1,7 +1,7 @@
 # U71-03 odd-sector arithmetic handoff
 
 - ID: U71-03
-- Status: IN_PROGRESS
+- Status: READY_FOR_REVIEW
 - Starting main commit: 8f76f8142bdb0ff201865b21aa193055e8593d0b
 - Worker branch: `worker/u71-03-odd-staged-data`
 - Scope: parity-odd trial, residual arithmetic, and transformed interval replay for Campaign LXXI U71-03. No shared campaign or state files were changed.
@@ -22,9 +22,11 @@ The local checkout remained unavailable because the workspace filesystem is full
 
 This establishes a positive interval replay for the selected transformed matrix, but not the campaign's strict grid-margin criterion. U71-03 remains IN_PROGRESS; no candidate pass or frontier extension is claimed. No standalone CLI, CI, independent original-form evaluation, RH claim, or novelty claim is made.
 
-## Next work
+## Later main checkpoint and disposition
 
-Optimize or replace the odd congruence transform / energy allocation to obtain a strictly positive exact grid margin. If that cannot be achieved, document the obstruction and pivot to the campaign's U71-04 scoped audit without calling U71-03 a pass. Do not edit lead-owned `STATE.md`, `COORDINATION.md`, or campaign files.
+Main checkpoint `556c59e14ee703dadb99bd275f279e9fd564dda1` introduced the two-row odd transform with an exact margin of 8/10^6. The independent U71-04 audit branch reconstructed its complete transformed replay and matched every field byte-for-byte; a separate Bareiss check confirmed all 46 pivots, pass at grid 8, fail at 9. See `research/workers/U71-04-ODD-REPLAY-AUDIT/HANDOFF.md` on `worker/u71-04-odd-replay-audit`. This handoff's five-direction transform and coefficient scan are superseded diagnostics, not an obstruction to U71-03. The task is ready for lead review; do not merge this branch as-is because its trial shard filenames overlap main's shard names. Its trial/chunk values were independently confirmed identical after concatenation, and its aggregate blob matches main exactly.
+
+No additional transform optimization is needed on this branch. Lead owns campaign-state update and closure; do not edit `STATE.md`, `COORDINATION.md`, or campaign files.
 
 
 ## Branch coordination note
