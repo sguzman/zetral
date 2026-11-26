@@ -429,3 +429,51 @@ $$
 Therefore any choice $G=G_a\to\infty$ satisfying
 $G_a(D_a(G_a)+d_a)\to0$ gives uniform decay of the normalized mixed kernel over all sampled ordinates up to $G_a$ and all $z\in K$. The stronger condition
 $M_aG_a(D_a(G_a)+d_a)\to0$ implies uniform unnormalized convergence to zero on the same set; an $O(1)$ version gives a uniform boundedness criterion. These are conditional deductions from K01/K02, not estimates on $D_a(G_a)$ or $d_a$. Strong convergence of $\Pi_a$ only gives $\delta_a(\gamma)\to0$ for each fixed ordinate, so it does not by itself verify the growing-window hypothesis. No minimum gap is used in the displayed implication; all unresolved input is isolated in the projection-defect and escape rates.
+
+
+### A test-function bound for growing-window projection defects
+
+The unresolved quantity $D_a(G)$ has a direct approximation interpretation. Assume for this paragraph that the signed sample set in $[-2G,2G]$ has minimum distinct-node spacing at least $\sigma_G>0$, multiplicities there are at most $M_G$, and the global weighted counting function satisfies
+$$
+N_\Gamma(T):=\sum_{|\lambda|\le T}m_\lambda
+\le C(1+T)\log(2+T).
+$$
+For each positive sample $\gamma\le G$, choose a fixed $\psi\in C_c^\infty(-1,1)$ with $\widehat\psi(0)=1$ and define
+$$
+f_{a,\gamma}(x)=\frac{1}{a\,m_\gamma}\psi(x/a)e^{i\gamma x}.
+$$
+This is a local test function supported in $(-a,a)$, and its Fourier transform at a sample $\lambda$ is
+$\widehat f_{a,\gamma}(\lambda)=m_\gamma^{-1}\widehat\psi(a(\lambda-\gamma))$.
+At $\lambda=\gamma$ it agrees exactly with the coordinate of $g_\gamma$. Therefore
+$$
+\delta_a(\gamma)^2
+=\operatorname{dist}(g_\gamma,\operatorname{ran}\Pi_a)^2
+\le \frac{1}{m_\gamma^2}
+\sum_{\lambda\ne\gamma}m_\lambda
+|\widehat\psi(a(\lambda-\gamma))|^2.
+$$
+For any integer $p\ge2$, smoothness gives
+$|\widehat\psi(y)|\le C_p(1+|y|)^{-p}$. In $[-2G,2G]$, ordering the nodes to either side of $\gamma$ and using the spacing and multiplicity assumptions bounds the near sum by
+$$
+C_p M_G\sum_{r\ge1}(1+a r\sigma_G)^{-2p}
+\le C_p\frac{M_G}{a\sigma_G}
+\quad(a\sigma_G\ge1).
+$$
+For $|\lambda|>2G$ and $\gamma\le G$, one has $|\lambda-\gamma|\ge|\lambda|/2$. A dyadic decomposition and the stated counting bound give a far sum at most
+$C_p a^{-2p}G^{1-2p}\log(2G)$ for $a,G\ge2$. Since $m_\gamma\ge1$, for $a\sigma_G\ge1$ this proves the conditional estimate
+$$
+D_a(G)^2\le C_p\left(
+\frac{M_G}{a\sigma_G}
++a^{-2p}G^{1-2p}\log(2G)
+\right).
+$$
+Combining with the previous growing-window criterion gives a sufficient condition for normalized mixed-kernel decay:
+$$
+G_a\left[
+\sqrt{C_p\left(
+\frac{M_{G_a}}{a\sigma_{G_a}}
++a^{-2p}G_a^{1-2p}\log(2G_a)
+\right)}
++d_a\right]\longrightarrow0.
+$$
+This is a test-function deduction under explicit minimum-spacing and multiplicity hypotheses; it does not assert those hypotheses for zeta ordinates. In particular, the zero-counting upper bound alone does not control the local spacing term $M_G/\sigma_G$, so this has not yet established any actual growing-window range.
