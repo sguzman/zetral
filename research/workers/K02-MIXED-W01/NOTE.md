@@ -137,3 +137,20 @@ Meanwhile, since \(R_{N,k}^{-2}\le1\) and it tends to 1 for each fixed \(k\), do
  \qquad M_N\|B_Nh_N\|\longrightarrow\frac\pi{\sqrt3}.
 \]
 For each fixed \(k\), \(M_N\langle e_k,h_N\rangle=(v_N)_k\to(-1)^{k+1}\), and the explicit sample-to-fixed-real-\(z\) kernel limit above is finite. This illustrates that decay of \(d_N\) at the reciprocal scale \(1/M_N\) can produce a bounded mixed kernel; qualitative compactness alone does not decide whether the actual Weil model has this balance.
+
+### Microscopic sample transition in the control model
+
+The same explicit model reproduces K02's sample boundary layer (multiplicity one) directly. Fix \(k\) and bounded complex \(\eta\), and use the source convention \(z_N=k+\overline\eta/M_N\). Locally uniformly, \(M_NP_N(z_N)\to\overline\eta\,\Delta'(k)\). The non-k coordinates of \(u_N(z_N)-M_NP_N(z_N)h_N\) are
+\[
+ M_NP_N(z_N)\frac{z_N B_N}{I-z_NB_N}h_N
+\]
+with the k coordinate omitted; the resolvent on that complement is uniformly bounded in a fixed disk around k, so their norm is \(O(\|B_Nh_N\|)=o(1)\). The k coordinate itself tends to 1 because \(u_N(k)=e_k\) and the canceled quotient \(P_N(z)/(1-z/k)\) converges locally uniformly to \(\Delta(z)/(1-z/k)\). Meanwhile the k coordinate of \(M_NP_N(z_N)h_N\) tends to zero, since \((h_N)_k=O(M_N^{-1})\). Thus
+\[
+ u_N(k+\overline\eta/M_N)=e_k+\overline\eta\,\Delta'(k)h_N+o(1)
+\]
+in norm, with \(\langle e_k,h_N\rangle\to0\). Consequently
+\[
+ \langle u_N(k+\overline\eta/M_N),u_N(k+\overline\zeta/M_N)\rangle
+ \to 1+\overline\eta\zeta|\Delta'(k)|^2.
+\]
+The finite mixed limit at fixed nonzero separation and the nonconstant microscopic diagonal profile coexist exactly as in the K02 statement; the latter alone does not force the former to diverge.

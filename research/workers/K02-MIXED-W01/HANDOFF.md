@@ -15,3 +15,5 @@
 - Control model added: an explicit diagonal compact operator with commuting spectral projections satisfies the exact vector resolvent identity, locally uniform characteristic limit, and all finite sample identities, yet has a finite fixed-sample mixed-kernel limit. This rules out any inference of divergence from those shared qualitative identities alone; the actual noncommuting local compression remains unmodeled.
 
 - Quantitative refinement: exact factorial formulas in the control model give `M_N ~ (pi/2)^(1/4) N^(1/4)`, `||B_N h_N||^2 ~ (pi^2/3)/sqrt(pi/2) * N^(-1/2)`, and `M_N ||B_N h_N|| -> pi/sqrt(3)`. The proof uses a Gaussian Riemann sum with an explicit tail bound and dominated convergence. This is an analytic toy-model calculation, not numerical verification or an actual Weil-form asymptotic.
+
+- Microscopic check added: direct resolvent-coordinate estimates in the same model give the multiplicity-one profile `1 + conjugate(eta) zeta |Delta'(k)|^2` at offsets of size `1/M_N`, while the fixed-separated sample kernel stays finite.
