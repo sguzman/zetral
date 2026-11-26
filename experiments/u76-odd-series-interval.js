@@ -1,7 +1,7 @@
 // Rigorous fixed-point interval evaluation of the independent G_00 identity.
 // All interval endpoints are integer multiples of 10^-70, rounded outward.
 const fs = require("node:fs");
-const Q = 10n ** 70n;
+const Q = 10n ** 90n;
 const ZERO = [0n, 0n];
 const ONE = [Q, Q];
 const floorDiv = (n, d) => {
@@ -203,8 +203,9 @@ const entry = add(sub(sub(sub(archimedean, primeTerm), pole), subtractedKernel),
 function decimal(x) {
   const negative = x < 0n;
   const a = negative ? -x : x;
-  const digits = a.toString().padStart(71, "0");
-  return `${negative ? "-" : ""}${digits.slice(0, -70)}.${digits.slice(-70)}`;
+  const places = Q.toString().length - 1;
+  const digits = a.toString().padStart(places + 1, "0");
+  return `${negative ? "-" : ""}${digits.slice(0, -places)}.${digits.slice(-places)}`;
 }
 const compressed = JSON.parse(fs.readFileSync("experiments/results/u76-compressed-entry-probe.json", "utf8"))
   .output.find(x => !x.odd);
@@ -214,7 +215,7 @@ const overlap = entry[0] <= compressedInterval[1] && compressedInterval[0] <= en
 const contained = entry[0] >= compressedInterval[0] && entry[1] <= compressedInterval[1];
 const result = {
   status: "outward-rounded fixed-point interval evaluation of independently derived G00 formula",
-  precision: { decimalDigits: 70, endpointRounding: "floor lower / ceil upper" },
+  precision: { decimalDigits: 90, endpointRounding: "floor lower / ceil upper" },
   parameters: { h: "251/100", catalanEulerTerms: 280, eulerGammaHarmonicCutoff: Number(gammaN), exponentialRemainderTerms: remainderTerms, primePowers: primePowers.map(x => Number(x.q)) },
   intervals: {
     archimedean: archimedean.map(decimal),
@@ -340,11 +341,9 @@ for(let k=1;k<Nodd;k++) endpointZero=add(endpointZero,mul(endpointDerivative(k,f
 for(let k=0;k<Nodd;k++) endpointH=add(endpointH,mul(endpointDerivative(k,true),E.get(k+1)));
 let oddKernel=add(scale(laplaceMHalf(),2n),sub(scale(endpointZero,2n),scale(endpointH,2n)));
 function laplaceMHalf() {
-  const a=rat(1n,2n), C=laplaceA(a), aa=mul(a,hOdd), e=expNeg(aa), den=add(mul(a,a),mul(wOdd,wOdd));
-  const S=divI(mul(wOdd,add(ONE,e)),den);
-  const T=divI(add(mul(add(ONE,e),sub(mul(a,a),mul(wOdd,wOdd))),mul(mul(mul(a,hOdd),e),den)),mul(den,den));
-  const Esub=divI(sub(ONE,expNeg(mul(rat(1n),hOdd))),rat(1n));
-  return sub(sub(C,divI(T,hOdd)),add(divI(S,pi),Esub));
+  const a=rat(1n,2n), A=laplaceA(a);
+  const Esub=sub(ONE,expNeg(hOdd));
+  return sub(A,Esub);
 }
 const cn=add(powI(wOdd,Nodd),add(divI(scale(powI(wOdd,Nodd-1),BigInt(Nodd+1)),hOdd),rat(1n,2n**BigInt(Nodd))));
 const remainderBound=scale(mul(cn,zeta.get(Nodd+1)),2n);
