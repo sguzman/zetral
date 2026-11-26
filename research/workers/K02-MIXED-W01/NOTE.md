@@ -359,3 +359,24 @@ $$
 \gg \gamma_n^{-27/8}e^{\pi\gamma_n/4}.
 $$
 Thus the actual canonical-product residues diverge exponentially under RH plus simplicity, independently of the bounded-displacement proof. This derivation uses the standard completed-zeta Hadamard product, Euler summation and Stirling; it is a conditional deduction, not a proof of RH or simplicity. It still says nothing about realizing the product residues as the actual local Weil-form evaluation data or about an operator construction.
+
+
+### Slope-normalized fixed-ordinate kernel profile
+
+K02's fixed-ordinate boundary-layer limit for a simple ordinate is
+$$
+J_a(\gamma+\eta/M_a,\gamma+\zeta/M_a)
+\longrightarrow 1+\bar\eta\zeta\,|\Delta_\Gamma'(\gamma)|^2
+$$
+uniformly for bounded $\eta,\zeta$, with $\gamma$ fixed and $a\to\infty$. Since $\Delta_\Gamma'(\gamma)\ne0$, reparameterizing the offsets gives
+$$
+J_a\left(\gamma+\frac{\eta}{M_a|\Delta_\Gamma'(\gamma)|},
+\gamma+\frac{\zeta}{M_a|\Delta_\Gamma'(\gamma)|}\right)
+\longrightarrow 1+\bar\eta\zeta.
+$$
+Thus the offset scale that normalizes the rank-one microscopic term is $(M_a|\Delta_\Gamma'(\gamma)|)^{-1}$. Under RH plus simplicity, the direct completed-zeta estimate above gives
+$$
+\frac1{|\Delta_\Gamma'(\gamma)|}
+\gg \gamma^{-19/8}e^{\pi\gamma/4}.
+$$
+This is a fixed-$\gamma$ consequence of K02; it is not uniform as $\gamma\to\infty$. The lower bound alone does not determine whether this scale tends to zero when $\gamma=\gamma(a)$ grows with $a$, because no matching upper bound for $M_a$ or uniform joint kernel estimate is supplied.
