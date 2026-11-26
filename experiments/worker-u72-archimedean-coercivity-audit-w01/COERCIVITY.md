@@ -178,6 +178,12 @@ the exact asymptotic of the actual compressed operator's least eigenvalue.
 
 ## A concrete very-short-window bound for the full Weil form
 
+Prior-art qualification: Suzuki, arXiv:2606.09096v4, Theorem 1.4, already
+proves that the lowest eigenvalue is positive for all sufficiently small
+half-widths `a`, and gives its small-`a` asymptotic. The estimate below does
+not claim either qualitative result as new. It gives an explicit, conservative
+cutoff and a uniform Rayleigh lower bound by a direct form estimate.
+
 The logarithmic floor implies strict positivity of the full local Weil form
 on a sufficiently short interval, without any assumption on the zeros. For
 `0<h<=1/1400`, take `delta=1/9` in the preceding low-rate estimate. The
@@ -209,6 +215,7 @@ vector and `0<h<=1/1400`,
 This is a deliberately conservative explicit window and uses the stated
 physical-space Weil-form identity. It proves small-window positivity only;
 it neither reaches the U72 candidate window nor implies RH.
+In Suzuki's half-width notation the explicit range is `0<a<=1/2800`.
 
 ## Exact-rational finite certificate at `h=62/25`
 
