@@ -158,6 +158,31 @@ def main() -> None:
     mu1_hi = rational_part - pi_lo / 2 - ln2_lo
     assert mu1_hi < F(234669, 1_000_000)
 
+    # Six-profile rational trial in the same Mellin family.
+    coeffs = [F(1), F(-597, 250), F(9877, 1000), F(-1821, 100),
+              F(15801, 1000), F(-649, 125)]
+    def gram_ratio(i: int, j: int) -> F:
+        x = F(1, 2)
+        for k in range(i + j):
+            x *= F(2*k + 3, 2*k + 4)
+        return x
+    def rational_moment(i: int, j: int) -> F:
+        m = i + j
+        odd = sum((F(2, 2*k + 1) for k in range(m + 1)), F(0))
+        qi = sum((F(4, 4*k + 1) for k in range(i + 1)), F(0))
+        qj = sum((F(4, 4*k + 1) for k in range(j + 1)), F(0))
+        harmonic = sum((F(1, k) for k in range(1, m + 2)), F(0))
+        return -odd + (qi + qj + harmonic) / 2
+    mass6 = sum((coeffs[i] * coeffs[j] * gram_ratio(i, j)
+                 for i in range(6) for j in range(6)), F(0))
+    energy6 = sum((coeffs[i] * coeffs[j] * gram_ratio(i, j)
+                   * rational_moment(i, j)
+                   for i in range(6) for j in range(6)), F(0))
+    rational6 = energy6 / mass6
+    assert rational6 == F(1920119516153329, 768815005763376)
+    mu6_hi = rational6 - pi_lo / 2 - ln2_lo
+    assert mu6_hi < F(233562, 1_000_000)
+
     # Exact positive-series lower bound for q_alpha on the constant function.
     arch_inc_lo = F(0)
     for j in range(300):
@@ -270,6 +295,8 @@ def main() -> None:
     print("  inferred Suzuki mu_1 lower exceeds 0.2046:", mu1_lo > F(2046, 10000))
     print("  certified two-profile Suzuki mu_1 upper:", float(mu1_hi))
     print("  two-profile upper is below 0.234669:", mu1_hi < F(234669, 1_000_000))
+    print("  certified six-profile Suzuki mu_1 upper:", float(mu6_hi))
+    print("  six-profile upper is below 0.233562:", mu6_hi < F(233562, 1_000_000))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
     print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)

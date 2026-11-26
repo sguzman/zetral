@@ -549,3 +549,29 @@ At `c=121/1000`, exact rational arithmetic gives `R(c)=95199173/38100820`, hence
 `mu_1 <= 95199173/38100820 - log(2) - pi/2 < 0.234669`.
 
 The last inequality is certified in `constant_full_form_certificate.py` by rational lower bounds for `log(2)` and `pi`. Numerically the upper endpoint is about `0.2346686747`. As before, Suzuki's asymptotic relates the limiting Rayleigh quotient to `mu_1`; the fixed compactly supported profile is approximable by smooth admissible profiles in a positive Sobolev norm. This is a rigorous trial upper bound, not an estimate of the true minimizing profile. The matching two-dimensional trial-matrix calculation does not assert positivity of the full form.
+
+## Six-profile Mellin trial
+
+The same moment formula extends to `g_j(x)=(1-x^2)^(j+1/4)` on `[-1,1]`. The norm Gram entries are `M_ij=pi*m_ij`, where
+
+`m_ij=(1/2)*product_(k=0)^(i+j-1) (2k+3)/(2k+4)`.
+
+After factoring the common term `-gamma-log(2)-pi/2` from each log-moment quotient, the remaining rational entry is
+
+`r_ij=-2*sum_(k=0)^(i+j) 1/(2k+1) + (4*sum_(k=0)^i 1/(4k+1) + 4*sum_(k=0)^j 1/(4k+1) + H_(i+j+1))/2`,
+
+where `H_n` is the nth harmonic number. This follows directly by substituting the half-integer and quarter-integer digamma recurrences into the differentiated Weber–Schafheitlin formula above.
+
+Take the rational trial
+
+`g=sum_(j=0)^5 c_j*g_j`, with `c=(1,-597/250,9877/1000,-1821/100,15801/1000,-649/125)`.
+
+Exact fraction arithmetic gives
+
+`(c^T (m_ij*r_ij) c)/(c^T m c) = 1920119516153329/768815005763376`,
+
+and hence
+
+`mu_1 <= 1920119516153329/768815005763376 - log(2) - pi/2 < 0.233562`.
+
+`constant_full_form_certificate.py` reconstructs both rational matrices and verifies this cap with exact rational lower bounds on `log(2)` and `pi`; its run reported `0.23356174652192577`. This remains a Rayleigh upper bound from Suzuki's asymptotic, not a lower bound or an evaluation of the true minimizer. The finite linear combination remains in `H^s` for every `s<3/4` and is approximable by smooth compactly supported admissible profiles.
