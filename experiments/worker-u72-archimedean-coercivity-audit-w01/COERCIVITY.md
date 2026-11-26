@@ -154,3 +154,31 @@ The full archimedean multiplier is `alpha_0 + (alpha-alpha_0)`, where
 `alpha_0 = -EulerGamma - pi/2 - 3 log(2) - log(pi)`.
 
 Combining only the certified increment lower bound `C(62/25)>2.4317843723` with this constant gives a lower endpoint of approximately `-2.94039904693`. Thus this component estimate alone does not certify positivity even for the full archimedean compression, much less the Weil form. This negative lower endpoint is a limitation of the bound and is not evidence that the actual compressed archimedean operator has a negative eigenvalue.
+
+## Interpolated lower model with prime and pole terms
+
+This scalar floor can be inserted into the stored DNB/MBL lower-operator framework without deleting the prime or pole terms. Use the notation of DNB02/MBL01 on a fixed interval of length `L`: let `A` be the compressed archimedean operator, `D=alpha(sqrt(L_N))` its cellwise Neumann lower operator, and `K=A-D>=0` the bounded positive boundary correction. Let `K_J` be the increasing finite positive rate sums, so `0<=K_J<=K`. Write the restored form as `B=A-P+H`, with the actual bounded prime and pole operators `P,H` retained. The root-series result gives `A>=b I`, where `b=alpha_0+C(L)`.
+
+For any fixed `0<=theta<1`, define
+
+`B_(theta,J)=(1-theta)(D+K_J)+theta*b*I-P+H`.
+
+Then the exact operator difference is
+
+`B-B_(theta,J)=(1-theta)(K-K_J)+theta*(A-b*I)>=0`.
+
+Thus this is a valid lower operator including the unchanged prime and pole forms. It is increasing in `J` for each fixed `theta`. Its finite Neumann base has mode weights
+
+`d_(theta,n)=(1-theta)*alpha(n*pi/h_cell)+theta*b`.
+
+For fixed `theta<1` these still grow like `(1-theta) log(n)`. The bounded perturbation norm in the MBL01 finite-mode enclosure can be taken as
+
+`M_theta <= (1-theta)*||K|| + ||P|| + ||H||`,
+
+and the complement threshold as `d_(theta,N+1)`. Therefore the same Schur truncation error has the form
+
+`e_(theta,N)=M_theta^2/(d_(theta,N+1)-U_(theta,k))`
+
+whenever the denominator is positive, with a fixed-mode rate-tail error equal to `(1-theta)` times the MBL01 rate-tail bound. These expressions exhibit a tunable tradeoff: increasing `theta` reduces the bounded boundary perturbation and rate tail, but also reduces high-mode growth and lowers the high-mode threshold toward `b`.
+
+As `J` increases, `B_(theta,J)` converges monotonically to `B_theta=(1-theta)A+theta*b*I-P+H`. As `theta` decreases to zero, `B_theta` increases in form order to `B`, because `A-bI>=0`. This yields an iterated lower-approximation scheme; for `theta<1`, the high-mode base remains coercive and the finite-mode MBL01 enclosure applies. The interpolation is a valid analytic construction, but no optimizing `theta`, updated finite matrix, or successful certificate has been computed here. It does not establish positivity of `B`.
