@@ -1,0 +1,198 @@
+{
+  "sparseDirectionsChecked": 2209,
+  "sparsePositiveCostDirections": 1216,
+  "topSparseDirection": {
+    "support": [
+      [
+        0,
+        "1"
+      ],
+      [
+        2,
+        "-1"
+      ]
+    ],
+    "ratioFloorMillion": "201663"
+  },
+  "optimizer": "SciPy SLSQP with analytic ratio gradient, equality unit-sphere constraint, positivity constraints for all exact-bound costs; full 47 normalized-energy variables",
+  "scipy": "1.17.0",
+  "starts": 12,
+  "returnedFeasibleCandidates": 12,
+  "solverSuccessCount": 12,
+  "candidateLog": [
+    {
+      "start": 0,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 136,
+      "ratio": 0.8950748363968383
+    },
+    {
+      "start": 1,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 15,
+      "ratio": 0.8950748364367387
+    },
+    {
+      "start": 2,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 116,
+      "ratio": 0.8950748358748951
+    },
+    {
+      "start": 3,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 130,
+      "ratio": 0.8950748364394582
+    },
+    {
+      "start": 4,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 16,
+      "ratio": 0.8950748364390178
+    },
+    {
+      "start": 5,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 49,
+      "ratio": 0.8950748364394585
+    },
+    {
+      "start": 6,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 134,
+      "ratio": 0.8950748356026001
+    },
+    {
+      "start": 7,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 135,
+      "ratio": 0.8950748364394583
+    },
+    {
+      "start": 8,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 174,
+      "ratio": 0.8950748364394581
+    },
+    {
+      "start": 9,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 313,
+      "ratio": 0.8950748361301516
+    },
+    {
+      "start": 10,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 140,
+      "ratio": 0.8950748361429631
+    },
+    {
+      "start": 11,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 134,
+      "ratio": 0.8950748359289513
+    }
+  ],
+  "bestCandidate": {
+    "start": 5,
+    "success": true,
+    "message": "Optimization terminated successfully",
+    "iterations": 49,
+    "ratio": 0.8950748364394585
+  },
+  "rationalizedDenominator": "100000000000000000000",
+  "rationalizedVector": [
+    "377935122736824640",
+    "-22311452938607538176",
+    "-1519290563073466624",
+    "100000000000000000000",
+    "-14070318236406278",
+    "-5508331736914799",
+    "581346461",
+    "-167390643",
+    "-28977",
+    "-380",
+    "7",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "exactCostSigns": {
+    "energyPositive": true,
+    "finitePositive": true,
+    "rankPositive": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false
+    ],
+    "eighthPositive": true
+  },
+  "exactRatioFloorMillion": null,
+  "strictAllPositiveAllocationObstruction": false,
+  "exactCosts": {
+    "energyUpper": "23763762423893155962642578907264460606851252342110039093734486213568817568296462098898723865",
+    "finiteLower": "20912886890324651100846562188372696176389789803942147007337825659613042183135315039534136631",
+    "rank": [
+      "1536558859008490575452968309291620727323666778788894349772100294541664320214239127309985495160828601223851153629009385229320210169392821247013329797166849049600",
+      "15465318762473541570818130366427553646733609910023835331599356007090984738072184640363121646577609625910047902473216045138169515172977665275389421968554210512",
+      "5443736439263671948687957528083218023122094587697007400937256242445647638931268373777506163484397279074129307379122754448350444804740924379516209216747064",
+      "7238019370805640968402904155208367736179182024483381785840199891294917766418724103080656467753252004711024519793349823561280215592770331035738794308304",
+      "802676929170257637250268600176235972688570090111609676085365964258756557418329422888744373697365243541334277847519453210555167372255277085476622592",
+      "889315287172075161534422490721328653723016058023915781667993591847408004403813675954460168579453927818606631988888068692919570602086404326770192",
+      "-49346911841918075995859749188729584324530103844847442371569887697774740267915274846392198969532916481344850263170375913790576666778992785216"
+    ],
+    "eighth": "96251043733628991147410303489205280899096884587122111564063215057079319827653114980509366499907734649266796312101591574335005871508544473090551551105679360",
+    "allPositive": false,
+    "cauchyNumerator": null,
+    "comparisonDenominator": null
+  }
+}
