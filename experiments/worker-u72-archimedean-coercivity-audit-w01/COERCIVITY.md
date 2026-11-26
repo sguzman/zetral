@@ -742,6 +742,12 @@ The stored rational trial quotient `2.497164185544405...` is verified as an exac
 
 At N=64 the Jacobi trial search and exact fixed-vector certificate improve the cap to `mu_1<0.233220`. The certificate stores all rational coefficients and the exact rational Rayleigh part; no optimizer accuracy is assumed in the proof. The gain beyond N=56 is small. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial64_certificate.py`.
 
+The exact finite-space minimum at N=64 is now isolated as well. `jacobi_ritz64_certificate.py` proves by rational LDL inertia that
+
+`2.4971627723 < lambda_min(A_64,M_64) < 2.4971627725`.
+
+The exact rational trial quotient stored in `jacobi_trial64_certificate.py` lies in this same interval, so it is within `2e-10` of the N=64 Ritz minimum. The rigorous Ritz cap is `rho_64<0.233220`; this remains a finite-dimensional statement and supplies no convergence rate in N. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_ritz64_certificate.py`.
+
 ### Independent check of the form-core density step
 
 I checked the nested-profile core argument above separately from its original derivation. For even `h in C_c^infty(-1,1)`, the quotient `h(x)/g_0(x)` vanishes near `|x|=1`; near `x=0`, even smoothness gives a smooth function of `x^2`. Thus it is a smooth function `phi(y)` of `y=1-x^2` on `[0,1]`. C¹ polynomial approximation can be obtained by uniformly approximating `phi'` by polynomials and integrating, with the additive constant fixed at `phi(0)`. If `P_n -> phi` in C¹, multiplication by `g_0` gives convergence in `H^s(R)` for any fixed `0<s<1/2`, since multiplication by `P_n(1-x^2)-phi(1-x^2)` has operator norm on `H^s` controlled by its `W^{1,infty}` norm. These products are exactly finite linear combinations of the `g_j`.
