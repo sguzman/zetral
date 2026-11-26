@@ -1,4 +1,4 @@
-# TC02-TC04: independent stored-minor replay of the even transformed certificate
+# TC02-TC04: independent arithmetic audit of the even transformed certificate
 
 ## Verified
 
@@ -9,8 +9,20 @@ outward ceilings/floors, symmetric interval intersections, midpoint/radius
 correction, and diagonal scaling to rebuild the final lower integer matrix.
 It matches every entry in
 `tc02-49-20-even-m12288-t832-transformed-certificate.json`. For the changed
-coordinate's eighth loss, this reconstruction uses the certificate's saved
-`eighthUpper` value as input; it does not validate how that value was derived.
+coordinate, I additionally reconstructed the exact transformed coefficient
+row from the stored basis and trial integers, using an independent Python
+implementation. Against per-frequency norm, derivative, and pole intervals
+extracted from the committed generator, Python's outward-arithmetic replay
+independently matches both saved values:
+
+- `C8 = 182382101436345160152033792029056615323132163493127736231676945961510988709328`
+- `eighthUpper = 12737659102525118422466397610`
+
+The extraction helper runs the committed exact generator to expose those
+per-frequency intervals. This checks the transformed coefficient combination,
+absolute-sum aggregation, and final C8/eighth interval arithmetic across two
+implementations. It does not independently derive the norm, derivative, or
+pole intervals from their analytic source expressions.
 
 Using a separate Python integer Bareiss implementation, I replayed the 44
 leading principal minors of the rebuilt matrix. Every division was exact, all
@@ -29,16 +41,18 @@ Reproduction:
 
 ```sh
 python3 experiments/worker-TC02-TC04/replay_transformed_minors.py
+python3 experiments/worker-TC02-TC04/replay_transformed_eighth.py
 ```
 
 ## Scope
 
-The changed transformed eighth-tail coefficient is not independently
-rederived from source coefficients. The matrix reconstruction and exact
-positive minors are therefore conditional on that saved coefficient and its
-stated energy endpoints. The row transform itself has determinant `100000`,
-hence preserves the finite trial span; this fact does not independently
-verify the tail majorant.
+The changed transformed eighth-tail coefficient and its final allowance are
+independently replayed in Python from exact per-frequency intervals extracted
+from the committed generator. The upstream derivation of those norm,
+derivative, and pole intervals was not independently reconstructed. The row
+transform itself has determinant `100000`, hence preserves the finite trial
+span. This is an arithmetic audit, not a separate derivation of every
+analytic tail input.
 
 No conclusion is drawn about the original form beyond the stated comparison,
 and this audit is not a full independent original-form evaluation, RH result,
