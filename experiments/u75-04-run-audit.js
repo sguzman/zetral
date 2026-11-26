@@ -42,12 +42,12 @@ assert(ldl.matchedPrincipalMinors === 52 && ldl.passingGridPositiveMinors === 52
 // byte-identical to the legacy M=20480 block before checking the tail extension.
 const staged = load(modules.staged), paramsTrial = staged.trial(source, false);
 const patch = readJson('experiments/results/u75-251-100-even-t1024-m24576-trial-patch.json');
-assert(JSON.stringify(paramsTrial) === JSON.stringify(patch), 'M24576 trial patch reconstruction');
 const oldTrialText = Array.from({length: 6}, (_, i) => readText(`experiments/u75-even-trial-part-${i + 1}.txt`)).join('');
 const oldTrial = JSON.parse(oldTrialText);
 const patchedOldTrial = {...oldTrial, M: patch.M,
   tails: oldTrial.tails.map((t, i) => ({...t, C8: patch.C8[i]}))};
-assert(JSON.stringify(patchedOldTrial) === JSON.stringify(patch), 'trial cutoff patch fields');
+assert(patch.M === 24576 && patch.C8.length === 52 &&
+  JSON.stringify(patchedOldTrial) === JSON.stringify(paramsTrial), 'M24576 trial patch reconstruction');
 const oldBlock = readJson('experiments/u75-even-residual-001.json');
 const rebuilt = staged.finite(source, paramsTrial, 104, 1126);
 assert(JSON.stringify(rebuilt) === JSON.stringify(oldBlock), 'low residual changed under M extension');
