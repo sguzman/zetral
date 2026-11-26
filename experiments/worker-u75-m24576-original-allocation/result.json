@@ -1,0 +1,198 @@
+{
+  "storedAllocationPositiveMinors": 41,
+  "heuristic": "Trace-based positive-share allocation. Exact Bareiss leading-minor signs are computed for each scanned point; Number Cholesky is diagnostic only.",
+  "scan": [
+    {
+      "eighthMass": 0.2,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.020090399185266068
+    },
+    {
+      "eighthMass": 0.4,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.06564727034395534
+    },
+    {
+      "eighthMass": 0.15,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.45038458136378456
+    },
+    {
+      "eighthMass": 0.5,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.5616547825544138
+    },
+    {
+      "eighthMass": 0.65,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -2.822147617142232
+    },
+    {
+      "eighthMass": 0.8,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -95.1099154308674
+    },
+    {
+      "eighthMass": 0.3,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -116.42182277741992
+    },
+    {
+      "eighthMass": 0.075,
+      "positiveMinors": 42,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0031128316327957194
+    },
+    {
+      "eighthMass": 0.1,
+      "positiveMinors": 42,
+      "approximatePass": false,
+      "approximateMinPivot": -0.004453691134529247
+    },
+    {
+      "eighthMass": 0.02,
+      "positiveMinors": 41,
+      "approximatePass": false,
+      "approximateMinPivot": -0.2967873491036741
+    },
+    {
+      "eighthMass": 0.035,
+      "positiveMinors": 41,
+      "approximatePass": false,
+      "approximateMinPivot": -0.48162662306988246
+    },
+    {
+      "eighthMass": 0.05,
+      "positiveMinors": 41,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9815659133384629
+    },
+    {
+      "eighthMass": 0.01,
+      "positiveMinors": 40,
+      "approximatePass": false,
+      "approximateMinPivot": -0.005667991868462881
+    },
+    {
+      "eighthMass": 0.005,
+      "positiveMinors": 40,
+      "approximatePass": false,
+      "approximateMinPivot": -0.006604551112009035
+    },
+    {
+      "eighthMass": 0.001,
+      "positiveMinors": 36,
+      "approximatePass": false,
+      "approximateMinPivot": -2.278017735269877
+    },
+    {
+      "eighthMass": 0.0001,
+      "positiveMinors": 23,
+      "approximatePass": false,
+      "approximateMinPivot": -3.234514884292791
+    },
+    {
+      "eighthMass": 1e-8,
+      "positiveMinors": 22,
+      "approximatePass": false,
+      "approximateMinPivot": -0.09444884798073619
+    },
+    {
+      "eighthMass": 1e-10,
+      "positiveMinors": 22,
+      "approximatePass": false,
+      "approximateMinPivot": -0.09748903635736612
+    },
+    {
+      "eighthMass": 0.000001,
+      "positiveMinors": 22,
+      "approximatePass": false,
+      "approximateMinPivot": -0.09881634078784088
+    },
+    {
+      "eighthMass": 0.95,
+      "positiveMinors": 5,
+      "approximatePass": false,
+      "approximateMinPivot": -2.06254846372782e-28
+    }
+  ],
+  "selectedMass": 0.2,
+  "selectedAllocation": [
+    "798790254057",
+    "1163923802",
+    "45350580",
+    "440190",
+    "30995",
+    "347",
+    "30",
+    "4762",
+    "6748",
+    "6269",
+    "8472",
+    "8927",
+    "13465",
+    "17207",
+    "618364",
+    "13180736",
+    "183632182",
+    "2102103445",
+    "8698558479",
+    "4050219978",
+    "4379179814",
+    "4376700082",
+    "3333611570",
+    "7937478148",
+    "6636108030",
+    "4594743665",
+    "5026383169",
+    "3658967771",
+    "3428480157",
+    "4355043802",
+    "6863461585",
+    "5638332633",
+    "7637050230",
+    "5860770091",
+    "469915563",
+    "6466987428",
+    "2102579674",
+    "2324269411",
+    "4479564887",
+    "860081295",
+    "2906347401",
+    "7076648696",
+    "4279598036",
+    "4604533217",
+    "3569576339",
+    "6500163908",
+    "3688446251",
+    "2915352873",
+    "5468961474",
+    "2362762229",
+    "9833120369",
+    "2199705231",
+    "4902636816",
+    "5623436052",
+    "5029372960",
+    "3479102171",
+    "5529100832",
+    "5477029488",
+    "9076017617"
+  ],
+  "exactReplay": {
+    "positiveMinors": 43,
+    "failedPivotSign": "negative",
+    "marginNumerator": null,
+    "marginDenominator": "1000000",
+    "nextGridFails": null,
+    "baselineEntries": 2704,
+    "baselineRadii": 52
+  },
+  "scope": "Search within a 20-point one-parameter allocation family only; no global optimality claim."
+}
