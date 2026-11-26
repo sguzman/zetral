@@ -16,3 +16,11 @@
 - **Checked vs unchecked:** None yet. Perron eigenvectors are numerical proposals until rationalized weights are replayed; no global basis/allocations claim.
 - **Blockers:** None.
 - **Next:** Lead review; a follow-on would need to change the basis or allocation, outside this bounded experiment.
+
+## Scaling lemma (exact statement)
+
+Let `R` be a symmetric entrywise-nonnegative matrix and `E` a positive diagonal matrix. Set `A = E^{-1/2} R E^{-1/2}`. For every positive vector `s`, put `x = E^{1/2}s`; then
+
+`max_i (R s)_i/(E_i s_i) = max_i (A x)_i/x_i`.
+
+The Collatz–Wielandt formula gives `inf_{x>0} max_i (A x)_i/x_i = rho(A)`. Thus the Perron scaling solves the continuous minimum-maximum row ratio problem. If `A` is irreducible, a positive Perron vector attains the infimum; without irreducibility, strict-positive vectors need only approach it. This optimizes the maximum weighted row-radius/energy ratio, not positive definiteness of the penalized midpoint matrix. In particular, it gives no guarantee that any leading principal minor is positive. For this staged case, the exact rationalized scaling improves the bound, while the exact principal-minor replay fails immediately.
