@@ -495,3 +495,27 @@ The same lower bound is uniform for every interval length `h in [247/100,62/25]`
 `g_j(h)=[1-exp(-2u_j h)]/(2h u_j^2)`
 
 has second derivative proportional to `2-(x^2+2x+2)exp(-x)>0`, `x=2u_jh`; the pole term is `16[cosh(h/2)-1]/h`, whose power series has nonnegative second derivative; and `-q_P` has positive second derivative `4 sum_n [Lambda(n)/sqrt(n)]*log(n)/h^3`. Hence `q_A'(h)` is increasing. The certificate bounds `q_A'(62/25)<-0.04333`, so `q_A` decreases throughout this interval and its minimum occurs at `62/25`. The `19/500` lower bound therefore holds uniformly for the normalized constant test vector. It remains only a one-vector bound, not operator positivity.
+
+## A sharper trial upper bound for Suzuki's constant
+
+The constant trial profile gives `mu_1 <= 1-log(2)`. A smoother endpoint profile improves this. Let `g_p(x)=c_p*(1-x^2)^p` for `|x|<1`, zero otherwise, where `c_p` normalizes the `L^2` norm. For fixed `p> -1/4`, its Fourier transform before normalization is
+
+`F_p(xi)=sqrt(pi)*Gamma(p+1)*(2/|xi|)^(p+1/2)*J_(p+1/2)(|xi|)`.
+
+Scaling `f_a(x)=a^(-1/2)g_p(x/a)` in the logarithmic-symbol Rayleigh quotient and taking `a->0` gives `mu_1 <= gamma + L_p`, where
+
+`L_p=(1/(2*pi*||g_p||_2^2))*integral_R |F_p(xi)|^2 log|xi| dxi`.
+
+For this profile the logarithmic moment follows by differentiating the Weber–Schafheitlin Bessel-square Mellin integral
+
+`integral_0^infty x^(-lambda) J_nu(x)^2 dx = Gamma(lambda)*Gamma(nu+(1-lambda)/2) / (2^lambda*Gamma((lambda+1)/2)^2*Gamma(nu+(1+lambda)/2))`,
+
+valid in a neighborhood of `lambda=2*nu` for `nu=p+1/2`. It gives
+
+`L_p=-psi(2p+1)+psi(1/2)/2+log(2)+psi(p+1)+psi(2p+3/2)/2`.
+
+At `p=1/4`, the values `psi(1/2)=-gamma-2log(2)`, `psi(3/2)=psi(1/2)+2`, `psi(2)=1-gamma`, and `psi(5/4)=4-gamma-pi/2-3log(2)` simplify the Rayleigh endpoint to
+
+`mu_1 <= 5/2 - pi/2 - log(2) ~= 0.2360564926`.
+
+Although `g_(1/4)` is not smooth at its endpoints, it is in `H^s` for every `s<3/4`, and its logarithmic Fourier moment is finite. Interior cutoffs and mollification approximate it by smooth compactly supported profiles in some `H^s`, `0<s<3/4`. The logarithmic multiplier form is continuous under this approximation, so the same infimum bound follows from admissible smooth trials. Since `pi>2`, this improves the previous trial upper bound. Together with the separately certified lower bound this gives `0.2045 < mu_1 <= 5/2-pi/2-log(2)`. This is a Rayleigh bound using Suzuki's asymptotic, not a numerical determination of `mu_1`, and it does not alter the full-form coercivity claims above.
