@@ -24,6 +24,16 @@ The implementation instead uses `2|B_40|/R^40`, `2|B_40|/R^41`, and `2|B_40|/N^4
 python3 experiments/worker-u72-em-remainder-audit-w01/check_em_radii.py > experiments/results/u72-em-remainder-audit-w01/radii.json
 ```
 
+## Finite denominator sign
+
+The residual Cauchy weight is `g(n)=log(n/(2h))-3h^2/(2 n^2 pi^2)-2.930`, with `h=62/25`. Its derivative is `1/n+3h^2/(pi^2 n^3)>0`, so it suffices to prove `g(94)>0`. At `n=94`, `n/(2h)=1175/62`. Set `y=(x-1)/(x+1)` for `x=1175/62`; then `log x=2 artanh(y)=2 sum_{k>=0} y^(2k+1)/(2k+1)`, with positive terms. The first 151 terms give a rational lower bound. Using `pi>3`, the subtracted correction is less than `h^2/(6*94^2)`. Exact rational evaluation leaves a positive lower bound `0.01177303127211409...`. The calculation is reproducible with:
+
+```sh
+python3 experiments/worker-u72-em-remainder-audit-w01/check_finite_denominator.py > experiments/results/u72-em-remainder-audit-w01/finite-denominator.json
+```
+
+Thus `g(n)>0` for every real `n>=94`, including the four computed modes.
+
 ## Conclusion and limitations
 
-No underestimation was found in these three stated Euler–Maclaurin radii. Together with the preceding exponential-tail correction, this closes the specific omission and radius-size checks for the four-mode numerical probe. It is still a machine interval calculation conditional on the Euler–Maclaurin integral remainder formulas and `mpmath.iv` outward arithmetic; this work does not formally verify those library operations or audit every analytic identity in the original-form evaluator. It covers neither the full residual sum nor the remaining infinite-mode tail, positivity, an operator construction, or RH. No human or formal review has been performed.
+No underestimation was found in these three stated Euler–Maclaurin radii, and the finite residual weights are positive on `n>=94`. Together with the preceding exponential-tail correction, this closes the specific omission and radius-size checks for the four-mode numerical probe. It is still a machine interval calculation conditional on the Euler–Maclaurin integral remainder formulas and `mpmath.iv` outward arithmetic; this work does not formally verify those library operations or audit every analytic identity in the original-form evaluator. It covers neither the full residual sum nor the remaining infinite-mode tail, positivity, an operator construction, or RH. No human or formal review has been performed.
