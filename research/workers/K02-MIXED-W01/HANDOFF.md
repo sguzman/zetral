@@ -19,3 +19,5 @@
 - Microscopic check added: direct resolvent-coordinate estimates in the same model give the multiplicity-one profile `1 + conjugate(eta) zeta |Delta'(k)|^2` at offsets of size `1/M_N`, while the fixed-separated sample kernel stays finite.
 
 - Stronger synthetic countermodel added: paired nodes with `N_+(T)=T log T/(2 pi)+O(1)` and an even real entire order-one canonical product. Tuned near-collisions force the exact sample interpolation weights to make `M_N -> infinity` and `h_N` weakly escape, while the full commuting-projection resolvent model still has finite fixed-sample mixed limits. This is not zeta: its artificial close pairs and lack of arithmetic/Weil structure are explicit.
+
+- Growth claim made explicit: Jensen's formula and Stieltjes integration by parts show `log M_Delta(r) = Theta(r log r)` from the synthetic `N_+(T)=T log T/(2 pi)+O(1)` law, hence order one and infinite exponential type.

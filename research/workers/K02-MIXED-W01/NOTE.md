@@ -184,3 +184,20 @@ with removable pole values. As before, \((I-z\Pi_NC\Pi_N)u_N=P_Nv_N\) and \(u_N(
 which is finite.
 
 This countermodel adds the classical leading count, a symmetric order-one entire product, compact diagonal inverse, strong projection convergence, exact resolvent identity, sample interpolation, divergent normalization, weak escape and vanishing compressed inverse on the escaping direction. Thus even these abstract constraints do not force divergence of the fixed-sample mixed kernel. The construction intentionally manufactures arbitrarily close pairs; it has no Euler product, Weil form, or prime-power coefficients and does not assert that zeta ordinates exhibit such pairs. It only isolates additional arithmetic/local-form restrictions as necessary for a conclusion about the actual kernel.
+
+### Growth check for the synthetic canonical product
+
+For completeness, the claimed order/type follows directly from the counting law. Write \(N_+(t)=ct\log t+O(1)\), \(c=1/(2\pi)\), above a fixed lower cutoff. Jensen's formula for the paired genus-zero product gives
+\[
+ \frac1{2\pi}\int_0^{2\pi}\log|\Delta(re^{i\theta})|\,d\theta
+   =2\sum_{\gamma_n<r}\log(r/\gamma_n)
+   =2\int^{r}\frac{N_+(t)}{t}\,dt+O(\log r)
+   =2c r\log r+O(r).
+\]
+Thus \(\log M_\Delta(r)\ge 2c r\log r+O(r)\). For the upper bound, \(|1-z^2/\gamma_n^2|\le1+r^2/\gamma_n^2\) on \(|z|=r\), and Stieltjes integration by parts yields
+\[
+ \log M_\Delta(r)\le\sum_n\log(1+r^2/\gamma_n^2)
+ =2r^2\int_0^\infty\frac{N_+(t)}{t(t^2+r^2)}\,dt
+ =O(r\log r).
+\]
+Consequently \(\log M_\Delta(r)\asymp r\log r\): the canonical product has order one and infinite exponential type. The finite set below the asymptotic counting range changes only lower-order terms.
