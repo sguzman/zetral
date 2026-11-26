@@ -395,6 +395,7 @@ const compressedEven2=JSON.parse(fs.readFileSync("experiments/results/u76-compre
 const scale02=BigInt(compressedEven2.scale), compressed02=compressedEven2.A[0][1].map(x=>BigInt(x)*(Q/scale02));
 result.parameters.evenOffDiagonalIsolatedRates=["1/2","5/2"]; result.parameters.evenOffDiagonalTailStart="9/2";
 result.intervals.evenOffDiagonalArchimedean=arch02.map(decimal); result.intervals.evenOffDiagonalPrimeTerm=prime02.map(decimal); result.intervals.evenOffDiagonalSubtractedKernel=kernel02.map(decimal); result.intervals.evenOffDiagonalTailBound=sineRemainder.map(decimal); result.intervals.evenOffDiagonalFullEntry=entry02.map(decimal); result.intervals.evenOffDiagonalCompressedSharedInterval=compressed02.map(decimal);
+result.intervals.evenOffDiagonalZetaTail=zeta22.get(Nodd+1).map(decimal); result.intervals.evenOffDiagonalE220=E22.get(Nodd).map(decimal); result.intervals.evenOffDiagonalFrequency=w02.map(decimal); result.intervals.evenOffDiagonalFrequencyPower=powI(w02,Nodd).map(decimal);
 result.evenOffDiagonalOverlap=entry02[0]<=compressed02[1]&&compressed02[0]<=entry02[1];
 result.evenOffDiagonalContained=entry02[0]>=compressed02[0]&&entry02[1]<=compressed02[1];
 result.evenOffDiagonalMargins=[decimal(entry02[0]-compressed02[0]),decimal(compressed02[1]-entry02[1])];
