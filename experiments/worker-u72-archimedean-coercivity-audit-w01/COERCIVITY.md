@@ -616,14 +616,20 @@ Every `V_N` Ritz matrix is explicitly rational up to a common scalar: with `M_ij
 
 where `lambda_min(A,M)` denotes the smallest generalized eigenvalue `A v=lambda M v`. This supplies a convergent Galerkin route to the known limiting constant using rational matrices and interval enclosures for `log(2)` and `pi`. The current artifact certifies explicit trial-vector bounds, including `mu_1<0.233324`; it has not yet computed an interval-certified generalized eigenvalue for any `N>1`.
 
-## Exact isolation of the three-profile Ritz value
+## Exact isolation of generalized Ritz values in dimensions three and six
 
-For `V_3=span{g_0,g_1,g_2}`, let `A=(m_ij*r_ij)` and `M=(m_ij)`, both rational. The smallest generalized eigenvalue of `(A,M)` was isolated without floating-point root decisions. At `ell=2498100869/10^9`, all three leading principal minors of `A-ell*M` are positive, so Sylvester's criterion gives `A-ell*M>0` and every generalized eigenvalue is greater than `ell`. At `u=249810087/10^8`, the exact determinant `det(A-u*M)` is negative, forcing at least one generalized eigenvalue below `u`. Since `M` is positive definite, the generalized eigenvalues are real; therefore
+For `V_N=span{g_0,...,g_(N-1)}`, define `A_N=(m_ij*r_ij)` and `M_N=(m_ij)`, both rational. The smallest Ritz value is `rho_N=-log(2)-pi/2+lambda_min(A_N,M_N)`. The generalized eigenvalues are isolated using exact `LDL^T` inertia at rational endpoints. The mass matrix `M_N` is positive definite because the profiles are linearly independent and its entries are their Gram matrix.
 
-`2498100869/10^9 < lambda_min(A,M) < 249810087/10^8`.
+For `N=3`, with `ell=2498100869/10^9` and `u=249810087/10^8`, all exact LDL pivots of `A_3-ell*M_3` are positive and the signs at `A_3-u*M_3` are `(+,+,-)`. Thus
 
-The script `ritz3_interval_certificate.py` reconstructs these matrices and signs entirely with `Fraction`. Machin's formula and the positive atanh series then certify
+`2498100869/10^9 < lambda_min(A_3,M_3) < 249810087/10^8`,
 
-`rho_3=-log(2)-pi/2+lambda_min(A,M) < 0.234158`.
+and `rho_3<0.234158`.
 
-This exact Ritz enclosure demonstrates the nested-matrix route. It is not yet as strong as the explicit twelve-profile trial-vector cap `0.233324`, and no Ritz eigenvalue interval for `N>3` is included.
+For `N=6`, with `ell=2497505224/10^9` and `u=2497505225/10^9`, the lower-endpoint pivot signs are all positive and the upper-endpoint signs are `(+,+,+,+,+,-)`. Thus
+
+`2497505224/10^9 < lambda_min(A_6,M_6) < 2497505225/10^9`,
+
+and `rho_6<0.233562`.
+
+The reusable `ritz_interval_certificates.py` reconstructs the matrices and verifies each pivot sign entirely with `Fraction`; Machin's formula and the positive atanh series certify the decimal Ritz caps. The six-profile Ritz enclosure is slightly sharper than the explicit six-profile vector bound, but the explicit twelve-profile trial cap `0.233324` remains the best certified upper bound currently recorded. No interval Ritz eigenvalue for `N>6` is included.
