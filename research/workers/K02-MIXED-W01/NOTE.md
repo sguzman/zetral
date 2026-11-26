@@ -393,3 +393,39 @@ $$
 |J_{N_k}(t_k,0)|\ge |a_k|-1\longrightarrow\infty.
 $$
 Thus every fixed sample-to-origin row has a finite limit as the cutoff tends to infinity, but a diagonal sequence of growing sample indices has diverging rows. The limit is not uniform over the sample index, even in this exact model with commuting projections and the exact vector resolvent/interpolation identities. This is not a counterexample to the actual local Weil-form kernel. It shows that a growing-index conclusion requires a uniform estimate beyond the fixed-index compact convergence in K02.
+
+
+### Conditional uniform bound through a growing ordinate window
+
+The exact K01/K02 identities give a useful finite-window criterion without assuming a minimum gap. Let
+$$
+\delta_a(\gamma)=\|(I-\Pi_a)g_\gamma\|,\qquad
+D_a(G)=\sup_{\substack{\gamma\in\Gamma\\0<\gamma\le G}}\delta_a(\gamma),
+\qquad d_a=\|B_ah_a\|.
+$$
+For a compact $K\subset\mathbb C$, the K02 vector approximation $u_z/M_a=P_a(z)e_a+r_a(z)$ has $\sup_{z\in K}\|r_a(z)\|\le C_Kd_a$. Pairing with the sample vector $g_\gamma$ of norm $m_\gamma^{-1/2}$ yields, uniformly in $\gamma$ and $z\in K$,
+$$
+\frac{|J_a(\gamma,z)|}{M_a}
+\le |P_a(z)|\,|\langle g_\gamma,h_a\rangle|
++C_Kd_a/\sqrt{m_\gamma}.
+$$
+The exact sampled vector identity gives
+$$
+P_a(\gamma)M_ah_a=(I-\gamma B_a)\Pi_ag_\gamma
+=\gamma\Pi_aC(I-\Pi_a)g_\gamma.
+$$
+Pairing with $h_a$ and using self-adjointness of $B_a$ gives
+$$
+|\langle g_\gamma,h_a\rangle|
+\le \gamma\|C\|\delta_a(\gamma)
++\frac{\gamma}{\sqrt{m_\gamma}}d_a.
+$$
+Since $m_\gamma\ge1$ and $P_a$ is uniformly bounded on fixed $K$, for every $G\ge\gamma_1$,
+$$
+\sup_{\substack{0<\gamma\le G\\\gamma\in\Gamma}}\quad
+\sup_{z\in K}\frac{|J_a(\gamma,z)|}{M_a}
+\le C'_K\,G\bigl(D_a(G)+d_a\bigr).
+$$
+Therefore any choice $G=G_a\to\infty$ satisfying
+$G_a(D_a(G_a)+d_a)\to0$ gives uniform decay of the normalized mixed kernel over all sampled ordinates up to $G_a$ and all $z\in K$. The stronger condition
+$M_aG_a(D_a(G_a)+d_a)\to0$ implies uniform unnormalized convergence to zero on the same set; an $O(1)$ version gives a uniform boundedness criterion. These are conditional deductions from K01/K02, not estimates on $D_a(G_a)$ or $d_a$. Strong convergence of $\Pi_a$ only gives $\delta_a(\gamma)\to0$ for each fixed ordinate, so it does not by itself verify the growing-window hypothesis. No minimum gap is used in the displayed implication; all unresolved input is isolated in the projection-defect and escape rates.
