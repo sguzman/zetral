@@ -30,3 +30,6 @@ for label, ds0 in [('baseline', list(map(int, z['radiusWeights']))), ('perron', 
     ratios = [Fraction(sum(int(R[i, j]) * ds0[j] for j in range(n)), ds0[i] * int(E[i])) for i in range(n)]
     bound = max(ratios)
     print(label, 'exact-max-ratio', f'{bound.numerator}/{bound.denominator}', 'decimal', float(bound))
+midpoint_diagonal = [(inter(i, i)[0] + inter(i, i)[1]) // 2 for i in range(n)]
+print('unpenalized-first-midpoint-diagonal', midpoint_diagonal[0])
+print('unpenalized-nonpositive-diagonal-count', sum(value <= 0 for value in midpoint_diagonal))

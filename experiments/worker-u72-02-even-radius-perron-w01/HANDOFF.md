@@ -24,3 +24,11 @@ Let `R` be a symmetric entrywise-nonnegative matrix and `E` a positive diagonal 
 `max_i (R s)_i/(E_i s_i) = max_i (A x)_i/x_i`.
 
 The Collatz–Wielandt formula gives `inf_{x>0} max_i (A x)_i/x_i = rho(A)`. Thus the Perron scaling solves the continuous minimum-maximum row ratio problem. If `A` is irreducible, a positive Perron vector attains the infimum; without irreducibility, strict-positive vectors need only approach it. This optimizes the maximum weighted row-radius/energy ratio, not positive definiteness of the penalized midpoint matrix. In particular, it gives no guarantee that any leading principal minor is positive. For this staged case, the exact rationalized scaling improves the bound, while the exact principal-minor replay fails immediately.
+
+## Exact fixed-comparison obstruction
+
+The negative first minor is not caused by the choice of radius weights: reconstructing the unpenalized (symmetrized interval-midpoint) comparison gives exact first diagonal
+
+`-3361495043278457092419420598341478182048306504085955774405368`.
+
+The Gershgorin correction subtracts a nonnegative row radius from this diagonal. Therefore every positive radius-weight vector leaves this first pivot negative or smaller for this fixed staged basis, transformed interval data, and allocation. The Perron scaling experiment cannot be repaired by further weight optimization. This is not an obstruction for a different allocation, basis, or original quadratic form. The reconstruction script prints this diagonal and the count of nonpositive unpenalized midpoint diagonals (34/47).
