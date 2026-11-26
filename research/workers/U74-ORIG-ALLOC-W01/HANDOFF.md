@@ -1,6 +1,6 @@
 # U74-ORIG-ALLOC-W01 worker handoff
 
-- Status: IN_PROGRESS
+- Status: READY_FOR_REVIEW
 - Baseline: `435d154` (main; U75-02 even residual checkpoint)
 - Branch/worktree: `worker/u74-original-allocation-obstruction-w01` / `/dev/shm/zetral-u74-original-obstruction`
 - Question: On the archived LXXIV h=5/2 even trial and residual aggregate, can a single exact direction certify failure of the original-coordinate finite comparison for every positive allocation, or can this be ruled out by an allocation in the original basis?
@@ -9,3 +9,5 @@
 - Acceptance: reproducible script/result and proof-quality rational comparison for any all-allocation claim; otherwise a bounded negative/ inconclusive result with tested search and caveats.
 - Stopping condition: exact obstruction, exact counter-allocation in the original coordinates, or documented failure of this bounded vector search.
 - No shared campaign/state/coordination edits; no claim about underlying analytic positivity, RH, or an operator.
+- Completed: exact fixed-vector Cauchy obstruction test at the archived even original-coordinate candidate's first negative Schur direction; no all-allocation obstruction resulted. A reproducible seeded 1,400-direction perturbation search also found none. This is explicitly inconclusive about existence/nonexistence of an original-coordinate allocation.
+- Evidence: `research/workers/U74-ORIG-ALLOC-W01/RESULT.md`, `experiments/worker-u74-original-obstruction/fixed-vector.js`, `experiments/worker-u74-original-obstruction/even-result.json`.
