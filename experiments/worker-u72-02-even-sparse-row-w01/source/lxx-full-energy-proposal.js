@@ -1,0 +1,15 @@
+// Float proposal only; exact interval replay is the acceptance test.
+function propose(raw,f,z,steps=350){
+ const r=raw.rows[0],c=z?.componentIntervals??r.componentIntervals,n=r.ks.length,mid=a=>(Number(a[0])+Number(a[1]))/2,old=r.tailShares.map(x=>Number(x)/Number(r.tailShareDenominator)),rat=f.ratios.map(a=>Number(a[1])/Number(f.scale)),e=c.upper.map((row,i)=>mid(row[i])),mat=fn=>Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>fn(i,j))),norm=m=>mat((i,j)=>(mid(m[i][j])+mid(m[j][i]))/2/Math.sqrt(e[i]*e[j]));
+ const U=norm(c.upper),L=mat(()=>0),W=mat(()=>0);
+ for(let i=0;i<n;i++)for(let j=0;j<=i;j++){let a=U[i][j];for(let k=0;k<j;k++)a-=L[i][k]*L[j][k];if(i===j){if(!(a>0))throw Error("whitening pivot");L[i][j]=Math.sqrt(a)}else L[i][j]=a/L[j][j];}
+ for(let i=0;i<n;i++)for(let j=0;j<=i;j++){let a=i===j?1:0;for(let k=j;k<i;k++)a-=L[i][k]*W[k][j];W[i][j]=a/L[i][i];}
+ const whiten=A=>{const B=mat((i,j)=>W[i].reduce((s,w,k)=>s+w*A[k][j],0));return mat((i,j)=>W[j].reduce((s,w,k)=>s+w*B[i][k],0))};
+ const F=whiten(norm(c.finite)),keys=["leading","second","third","fourth","fifth","sixth","seventh"],R=keys.map((k,t)=>whiten(norm(c[k])).map(row=>row.map(x=>x*old[t]*rat[t]))),q=(z?.eighth??r.diagnostics.map(a=>a.eighthUpper)).map((x,i)=>Number(x)/e[i]*old[7]*rat[7]);
+ const dot=(a,b)=>a.reduce((s,x,i)=>s+x*b[i],0),quad=(A,v)=>dot(v,A.map(row=>dot(row,v))),alloc=a=>{const x=a.map(y=>Math.max(1e-10,Math.sqrt(Math.max(0,y)))),s=x.reduce((a,b)=>a+b,0);return x.map(v=>v/s)},wv=v=>Array.from({length:n},(_,i)=>W.reduce((s,row,j)=>s+row[i]*v[j],0));
+ function eig(p,v){const A=mat((i,j)=>F[i][j]+R.reduce((s,B,k)=>s+B[i][j]/p[k],0)+q.reduce((s,x,k)=>s+x*W[i][k]*W[j][k]/p[k+7],0));for(let t=0;t<80;t++){const b=A.map(row=>dot(row,v)),d=Math.hypot(...b);v=b.map(x=>x/d)}return {v,lambda:quad(A,v)}}
+ let avg=R.map(A=>Math.max(0,A.reduce((s,row,i)=>s+row[i],0))/n).concat(q.map((x,i)=>x*W.reduce((s,row)=>s+row[i]**2,0)/n)),p=alloc(avg),v=Array(n).fill(1/Math.sqrt(n)),best=null,history=[];
+ for(let t=0;t<=steps;t++){const a=eig(p,v);v=a.v;if(!best||a.lambda<best.score)best={score:a.lambda,p:p.slice(),t};const x=wv(v),cost=R.map(A=>Math.max(0,quad(A,v))).concat(q.map((y,i)=>y*x[i]**2));if(t%50===0||t===steps)history.push({t,score:a.lambda,dual:quad(F,v)+cost.reduce((s,y)=>s+Math.sqrt(y),0)**2});const step=2/(t+3);avg=avg.map((x,i)=>(1-step)*x+step*cost[i]);p=alloc(avg);}
+ const D=1e12,w=best.p.map(x=>Math.max(100,Math.round(x*D)));let max=w.indexOf(Math.max(...w));w[max]+=D-w.reduce((a,b)=>a+b,0);if(w.some(x=>x<=0))throw Error("share");return {h:r.h,odd:r.odd,score:best.score,t:best.t,denominator:String(D),weights:w.map(String),history,smallestNormalizedPivot:Math.min(...L.map((row,i)=>row[i]**2)),factors:f};
+}
+if(typeof module!=="undefined")module.exports=propose;
