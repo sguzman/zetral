@@ -1,0 +1,28 @@
+name: U75 closing audit
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: u75-closing-audit-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: cachix/install-nix-action@v31
+      - name: Resolve the flake lock on the runner
+        run: nix flake lock path:.
+      - name: Run exact audits in the pinned Nix environment
+        run: nix develop --locked --command node experiments/u75-04-run-audit.js
+      - name: Commit audit artifact
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add flake.lock experiments/results/u75-04-closing-audit.json
+          git commit -m 'U75-04: independent exact closing audits'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
