@@ -758,6 +758,12 @@ The next `N=96` trial was retained because its exact rational quotient clears th
 
 where the complete rational vector and exact quotient are stored in the script. The verified quotient is approximately `0.2332166260735941`; the actual improvement over the N=80 candidate is about `9.4e-7`, so returns are now below `10^-6` per 16 added profiles. The candidate search uses the same double-precision generalized solve and `10^-6` rounding, but no optimizer accuracy is used in the proof. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial96_certificate.py`.
 
+An N=128 Jacobi search further improves the fixed-vector endpoint. The exploratory matrix was formed by transforming the exact rational monomial moment formulas into the mass-orthogonal Jacobi basis at 700 decimal digits, then diagonalized in double precision. Its smallest numerical Ritz value is exploratory only; no interval isolation or optimizer accuracy is claimed. The resulting coefficients, normalized to `c_0=1` and stored as exact decimal rationals in `jacobi_trial128_coefficients.json`, are independently evaluated by `jacobi_trial128_certificate.py` using exact `Fraction` arithmetic after conversion back to monomials. That certificate proves
+
+`mu_1 <= rational_part - log(2) - pi/2 < 0.233216`,
+
+with rational part approximately `2.497159175003540` and endpoint approximately `0.233215667648698`. Thus the certified bracket sharpens to `0.20465<mu_1<0.233216`. The fixed trial is a variational upper bound for Suzuki's limiting form; it gives no N-to-infinity Ritz error or operator construction. Reproduce the exact claim with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial128_certificate.py`.
+
 ### Independent check of the Mellin log-moment formula
 
 For `g_i(x)=(1-x^2)^(i+1/4) 1_[-1,1](x)`, its Fourier transform is proportional to `|xi|^(-mu_i) J_(mu_i)(|xi|)`, with `mu_i=i+3/4`. After removing the positive normalization constants, the cross moment is the Weber–Schafheitlin integral
