@@ -12,16 +12,16 @@ const rank=require(path.join(root,'results/u75-251-100-even-t1024-m24576-rank-ti
 const source=fs.readFileSync(path.join(root,'tc01-post-log11-em.js'),'utf8');
 const staged=require(path.join(root,'u75-t1024-m24576-staged.js'));
 const assemble=require(path.join(root,'u75-t1024-m24576-assemble.js'));
-const exact=require(path.join(root,'u75-t1024-m24576-exact-replay.js'));
+const exact=require(path.join(root,'worker-u75-m24576-original/exact-replay-unit.js'));
 const raw=assemble(staged.extend(source),trial,[aggregate]);
 const proposal=JSON.parse(JSON.stringify(rank.proposal));
-proposal.factors={...proposal.factors,ratios:Array.from({length:8},()=>['1','1'])};
+proposal.factors={...proposal.factors,ratios:Array.from({length:8},()=>[BigInt(raw.scale).toString(),BigInt(raw.scale).toString()])};
 const result=exact(raw,proposal,null);
 const out={
   baselineEntriesReproduced:result.baselineEntries===2704,
   baselineRadiusCorrectionsReproduced:result.baselineRadii===52,
   positiveMinors:result.positiveMinors,
-  failedMinor:result.failedMinor,
+  failedPivotSign:result.failedMinor===null?null:(BigInt(result.failedMinor)<0n?'negative':'nonpositive'),
   originalEnergyGridMarginNumerator:result.marginNumerator,
   energyGridDenominator:result.marginDenominator,
   nextGridFails:result.nextGridFails,
