@@ -1,0 +1,29 @@
+{
+  "regime": {
+    "h": "251/100",
+    "parity": "even",
+    "n": 52,
+    "J": 128,
+    "KEM": 20,
+    "T": 1024,
+    "M": 20480
+  },
+  "baseline": {
+    "entries": 2704,
+    "radii": 52,
+    "matchedStored": true,
+    "positiveLeadingMinors": 45,
+    "firstFailure": 46
+  },
+  "proposalOriginalCoordinates": {
+    "positiveLeadingMinors": 35,
+    "firstFailure": 36,
+    "failedPivotNegative": true
+  },
+  "transformedStoredReplay": {
+    "positiveLeadingMinors": 51,
+    "firstFailure": 52,
+    "scope": "Exact replay of staged stored intervals and optional recomputed transformed eighth bounds; not independent original-form evaluation."
+  },
+  "interpretation": "A finite comparison check only. Failure in this basis does not refute analytic positivity or the transformed candidate."
+}
