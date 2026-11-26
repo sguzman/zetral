@@ -1,0 +1,34 @@
+{
+  "runtime": "v22.20.0",
+  "status": "exploratory IEEE-754 evaluation of an independently derived scalar series; no rigorous enclosure",
+  "parameters": {
+    "h": "251/100",
+    "seriesTerms": 100,
+    "primePowers": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11
+    ]
+  },
+  "formula": "G00 = archimedean - prime - pole - subtracted-kernel + hyperbolic-tail",
+  "components": {
+    "archimedean": 5.714467641647924,
+    "primeTerm": 2.8201875801667993,
+    "pole": 3.1082399118708235,
+    "subtractedKernel": -0.0900747346018902,
+    "hyperbolicTail": 0.16289572867090718,
+    "exponentialRemainder": 0.5358722689127805,
+    "exponentialRemainderBound": 3.9518173092380446e-222
+  },
+  "entry": 0.039010612883098705,
+  "sharedCompressedInterval": [
+    0.03901061288309637,
+    0.03901061288309637
+  ],
+  "distanceToCompressedInterval": 2.338407245616736e-15
+}
