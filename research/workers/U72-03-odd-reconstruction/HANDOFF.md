@@ -22,7 +22,7 @@ These failures do not show that every odd allocation or transform fails. No all-
 - `experiments/u72-assemble.js`: exact chunk aggregation; `--odd` selects the odd sector.
 - `experiments/u72-odd-transform.js`, `experiments/u72-odd-transform-runner.js`, `experiments/u72-odd-replay-runner.js`: U71 two-row candidate transform freshly replayed at U72 parameters.
 - `experiments/u72-odd-gs-transform-runner.js`, `experiments/u72-odd-gs-replay-runner.js`: double-precision leading-block decorrelation, integer rounding, fresh exact replay.
-- `experiments/u72-exact-replay.js`: BigInt Bareiss and fixed-energy grid-margin replay.
+- `experiments/u72-exact-replay.js`: BigInt Bareiss and fixed-energy grid-margin replay. `experiments/u72-odd-obstruction-sweep.js` and `...-obstruction-sweep.json` preserve the exact bounded coordinate/two-coordinate Cauchy obstruction search.
 - `experiments/results/u72-62-25-odd-t832-trial.json`: odd staged trial.
 - `experiments/results/u72-62-25-odd-finite-*.json`: 16 nonoverlapping exact chunks covering 95..16383 by odd indices (8,145 modes).
 - `experiments/results/u72-62-25-odd-t832-raw.json`: assembled raw intervals.
@@ -42,6 +42,7 @@ done
 node experiments/u72-assemble.js --odd > experiments/results/u72-62-25-odd-t832-raw.json
 node experiments/u72-odd-transform-runner.js
 node experiments/u72-odd-replay-runner.js
+node experiments/u72-odd-obstruction-sweep.js
 node experiments/u72-odd-allocation-blend.js
 node experiments/u72-odd-gs-transform-runner.js
 node experiments/u72-odd-gs-replay-runner.js
