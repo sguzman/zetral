@@ -276,3 +276,9 @@ The truncated prime shifts give
 At `h=62/25`, `log(12)>h`, so only `n=2,3,4,5,7,8,9,11` contribute. `constant_full_form_certificate.py` uses exact `Fraction` intervals: Machin's arctangent series for pi; positive atanh series with explicit tails for logarithms; `gamma < H_N-log N` at `N=5000`; a positive Taylor partial sum to lower-bound each `1-exp(-2u_j h)` for `j=0,...,299`; a positive Taylor partial sum for `sinh`; and rational upper bounds on `1/sqrt(n)` and the finite prime terms. It asserts the full constant Rayleigh quotient exceeds `19/500=0.038`.
 
 Thus the full-form constant direction is strictly positive at this window even though the standalone archimedean component is strictly negative on the same vector. This is only a one-vector Rayleigh lower bound; it does not prove positivity of the full operator or any finite Schur comparison. Run with `python experiments/worker-u72-archimedean-coercivity-audit-w01/constant_full_form_certificate.py`.
+
+The same lower bound is uniform for every interval length `h in [247/100,62/25]`. The prime support is fixed there because `log(11)<247/100` and `log(12)>62/25`, both checked by rational logarithm intervals. On this interval the constant quotient is strictly convex: each archimedean summand
+
+`g_j(h)=[1-exp(-2u_j h)]/(2h u_j^2)`
+
+has second derivative proportional to `2-(x^2+2x+2)exp(-x)>0`, `x=2u_jh`; the pole term is `16[cosh(h/2)-1]/h`, whose power series has nonnegative second derivative; and `-q_P` has positive second derivative `4 sum_n [Lambda(n)/sqrt(n)]*log(n)/h^3`. Hence `q_A'(h)` is increasing. The certificate bounds `q_A'(62/25)<-0.04333`, so `q_A` decreases throughout this interval and its minimum occurs at `62/25`. The `19/500` lower bound therefore holds uniformly for the normalized constant test vector. It remains only a one-vector bound, not operator positivity.

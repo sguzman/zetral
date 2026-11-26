@@ -66,6 +66,19 @@ def sqrt_upper(n: int) -> F:
     return F(Q, r)  # Q/r is a strict upper bound for 1/sqrt(n).
 
 
+def sqrt_lower(n: int) -> F:
+    r = isqrt(n * Q * Q)
+    return F(Q, r if r * r == n * Q * Q else r + 1)
+
+
+def sinh_bounds(x: F, terms: int = 10) -> tuple[F, F]:
+    partial = sum((x ** (2 * k + 1) / factorial(2 * k + 1) for k in range(terms)), F(0))
+    nxt = x ** (2 * terms + 1) / factorial(2 * terms + 1)
+    ratio = x * x / ((2 * terms + 2) * (2 * terms + 3))
+    assert ratio < 1
+    return partial, partial + nxt / (1 - ratio)
+
+
 def main() -> None:
     pi_lo, pi_hi = pi_interval()
     ln2_lo, ln2_hi = log_interval(F(2))
@@ -114,12 +127,40 @@ def main() -> None:
     full_lo = arch_lo + pole_lo - prime_hi
     assert active == [2, 3, 4, 5, 7, 8, 9, 11]
     assert full_lo > F(19, 500)
+
+    # Prove the constant quotient decreases throughout [247/100, 62/25].
+    # Its second derivative is positive there: each archimedean term has
+    # 2-(x^2+2x+2)e^-x>0, the pole term has a positive power series from h^3
+    # onward, and -q_P contributes 4*sum(Lambda(n)log(n)/sqrt(n))/h^3>0.
+    h_left = F(247, 100)
+    log11_hi = log_interval(F(11))[1]
+    assert log11_hi < h_left < H < log12_lo
+    arch_deriv_hi = F(0)
+    for j in range(300):
+        u = F(4 * j + 1, 4)
+        x = 2 * u * H
+        exp_poly = sum((x**k / factorial(k) for k in range(17)), F(0))
+        arch_deriv_hi += (((x + 1) / exp_poly) - 1) / (2 * u * u * H * H)
+
+    sinh_half_lo, sinh_half_hi = sinh_bounds(H / 2)
+    sinh_quarter_lo, _ = sinh_bounds(H / 4)
+    pole_deriv_hi = 8 * sinh_half_hi / H - 32 * sinh_quarter_lo**2 / (H * H)
+    prime_deriv_lo = F(0)
+    for n in active:
+        p = mangoldt_base(n)
+        assert p is not None
+        prime_deriv_lo += 2 * log_interval(F(p))[0] * log_interval(F(n))[0] * sqrt_lower(n) / (H * H)
+    full_deriv_hi = arch_deriv_hi + pole_deriv_hi - prime_deriv_lo
+    assert full_deriv_hi < 0
+
     print("h=62/25, exact rational interval certificate")
     print("  archimedean lower:", float(arch_lo))
     print("  pole lower:", float(pole_lo))
     print("  prime upper:", float(prime_hi))
     print("  full constant Rayleigh lower:", float(full_lo))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
+    print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
+    print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)
 
 
 if __name__ == "__main__":
