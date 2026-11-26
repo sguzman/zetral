@@ -39,6 +39,7 @@ From the repository root:
 ```sh
 python3 experiments/worker-SC02-W02/parity_aware_eighth_tail.py 10240
 python3 experiments/worker-SC02-W02/parity_aware_eighth_tail.py 12288
+python3 experiments/worker-SC02-W02/check_lxix_tail_scale.py
 ```
 
 The ratio and guard calculations use exact `Fraction` arithmetic. `pi` is bounded above and below using Machin's identity and alternating arctangent series. Logarithms are bounded after power-of-two scaling with the positive atanh series and its explicit geometric remainder; the lower and upper endpoints are used in the appropriate directions for `g(q)` and `g(M+1)`. Matrix reconstruction and determinant/grid checks use arbitrary-precision integers with exact divisibility assertions. Decimal ratios in console output are display approximations only; the script asserts the rational cutoffs stated above.
@@ -48,6 +49,8 @@ The ratio and guard calculations use exact `Fraction` arithmetic. `pi` is bounde
 This derives and applies a tighter upper bound for the parity-restricted scalar tail in the stored even SC02 interval-to-matrix certificate. It does not rederive the campaign's `C8` amplitude estimate, the other factor bounds, or the component interval arrays from analytic inputs. The M10240 negative result applies only to its eight saved allocations under this refinement; no new allocation search was done. No odd-sector result, original-form normalization, or operator claim is established.
 
 In the odd sector, the additional pole-loss contribution to `g` is constant in the mode variable, so the same derivative and parity-tail argument applies whenever the sector's high-mode guard gives `g(q)>0`. That odd-sector application was not computed here. This bound is a candidate refinement for LXIX's planned M12288 comparisons, with parity-specific factors and allocations still requiring fresh exact replay.
+
+For the planned LXIX TC02 even parameters (`h=49/20`, `C=2873/1000`, `M=12288`, lowCount 44), `check_lxix_tail_scale.py` certifies `g(12290)>0` and bounds the new-to-old eighth-tail scalar ratio by `4994/10000`. This is only a scalar transfer check; it does not evaluate a TC02 matrix.
 
 AI-assisted; no human review or formal verification has occurred.
 

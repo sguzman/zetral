@@ -10,4 +10,5 @@
 - Checked: the integer tail inequality, monotonicity of the even-sector `g`, exact rational tail ratios, saved interval-to-matrix reconstruction, leading determinants, and fixed-energy grid.
 - Not checked: the `C8` proof, other factor derivations, raw component interval generation, new allocation search, odd parity, or original-form normalization.
 - Findings: no issue with the bound application; M10240 still needs more than this single unchanged-allocation refinement.
-- Next: lead review; the active SC03 odd comparison remains separate.
+- Transfer check: for planned LXIX TC02 even parameters (`h=49/20`, `C=2873/1000`, `M=12288`), an exact rational check certifies `g(12290)>0` and new/old tail scalar ratio `<0.4994`; this is not a TC02 matrix result.
+- Next: lead review; the LXIX TC02 matrix comparison remains separate.
