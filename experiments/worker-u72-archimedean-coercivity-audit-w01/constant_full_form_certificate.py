@@ -126,7 +126,7 @@ def main() -> None:
     logN_lo, _ = log_interval(F(n_gamma))
     gamma_hi = harmonic - logN_lo
     alpha0_lo = -gamma_hi - pi_hi / 2 - 3 * ln2_hi - lnpi_hi
-    assert alpha0_lo > -6
+    assert alpha0_lo > F(-27, 5)
 
     # Exact positive-series lower bound for q_alpha on the constant function.
     arch_inc_lo = F(0)
@@ -234,7 +234,7 @@ def main() -> None:
     print("  pole lower:", float(pole_lo))
     print("  prime upper:", float(prime_hi))
     print("  full constant Rayleigh lower:", float(full_lo))
-    print("  certified alpha_0 lower exceeds -6:", alpha0_lo > -6)
+    print("  certified alpha_0 lower exceeds -27/5:", alpha0_lo > F(-27, 5))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
     print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)
