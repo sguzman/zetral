@@ -116,3 +116,25 @@ Moreover `0<omega_j<pi/h` gives the summable domination `h^2 c_j(h)<pi^2/(4u_j^3
 `= (pi^2/4) (28 zeta(3) + pi^3) ~= 159.5517039088`.
 
 This is the asymptotic of the proved component lower bound, not an asymptotic for the actual least eigenvalue of the full archimedean or Weil operator.
+
+## Exact-rational finite certificate at `h=62/25`
+
+The root-series decimal can be bounded below without trusting floating-point root evaluations. For `x in [0,pi/2]`, Taylor's theorem gives
+
+`sin(x) <= S_9(x)=x-x^3/3!+x^5/5!-x^7/7!+x^9/9!`,
+
+`cos(x) >= C_11(x)=1-x^2/2!+x^4/4!-x^6/6!+x^8/8!-x^10/10!`.
+
+The remainders have signs `-sin(xi)x^10/10! <= 0` and `cos(xi)x^12/12! >= 0`. Use the classical rational bound `223/71 < pi`. For each `j=0,...,99`, the accompanying Python program proposes a rational `q_j` on the `10^-6` grid and verifies entirely with rational arithmetic that `q_j h < 223/71`, `C_11(q_j h/2)>0`, and
+
+`q_j S_9(q_j h/2) <= 2u_j C_11(q_j h/2)`.
+
+These exact inequalities imply `q_j tan(q_j h/2)<=2u_j`, hence `q_j<=omega_j` by monotonicity. The program then sums the rational lower terms `q_j^2/[u_j(4u_j^2+q_j^2)]` and checks the exact rational inequality
+
+`sum_(j=0)^99 q_j^2/[u_j(4u_j^2+q_j^2)] > 24317843723/10000000000 = 2.4317843723`.
+
+Since all omitted `c_j` are positive, this is a certified lower bound for the infinite root series `C(62/25)`, derived using only exact integer/rational checks after the candidate roots are proposed. Reproduce with:
+
+`python3 experiments/worker-u72-archimedean-coercivity-audit-w01/rational_root_certificate.py`
+
+Observed output: `terms=100; grid=1/1000000` and `certified_root_series_lower_bound > 24317843723/10000000000`; the assertions pass. This is a certification of the component lower bound, not of the full archimedean/Weil form. The source proof uses the classical Archimedean inequality `223/71<pi`; the candidate-root floating calculations do not enter the validity of the checks.
