@@ -562,3 +562,6 @@ Lead owns the alternative FDA02/FDA03 result and scoped FDA04 replay; worker exc
 
 
 - LXXII U72-02 COMPLETE (candidate): checkpoint ed68b7c8ed08960fb6aebfdd078d18144070e912. M16384 fixed transformed comparison 9/47, exact allocation obstruction ratio >=1021151/10^6. M20480 reused 8146 modes, appended 2048, verified unchanged trial and refreshed tails, exact 47/47 margin 8140/10^6 replay 274de504518e6093f15e15e91cdc0bac8ee9bdf1. Next U72-03 odd J128/KEM20/T832/M20480/lowCount47 then U72-04 independent audit. Frontier 2.47. No independent original-form evaluation, CI, standalone CLI, RH or novelty claim. README and worker scopes unchanged.
+
+
+- LXXII U72-03 COMPLETE (candidate): checkpoint 4aa5496bd61dd8099485ec858164836430aa0775. Odd 10193 modes M20480; final two chunks and full aggregate recovered with parsed endpoint equality, not byte equality; stored seven-row transform and exact replay fully reproduced (blobs b91ad2ab36a045ab3e4799ce1398f6897af0c167 and fe8ecd3705a9547ae7080e67ab035330b6d1f425), 47/47 and margin 43317/10^6. Even margin 8140/10^6. Next U72-04 independent stored reconstruction, witness/guard and aggregate audits; frontier 2.47 pending closure. No CI, independent original-form evaluation, RH or novelty claim. README and worker scopes unchanged.
