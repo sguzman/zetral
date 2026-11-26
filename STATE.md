@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-26 UTC.
-Active campaign: LXXVI — Independent original-form audit (research/CAMPAIGN-76.md). LXXV is closed as a finite candidate at h=2.51; its stored-component audit passed, but independent original-form evaluation remains incomplete. U76-02 matched the prime term symbolically on the support-length-h cosine basis. U76-04 gives a 70-decimal direct-form interval for the constant-even entry, wholly contained in the stored compressed interval. U76-05 derives the first odd diagonal as a paired Laplace series. U76-06 gives an endpoint expansion whose N=220 remainder has a rational majorant below 10^-62; outward-rounded evaluation of its Hurwitz-zeta and exponential endpoint sums remains. Next encode and independently check those bounds, run the odd interval comparison on Actions, then continue the full-matrix audit.
+Active campaign: LXXVI — Independent original-form audit (research/CAMPAIGN-76.md). LXXV is closed as a finite candidate at h=2.51; its stored-component audit passed, but independent original-form evaluation remains incomplete. U76-02 matched the prime term symbolically on the support-length-h cosine basis. U76-04 certifies the direct constant-even entry inside its shared compressed interval. U76-06/U76-07 derive and outward-enclose the first odd diagonal using endpoint integration by parts and Hurwitz-zeta summation; Actions run 45909728639 reproduces the artifact now on main, whose direct interval is contained in the shared compressed interval with margins about 2.39e-63 and 2.10e-63. Next audit the interval implementation and extend the direct form to the next matrix entry before scaling the principal block.
 
 ## U76-04 latest mathematical checkpoint — 2026-11-26
 
@@ -14,6 +14,18 @@ The first odd diagonal now has an independent paired Laplace-series formula, ele
 ## U76-06 accelerated odd-diagonal checkpoint — 2026-11-26
 
 Repeated integration by parts gives an exact endpoint expansion of each paired Laplace term. Summing endpoint contributions yields finite combinations of Hurwitz-zeta sums `Z_r` and positive exponential sums `E_r`; the total remainder is at most `2 C_N Z_(N+1)`, with `C_N=w^N+(N+1)w^(N-1)/h+2^-N`. At h=2.51 and N=220, elementary rational majorants put this below 10^-62. Rigorous evaluation of the endpoint sums and exact integer verification of that bound are not yet implemented. No odd numeric interval or certificate is claimed. Next build and audit those outward-rounded enclosures.
+
+## U76-07 hosted odd-entry interval checkpoint — 2026-11-26
+
+The 90-decimal fixed-point driver evaluates the direct `G_11` source-form expression using 220 endpoint integrations by parts. For each needed `Z_r`, it computes a 128-term rational prefix and 80 exact-rational Euler–Maclaurin terms, converting each term outward before interval summation; the periodic-Bernoulli integral remainder is bounded by `4 (s)_(159) x^(-s-159)/(2 pi)^160`, `x=129.25`, `2<=s<=221`. The positive `E_r` sum uses 39 terms and a geometric tail. The remaining endpoint-expansion bound is enclosed near `4.53e-65`.
+
+On Actions run `45909728639` (Nix-locked Node 22.20.0), the direct interval is
+`[0.069482970314056417111772062543954534383073523169947604567625202735121792780140162438982618, 0.069482970314056417111772062543954534383073523169947604567625202861327692225675066496438346]`.
+The shared compressed interval contains it, with lower and upper margins
+`2.390372121792780140162438982618e-63` and
+`2.104682672307774324933503561654e-63`. The Actions-generated JSON and compact summary were pushed and fetched from main at `035aedf124b0946080b9622145805a9ce3fa7800`.
+
+The implementation trail preserves three failures: (i) fixed-point rounding of tiny Euler–Maclaurin coefficients before multiplication by large rising factorials caused an unusably wide enclosure; (ii) globally accumulated exact rational sums were too slow and the run was canceled; (iii) the first narrow run double-subtracted terms in `M(1/2)`, and its width guard rejected it. Exact term cancellation before 90-decimal conversion and correcting the isolated term produced the accepted interval. This is one diagonal comparison only; no matrix positivity or RH conclusion follows. Next independently review the interval/remainder implementation and derive the next matrix entry.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.

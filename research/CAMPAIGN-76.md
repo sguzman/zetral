@@ -268,3 +268,50 @@ not an odd-entry enclosure. The next checkpoint must encode an explicit
 Euler–Maclaurin remainder for every needed `Z_r`, a positive finite sum and
 geometric tail for `E_r`, and an independently checked integer proof of the
 residual bound. Only then run the outward-rounded entry comparison on Actions.
+
+## U76-07 hosted odd-entry comparison — 2026-11-26
+
+The implementation is `experiments/u76-odd-series-interval.js` and its
+runner is `.github/workflows/u76-odd-series-interval.yml`. It uses scale
+`10^90`, exact rational accumulation within each Hurwitz-zeta Euler–Maclaurin
+term, with each term converted outward only after its exact rational
+cancellation (without forming one enormous common denominator). For
+`s=2,...,221`, split
+`zeta(s,5/4)` after 128 terms at `x=129.25`; apply 80 Euler–Maclaurin terms.
+The periodic Bernoulli Fourier bound
+`|B_tilde_160(u)| <= 2*160!*zeta(160)/(2*pi)^160 < 4*160!/(2*pi)^160`
+in the integral remainder yields
+
+    |R| <= 4 (s)_(159) x^(-s-159)/(2 pi)^160.
+
+The Euler–Maclaurin expansion and integral remainder follow from NIST DLMF
+§2.10(i), especially (2.10.1)
+([DLMF §2.10](https://dlmf.nist.gov/2.10)). The exponential sums `E_r` use
+39 positive terms and a geometric tail with ratio `exp(-2h)`. The omitted
+integration-by-parts remainder is bounded by `2 C_220 Z_221`; the interval
+driver encloses this bound at about `4.53e-65`.
+
+Actions run `45909728639` succeeded under locked Nix / Node 22.20.0 and pushed
+commit `035aedf124b0946080b9622145805a9ce3fa7800`. Its artifact
+`experiments/results/u76-odd-series-interval.json` contains both the 90-digit
+direct result and shared comparator; compact output is in
+`experiments/results/u76-odd-series-summary.json`. The direct `G_11` interval
+is
+
+    [0.069482970314056417111772062543954534383073523169947604567625202735121792780140162438982618,
+     0.069482970314056417111772062543954534383073523169947604567625202861327692225675066496438346]
+
+and is wholly contained in the shared compressed interval. The lower and upper
+containment margins are respectively `2.390372121792780140162438982618e-63`
+and `2.104682672307774324933503561654e-63`. The same artifact reproduces the
+earlier `G_00` source-form enclosure. This is a two-scalar comparison, not an
+independent full-matrix audit, positivity theorem, or RH result.
+
+Implementation falsifications are retained in the run history and local
+artifact diagnostics: premature 70-digit rounding of tiny EM coefficients
+created a spurious huge interval; exact rational accumulation across all
+terms was computationally too slow and was canceled; a subsequent narrow run
+found double subtraction in the isolated `M(1/2)` formula and was rejected by
+the width guard. The corrected exact-term conversion and isolated term pass
+the hosted containment check. Next independently audit the interval formulas
+and implement the next direct Gram entry before increasing block size.

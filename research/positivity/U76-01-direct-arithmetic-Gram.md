@@ -459,6 +459,52 @@ and its indexing must be derived explicitly in the implementation note,
 using the integral remainder in NIST DLMF §2.10
 ([DLMF §2.10](https://dlmf.nist.gov/2.10)); it is not yet claimed here as a
 computed enclosure. U76-06 therefore completes the analytic acceleration
-step only. Next implement and independently check the rational remainder
-comparison, rigorous `Z_r`/`E_r` enclosures, then run the odd-entry interval
-comparison on Actions.
+step only.
+
+### U76-07: hosted outward enclosure of the first odd diagonal
+
+The driver `experiments/u76-odd-series-interval.js` now encloses the exact
+endpoint representation at scale `10^90`. For each `s=2,...,221`, it splits
+`zeta(s,5/4)` after 128 terms at `x=129.25`, then uses 80 Euler–Maclaurin
+terms. The periodic Bernoulli Fourier bound
+`|B_tilde_160(u)| <= 2*160!*zeta(160)/(2*pi)^160 < 4*160!/(2*pi)^160`
+in the integral remainder yields
+
+    |R_80| <= 4 (s)_(159) x^(-s-159)/(2 pi)^160.
+
+Indeed, integrating `(x+t)^(-s-160)` gives the displayed factor. The
+Euler–Maclaurin identity and integral remainder are given in NIST DLMF
+§2.10(i), especially (2.10.1)
+([DLMF §2.10](https://dlmf.nist.gov/2.10)). Each finite-prefix and
+Euler–Maclaurin term is computed as an exact reduced rational, then
+outward-rounded before interval summation; no global common denominator is
+formed. The `E_r` sum uses 39 positive terms and a geometric
+remainder with ratio `exp(-2h)`. The
+integration-by-parts remainder `2 C_220 Z_221` is enclosed below `4.53e-65`.
+
+Locked-Nix Actions run `45909728639` used Node 22.20.0 and passed the
+interval-containment gate. Its output was pushed by the runner and read back
+from `main` at commit `035aedf124b0946080b9622145805a9ce3fa7800`; see
+`experiments/results/u76-odd-series-interval.json` and the compact
+`experiments/results/u76-odd-series-summary.json` (blob IDs
+`9d73e56a1f151edc4fcdc6b4972e0cd86e8158ac` and
+`0e459eedb7f5535daf989e752a0e6394edf549a7`, respectively). The direct interval is
+
+    [0.069482970314056417111772062543954534383073523169947604567625202735121792780140162438982618,
+     0.069482970314056417111772062543954534383073523169947604567625202861327692225675066496438346]
+
+inside the shared compressed interval, with lower and upper margins
+`2.390372121792780140162438982618e-63` and
+`2.104682672307774324933503561654e-63`. The artifact also reproduces U76-04's
+constant-even entry. This checks two scalar entries only, against the existing
+shared compressed intervals; the 52-by-52 original-form audit and positivity
+claim remain open.
+
+Implementation falsifications: rounding tiny Bernoulli coefficients to the
+initial 70-digit lattice before multiplying by large rising factorials caused
+a spurious enormous interval; exact rational accumulation across the entire
+zeta sum exceeded practical runner time and was canceled; after termwise exact
+cancellation, the width guard caught double subtraction in the isolated
+`M(1/2)` term. The fixed-point precision was raised to 90 digits and the
+isolated term corrected before the successful run. These were implementation
+failures, not mathematical counterexamples.
