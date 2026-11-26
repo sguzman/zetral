@@ -180,18 +180,17 @@ the exact asymptotic of the actual compressed operator's least eigenvalue.
 
 The logarithmic floor implies strict positivity of the full local Weil form
 on a sufficiently short interval, without any assumption on the zeros. For
-`0<h<=10^-4`, take `delta=1/4` in the preceding low-rate estimate. The
-coefficient `(1-delta/2)/(1+delta)` is `7/10`. With
-`N=floor(1/(4h)-1/4)`, the harmonic integral comparison gives
+`0<h<=1/2000`, take `delta=1/10` in the preceding low-rate estimate. The
+coefficient `(1-delta/2)/(1+delta)` is `19/22`. With
+`N=floor(1/(10h)-1/4)`, the harmonic integral comparison gives
 
-`C(h) >= (7/10) log(4N+5) >= (7/10) log(1/h) > 63/10`.
+`C(h) >= (19/22) log(4N+5) >= (19/22) log(800)`.
 
-The strict final inequality uses `log(10^4)>9`; for example, the exponential
-series gives `e<11/4`, and `(11/4)^9<10^4`. The exact-rational calculation
-in `constant_full_form_certificate.py` gives `alpha_0>-27/5` using rational
+The exact-rational calculation in `constant_full_form_certificate.py`
+verifies `(19/22)log(800)-27/5-1/500>37/100` using rational atanh bounds
+for the logarithm. The same certificate gives `alpha_0>-27/5` using rational
 Machin bounds for pi, the harmonic-limit bound for Euler's constant, and
-rational atanh bounds for the logarithms. Hence the archimedean part is
-bounded below by more than `9/10` times the squared norm.
+rational atanh bounds for the logarithms.
 
 For `h<log(2)`, every prime shift `log(n)` exceeds the interval length, so
 the prime contribution is identically zero. The remaining pole form obeys
@@ -203,9 +202,9 @@ the operator bound
 Here the first inequality is Cauchy–Schwarz and
 `2 int_(-h/2)^(h/2)(cosh(x/2)^2+sinh(x/2)^2)dx=4sinh(h/2)`;
 the last uses `sinh(h/2)<h` for this range. Therefore, for every form-domain
-vector and `0<h<=10^-4`,
+vector and `0<h<=1/2000`,
 
-`q_h(f) > (9/10-4*10^-4)||f||_2^2 > 0` for `f!=0`.
+`q_h(f) > (37/100)||f||_2^2 > 0` for `f!=0`.
 
 This is a deliberately conservative explicit window and uses the stated
 physical-space Weil-form identity. It proves small-window positivity only;
