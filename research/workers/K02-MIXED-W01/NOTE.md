@@ -49,3 +49,29 @@ for every scale \(M_n>0\), on taking the normalized entire scalar \(P_n(z)=1-z/\
 \(M_n\langle g,h_n\rangle=M_n\epsilon_n\) can be bounded or divergent by the choice of \(M_n\). Thus even compactness, strong projection convergence, weak escape, vanishing \(\|B_nh_n\|\), and this one sampled-point identity do not force a bounded mixed scale.
 
 This refinement still omits the full analytic family \(u_z\), the relation between \(h_n\), the evaluation norm \(M_n\), and the local Weil form, and the resolvent/kernel identities away from \(\gamma\). It is therefore a sharper abstract rate obstruction only, not evidence for unboundedness of the actual mixed kernel.
+
+## Actual-model overlap estimate from the exact vector identity
+
+The preceding abstract examples show why qualitative convergence alone supplies no rate. In the actual K01/K02 setting, however, the exact vector identity yields a more explicit bound on the weak-escape coefficient. Fix a real sample ordinate \(\gamma\), put \(g=g_\gamma\), \(\delta_a=\|(I-\Pi_a)g\|\), and \(d_a=\|B_a h_a\|\), with \(h_a\in\operatorname{ran}\Pi_a\), \(\|g\|=m_\gamma^{-1/2}\). Pair
+\[
+ P_a(\gamma)M_a h_a=(I-\gamma B_a)\Pi_a g
+\]
+with \(h_a\). Since \(\Pi_a h_a=h_a\) and \(B_a\) is self-adjoint,
+\[
+ \langle g,h_a\rangle
+   =P_a(\gamma)M_a+\gamma\langle\Pi_a g,B_a h_a\rangle.
+\]
+K02's projection-defect estimate \(|P_a(\gamma)|M_a\le\gamma\|C\|\delta_a\) then gives the exact quantitative consequence
+\[
+ |\langle g_\gamma,h_a\rangle|
+ \le \gamma\|C\|\delta_a
+       +\frac{\gamma}{\sqrt{m_\gamma}}d_a.
+\]
+Substituting in K02's mixed estimate, for compact \(K\subset\mathbb C\),
+\[
+ \sup_{z\in K}\frac{|J_a(\gamma,z)|}{M_a}
+ \le \gamma\|C\|\delta_a\sup_{z\in K}|P_a(z)|
+    +\frac{\gamma d_a}{\sqrt{m_\gamma}}\sup_{z\in K}|P_a(z)|
+    +O_K\!\left(\frac{d_a}{\sqrt{m_\gamma}}\right).
+\]
+Because \(P_a\) is locally uniformly bounded, this is \(O_{K,\gamma}(\delta_a+d_a)\), hence recovers the known \(o(1)\) after division by \(M_a\) while identifying the two exact quantities that control the rate. Equivalently \(J_a(\gamma,z)=O_{K,\gamma}(M_a(\delta_a+d_a))\). This does **not** imply \(O(1)\), convergence, or divergence: no bound on \(M_a\delta_a\) or \(M_a d_a\) is obtained from these identities. It also does not contradict the abstract countermodels, which omit the full coupled characteristic/projection structure. The result is a conditional deduction from the displayed K01/K02 imports, not a new source theorem or a formal verification.

@@ -9,3 +9,5 @@
 - Required lead disposition: review whether a quantitative model-specific estimate is worth pursuing; no change to campaign claims is warranted from this abstract diagnostic.
 
 - Follow-up refinement: the abstract example was strengthened to satisfy the sampled-point vector identity `(I-gamma Pi_n C Pi_n)Pi_n g = P_n(gamma) M_n h_n` at a simple scalar zero while retaining arbitrary behavior of `M_n <g,h_n>`. The omitted analytic-family and Weil-form links remain explicit; this is not an actual-kernel counterexample.
+
+- Actual-model deduction added: pairing K02's exact vector identity with `h_a` bounds the overlap by `gamma ||C|| delta_a + gamma d_a/sqrt(m_gamma)`, where `delta_a=||(I-Pi_a)g_gamma||` and `d_a=||B_a h_a||`. Substitution gives `J_a(gamma,z)=O_{K,gamma}(M_a(delta_a+d_a))`; this identifies the missing model-specific rates but proves no bounded unnormalized limit.
