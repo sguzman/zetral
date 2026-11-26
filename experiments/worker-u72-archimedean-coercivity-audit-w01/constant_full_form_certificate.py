@@ -121,7 +121,7 @@ def main() -> None:
 
     # gamma < H_N-log(N), with gamma >= 0 used only for the pole-free component
     # diagnostic elsewhere.  This is the standard decreasing harmonic limit.
-    n_gamma = 5000
+    n_gamma = 50000
     harmonic = sum((F(1, k) for k in range(1, n_gamma + 1)), F(0))
     logN_lo, _ = log_interval(F(n_gamma))
     gamma_hi = harmonic - logN_lo
@@ -130,7 +130,7 @@ def main() -> None:
     assert alpha0_lo > F(-27, 5)
     # Odd alternating-series lower bound for the regularized integral I.
     ci_series_lo = F(0)
-    for k in range(1, 16):
+    for k in range(1, 18):
         den = 2 * k * factorial(2 * k)
         term = (pi_hi ** (2 * k) if k % 2 else pi_lo ** (2 * k)) / den
         ci_series_lo += -term if k % 2 else term
@@ -144,7 +144,7 @@ def main() -> None:
 
     # Lower bound on Suzuki's small-window constant from the root-series floor.
     mu1_lo = gamma_lo + log_interval(pi_lo)[0] - ln2_hi + ci_series_lo / 2
-    assert mu1_lo > F(2045, 10000)
+    assert mu1_lo > F(2046, 10000)
 
     # Exact positive-series lower bound for q_alpha on the constant function.
     arch_inc_lo = F(0)
@@ -254,7 +254,8 @@ def main() -> None:
     print("  full constant Rayleigh lower:", float(full_lo))
     print("  certified alpha_0 lower exceeds -27/5:", alpha0_lo > F(-27, 5))
     print("  h<=1/10 full-form margin exceeds 1/20:", short_window_margin > F(1, 20))
-    print("  inferred Suzuki mu_1 lower exceeds 0.2045:", mu1_lo > F(2045, 10000))
+    print("  certified Suzuki mu_1 lower:", float(mu1_lo))
+    print("  inferred Suzuki mu_1 lower exceeds 0.2046:", mu1_lo > F(2046, 10000))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
     print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)

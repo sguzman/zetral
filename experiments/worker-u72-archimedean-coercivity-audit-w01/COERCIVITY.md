@@ -242,7 +242,7 @@ The Rayleigh principle and Suzuki's Theorem 1.4 consequently imply
 `mu_1 <= 1-log(2)`.
 
 Together with the exact-rational lower bound, this brackets the constant as
-`0.2045 < mu_1 <= 1-log(2)`. The lower endpoint uses an odd alternating
+`0.2046 < mu_1 <= 1-log(2)`. The lower endpoint uses an odd alternating
 partial sum for `Ci(pi)`; the upper endpoint is an analytic trial bound.
 Neither inequality is a novelty claim for Suzuki's small-window theorem.
 
@@ -518,4 +518,4 @@ At `p=1/4`, the values `psi(1/2)=-gamma-2log(2)`, `psi(3/2)=psi(1/2)+2`, `psi(2)
 
 `mu_1 <= 5/2 - pi/2 - log(2) ~= 0.2360564926`.
 
-Although `g_(1/4)` is not smooth at its endpoints, it is in `H^s` for every `s<3/4`, and its logarithmic Fourier moment is finite. Interior cutoffs and mollification approximate it by smooth compactly supported profiles in some `H^s`, `0<s<3/4`. The logarithmic multiplier form is continuous under this approximation, so the same infimum bound follows from admissible smooth trials. Since `pi>2`, this improves the previous trial upper bound. Together with the separately certified lower bound this gives `0.2045 < mu_1 <= 5/2-pi/2-log(2)`. This is a Rayleigh bound using Suzuki's asymptotic, not a numerical determination of `mu_1`, and it does not alter the full-form coercivity claims above.
+Although `g_(1/4)` is not smooth at its endpoints, it is in `H^s` for every `s<3/4`, and its logarithmic Fourier moment is finite. Interior cutoffs and mollification approximate it by smooth compactly supported profiles in some `H^s`, `0<s<3/4`. The logarithmic multiplier form is continuous under this approximation, so the same infimum bound follows from admissible smooth trials. Since `pi>2`, this improves the previous trial upper bound. Together with the separately certified lower bound this gives `0.2046 < mu_1 <= 5/2-pi/2-log(2)`. This is a Rayleigh bound using Suzuki's asymptotic, not a numerical determination of `mu_1`, and it does not alter the full-form coercivity claims above.
