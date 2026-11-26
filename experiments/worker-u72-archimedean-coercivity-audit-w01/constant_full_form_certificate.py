@@ -79,6 +79,41 @@ def sinh_bounds(x: F, terms: int = 10) -> tuple[F, F]:
     return partial, partial + nxt / (1 - ratio)
 
 
+def cosh_bounds(x: F, terms: int = 10) -> tuple[F, F]:
+    partial = sum((x ** (2 * k) / factorial(2 * k) for k in range(terms)), F(0))
+    nxt = x ** (2 * terms) / factorial(2 * terms)
+    ratio = x * x / ((2 * terms + 1) * (2 * terms + 2))
+    assert ratio < 1
+    return partial, partial + nxt / (1 - ratio)
+
+
+def iadd(x: tuple[F, F], y: tuple[F, F]) -> tuple[F, F]:
+    return x[0] + y[0], x[1] + y[1]
+
+
+def ineg(x: tuple[F, F]) -> tuple[F, F]:
+    return -x[1], -x[0]
+
+
+def imul(x: tuple[F, F], y: tuple[F, F]) -> tuple[F, F]:
+    p = [a * b for a in x for b in y]
+    return min(p), max(p)
+
+
+def isquare(x: tuple[F, F]) -> tuple[F, F]:
+    if x[0] >= 0:
+        return x[0] ** 2, x[1] ** 2
+    if x[1] <= 0:
+        return x[1] ** 2, x[0] ** 2
+    return F(0), max(x[0] ** 2, x[1] ** 2)
+
+
+def exp_negative_lower(x: F, terms: int = 17) -> F:
+    # The alternating tail from k=2 decreases when x<2; an odd partial sum is lower.
+    assert 0 < x < 2 and terms % 2 == 1
+    return sum(((-x) ** k / factorial(k) for k in range(terms + 1)), F(0))
+
+
 def main() -> None:
     pi_lo, pi_hi = pi_interval()
     ln2_lo, ln2_hi = log_interval(F(2))
@@ -153,6 +188,46 @@ def main() -> None:
     full_deriv_hi = arch_deriv_hi + pole_deriv_hi - prime_deriv_lo
     assert full_deriv_hi < 0
 
+    # Also certify the simplest odd test vector f(x)=sqrt(12/h^3)*x.
+    a = H / 2
+    c2 = 12 / H**3
+    u0, r0 = F(1, 4), F(1, 2)
+    q0 = exp_negative_lower(H / 2)
+    I0 = 4 * a**3 / (3 * r0) - 2 * (1 + a * r0) / r0**2 * (
+        a * (1 + q0) / r0 - (1 - q0) / r0**2
+    )
+    odd_arch_inc_lo = (1 / u0) * (1 - r0 * c2 * I0 / 2)
+    for j in range(1, 300):
+        u = F(4 * j + 1, 4)
+        # Setting exp(-2*u*h)=0 raises I_r and lowers this positive symbol term.
+        odd_arch_inc_lo += c2 * (a * a / (2 * u * u) - 1 / (8 * u**4))
+    odd_arch_lo = alpha0_lo + odd_arch_inc_lo
+
+    sinh_a2_lo, _ = sinh_bounds(a / 2)
+    _, cosh_a2_hi = cosh_bounds(a / 2)
+    odd_pole_moment_hi = 4 * a * cosh_a2_hi - 8 * sinh_a2_lo
+    odd_pole_lo = -2 * c2 * odd_pole_moment_hi**2
+
+    odd_prime_hi = F(0)
+    for n in active:
+        p = mangoldt_base(n)
+        assert p is not None
+        logp = log_interval(F(p))
+        shift = log_interval(F(n))
+        root = isqrt(n * Q * Q)
+        invroot = (F(Q, root + (root * root != n * Q * Q)), F(Q, root))
+        length_overlap = (H - shift[1], H - shift[0])
+        quadratic_overlap = iadd(
+            (H * H / 2, H * H / 2),
+            ineg(iadd(imul((H, H), shift), isquare(shift))),
+        )
+        overlap = imul(length_overlap, quadratic_overlap)
+        overlap = (overlap[0] / 6, overlap[1] / 6)
+        coefficient = imul((2 * c2, 2 * c2), imul(logp, invroot))
+        odd_prime_hi += imul(coefficient, overlap)[1]
+    odd_full_lo = odd_arch_lo + odd_pole_lo - odd_prime_hi
+    assert odd_full_lo > F(1, 10)
+
     print("h=62/25, exact rational interval certificate")
     print("  archimedean lower:", float(arch_lo))
     print("  pole lower:", float(pole_lo))
@@ -161,6 +236,8 @@ def main() -> None:
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
     print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)
+    print("  odd linear-test Rayleigh lower:", float(odd_full_lo))
+    print("  certified odd linear-test threshold 1/10:", odd_full_lo > F(1, 10))
 
 
 if __name__ == "__main__":

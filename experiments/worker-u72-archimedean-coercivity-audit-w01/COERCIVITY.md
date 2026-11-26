@@ -263,6 +263,26 @@ At `h=62/25`, this gives `q_alpha(f) <= alpha_0+109/31`. Also `alpha_0=-gamma-pi
 
 This proves the standalone archimedean compression has a negative direction at `h=62/25`; it does not show that the full Weil form is negative, since the pole and prime contributions can change the Rayleigh quotient. It also does not conflict with the positive lower bound for `alpha-alpha_0`, because the negative constant `alpha_0` is restored here.
 
+## Odd linear test at `h=62/25`
+
+The same rational script also evaluates the normalized odd linear test `f(x)=c*x`, `c^2=12/h^3`, at `h=62/25`. For `r=2u_j`, let `G_r(x,y)=exp(-r|x-y|)/(2r)` and
+
+`I_r=int_(-a)^a int_(-a)^a x*y*exp(-r|x-y|) dx dy`, `a=h/2`.
+
+Solving `K''=r^2 K-2r*x` for `K(x)=int exp(-r|x-y|)y dy`, with the exterior boundary condition `K'(a)=-rK(a)`, gives
+
+`I_r=4a^3/(3r)-2(1+ar)*exp(-ar)/r^2 * [a*cosh(ar)/r-sinh(ar)/r^2]`
+
+or, using `q=exp(-rh)`,
+
+`I_r=4a^3/(3r)-2(1+ar)/r^2 * [a*(1+q)/r-(1-q)/r^2]`.
+
+Thus the `j`th digamma increment on this test is `(1/u_j)*(1-r*c^2*I_r/2)`. For `j>=1`, `I_r<=I_r|_(q=0)` and the increment is bounded below by `c^2*(a^2/(2u_j^2)-1/(8u_j^4))>0`; retain `j=1,...,299` and drop the positive tail. For `j=0`, the script lower-bounds `exp(-h/2)` by an odd alternating Taylor partial sum. The pole contribution is `-2*c^2*[4a*cosh(a/2)-8sinh(a/2)]^2`. For shift `s=log n`, the prime overlap is
+
+`int_(-a)^(a-s) x*(x+s) dx=(h-s)*(h^2/2-h*s-s^2)/6`;
+
+the script propagates exact rational log and inverse-square-root intervals through all nonzero `Lambda(n)` terms. It certifies the full odd linear-test quotient exceeds `1/10`. This is a single vector check, not an odd-sector positivity certificate.
+
 ## Full-form constant test at the campaign window
 
 For the full restored even form on `I=(-h/2,h/2)`, the same normalized constant has an exact quotient decomposition `q_A=q_alpha+q_H-q_P`. The odd pole vector `sinh(x/2)` is orthogonal to this test; for `c(x)=cosh(x/2)`,
