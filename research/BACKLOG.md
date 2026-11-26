@@ -27,9 +27,11 @@ triangle/absolute-mass estimates cannot be uniform. Along `h=2 pi m`, `n=m`,
 the normalized sine component has absolute limit `1/2`; automatic phase
 cancellation fails. See `research/positivity/B1-01-theta-cutoff-scope.md`.
 The compact-frequency endpoint expansion is now proved uniformly for
-`|alpha|<=A` by partial summation and the PNT. Next propagate it through the
-`n^(-p)/g(n)` weighted squares and rank allocation, then control `alpha>A`
-without losing the exact positive slack.
+`|alpha|<=A` by partial summation and the PNT. The absolute-mass substitution
+in the current `g(n)` guard forces `n>2h exp(c exp(h/2))`; it is
+double-exponential and not computationally viable. Improve the prime bound
+using endpoint cancellation, propagate through `n^(-p)/g(n)` and rank
+allocation, and control `alpha>A` before requesting hosted compute.
 
 ### B1 — Analytical extension beyond finite cutoffs
 
@@ -48,9 +50,10 @@ without losing the exact positive slack.
   not the full map. A first scope audit established that the theta-cardinal
   estimate in `research/theta-cardinal-bound.md` cannot directly supply this
   inequality. Absolute coefficient summation grows like `2 exp(h/2)`, while
-  selected phases remain endpoint-coherent. Continue with a uniform
-  endpoint-main-term/error bound for the growing arithmetic shift family;
-  preserve the full original-form mapping as an explicit dependency.
+  selected phases remain endpoint-coherent. Naive mass in the inherited
+  `g(n)` guard gives a double-exponential mode cutoff. Continue with a
+  sharper endpoint-aware prime bound; preserve the full original-form mapping
+  as an explicit dependency.
 - **Design / falsification:** Isolate the exact residual after the finite
   low-mode and prime-power terms. Seek a sign theorem, monotone envelope, or
   summable majorant uniform in the endpoint. Test the proposed bound against

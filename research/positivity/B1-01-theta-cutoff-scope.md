@@ -179,3 +179,24 @@ controls `alpha>A` and the full matrix cross terms? A useful falsification
 attempt is to track the exact `g(n)` lower bound and rank factor as `M` and
 the number of shifts grow; a bounded normalized modal coefficient alone does
 not imply positive residual slack.
+
+## B1-04: scalability obstruction for the inherited diagonal guard
+
+The current high-mode certificate uses
+
+    g(n) = log(n/(2h)) - 3h^2/(2 pi^2 n^2) - P(h) - L(h),
+
+where `P(h)>=0` bounds the prime term and `L(h)>=0` is the pole loss. A
+necessary condition for this particular guard to pass is therefore
+`log(n/(2h))>P(h)`, hence `n>2h exp(P(h))`. If one extends it using only the
+absolute shift-mass estimate, then `P(h)` is a fixed positive multiple of
+`B(e^h)~2e^(h/2)`. The required mode cutoff is consequently at least of the
+scale `2h exp(c e^(h/2))` for some `c>0`: double-exponential in `h`.
+
+This follows directly from the displayed guard and the PNT mass asymptotic.
+It is an obstruction to the scalability of the inherited guard when fed an
+absolute-value prime estimate; it is not a lower bound for the true form's
+spectrum and does not preclude a substantially sharper prime cancellation
+bound or a different decomposition. The next campaign step must improve
+`P(h)` before attempting any large hosted generation. A finite sample at
+larger `h` cannot change this asymptotic limitation.
