@@ -9,6 +9,7 @@ function run(stored,aggregate,prior,d,modules,steps=350){
  tr=rep(tr,"[1,2,3,4,5,6,7,8,10,11,12,14,18,26,28,33,34,35,37,39,45].includes(i)",JSON.stringify(d.selected)+".includes(i)");
  tr=rep(tr,"unchangedEighthMatches:n-21","unchangedEighthMatches:n-"+d.selected.length);
  tr=tr.replace(/determinant:"[0-9]+"/,'determinant:'+JSON.stringify(d.determinant));
+ tr=rep(tr,"10n**80n/sqrt(row[i][1])","10n**180n/sqrt(row[i][1])");
  const z=load(tr)(raw,f,ext);
  assert(z.determinant===d.determinant&&JSON.stringify(z.transform)===JSON.stringify(d.transform),"transform");
  // The original normalization multiplies two energy diagonals before sqrt;
