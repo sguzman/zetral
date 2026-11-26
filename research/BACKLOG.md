@@ -103,9 +103,9 @@ analytic theorems and from any RH implication.
   reconstructs stored components but does not independently evaluate the
   original Weil form. Campaign LXXVI is the active source-form audit; its
   symbolic correlation and parity reduction is in
-  research/positivity/U76-01-direct-arithmetic-Gram.md. Exploratory midpoint
-  values are persisted, but have no rigorous quadrature enclosure; the
-  same-index compressed intervals differ and the test-function map remains
+  research/positivity/U76-01-direct-arithmetic-Gram.md. The length-h cosine
+  basis and prime-term match are now derived, but midpoint values lack
+  rigorous quadrature enclosures and the continuous-term identity remains
   unverified.
 - **Design / falsification:** Reconstruct from source formulas rather than the
   stored assembled matrices; independently regenerate witness and guards;

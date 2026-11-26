@@ -94,50 +94,90 @@ source states that positivity of the original Weil form on all compactly
 supported smooth tests is equivalent to RH. The present finite symbolic
 reduction proves neither positivity nor RH.
 
-## Exploratory low-entry comparison (2026-11-26)
+## Initial wrong-window comparison (2026-11-26; superseded)
 
-The direct formula was evaluated by the separate script
-experiments/u76-direct-diagnostic.js using composite midpoint quadrature in
-IEEE-754 double precision at a=2.51. Refinement used N=2^12, 2^14, 2^16,
-2^18, and 2^20 subintervals. At the final mesh:
+The first direct diagnostic used support [-2.51,2.51], length 5.02, in an
+exponential basis. Its midpoint values appeared different from the
+same-index compressed entries. This was an invalid same-window comparison:
+the campaign parameter h=2.51 is the support length, not the half-width.
+Preserve the numbers and script as a failed convention check; do not treat
+them as evidence against the compressed entries.
+
+For the doubled support, the local IEEE-754 midpoint refinement used
+N=2^12, 2^14, 2^16, 2^18, and 2^20. At the final mesh:
 
     G_00                  = 0.019197802326197156
     G_11                  = 0.019352169298925016
     G_1,-1                = 0.019249031648779225
     G_11 - G_1,-1         = 0.00010313765014579104
 
-Between the last two meshes, the changes were approximately 5.89e-11 for
-G_00 and 9.61e-12 for the odd diagonal. These are observed discretization
-differences only, not rigorous error bounds. The direct prime-power list
-contains all powers q<=151; exp(5.02) is between 151 and 152.
+These are correct only for that length-5.02 interval. The exact compressed
+probe, at Q=10^66, h=251/100, J=128, T=4, M=6, lowCount=1, KEM=20, gave:
 
-The same-index low-support probe of the existing compressed code produced,
-at Q=10^66, h=251/100, J=128, T=4, M=6, lowCount=1, KEM=20:
+    even A[0,0] = [39010612883096363023510418276624185312940219011026208353945855967,
+                   39010612883096363023510418276624185312940219011026208353948085882] / Q
+    odd  A[0,0] = [69482970314056417111772062543954534383073523169947604567622812363,
+                   69482970314056417111772062543954534383073523169947604567627307544] / Q
 
-    compressed even A[0,0] = [39010612883096363023510418276624185312940219011026208353945855967,
-                              39010612883096363023510418276624185312940219011026208353948085882] / Q
-    compressed odd  A[0,0] = [69482970314056417111772062543954534383073523169947604567622812363,
-                              69482970314056417111772062543954534383073523169947604567627307544] / Q
+These exact intervals come from the existing compressed implementation and
+are a comparator, not an independent calculation. The apparent discrepancy
+was caused first by comparing different support lengths.
 
-The intervals are exact outputs of the existing compressed implementation,
-extracted by experiments/u76-compressed-entry-probe.js. That probe reuses the
-production entry code, so it is a comparator only, not an independent
-calculation. The apparent same-index values differ substantially from the
-direct raw Fourier Gram entries. This does not falsify either result: the
-compressed A matrix includes additional transformations, and no theorem or
-change-of-basis identity has been derived that identifies A[0,0] with G_00 or
-the odd entry with G_11-G_1,-1. The new actionable gap is the missing
-test-function map and its normalization.
+## Campaign window and cosine-basis map
 
-Reproduction:
+The LXXV parameter h is the support length. By translation invariance, use
+[0,h] instead of the centered interval [-h/2,h/2]. The orthonormal cosine
+basis on [0,h] is
 
-    node --check experiments/u76-direct-diagnostic.js
-    node experiments/u76-direct-diagnostic.js
-    node --check experiments/u76-compressed-entry-probe.js
-    node experiments/u76-compressed-entry-probe.js
+    phi_0(x)=1/sqrt(h)
+    phi_n(x)=sqrt(2/h) cos(pi*n*x/h), n>=1.
 
-Artifacts: experiments/results/u76-direct-diagnostic.json and
-experiments/results/u76-compressed-entry-probe.json. The direct values are
-exploratory floating-point evidence only; the compressed intervals are
-replayed from the shared implementation. No original-form certificate or
-LXXV basis map has been established.
+Reflection about h/2 sends phi_n to (-1)^n phi_n. Thus the even-index and
+odd-index spans are invariant orthogonal sectors for the reflection-invariant
+Weil form. After translating to [-h/2,h/2], even n=2m gives
+(-1)^m cos(2*pi*m*y/h), while odd n=2m+1 gives
+(-1)^(m+1) sin((2m+1)*pi*y/h). This is the sector split used by LXXV's
+every-other-frequency supports.
+
+For t>=0 define
+
+    I_nk(t)=integral_t^h cos(pi*n*y/h) cos(pi*k*(y-t)/h) dy.
+
+The correlation in the Weil functional is
+S_nk(t)=nu_n*nu_k*(I_nk(t)+I_kn(t)), where nu_0=1/sqrt(h) and
+nu_n=sqrt(2/h) for n>0. If n and k have the same parity, direct integration
+gives I_nk=I_kn. For n!=k,
+
+    I_nk(t) =
+      [omega_k sin(omega_k*t)-omega_n sin(omega_n*t)]
+      /(omega_n^2-omega_k^2),  omega_j=pi*j/h.
+
+For n=k>0,
+
+    I_nn(t)=(h-t)cos(omega_n*t)/2 - sin(omega_n*t)/(2*omega_n),
+
+and I_00(t)=h-t. Therefore S_nk=2*nu_n*nu_k*I_nk within each sector.
+The prime-power part of the direct form is exactly
+
+    -sum_{q<=exp(h)} Lambda(q)/sqrt(q)
+       * 2*nu_n*nu_k*I_nk(log(q)),
+
+which is the expression P(n,k) in the compressed generator. The exact source
+guards place h strictly between log(11) and log(13); hence the prime powers
+in the sum are exactly 2,3,4,5,7,8,9,11, the eight selected shifts. This
+proves the prime-term and basis-normalization match symbolically within each
+parity sector. The continuous terms still need a complete entrywise
+derivation.
+
+The direct full-form entries on [0,h] were evaluated by midpoint refinement
+in experiments/u76-support-h-direct-diagnostic.js. At N=2^22 on local Node
+v22.23.4, the even constant entry was 0.03901061288350416 and the first odd
+entry was 0.06948297031382022. The exact compressed intervals lie near
+0.03901061288309636 and 0.06948297031405642. The differences are about
+4.1e-13 and 2.4e-13; midpoint refinement is consistent with convergence but
+does not rigorously enclose either entry. The output is
+experiments/results/u76-support-h-direct-diagnostic.json.
+
+Next derive the archimedean and subtracted-kernel entry identity, replace
+midpoint estimates with outward-rounded quadrature, and extend to principal
+blocks. No original-form certificate or full 52-by-52 match is established.

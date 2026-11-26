@@ -22,9 +22,12 @@ jobs:
           nix develop --command node experiments/u76-direct-diagnostic.js
           nix develop --command node --check experiments/u76-compressed-entry-probe.js
           nix develop --command node experiments/u76-compressed-entry-probe.js
+          nix develop --command node --check experiments/u76-support-h-direct-diagnostic.js
+          nix develop --command node experiments/u76-support-h-direct-diagnostic.js
           jq -n --slurpfile d experiments/results/u76-direct-diagnostic.json \
             --slurpfile c experiments/results/u76-compressed-entry-probe.json \
-            '{direct:{runtime:$d[0].runtime,status:$d[0].status,endpoint:$d[0].primePowerEndpoint,rows:$d[0].rows},compressed:{runtime:$c[0].runtime,status:$c[0].status,output:$c[0].output}}' \
+            --slurpfile s experiments/results/u76-support-h-direct-diagnostic.json \
+            '{direct:{runtime:$d[0].runtime,status:$d[0].status,endpoint:$d[0].primePowerEndpoint,rows:$d[0].rows},compressed:{runtime:$c[0].runtime,status:$c[0].status,output:$c[0].output},supportH:{runtime:$s[0].runtime,method:$s[0].method,primePowers:$s[0].primePowers,rows:$s[0].rows}}' \
             > experiments/results/u76-low-entry-summary.json
       - name: Commit and push runner readback
         run: |
@@ -33,6 +36,7 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add experiments/results/u76-direct-diagnostic.json \
             experiments/results/u76-compressed-entry-probe.json \
+            experiments/results/u76-support-h-direct-diagnostic.json \
             experiments/results/u76-low-entry-summary.json
           if git diff --cached --quiet; then
             echo 'Runner outputs match the committed artifacts.'

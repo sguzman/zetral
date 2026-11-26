@@ -154,8 +154,49 @@ experiments/results/u76-compressed-entry-probe.json. Both scripts pass
 node --check. Next derive the actual test-function map underlying A and its
 normalization. Until then, full 52x52 source-form comparison is premature.
 
-The manual workflow .github/workflows/u76-low-entry-audit.yml has been added
-to replay these two bounded diagnostics in the repository's locked Nix Node
-environment and commit a compact summary. It has not yet been dispatched.
-The direct midpoint values remain non-certified; the workflow is a
-reproducibility check and does not change that evidence level.
+The manual workflow .github/workflows/u76-low-entry-audit.yml replayed both
+bounded diagnostics successfully in the locked Nix environment (Actions run
+45899602205). Runner commit
+7406734a0a4ef83147ecaa15de930d350ea5dfdc records the compact summary and
+runner-generated outputs. Node v22.20.0 reproduced every direct midpoint
+value from local Node v22.23.4; after excluding the runtime label, canonical
+JSON hashes match exactly (direct
+6fb92ce0b17406b7c0480e10fc79f436caa662debcd512bea5ff0e9f1d8cbff6;
+compressed
+71ef8fc87a53f997408ab626bea3dd3f1e9f577bea53176fdf1449e5445e8734).
+This verifies reproducibility of a floating-point diagnostic and a replay of
+the shared compressed implementation. It does not certify the direct
+integrals or establish that the compressed entries represent the same test
+functions.
+
+## U76-02 corrected window and basis checkpoint (2026-11-26)
+
+The prior mismatch is superseded: the first direct run used support [-h,h],
+but the campaign parameter h is the support length. The correct basis on
+[0,h] is phi_0=1/sqrt(h), phi_n=sqrt(2/h)cos(pi*n*x/h). Reflection about
+h/2 splits it into the even-index and odd-index sectors used by LXXV.
+Translation to a centered interval identifies them with even cosine and odd
+sine modes respectively.
+
+For n,k in the same index-parity sector, direct integration of the
+correlation gives I_nk=I_kn, with I_nk exactly the closed form in
+research/positivity/U76-01-direct-arithmetic-Gram.md. Therefore the direct
+prime-power term is exactly the P(n,k) term in the compressed code, including
+the normalization. The source guards ln(11)<h<ln(13), so the complete prime
+powers in this window are exactly 2,3,4,5,7,8,9,11.
+
+The corrected independent midpoint diagnostic at N=2^22 returns 0.03901061288350416
+for the even constant entry and 0.06948297031382022 for the first odd entry.
+The shared exact compressed intervals are near 0.03901061288309636 and
+0.06948297031405642. The residual differences (~4.1e-13 and ~2.4e-13) are
+compatible with floating quadrature/roundoff, but are not enclosed. The
+archimedean and subtracted-kernel identity has not been independently
+rederived entrywise.
+
+The revised direct script and result are
+experiments/u76-support-h-direct-diagnostic.js and
+experiments/results/u76-support-h-direct-diagnostic.json. The Actions
+workflow has been extended to run it under locked Nix but has not yet been
+dispatched with this new support convention. Next derive the continuous
+component identity and add a rigorous interval quadrature for the two low
+entries; full 52-by-52 reconstruction remains premature.
