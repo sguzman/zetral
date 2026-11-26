@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-26 UTC.
-Active campaign: LXXV — Guarded extension (research/CAMPAIGN-75.md). Current candidate frontier h=2.50; next U75-01 witness and guards.
+Active campaign: LXXV — Guarded extension (research/CAMPAIGN-75.md). Current candidate frontier h=2.50; U75-01 complete; next U75-02 fresh even trial.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -275,3 +275,6 @@ LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8
 
 
 - LXXIV CLOSED (candidate): 3ea118486fa51b9358488d11a9a30313e4668bee. Even/odd margins 127110/10^6 and 211333/10^6; independent audit matched 5000 matrix entries, 100 radii, 100 determinants and both adjacent grid rejections, 40 residual chunks and 30000 intermediate/final aggregate endpoints; witness/guard byte/object match. Candidate frontier 2.50. LXXV opened at 7f90d1ea199867a0acbedfb9115e92270f6c54e9, target h=2.51, proposed endpoint 62/5. Next U75-01. No independent original-form evaluation, CI, standalone CLI, formal/human review or RH claim. README and worker scopes unchanged.
+
+
+- LXXV U75-01 COMPLETE: exact rational endpoint 62/5, bound 3024/1000, step 16, 67777 checked cells, 1299725 serialized ASCII characters in four byte-verified parts under experiments/u75-witness-part-{1..4}.txt (in numerical order, concatenate without separator); commits a594a795d5c3d33d7e93e5dc767831e0192278cc, 3a85a19767a2f610b2e20d93aa54229a5e70dcaf, a4430496753ba883c94b8ae331d5f25d23d1f80f, cc487c7ab26420f4b53dad02c7b1f0d3259bcfe7. [Generator](https://github.com/sguzman/zetral/commit/c51ffde9d9761a672403741739575f02fdff2123), [guard output](https://github.com/sguzman/zetral/commit/8cef271314b23beec307b9e5ab211f4b3706ed08), both exact readback. All endpoint slacks positive, log(62/5)-2.51 >0.00769647. First common positive tested low support 52 (51 fails both; guards at 52 >0.00687243 even and >0.01644328 odd). Next U75-02: fresh even trial h=251/100, J128/KEM20/T1024/M20480/lowCount52, fresh finite residuals, transform and exact rank-aware replay. No prior residual reuse. Candidate frontier stays 2.50. No independent original-form evaluation, CI, standalone CLI, formal/human review, RH or originality claim. README and worker scopes unchanged. To minimize chat context, retrieve only header and final superseding checkpoint of STATE.md (currently over 150k characters); active campaign and exact linked artifacts are sufficient for resumption.
