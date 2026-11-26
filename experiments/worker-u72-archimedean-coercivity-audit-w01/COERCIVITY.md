@@ -129,15 +129,11 @@ The remainders have signs `-sin(xi)x^10/10! <= 0` and `cos(xi)x^12/12! >= 0`. Us
 
 `q_j S_9(q_j h/2) <= 2u_j C_11(q_j h/2)`.
 
-These exact inequalities imply `q_j tan(q_j h/2)<=2u_j`, hence `q_j<=omega_j` by monotonicity. The program then sums the rational lower terms `q_j^2/[u_j(4u_j^2+q_j^2)]` and checks the exact rational inequality
-
-`sum_(j=0)^99 q_j^2/[u_j(4u_j^2+q_j^2)] > 24317843723/10000000000 = 2.4317843723`.
-
-Since all omitted `c_j` are positive, this is a certified lower bound for the infinite root series `C(62/25)`, derived using only exact integer/rational checks after the candidate roots are proposed. Reproduce with:
+These exact inequalities imply `q_j tan(q_j h/2)<=2u_j`, hence `q_j<=omega_j` by monotonicity. The program sums the rational lower terms `q_j^2/[u_j(4u_j^2+q_j^2)]` and checks exact threshold inequalities. For the campaign interval it proves `C(62/25)>24317843723/10000000000=2.4317843723`. It also certifies the physical interval length `h=1` used in the stored DNB example: `C(1)>723383109/200000000=3.616915545`. Consequently the corresponding full archimedean floor there is `alpha_0+C(1)`, approximately `-1.7552678742` (the decimal is illustrative). Since all omitted `c_j` are positive, each finite sum is a certified lower bound for the infinite root series. Reproduce both checks with:
 
 `python3 experiments/worker-u72-archimedean-coercivity-audit-w01/rational_root_certificate.py`
 
-Observed output: `terms=100; grid=1/1000000` and `certified_root_series_lower_bound > 24317843723/10000000000`; the assertions pass. This is a certification of the component lower bound, not of the full archimedean/Weil form. The source proof uses the classical Archimedean inequality `223/71<pi`; the candidate-root floating calculations do not enter the validity of the checks.
+Observed output reports 100 terms and grid `1/1000000` for each interval, followed by the two exact rational thresholds; all assertions pass. This certifies the component lower bounds, not the full restored operator. The source proof uses the classical Archimedean inequality `223/71<pi`; floating-point candidate roots do not enter the validity of the exact checks.
 
 ## Monotonicity in interval length
 

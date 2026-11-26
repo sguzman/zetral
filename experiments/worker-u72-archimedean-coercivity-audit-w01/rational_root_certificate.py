@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
-"""Exact-rational lower certificate for the archimedean root series.
+"""Exact-rational lower certificates for the archimedean root series.
 
-Python standard library only. Floating point is used solely to propose a
-candidate rational root; every accepted candidate and the final sum are then
-checked with Fraction arithmetic.
+Python standard library only. Floating point proposes candidate rational roots;
+every accepted candidate and final sum is verified with Fraction arithmetic.
 """
 from fractions import Fraction as Q
-from math import floor, pi, tan
+from math import floor, tan
 
-H = Q(62, 25)
 PI_LOWER = Q(223, 71)  # classical Archimedean lower bound, strictly below pi
 GRID = 1_000_000
-COUNT = 100
-TARGET = Q(24317843723, 10_000_000_000)  # 2.4317843723
+CASES = [
+    ("U72 interval", Q(62, 25), 100, Q(24317843723, 10_000_000_000)),
+    ("DNB physical interval", Q(1), 100, Q(723383109, 200_000_000)),
+]
 
 
 def sin_upper(x: Q) -> Q:
@@ -26,40 +26,42 @@ def cos_lower(x: Q) -> Q:
     return Q(1) - x**2 / 2 + x**4 / 24 - x**6 / 720 + x**8 / 40320 - x**10 / 3628800
 
 
-def valid_lower_root(q: Q, u: Q) -> bool:
-    x = q * H / 2
+def valid_lower_root(q: Q, u: Q, h: Q) -> bool:
+    x = q * h / 2
     c = cos_lower(x)
-    return q > 0 and q * H < PI_LOWER and c > 0 and q * sin_upper(x) <= 2 * u * c
+    return q > 0 and q * h < PI_LOWER and c > 0 and q * sin_upper(x) <= 2 * u * c
 
 
-def main() -> None:
+def certify(name: str, h: Q, count: int, target: Q) -> None:
     lower_sum = Q(0)
-    for j in range(COUNT):
+    for j in range(count):
         u = Q(4 * j + 1, 4)
         # Numerically locate the root only to propose a grid point.
-        lo, hi = 0.0, float(PI_LOWER / H)
+        lo, hi = 0.0, float(PI_LOWER / h)
         for _ in range(80):
             mid = (lo + hi) / 2
-            if mid * tan(mid * float(H) / 2) <= 2 * float(u):
+            if mid * tan(mid * float(h) / 2) <= 2 * float(u):
                 lo = mid
             else:
                 hi = mid
         k = floor(lo * GRID)
         q = Q(k, GRID)
-        while k > 0 and not valid_lower_root(q, u):
+        while k > 0 and not valid_lower_root(q, u, h):
             k -= 1
             q = Q(k, GRID)
-        assert valid_lower_root(q, u)
-        # c_j(omega) is increasing in omega; q <= omega_j by monotonicity of
-        # x -> x tan(x H/2) and the exact Taylor-rational inequality above.
+        assert valid_lower_root(q, u, h)
+        # c_j(omega) increases with omega; q <= omega_j by monotonicity of
+        # x -> x tan(x h/2) and the exact Taylor-rational inequality above.
         lower_sum += q**2 / (u * (4 * u**2 + q**2))
 
-    assert lower_sum > TARGET
-    print(f"terms={COUNT}; grid=1/{GRID}")
-    print(f"certified_root_series_lower_bound > {TARGET.numerator}/{TARGET.denominator}")
-    print(f"decimal threshold={float(TARGET):.10f}")
-    print(f"exact sum numerator digits={len(str(lower_sum.numerator))}")
-    print(f"exact sum denominator digits={len(str(lower_sum.denominator))}")
+    assert lower_sum > target
+    print(f"{name}: h={h}, terms={count}, grid=1/{GRID}")
+    print(f"  certified C(h) > {target.numerator}/{target.denominator} = {float(target)}")
+
+
+def main() -> None:
+    for case in CASES:
+        certify(*case)
 
 
 if __name__ == "__main__":
