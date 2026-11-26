@@ -255,3 +255,16 @@ derive an accelerated remainder (or exact special-function sum), then run an
 outward-rounded comparison for this odd diagonal. Details and constants are
 in `research/positivity/U76-01-direct-arithmetic-Gram.md`. No odd-entry
 numeric comparison is claimed.
+
+## U76-06 endpoint-acceleration checkpoint — 2026-11-26
+
+The direct odd diagonal now has an exact N-term integration-by-parts
+decomposition. Its endpoint terms sum to finite combinations of
+`Z_r=2^-r zeta(r,5/4)` and `E_r=sum_{j>=1}exp(-(2j+1/2)h)/(2j+1/2)^r`, and
+the residual is bounded by `2 C_N Z_(N+1)`, with
+`C_N=(pi/h)^N+(N+1)(pi/h)^(N-1)/h+2^-N`. At h=2.51 and N=220, rational
+majorants give a residual below 10^-62. This is an analytical tail result,
+not an odd-entry enclosure. The next checkpoint must encode an explicit
+Euler–Maclaurin remainder for every needed `Z_r`, a positive finite sum and
+geometric tail for `E_r`, and an independently checked integer proof of the
+residual bound. Only then run the outward-rounded entry comparison on Actions.

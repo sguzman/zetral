@@ -399,3 +399,66 @@ tail scale. The analytic formula is a new independent reduction, not yet a
 numerical result. The next task is to accelerate or replace this tail bound
 (for example, subtract endpoint Laplace asymptotics with a rigorously bounded
 remainder) before spending a runner computation on an interval comparison.
+
+### U76-06: endpoint expansion with a geometric remainder
+
+Put `g(t)=F(t)-exp(-t/2)`. Repeated integration by parts gives, for every
+integer `N>=1` and `a>0`,
+
+    M(a) = sum_{k=0}^{N-1} [g^(k)(0)-exp(-a h)g^(k)(h)]/a^(k+1)
+           + a^(-N) integral_0^h exp(-a t)g^(N)(t)dt.
+
+The identity follows by induction from one integration by parts; its
+remainder satisfies `|R_N(a)| <= ||g^(N)||_infinity/a^(N+1)`. For `N>=1`,
+product differentiation of `(1-t/h)cos(wt)`, the sine term, and the
+exponential gives the explicit majorant
+
+    ||g^(N)||_infinity <= C_N
+      = w^N + (N+1)w^(N-1)/h + 2^(-N),  w=pi/h.
+
+Here `a_0=1/2` is treated by the elementary closed form above; for `j>=1`,
+`a_j=2j+1/2` and the integrated expansion is summed. Write
+`Z_r=sum_{j>=1}a_j^(-r)=2^(-r) zeta(r,5/4)` and
+`E_r=sum_{j>=1}exp(-a_j h)a_j^(-r)`. The exact accelerated representation is
+
+    D_11 = 2 M(1/2)
+           + 2 sum_{k=1}^{N-1} g^(k)(0) Z_(k+1)
+           - 2 sum_{k=0}^{N-1} g^(k)(h) E_(k+1) + R,
+    |R| <= 2 C_N Z_(N+1).
+
+The absent `k=0` term at zero is because `g(0)=0`. All endpoint derivatives
+are elementary. For `n>=1`,
+
+    g^(n)(0)=w^n cos(n pi/2) - (n/h)w^(n-1)cos((n-1)pi/2)
+             - (w^n/pi)sin(n pi/2) + (-1)^(n+1)2^(-n),
+    g^(n)(h)=-(n/h)w^(n-1)cos(pi+(n-1)pi/2)
+             -(w^n/pi)sin(pi+n pi/2)
+             + (-1)^(n+1)2^(-n)exp(-h/2),
+
+with `g(0)=0` and `g(h)=-exp(-h/2)`. These formulas expose only powers of
+`w`, rational factors, and `exp(-h/2)` at the endpoints.
+
+For `h=2.51`, `N=220`, `pi<22/7`, `pi>3`, and `a_1=5/2`, use
+`w<1.26` and
+
+    Z_r <= a_1^(-r) [1+a_1/(2(r-1))],  r>1,
+
+by comparison with the first term plus the integral at spacing 2. Substitution
+in `2 C_220 Z_221` yields a rational bound below `10^-62` (the assertion is
+deliberately rounded upward; the exact integer comparison is still to be
+encoded in the interval driver). Thus the remainder can be much smaller than
+the roughly `10^-53` stored interval width without summing an astronomical
+number of original Laplace terms. This alone does not certify `D_11`: the
+finite endpoint sums `Z_r` and `E_r`, the other constants, and the resulting
+full entry still need outward-rounded evaluation.
+
+The `Z_r` terms can be enclosed by a finite prefix plus Euler–Maclaurin for
+the Hurwitz zeta tail. The `E_r` terms can be enclosed by a finite positive
+sum plus a geometric tail. The needed Euler–Maclaurin remainder inequality
+and its indexing must be derived explicitly in the implementation note,
+using the integral remainder in NIST DLMF §2.10
+([DLMF §2.10](https://dlmf.nist.gov/2.10)); it is not yet claimed here as a
+computed enclosure. U76-06 therefore completes the analytic acceleration
+step only. Next implement and independently check the rational remainder
+comparison, rigorous `Z_r`/`E_r` enclosures, then run the odd-entry interval
+comparison on Actions.

@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-26 UTC.
-Active campaign: LXXVI — Independent original-form audit (research/CAMPAIGN-76.md). LXXV is closed as a finite candidate at h=2.51; its stored-component audit passed, but independent original-form evaluation remains incomplete. U76-02 matched the prime term symbolically on the support-length-h cosine basis. U76-04 gives a 70-decimal direct-form interval for the constant-even entry, wholly contained in the stored compressed interval. U76-05 derives the first odd diagonal as a paired Laplace series, but its elementary O(1/J) tail is too weak for interval matching. Next derive a useful accelerated tail bound before computation; then continue the odd and full-matrix audit. See latest checkpoint below.
+Active campaign: LXXVI — Independent original-form audit (research/CAMPAIGN-76.md). LXXV is closed as a finite candidate at h=2.51; its stored-component audit passed, but independent original-form evaluation remains incomplete. U76-02 matched the prime term symbolically on the support-length-h cosine basis. U76-04 gives a 70-decimal direct-form interval for the constant-even entry, wholly contained in the stored compressed interval. U76-05 derives the first odd diagonal as a paired Laplace series. U76-06 gives an endpoint expansion whose N=220 remainder has a rational majorant below 10^-62; outward-rounded evaluation of its Hurwitz-zeta and exponential endpoint sums remains. Next encode and independently check those bounds, run the odd interval comparison on Actions, then continue the full-matrix audit.
 
 ## U76-04 latest mathematical checkpoint — 2026-11-26
 
@@ -10,6 +10,10 @@ For the even constant cosine basis entry, the direct correlation gives the exact
 ## U76-05 odd-diagonal analytical checkpoint — 2026-11-26
 
 The first odd diagonal now has an independent paired Laplace-series formula, elementary summand, and exact archimedean expression in `research/positivity/U76-01-direct-arithmetic-Gram.md`. A direct derivative bound proves an O(1/J) tail, but it cannot practically match the stored interval. Next subtract endpoint Laplace asymptotic terms with a rigorous remainder, or find an equivalent accelerated sum. No odd-entry numerical comparison is claimed.
+
+## U76-06 accelerated odd-diagonal checkpoint — 2026-11-26
+
+Repeated integration by parts gives an exact endpoint expansion of each paired Laplace term. Summing endpoint contributions yields finite combinations of Hurwitz-zeta sums `Z_r` and positive exponential sums `E_r`; the total remainder is at most `2 C_N Z_(N+1)`, with `C_N=w^N+(N+1)w^(N-1)/h+2^-N`. At h=2.51 and N=220, elementary rational majorants put this below 10^-62. Rigorous evaluation of the endpoint sums and exact integer verification of that bound are not yet implemented. No odd numeric interval or certificate is claimed. Next build and audit those outward-rounded enclosures.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.

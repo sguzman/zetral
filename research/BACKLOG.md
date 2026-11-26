@@ -17,10 +17,11 @@ places it wholly inside the shared compressed interval; Actions run
 constant even continuous component now has an exact paired exponential-series
 formula, closed rational part, and explicit geometric remainder bound in
 `research/positivity/U76-01-direct-arithmetic-Gram.md`. Its next acceptance
-step is an accelerated rigorous tail for the newly derived odd-diagonal paired
-Laplace series; its elementary O(1/J) bound is too weak to certify useful
-precision. Then outward-enclose that entry and expand to the remaining matrix
-entries. Keep B1 analytical extension
+step is outward-rounded evaluation of the U76-06 endpoint expansion for the
+odd-diagonal paired Laplace series. At N=220 its remainder has a rational
+majorant below 10^-62, but the Hurwitz-zeta and exponential endpoint sums still
+need rigorous enclosures. Then compare that entry and expand to the remaining
+matrix entries. Keep B1 analytical extension
 on hold until the original-form continuous mapping is independently audited.
 
 ### B1 — Analytical extension beyond finite cutoffs

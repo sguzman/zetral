@@ -16,7 +16,7 @@ The independent scalar formula was evaluated on Actions run 45902627157 and repl
 
 U76-04 replaced that scalar diagnostic with a 70-decimal outward-rounded interval evaluation. The direct G_00 enclosure has width 2.9006e-66 and is wholly contained in the shared compressed interval. Actions run 45905468198 and local locked-Nix replay match after removing runtime metadata (SHA-256 `ac9b7eea5e6b3189ade829be49e07a93a7fe15de66ce5f713d4b058c3d7e71f2`). This certifies one entry only; the odd diagonal and full matrix remain open.
 
-U76-05 derives the first odd diagonal directly as a paired Laplace series and gives its elementary summand and archimedean contribution. The simple rigorous tail bound is O(1/J), too weak for the stored interval scale; an accelerated remainder is the next mathematical task. No odd-entry numerical result is claimed.
+U76-05 derives the first odd diagonal directly as a paired Laplace series and gives its elementary summand and archimedean contribution. U76-06 integrates by parts N times and sums endpoint terms into Hurwitz-zeta and exponentially weighted sums; at N=220 the remaining Laplace tail has a rational majorant below 10^-62. Outward-rounded endpoint-sum evaluation is still open, and no odd-entry numeric interval is claimed. See the direct Gram note for the derivation and the required next checks.
 
 ## Campaigns XII–LVII
 
