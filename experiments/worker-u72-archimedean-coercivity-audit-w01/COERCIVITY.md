@@ -204,3 +204,13 @@ Write `C_N=Delta_N-A0`. Its unconstrained stationary point is
 `x_star=V0(2 A0+C_N)/(A0 C_N)`.
 
 If `x_star<1`, it minimizes `e_N` on the admissible interval `V0/C_N < x <= 1`; otherwise the minimum is at `x=1`. The projected rate-tail term is additionally multiplied by `x`, so optimizing the total enclosure requires adding it and the interval arithmetic errors. This identifies a possible reduction in the conservative error after the cutoff has passed the same gap threshold; it does not guarantee a practical improvement, and no numerical optimum or revised finite certificate was computed.
+
+For `A0>0` and `V0>0`, the condition for a strict interior minimizer simplifies to
+
+`x_star<1  <=>  C_N(A0-V0)>2 A0 V0`.
+
+Thus `A0>V0` is necessary, and then the gap parameter must exceed `2 A0 V0/(A0-V0)`. In particular, mere admissibility `C_N>V0` is not enough to justify interpolation. Differentiating gives
+
+`e_N'(x)=(A0*x+V0)*(A0*C_N*x-2*A0*V0-C_N*V0)/(C_N*x-V0)^2`.
+
+The derivative is negative below `x_star` and positive above it. If `x_star>=1`, it is nonpositive throughout the admissible interval, so the minimum is the endpoint `x=1` (`theta=0`); interpolation does not improve this generic unweighted error bound. This endpoint criterion concerns `e_N` alone; the separately scaled rate-tail term can change the optimizer of a combined bound.
