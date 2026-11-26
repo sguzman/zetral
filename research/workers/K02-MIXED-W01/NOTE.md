@@ -636,3 +636,24 @@ The previously established K02 finite-window criterion now gives, for every fixe
 \frac{|J_a(\gamma,z)|}{M_a}\longrightarrow0.
 \]
 Thus qualitative pointwise projection convergence does imply existence of some growing ordinate window with uniform *normalized* mixed-kernel decay. This is an RH/source-conditional, existential diagonal result; it gives no effective lower bound on \(G_a\), no conclusion for an owner-prescribed window, and no unnormalized boundedness or decay.
+
+
+### A single diagonal window for both kernel conclusions
+
+The two existential diagonal arguments can be synchronized. For each integer \(n\), take the mixed-kernel constant \(C_n=C'_{\overline D_n}\) in the finite-window criterion, where \(D_n=\{z:|z|\le n\}\). For fixed \(n\), \(D_a(n)\to0\) and \(d_a\to0\), so choose a threshold \(A_n\) after which
+\[
+C_n n\bigl(D_a(n)+d_a\bigr)\le 1/n.
+\]
+Also choose a threshold \(B_n\) after which the normalized kernel jets of orders \(j,k\le n\) differ from those of \(\overline{\Delta(w)}\Delta(z)\) by at most \(1/n\) on \(\overline D_n\times\overline D_n\). Increase \(T_n=\max(A_n,B_n)\) if needed so that \(T_n\) is strictly increasing and tends to infinity, and set \(H_a=\max\{n:T_n\le a\}\). Then \(H_a\to\infty\) and simultaneously
+\[
+\sup_{\substack{0<\gamma\le H_a\\ \gamma\in\Gamma,\ |z|\le H_a}}
+\frac{|J_a(\gamma,z)|}{M_a}\le \frac1{H_a}
+\]
+and
+\[
+\sup_{\substack{|w|,|z|\le H_a\\0\le j,k\le H_a}}
+\left|\partial_{\bar w}^{\,j}\partial_z^{\,k}
+\left(\frac{J_a(w,z)}{M_a^2}-\overline{\Delta(w)}\Delta(z)\right)\right|
+\le\frac1{H_a}.
+\]
+This is one existential expanding window for both the mixed row and the normalized kernel jets. It remains non-effective: no lower bound for \(H_a\), no unnormalized mixed-kernel control, and no projection-defect estimate at a prescribed ordinate range is obtained.
