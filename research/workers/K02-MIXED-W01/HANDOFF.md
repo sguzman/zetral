@@ -17,3 +17,5 @@
 - Quantitative refinement: exact factorial formulas in the control model give `M_N ~ (pi/2)^(1/4) N^(1/4)`, `||B_N h_N||^2 ~ (pi^2/3)/sqrt(pi/2) * N^(-1/2)`, and `M_N ||B_N h_N|| -> pi/sqrt(3)`. The proof uses a Gaussian Riemann sum with an explicit tail bound and dominated convergence. This is an analytic toy-model calculation, not numerical verification or an actual Weil-form asymptotic.
 
 - Microscopic check added: direct resolvent-coordinate estimates in the same model give the multiplicity-one profile `1 + conjugate(eta) zeta |Delta'(k)|^2` at offsets of size `1/M_N`, while the fixed-separated sample kernel stays finite.
+
+- Stronger synthetic countermodel added: paired nodes with `N_+(T)=T log T/(2 pi)+O(1)` and an even real entire order-one canonical product. Tuned near-collisions force the exact sample interpolation weights to make `M_N -> infinity` and `h_N` weakly escape, while the full commuting-projection resolvent model still has finite fixed-sample mixed limits. This is not zeta: its artificial close pairs and lack of arithmetic/Weil structure are explicit.

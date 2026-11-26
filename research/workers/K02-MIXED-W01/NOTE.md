@@ -154,3 +154,33 @@ in norm, with \(\langle e_k,h_N\rangle\to0\). Consequently
  \to 1+\overline\eta\zeta|\Delta'(k)|^2.
 \]
 The finite mixed limit at fixed nonzero separation and the nonconstant microscopic diagonal profile coexist exactly as in the K02 statement; the latter alone does not force the former to diverge.
+
+## Synthetic (T\log T)-counting control with weak escape
+
+The linear-node model has the wrong leading zero count for zeta. The commuting construction can be strengthened to a synthetic signed node set with the Riemann–von Mangoldt leading count, while retaining a finite fixed-sample mixed limit. This is still not a zeta model: the deliberately engineered near-collisions and absence of arithmetic data are essential limitations.
+
+Let \(F(T)=T\log T/(2\pi)\) for sufficiently large \(T\), and choose centers \(t_j\) by \(F(t_j)=2j\). Choose \(0<\varepsilon_j<(t_{j+1}-t_j)/3\) and define
+\[
+ \gamma_{2j-1}=t_j,\qquad \gamma_{2j}=t_j+\varepsilon_j,
+ \qquad \Gamma=\{\pm\gamma_n:n\ge1\}.
+\]
+Then the positive counting function satisfies \(N_+(T)=T\log T/(2\pi)+O(1)\). Also \(\sum_n\gamma_n^{-2}<\infty\), so
+\[
+ \Delta(z)=\prod_{n\ge1}(1-z^2/\gamma_n^2)
+\]
+is an even real entire genus-zero product with these simple signed nodes and order one (infinite type). For each fixed \(n\), the product over all other nodes in \(\gamma_n\Delta'(\gamma_n)=-2\prod_{m\ne n}(1-\gamma_n^2/\gamma_m^2)\) converges to a nonzero value when its paired factor is omitted. As \(\varepsilon_j\downarrow0\), the paired factor is asymptotic to \(2\varepsilon_j/t_j\). Therefore the reciprocal residue \(|1/(\gamma_{2j-1}\Delta'(\gamma_{2j-1}))|\) can be made arbitrarily large by choosing \(\varepsilon_j\) sufficiently small. Choose recursively so these residues are at least \(j\).
+
+Now use \(H=\ell^2(\{\pm n:n\ge1\})\), \(Ce_{\pm n}=\pm e_{\pm n}/\gamma_n\), and coordinate projections \(\Pi_N\) onto \(\{e_{\pm1},\ldots,e_{\pm N}\}\). Define \(P_N(z)=\prod_{n=1}^N(1-z^2/\gamma_n^2)\), and set
+\[
+ (v_N)_{+n}=(v_N)_{-n}=-\frac1{\gamma_nP_N'(\gamma_n)}\quad(n\le N),\qquad
+ u_N(z)=P_N(z)(I-z\Pi_NC\Pi_N)^{-1}v_N
+\]
+with removable pole values. As before, \((I-z\Pi_NC\Pi_N)u_N=P_Nv_N\) and \(u_N(\pm\gamma_n)=e_{\pm n}=\Pi_Ne_{\pm n}\) for every \(n\le N\). The fixed-coordinate limit of \((v_N)_n\) is the reciprocal residue of \(\Delta\); the engineered residues imply \(M_N=\|v_N\|\to\infty\). Hence \(h_N=v_N/M_N\rightharpoonup0\); compactness of \(C\) gives \(\|\Pi_NC\Pi_Nh_N\|\to0\). Yet for each fixed \(k\) and real \(z\notin\Gamma\),
+\[
+ \langle u_N(z),e_k\rangle
+ =-\frac{P_N(z)}{\gamma_kP_N'(\gamma_k)(1-z/\gamma_k)}
+ \longrightarrow-\frac{\Delta(z)}{\gamma_k\Delta'(\gamma_k)(1-z/\gamma_k)},
+\]
+which is finite.
+
+This countermodel adds the classical leading count, a symmetric order-one entire product, compact diagonal inverse, strong projection convergence, exact resolvent identity, sample interpolation, divergent normalization, weak escape and vanishing compressed inverse on the escaping direction. Thus even these abstract constraints do not force divergence of the fixed-sample mixed kernel. The construction intentionally manufactures arbitrarily close pairs; it has no Euler product, Weil form, or prime-power coefficients and does not assert that zeta ordinates exhibit such pairs. It only isolates additional arithmetic/local-form restrictions as necessary for a conclusion about the actual kernel.
