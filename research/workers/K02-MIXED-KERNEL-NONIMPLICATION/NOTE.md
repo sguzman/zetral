@@ -52,6 +52,10 @@ Under the exact K01 resolvent identity and self-adjointness, one can reduce the 
 \[
 J_a(\gamma,z)=P_a(z)P_a(\gamma)\,\frac{\gamma F_a(\gamma)-zF_a(z)}{\gamma-z}.
 \]
-At removable poles this is interpreted by analytic continuation. Thus an unnormalized fixed-separation limit requires control of this rescaled scalar-resolvent combination. The K02 compact normalized-kernel estimates do not determine it.
+Since \(J_a(0,\zeta)=P_a(\zeta)F_a(\zeta)\), this is equivalently the exact identity
+\[
+J_a(\gamma,z)=\frac{\gamma P_a(z)J_a(0,\gamma)-zP_a(\gamma)J_a(0,z)}{\gamma-z}.
+\]
+At removable poles these formulas are interpreted by analytic continuation. K02 gives \(J_a(0,\gamma)=o(M_a)\), \(P_a(\gamma)M_a=o(1)\), and \(J_a(0,z)/M_a^2\to P(z)\). These do not bound the product \(P_a(\gamma)J_a(0,z)\), since it is governed by \(P_a(\gamma)M_a^2\). This exact reduction identifies the rescaled scalar quantities a fixed-separation limit would need; K02's compact normalized-kernel estimates do not determine them.
 
 For the actual problem, a finite unnormalized mixed limit needs finer control than \(d_a\to0\) and \(\langle g_\gamma,h_a\rangle\to0\). Pairing \(u_z/M_a=P_a(z)e_a+O_K(d_a)\) with the bounded sampled vector leaves an error of size \(O_K(M_ad_a)\), and the leading mixed coefficient also contains \(M_a\langle g_\gamma,h_a\rangle\). The present K02 imports give no limits for these rescaled quantities. No novelty or priority claim is made.
