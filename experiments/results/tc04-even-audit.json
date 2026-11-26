@@ -1,0 +1,14 @@
+{
+  "h": "49/20",
+  "odd": false,
+  "n": 44,
+  "matchedEntries": 1936,
+  "matchedRadii": 44,
+  "matchedDeterminants": 44,
+  "marginNumerator": "45449",
+  "marginDenominator": "1000000",
+  "nextGridFailureIndex": 43,
+  "scope": "Independent stored interval reconstruction, gcd-scaled rational row elimination, and adjacent fixed-energy grid tests; not independent original-form evaluation.",
+  "factorReproduction": true,
+  "transformedCertificateReproduction": true
+}
