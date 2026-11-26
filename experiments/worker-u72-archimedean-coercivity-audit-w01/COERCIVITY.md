@@ -117,6 +117,41 @@ Moreover `0<omega_j<pi/h` gives the summable domination `h^2 c_j(h)<pi^2/(4u_j^3
 
 This is the asymptotic of the proved component lower bound, not an asymptotic for the actual least eigenvalue of the full archimedean or Weil operator.
 
+## A logarithmic lower bound for short intervals
+
+The root series also gives an explicit lower bound as `h` tends to zero. Write
+
+`x_j=omega_j h/2`, `y_j=u_j h`; then `x_j tan(x_j)=y_j` and
+
+`c_j(h)=x_j^2/[u_j(y_j^2+x_j^2)]`.
+
+If `0<y_j<=1`, then `x_j<1`: the function `x tan x` is increasing on
+`(0,pi/2)`, while `tan(1)>1`. On `0<=x<=1`, `sin(x)<=x` and
+`cos(x)>=cos(1)>1/2`, so `tan(x)<=2x`; also `tan(x)>=x`. Therefore
+`y_j=x_j tan(x_j)` implies
+
+`y_j/2 <= x_j^2 <= y_j`.
+
+Substitution into the root term gives
+
+`c_j(h) >= 1/[2u_j(1+y_j)] >= 1/(4u_j)`
+
+whenever `u_j h<=1`. For `0<h<=4`, set
+`N=floor(1/h-1/4)>=0`. Then `u_jh<=1` for `0<=j<=N`, and the
+decreasing-integrand comparison yields
+
+`C(h) >= (1/4) sum_(j=0)^N 1/(j+1/4)`
+`     >= (1/4) log(4N+5) >= (1/4) log(4/h)`.
+
+The last inequality follows from `N>=1/h-5/4`. In particular,
+`C(h) >= (1/4)log(4/h) -> infinity` as `h` decreases to zero. Since
+`alpha_0` is a fixed constant, the full compressed archimedean form
+`alpha_0+(alpha-alpha_0)` is bounded below by
+`alpha_0+(1/4)log(4/h)` for `0<h<=4`; it is therefore strictly positive
+once `h<4 exp(4 alpha_0)`. This is an explicit sufficient short-window
+condition, not a sharp threshold. It concerns the archimedean compression
+alone and does not establish positivity of the prime-corrected Weil form.
+
 ## Exact-rational finite certificate at `h=62/25`
 
 The root-series decimal can be bounded below without trusting floating-point root evaluations. For `x in [0,pi/2]`, Taylor's theorem gives
