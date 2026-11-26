@@ -506,3 +506,36 @@ Combining them with the derivative bound between \(\beta\) and \(\gamma\) yields
 {\sqrt{m_\gamma}+m_\gamma/\sqrt{m_\beta}}.}
 \]
 For unit weights this is \(\delta_a(\gamma)\ge (1-\epsilon K_a)_+/2\). Thus any pair with \(\epsilon K_a\ll1\) prevents the target sample vector from being well approximated by the local Fourier subspace, with a defect bounded away from zero. This is a conditional geometric obstruction: it does not assert that zeta has such close pairs in the relevant range, nor does it determine the behavior of \(\lambda_a\) as \(a\) grows. In particular, it supplies no actual growing-window conclusion without those inputs.
+
+
+## Higher-order cluster obstruction
+
+The pair estimate is the first case of a divided-difference bound. Fix \(k\ge1\) distinct simple sample locations \(x_0=\gamma,x_1,\ldots,x_k\) (unit multiplicities), and let \(c_j=\prod_{\ell\ne j}(x_j-x_\ell)^{-1}\) be their order-\(k\) divided-difference coefficients. Put
+\[
+K_{a,k}=\sqrt{\frac{2a^{2k+1}}{(2k+1)\lambda_a}}.
+\]
+For the projection \(j=\Pi_a g_\gamma\), represented by \(f\), we have \(\|f\|_q\le1\), and each sampled coordinate error is at most \(\delta_a(\gamma)\). Since
+\[
+|F^{(k)}(t)|\le \left(\int_{-a}^a |x|^{2k}\,dx\right)^{1/2}\|f\|_2
+\le K_{a,k},
+\]
+the Hermite–Genocchi formula for divided differences (also valid for complex-valued \(F\), by taking absolute values in its integral formula) gives
+\[
+\left|\sum_{j=0}^k c_jF(x_j)\right|\le \frac{K_{a,k}}{k!}.
+\]
+On the other hand, the sampled target equals \(1\) at \(\gamma\) and \(0\) at the other selected nodes, so its divided difference is \(c_0\); coordinate errors imply
+\[
+\left|\sum_{j=0}^k c_jF(x_j)-c_0\right|
+\le \delta_a(\gamma)\sum_{j=0}^k|c_j|.
+\]
+Consequently
+\[
+\boxed{\displaystyle
+\delta_a(\gamma)\ge
+\frac{\bigl[\,|c_0|-K_{a,k}/k!\,\bigr]_+}
+{\sum_{j=0}^k|c_j|}
+=
+\frac{\bigl[\,1-(K_{a,k}/k!)\prod_{j=1}^k|\gamma-x_j|\,\bigr]_+}
+{\sum_{j=0}^k|c_j|/|c_0|}.}
+\]
+The \(k=1\) case recovers the unit-weight pair bound. For clusters, the exact denominator records their internal geometry; merely bounding all nodes by a radius does not control this ratio if some cluster points nearly collide with one another. This is a conditional geometric obstruction, not a claim about the existence or distribution of zeta clusters, and the constants still depend on the unknown coercivity lower bound \(\lambda_a\).
