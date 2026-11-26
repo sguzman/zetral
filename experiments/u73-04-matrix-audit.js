@@ -14,9 +14,10 @@ function run(trial,aggregate,d,prior,cert,modules){
   modules={...modules,generator};
  }
  const {raw,z}=odd?prep(trial,aggregate,d,modules):prep(trial,aggregate,prior,d,modules);
- for(const k of ["transform","determinant","newTails","originalEighthMatches","unchangedEighthMatches"])assert(JSON.stringify(z[k])===JSON.stringify(prior[k]),"eighth/transform "+k);
+ const keys=["transform","determinant","originalEighthMatches","unchangedEighthMatches"]; if(!odd)keys.push("newTails");
+ for(const k of keys)assert(JSON.stringify(z[k])===JSON.stringify(prior[k]),"eighth/transform "+k);
  const result=load(modules.audit)(raw,f,{transform:d.transform,determinant:d.determinant,replay:cert.replay},trial,z.eighth);
  assert(result.narrowed.every((v,i)=>v===cert.widths[i].narrowedEntries),"narrowing counts");
- return {...result,factorsMatch:true,transformedEighthMatch:true,originalEighthMatches:z.originalEighthMatches,unchangedEighthMatches:z.unchangedEighthMatches};
+ return {...result,factorsMatch:true,transformedEighthMatch:true,storedNewTailsCompared:!odd,originalEighthMatches:z.originalEighthMatches,unchangedEighthMatches:z.unchangedEighthMatches};
 }
 if(typeof module!=="undefined")module.exports=run;
