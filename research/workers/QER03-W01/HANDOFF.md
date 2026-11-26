@@ -8,3 +8,12 @@
 - Acceptance: derive the defect equation and exact norm decomposition for `z=±i`, show the transported vectors are precompact as `s↓0`, and verify phase-uniform graph bounds. Report any missing hypothesis. Do not audit large-window RH claims or the full QER03 norm-resolvent theorem.
 - Bounded stopping condition: settle only the normalized defect-vector compactness bridge.
 - Evidence: `research/workers/QER03-W01/AUDIT.md`.
+
+## Completion update — 2026-11-26
+
+- Status: READY_FOR_REVIEW
+- Result: no gap found in the fixed-window normalized defect-vector compactness bridge under QER01/U03 imports. The defect sign is `z`, the squared form norm is `||P_E e_z||^2/s + O(1)`, and the transported normalized vectors converge to `(0,P_Ee_z/||P_Ee_z||)`. Von Neumann graph-orthogonal decomposition bounds defect coefficients independent of the selected self-adjoint extension phase.
+- Evidence and exact qualifications: `research/workers/QER03-W01/AUDIT.md`.
+- Limitation: constants depend on the fixed-window evaluation projection; no uniform-in-window estimate, unique finite-block limit, or full norm-resolvent convergence is established here. U03/QER01 dependencies are not accepted by this audit.
+- No RH, novelty, numerical/formal, or human-review claim.
+- Next: scoped lead review.
