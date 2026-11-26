@@ -705,4 +705,12 @@ An exploratory `N=32` search in the Jacobi coordinates produced a fixed rational
 
 `mu_1 <= rational_part - log(2) - pi/2 < 0.233233`,
 
-where the exact rational part is printed by the script. The script fixes all 32 rational coefficients explicitly, so its proof is independent of SciPy availability, floating-point eigensolver errors, and rounding behavior. This improves the previous `N=24` cap `<0.233246` by about `1.3e-5`; it does not improve the lower bound or construct an operator. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial_certificate.py`.
+where the exact rational part is printed by the script. The script fixes all 32 rational coefficients explicitly, so its proof is independent of SciPy availability, floating-point eigensolver errors, and rounding behavior. This improved the previous `N=24` cap `<0.233246` by about `1.3e-5`; it does not improve the lower bound or construct an operator. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial_certificate.py`.
+
+Extending the same search to `N=40` and rounding to `10^-6` gives another fixed rational trial. The separate exact script `jacobi_trial40_certificate.py` verifies the Jacobi mass diagonal and evaluates the Rayleigh quotient with `Fraction`, then applies the same rational `pi` and `log(2)` bounds. It proves
+
+`mu_1 <= rational_part - log(2) - pi/2 < 0.233227`,
+
+with exact rational part
+`1283831422819474895975983651616251260777710177893146089258489012811965984080574137601282634652103920216455637 / 514114591367928305242537846801111025484748899052255981941106747733778675276552191168302389246906518032123500`.
+The forty coefficients are stored in the certificate. Their discovery used the same double-precision `scipy.linalg.eigh` procedure, normalized at the first coefficient and rounded to six decimal places; no correctness claim for the optimizer is needed for the exact fixed-vector bound. Reproduce the proof with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial40_certificate.py`.
