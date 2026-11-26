@@ -54,6 +54,13 @@ transform itself has determinant `100000`, hence preserves the finite trial
 span. This is an arithmetic audit, not a separate derivation of every
 analytic tail input.
 
+I also attempted to regenerate the full even raw JSON with parameters
+`(h,J,M,T,lowCount)=(49/20,128,12288,832,44)` using the committed CLI. After
+4 minutes 50 seconds it was still CPU-bound and had emitted no JSON, so I
+stopped that run. No fresh raw byte comparison is available. This does not
+invalidate the stored interval/matrix replays above, but full raw regeneration
+remains unchecked.
+
 No conclusion is drawn about the original form beyond the stated comparison,
 and this audit is not a full independent original-form evaluation, RH result,
 or formal proof review.
