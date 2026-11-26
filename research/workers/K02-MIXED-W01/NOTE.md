@@ -325,3 +325,37 @@ $$
 \ge\frac{\pi}{4}\gamma_n-O((\log\gamma_n)^2).
 $$
 So, conditionally on RH plus simplicity, the canonical-product residue sequence for the distinct zeta ordinates is not in $\ell^2$. This does not prove either hypothesis or identify the commuting toy operator with the local Weil-form operator. The bounded-displacement proof is analytic but has not been machine-checked or independently reviewed.
+
+
+### Direct completed-zeta cross-check under RH and simplicity
+
+There is a shorter conditional route to non-square-summability for the actual ordinate product. Assume RH and that all nontrivial zeros are simple. Define $\Xi(z)=\xi(1/2+iz)$. It is even and entire, with zeros exactly $\pm\gamma_n$. Since $\sum_n\gamma_n^{-2}<\infty$, its paired Hadamard product is
+$$
+\Xi(z)=\Xi(0)\Delta_\Gamma(z),\qquad
+\Delta_\Gamma(z)=\prod_n(1-z^2/\gamma_n^2).
+$$
+At $\rho=1/2+i\gamma_n$,
+$$
+\gamma_n|\Delta_\Gamma'(\gamma_n)|
+=\frac{\gamma_n|\Xi'(\gamma_n)|}{|\Xi(0)|}
+=\frac{\gamma_n|\xi'(\rho)|}{|\Xi(0)|}.
+$$
+Using $\xi(s)=\tfrac12s(s-1)\pi^{-s/2}\Gamma(s/2)\zeta(s)$ and $\zeta(\rho)=0$,
+$$
+|\xi'(\rho)|
+=\tfrac12|\rho(\rho-1)|\pi^{-1/4}
+|\Gamma(1/4+i\gamma_n/2)|\,|\zeta'(\rho)|.
+$$
+Stirling gives $|\Gamma(1/4+iT/2)|\asymp T^{-1/4}e^{-\pi T/4}$. A crude polynomial bound for $\zeta'$ suffices: for $N\asymp T$ and $\Re s>0$, Euler summation gives
+$$
+\zeta(s)=\sum_{m\le N}m^{-s}
++\frac{N^{1-s}}{s-1}+O(|s|N^{-\Re s}+N^{-\Re s}),
+$$
+uniformly on a fixed strip away from $s=1$. On the circle $|s-\rho|=1/8$, one has $\Re s\ge3/8$, so this formula bounds $|\zeta(s)|\ll T^{5/8}$. Cauchy's estimate then gives $|\zeta'(\rho)|\ll T^{5/8}$. Therefore
+$$
+|\xi'(\rho)|\ll T^{19/8}e^{-\pi T/4},
+\qquad
+\left|\frac1{\gamma_n\Delta_\Gamma'(\gamma_n)}\right|
+\gg \gamma_n^{-27/8}e^{\pi\gamma_n/4}.
+$$
+Thus the actual canonical-product residues diverge exponentially under RH plus simplicity, independently of the bounded-displacement proof. This derivation uses the standard completed-zeta Hadamard product, Euler summation and Stirling; it is a conditional deduction, not a proof of RH or simplicity. It still says nothing about realizing the product residues as the actual local Weil-form evaluation data or about an operator construction.
