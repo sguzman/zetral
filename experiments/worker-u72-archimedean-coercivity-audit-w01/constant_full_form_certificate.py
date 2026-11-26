@@ -127,8 +127,8 @@ def main() -> None:
     gamma_hi = harmonic - logN_lo
     alpha0_lo = -gamma_hi - pi_hi / 2 - 3 * ln2_hi - lnpi_hi
     assert alpha0_lo > F(-27, 5)
-    short_window_margin = F(19, 22) * log_interval(F(800))[0] - F(27, 5) - F(1, 500)
-    assert short_window_margin > F(37, 100)
+    short_window_margin = F(17, 20) * log_interval(F(5600, 9))[0] - F(27, 5) - F(1, 350)
+    assert short_window_margin > F(1, 20)
 
     # Exact positive-series lower bound for q_alpha on the constant function.
     arch_inc_lo = F(0)
@@ -237,7 +237,7 @@ def main() -> None:
     print("  prime upper:", float(prime_hi))
     print("  full constant Rayleigh lower:", float(full_lo))
     print("  certified alpha_0 lower exceeds -27/5:", alpha0_lo > F(-27, 5))
-    print("  h<=1/2000 full-form margin exceeds 37/100:", short_window_margin > F(37, 100))
+    print("  h<=1/1400 full-form margin exceeds 1/20:", short_window_margin > F(1, 20))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
     print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)

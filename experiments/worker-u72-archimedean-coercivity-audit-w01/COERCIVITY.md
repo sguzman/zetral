@@ -180,17 +180,17 @@ the exact asymptotic of the actual compressed operator's least eigenvalue.
 
 The logarithmic floor implies strict positivity of the full local Weil form
 on a sufficiently short interval, without any assumption on the zeros. For
-`0<h<=1/2000`, take `delta=1/10` in the preceding low-rate estimate. The
-coefficient `(1-delta/2)/(1+delta)` is `19/22`. With
-`N=floor(1/(10h)-1/4)`, the harmonic integral comparison gives
+`0<h<=1/1400`, take `delta=1/9` in the preceding low-rate estimate. The
+coefficient `(1-delta/2)/(1+delta)` is `17/20`. With
+`N=floor(1/(9h)-1/4)`, the harmonic integral comparison gives
 
-`C(h) >= (19/22) log(4N+5) >= (19/22) log(800)`.
+`C(h) >= (17/20) log(4N+5) >= (17/20) log(5600/9)`.
 
 The exact-rational calculation in `constant_full_form_certificate.py`
-verifies `(19/22)log(800)-27/5-1/500>37/100` using rational atanh bounds
-for the logarithm. The same certificate gives `alpha_0>-27/5` using rational
-Machin bounds for pi, the harmonic-limit bound for Euler's constant, and
-rational atanh bounds for the logarithms.
+verifies `(17/20)log(5600/9)-27/5-1/350>1/20` using rational atanh
+bounds for the logarithm. The same certificate gives `alpha_0>-27/5` using
+rational Machin bounds for pi, the harmonic-limit bound for Euler's
+constant, and rational atanh bounds for the logarithms.
 
 For `h<log(2)`, every prime shift `log(n)` exceeds the interval length, so
 the prime contribution is identically zero. The remaining pole form obeys
@@ -202,9 +202,9 @@ the operator bound
 Here the first inequality is Cauchy–Schwarz and
 `2 int_(-h/2)^(h/2)(cosh(x/2)^2+sinh(x/2)^2)dx=4sinh(h/2)`;
 the last uses `sinh(h/2)<h` for this range. Therefore, for every form-domain
-vector and `0<h<=1/2000`,
+vector and `0<h<=1/1400`,
 
-`q_h(f) > (37/100)||f||_2^2 > 0` for `f!=0`.
+`q_h(f) > (1/20)||f||_2^2 > 0` for `f!=0`.
 
 This is a deliberately conservative explicit window and uses the stated
 physical-space Weil-form identity. It proves small-window positivity only;
