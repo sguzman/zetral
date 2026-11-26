@@ -7,17 +7,17 @@
 
 ## Result
 
-A separate Python/mpmath implementation evaluated the defining matrix entries for the stored first rational comparison direction. The vector is reconstructed as the first stored low-mode basis row concatenated with the negative first stored trial row, each divided by Q=10^66. The probe computes the full quadratic form over the 417 supported even modes (47 low modes plus 370 trial modes) from the defining sums and shift integrals.
+A separate Python/mpmath implementation evaluated the defining matrix entries for the first three stored rational comparison directions. The vector is reconstructed as the first stored low-mode basis row concatenated with the negative first stored trial row, each divided by Q=10^66. The probe computes the full quadratic form over the 417 supported even modes (47 low modes plus 370 trial modes) from the defining sums and shift integrals.
 
-The 90-decimal numerical result is
+All three 90-decimal values lie inside their staged exact enclosures:
 
-`2.62994336835243566956280614367071830089748380503466424440235657096111797898e-35`.
+| Stored direction | Independent value | Staged exact enclosure |
+|---|---:|---:|
+| 0 | `2.62994336835243566956280614367071830089748380503466424440235657096111797898e-35` | `[2.6299433683524356695628055324595e-35, 2.6299433683524356695628067678324e-35]` |
+| 1 | `1.11969070720270518523857216818239678034798548762631761221524750225007836961e-34` | `[1.11969070720270518523857211085178e-34, 1.11969070720270518523857222488641e-34]` |
+| 2 | `3.24677386982397360353212834961736648169245211537379124679739587213089239836e-34` | `[3.24677386982397360353212832159699e-34, 3.24677386982397360353212837992711e-34]` |
 
-The staged exact enclosure for the same comparison direction is
-
-`[2.6299433683524356695628055324595e-35, 2.6299433683524356695628067678324e-35]`.
-
-The computed value lies inside the stored interval. This is an independent numerical consistency check of one direction, not an exact proof and not an independent audit of the full matrix.
+This is an independent numerical consistency check of three directions, not an exact proof and not an independent audit of the full matrix.
 
 ## Independent formula path
 
@@ -40,8 +40,8 @@ git show origin/worker/u72-02-even-reconstruction:experiments/results/u72-62-25-
 python experiments/worker-u72-original-form-probe-w01/evaluate_even_00.py /tmp/u72raw.json
 ```
 
-Recorded environment: Python 3.12.14, mpmath 1.3.0. The script and output are `experiments/worker-u72-original-form-probe-w01/evaluate_even_00.py` and `experiments/results/u72-original-form-probe-w01/entry-00.json`.
+Recorded environment: Python 3.12.14, mpmath 1.3.0. The script and output are `experiments/worker-u72-original-form-probe-w01/evaluate_even_00.py` and `experiments/results/u72-original-form-probe-w01/entries-00-02.json`.
 
 ## Limits
 
-Only the first stored comparison direction was checked. The input direction and comparison interval are taken from the worker artifact; only the evaluation of the form is independent. No RH conclusion, original-form coercivity result, full audit, or human/formal review is claimed. No worker acceptance is implied.
+Only the first three stored comparison directions were checked. The input direction and comparison interval are taken from the worker artifact; only the evaluation of the form is independent. No RH conclusion, original-form coercivity result, full audit, or human/formal review is claimed. No worker acceptance is implied.

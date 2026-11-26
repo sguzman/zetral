@@ -28,25 +28,25 @@ alpha=-(mp.euler+mp.pi/2+3*mp.log(2)+mp.log(mp.pi))
 trig=[]
 for p in shifts:
     s=mp.log(p); trig.append((s,[mp.sin(a*s) for a in w],[mp.cos(a*s) for a in w]))
-# coeff row for the first stored transformed direction, with its trial correction.
-c=[mp.mpf(int(t))/Q for t in r['basis'][0]]+[-mp.mpf(int(t))/Q for t in r['trial'][0]]
-assert len(c)==len(modes)
-q=mp.mpf(0); nmode=len(modes)
+# First three stored rational directions, each with its negative trial correction.
+coeffs=[[mp.mpf(int(t))/Q for t in r['basis'][a]]+[-mp.mpf(int(t))/Q for t in r['trial'][a]] for a in range(3)]
+assert all(len(c)==len(modes) for c in coeffs)
+q=[mp.mpf(0) for _ in coeffs]; nmode=len(modes)
 for i in range(nmode):
     # diagonal
     v=2*norm[i]**2*D[i]/h+2*pole[i]**2/h+alpha+da[i]
     for s,ss,cc in trig:
         I=(h-s) if modes[i]==0 else ((h-s)*cc[i]-ss[i]/w[i])/2
         v-=2*weights[trig.index((s,ss,cc))]*norm[i]**2*I/h
-    q+=c[i]*c[i]*v
+    for a,c in enumerate(coeffs): q[a]+=c[i]*c[i]*v
     for j in range(i+1,nmode):
         kval=(x[i]*F[i]-x[j]*F[j])/(x[i]-x[j])
         v=2*norm[i]*norm[j]*kval/h+2*pole[i]*pole[j]/h
         for t,(s,ss,cc) in enumerate(trig):
             I=(w[j]*ss[j]-w[i]*ss[i])/(x[i]-x[j])
             v-=2*weights[t]*norm[i]*norm[j]*I/h
-        q+=2*c[i]*c[j]*v
-lo,hi=map(int,r['componentIntervals']['upper'][0][0]); lo=mp.mpf(lo)/Q; hi=mp.mpf(hi)/Q
+        for a,c in enumerate(coeffs): q[a]+=2*c[i]*c[j]*v
+bounds=[tuple(mp.mpf(t)/Q for t in r['componentIntervals']['upper'][a][a]) for a in range(3)]
 # Explicit geometric bound on omitted exponential-series terms, maximized at omega=0.
 rN=2*N+mp.mpf('0.5'); tail=mp.exp(-h*rN)/(rN**2*(1-mp.exp(-2*h)))
-print(json.dumps({'precision_decimal_digits':mp.mp.dps,'value':mp.nstr(q,75),'staged_interval':[mp.nstr(lo,75),mp.nstr(hi,75)],'inside':bool(lo<=q<=hi),'exponential_sum_terms':N,'omitted_exponential_tail_bound':mp.nstr(tail,8),'status':'high-precision diagnostic only; special-function rounding not outward certified'},indent=2))
+print(json.dumps({'precision_decimal_digits':mp.mp.dps,'directions':[{'index':a,'value':mp.nstr(q[a],75),'staged_interval':[mp.nstr(bounds[a][0],75),mp.nstr(bounds[a][1],75)],'inside':bool(bounds[a][0]<=q[a]<=bounds[a][1])} for a in range(3)],'exponential_sum_terms':N,'omitted_exponential_tail_bound':mp.nstr(tail,8),'status':'high-precision diagnostic only; special-function rounding not outward certified'},indent=2))
