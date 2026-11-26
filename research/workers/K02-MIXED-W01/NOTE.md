@@ -657,3 +657,20 @@ and
 \le\frac1{H_a}.
 \]
 This is one existential expanding window for both the mixed row and the normalized kernel jets. It remains non-effective: no lower bound for \(H_a\), no unnormalized mixed-kernel control, and no projection-defect estimate at a prescribed ordinate range is obtained.
+
+
+## Why the qualitative hypotheses give no universal window rate
+
+The existential diagonal window above cannot be replaced by a rate chosen uniformly from the qualitative assumptions. Fix any prescribed nondecreasing \(G_n\to\infty\). On \(H=\ell^2(\mathbb N)\), let \(C e_k=2^{-k}e_k\), let \(N_n=\max(1,\lfloor G_n/2\rfloor)\), and let \(\Pi_n\) project onto \(\operatorname{span}\{e_1,\ldots,e_{N_n}\}\). Set the sample family \(g_k=e_k\), \(h_n=e_{N_n}\), and \(B_n=\Pi_n C\Pi_n\). Then \(\Pi_n\) is nested and converges strongly to \(I\), \(C\) is compact, \(h_n\) is a unit vector in \(\operatorname{ran}\Pi_n\) and converges weakly to zero, and
+\[
+d_n=\|B_nh_n\|=2^{-N_n}\longrightarrow0.
+\]
+For every fixed \(k\), \(\delta_n(k)=\|(I-\Pi_n)g_k\|\to0\), but for all large \(n\),
+\[
+D_n(G_n)=\sup_{1\le k\le G_n}\delta_n(k)=1,
+\]
+because \(N_n<k\le G_n\) for some integer \(k\). Thus \(G_n(D_n(G_n)+d_n)\not\to0\), indeed it diverges. This construction shows that compactness, nested strong projection convergence, weak escape, and \(d_n\to0\) alone cannot guarantee the K02 window criterion at any rate prescribed in advance. It is only an abstract projection model: it does not satisfy or refute all of the analytic-family, exact sample-resolvent, and Weil-form identities of the actual kernel.
+
+## Prior-art boundary for the divided-difference obstruction
+
+The divided-difference method itself is classical and must not be presented as new. Avdonin and Ivanov, “Sampling Problem for Non-separated Sets and Divided Differences,” *Sampling Theory in Signal and Image Processing* 8(2) (2009), 181–199, DOI [10.1007/BF03549514](https://doi.org/10.1007/BF03549514), explicitly treat divided differences as stable data for clusters of close Paley–Wiener sample points: see their Introduction, Definition 2, and Example 4 (including the normalized difference \((f(n+\delta_n)-f(n))/\delta_n\)). The Hermite–Genocchi identity used to bound these divided differences by a derivative supremum is standard; see [NIST DLMF §3.3](https://dlmf.nist.gov/3.3). This targeted search found related classical sampling theory but did not establish whether the particular projection-defect inequality in this note has appeared before. No novelty or priority claim is made; a broader literature review would be needed before one.
