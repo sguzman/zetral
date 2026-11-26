@@ -184,19 +184,43 @@ half-widths `a`, and gives its small-`a` asymptotic. The estimate below does
 not claim either qualitative result as new. It gives an explicit, conservative
 cutoff and a uniform Rayleigh lower bound by a direct form estimate.
 
-The logarithmic floor implies strict positivity of the full local Weil form
-on a sufficiently short interval, without any assumption on the zeros. For
-`0<h<=1/1260`, take `delta=1/9` in the preceding low-rate estimate. The
-coefficient `(1-delta/2)/(1+delta)` is `17/20`. With
-`N=floor(1/(9h)-1/4)`, the harmonic integral comparison gives
+The root series admits a sharper short-window estimate by a Riemann-sum
+decomposition. Set `y_j=u_jh`, let `x(y)` be the root of `x tan(x)=y`, and
+put `phi(y)=cos^2(x(y))/y`. The root term simplifies exactly to
+`c_j(h)=h phi(y_j)`. Define
 
-`C(h) >= (17/20) log(4N+5) >= (17/20) log(560)`.
+`g(y)=phi(y)-1/y` for `0<y<=1`, and `g(y)=phi(y)` for `y>1`.
 
-The exact-rational calculation in `constant_full_form_certificate.py`
-verifies `(17/20)log(560)+alpha0_lower-1/315>1/400` using rational atanh
-bounds for the logarithm. Here `alpha0_lower` is the certified rational
-lower endpoint formed from rational Machin bounds for pi, the harmonic-limit
-bound for Euler's constant, and rational atanh bounds for the logarithms.
+For `y<=1`, the identity `g(y)=-sin(2x(y))/(2x(y))` shows that `g`
+increases from `-1` to a value in `[-1,0]`, since `x(y)<1` and
+`sin(z)/z` decreases on `(0,2)`. For `y>1`, `phi` is positive decreasing.
+At `y=1`, the jump in `g` has size one. Thus the total variation of `g`
+on `(0,infinity)` is at most `3`, and its integral is at least `-1`.
+Because `y_j=h(j+1/4)` samples one point in each cell of length `h`, the
+bounded-variation quadrature estimate gives
+
+`h sum_(j>=0) g(y_j) >= integral_0^infinity g(y)dy - 3h >= -1-3h`.
+
+The remaining singular sum is finite. With `N=floor(1/h-1/4)`,
+
+`sum_(j=0)^N 1/(j+1/4) >= 4 + log((N+5/4)/(5/4))`
+`                              >= log(1/h)+4-log(5/4)`.
+
+Combining these identities yields
+
+`C(h) >= log(1/h)+3-log(5/4)-3h`.
+
+For `0<h<=1/25`, the prime shifts vanish, since `h<log(2)`. The pole
+operator has norm at most `4 sinh(h/2)<4h`, as shown above. The exact
+rational calculation in `constant_full_form_certificate.py` verifies
+
+`alpha0_lower + log_lower(25) + 3 - log_upper(5/4) - 7/25 > 1/3`.
+
+Here `alpha0_lower` is formed from rational Machin bounds for pi, the
+harmonic-limit bound for Euler's constant, and rational atanh bounds for the
+logarithms. Therefore, for every form-domain vector and `0<h<=1/25`,
+
+`q_h(f) > (1/3)||f||_2^2 > 0` for `f!=0`.
 
 For `h<log(2)`, every prime shift `log(n)` exceeds the interval length, so
 the prime contribution is identically zero. The remaining pole form obeys
@@ -215,7 +239,7 @@ vector and `0<h<=1/1260`,
 This is a deliberately conservative explicit window and uses the stated
 physical-space Weil-form identity. It proves small-window positivity only;
 it neither reaches the U72 candidate window nor implies RH.
-In Suzuki's half-width notation the explicit range is `0<a<=1/2520`.
+In Suzuki's half-width notation the explicit range is `0<a<=1/50`.
 
 ## Exact-rational finite certificate at `h=62/25`
 
