@@ -615,3 +615,15 @@ Every `V_N` Ritz matrix is explicitly rational up to a common scalar: with `M_ij
 `rho_N = -log(2)-pi/2 + lambda_min((m_ij*r_ij)_(i,j<N), (m_ij)_(i,j<N))`,
 
 where `lambda_min(A,M)` denotes the smallest generalized eigenvalue `A v=lambda M v`. This supplies a convergent Galerkin route to the known limiting constant using rational matrices and interval enclosures for `log(2)` and `pi`. The current artifact certifies explicit trial-vector bounds, including `mu_1<0.233324`; it has not yet computed an interval-certified generalized eigenvalue for any `N>1`.
+
+## Exact isolation of the three-profile Ritz value
+
+For `V_3=span{g_0,g_1,g_2}`, let `A=(m_ij*r_ij)` and `M=(m_ij)`, both rational. The smallest generalized eigenvalue of `(A,M)` was isolated without floating-point root decisions. At `ell=2498100869/10^9`, all three leading principal minors of `A-ell*M` are positive, so Sylvester's criterion gives `A-ell*M>0` and every generalized eigenvalue is greater than `ell`. At `u=249810087/10^8`, the exact determinant `det(A-u*M)` is negative, forcing at least one generalized eigenvalue below `u`. Since `M` is positive definite, the generalized eigenvalues are real; therefore
+
+`2498100869/10^9 < lambda_min(A,M) < 249810087/10^8`.
+
+The script `ritz3_interval_certificate.py` reconstructs these matrices and signs entirely with `Fraction`. Machin's formula and the positive atanh series then certify
+
+`rho_3=-log(2)-pi/2+lambda_min(A,M) < 0.234158`.
+
+This exact Ritz enclosure demonstrates the nested-matrix route. It is not yet as strong as the explicit twelve-profile trial-vector cap `0.233324`, and no Ritz eigenvalue interval for `N>3` is included.
