@@ -116,6 +116,38 @@ theorem nonsymmetric_radius_row_bound {α : Type*} [Field α]
   rw [symmetricPart_quadratic_eq error x] at h
   exact h
 
+/-- Symmetric natural-number envelope of an arbitrary natural radius matrix. -/
+def natSymmetricRadius (radius : ι → ι → ℕ) (i j : ι) : ℕ :=
+  max (radius i j) (radius j i)
+
+/-- Integer ceiling rows built from pairwise maximum radii certify the same
+quantitative form bound even when the original natural radius array is not
+symmetric. -/
+theorem nat_max_radius_dominance_gap {α : Type*} [Field α]
+    [LinearOrder α] [IsStrictOrderedRing α]
+    (error : ι → ι → α) (radius : ι → ι → ℕ) (weight : ι → ℕ)
+    (diagonal x : ι → α) (gap : α)
+    (hweight : ∀ i, 0 < weight i)
+    (herror : ∀ i j, |error i j| ≤ (radius i j : α))
+    (hdiag : ∀ i,
+      (natRoundedRowAllowance (natSymmetricRadius radius) weight i : α) +
+        gap ≤ diagonal i) :
+    gap * (∑ i : ι, x i ^ 2) ≤
+      (∑ i : ι, diagonal i * x i ^ 2) +
+        (∑ i : ι, ∑ j : ι, error i j * x i * x j) := by
+  apply nat_rounded_row_dominance_gap error (natSymmetricRadius radius)
+    weight diagonal x gap
+  · intro i j
+    simp [natSymmetricRadius, max_comm]
+  · exact hweight
+  · intro i j
+    have hle : radius i j ≤ natSymmetricRadius radius i j := by
+      exact Nat.le_max_left _ _
+    have hcast : (radius i j : α) ≤ (natSymmetricRadius radius i j : α) := by
+      exact_mod_cast hle
+    exact le_trans (herror i j) hcast
+  · exact hdiag
+
 end Zetral.WeightedRadius
 
 #print axioms Zetral.WeightedRadius.averagedRadius_symmetric
@@ -123,3 +155,4 @@ end Zetral.WeightedRadius
 #print axioms Zetral.WeightedRadius.symmetricPart_radius_bound
 #print axioms Zetral.WeightedRadius.symmetricPart_quadratic_eq
 #print axioms Zetral.WeightedRadius.nonsymmetric_radius_row_bound
+#print axioms Zetral.WeightedRadius.nat_max_radius_dominance_gap

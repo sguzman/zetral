@@ -16,3 +16,7 @@ Lean 4.19.0, pinned Mathlib `c44e0c8ee63ca166450922a373c7409c5d26b00b`; `lake bu
 ## Scope
 
 This is an abstract estimate for finite real/ordered-field quadratic forms. It does not establish any campaign matrix radii, interval enclosures, or numerical data. It may be less sharp than exploiting symmetry already present in a source radius matrix.
+
+## Natural-radius certificate
+
+`natSymmetricRadius r i j = max(r(i,j), r(j,i))` gives an exactly symmetric natural envelope. `nat_max_radius_dominance_gap` shows that if diagonal lower bounds exceed the ceiling-rounded rows of this max-envelope by a common `gap`, then the quadratic-form lower bound follows for errors originally bounded by the nonsymmetric natural radii. This route is convenient when preserving integer inputs; it can be more conservative than the real averaged-radius theorem.
