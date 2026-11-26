@@ -6,6 +6,8 @@
 - Related staged work: [U71-03 branch](https://github.com/sguzman/zetral/tree/worker/u71-03-odd-staged-data), handoff at `research/workers/U71-03-ODD-STAGED/HANDOFF.md`.
 - Scope: independent exact reconstruction of the stored odd transformed replay and the (10^{-6}) grid decision. No campaign/state files were changed.
 
+See [WITNESS-RECONSTRUCTION.md](WITNESS-RECONSTRUCTION.md) for the exact witness-part and guard-artifact reconstruction.
+
 ## Audit result
 
 I fetched the committed five-direction replay summary and lower integer matrix from the U71-03 branch, then independently checked the matrix using a fresh BigInt fraction-free Bareiss elimination.
