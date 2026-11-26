@@ -804,6 +804,12 @@ This follows from `|e^(-ix*xi)-1|<=|x*xi|` and `integral_(-1)^1 x^2 dx=2/3`. Con
 
 Both parity thresholds are certified by the same exact rational script, including intervals for the parity traces, `Si(19/5)`, pi, log and gamma. This also gives an independent quantitative proof of ground-state simplicity within the imported compact-resolvent framework.
 
+The bandwidth can be widened for a stronger gap. At `R=14/5`, the same formulas, with exact enclosures for `Si(28/5)`, `cos(28/5)`, and `log(R)=log(2)+log(7/5)`, give
+
+`mu_2^even > 0.7423`, `mu_1^odd > 0.904`.
+
+Thus the certified full second eigenvalue improves to `mu_2>0.7423`; together with `mu_1<0.233216`, the full spectral gap exceeds `0.509`. The exact certificate uses 50 alternating-integral terms (the omitted Si tail is decreasing from that index) and a one-sided cosine Taylor remainder after degree 120; all rational interval assertions are checked by the script. `R=19/10` remains documented above as an intermediate bound; no bandwidth optimization is claimed.
+
 The same concentration argument gives a lower growth bound for every eigenvalue. For `n>=2`, take `R_n=n/log(n)>1`. For any n-dimensional subspace, a unit vector can be chosen orthogonal to the first `n-1` eigenvectors of `K_(R_n)`, and the trace bound gives `kappa_n<=trace(K_(R_n))/n=2/(pi*log n)<1`. Therefore
 
 `mu_n >= gamma - 2/pi + (1-2/(pi*log n))*log(n/log n)`

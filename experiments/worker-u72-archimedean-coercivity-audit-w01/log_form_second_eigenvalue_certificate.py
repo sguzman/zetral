@@ -38,8 +38,8 @@ def si_bounds(x: F, terms: int = 50) -> tuple[F, F]:
                    for k in range(terms)), F(0))
     nxt = x ** (2 * terms + 1) / ((2 * terms + 1) * factorial(2 * terms + 1))
     # For every k>=0, a_(k+1)/a_k < x^2/((2k+3)(2k+2));
-    # at x=19/5 the largest such bound is 361/450<1.
-    assert x * x / 18 < 1
+    # the omitted tail is decreasing once this bound is <1 at k=terms.
+    assert x * x / ((2 * terms + 3) * (2 * terms + 2)) < 1
     return (partial, partial + nxt) if terms % 2 == 0 else (partial - nxt, partial)
 
 
@@ -113,6 +113,28 @@ def main() -> None:
     print(f"  even-sector second eigenvalue lower: {float(mu_even2_lower):.15f} > 0.5512")
     print(f"  odd-sector first eigenvalue lower: {float(mu_odd1_lower):.15f} > 0.9905")
     print(f"  full mu_2 lower: {float(mu2_parity_lower):.15f}; gap exceeds 0.317")
+
+    # A wider band improves the even-sector second eigenvalue bound.
+    R_star = F(14, 5)
+    z_star = 2 * R_star
+    si_star_lo, si_star_hi = si_bounds(z_star)
+    cos_star_lo, _ = cos_bounds(z_star)
+    c_star_lower = (2 * si_star_lo - (1 - cos_star_lo) / R_star) / pi_hi
+    trace_even_star_upper = (2 * R_star + si_star_hi) / (2 * pi_lo)
+    kappa_even2_star_upper = trace_even_star_upper - c_star_lower
+    trace_odd_star_upper = (2 * R_star - si_star_lo) / (2 * pi_lo)
+    log_R_star_lower = log_unit_bounds(F(2))[0] + log_unit_bounds(F(7, 5))[0]
+    mu_even2_star_lower = gamma_lower - 2 / pi_lo + (1 - kappa_even2_star_upper) * log_R_star_lower
+    mu_odd1_star_lower = (gamma_lower - F(2, 27) / pi_lo
+                          + (1 - trace_odd_star_upper) * log_R_star_lower)
+    mu2_star_lower = min(mu_even2_star_lower, mu_odd1_star_lower)
+    assert 0 < kappa_even2_star_upper < 1 and 0 < trace_odd_star_upper < 1
+    assert mu_even2_star_lower > F(7423, 10_000)
+    assert mu_odd1_star_lower > F(904, 1_000)
+    assert mu2_star_lower - F(233216, 1_000_000) > F(509, 1_000)
+    print(f"  R=14/5 even-sector second eigenvalue lower: {float(mu_even2_star_lower):.15f} > 0.7423")
+    print(f"  R=14/5 odd-sector first eigenvalue lower: {float(mu_odd1_star_lower):.15f} > 0.904")
+    print(f"  strongest full mu_2 lower: {float(mu2_star_lower):.15f}; gap exceeds 0.509")
 
 
 if __name__ == "__main__":
