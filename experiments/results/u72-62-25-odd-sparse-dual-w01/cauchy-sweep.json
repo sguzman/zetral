@@ -1,0 +1,20 @@
+{
+  "basis": "U72 odd sparse correlation-selected basis, 12 modified rows",
+  "tested": "all 47 coordinate and 2,162 signed two-coordinate directions",
+  "checkedDirections": 2209,
+  "positiveConservativeDirections": 2209,
+  "best": {
+    "support": [
+      [
+        0,
+        "1"
+      ]
+    ],
+    "ratioFloorMillion": "269577",
+    "strictObstruction": false
+  },
+  "strictObstructionFound": false,
+  "strictObstructionExamples": [],
+  "formula": "For fixed direction x, lower-bound q(x) over positive simplex shares by F(x)D0Q + (sum sqrt(R_i(x) old_i ratio_i))^2; compare to E_upper(x)D0Q. Every calculation uses integer interval endpoints and floor square roots.",
+  "scope": "A strict ratio above 1 proves failure for every positive allocation only along that tested direction and this fixed basis. No larger-support/global claim."
+}
