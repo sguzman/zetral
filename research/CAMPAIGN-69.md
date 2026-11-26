@@ -44,3 +44,7 @@ The previous obstruction applies to the fixed coordinatewise remainder compariso
 - TC02 candidate even comparison passes without M growth or fresh full raw generation. The old obstruction remains valid in its original coordinatewise comparison and is bypassed by recalculating a different remainder majorant, not by claiming congruence changes definiteness. No independent original-form evaluation, CI, standalone CLI execution, or RH/novelty claim.
 
 Next TC03: odd comparison at M12288, initially T832, J128/KEM20/lowCount44; parity-specific factors, assess full energy coupling, transform weak directions and recompute eighth bound only if necessary. TC04: independent stored reconstruction and scope audit. Candidate frontier remains 2.44 until both sectors and audit pass.
+
+## TC03 — Odd generation attempted
+
+Attempted odd J128/KEM20/M12288/T832/lowCount44 full generator; execution timed out without a returned result. Commit search found no TC03 raw-part commits. No odd result is asserted. Next split generation into durable stages or try T768 as a bounded parity-specific comparison before deciding on refinement; do not repeat the same monolithic timed-out computation. Even certificate remains verified, frontier 2.44.
