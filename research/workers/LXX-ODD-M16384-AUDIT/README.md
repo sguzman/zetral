@@ -37,3 +37,13 @@ no positive margin at that grid resolution. The float proposal score
 This is a replay of stored staged intervals, not an independent evaluation of
 the original arithmetic form, a RH proof, or a campaign closure. It leaves
 the broader frontier at `2.45` pending the campaign's scoped review.
+
+## Cross-check against the later main checkpoint
+
+After this worker replay, main recorded the odd two-direction transform and
+its stronger replay in the LXX03 checkpoint. A read-only semantic comparison
+against that checkpoint found the parsed trial object, every finite chunk,
+all 2,025 aggregate interval pairs covering 8,147 modes, and the untransformed replay's
+lower matrix and principal minors identical to this branch. Main's transformed
+odd replay has margin `85965/1000000`; this worker handoff documents the
+untransformed baseline and does not replace or re-audit that later transform.
