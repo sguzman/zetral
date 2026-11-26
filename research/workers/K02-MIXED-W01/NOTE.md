@@ -75,3 +75,34 @@ Substituting in K02's mixed estimate, for compact \(K\subset\mathbb C\),
     +O_K\!\left(\frac{d_a}{\sqrt{m_\gamma}}\right).
 \]
 Because \(P_a\) is locally uniformly bounded, this is \(O_{K,\gamma}(\delta_a+d_a)\), hence recovers the known \(o(1)\) after division by \(M_a\) while identifying the two exact quantities that control the rate. Equivalently \(J_a(\gamma,z)=O_{K,\gamma}(M_a(\delta_a+d_a))\). This does **not** imply \(O(1)\), convergence, or divergence: no bound on \(M_a\delta_a\) or \(M_a d_a\) is obtained from these identities. It also does not contradict the abstract countermodels, which omit the full coupled characteristic/projection structure. The result is a conditional deduction from the displayed K01/K02 imports, not a new source theorem or a formal verification.
+
+## Commuting spectral-projection control model
+
+There is a simple model satisfying the full scalar resolvent identity and all retained sample identities in which the fixed-sample mixed kernel has a finite limit. Let
+\[
+ H=\ell^2(\{\pm1,\pm2,\ldots\}),\quad C e_{\pm k}=\pm k^{-1}e_{\pm k},\quad
+ \Pi_N H=\operatorname{span}\{e_{\pm1},\ldots,e_{\pm N}\}.
+\]
+Then \(C\) is compact self-adjoint, \(\Pi_N\to I\) strongly, and \(B_N=\Pi_NC\Pi_N\) is the diagonal restriction. Put
+\[
+ P_N(z)=\prod_{j=1}^N(1-z^2/j^2),\quad
+ (v_N)_{+k}=(v_N)_{-k}=-\frac1{kP_N'(k)}\quad(1\le k\le N),
+\]
+and define the entire vector-valued function by removable continuation of
+\[
+ u_N(z)=P_N(z)(I-zB_N)^{-1}v_N.
+\]
+Every apparent pole cancels because the zeros of \(P_N\) are precisely the reciprocal nonzero eigenvalues of \(B_N\). Direct evaluation at each \(\pm k\), \(k\le N\), gives
+\[
+ u_N(\pm k)=e_{\pm k}=\Pi_N e_{\pm k},
+ \qquad (I-zB_N)u_N(z)=P_N(z)v_N.
+\]
+Thus the sample identity and the exact vector resolvent identity both hold. Also \(P_N\to\Delta(z)=\sin(\pi z)/(\pi z)\) locally uniformly. For each fixed \(k\), \(P_N'(k)\to\Delta'(k)=(-1)^k/k\), hence \((v_N)_{\pm k}\to(-1)^{k+1}\). It follows that \(M_N=\|v_N\|\to\infty\), while \(h_N=v_N/M_N\rightharpoonup0\). Compactness then gives \(\|B_Nh_N\|\to0\).
+
+For any fixed positive sample \(k\) and real \(z\notin\mathbb Z\), the +k coordinate is explicitly
+\[
+ \langle u_N(z),e_k\rangle
+   =-\frac{P_N(z)}{kP_N'(k)(1-z/k)}
+   \longrightarrow-\frac{\Delta(z)}{k\Delta'(k)(1-z/k)},
+\]
+a finite value; the analogous negative-coordinate formula is also finite. This gives an exact positive control: the general qualitative operator and interpolation identities do not force mixed-kernel divergence. Here the projections commute with \(C\), so no off-diagonal compression error occurs. The model is not a local Weil-form realization and says nothing about whether the actual Paley–Wiener projections' noncommutation produces a finite, divergent, or oscillatory mixed limit. It identifies that compression geometry, or additional local-form structure, as necessary input for resolving the actual question.
