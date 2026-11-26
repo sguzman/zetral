@@ -91,3 +91,11 @@
 - Acceptance: prove or refute \(\mathcal P_a(T)/N(T)\asymp 1/q_T\) from Montgomery's stated uniform theorem, including test-family, diagonal, and truncation errors; state exact hypotheses.
 - Stop condition: if the stated (o(1)) theorem remainder cannot be controlled relative to the growing main term, record the obstruction and do not assert a no-go extension.
 - K02-MP03 COMPLETE: extended the RH+simplicity obstruction to \(q_T=2a/\log T\to0\), \(a\to\infty\). Fourier scaling gives bounded \(\|\widehat r_T\|_1\), \(\widehat r_T(0)\sim\kappa/q_T\), and an approximate-identity error relative \(O(1/a)\); the remaining \(|\alpha|\)-term is \(o(1/q_T)\). With the already bounded diagonal and rectangle tails, \(\mathcal P_a(T)/N(T)\sim\kappa/q_T\). By subsequence compactness with the fixed-ratio case, for every fixed \(\eta>0\), all sequences with \(q_T\le1-\eta\) have \(\liminf\mathcal P_a(T)/N(T)>0\). Hence the kernel criterion fails throughout Montgomery's proved support range, under RH and simplicity. No claim at/above support one or without simplicity. Full derivation in NOTE.md.
+
+### Follow-up bounded task K02-MP04 (claimed 2026-11-26)
+
+- Baseline: worker head `f4eff7fd1932eb304331ea990cd2d68b57784380`.
+- Question: replace global simplicity in the pair-energy obstruction by Montgomery's RH-only positive-density theorem for simple zeros, using ordered gaps in the simple subset.
+- Scope: lower-bound \\(\mathcal P_a(T)\\) for any fixed bounded (q_T=2a/\log T), no lead-owned Campaign LXXV files.
+- Acceptance: an explicit bump choice, simple-gap counting bound, multiplicity handling, exact RH/source assumptions, and resulting necessary condition on (a/\log T); otherwise document the precise gap.
+- Stop condition: stop if Montgomery's simple-zero proportion does not control the needed row energies without an additional hypothesis.
