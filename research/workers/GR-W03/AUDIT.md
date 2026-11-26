@@ -17,3 +17,9 @@ Lean 4.19.0, pinned Mathlib `c44e0c8ee63ca166450922a373c7409c5d26b00b`; target `
 ## Dependency
 
 This is intentionally stacked on GR-W01 branch `worker/gr-w01-weighted-radius-lemma`, which contains the abstract symmetric weighted row theorem. PR #35 must be integrated before this package can target main directly.
+
+## Integer-radius corollary
+
+The module also defines `natRoundedRowAllowance`: for natural radii `r(i,j)` and positive natural weights `d(i)`, its row `i` is `∑ j, ceilDiv(r(i,j) * d(j), d(i))`. `real_row_allowance_le_nat_rounded` proves this rounded integer row dominates the exact real weighted row after embedding the natural data into any linearly ordered field. The end-to-end theorem `nat_rounded_row_dominance_psd` then proves positive semidefiniteness directly from a diagonal lower bound on that integer row sum and real entrywise perturbation bounds by the natural radii.
+
+This formalizes the arithmetic implication from upward-rounded weighted entries to the abstract finite quadratic-form certificate. The association between a particular BigInt/JavaScript implementation and these Nat inputs remains a manual source trace; source input validation, interval generation and campaign numerical claims remain unverified here.
