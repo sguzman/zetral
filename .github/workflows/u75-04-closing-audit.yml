@@ -17,7 +17,7 @@ jobs:
       - name: Resolve the flake lock on the runner
         run: nix flake lock path:.
       - name: Run exact audits in the pinned Nix environment
-        run: nix develop --locked --command node experiments/u75-04-run-audit.js
+        run: nix develop --command node experiments/u75-04-run-audit.js
       - name: Commit audit artifact
         run: |
           set -euo pipefail
