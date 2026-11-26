@@ -1,0 +1,18 @@
+{
+  "witnessBytes": 807455,
+  "witnessPartBlobs": [
+    "3f3d53f6205f41013ab28b275e80feae6f239ca2",
+    "a6c248281a5921b053261253dd5f75e76b87e3b3",
+    "bf836428860a29fa1791ad1156713316088090e9"
+  ],
+  "boundNumerator": "2971",
+  "checkedCells": 41549,
+  "guardBlob": "2652a8ee43db588d846aafe677f097c1b845835b",
+  "guardObjectMatched": true,
+  "witnessByteMatch": true,
+  "firstCommonLowCount": 49,
+  "endpointSlacksPositive": true,
+  "sourceBlob": "c5187e1c86546e7b3be21597525855676e835d60",
+  "baseBlob": "2f9035722076c6c8e96bf01b00901191c3466c52",
+  "scope": "Fresh inherited generator replay, not independent original-form evaluation."
+}
