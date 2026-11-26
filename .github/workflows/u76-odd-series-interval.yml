@@ -1,0 +1,50 @@
+name: U76 odd-entry interval audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/u76-odd-series-interval.yml'
+      - 'experiments/u76-odd-series-interval.js'
+permissions:
+  contents: write
+concurrency:
+  group: u76-odd-series-interval
+  cancel-in-progress: false
+jobs:
+  interval-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: cachix/install-nix-action@v31
+      - name: Evaluate independently derived odd diagonal
+        run: |
+          set -euo pipefail
+          nix develop --command node --version
+          nix develop --command node --check experiments/u76-odd-series-interval.js
+          nix develop --command node experiments/u76-odd-series-interval.js 2>&1 | tee experiments/results/u76-odd-series-interval.log
+          jq -e '.oddIntervalOverlapsSharedCompressedInterval == true' experiments/results/u76-odd-series-interval.json > /dev/null
+          jq '{parameters, intervals: {oddArchimedean:.intervals.oddArchimedean, oddPrimeTerm:.intervals.oddPrimeTerm, oddSubtractedKernel:.intervals.oddSubtractedKernel, oddTailBound:.intervals.oddTailBound, oddFullEntry:.intervals.oddFullEntry, oddCompressedSharedInterval:.intervals.oddCompressedSharedInterval}, overlap:.oddIntervalOverlapsSharedCompressedInterval, contained:.oddDirectIntervalContainedInSharedCompressedInterval, margins:.oddContainmentMargins, caveat}' experiments/results/u76-odd-series-interval.json > experiments/results/u76-odd-series-summary.json
+      - name: Preserve failure details
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: u76-odd-series-failure
+          path: |
+            experiments/results/u76-odd-series-interval.log
+            experiments/results/u76-odd-series-interval.json
+          if-no-files-found: ignore
+      - name: Commit successful runner readback
+        if: success()
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/results/u76-odd-series-interval.json experiments/results/u76-odd-series-summary.json
+          if git diff --cached --quiet; then
+            echo 'Runner outputs match the committed artifacts.'
+            exit 0
+          fi
+          git commit -m 'U76: record odd-entry interval audit'
+          git push origin HEAD:main
