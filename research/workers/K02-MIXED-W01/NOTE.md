@@ -106,3 +106,34 @@ For any fixed positive sample \(k\) and real \(z\notin\mathbb Z\), the +k coordi
    \longrightarrow-\frac{\Delta(z)}{k\Delta'(k)(1-z/k)},
 \]
 a finite value; the analogous negative-coordinate formula is also finite. This gives an exact positive control: the general qualitative operator and interpolation identities do not force mixed-kernel divergence. Here the projections commute with \(C\), so no off-diagonal compression error occurs. The model is not a local Weil-form realization and says nothing about whether the actual Paley–Wiener projections' noncommutation produces a finite, divergent, or oscillatory mixed limit. It identifies that compression geometry, or additional local-form structure, as necessary input for resolving the actual question.
+
+### Exact scale in the control model
+
+The previous finite-limit model also has an explicit normalization scale. For \(1\le k\le N\), elementary factorial cancellation gives
+\[
+ P_N'(k)=\frac{(-1)^k}{k}R_{N,k},\qquad
+ R_{N,k}=\frac{(N-k)!(N+k)!}{(N!)^2}\ge1,
+ \quad (v_N)_{\pm k}=\frac{(-1)^{k+1}}{R_{N,k}}.
+\]
+Thus
+\[
+ M_N^2=2\sum_{k=1}^N R_{N,k}^{-2}.
+\]
+For \(k=x\sqrt N\) with \(x\) in a fixed compact interval, expanding the factorial ratio (or its logarithmic product) gives \(\log R_{N,k}=k^2/N+O(N^{-1/2})\), uniformly there. For \(k\le N/2\), the product formula
+\[
+ R_{N,k}=\prod_{j=1}^k\left(1+\frac{k}{N-k+j}\right)
+\]
+and \(\log(1+t)\ge t/(1+t)\) give \(\log R_{N,k}\ge (2/3)k^2/N\). Monotonicity in \(k\) then makes the contribution from \(k>N/2\) exponentially small. These bounds justify the Gaussian Riemann-sum limit
+\[
+ \frac{M_N^2}{\sqrt N}\longrightarrow
+ 2\int_0^\infty e^{-2x^2}\,dx=\sqrt{\frac\pi2},
+ \qquad M_N\sim(\pi/2)^{1/4}N^{1/4}.
+\]
+Meanwhile, since \(R_{N,k}^{-2}\le1\) and it tends to 1 for each fixed \(k\), dominated convergence yields
+\[
+ \|B_Nh_N\|^2
+ =\frac{2\sum_{k=1}^N R_{N,k}^{-2}/k^2}{M_N^2}
+ \sim \frac{\pi^2/3}{\sqrt{\pi/2}\,\sqrt N},
+ \qquad M_N\|B_Nh_N\|\longrightarrow\frac\pi{\sqrt3}.
+\]
+For each fixed \(k\), \(M_N\langle e_k,h_N\rangle=(v_N)_k\to(-1)^{k+1}\), and the explicit sample-to-fixed-real-\(z\) kernel limit above is finite. This illustrates that decay of \(d_N\) at the reciprocal scale \(1/M_N\) can produce a bounded mixed kernel; qualitative compactness alone does not decide whether the actual Weil model has this balance.
