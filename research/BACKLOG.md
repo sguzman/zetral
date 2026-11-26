@@ -11,14 +11,14 @@ analytic theorems and from any RH implication.
 ### Current execution note — LXXVI (2026-11-26)
 
 The corrected support-h diagnostic was replayed successfully on Actions run
-45901442328; runner output matches local canonical JSON after removing runtime
-metadata, but remains floating-point evidence without an error enclosure. The
+45901442328. U76-04 now outward-encloses the direct constant-even entry and
+places it wholly inside the shared compressed interval; Actions run
+45905468198 matches local canonical JSON after removing runtime metadata. The
 constant even continuous component now has an exact paired exponential-series
 formula, closed rational part, and explicit geometric remainder bound in
 `research/positivity/U76-01-direct-arithmetic-Gram.md`. Its next acceptance
-step is outward-rounded evaluation of the constants and exponential remainder;
-the IEEE-754 scalar comparison is reproducible but not enclosed. Then derive
-the odd first diagonal. Keep B1 analytical extension
+step is an independently derived and outward-enclosed odd first diagonal,
+then expansion to the remaining matrix entries. Keep B1 analytical extension
 on hold until the original-form continuous mapping is independently audited.
 
 ### B1 — Analytical extension beyond finite cutoffs

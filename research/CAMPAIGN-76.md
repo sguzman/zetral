@@ -235,9 +235,9 @@ then evaluated the full original-form constant-even entry with outward-rounded
 fixed-point intervals. Its direct enclosure is wholly contained in the
 stored compressed interval; see `research/positivity/U76-01-direct-arithmetic-Gram.md`
 and `experiments/results/u76-constant-series-interval.json` for exact
-endpoints and arithmetic bounds. Actions run 45904856371 and local locked-Nix
+endpoints and arithmetic bounds. Actions run 45905468198 and local locked-Nix
 replay match after removing runtime metadata (SHA-256
-`ce866500c077e014fb12fb4f4abc400ccea3f8d5a22d6ea5111c57a240c1faf5`). The
+`ac9b7eea5e6b3189ade829be49e07a93a7fe15de66ce5f713d4b058c3d7e71f2`). The
 direct interval width is `2.9006e-66`; it lies inside the comparator interval
 with lower/upper margins `1.0241471898e-60` and `1.2057649096e-60`. This passes
 one scalar entry only. The first odd diagonal, all other entries, and

@@ -316,10 +316,10 @@ positive real argument ([DLMF §5.11](https://dlmf.nist.gov/5.11)). The interval
 uses only integer operations and is implemented in
 `experiments/u76-constant-series-interval.js`.
 
-Locked-Nix Actions run `45904856371` succeeded and pushed artifact
+Locked-Nix Actions run `45905468198` succeeded and pushed artifact
 `experiments/results/u76-constant-series-interval.json`; a local replay under
 the same Nix lock has canonical JSON SHA-256
-`ce866500c077e014fb12fb4f4abc400ccea3f8d5a22d6ea5111c57a240c1faf5` after
+`ac9b7eea5e6b3189ade829be49e07a93a7fe15de66ce5f713d4b058c3d7e71f2` after
 excluding runtime metadata, identical to Actions. The resulting full-form
 interval is
 
