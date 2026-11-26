@@ -3,32 +3,37 @@
 - ID: U71-04
 - Status: READY_FOR_REVIEW
 - Starting main commit: 8f76f8142bdb0ff201865b21aa193055e8593d0b
-- Related staged work: [U71-03 branch](https://github.com/sguzman/zetral/tree/worker/u71-03-odd-staged-data), handoff at `research/workers/U71-03-ODD-STAGED/HANDOFF.md`.
-- Scope: independent exact reconstruction of the stored odd transformed replay and the (10^{-6}) grid decision. No campaign/state files were changed.
+- Latest reviewed main checkpoint: 556c59e14ee703dadb99bd275f279e9fd564dda1
+- Related worker evidence: [U71-03 staged branch](https://github.com/sguzman/zetral/tree/worker/u71-03-odd-staged-data) and [witness reconstruction](WITNESS-RECONSTRUCTION.md).
+- Scope: independent stored reconstruction of odd trial/chunks, exact baseline and transformed replay, exact grid margin audit, and witness/guard byte reconstruction. No shared campaign/state files were edited.
 
-See [WITNESS-RECONSTRUCTION.md](WITNESS-RECONSTRUCTION.md) for the exact witness-part and guard-artifact reconstruction.
+## U71-03 input reconstruction
 
-## Audit result
+The independently generated U71 odd trial and residual chunks were compared with main's artifacts. Main's three trial shards concatenate byte-for-byte to the worker's five shards (1,412,272 characters). All 16 disjoint residual chunks match byte-for-byte, and the corrected aggregate is byte-identical to main (blob `9ee1e2da3461362388acea78dc015beb69dc8862`). This resolves the earlier apparent shard collision as a segmentation difference; the worker branch should still not be merged as-is because its shard filenames overlap main.
 
-I fetched the committed five-direction replay summary and lower integer matrix from the U71-03 branch, then independently checked the matrix using a fresh BigInt fraction-free Bareiss elimination.
+Using those inputs, I independently executed the main-source assembly, factor, proposal, and exact replay routines:
 
-- Matrix is symmetric, (46\times46).
-- All 46 pivots are positive.
-- All 46 independently computed pivot integers equal the stored replay's `principalMinors` exactly.
-- The stored transform's diagonal product is (10^{35}).
-- For the first normalized grid step, I independently formed (10^6 A-\operatorname{diag}(E)), where (A) is the stored lower integer matrix and (E) is the stored energy upper vector. Bareiss elimination fails at pivot 2 with a negative exact pivot. This independently confirms the exact grid margin is 0; base positive definiteness alone does not establish the campaign guard.
-- Remote blob SHAs checked: lower matrix `6c838add3febd163519668ce2efd78a7d3931649`; replay `8edd521c67c7574a9629a28b5f837c08869d2bf6`.
+- Baseline proposal and full replay match main's `baseline-replay.json` exactly, including the zero grid margin.
+- The two-row exact transform source at blob `1a4769ca8685cead5d71d82301e72a435fa54ee7` was applied to the reconstructed raw data. The computed transform, determinant, refreshed tails, proposal and complete replay match the main transformed result exactly (replay blob `0137fd0eef0ea227105e50f0901fe267038df776`).
+- The exact transform determinant is (10^{18}); 46 original and 44 unchanged eighth-tail bounds reproduce.
+- Transformed replay has 46/46 positive leading pivots and stored generalized grid margin (8/10^6).
 
-The U71-03 branch's stored chunks, trial parts, aggregate, transformed component intervals, replay, and handoff were compared byte for byte against the runtime objects used to generate them. One transform metadata file initially paired 350-step proposal metadata with a 1200-step replay; that mismatch was corrected and the updated blob read back exactly. After main advanced to commit `9e2fad5689c3afc491a294a6100e1c0ac591761f`, I compared its three odd trial shards against the independently generated worker trial: concatenated main and worker bytes are identical (1,412,272 characters), despite different shard boundaries. All 15 odd residual chunks already present on main also match the worker-generated objects byte for byte; the final worker chunk (15453–16383) was not yet present on main at this snapshot. The coefficient scan is finite and does not prove no other transform works.
+## Independent exact grid check
 
-## Claims not audited
+I fetched the committed lower integer matrix and energy vector and ran a separate BigInt Bareiss implementation:
 
-This checks the stored transformed interval result and grid arithmetic only. It does not independently derive the prime-power certificate, tail inequalities, arithmetic entries, original-form comparison, or an analytic reason that the sampled transform family has zero margin. No candidate pass, frontier extension, RH claim, or novelty claim is made.
+- The (46\times46) lower matrix is symmetric; all 46 exact pivots are positive and equal the stored pivot integers.
+- (10^6 A-8\operatorname{diag}(E)) has 46 positive pivots.
+- (10^6 A-9\operatorname{diag}(E)) fails at pivot 10 with a negative exact pivot.
 
-## Recommendation
+Thus the positive grid margin is independently confirmed as (8/10^6), with the next grid step failing. This supersedes the earlier worker five-row diagnostic, whose margin was zero; the two-row transform in the latest main checkpoint is the candidate result.
 
-Keep U71-03 open. Use the failing exact pivot and scan results to guide a new odd-sector congruence or energy allocation. Re-run the independent exact grid audit on any proposed positive-margin candidate before U71-04 can support campaign closure.
+## Witness and guard reconstruction
 
-## Coordination update
+The witness handoff records an exact byte reconstruction of all 1,115,799 witness characters and the 3,015-byte guard artifact. That reconstruction invokes the repository's exact generator; it does not provide a second implementation of all witness-cell inequalities.
 
-Main advanced to `f4a293f9af98465642a8b62d92c992cb8e00ebbf` during the audit and is adding U71-03 odd artifacts. The U71-03 data branch referenced above has a divergent file at the same path as main's `trial-part1.txt`; its handoff now records the collision. Keep the worker branch separate and reconcile/rename artifacts before any integration. This audit handoff itself adds a unique path.
+## Limits and recommendation
+
+This audit independently reconstructs the stored trial, chunks, aggregate, transform, and exact replay, and independently checks the Bareiss pivot/grid decision. It does not derive the prime-power certificate or tail inequalities from the original Weil-form definitions, establish imported analytic assumptions, or perform an independent original-form evaluation. The (h=2.47) odd candidate now has a reproducible positive exact margin, but campaign closure/frontier extension still requires the lead's scoped analytic review. No RH, novelty, or mission-completion claim is made.
+
+The U71-03 worker branch contains overlapping artifact names and remains unsafe to merge unchanged. Its computed inputs match main after concatenation; reconcile paths before integration.
