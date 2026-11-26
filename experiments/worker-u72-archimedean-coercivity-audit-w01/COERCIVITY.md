@@ -607,6 +607,8 @@ Suzuki defines the limiting closed form on `(-1,1)` by
 
 initially on `H_0^1(-1,1)`. In arXiv:2606.09096v4, §§4.2 and 4.6, the scaled Rayleigh quotient has the form `log(1/a)-(2A+1)+L(v)/||v||^2+O(a)` with a uniform `O(a)` remainder for small `a`; §5.3 identifies the lowest eigenvalue of the closed limiting form with `mu_1` and proves that its ground state is simple and even. The form norm is equivalent to the `H^log` norm, which is compactly embedded into `L^2` on the bounded interval (§4.1).
 
+The additive constant in this scaling agrees exactly with Theorem 1.4. In §2.2, equation (2.2), Suzuki defines `A=(log(2*pi)-psi(2))/2=(log(2*pi)+gamma-1)/2`, since `psi(2)=1-gamma`. Therefore `2A+1=log(2*pi)+gamma`. The scaled form's constant `-(2A+1)` is thus `-log(2*pi)-gamma`, exactly the constant in Theorem 1.4 after writing `psi(2)-1=-gamma`. This directly validates the worker's half-width conversion: with full width `h=2a`, `log(1/a)=log(1/h)+log(2)`; hence a full-width lower asymptotic bound `liminf(lambda_min(h)-log(1/h))>=A_*` implies `mu_1>=A_*+log(pi)+gamma`. This is a normalization audit against Suzuki's stated formulas, not an independent proof of his asymptotic theorem.
+
 For `N>=1`, define the nested even spaces
 
 `V_N=span{g_0,...,g_(N-1)}`, `g_j(x)=(1-x^2)^(j+1/4)*1_[-1,1](x)`.
