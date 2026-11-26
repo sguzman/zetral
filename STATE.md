@@ -240,3 +240,6 @@ LXXI closed (candidate) at h=2.47, closure fa10fc8a21e04b01c8bf50a089f26d0f0b892
 
 
 - LXXII U72-01 COMPLETE: campaign checkpoint 84a90f9d6db124f9f64546e3bf98be0caf45cd0d. Endpoint 12 witness bound 2.930, 29897 cells, two byte-verified parts; guards a4d8413b1e1686962f7225e92309f2d2cfb750be: lowCount46 fails even, 47 passes both. Next U72-02 even h=62/25, J128/KEM20/T832/M16384/lowCount47; fresh staged trial and residual generation. Candidate frontier 2.47. No CI, independent original-form evaluation or RH claim.
+
+
+- LXXII U72-02 COMPLETE (candidate): checkpoint ed68b7c8ed08960fb6aebfdd078d18144070e912. M16384 fixed transformed comparison 9/47, exact allocation obstruction ratio >=1021151/10^6. M20480 reused 8146 modes, appended 2048, verified unchanged trial and refreshed tails, exact 47/47 margin 8140/10^6 replay 274de504518e6093f15e15e91cdc0bac8ee9bdf1. Next U72-03 odd J128/KEM20/T832/M20480/lowCount47 then U72-04 independent audit. Frontier 2.47. No independent original-form evaluation, CI, standalone CLI, RH or novelty claim. README and worker scopes unchanged.
