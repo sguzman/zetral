@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-26 UTC.
-Active campaign: LXXIV — Guarded extension (research/CAMPAIGN-74.md). Current candidate frontier h=2.49; next U74-01 rational endpoint witness and guards.
+Active campaign: LXXIV — Guarded extension (research/CAMPAIGN-74.md). Current candidate frontier h=2.49; U74-01 complete; next U74-02 fresh even trial and residuals.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -260,3 +260,6 @@ LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8
 
 
 - LXXIII CLOSED (candidate): ee8a583b368797a0a47ab2115206d2eb3360d465. Both sectors passed exact interval reconstruction (4802 entries, 98 radius corrections), all 98 stored determinants and both adjacent grid tests; all 40 residual blocks summed; fresh witness/guard replay matched. Candidate frontier h=2.49; margins 164539/10^6 and 236761/10^6. No original-form independent evaluation, CI, formal/human review, RH or originality claim. LXXIV opened at 27235f6fd46647bc8893a36a9d816f9f96bd588a; target h=5/2, proposed endpoint 49/4. Next U74-01; first compute exact witness and guards before trial selection. README and worker scopes unchanged.
+
+
+- LXXIV U74-01 COMPLETE: [witness/guard source](https://github.com/sguzman/zetral/blob/74dc2a9e1dcefc998e9dd5f3094bec47a5de38eb/experiments/u74-witness-guard.js), guard result 3419fe55d4d4d5c022adab4728b92a4e5b969832. Rational endpoint 49/4, bound 2995/1000, step 16, 40780 cells, 787122 serialized characters across three byte-verified parts af8bedaf7bb78ae0c7f1b42cf09a22e07304069d, 0f01f132931e0762648aa5da878f22e69b1455d9, 1fdea0f39026cc07407d0a23db1bd77b32e6b2d4. Positive endpoint slacks, log(49/4)-2.50 >0.00552593699; first common positive tested low support 50. Next U74-02: fresh even trial h=5/2, J128/KEM20/T1024/M20480/lowCount50, then new finite residuals. Candidate frontier stays 2.49. No independent original-form verification, CI, standalone CLI, formal/human review, RH or originality claim.
