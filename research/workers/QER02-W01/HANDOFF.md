@@ -8,3 +8,12 @@
 - Acceptance: derive each identity from QER01's imported self-adjoint compact-resolvent setup and U04 bottom-space Fourier characterization; identify any missing domain or convergence step. Record imported/unchecked claims. No RH or novelty claim.
 - Bounded stopping condition: settle the weights and cardinal interpolation theorem as stated, with exact sign/conjugation checks and convergence mode.
 - Evidence: `research/workers/QER02-W01/AUDIT.md`.
+
+## Completion update — 2026-11-26
+
+- Status: READY_FOR_REVIEW
+- Result: no error found in the scoped exact weights and cardinal interpolation claims under QER01/U04 imports. Integration by parts confirms the sign; the form representer gives `kappa_t` rather than its reciprocal as the sample-basis norm, so the sampling norm has denominator `kappa_t`. The graph-core scalar `c_f` converges by evaluating the identity at one fixed nonzero point, and Cauchy–Schwarz with locally bounded evaluation norms gives locally uniform convergence.
+- Evidence: `research/workers/QER02-W01/AUDIT.md`.
+- Imported/unchecked claims: see AUDIT.md; in particular QER01's compact-resolvent theorem and U04's bottom-space characterization are not re-proved here.
+- No numerical/formal run, RH-dependent conclusion, zeta-node identification, or novelty claim.
+- Next: scoped lead review.
