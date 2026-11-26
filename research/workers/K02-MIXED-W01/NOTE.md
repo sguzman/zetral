@@ -909,3 +909,19 @@ Subtracting the diagonal therefore leaves same-sign off-diagonal energy \((\kapp
 \]
 
 Combining this with the fixed-ratio limit gives a no-go result throughout Montgomery's proved support range: for every fixed \(\eta>0\), if \(a\to\infty\) and \(q_T\le1-\eta\), then \(\liminf \mathcal P_a(T)/N(T)>0\). Indeed, any subsequence has a further subsequence with \(q_T\to c\in[0,1-\eta]\); for \(c>0\) the limit is \(I(c)>0\), and for \(c=0\) the ratio diverges as \(\kappa/q_T\). Consequently \(T^2\mathcal P_a(T)/N(T)\not\to0\) (in fact it diverges), conditional on RH and simplicity. No conclusion is drawn for support approaching or exceeding one, for multiple zeros, or from pair-correlation conjectures outside Montgomery's theorem.
+
+### RH-only simple-gap lower bound for an adapted bump
+
+A separate argument removes the all-zeros simplicity assumption, at the cost of choosing a bump adapted to a fixed bound on the scale ratio. Montgomery's Corollary 2 (1973), under RH, states
+\[
+S(T):=\#\{0<\gamma\le T:\gamma\text{ is simple}\}\ge (2/3+o(1))N(T),
+\]
+where \(N(T)\sim T\log T/(2\pi)\) counts ordinates with multiplicity. List these simple ordinates as \(\sigma_1<\cdots<\sigma_{S(T)}\). Their consecutive gaps have sum at most \(T\), so at least \((S(T)-1)/2\) gaps are at most \(2T/(S(T)-1)\le(6\pi+o(1))/\log T\).
+
+Fix any \(Q>0\), and suppose \(q_T=2a/\log T\le Q\) for all sufficiently large \(T\). Choose a real, even, nonnegative \(\psi_Q\in C_c^\infty(-\delta_Q,\delta_Q)\) with integral one, where \(\delta_Q=\min(1/4,1/(12Q))\). For each of the above short simple gaps, \(|a(\sigma_{j+1}-\sigma_j)|\le3\pi Q+o(1)\), hence \(|y x|\le\pi/4+o(1)\) on the support of \(\psi_Q\). It follows that \(\widehat\psi_Q(y)=\int\psi_Q(x)\cos(yx)dx\ge1/\sqrt2-o(1)\), so \(|\widehat\psi_Q(y)|^2\ge1/2-o(1)\). Each such gap contributes this amount to \(\mathcal P_a(T)\): its lower endpoint is a simple row and its upper endpoint is a distinct simple ordinate, so both multiplicity factors equal one. Consequently
+\[
+\liminf_{T\to\infty}\frac{\mathcal P_a(T)}{N(T)}\ge\frac16
+\]
+for this fixed bump \(\psi_Q\), under RH alone. Therefore the density-one energy criterion cannot hold for bounded \(q_T\) when using this adapted bump.
+
+The bump depends on the chosen bound \(Q\). This does not rule out every other bump choice at the same bounded ratio, and it does not address \(q_T\to\infty\). It does show that Montgomery's RH-only positive density of simple zeros supplies a no-go example for every bounded-ratio regime without assuming that all zeros are simple. Source: Montgomery, “The Pair Correlation of Zeros of the Zeta Function,” Corollary 2, equation (7), [original paper](https://public.websites.umich.edu/~hlm/paircor1.pdf).
