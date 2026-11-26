@@ -176,6 +176,47 @@ matching upper limit. Consequently the established full archimedean lower
 floor `alpha_0+C(h)` has leading term `log(1/h)`; this does not identify
 the exact asymptotic of the actual compressed operator's least eigenvalue.
 
+The same decomposition gives its additive constant with an `O(h)` remainder.
+For `q=1/4`, the singular sum is
+`sum_(j=0)^N 1/(j+q)=psi(N+q+1)-psi(q)`, with
+`N+q+1=1/h+O(1)`, hence it equals
+`log(1/h)-psi(q)+O(h)`. The bounded-variation quadrature for `g` has
+error at most `3h`, and its integral is
+
+`I = integral_0^infinity g(y)dy`
+`  = limit_(Y->infinity) (integral_0^Y phi(y)dy-log(Y))`
+`  = (Ci(pi)+log(pi/4)-gamma)/2`.
+
+Indeed, under `y=x tan(x)`,
+`phi(y)dy=(cos^2(x)/x+cot(x))dx`, with antiderivative
+`(1/2)log(x)+(1/2)Ci(2x)+log(sin x)`. Here `Ci` is the cosine integral.
+Therefore
+
+`C(h)=log(1/h)-psi(1/4)+I+O(h)`.
+
+Using `psi(1/4)=-gamma-pi/2-3log(2)`, this gives
+
+`alpha_0+C(h)=log(1/h)+A_*+O(h)`,
+`A_*=(Ci(pi)-gamma-2log(2)-log(pi))/2`.
+
+Since the prime term vanishes and the pole norm is `O(h)` as `h->0`,
+this implies the lower asymptotic
+`liminf_(h->0)(lambda_min(h)-log(1/h))>=A_*` for the full Weil form.
+Combining with Suzuki's Theorem 1.4 in half-width notation `h=2a`,
+`lambda_min(a)=log(1/a)+mu_1-log(2pi)-gamma+O(a)`, yields
+
+`mu_1 >= A_*+log(pi)+gamma`
+`      = gamma+log(pi)-log(2) + (1/2) sum_(k>=1)(-1)^k pi^(2k)/(2k(2k)!)`.
+
+The exact-rational script certifies the right-hand side exceeds `1/5` by
+using the odd partial sum through `k=15` of the alternating cosine-integral
+series and rational intervals for pi, gamma and the logarithms. The absolute
+series terms decrease because their successive ratio is
+`pi^2 k/[2(k+1)^2(2k+1)]<=pi^2/24<1`; hence the odd partial sum is a lower
+bound. The Euler-constant lower endpoint uses
+`gamma>H_N-log(N+1)`. This is a quantitative lower bound on Suzuki's already
+positive constant, not a claim that the asymptotic itself is new.
+
 ## A concrete very-short-window bound for the full Weil form
 
 Prior-art qualification: Suzuki, arXiv:2606.09096v4, Theorem 1.4, already
