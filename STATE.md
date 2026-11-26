@@ -1,7 +1,7 @@
 # Research state
 
-Date: 2026-11-25 UTC.
-Active campaign: LXXIII — Guarded extension (research/CAMPAIGN-73.md). Current candidate frontier h=2.48; latest checkpoint below.
+Date: 2026-11-26 UTC.
+Active campaign: LXXIV — Guarded extension (research/CAMPAIGN-74.md). Current candidate frontier h=2.49; next U74-01 rational endpoint witness and guards.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -257,3 +257,6 @@ LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8
 
 
 - LXXIII U73-01 COMPLETE: witness/guard f8498d92aa9fd61f7eb6a42f2fd03fdfaa754ed2, endpoint 121/10, bound 2971/1000, step 16, 41549 checked cells, 807455 characters in three byte-verified parts. Endpoint slack >0.00320545; lowCount48 fails both, 49 passes both. U73-02 IN_PROGRESS: fresh even trial J128/KEM20/T832/M20480/lowCount49, 368 complement modes, 49 positive lower energy diagonals, 1576156 characters in four byte-verified parts, source and trial 9ac82af4adcce4dba37f1a490ec2d75111875bde. First 5120 even residual modes 98..10336 in 10 disjoint byte-verified chunks, exact prefix sum persisted in this checkpoint. Next mode 10338; 5072 modes remain. No comparison or frontier advance at 2.49. No independent original-form evaluation, standalone CLI, RH or novelty claim. README and worker scopes unchanged.
+
+
+- LXXIII CLOSED (candidate): ee8a583b368797a0a47ab2115206d2eb3360d465. Both sectors passed exact interval reconstruction (4802 entries, 98 radius corrections), all 98 stored determinants and both adjacent grid tests; all 40 residual blocks summed; fresh witness/guard replay matched. Candidate frontier h=2.49; margins 164539/10^6 and 236761/10^6. No original-form independent evaluation, CI, formal/human review, RH or originality claim. LXXIV opened at 27235f6fd46647bc8893a36a9d816f9f96bd588a; target h=5/2, proposed endpoint 49/4. Next U74-01; first compute exact witness and guards before trial selection. README and worker scopes unchanged.
