@@ -1,0 +1,42 @@
+name: U75 bounded odd residual block
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: First odd mode in the next residual block
+        required: true
+        type: number
+      end:
+        description: Last odd mode in the block
+        required: true
+        type: number
+permissions:
+  contents: write
+concurrency:
+  group: u75-odd-residual-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  residual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Compute and validate bounded block
+        run: node experiments/u75-run-odd-block.js '${{ inputs.start }}' '${{ inputs.end }}'
+      - name: Commit checkpoint
+        env:
+          START: ${{ inputs.start }}
+          END: ${{ inputs.end }}
+        run: |
+          set -euo pipefail
+          BLOCK=$(( (START - 105) / 1024 + 1 ))
+          printf -v PADDED '%03d' "$BLOCK"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "experiments/results/u75-251-100-odd-t1024-m24576-finite-${PADDED}.json"
+          git commit -m "Checkpoint U75 odd residual modes ${START}–${END}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
