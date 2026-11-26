@@ -138,3 +138,11 @@ Since all omitted `c_j` are positive, this is a certified lower bound for the in
 `python3 experiments/worker-u72-archimedean-coercivity-audit-w01/rational_root_certificate.py`
 
 Observed output: `terms=100; grid=1/1000000` and `certified_root_series_lower_bound > 24317843723/10000000000`; the assertions pass. This is a certification of the component lower bound, not of the full archimedean/Weil form. The source proof uses the classical Archimedean inequality `223/71<pi`; the candidate-root floating calculations do not enter the validity of the checks.
+
+## Monotonicity in interval length
+
+For each fixed `u_j`, implicit differentiation of `omega_j tan(omega_j h/2)=2u_j` gives
+
+`d omega_j/dh = -[omega_j^2 sec^2(omega_j h/2)/2]/[tan(omega_j h/2)+(omega_j h/2)sec^2(omega_j h/2)] < 0`.
+
+Since `c_j` is strictly increasing as a function of `omega_j`, every `c_j(h)` decreases with `h`; consequently `C(h)=sum_j c_j(h)` is decreasing. Thus the exact certificate `C(62/25)>2.4317843723` also supplies the same lower bound for every `0<h<=62/25`. This interval comparison concerns only the compressed `alpha-alpha_0` form.
