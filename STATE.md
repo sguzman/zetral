@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-25 UTC.
-Active campaign: LXXII — Guarded extension (research/CAMPAIGN-72.md). Current candidate frontier h=2.47; latest checkpoint below.
+Active campaign: LXXIII — Guarded extension (research/CAMPAIGN-73.md). Current candidate frontier h=2.48; latest checkpoint below.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -246,3 +246,8 @@ LXXI closed (candidate) at h=2.47, closure fa10fc8a21e04b01c8bf50a089f26d0f0b892
 
 
 - LXXII U72-03 COMPLETE (candidate): checkpoint 4aa5496bd61dd8099485ec858164836430aa0775. Odd 10193 modes M20480; final two chunks and full aggregate recovered with parsed endpoint equality, not byte equality; stored seven-row transform and exact replay fully reproduced (blobs b91ad2ab36a045ab3e4799ce1398f6897af0c167 and fe8ecd3705a9547ae7080e67ab035330b6d1f425), 47/47 and margin 43317/10^6. Even margin 8140/10^6. Next U72-04 independent stored reconstruction, witness/guard and aggregate audits; frontier 2.47 pending closure. No CI, independent original-form evaluation, RH or novelty claim. README and worker scopes unchanged.
+
+
+## Superseding checkpoint — Campaign LXXIII
+
+LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8046a. Both comparisons 47/47, margins 8140/10^6 even and 43314/10^6 odd. Independent stored audit matched 4418 matrix entries, 94 radii, 94 determinants, 8836 final and 8836 intermediate interval endpoints; witness/guards and odd trial regenerated. LXXIII active, plan 16b3c32d247197669664a0aa5723d59938f74a18, target 2.49, endpoint 121/10, U73-01 next. No independent original-form evaluation, CI, standalone CLI, human/formal review, RH or originality claim. README and worker scopes unchanged.
