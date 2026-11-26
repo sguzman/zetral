@@ -756,6 +756,26 @@ The next `N=96` trial was retained because its exact rational quotient clears th
 
 where the complete rational vector and exact quotient are stored in the script. The verified quotient is approximately `0.2332166260735941`; the actual improvement over the N=80 candidate is about `9.4e-7`, so returns are now below `10^-6` per 16 added profiles. The candidate search uses the same double-precision generalized solve and `10^-6` rounding, but no optimizer accuracy is used in the proof. Reproduce with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial96_certificate.py`.
 
+### Independent check of the Mellin log-moment formula
+
+For `g_i(x)=(1-x^2)^(i+1/4) 1_[-1,1](x)`, its Fourier transform is proportional to `|xi|^(-mu_i) J_(mu_i)(|xi|)`, with `mu_i=i+3/4`. After removing the positive normalization constants, the cross moment is the Weber–Schafheitlin integral
+
+`W_ij(lambda)=integral_0^infinity x^(-lambda) J_(mu_i)(x)J_(mu_j)(x) dx`.
+
+At infinity its integrand is `O(x^(-lambda-1))`; at zero it is `O(x^(mu_i+mu_j-lambda))`. Thus `0<lambda<mu_i+mu_j+1` is a convergence strip containing `lambda=mu_i+mu_j`, and differentiation in `lambda` is justified there locally with the additional logarithmic factor. The equal-argument product formula is
+
+`W_ij(lambda)=2^(-lambda) Gamma(lambda) Gamma((mu_i+mu_j-lambda+1)/2) / [Gamma((-mu_i+mu_j+lambda+1)/2) Gamma((mu_i+mu_j+lambda+1)/2) Gamma((mu_i-mu_j+lambda+1)/2)]`.
+
+Since the log-weighted integrand is `log(x)` times the unweighted one, its quotient is `q_ij=-W'_ij(lambda)/W_ij(lambda)` at `lambda=mu_i+mu_j`. Logarithmic differentiation gives
+
+`q_ij=log(2)-psi(mu_i+mu_j)+psi(1/2)/2 + psi(mu_i+1/2)/2 + psi(mu_j+1/2)/2 + psi(mu_i+mu_j+1/2)/2`.
+
+Substituting `mu_i=i+3/4`, `psi(1/2)=-gamma-2log(2)`, `psi(1/4)=-gamma-pi/2-3log(2)`, and the half-/quarter-step recurrences yields
+
+`q_ij=-gamma-log(2)-pi/2+r_ij`,
+
+with exactly the rational `r_ij` displayed above. The sign is negative because `d/dlambda` inserts `-log(x)`; this agrees with the script's log-moment convention. This independent symbolic check confirms the formula and differentiability in its stated strip; it does not independently establish the imported Weber–Schafheitlin identity itself or Suzuki's limiting asymptotic.
+
 ### Independent check of the form-core density step
 
 I checked the nested-profile core argument above separately from its original derivation. For even `h in C_c^infty(-1,1)`, the quotient `h(x)/g_0(x)` vanishes near `|x|=1`; near `x=0`, even smoothness gives a smooth function of `x^2`. Thus it is a smooth function `phi(y)` of `y=1-x^2` on `[0,1]`. C¹ polynomial approximation can be obtained by uniformly approximating `phi'` by polynomials and integrating, with the additive constant fixed at `phi(0)`. If `P_n -> phi` in C¹, multiplication by `g_0` gives convergence in `H^s(R)` for any fixed `0<s<1/2`, since multiplication by `P_n(1-x^2)-phi(1-x^2)` has operator norm on `H^s` controlled by its `W^{1,infty}` norm. These products are exactly finite linear combinations of the `g_j`.
