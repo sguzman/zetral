@@ -590,3 +590,31 @@ using K02's convention \(J_a(w,z)=q(u_{\bar w},u_{\bar z})\), with the form inne
 \right|\longrightarrow0.
 \]
 In particular, at any fixed simple zero \(\gamma\) of the canonical product, \(\|E_\gamma'\|/M_a\to|\Delta'(\gamma)|>0\). This identifies the fixed-ordinate scale in the intrinsic cluster criterion from the known normalized-kernel limit. It does not give a uniform estimate for \(t=\gamma_a\to\infty\), nor can it be applied to a shrinking pair of sample nodes unless such pairs actually occur in the fixed sample set. Hence it closes the fixed-compact derivative-norm asymptotic, but not the growing-window projection-defect problem.
+
+
+### Unquantified expanding-window consequence
+
+K02 proves local uniform convergence on \(\mathbb C^2\) of
+\[
+H_a(w,z)=J_a(w,z)/M_a^2-\overline{\Delta(w)}\Delta(z),
+\]
+and local uniform convergence of every fixed mixed derivative. This implies a slowly growing expanding-window statement, although it supplies no explicit rate. For each integer \(n\), local uniform convergence on the bidisk \(|w|,|z|\le n\) lets us choose \(A_n\), increasing with \(n\) and tending to infinity, such that for every \(a\ge A_n\),
+\[
+\sup_{\substack{|w|,|z|\le n\\0\le j,k\le n}}
+\left|\partial_{\bar w}^{\,j}\partial_z^{\,k}H_a(w,z)\right|\le 1/n.
+\]
+Set \(R(a)=\max\{n:A_n\le a\}\), taking \(R(a)=0\) before \(A_1\). Then \(R(a)\to\infty\), and for all derivative orders \(j,k\le R(a)\),
+\[
+\sup_{|w|,|z|\le R(a)}
+\left|\partial_{\bar w}^{\,j}\partial_z^{\,k}H_a(w,z)\right|
+\le 1/R(a).
+\]
+In particular, for each fixed \(k\), the intrinsic derivative-evaluation identity gives
+\[
+\sup_{|t|\le R(a)}
+\left|
+\frac{\|E_t^{(k)}\|_{\mathcal H_a^*}^2}{M_a^2}
+-|\Delta^{(k)}(t)|^2
+\right|\longrightarrow0.
+\]
+This is an existential diagonal window extracted from compact convergence, not an explicit arithmetic range. It controls normalized kernel jets (and hence normalized derivative-evaluation norms) only. It does not bound projection defects uniformly there, nor does it imply an unnormalized mixed-kernel limit or any explicit relation between \(R(a)\) and \(a\).
