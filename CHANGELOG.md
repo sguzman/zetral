@@ -2,6 +2,10 @@
 
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
+## 2026-11-26 — LXXV closeout and LXXVI source audit
+
+LXXV closed as a finite candidate at h=2.51 after the hosted exact stored-component audit passed. The audit did not independently evaluate the original Weil quadratic form. LXXVI is active to investigate that gap; its source audit identified an existing direct arithmetic Gram formula, but no comparison against the compressed entry implementation has yet been verified. See [LXXV closure](research/CAMPAIGN-75-CLOSURE.md) and [LXXVI plan/checkpoint](research/CAMPAIGN-76.md).
+
 ## Campaigns XII–LVII
 
 | Campaign | Outcome and limitations |

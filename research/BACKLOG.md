@@ -15,10 +15,12 @@ analytic theorems and from any RH implication.
   inequality, without a new finite verification at every endpoint? The
   working hypothesis is that the existing theta-cardinal decomposition may
   expose a tail term with sign or a summable domination; this is open.
-- **Evidence and prerequisites:** Candidate finite frontier currently `h=2.50`;
+- **Evidence and prerequisites:** Candidate finite frontier currently `h=2.51`;
   LXXV tests `h=2.51`. Read `research/theta-cardinal-bound.md`,
   `research/reconstruction.md`, the current campaign proof assumptions, and
   the accepted endpoint/guard certificates before deriving a tail estimate.
+  LXXVI now audits the independent arithmetic-form mapping first; resume this
+  route after that mapping is either verified or precisely blocked.
 - **Design / falsification:** Isolate the exact residual after the finite
   low-mode and prime-power terms. Seek a sign theorem, monotone envelope, or
   summable majorant uniform in the endpoint. Test the proposed bound against
@@ -97,8 +99,9 @@ analytic theorems and from any RH implication.
   aggregation, interval matrix reconstruction, rank tightening, and principal
   minors in the latest frontier survive an independent implementation and
   independent interpretation of the original quadratic form?
-- **Evidence and prerequisites:** Current checkpoint in `STATE.md`; campaign
-  LXXIV closure is the nearest closed audit, while LXXV remains in progress.
+- **Evidence and prerequisites:** LXXV is closed at h=2.51; its scoped audit
+  reconstructs stored components but does not independently evaluate the
+  original Weil form. Campaign LXXVI is the active source-form audit.
 - **Design / falsification:** Reconstruct from source formulas rather than the
   stored assembled matrices; independently regenerate witness and guards;
   verify every mode range and rational endpoint; compare with adjacent failing

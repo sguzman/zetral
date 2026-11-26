@@ -1,5 +1,7 @@
 # Campaign LXXV — Guarded extension to h=251/100
 
+Status: CLOSED as a candidate finite certificate at h=251/100 (candidate frontier 2.51). The scoped independent audit is in [CAMPAIGN-75-CLOSURE.md](CAMPAIGN-75-CLOSURE.md). This does not establish RH or an independent original-form evaluation.
+
 Candidate frontier h=2.50 (LXXIV closed at 3ea118486fa51b9358488d11a9a30313e4668bee). Target h=2.51. Proposed rational endpoint 62/5 within the eight-shift domain, subject to exact witness and guard feasibility. Preceding margins 127110/10^6 even and 211333/10^6 odd motivate the next bounded step, not extrapolation of positivity.
 
 - U75-01: regenerate exact rational witness, endpoint slacks and high guards; select first common adequate low support.
