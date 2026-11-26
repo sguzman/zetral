@@ -214,3 +214,17 @@ Thus `A0>V0` is necessary, and then the gap parameter must exceed `2 A0 V0/(A0-V
 `e_N'(x)=(A0*x+V0)*(A0*C_N*x-2*A0*V0-C_N*V0)/(C_N*x-V0)^2`.
 
 The derivative is negative below `x_star` and positive above it. If `x_star>=1`, it is nonpositive throughout the admissible interval, so the minimum is the endpoint `x=1` (`theta=0`); interpolation does not improve this generic unweighted error bound. This endpoint criterion concerns `e_N` alone; the separately scaled rate-tail term can change the optimizer of a combined bound.
+
+For completeness, include an explicit nonnegative rate-tail contribution `T_N*x`, with `T_N` fixed at the chosen cutoff. On the same admissible interval, put `y=C_N*x-V0`, `a=A0/C_N`, and `d=V0*(A0+C_N)/C_N`. Then
+
+`e_N(x)+T_N*x = (a^2*C_N+T_N)*x + 2*a*d + d^2/(C_N*x-V0)`.
+
+Its second derivative is `2*d^2*C_N^2/(C_N*x-V0)^3>0`, so it is strictly convex. The derivative tends to `-infinity` at the left endpoint. Therefore the minimizer is `x=1` exactly when
+
+`T_N <= [V0^2*(A0+C_N)^2/(C_N-V0)^2 - A0^2]/C_N`;
+
+otherwise there is a unique interior minimizer, characterized by
+
+`(A0^2/C_N + T_N) = V0^2*(A0+C_N)^2/[C_N*(C_N*x-V0)^2]`.
+
+The right side of the endpoint threshold can be negative; in that case every `T_N>=0` gives an interior minimizer. This is a conditional optimizer for the stated two-term analytic bound, not an optimization of the stored DNB comparison or its interval errors.
