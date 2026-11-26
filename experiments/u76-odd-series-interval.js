@@ -1,7 +1,7 @@
 // Rigorous fixed-point interval evaluation of the independent G_00 identity.
 // All interval endpoints are integer multiples of 10^-70, rounded outward.
 const fs = require("node:fs");
-const Q = 10n ** 90n;
+const Q = 10n ** 200n;
 const ZERO = [0n, 0n];
 const ONE = [Q, Q];
 const floorDiv = (n, d) => {
@@ -215,7 +215,7 @@ const overlap = entry[0] <= compressedInterval[1] && compressedInterval[0] <= en
 const contained = entry[0] >= compressedInterval[0] && entry[1] <= compressedInterval[1];
 const result = {
   status: "outward-rounded fixed-point interval evaluation of independently derived G00 formula",
-  precision: { decimalDigits: 90, endpointRounding: "floor lower / ceil upper" },
+  precision: { decimalDigits: 200, endpointRounding: "floor lower / ceil upper" },
   parameters: { h: "251/100", catalanEulerTerms: 280, eulerGammaHarmonicCutoff: Number(gammaN), exponentialRemainderTerms: remainderTerms, primePowers: primePowers.map(x => Number(x.q)) },
   intervals: {
     archimedean: archimedean.map(decimal),
