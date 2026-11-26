@@ -212,6 +212,11 @@
       ]
     },
     "overlapWithSharedCompressedInterval": true,
+    "directIntervalContainedInSharedCompressedInterval": true,
+    "containmentMargins": [
+      "0.0000000000000000000000000000000000000000000000000000000000010241471898",
+      "0.0000000000000000000000000000000000000000000000000000000000012057649096"
+    ],
     "caveat": "The direct arithmetic formula is evaluated independently; the comparator is the existing shared compressed interval. Euler-Maclaurin bounds for Euler's constant and the alternating/geometric tails are explicitly included."
   }
 }
