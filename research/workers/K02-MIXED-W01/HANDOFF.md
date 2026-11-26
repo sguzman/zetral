@@ -7,3 +7,5 @@
 - Starting source: main `8fb1647cd10dc948db15b65f13250d8f8d0ac4b2`; K02 blob `545bc03ee92c06ecc941b395acd9a60443c11c9f`.
 - No tests, numerical computations, or formal verification were needed or run.
 - Required lead disposition: review whether a quantitative model-specific estimate is worth pursuing; no change to campaign claims is warranted from this abstract diagnostic.
+
+- Follow-up refinement: the abstract example was strengthened to satisfy the sampled-point vector identity `(I-gamma Pi_n C Pi_n)Pi_n g = P_n(gamma) M_n h_n` at a simple scalar zero while retaining arbitrary behavior of `M_n <g,h_n>`. The omitted analytic-family and Weil-form links remain explicit; this is not an actual-kernel counterexample.

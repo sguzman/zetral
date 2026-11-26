@@ -28,3 +28,24 @@ provides one possible entry point, but the audited note supplies no rate suffici
 ## Status and limits
 
 This is an exact abstract construction, not numerical evidence. No claim is made that the chosen \(M_n\) and \(h_n\) arise from the local Weil-form construction or obey its omitted identities. No primary source or new property of the actual kernel was established. No RH conclusion, novelty claim, or human/formal review is claimed. A concrete next step would be to derive a quantitative coupling from the local evaluation norm and the endpoint/Volterra representation, or to produce an actual-model sequence disproving boundedness.
+
+## Refinement: retain the sampled-point vector identity
+
+The rate obstruction can also be arranged to respect the single sampled-point identity from K02. Let \(C e_0=c_0e_0\), \(C e_n=c_ne_n\) for \(n\ge1\), where \(c_0>0\) and \(c_n>0\) tends to zero, so \(C\) is compact and self-adjoint. Let \(\Pi_n\) project onto \(\operatorname{span}\{e_0,\ldots,e_n\}\), \(g=e_0\), \(\gamma=c_0^{-1}\), and
+\[
+ h_n=\epsilon_n e_0+(1-\epsilon_n^2)^{1/2}e_n,
+ \qquad \epsilon_n\downarrow0.
+\]
+Then \(h_n\in\operatorname{ran}\Pi_n\), \(\|h_n\|=1\), \(h_n\rightharpoonup0\), and
+\[
+ \|\Pi_n C\Pi_n h_n\|^2=\epsilon_n^2c_0^2+(1-\epsilon_n^2)c_n^2\longrightarrow0.
+\]
+Since \(g\in\operatorname{ran}\Pi_n\) and \(Cg=c_0g\), one has exactly
+\[
+ (I-\gamma\Pi_n C\Pi_n)\Pi_n g=0
+   =P_n(\gamma)M_n h_n
+\]
+for every scale \(M_n>0\), on taking the normalized entire scalar \(P_n(z)=1-z/\gamma\). Yet
+\(M_n\langle g,h_n\rangle=M_n\epsilon_n\) can be bounded or divergent by the choice of \(M_n\). Thus even compactness, strong projection convergence, weak escape, vanishing \(\|B_nh_n\|\), and this one sampled-point identity do not force a bounded mixed scale.
+
+This refinement still omits the full analytic family \(u_z\), the relation between \(h_n\), the evaluation norm \(M_n\), and the local Weil form, and the resolvent/kernel identities away from \(\gamma\). It is therefore a sharper abstract rate obstruction only, not evidence for unboundedness of the actual mixed kernel.
