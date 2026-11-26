@@ -788,6 +788,22 @@ The min–max principle thus bounds the second eigenvalue `mu_2` below by this q
 
 Combined with the N=128 exact trial cap `mu_1<0.233216`, the spectral gap exceeds `0.113`. This does not improve the ground-state bracket by itself, but proves a quantitative isolated bottom without RH. The analytic facts imported from Suzuki are the limiting form definition and compact embedding/compact resolvent (arXiv:2606.09096v4, §§4.1 and 4.6); no RH assumption, numerical eigenvalue, formal proof, human review, or novelty claim is involved. Reproduce the scalar certificate with `python experiments/worker-u72-archimedean-coercivity-audit-w01/log_form_second_eigenvalue_certificate.py`.
 
+Parity sharpens this gap substantially. With reflection `Jf(x)=f(-x)`, the band operator splits into even and odd blocks, whose traces are
+
+`tr(K_R|even)=(2R+Si(2R))/(2*pi)`, `tr(K_R|odd)=(2R-Si(2R))/(2*pi)`.
+
+On the even block, the constant test still gives `kappa_1^even>=c_R`; thus `kappa_2^even<=tr(K_R|even)-c_R`. Repeating the two-dimensional min–max argument gives the second even eigenvalue `mu_2^even>0.5512`.
+
+On the odd block, `integral f=0`, so
+
+`|fhat(xi)|^2 <= xi^2/(3*pi)` for `||f||_2=1`.
+
+This follows from `|e^(-ix*xi)-1|<=|x*xi|` and `integral_(-1)^1 x^2 dx=2/3`. Consequently the negative-frequency contribution improves to `integral_(|xi|<1)log|xi|*|fhat|^2 >= -2/(27*pi)`. Also `kappa_1^odd<=tr(K_R|odd)`, so the odd ground eigenvalue satisfies `mu_1^odd>0.9905`. The full ground state is therefore even, as also follows from the explicit even trial `mu_1<0.233216`; the full second eigenvalue is the lesser of `mu_2^even` and `mu_1^odd`. Hence
+
+`mu_2 > 0.5512`, `mu_2-mu_1 > 0.317`.
+
+Both parity thresholds are certified by the same exact rational script, including intervals for the parity traces, `Si(19/5)`, pi, log and gamma. This also gives an independent quantitative proof of ground-state simplicity within the imported compact-resolvent framework.
+
 The same concentration argument gives a lower growth bound for every eigenvalue. For `n>=2`, take `R_n=n/log(n)>1`. For any n-dimensional subspace, a unit vector can be chosen orthogonal to the first `n-1` eigenvectors of `K_(R_n)`, and the trace bound gives `kappa_n<=trace(K_(R_n))/n=2/(pi*log n)<1`. Therefore
 
 `mu_n >= gamma - 2/pi + (1-2/(pi*log n))*log(n/log n)`

@@ -57,7 +57,7 @@ def main() -> None:
     pi_lo, pi_hi = pi_bounds()
     R = F(19, 10)
     z = 2 * R
-    si_lo, _ = si_bounds(z)
+    si_lo, si_hi = si_bounds(z)
     cos_lo, _ = cos_bounds(z)
 
     # K_R is the positive Fourier-band concentration operator on (-1,1).
@@ -87,12 +87,32 @@ def main() -> None:
     # Combine with the independently certified mu_1<0.233216 endpoint.
     assert mu2_lower - F(233216, 1_000_000) > F(113, 1_000)
 
+    # Parity improves the full second-eigenvalue estimate. Reflection J gives
+    # tr(K_R|even/odd)=(2R +/- Si(2R))/(2*pi). The even second concentration
+    # eigenvalue is bounded by trace_even - the constant-vector Rayleigh value.
+    trace_even_upper = (2 * R + si_hi) / (2 * pi_lo)
+    kappa_even2_upper = trace_even_upper - constant_test_lower
+    assert 0 < kappa_even2_upper < 1
+    mu_even2_lower = gamma_lower - 2 / pi_lo + (1 - kappa_even2_upper) * log_R_lower
+
+    # Oddness cancels fhat(0): |fhat(xi)|^2 <= xi^2/(3*pi). Thus the negative
+    # logarithmic contribution on |xi|<1 is at least -2/(27*pi).
+    trace_odd_upper = (2 * R - si_lo) / (2 * pi_lo)
+    mu_odd1_lower = gamma_lower - F(2, 27) / pi_lo + (1 - trace_odd_upper) * log_R_lower
+    assert mu_even2_lower > F(5512, 10_000)
+    assert mu_odd1_lower > F(9905, 10_000)
+    mu2_parity_lower = min(mu_even2_lower, mu_odd1_lower)
+    assert mu2_parity_lower - F(233216, 1_000_000) > F(317, 1_000)
+
     print("Exact second-eigenvalue lower certificate for Suzuki's log form:")
     print(f"  kappa_1 lower: {float(constant_test_lower):.15f}")
     print(f"  trace upper: {float(trace_upper):.15f}")
     print(f"  kappa_2 upper: {float(kappa2_upper):.15f}")
     print(f"  mu_2 lower: {float(mu2_lower):.15f} > 0.3463")
     print("  gap from the certified mu_1 cap exceeds 0.113")
+    print(f"  even-sector second eigenvalue lower: {float(mu_even2_lower):.15f} > 0.5512")
+    print(f"  odd-sector first eigenvalue lower: {float(mu_odd1_lower):.15f} > 0.9905")
+    print(f"  full mu_2 lower: {float(mu2_parity_lower):.15f}; gap exceeds 0.317")
 
 
 if __name__ == "__main__":
