@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-25 UTC.
-Active campaign: LXVI — Post-log(11) guarded extension (research/CAMPAIGN-66.md). Current candidate frontier h=2.41; latest checkpoint below.
+Active campaign: LXXI — Guarded extension (research/CAMPAIGN-71.md). Current candidate frontier h=2.46; latest checkpoint below.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -227,3 +227,8 @@ Resume on continue: reconcile any newer main commits before work; coordinate FDA
 - Campaign LXVI ACTIVE [research/CAMPAIGN-66.md](research/CAMPAIGN-66.md) 77df6c50c9fc48c95c1af047c64f47953751e543. Lead owns QC01–04. Target h=121/50, new endpoint 113/10; exact witness and high guards first, then even comparison with all regime factors regenerated. Worker scopes unchanged. README unchanged.
 
 - LXVI QC01 COMPLETE, QC02 first even comparison FAIL: [guard and bottleneck](research/positivity/QC02-121-50-even-bottleneck.md) 26212557364e2d826422b9fa788dec1e4bb0f776. 113/10 witness C=2.817 43569 cells 4bbeac02eac3b2344382c3dfc8532ebbe8641338; narrower 45/4 witness C=2.795 26393 cells 3e42d0d9ad0d1ab99fdce3a653be340cc6f0db4d, all 20 guards positive f963353664914d16996f5f42f2b86ba261bca310, generator 22f91f436827d6e0b3278e02a34f7519b8c2ff44 preserves earlier domains. Even J128 KEM20 M8192 T768 41 low raw 519c2e2848874c45e53a19c1ee153601bbb48f7e, 41 positive lower energies, baseline 0/41; constant factors e82831bf5944407a951c269d7a2c3faeefb50841 joint ad08546e1298dca7e32d68ccf54652666fe8e2fc replay c0769062abb8744cf45b788b640934d51c98522b all 8 candidates 2/41. Exact readbacks. Heuristic residual 1.232468, first direction eighth loss ~0.841, ~83.46% joint share. Next QC03 targeted M10240 even run with same J/T/low and regenerated bounds; if insufficient derive tighter C8 or trial basis. Odd not attempted at 2.42; frontier stays 2.41. Worker scopes unchanged.
+
+
+## Superseding checkpoint — Campaign LXXI
+
+LXX closed (candidate) at h=2.46, closure 9e7cafbf01add3f26817e9ec285d1ff26a67f06b; both exact comparisons 45/45 with independent stored audit, even/odd margins 64987/10^6 and 85965/10^6. LXXI active, U71-01 complete at 52d58686f177d901edb069e2e59874a9f185bdb4, next U71-02 even h=247/100, lowCount46, J128/KEM20/M16384/T832. Latest coordination c43a7ac56c551281a9543138af53b81dad7d5b9c. No independent original-form evaluation, CI, RH or novelty claim.
