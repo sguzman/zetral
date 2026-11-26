@@ -33,7 +33,7 @@ It then forms the diagonal/off-diagonal matrix entries from these expressions an
 
 ## Reproduction
 
-The raw source artifact is on `origin/worker/u72-02-even-reconstruction` at `experiments/results/u72-62-25-even-t832-raw.json`; its Git blob is `b6000240e5f35913c5371fa2675faa6ab168bbe0`.
+The raw source artifact is on `origin/worker/u72-02-even-reconstruction` at `experiments/results/u72-62-25-even-t832-raw.json`; its Git blob is `b6000240e5f35913c5371fa2675faa6ab168bbe0`. The staged expression source is `experiments/tc01-post-log11-em.js` on that branch, blob `2f9035722076c6c8e96bf01b00901191c3466c52`; it was consulted for formula labels, while the numerical evaluation code is separately written and does not execute that source.
 
 ```sh
 git show origin/worker/u72-02-even-reconstruction:experiments/results/u72-62-25-even-t832-raw.json > /tmp/u72raw.json
