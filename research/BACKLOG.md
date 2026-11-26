@@ -11,19 +11,15 @@ analytic theorems and from any RH implication.
 ### Current execution note — LXXVI (2026-11-26)
 
 The corrected support-h diagnostic was replayed successfully on Actions run
-45901442328. U76-04 now outward-encloses the direct constant-even entry and
-places it wholly inside the shared compressed interval; Actions run
-45905468198 matches local canonical JSON after removing runtime metadata. The
-constant even continuous component now has an exact paired exponential-series
-formula, closed rational part, and explicit geometric remainder bound in
-`research/positivity/U76-01-direct-arithmetic-Gram.md`. Its next acceptance
-step is derive and enclose `G_22` to complete the even 2x2 principal block,
-then independently audit the U76-07/U76-08 endpoint and zeta enclosures. The
-direct `G_02` interval is contained in its 2x2 shared compressed comparator on
-Actions run 45911794868. Preserve the precision and truncation failures; three
-scalar matches still do not constitute a full matrix audit. After the 2x2
-cross-check, reassess B1 analytic extension against Campaign LXXVI's remaining
-matrix scope and select the higher-value route.
+45901442328. U76-04 outward-encloses direct `G_00`; U76-07, U76-08 and U76-09
+outward-enclose direct `G_11`, `G_02` and `G_22` inside the shared compressed
+intervals. On Actions run 45912557912, exact endpoint arithmetic on the three
+even entries gives a positive determinant enclosure for the `G_00/G_02/G_22`
+principal block. See `research/CAMPAIGN-76.md` for the full interval and
+verification boundaries. Preserve the precision and truncation failures;
+this one finite block does not establish full-form positivity. The next
+priority is B1 analytic extension: derive a uniform tail inequality without
+finite endpoint checks, or rigorously falsify the proposed sign hypothesis.
 on hold until the original-form continuous mapping is independently audited.
 
 ### B1 — Analytical extension beyond finite cutoffs

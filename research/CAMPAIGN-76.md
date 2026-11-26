@@ -353,3 +353,50 @@ intervals touched zero before multiplication by derivatives of size roughly
 `10^87`, inflating the width to about `10^-3`. Raising working precision to
 200 digits and `N` to 260 resolved both. This is not a full even-block audit;
 the next entry is `G_22`.
+
+## U76-09 precise question — second even diagonal and principal block
+
+**Question.** Does a direct source-form evaluation of `G_22` agree with the
+shared compressed comparator, and do the independently enclosed entries
+`G_00`, `G_02`, and `G_22` establish strict positivity of the even 2x2
+principal block at `h=251/100`?
+
+**Derivation.** For `w=2 pi/h`, the correlation is
+`S_22(t)=2((1-t/h)cos(wt)-sin(wt)/(2 pi))`. Its Laplace transform is obtained
+from the integrals of `cos(wt)`, `t cos(wt)`, and `sin(wt)` on `[0,h]`.
+Subtracting `exp(-t/2)` gives paired rates `1/2` and `5/2`; the remaining
+rates begin at `9/2`. Repeated integration by parts gives endpoint sums over
+`Z_r=2^-r zeta(r,9/4)` and
+`E_r=sum_{j>=2} exp(-(2j+1/2)h)/(2j+1/2)^r`, plus the explicit derivative
+majorant used in the driver. Each zeta value is enclosed by a rational
+Euler–Maclaurin expansion with periodic-Bernoulli remainder; finite
+arithmetic is outward-rounded at 200 decimal digits.
+
+**Result.** On Actions run `45912557912`, the directly evaluated `G_22`
+interval was
+
+    [0.08019903422093676200984454817424378194327604934876027202821367933361365803458839002700043246231981948602534483390688215870386029109711362443491230973201704372724696577619997982026944061743054219491027,
+     0.08019903422093676200984454817424378194327604934876027202821367935620728636955693516638676617971407211687854676066723399443558468837441794453546184831442186421349289768918546545577797130612237977837074].
+
+It lies inside the shared compressed diagonal interval, with margins
+`2.621934613658...e-63` and `2.512425792714...e-63`. The endpoint remainder
+is less than `1.129676e-68`. Using the direct intervals for all three even
+entries and exact integer endpoint arithmetic, the determinant of
+`[[G_00,G_02],[G_02,G_22]]` is enclosed in
+`[0.0000005839016168591213307410054193893780614259607284685094645498142991903173520889357145601447539481917215642226528876277518720055581305732821515302509988912685139019653643910449092299663662331156131308211174256040119979665963893543394128976207711113583827742018957446955117215679150571805676162307117228300107953583335945977135819832140394396442786555233877397434290548064012751835803959362268636280, 0.0000005839016168591213307410054193893780614259607284685094645498151939623628218207248926643567451175737329098933628966210553449241208946730041523101627447291308163801642812720129175007955797748375303237003307434028713117155166596716991025334043696964606339778580832558609675409834840302980889851987349939069229475892795920253259853022250138117662360122917268093982364099763759670270737670639204259465]`;
+both diagonal entries and the determinant are strictly positive. Thus this
+specific even principal block is positive definite. This is a finite block
+result only; it proves neither positivity of the full form nor RH.
+
+**Verification and limitations.** The locked-Nix Actions driver independently
+evaluated the source-form entry and required strict containment in the shared
+compressed result. Run `45912557912` succeeded and pushed the generated JSON
+and compact summary at `f6dd112`. `d624ddb` contains the driver and workflow
+gate. The comparator remains shared code, not an independent full-matrix
+implementation. All interval arithmetic code, integration-by-parts formulas,
+and determinant endpoint computation still require a separate audit; the
+current evidence is reproducible computational certification, not a
+machine-checked theorem. Next pivot from finite entry growth to the backlog's
+analytic extension question B1: seek a uniform tail inequality or a rigorous
+counterexample to the current sign hypothesis, without adding another finite
+cutoff as the main result.
