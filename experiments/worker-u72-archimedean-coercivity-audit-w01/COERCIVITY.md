@@ -184,3 +184,23 @@ As `J` increases, `B_(theta,J)` converges monotonically to `B_theta=(1-theta)A+t
 The stored DNB03 witness cannot be improved by simply replacing its coarse archimedean block with the scalar floor `b`. The stored coarse matrix is already assembled from the exact coarse archimedean-plus-even-pole block minus the prime block (see `experiments/dnb01-stronger-complement-witness.js`, `cellMatrix`, and the DNB01/DNB03 handoffs); its residual coupling is separately enclosed mode by mode. Since `A>=bI`, restriction gives `P A P>=bP`, so substituting `bP` for the exact `P A P` weakens or preserves, but cannot strengthen, that coarse matrix. Thus the scalar floor alone does not resolve the stored negative Schur quotients.
 
 The interpolation `B_(theta,J)` still offers a different possible tradeoff: it scales both the positive boundary correction and its finite-rate tail by `1-theta`, while lowering high-mode growth from `alpha(n pi/h_cell)` to `(1-theta)alpha(n pi/h_cell)+theta b`. The existing DNB03 data were generated at `theta=0`; they do not determine whether re-optimizing `theta`, the spectral cutoff, and the finite-rate cutoff improves the enclosure. No such rerun was done here, so that optimization remains open.
+
+## Parameter tradeoff in the generic MBL01 truncation bound
+
+The interpolation's effect on the generic MBL01 Schur error is explicit. Put `x=1-theta`, `A0=||K||`, `V0=||P||+||H||`, and
+
+`Delta_N=alpha((N+1)pi/h_cell)-lambda_k(D)`.
+
+For `D_theta=xD+(1-x)bI`, the common bounded-perturbation estimate is `M_theta=x A0+V0`. The high-mode threshold minus the common Ritz upper bound is
+
+`G_N(x)=x(Delta_N-A0)-V0`.
+
+Since `0<x<=1`, this gap can be positive only if `Delta_N>A0+V0`; interpolation cannot make the generic MBL01 separation condition pass at a cutoff where the unscaled (`x=1`) condition fails. When the gap is positive, the error bound is
+
+`e_N(x)=(x A0+V0)^2/[x(Delta_N-A0)-V0]`.
+
+Write `C_N=Delta_N-A0`. Its unconstrained stationary point is
+
+`x_star=V0(2 A0+C_N)/(A0 C_N)`.
+
+If `x_star<1`, it minimizes `e_N` on the admissible interval `V0/C_N < x <= 1`; otherwise the minimum is at `x=1`. The projected rate-tail term is additionally multiplied by `x`, so optimizing the total enclosure requires adding it and the interval arithmetic errors. This identifies a possible reduction in the conservative error after the cutoff has passed the same gap threshold; it does not guarantee a practical improvement, and no numerical optimum or revised finite certificate was computed.
