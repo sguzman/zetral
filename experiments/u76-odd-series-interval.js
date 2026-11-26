@@ -356,7 +356,7 @@ result.oddIntervalOverlapsSharedCompressedInterval=oddEntry[0]<=oddCompressed[1]
 result.oddDirectIntervalContainedInSharedCompressedInterval=oddEntry[0]>=oddCompressed[0]&&oddEntry[1]<=oddCompressed[1];
 result.oddContainmentMargins=[decimal(oddEntry[0]-oddCompressed[0]),decimal(oddCompressed[1]-oddEntry[1])];
 result.caveat="The direct arithmetic formulas are evaluated independently; comparators come from the shared compressed implementation. All finite arithmetic is fixed-point outward-rounded; Hurwitz-zeta uses the stated Euler-Maclaurin integral-remainder majorant.";
-if(oddEntry[1]-oddEntry[0]>Q/10n**50n) throw new Error("odd-entry interval is wider than 10^-50; inspect saved interval components");
 const serialized = JSON.stringify(result, null, 2) + "\n";
 fs.writeFileSync("experiments/results/u76-odd-series-interval.json", serialized);
 console.log(serialized);
+if(oddEntry[1]-oddEntry[0]>Q/10n**50n) throw new Error("odd-entry interval is wider than 10^-50; inspect saved interval components");
