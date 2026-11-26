@@ -1,0 +1,6 @@
+{"row": 0, "diagonalBits": 1, "maxRowCoefficientBits": 1}
+{"row": 8, "diagonalBits": 932, "maxRowCoefficientBits": 985}
+{"row": 16, "diagonalBits": 2641, "maxRowCoefficientBits": 2651}
+{"row": 24, "diagonalBits": 4405, "maxRowCoefficientBits": 4481}
+{"row": 32, "diagonalBits": 6183, "maxRowCoefficientBits": 6260}
+{"row": 40, "diagonalBits": 7953, "maxRowCoefficientBits": 8017}
