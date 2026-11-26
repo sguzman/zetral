@@ -48,4 +48,10 @@ which is unbounded, while \(J_n(1,z)/M_n\to0\). These estimates alone imply neit
 
 The construction does **not** satisfy or assert an exact resolvent identity of the K01 form \((I-zB_n)u_{n,z}=P(z)v_n\). It is an RKHS vector-kernel model showing that the K02 norm, compactness, weak-escape, and sampling estimates by themselves are insufficient. It is not an arithmetic counterexample and does not show that Suzuki's actual mixed kernel diverges.
 
+Under the exact K01 resolvent identity and self-adjointness, one can reduce the actual mixed kernel to a scalar resolvent. For real sampled \(\gamma\), fixed \(z\ne\gamma\), and regular resolvents, set \(F_a(\zeta)=\langle (I-\zeta C_a)^{-1}v_a,v_a\rangle\). Spectral calculus and partial fractions give
+\[
+J_a(\gamma,z)=P_a(z)P_a(\gamma)\,\frac{\gamma F_a(\gamma)-zF_a(z)}{\gamma-z}.
+\]
+At removable poles this is interpreted by analytic continuation. Thus an unnormalized fixed-separation limit requires control of this rescaled scalar-resolvent combination. The K02 compact normalized-kernel estimates do not determine it.
+
 For the actual problem, a finite unnormalized mixed limit needs finer control than \(d_a\to0\) and \(\langle g_\gamma,h_a\rangle\to0\). Pairing \(u_z/M_a=P_a(z)e_a+O_K(d_a)\) with the bounded sampled vector leaves an error of size \(O_K(M_ad_a)\), and the leading mixed coefficient also contains \(M_a\langle g_\gamma,h_a\rangle\). The present K02 imports give no limits for these rescaled quantities. No novelty or priority claim is made.
