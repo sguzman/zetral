@@ -591,3 +591,27 @@ so
 `mu_1 <= 1583706824907594442232592989897201/634175928969695803725059349324000 - log(2) - pi/2 < 0.233324`.
 
 The exact coefficient ratio and rational endpoint enclosure are both checked by `constant_full_form_certificate.py`. No property of a floating-point optimizer is used in the inequality; this is just one explicit trial vector in the twelve-dimensional subspace. The resulting bracket is `0.2046<mu_1<0.233324`, with the exact upper expression above. As before, this is only a Rayleigh bound derived using Suzuki's small-window asymptotic.
+
+## Nested Mellin spaces form a core for Suzuki's limiting problem
+
+Suzuki defines the limiting closed form on `(-1,1)` by
+
+`bar(L)(v) = (1/(2*pi))*integral_R (log|xi|+gamma)*|vhat(xi)|^2 dxi`,
+
+initially on `H_0^1(-1,1)`. In arXiv:2606.09096v4, §§4.2 and 4.6, the scaled Rayleigh quotient has the form `log(1/a)-(2A+1)+L(v)/||v||^2+O(a)` with a uniform `O(a)` remainder for small `a`; §5.3 identifies the lowest eigenvalue of the closed limiting form with `mu_1` and proves that its ground state is simple and even. The form norm is equivalent to the `H^log` norm, which is compactly embedded into `L^2` on the bounded interval (§4.1).
+
+For `N>=1`, define the nested even spaces
+
+`V_N=span{g_0,...,g_(N-1)}`, `g_j(x)=(1-x^2)^(j+1/4)*1_[-1,1](x)`.
+
+Let `rho_N=inf_(0!=v in V_N) bar(L)(v)/||v||_2^2`. Then
+
+`rho_1 >= rho_2 >= ... >= mu_1` and `lim_(N->infty) rho_N=mu_1`.
+
+Here is the core argument. Suzuki's initial domain is `H_0^1`; smooth compactly supported functions are dense there, and the logarithmic form norm is bounded by an `H^s` norm for any fixed `0<s<1/2` on functions supported in this interval. Thus even `C_c^infty(-1,1)` is a form core after symmetrization. For every even `h in C_c^infty(-1,1)`, write `h(x)=g_0(x)*phi(1-x^2)`. Since `h` vanishes near the endpoints and is smooth and even, `phi` extends smoothly to `[0,1]`. Approximate `phi` in `C^1([0,1])` by polynomials `P`; multiplication by `g_0` maps this convergence to `H^s(R)` convergence for fixed `0<s<1/2`, because `g_0 in H^s` and `P(1-x^2)` has uniformly controlled `W^{1,infty}` multiplier norm. The supported `H^s` limit is in the form closure: for `s<1/2`, inward dilation followed by mollification approximates any supported `H^s` function by `C_c^infty(-1,1)`. Therefore the union of the `V_N` is form dense in the even sector. Suzuki's simple even ground state makes the bottom over that sector equal to the full `mu_1`; the Rayleigh principle and form density give the decreasing convergence above.
+
+Every `V_N` Ritz matrix is explicitly rational up to a common scalar: with `M_ij=pi*m_ij`, entries `m_ij` and `r_ij` as in the preceding section, the closed-form matrix is `pi*m_ij*(-log(2)-pi/2+r_ij)`. Hence
+
+`rho_N = -log(2)-pi/2 + lambda_min((m_ij*r_ij)_(i,j<N), (m_ij)_(i,j<N))`,
+
+where `lambda_min(A,M)` denotes the smallest generalized eigenvalue `A v=lambda M v`. This supplies a convergent Galerkin route to the known limiting constant using rational matrices and interval enclosures for `log(2)` and `pi`. The current artifact certifies explicit trial-vector bounds, including `mu_1<0.233324`; it has not yet computed an interval-certified generalized eigenvalue for any `N>1`.
