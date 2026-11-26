@@ -3,11 +3,11 @@
 LXVIII closed at candidate h=2.44, margins 37523/10^6 even and 73952/10^6 odd. Target h=2.45.
 
 - TC01 COMPLETE: [58/5 rational witness](../experiments/results/tc01-58-5-witness.json) c11aa25a3645be49490a4d49ee6fdcfe8dcb9828, bound 2873/1000, 52551 refined cells, step 16. Outward log endpoint slack exceeds 0.00100509. [Generator](../experiments/tc01-post-log11-em.js) 9dbd07d234a9ac39762750f858b7fc5b1e5cf365 preserves earlier regimes; [probe](../experiments/tc01-guard-probe.js) a378bef9f0120a63163e43379ca82f9b9efb5a15; [guards](../experiments/results/tc01-49-20-guards.json) d111c0a98bcb46e3ec791bfbea737fe537fa1041. All byte-verified. Modes 82–86 fail; 87 passes; all 14 tested guards at lowCount44–50 pass. Use lowCount44 for both sectors.
-- TC02 ACTIVE: even J128 KEM20 M12288 T768 lowCount44, regenerate all factors and allocations, exact comparison and measured refinement if needed.
-- TC03: odd comparison after even passes.
-- TC04: independent reconstruction, scoped audit, close or pivot.
+- TC02 COMPLETE: even J128 KEM20 M12288 T832 lowCount44; transformed rational trial, recomputed eighth remainder and exact 44/44 comparison.
+- TC03 COMPLETE: odd at same parameters via staged generation; exact 44/44 comparison.
+- TC04 COMPLETE: independent stored interval reconstruction and integer determinant audit, candidate closure.
 
-Candidate frontier remains 2.44. No CI, independent original-form evaluation, RH or novelty claim. README and worker scopes unchanged.
+Candidate frontier advances to 2.45. No CI, independent original-form evaluation, RH or novelty claim. README and worker scopes unchanged.
 
 ## TC02 — First even comparison fails at M12288
 
@@ -58,3 +58,11 @@ Finite residual: 12 disjoint chunks, 6100 odd modes 89..12287, exact outward int
 Odd parity-specific factors regenerated; full-energy heuristic residual 0.8682391470099076 after 350 steps. First-two correlation -0.000009010955644415577; no basis transformation needed. [Allocation](../experiments/results/tc03-49-20-odd-t832-generalized-allocation.json) d329561e25cbf0b615226837ecbfc7e1d2056faa. [Exact replay source](../experiments/tc03-odd-exact-replay.js) f0453b32abc485d9a6a61c7f8be977b144144a2e and [certificate](../experiments/results/tc03-49-20-odd-t832-exact-certificate.json) be280c8458b5129c74a573cd888f45a17129eff7 byte-verified. Baseline 1936 entries and 44 radii matched; baseline 0/44, selected 44/44 exact positive minors; fixed diagonal-energy grid margin 131760/10^6, next grid fails.
 
 TC03 candidate PASS. Both parities now pass; TC04 independent stored reconstruction and audit pending. Candidate frontier stays 2.44 until TC04 closure. No standalone CLI, CI, independent original-form audit, RH or novelty claim.
+
+## TC04 — Independent audit and candidate closure
+
+[Independent reconstruction source](../experiments/tc04-independent-reconstruction.js) b87e9de09c9bfd136311d6157f9054da49b48d29. [Even audit](../experiments/results/tc04-even-audit.json) 89c80424aa3836acd685af5f968ed0c80cc1680b; [odd audit](../experiments/results/tc04-odd-audit.json) e303c05f8c3b064ffcd126fc0b2413e7d808dcd7; [odd chunk aggregate audit](../experiments/results/tc04-odd-aggregate-audit.json) 4a0f674da61d4f944c92d968cda5f676b90a7896. All byte-verified. Regenerated parity-specific dyadic/oscillatory factors matched exactly; both complete certificate objects reproduced from stored inputs. Independent outward interval reconstruction matched 3872 selected matrix entries and 88 weighted radius corrections; distinct gcd-scaled integer row elimination matched all 88 leading determinants. Adjacent fixed-energy grid tests confirmed 45449/10^6 even and 131760/10^6 odd, next grid fails at final pivot in both. Odd disjoint residual coverage 6100 modes, all 3872 aggregate interval endpoints independently matched.
+
+Scoped audit: exact 58/5 witness C=2.873 at h=49/20; stored positive lowCount44 guards at n=88 even and n=89 odd, monotone inherited high-weight bound. J128/KEM20/M12288/T832 in both sectors; even invertible rational transform preserves the trial span and recomputes the eighth remainder before Cauchy allocation, odd uses original directions. No claim that the old diagonal comparison itself became positive. Staged odd computations preserve the inherited kernel and outward interval additions, with complete disjoint coverage. No independent original-form evaluation, full monolithic raw byte comparison, CI, or standalone CLI execution; no RH or novelty claim. The partial redundant odd assembled prefix remains explicitly non-authoritative.
+
+**Campaign LXIX CLOSED (candidate). Frontier advances to h=2.45.** Next Campaign LXX: trial h=2.46, establish a fresh rational witness beyond exp(2.46), tentative 47/4 subject to outward check; choose guard-supported lowCount and reuse staged generation and full-energy allocation, then exact comparisons and scoped audit. README and worker scopes unchanged.
