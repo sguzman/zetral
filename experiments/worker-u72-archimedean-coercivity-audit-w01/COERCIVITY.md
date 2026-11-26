@@ -228,3 +228,13 @@ otherwise there is a unique interior minimizer, characterized by
 `(A0^2/C_N + T_N) = V0^2*(A0+C_N)^2/[C_N*(C_N*x-V0)^2]`.
 
 The right side of the endpoint threshold can be negative; in that case every `T_N>=0` gives an interior minimizer. This is a conditional optimizer for the stated two-term analytic bound, not an optimization of the stored DNB comparison or its interval errors.
+
+Equivalently, set `s=A0^2/C_N+T_N` and `d=V0*(A0+C_N)/C_N`. The unconstrained critical point is
+
+`x_u=[V0+d*sqrt(C_N/s)]/C_N`.
+
+Use `x_u` when it is below `1`, and use `x=1` otherwise. In the interior case the minimum of this two-term bound is
+
+`s*V0/C_N + 2*(A0/C_N)*d + 2*d*sqrt(s/C_N)`.
+
+At the endpoint it is `(A0+V0)^2/(C_N-V0)+T_N`. These formulas follow by setting `y=C_N*x-V0>0`, which reduces the variable part to `s*y/C_N+d^2/y`; its minimum over positive `y` occurs at `y=d*sqrt(C_N/s)`.
