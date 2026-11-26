@@ -289,3 +289,56 @@ compressed comparator is shared code. The odd first diagonal and general
 off-diagonal entries still require separate formulas. Next implement an
 interval evaluation of this scalar identity, then derive and audit the odd
 diagonal.
+
+### U76-04: outward-rounded audit of the constant even entry
+
+The independent scalar expression was evaluated with fixed-point intervals
+at scale `10^70`, with floor rounding for lower endpoints and ceiling rounding
+for upper endpoints. The exact support is `h=251/100`; the prime powers are
+`2,3,4,5,7,8,9,11`, as established by the source guards
+`log(11)<h<log(13)`.
+
+The implementation uses 80-term alternating Machin arctangent series for
+`pi`; 160-term positive atanh series for logarithms; an Euler-transformed
+280-term series for Catalan's constant with tail at most `2^-280`; and
+range-reduced 80-term alternating Taylor bounds for `exp(-x)`. The remainder
+`R(h)` uses 60 terms plus the explicit geometric majorant above. Euler's
+constant uses
+
+    gamma = H_N - log(N) - 1/(2N)
+            + sum_{k=1}^8 B_(2k)/(2k N^(2k)) + r,
+    0 <= r <= B_18/(18 N^18),  N=8192.
+
+This is obtained from `H_N=psi(N)+gamma+1/N` and the positive-real digamma
+expansion. NIST DLMF §5.11.2 gives the expansion and §5.11(ii) states that
+its remainder has the sign of and is bounded by the first omitted term for
+positive real argument ([DLMF §5.11](https://dlmf.nist.gov/5.11)). The interval arithmetic
+uses only integer operations and is implemented in
+`experiments/u76-constant-series-interval.js`.
+
+Locked-Nix Actions run `45904856371` succeeded and pushed artifact
+`experiments/results/u76-constant-series-interval.json`; a local replay under
+the same Nix lock has canonical JSON SHA-256
+`ce866500c077e014fb12fb4f4abc400ccea3f8d5a22d6ea5111c57a240c1faf5` after
+excluding runtime metadata, identical to Actions. The resulting full-form
+interval is
+
+    [0.0390106128830963630235104182766241853129402190110262083539468801141898,
+     0.0390106128830963630235104182766241853129402190110262083539468801170904].
+
+The stored compressed interval is
+
+    [0.0390106128830963630235104182766241853129402190110262083539458559670000,
+     0.0390106128830963630235104182766241853129402190110262083539480858820000].
+
+The direct interval is wholly contained in the stored interval: its width is
+`2.9006e-66`, with lower and upper containment margins `1.0241471898e-60`
+and `1.2057649096e-60`; the result JSON records an explicit containment boolean.
+This certifies the single constant-even source-form
+entry against that stored enclosure, conditional only on the explicit
+interval lemmas and source-form identity above; the output is a scalar audit,
+not an independent reconstruction of either full parity matrix. It does not
+verify the odd diagonal or other entries, nor all of the LXXV comparison. The
+comparison interval is from the shared compressed implementation, so
+source-form independence applies to the new evaluation, not to the
+comparator's construction.

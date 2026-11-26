@@ -211,6 +211,7 @@ const compressed = JSON.parse(fs.readFileSync("experiments/results/u76-compresse
 const compressedScale = BigInt(compressed.scale);
 const compressedInterval = compressed.A[0][0].map(x => BigInt(x) * (Q / compressedScale));
 const overlap = entry[0] <= compressedInterval[1] && compressedInterval[0] <= entry[1];
+const contained = entry[0] >= compressedInterval[0] && entry[1] <= compressedInterval[1];
 const result = {
   status: "outward-rounded fixed-point interval evaluation of independently derived G00 formula",
   precision: { decimalDigits: 70, endpointRounding: "floor lower / ceil upper" },
@@ -225,6 +226,8 @@ const result = {
     compressedSharedInterval: compressedInterval.map(decimal),
   },
   overlapWithSharedCompressedInterval: overlap,
+  directIntervalContainedInSharedCompressedInterval: contained,
+  containmentMargins: [decimal(entry[0] - compressedInterval[0]), decimal(compressedInterval[1] - entry[1])],
   caveat: "The direct arithmetic formula is evaluated independently; the comparator is the existing shared compressed interval. Euler-Maclaurin bounds for Euler's constant and the alternating/geometric tails are explicitly included.",
 };
 const serialized = JSON.stringify(result, null, 2) + "\n";

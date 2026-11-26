@@ -208,32 +208,37 @@ two low entries; full 52-by-52 reconstruction remains premature.
 
 ## U76-03 analytical checkpoint — 2026-11-26
 
+The following is the initial symbolic checkpoint; its numerical gap was later
+resolved for the single constant-even entry by U76-04 below.
+
 For the constant even cosine vector on `[0,h]`, the correlation is
 `S_00(t)=2(1-t/h)`. The archimedean integral evaluates exactly to
 `16(cosh(h/2)-1)/h`. Expanding the denominator of the subtracted kernel and
 pairing terms gives the exact series
 `D_00=2 sum_{j>=0}(J_h(2j+1/2)-E_h(2j+1))`, where
 `J_h(a)=1/a-(1-exp(-a h))/(h a^2)` and `E_h(b)=(1-exp(-b h))/b`.
-The pair is O_h(j^-2); the unpaired sums diverge. This supplies an independent
-closed series for one continuous component, but no numerical enclosure or
-comparison to the compressed decomposition has been performed. An absolute
-tail bound after J terms is proved in the direct Gram note:
+The pair is O_h(j^-2); the unpaired sums diverge. At this initial U76-03
+checkpoint this supplied a closed series but no numerical enclosure. An
+absolute tail bound after J terms is proved in the direct Gram note:
 `2(1/2+3/h)[(2J+1/2)^-2+1/(2(2J+1/2))]`. The next step is outward-rounded
 evaluation of the finite partial sum and comparison with the compressed
 continuous decomposition, followed by a derivation of the odd first diagonal.
-The method is analytically distinct from
-the midpoint diagnostic and may falsify a term or normalization in the
-compressed entry path.
+U76-04 below resolves the scalar evaluation for the constant entry; the odd
+first diagonal and remaining entries stay open.
+
+### U76-04 certified scalar-entry checkpoint — 2026-11-26
 
 The rational part has now been summed analytically, giving
 `D_00=2[pi/4+(log 2)/2-(pi^2+8G)/(4h)+R(h)]`, where G is Catalan's constant
-and R is a positive exponential series with explicit geometric tail in the
-direct Gram note. This replaces the coarse O(1/J) tail with an exponentially
-decaying remainder. The independent full scalar formula was evaluated in
-IEEE-754 under locked Nix on Actions run 45902627157; it gives
-`G_00=0.039010612883098705`, 2.34e-15 from the compressed interval midpoint.
-The runner and local canonical JSON match after removing runtime metadata
-(SHA-256 `3d49e5ebb4928640b70ca0dde8fa7f177bcecdf9a3451fde16e7f133304286c8`).
-This is a reproducible floating-point cross-check, not an interval match or
-certificate. Next outward-enclose the constants and exponential remainder,
-then derive the odd first diagonal.
+and R is a positive exponential series with explicit geometric tail. U76-04
+then evaluated the full original-form constant-even entry with outward-rounded
+fixed-point intervals. Its direct enclosure is wholly contained in the
+stored compressed interval; see `research/positivity/U76-01-direct-arithmetic-Gram.md`
+and `experiments/results/u76-constant-series-interval.json` for exact
+endpoints and arithmetic bounds. Actions run 45904856371 and local locked-Nix
+replay match after removing runtime metadata (SHA-256
+`ce866500c077e014fb12fb4f4abc400ccea3f8d5a22d6ea5111c57a240c1faf5`). The
+direct interval width is `2.9006e-66`; it lies inside the comparator interval
+with lower/upper margins `1.0241471898e-60` and `1.2057649096e-60`. This passes
+one scalar entry only. The first odd diagonal, all other entries, and
+full-matrix aggregation remain open.
