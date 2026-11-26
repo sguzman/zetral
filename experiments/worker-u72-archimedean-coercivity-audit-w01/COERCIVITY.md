@@ -213,9 +213,16 @@ using the odd partial sum through `k=15` of the alternating cosine-integral
 series and rational intervals for pi, gamma and the logarithms. The absolute
 series terms decrease because their successive ratio is
 `pi^2 k/[2(k+1)^2(2k+1)]<=pi^2/24<1`; hence the odd partial sum is a lower
-bound. The Euler-constant lower endpoint uses
-`gamma>H_N-log(N+1)`. This is a quantitative lower bound on Suzuki's already
-positive constant, not a claim that the asymptotic itself is new.
+bound. For Euler's constant, put `a_n=H_n-log(n)`. Then
+`a_n-gamma=sum_(k>=n)[log(1+1/k)-1/(k+1)]`. Each summand equals
+`integral_0^(1/k) t/(1+t)^2 dt < 1/(2k(k+1))`; summing this telescoping
+majorant yields `gamma>H_n-log(n)-1/(2n)`. The summand inequality follows by
+putting `x=1/k`: the derivative of `x^2/(2(1+x))-integral_0^x t/(1+t)^2dt`
+is `x^2/(2(1+x)^2)>0`, and its value at zero is zero. With `n=50000`, the updated
+exact-rational script now certifies `mu_1>0.20465` (previously only the
+coarser threshold `0.2046` was recorded). This remains a quantitative lower
+bound on Suzuki's already positive constant, not a claim that the asymptotic
+itself is new.
 
 There is also an upper bound from the normalized constant trial vector
 `f_a=(2a)^(-1/2)1_(-a,a)`. Its Fourier transform is

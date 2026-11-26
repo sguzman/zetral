@@ -125,7 +125,12 @@ def main() -> None:
     harmonic = sum((F(1, k) for k in range(1, n_gamma + 1)), F(0))
     logN_lo, _ = log_interval(F(n_gamma))
     gamma_hi = harmonic - logN_lo
-    gamma_lo = harmonic - log_interval(F(n_gamma + 1))[1]
+    # From a_n=H_n-log(n), a_n-gamma is the tail of
+    # sum_k [log(1+1/k)-1/(k+1)]. Each summand is
+    # integral_0^(1/k) t/(1+t)^2 dt < 1/(2k(k+1)); for
+    # x=1/k, the difference x^2/(2(1+x)) - integral_0^x... has
+    # derivative x^2/(2(1+x)^2)>0. Summing gives the lower bound.
+    gamma_lo = harmonic - log_interval(F(n_gamma))[1] - F(1, 2 * n_gamma)
     alpha0_lo = -gamma_hi - pi_hi / 2 - 3 * ln2_hi - lnpi_hi
     assert alpha0_lo > F(-27, 5)
     # Odd alternating-series lower bound for the regularized integral I.
@@ -145,6 +150,7 @@ def main() -> None:
     # Lower bound on Suzuki's small-window constant from the root-series floor.
     mu1_lo = gamma_lo + log_interval(pi_lo)[0] - ln2_hi + ci_series_lo / 2
     assert mu1_lo > F(2046, 10000)
+    assert mu1_lo > F(20465, 100000)
 
     # Two-profile logarithmic Rayleigh trial, derived in COERCIVITY.md.
     # The exact moment matrix has entries M_ij*q_ij, where M/pi is
@@ -309,6 +315,7 @@ def main() -> None:
     print("  h<=1/10 full-form margin exceeds 1/20:", short_window_margin > F(1, 20))
     print("  certified Suzuki mu_1 lower:", float(mu1_lo))
     print("  inferred Suzuki mu_1 lower exceeds 0.2046:", mu1_lo > F(2046, 10000))
+    print("  inferred Suzuki mu_1 lower exceeds 0.20465:", mu1_lo > F(20465, 100000))
     print("  certified two-profile Suzuki mu_1 upper:", float(mu1_hi))
     print("  two-profile upper is below 0.234669:", mu1_hi < F(234669, 1_000_000))
     print("  certified six-profile Suzuki mu_1 upper:", float(mu6_hi))
