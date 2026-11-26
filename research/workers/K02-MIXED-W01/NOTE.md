@@ -888,3 +888,24 @@ As \(q_T\to c>0\) and \(T\to\infty\), this converges to \(r_c\) in Schwartz semi
 Subtracting the diagonal term \(r_T(0)=K(0)=1\) leaves exactly \(I(c)\). There are two truncation tails in \(\mathcal P_a(T)\) beyond Montgomery’s rectangle. The opposite-sign terms are \(O_p(a^{-p})\) for any fixed \(p>2\), uniformly in \(T\): rapid decay gives \(K(a(\gamma+\mu))\ll_p a^{-p}(\gamma+\mu)^{-p}\), and Riemann–von Mangoldt implies \(\sum_{\gamma,\mu>0}(\gamma+\mu)^{-p}<\infty\). For positive \(\gamma\le T<\lambda\), the boundary-crossing sum is \(O(\log^2T)\). Indeed, unit intervals contain \(O(\log(x+2))\) ordinates near height \(x\); bin \(T-\gamma\) and \(\lambda-T\) into unit shells indexed by \(n,m\ge0\). The \(n=m=0\) shell contributes \(O(\log^2T)\); for \(n+m\ge1\), Schwartz decay bounds the sum by \(\sum_{n+m\ge1} C_p(1+n+m)^{-p}\log(T+n+2)\log(T+m+2)=O(\log^2T)\) for fixed \(p>3\). Both tails are \(o(N(T))\). Uniformity in Montgomery's theorem applies for each fixed \(c\in(0,1)\); this derivation does not provide uniform asymptotics as \(c\to0\) or \(c\to1\).
 
 This is a negative applicability result, not a proof that stronger arithmetic information cannot bound \(\mathcal P_a(T)\). Montgomery controls only Fourier support below one (under RH); using the full pair-correlation law outside that proved range would be an additional conjectural input. Source: H. L. Montgomery, “The Pair Correlation of Zeros of the Zeta Function,” *Proc. Sympos. Pure Math.* 24 (1973), 181–193, especially theorem (2), identity (3), and the support discussion immediately after (4), [original paper](https://public.websites.umich.edu/~hlm/paircor1.pdf).
+
+### Shrinking-support extension and full proved-range obstruction
+
+The same theorem also handles \(q_T=2a/\log T\to0\), provided \(a\to\infty\). Write \(L=\log T\) and \(H=\widehat{K}\) using Montgomery's frequency convention. The exact test remains
+\[
+r_T(u)=K(\pi q_Tu)\left(1+\frac{\pi^2u^2}{L^2}\right),\qquad \operatorname{supp}\widehat r_T\subset[-q_T,q_T].
+\]
+Scaling gives \(\|\widehat r_T\|_1=O(1+(Lq_T)^{-2})=O(1)\), \(\|\widehat r_T'\|_\infty=O(q_T^{-2})\), and
+\[
+\widehat r_T(0)=\int r_T(u)\,du=\frac{\kappa}{q_T}\left(1+O((Lq_T)^{-2})\right),\qquad \kappa=\frac1\pi\int_{\mathbb R}K(x)\,dx>0.
+\]
+Here \(Lq_T=2a\to\infty\). The approximate-delta term in Montgomery's formula is an approximate identity of width \(1/L\); the derivative estimate shows its integral against \(\widehat r_T\) is \(\widehat r_T(0)(1+O((Lq_T)^{-1}))\), with the omitted mass outside \([-q_T,q_T]\) exponentially small in \(Lq_T\). The uniform additive \(o(1)\) error contributes \(o(1)\|\widehat r_T\|_1=o(1)\). The remaining main term obeys
+\[
+\left|\int |\alpha|\widehat r_T(\alpha)\,d\alpha\right|=O\!\left(q_T+\frac1{L^2q_T}\right)=o(q_T^{-1}).
+\]
+Subtracting the diagonal therefore leaves same-sign off-diagonal energy \((\kappa/q_T)(1+o(1))\) per \(N(T)\). The opposite-sign and boundary-crossing tails are as bounded in the preceding subsection and are \(o(N(T))\). Thus, under RH and simplicity,
+\[
+\frac{\mathcal P_a(T)}{N(T)}\sim\frac{\kappa}{q_T}\qquad(q_T\to0,\ a\to\infty).
+\]
+
+Combining this with the fixed-ratio limit gives a no-go result throughout Montgomery's proved support range: for every fixed \(\eta>0\), if \(a\to\infty\) and \(q_T\le1-\eta\), then \(\liminf \mathcal P_a(T)/N(T)>0\). Indeed, any subsequence has a further subsequence with \(q_T\to c\in[0,1-\eta]\); for \(c>0\) the limit is \(I(c)>0\), and for \(c=0\) the ratio diverges as \(\kappa/q_T\). Consequently \(T^2\mathcal P_a(T)/N(T)\not\to0\) (in fact it diverges), conditional on RH and simplicity. No conclusion is drawn for support approaching or exceeding one, for multiple zeros, or from pair-correlation conjectures outside Montgomery's theorem.
