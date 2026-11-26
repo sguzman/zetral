@@ -238,3 +238,27 @@ Use `x_u` when it is below `1`, and use `x=1` otherwise. In the interior case th
 `s*V0/C_N + 2*(A0/C_N)*d + 2*d*sqrt(s/C_N)`.
 
 At the endpoint it is `(A0+V0)^2/(C_N-V0)+T_N`. These formulas follow by setting `y=C_N*x-V0>0`, which reduces the variable part to `s*y/C_N+d^2/y`; its minimum over positive `y` occurs at `y=d*sqrt(C_N/s)`.
+
+## A negative constant-function direction for the archimedean component
+
+The root-series lower bound is not a positivity test for the archimedean compression. In fact, at the campaign interval `h=62/25`, its normalized constant function already gives a rigorously negative Rayleigh quotient. Let `f=h^(-1/2) 1_[0,h]`, so `||f||_2=1` and
+
+`|f_hat(t)|^2=4 sin^2(th/2)/(h t^2)`.
+
+Using the positive digamma expansion
+
+`alpha(t)=alpha_0+sum_(j>=0) (1/u_j) t^2/(t^2+4u_j^2)`, `u_j=j+1/4`,
+
+and the elementary integral `int_0^infinity sin^2(th/2)/(t^2+4u^2) dt = pi*(1-exp(-2uh))/(8u)`, the Fourier form with convention `q(f)=(2pi)^(-1) int_R alpha(t)|f_hat(t)|^2 dt` is
+
+`q_alpha(f)=alpha_0+sum_(j>=0) [1-exp(-2u_j h)]/(2h u_j^2)`.
+
+Each summand is positive and at most `1/(2h u_j^2)`. For the full sum,
+
+`sum_(j>=0) 1/(j+1/4)^2 <=16+1/(5/4)^2+int_1^infinity (x+1/4)^(-2) dx = 436/25`.
+
+At `h=62/25`, this gives `q_alpha(f) <= alpha_0+109/31`. Also `alpha_0=-gamma-pi/2-3log(2)-log(pi)<-9/2`: use `gamma>=0`, `pi>3`, `log(2)>2/3`, and `log(pi)>1` (from `pi>3>e`). Therefore
+
+`q_alpha(f)< -9/2+109/31 = -61/62 <0`.
+
+This proves the standalone archimedean compression has a negative direction at `h=62/25`; it does not show that the full Weil form is negative, since the pole and prime contributions can change the Rayleigh quotient. It also does not conflict with the positive lower bound for `alpha-alpha_0`, because the negative constant `alpha_0` is restored here.
