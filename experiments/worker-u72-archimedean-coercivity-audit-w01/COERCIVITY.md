@@ -842,3 +842,25 @@ with exactly the rational `r_ij` displayed above. The sign is negative because `
 I checked the nested-profile core argument above separately from its original derivation. For even `h in C_c^infty(-1,1)`, the quotient `h(x)/g_0(x)` vanishes near `|x|=1`; near `x=0`, even smoothness gives a smooth function of `x^2`. Thus it is a smooth function `phi(y)` of `y=1-x^2` on `[0,1]`. C¹ polynomial approximation can be obtained by uniformly approximating `phi'` by polynomials and integrating, with the additive constant fixed at `phi(0)`. If `P_n -> phi` in C¹, multiplication by `g_0` gives convergence in `H^s(R)` for any fixed `0<s<1/2`, since multiplication by `P_n(1-x^2)-phi(1-x^2)` has operator norm on `H^s` controlled by its `W^{1,infty}` norm. These products are exactly finite linear combinations of the `g_j`.
 
 For `s<1/2`, inward dilation moves a supported `H^s` function to a strict subinterval and converges in `H^s`; mollification with support smaller than the inward gap then gives `C_c^infty(-1,1)` approximation. The logarithmic form norm is controlled by this fixed `H^s` norm, so the finite-profile union is form dense in the even sector. Suzuki v4 §5.3's simple even ground state then identifies that sector's form infimum with `mu_1`, and the decreasing Ritz convergence follows. I found no gap in this density chain. This audit does not independently reprove Suzuki's imported form-norm equivalence, simplicity/evenness theorem, or small-window eigenvalue asymptotic; those remain source assumptions as cited above.
+
+## Two-sided eigenvalue growth and heat trace
+
+The concentration argument above gives, for every integer `n>=2`,
+
+`mu_n >= log(n) - log(log(n)) + gamma - 4/pi + (2/pi) log(log(n))/log(n)`.
+
+There is a simple complementary upper bound from Dirichlet test spaces. Work in the unitary Fourier convention, so for a normalized `f` the measure `|fhat(xi)|^2 dxi` has total mass one. Suzuki's limiting form is
+
+`q(f)=gamma + integral log(|xi|) |fhat(xi)|^2 dxi`.
+
+For `f` in the finite sine span below, both logarithmic integrability and the first absolute moment hold. Jensen's inequality for the concave logarithm, followed by Cauchy--Schwarz and Plancherel, yields
+
+`integral log(|xi|)|fhat(xi)|^2 dxi <= log(integral |xi||fhat(xi)|^2 dxi) <= log(||f'||_2/||f||_2)`.
+
+Let `V_n` be the span of the first `n` normalized Dirichlet sine functions on `(-1,1)`. Every `f` in `V_n` belongs to `H_0^1(-1,1)` and satisfies `||f'||_2/||f||_2 <= n*pi/2`, since the largest Dirichlet frequency in the span is `n*pi/2`. The variational min--max principle on this `n`-dimensional subspace therefore gives
+
+`mu_n <= gamma + log(n*pi/2)`.
+
+This uses the imported identification of the closed limiting form and its min--max eigenvalues; the estimate itself is an elementary trial-space argument. Combining with the concentration lower bound proves `mu_n/log(n) -> 1`. Equivalently, for the counting function `N(L)=#{n: mu_n<=L}`, one has `log N(L)/L -> 1`: the two inequalities give `N(L) <= exp(L+o(L))` and `N(L) >= exp(L-o(L))` as `L -> infinity`.
+
+The same two-sided estimates give an exact trace-class threshold for the semigroup of this limiting operator. For `t>1`, the lower bound implies `exp(-t mu_n) <= C_t n^{-t}(log n)^t`, whose sum converges. For `0<t<=1`, the upper bound implies `exp(-t mu_n) >= exp(-t gamma)(n*pi/2)^{-t}`, whose sum diverges. Thus `exp(-tA)` is trace class exactly when `t>1`. More generally, it belongs to Schatten class `S_p` exactly when `pt>1`, by applying the trace criterion to `exp(-ptA)`. These are consequences for Suzuki's limiting log-form operator (assuming the cited compact-resolvent/min--max setup), not for a prime-inclusive candidate or an RH-dependent construction.
