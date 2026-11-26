@@ -229,6 +229,11 @@ The rational part has now been summed analytically, giving
 `D_00=2[pi/4+(log 2)/2-(pi^2+8G)/(4h)+R(h)]`, where G is Catalan's constant
 and R is a positive exponential series with explicit geometric tail in the
 direct Gram note. This replaces the coarse O(1/J) tail with an exponentially
-decaying remainder. The formula is derived but not numerically evaluated or
-independently compared with the compressed continuous terms; outward-rounded
-evaluation is the next checkpoint.
+decaying remainder. The independent full scalar formula was evaluated in
+IEEE-754 under locked Nix on Actions run 45902627157; it gives
+`G_00=0.039010612883098705`, 2.34e-15 from the compressed interval midpoint.
+The runner and local canonical JSON match after removing runtime metadata
+(SHA-256 `3d49e5ebb4928640b70ca0dde8fa7f177bcecdf9a3451fde16e7f133304286c8`).
+This is a reproducible floating-point cross-check, not an interval match or
+certificate. Next outward-enclose the constants and exponential remainder,
+then derive the odd first diagonal.

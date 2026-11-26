@@ -16,9 +16,9 @@ metadata, but remains floating-point evidence without an error enclosure. The
 constant even continuous component now has an exact paired exponential-series
 formula, closed rational part, and explicit geometric remainder bound in
 `research/positivity/U76-01-direct-arithmetic-Gram.md`. Its next acceptance
-step is outward-rounded evaluation of the constants and exponential remainder
-and comparison with the compressed continuous decomposition, followed by the
-odd first diagonal. Keep B1 analytical extension
+step is outward-rounded evaluation of the constants and exponential remainder;
+the IEEE-754 scalar comparison is reproducible but not enclosed. Then derive
+the odd first diagonal. Keep B1 analytical extension
 on hold until the original-form continuous mapping is independently audited.
 
 ### B1 — Analytical extension beyond finite cutoffs

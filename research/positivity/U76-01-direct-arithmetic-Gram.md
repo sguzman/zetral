@@ -273,12 +273,19 @@ Both terms are positive and their denominators increase with j, so this is
 an immediate comparison with geometric series. Unlike the earlier O(1/J)
 bound, the exponential tail is practical at h=251/100. This is an exact
 analytic reduction; evaluation of `pi`, `log 2`, `G`, and the finite
-exponential sum still requires outward-rounded arithmetic before it can be
-compared with the compressed entry interval.
+exponential sum still requires outward-rounded arithmetic for a certified
+comparison with the compressed entry interval.
 
 This is the first explicit continuous-term reduction independent of the
-compressed entry routine. The odd first diagonal and general off-diagonal
-entries still require separate formulas. The reduced problem now has a
-specific falsification target: independently enclose `A_00-D_00` and compare
-it with the compressed code's `K(0,0)` plus its pole and diagonal corrections,
-keeping the prime contribution separate.
+compressed entry routine. An IEEE-754 evaluation at h=251/100 gives
+`G_00=0.039010612883098705`, versus the shared compressed interval near
+`0.03901061288309637`, a difference of 2.34e-15. The locked-Nix runner and
+local locked-Nix output match exactly after removing the runtime label
+(canonical JSON SHA-256
+`3d49e5ebb4928640b70ca0dde8fa7f177bcecdf9a3451fde16e7f133304286c8`; Actions
+run 45902627157). This is consistent at double precision but not a certified
+entry match: constants and arithmetic were not outward-rounded, and the
+compressed comparator is shared code. The odd first diagonal and general
+off-diagonal entries still require separate formulas. Next implement an
+interval evaluation of this scalar identity, then derive and audit the odd
+diagonal.

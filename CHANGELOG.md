@@ -10,7 +10,9 @@ The first low-entry mismatch used the wrong support length. Correcting to the le
 
 The revised support-h diagnostic completed on locked-Nix Actions run 45901442328 and runner commit f077faf81d270491db7b5a8851ec796f643717ff. Its canonical JSON matches the local result after removing runtime metadata. This is reproducibility evidence for a floating-point midpoint calculation, not a rigorous enclosure or original-form certificate. The continuous-term identity remains the next mathematical target.
 
-An analytical reduction now evaluates the constant even archimedean entry exactly and expresses its subtracted-kernel term as a closed rational part involving pi, log 2, and Catalan's constant plus a positive exponentially convergent remainder. An explicit geometric tail bound is proved. Outward-rounded evaluation and comparison to the compressed entry formula remain open; see the U76-03 checkpoint in the direct Gram note.
+An analytical reduction now evaluates the constant even archimedean entry exactly and expresses its subtracted-kernel term as a closed rational part involving pi, log 2, and Catalan's constant plus a positive exponentially convergent remainder. An explicit geometric tail bound is proved. Outward-rounded evaluation remains open; see the U76-03 checkpoint in the direct Gram note.
+
+The independent scalar formula was evaluated on Actions run 45902627157 and replayed locally under the same locked Nix environment. The canonical JSON hashes match after removing runtime metadata. Its IEEE-754 value is 2.34e-15 from the shared compressed interval midpoint; this remains a numerical cross-check, not a certified enclosure.
 
 ## Campaigns XII–LVII
 
