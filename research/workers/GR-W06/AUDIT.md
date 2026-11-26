@@ -15,3 +15,5 @@ From these bounds, `qc04Midpoint_mem_interval` proves that for integer endpoints
 ## Verification
 
 Lean 4.19.0 and locked Mathlib `c44e0c8ee63ca166450922a373c7409c5d26b00b`; `lake build Zetral.QC04MidpointRadius` succeeded. All three axiom reports contain `[propext, Classical.choice, Quot.sound]`, with no `sorryAx` or custom axioms.
+
+`qc04ScaledMidpointRadius_covers` strengthens the integer-point result to any element of a linearly ordered field lying in the scaled interval `[l/Q,h/Q]` for positive `Q`. It proves the element is within the stored midpoint and radius after both are divided by `Q`, matching the real-valued interval semantics of an integer-scaled endpoint representation.

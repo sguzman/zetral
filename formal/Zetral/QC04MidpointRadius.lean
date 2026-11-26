@@ -1,5 +1,6 @@
 import Zetral.QC04CeilSemantics
 import Init.Omega
+import Mathlib.Tactic.Linarith
 
 /-! Exact interval coverage for QC04's integer midpoint and max-distance
 radius construction. The midpoint helper uses BigInt truncation toward zero. -/
@@ -41,8 +42,40 @@ theorem qc04MaxEndpointRadius_covers (l h x : ℤ) (hlh : l ≤ h)
   · have hleft : x - qc04Half (l + h) ≤ h - qc04Half (l + h) := by omega
     exact le_trans hleft (le_max_right _ _)
 
+/-- Scaled real-interval form of the same enclosure: any real entry within
+`[l/Q,h/Q]` is covered by the stored integer midpoint and endpoint radius,
+each divided by the positive scale `Q`. -/
+theorem qc04ScaledMidpointRadius_covers {α : Type*} [Field α]
+    [LinearOrder α] [IsStrictOrderedRing α]
+    (l h : ℤ) (Q : α) (hQ : 0 < Q) (x : α)
+    (hlh : l ≤ h) (hxlow : (l : α) / Q ≤ x) (hxhigh : x ≤ (h : α) / Q) :
+    |x - (qc04Half (l + h) : α) / Q| ≤
+      max ((qc04Half (l + h) : α) / Q - (l : α) / Q)
+          ((h : α) / Q - (qc04Half (l + h) : α) / Q) := by
+  have hv := qc04Midpoint_mem_interval l h hlh
+  have hvlow : (l : α) / Q ≤ (qc04Half (l + h) : α) / Q := by
+    apply (div_le_div_iff₀ hQ hQ).2
+    exact mul_le_mul_of_nonneg_right (by exact_mod_cast hv.1) hQ.le
+  have hvhigh : (qc04Half (l + h) : α) / Q ≤ (h : α) / Q := by
+    apply (div_le_div_iff₀ hQ hQ).2
+    exact mul_le_mul_of_nonneg_right (by exact_mod_cast hv.2) hQ.le
+  apply abs_le.mpr
+  constructor
+  · have hleft : -(max
+        ((qc04Half (l + h) : α) / Q - (l : α) / Q)
+        ((h : α) / Q - (qc04Half (l + h) : α) / Q)) ≤
+          -((qc04Half (l + h) : α) / Q - (l : α) / Q) :=
+      neg_le_neg (le_max_left _ _)
+    have hright : -((qc04Half (l + h) : α) / Q - (l : α) / Q) ≤
+        x - (qc04Half (l + h) : α) / Q := by linarith
+    exact le_trans hleft hright
+  · have hleft : x - (qc04Half (l + h) : α) / Q ≤
+        (h : α) / Q - (qc04Half (l + h) : α) / Q := by linarith
+    exact le_trans hleft (le_max_right _ _)
+
 end Zetral
 
 #print axioms Zetral.qc04Half_bounds
 #print axioms Zetral.qc04Midpoint_mem_interval
 #print axioms Zetral.qc04MaxEndpointRadius_covers
+#print axioms Zetral.qc04ScaledMidpointRadius_covers
