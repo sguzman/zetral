@@ -128,15 +128,21 @@ def main() -> None:
     gamma_lo = harmonic - log_interval(F(n_gamma + 1))[1]
     alpha0_lo = -gamma_hi - pi_hi / 2 - 3 * ln2_hi - lnpi_hi
     assert alpha0_lo > F(-27, 5)
-    short_window_margin = alpha0_lo + log_interval(F(25))[0] + 3 - log_interval(F(5, 4))[1] - F(7, 25)
-    assert short_window_margin > F(1, 3)
-
-    # Lower bound on Suzuki's small-window constant from the root-series floor.
+    # Odd alternating-series lower bound for the regularized integral I.
     ci_series_lo = F(0)
     for k in range(1, 16):
         den = 2 * k * factorial(2 * k)
         term = (pi_hi ** (2 * k) if k % 2 else pi_lo ** (2 * k)) / den
         ci_series_lo += -term if k % 2 else term
+    I_lo = log_interval(pi_lo)[0] - ln2_hi + ci_series_lo / 2
+
+    short_window_margin = (
+        alpha0_lo + log_interval(F(10))[0] + F(22, 5)
+        - log_interval(F(5, 4))[1] + I_lo - F(2, 3)
+    )
+    assert short_window_margin > F(1, 20)
+
+    # Lower bound on Suzuki's small-window constant from the root-series floor.
     mu1_lo = gamma_lo + log_interval(pi_lo)[0] - ln2_hi + ci_series_lo / 2
     assert mu1_lo > F(1, 5)
 
@@ -247,7 +253,7 @@ def main() -> None:
     print("  prime upper:", float(prime_hi))
     print("  full constant Rayleigh lower:", float(full_lo))
     print("  certified alpha_0 lower exceeds -27/5:", alpha0_lo > F(-27, 5))
-    print("  h<=1/25 full-form margin exceeds 1/3:", short_window_margin > F(1, 3))
+    print("  h<=1/10 full-form margin exceeds 1/20:", short_window_margin > F(1, 20))
     print("  inferred Suzuki mu_1 lower exceeds 1/5:", mu1_lo > F(1, 5))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))

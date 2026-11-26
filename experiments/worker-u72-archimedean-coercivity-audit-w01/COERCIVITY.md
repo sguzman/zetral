@@ -227,60 +227,51 @@ cutoff and a uniform Rayleigh lower bound by a direct form estimate.
 
 The root series admits a sharper short-window estimate by a Riemann-sum
 decomposition. Set `y_j=u_jh`, let `x(y)` be the root of `x tan(x)=y`, and
-put `phi(y)=cos^2(x(y))/y`. The root term simplifies exactly to
-`c_j(h)=h phi(y_j)`. Define
+put `phi(y)=cos^2(x(y))/y`; then `c_j(h)=h phi(y_j)`. Define
 
 `g(y)=phi(y)-1/y` for `0<y<=1`, and `g(y)=phi(y)` for `y>1`.
 
-For `y<=1`, the identity `g(y)=-sin(2x(y))/(2x(y))` shows that `g`
-increases from `-1` to a value in `[-1,0]`, since `x(y)<1` and
-`sin(z)/z` decreases on `(0,2)`. For `y>1`, `phi` is positive decreasing.
-At `y=1`, the jump in `g` has size one. Thus the total variation of `g`
-on `(0,infinity)` is at most `3`, and its integral is at least `-1`.
-Because `y_j=h(j+1/4)` samples one point in each cell of length `h`, the
-bounded-variation quadrature estimate gives
+On `(0,1]`, `g(y)=-sin(2x(y))/(2x(y))` increases from `-1`. If `x_1`
+satisfies `x_1 tan(x_1)=1`, then `pi/4<x_1<1`. Since `sin(z)/z`
+decreases on `(0,pi)`, the variation on this branch is
+`1-sin(2x_1)/(2x_1)<2/3`; here `sin(2)/2>1/3`, as follows from its
+alternating Taylor lower bound. On `(1,infinity)`, `phi` decreases from
+`cos^2(x_1)<1/2` to zero. The jump at one has size one, so
+`Var(g)<13/6`.
 
-`h sum_(j>=0) g(y_j) >= integral_0^infinity g(y)dy - 3h >= -1-3h`.
+The regularized integral is explicitly
 
-The remaining singular sum is finite. With `N=floor(1/h-1/4)`,
+`I=integral_0^infinity g(y)dy`
+` =(Ci(pi)+log(pi/4)-gamma)/2`
+` =log(pi)-log(2)+(1/2) sum_(k>=1)(-1)^k pi^(2k)/(2k(2k)!)`.
 
-`sum_(j=0)^N 1/(j+1/4) >= 4 + log((N+5/4)/(5/4))`
-`                              >= log(1/h)+4-log(5/4)`.
+Thus, if `I_lower` is any certified lower bound for `I`, the shifted
+bounded-variation quadrature gives
+`h sum g(y_j)>=I_lower-(13/6)h`.
 
-Combining these identities yields
+For the singular part, set `N=floor(1/h-1/4)` and `M=N+5/4>=1/h`.
+The trapezoid lower bound for the convex function `1/x` gives
 
-`C(h) >= log(1/h)+3-log(5/4)-3h`.
+`sum_(j=0)^N 1/(j+1/4) >= log(1/h)+22/5-log(5/4)-h/2`.
 
-For `0<h<=1/25`, the prime shifts vanish, since `h<log(2)`. The pole
-operator has norm at most `4 sinh(h/2)<4h`, as shown above. The exact
-rational calculation in `constant_full_form_certificate.py` verifies
+Combining these terms,
 
-`alpha0_lower + log_lower(25) + 3 - log_upper(5/4) - 7/25 > 1/3`.
+`C(h)>=log(1/h)+22/5-log(5/4)+I_lower-(8/3)h`.
 
-Here `alpha0_lower` is formed from rational Machin bounds for pi, the
-harmonic-limit bound for Euler's constant, and rational atanh bounds for the
-logarithms. Therefore, for every form-domain vector and `0<h<=1/25`,
+For `0<h<=1/10`, the prime shifts vanish because `h<log(2)`. The pole
+operator norm is at most `4sinh(h/2)<4h`. The exact-rational calculation in
+`constant_full_form_certificate.py` verifies
 
-`q_h(f) > (1/3)||f||_2^2 > 0` for `f!=0`.
+`alpha0_lower+log_lower(10)+22/5-log_upper(5/4)+I_lower-2/3>1/20`.
 
-For `h<log(2)`, every prime shift `log(n)` exceeds the interval length, so
-the prime contribution is identically zero. The remaining pole form obeys
-the operator bound
-
-`|2|int cosh(x/2)f(x)dx|^2 - 2|int sinh(x/2)f(x)dx|^2|`
-`    <= 4 sinh(h/2) ||f||_2^2 < 4h ||f||_2^2`.
-
-Here the first inequality is Cauchy–Schwarz and
-`2 int_(-h/2)^(h/2)(cosh(x/2)^2+sinh(x/2)^2)dx=4sinh(h/2)`;
-the last uses `sinh(h/2)<h` for this range. Therefore, for every form-domain
-vector and `0<h<=1/1260`,
-
-`q_h(f) > (1/400)||f||_2^2 > 0` for `f!=0`.
-
-This is a deliberately conservative explicit window and uses the stated
-physical-space Weil-form identity. It proves small-window positivity only;
-it neither reaches the U72 candidate window nor implies RH.
-In Suzuki's half-width notation the explicit range is `0<a<=1/50`.
+Here `alpha0_lower` and `I_lower` are obtained from rational Machin bounds
+for pi, the harmonic-limit bounds for Euler's constant, the odd alternating
+partial sum through `k=15` for `Ci(pi)`, and rational atanh bounds for
+logarithms. Consequently, under the stated physical-space Weil-form
+identity, every form-domain vector satisfies
+`q_h(f)>(1/20)||f||_2^2` for `0<h<=1/10`. In Suzuki's half-width notation
+this is `0<a<=1/20`. This is a conservative quantitative bound, not a new
+qualitative positivity theorem or an RH proof.
 
 ## Exact-rational finite certificate at `h=62/25`
 
