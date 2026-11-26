@@ -1,10 +1,14 @@
 # Research state
 
 Date: 2026-11-26 UTC.
-Active campaign: LXXVI — Independent original-form audit (research/CAMPAIGN-76.md). LXXV is closed as a finite candidate at h=2.51; its scoped stored-component audit passed, while independent original-Weil-form evaluation remains unverified. U76-01 source audit complete; direct arithmetic Gram formula identified, but independent entry comparison not yet done. Next: derive and evaluate small even/odd principal blocks by the direct Weil-functional route. See latest checkpoint below.
+Active campaign: LXXVI — Independent original-form audit (research/CAMPAIGN-76.md). LXXV is closed as a finite candidate at h=2.51; its scoped stored-component audit passed, while independent original-Weil-form evaluation remains unverified. U76-01 source and symbolic correlation/parity reduction recorded; no numerical entry comparison yet. An apparent tail mismatch was falsified after correcting a kernel simplification. Next: independently evaluate low even/odd Gram entries and map their basis/scaling to LXXV. See latest checkpoint below.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
+
+## LXXVI symbolic-reduction update
+
+U76-01's independent exponential-basis convolution and parity-polarization formulas are recorded in research/positivity/U76-01-direct-arithmetic-Gram.md. The apparent infinite-tail discrepancy was an algebra error in the first audit pass: restoring the factor exp(-t/2) in the source kernel gives the existing -log(tanh(L/2)) tail. This failed falsification is preserved. Numerical entry evaluation and the mapping from LXXV's every-other-frequency basis and common scaling remain open. Next evaluate low even/odd entries by direct arithmetic quadrature, then attempt the basis map; no CI or certificate has been produced.
 
 ## Superseding checkpoint — Campaign LXXVI
 

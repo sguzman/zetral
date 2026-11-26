@@ -115,3 +115,15 @@ remains open. This is not a pass or a discrepancy. Next derive the direct
 arithmetic matrix entries for small even and odd principal blocks from the
 Weil functional, then compare them with the pinned LXXV enclosures before
 scaling to 52 dimensions. No CI computation has been run in this checkpoint.
+
+### Symbolic reduction follow-up
+
+The direct exponential-basis convolution and the parity-polarized even/odd
+entries are now derived in the standalone note
+research/positivity/U76-01-direct-arithmetic-Gram.md. An apparent conflict in
+the infinite-tail term was falsified: the first pass simplified the source
+kernel incorrectly, and the corrected calculation agrees with the existing
+tail formula. This is a preserved failed falsification, not a certificate.
+Numerical entry evaluation and the map from LXXV's every-other-frequency basis
+and common scaling remain open. Next evaluate low even/odd entries directly;
+scale only after a justified basis map is established.
