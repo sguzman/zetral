@@ -556,3 +556,6 @@ Lead owns the alternative FDA02/FDA03 result and scoped FDA04 replay; worker exc
 
 
 - LXXI closed (candidate) at h=2.47, closure fa10fc8a21e04b01c8bf50a089f26d0f0b892fc7. Both exact comparisons 46/46; independent stored audit matched 4232 matrix entries, 92 radii, 92 determinants and 8464 aggregate endpoints; regenerated witness/guards matched. Margins 1293/10^6 even, 8/10^6 odd, next grids fail. LXXII active, plan 6993f5ab61c50115ef2a70e75f57ee82631b29be, target h=2.48, endpoint 12, U72-01 next. No independent original-form evaluation, CI, standalone CLI, RH or novelty claim. README and worker scopes unchanged.
+
+
+- LXXII U72-01 COMPLETE: campaign checkpoint 84a90f9d6db124f9f64546e3bf98be0caf45cd0d. Endpoint 12 witness bound 2.930, 29897 cells, two byte-verified parts; guards a4d8413b1e1686962f7225e92309f2d2cfb750be: lowCount46 fails even, 47 passes both. Next U72-02 even h=62/25, J128/KEM20/T832/M16384/lowCount47; fresh staged trial and residual generation. Candidate frontier 2.47. No CI, independent original-form evaluation or RH claim.
