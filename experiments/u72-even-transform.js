@@ -6,8 +6,8 @@ function transform(raw,f,src,Rows){
  assert(f.h===r.h&&f.odd===r.odd&&f.M===r.M&&f.primeNormUpper===r.primeNormUpper&&BigInt(f.scale)===Q&&rat.length===8&&rat.every(x=>x>0n&&x<Q),"factor regime");
  assert(old.length===8&&old.every(x=>x>0n)&&old.reduce((a,b)=>a+b,0n)===D0,"old shares");
  const mat=fn=>Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>fn(i,j))), B=Rows;
- const full=mat((i,j)=>B[i].find(z=>z[0]===j)?.[1]??0n);
- // Triangular integer row transform has determinant 10^35, hence invertible.
+ const full=mat((i,j)=>B[i].find(z=>z[0]===j)?.[1]??0n),changed=B.map((row,i)=>row.some(([j,v])=>j!==i&&v!==0n)?i:-1).filter(i=>i>=0),determinant=B.reduce((a,row,i)=>a*row.find(([j])=>j===i)[1],1n);
+ // Lower-triangular integer row transform; determinant is the product of its diagonal.
  const anchor=" const A=ks.map",at=src.indexOf(anchor);
  assert(at>0&&src.slice(0,at).split("length:M+2").length===3,"source anchors");
  const pre=src.slice(0,at).replaceAll("length:M+2","length:T+2");
@@ -42,7 +42,7 @@ function transform(raw,f,src,Rows){
  const calc=transform=>new Function("stored","transform",pre+body)(r,transform)([false],{hn:62n,hd:25n,J:128,M:16384,T:832,lowCount:47,KEM:20});
  const original=calc(mat((i,j)=>i===j?1n:0n)),updated=calc(full);
  assert(original.tails.every((z,i)=>z.C8===r.tails[i].C8&&z.eighthUpper===r.diagnostics[i].eighthUpper),"original eighth reproduction");
- assert(updated.tails.every((z,i)=>i===1||i===2||i===3||i===4||z.C8===original.tails[i].C8&&z.eighthUpper===original.tails[i].eighthUpper),"untouched eighth reproduction");
+ assert(updated.tails.every((z,i)=>changed.includes(i)||z.C8===original.tails[i].C8&&z.eighthUpper===original.tails[i].eighthUpper),"untouched eighth reproduction");
  assert(updated.CL.join(",")===f.CL.join(",")&&original.CL.join(",")===f.CL.join(","),"CL reproduction");
  const c={};for(const k of ["upper","finite",...keys])c[k]=mat((i,j)=>{let lo=0n,hi=0n;for(const [u,x] of B[i])for(const [v,y] of B[j]){const z=x*y,[a,b]=r.componentIntervals[k][u][v].map(BigInt);lo+=z*(z>=0n?a:b);hi+=z*(z>=0n?b:a)}return[lo,hi]});
  const e=updated.tails.map(z=>BigInt(z.eighthUpper));
@@ -50,6 +50,6 @@ function transform(raw,f,src,Rows){
  assert(c.upper.every((row,i)=>row[i][0]>0n),"positive transformed energy");
  const radiusWeights=c.upper.map((row,i)=>String(10n**80n/sqrt(row[i][1])));
  const componentIntervals=Object.fromEntries(Object.entries(c).map(([k,m])=>[k,m.map(row=>row.map(z=>z.map(String)))]));
- return {transform:full.map(row=>row.map(String)),determinant:"100000000000000000000000000000000000",originalEighthMatches:n,unchangedEighthMatches:n-4,oldTails:original.tails.slice(0,5),newTails:updated.tails.slice(0,5),componentIntervals,radiusWeights,eighth:e.map(String)};
+ return {transform:full.map(row=>row.map(String)),determinant:String(determinant),originalEighthMatches:n,unchangedEighthMatches:n-changed.length,changedRows:changed,oldTails:original.tails.slice(0,5),newTails:updated.tails.slice(0,5),componentIntervals,radiusWeights,eighth:e.map(String)};
 }
 if(typeof module!=="undefined")module.exports=transform;
