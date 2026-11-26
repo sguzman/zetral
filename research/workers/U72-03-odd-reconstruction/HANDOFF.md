@@ -10,7 +10,7 @@
 
 Regenerated the odd staged trial: 47 low modes and 369 trial-complement directions; all 47 upper-energy diagonal lower endpoints are positive. Generated and assembled every odd residual mode from 95 through 16383, 8,145 modes total, as 16 exact interval chunks.
 
-Tested two transforms against fresh U72 data. First, the U71 odd two-row integer transform (determinant `10^18`) was rerun with U72 factors, eighth-tail refresh, and exact replay; it matched all 47 original eighth bounds and 45 unchanged transformed bounds. The float-proposed allocation produced 7/47 positive leading minors. Remapping the U71 allocation onto 47 rows produced 4/47. Neither replay returns a positive fixed-energy grid margin. An exact 11-point convex allocation sweep from the remapped U71 shares to equal shares yields 4/47 at the seed, 7/47 for blend numerators 1–9, and 6/47 at equal shares. No sweep point returns a positive margin. An exact conservative Cauchy obstruction sweep over all 2,209 coordinate and signed two-coordinate directions in this transformed basis finds no all-allocation obstruction; every tested direction has positive conservative terms, but the largest loss/energy lower-bound ratio is only `269577/1000000`. This finite direction sweep does not rule out obstruction directions with larger support or establish that a passing allocation exists.
+Tested two transforms against fresh U72 data. First, the U71 odd two-row integer transform (determinant `10^18`) was rerun with U72 factors, eighth-tail refresh, and exact replay; it matched all 47 original eighth bounds and 45 unchanged transformed bounds. The float-proposed allocation produced 7/47 positive leading minors. Remapping the U71 allocation onto 47 rows produced 4/47. Neither replay returns a positive fixed-energy grid margin. An exact 11-point convex allocation sweep from the remapped U71 shares to equal shares yields 4/47 at the seed, 7/47 for blend numerators 1–9, and 6/47 at equal shares. No sweep point returns a positive margin. An exact conservative Cauchy obstruction sweep over all 2,209 coordinate and signed two-coordinate directions in this transformed basis finds no all-allocation obstruction; every tested direction has positive conservative terms, but the largest loss/energy lower-bound ratio is only `269577/1000000`. A deterministic floating multi-start projected-gradient search from the 80 best sparse directions also stopped at the coordinate direction `e_0`, with displayed ratio `0.2695777389344755`; this local search is heuristic and is not a global bound. The finite direction sweep does not rule out obstruction directions with larger support or establish that a passing allocation exists.
 
 Second, a leading-block decorrelation from the U72 raw upper-energy matrix was computed in double precision and rounded to an integer two-row transform (determinant `10^17`). Exact transformed component and eighth-tail bounds were regenerated (47 original bounds and 45 unchanged bounds). Its float-proposed allocation produced 0/47 positive leading minors; the remapped U71 allocation produced 4/47. Neither replay returns a positive fixed-energy grid margin.
 
@@ -22,7 +22,7 @@ These failures do not show that every odd allocation or transform fails. No all-
 - `experiments/u72-assemble.js`: exact chunk aggregation; `--odd` selects the odd sector.
 - `experiments/u72-odd-transform.js`, `experiments/u72-odd-transform-runner.js`, `experiments/u72-odd-replay-runner.js`: U71 two-row candidate transform freshly replayed at U72 parameters.
 - `experiments/u72-odd-gs-transform-runner.js`, `experiments/u72-odd-gs-replay-runner.js`: double-precision leading-block decorrelation, integer rounding, fresh exact replay.
-- `experiments/u72-exact-replay.js`: BigInt Bareiss and fixed-energy grid-margin replay. `experiments/u72-odd-obstruction-sweep.js` and `...-obstruction-sweep.json` preserve the exact bounded coordinate/two-coordinate Cauchy obstruction search.
+- `experiments/u72-exact-replay.js`: BigInt Bareiss and fixed-energy grid-margin replay. `experiments/u72-odd-obstruction-sweep.js` and `...-obstruction-sweep.json` preserve the exact bounded coordinate/two-coordinate Cauchy obstruction search. `experiments/u72-odd-allocation-dual-search.js` and `...-dual-search.json` preserve the separate heuristic dense-direction local search.
 - `experiments/results/u72-62-25-odd-t832-trial.json`: odd staged trial.
 - `experiments/results/u72-62-25-odd-finite-*.json`: 16 nonoverlapping exact chunks covering 95..16383 by odd indices (8,145 modes).
 - `experiments/results/u72-62-25-odd-t832-raw.json`: assembled raw intervals.
@@ -43,6 +43,7 @@ node experiments/u72-assemble.js --odd > experiments/results/u72-62-25-odd-t832-
 node experiments/u72-odd-transform-runner.js
 node experiments/u72-odd-replay-runner.js
 node experiments/u72-odd-obstruction-sweep.js
+node experiments/u72-odd-allocation-dual-search.js
 node experiments/u72-odd-allocation-blend.js
 node experiments/u72-odd-gs-transform-runner.js
 node experiments/u72-odd-gs-replay-runner.js
