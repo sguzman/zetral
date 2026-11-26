@@ -146,6 +146,18 @@ def main() -> None:
     mu1_lo = gamma_lo + log_interval(pi_lo)[0] - ln2_hi + ci_series_lo / 2
     assert mu1_lo > F(2046, 10000)
 
+    # Two-profile logarithmic Rayleigh trial, derived in COERCIVITY.md.
+    # The exact moment matrix has entries M_ij*q_ij, where M/pi is
+    # [[1/2,3/8],[3/8,5/16]] and q_ij share -gamma-log(2)-pi/2.
+    c = F(121, 1000)
+    m00, m01, m11 = F(1, 2), F(3, 8), F(5, 16)
+    q00, q01, q11 = F(5, 2), F(149, 60), F(53, 20)
+    mass = m00 + 2*c*m01 + c*c*m11
+    rational_part = (m00*q00 + 2*c*m01*q01 + c*c*m11*q11) / mass
+    assert rational_part == F(95199173, 38100820)
+    mu1_hi = rational_part - pi_lo / 2 - ln2_lo
+    assert mu1_hi < F(234669, 1_000_000)
+
     # Exact positive-series lower bound for q_alpha on the constant function.
     arch_inc_lo = F(0)
     for j in range(300):
@@ -256,6 +268,8 @@ def main() -> None:
     print("  h<=1/10 full-form margin exceeds 1/20:", short_window_margin > F(1, 20))
     print("  certified Suzuki mu_1 lower:", float(mu1_lo))
     print("  inferred Suzuki mu_1 lower exceeds 0.2046:", mu1_lo > F(2046, 10000))
+    print("  certified two-profile Suzuki mu_1 upper:", float(mu1_hi))
+    print("  two-profile upper is below 0.234669:", mu1_hi < F(234669, 1_000_000))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
     print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)

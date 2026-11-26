@@ -519,3 +519,33 @@ At `p=1/4`, the values `psi(1/2)=-gamma-2log(2)`, `psi(3/2)=psi(1/2)+2`, `psi(2)
 `mu_1 <= 5/2 - pi/2 - log(2) ~= 0.2360564926`.
 
 Although `g_(1/4)` is not smooth at its endpoints, it is in `H^s` for every `s<3/4`, and its logarithmic Fourier moment is finite. Interior cutoffs and mollification approximate it by smooth compactly supported profiles in some `H^s`, `0<s<3/4`. The logarithmic multiplier form is continuous under this approximation, so the same infimum bound follows from admissible smooth trials. Since `pi>2`, this improves the previous trial upper bound. Together with the separately certified lower bound this gives `0.2046 < mu_1 <= 5/2-pi/2-log(2)`. This is a Rayleigh bound using Suzuki's asymptotic, not a numerical determination of `mu_1`, and it does not alter the full-form coercivity claims above.
+
+## Two-profile Mellin trial
+
+The one-profile endpoint weight can be improved by mixing `g_0(x)=(1-x^2)^(1/4)` and `g_1(x)=(1-x^2)^(5/4)`, both zero outside `[-1,1]`. Take the explicit rational trial
+
+`g(x)=g_0(x)+(121/1000)g_1(x)`.
+
+For `p_i in {1/4,5/4}`, put `nu_i=p_i+1/2`, `A_i=sqrt(pi)*Gamma(p_i+1)*2^nu_i`, so `F_i(xi)=A_i*|xi|^(-nu_i)*J_(nu_i)(|xi|)`. The product Mellin identity used for the cross terms is
+
+`integral_0^infty x^(-lambda) J_mu(x)J_nu(x)dx = 2^(-lambda)*Gamma(lambda)*Gamma((mu+nu-lambda+1)/2) / [Gamma((-mu+nu+lambda+1)/2)*Gamma((mu+nu+lambda+1)/2)*Gamma((mu-nu+lambda+1)/2)]`,
+
+valid in the convergence strip containing `lambda=mu+nu` for these orders. Define `M_ij=(1/(2*pi))*integral_R F_i(xi)*conj(F_j(xi))dxi`; Plancherel identifies this with the physical-space Gram matrix. Applying the Mellin identity at zero log weight gives the squared norm matrix
+
+`M/pi = [[1/2,3/8],[3/8,5/16]]`.
+
+Differentiating each Mellin integral at logarithmic weight zero gives the log-moment matrix entries `M_ij*q_ij`, with
+
+`q_00=-gamma-log(2)-pi/2+5/2`,
+`q_01=-gamma-log(2)-pi/2+149/60`,
+`q_11=-gamma-log(2)-pi/2+53/20`.
+
+Consequently the Rayleigh constant for coefficient `c` is `-log(2)-pi/2+R(c)`, where
+
+`R(c)=[(1/2)(5/2)+2c(3/8)(149/60)+c^2(5/16)(53/20)] / [(1/2)+2c(3/8)+c^2(5/16)]`.
+
+At `c=121/1000`, exact rational arithmetic gives `R(c)=95199173/38100820`, hence
+
+`mu_1 <= 95199173/38100820 - log(2) - pi/2 < 0.234669`.
+
+The last inequality is certified in `constant_full_form_certificate.py` by rational lower bounds for `log(2)` and `pi`. Numerically the upper endpoint is about `0.2346686747`. As before, Suzuki's asymptotic relates the limiting Rayleigh quotient to `mu_1`; the fixed compactly supported profile is approximable by smooth admissible profiles in a positive Sobolev norm. This is a rigorous trial upper bound, not an estimate of the true minimizing profile. The matching two-dimensional trial-matrix calculation does not assert positivity of the full form.
