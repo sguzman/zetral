@@ -31,6 +31,21 @@ theorem qc04Ceil_nat_eq_ceilDiv (n d : ℕ) (hd : 0 < d) :
       rw [hnum, ← Int.ofNat_ediv, ← Int.ofNat_ediv]
       exact_mod_cast Nat.add_div_right n hd
 
+/-- Finite accumulation of QC04's BigInt helper agrees exactly with the
+corresponding natural-number row sum. -/
+theorem qc04Ceil_sum_eq_natCeil_sum {ι : Type*} (s : Finset ι)
+    (numerator : ι → ℕ) (d : ℕ) (hd : 0 < d) :
+    (∑ i ∈ s, qc04Ceil (numerator i : ℤ) (d : ℤ)) =
+      ((∑ i ∈ s, (numerator i ⌈/⌉ d) : ℕ) : ℤ) := by
+  calc
+    (∑ i ∈ s, qc04Ceil (numerator i : ℤ) (d : ℤ)) =
+        ∑ i ∈ s, ((numerator i ⌈/⌉ d : ℕ) : ℤ) := by
+          apply Finset.sum_congr rfl
+          intro i hi
+          exact qc04Ceil_nat_eq_ceilDiv (numerator i) d hd
+    _ = ((∑ i ∈ s, (numerator i ⌈/⌉ d) : ℕ) : ℤ) := by norm_cast
+
 end Zetral
 
 #print axioms Zetral.qc04Ceil_nat_eq_ceilDiv
+#print axioms Zetral.qc04Ceil_sum_eq_natCeil_sum
