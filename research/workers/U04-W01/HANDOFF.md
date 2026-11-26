@@ -8,3 +8,12 @@
 - Acceptance: verify the polynomial-space argument, symmetry actions on the generator, Sobolev support/derivative claim, and both directions of the multiplicity criterion; state exact imported assumptions and unchecked pieces. No RH/novelty claim.
 - Bounded stopping condition: settle these U04 implications only; preserve any negative finding and avoid a broader simplicity proof.
 - Evidence: `research/workers/U04-W01/AUDIT.md`.
+
+## Completion update — 2026-11-26
+
+- Status: READY_FOR_REVIEW
+- Result: no gap found in U04's finite-dimensional rigidity deductions under U03/U01 imports. The construction produces `E=H P_{<m}` from `m-1` selected nonreal zeros; involutions force the generator to be real up to phase and even or odd; polynomial Fourier multiples give the stated Sobolev regularity; strict window monotonicity forces full support span; and the derivative criterion is equivalent to `m>1`.
+- Evidence and proof details: `research/workers/U04-W01/AUDIT.md`.
+- Unchecked/imported claims and exact limitations: listed in AUDIT.md. This does not prove simplicity; it reduces it to exclusion of the derivative-in-bottom-space case.
+- No RH, novelty, numerical, human-review or formal-verification claim.
+- Next: scoped lead review.
