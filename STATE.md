@@ -251,3 +251,6 @@ LXXI closed (candidate) at h=2.47, closure fa10fc8a21e04b01c8bf50a089f26d0f0b892
 ## Superseding checkpoint — Campaign LXXIII
 
 LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8046a. Both comparisons 47/47, margins 8140/10^6 even and 43314/10^6 odd. Independent stored audit matched 4418 matrix entries, 94 radii, 94 determinants, 8836 final and 8836 intermediate interval endpoints; witness/guards and odd trial regenerated. LXXIII active, plan 16b3c32d247197669664a0aa5723d59938f74a18, target 2.49, endpoint 121/10, U73-01 next. No independent original-form evaluation, CI, standalone CLI, human/formal review, RH or originality claim. README and worker scopes unchanged.
+
+
+- LXXIII U73-01 COMPLETE: campaign checkpoint fab24b7342896f2c96888f87e8f15947c956a440. Endpoint 121/10 witness bound 2.971, 41549 cells, two byte-verified parts; guard result 9338b793dc4f92265a23180122dc73cf2a4cc608, lowCount48 fails both, 49 passes both. Next U73-02 even h=249/100, J128/KEM20/T832/M20480/lowCount49. Candidate frontier 2.48. No independent original-form evaluation, CI, standalone CLI, RH or novelty claim.
