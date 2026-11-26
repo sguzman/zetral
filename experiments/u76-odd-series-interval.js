@@ -399,9 +399,58 @@ result.intervals.evenOffDiagonalZetaTail=zeta22.get(Nodd+1).map(decimal); result
 result.evenOffDiagonalOverlap=entry02[0]<=compressed02[1]&&compressed02[0]<=entry02[1];
 result.evenOffDiagonalContained=entry02[0]>=compressed02[0]&&entry02[1]<=compressed02[1];
 result.evenOffDiagonalMargins=[decimal(entry02[0]-compressed02[0]),decimal(compressed02[1]-entry02[1])];
+
+// Second even diagonal G_22, using the same shifted zeta and E sums.
+function laplaceA22(a) {
+  const ah=mul(a,hOdd),e=a[0]<0n?divI(ONE,expNeg(neg(ah))):expNeg(ah);
+  const den=add(mul(a,a),mul(w02,w02));
+  const C=divI(mul(a,sub(ONE,e)),den);
+  const S=divI(mul(w02,sub(ONE,e)),den);
+  const T=divI(sub(mul(sub(ONE,e),sub(mul(a,a),mul(w02,w02))),mul(mul(mul(a,hOdd),e),den)),mul(den,den));
+  return sub(sub(C,divI(T,hOdd)),divI(S,scale(pi,2n)));
+}
+function laplaceM22(a) {
+  const A=laplaceA22(a),b=add(a,rat(1n,2n));
+  return sub(A,divI(sub(ONE,expNeg(mul(b,hOdd))),b));
+}
+const arch22=scale(add(laplaceA22(rat(-1n,2n)),laplaceA22(rat(1n,2n))),2n);
+let prime22=ZERO;
+for(const {q,p} of primePowers) {
+  const lq=logInteger(q), x=mul(w02,lq), c=trigTaylor(x,true), s=trigTaylor(x,false);
+  const F=sub(mul(sub(ONE,divI(lq,hOdd)),c),divI(s,scale(pi,2n)));
+  prime22=add(prime22,scale(mul(mul(logInteger(p),divI(ONE,sqrtIntegerInterval(q))),F),2n));
+}
+function endpointDerivative22(n,atH) {
+  if(n===0) return atH?neg(expHalf):ZERO;
+  const wn=powI(w02,n), wprev=powI(w02,n-1);
+  const cN=[1,0,-1,0][n%4], sN=[0,1,0,-1][n%4], cPrev=[1,0,-1,0][(n+3)%4];
+  const expSign=BigInt((-1)**(n+1));
+  const termExp=scale(atH?mul(expHalf,rat(expSign)):rat(expSign),1n,2n**BigInt(n));
+  const taper=neg(scale(divI(mul(rat(BigInt(n)),wprev),hOdd),BigInt(cPrev)));
+  const trigSin=neg(divI(scale(wn,BigInt(sN)),scale(pi,2n)));
+  const atZero=add(sub(scale(wn,BigInt(cN)),scale(divI(mul(rat(BigInt(n)),wprev),hOdd),BigInt(cPrev))),add(trigSin,termExp));
+  const atEnd=add(add(taper,trigSin),termExp);
+  return atH?atEnd:atZero;
+}
+let endpointZero22=ZERO, endpointH22=ZERO;
+for(let k=1;k<Nodd;k++) endpointZero22=add(endpointZero22,mul(endpointDerivative22(k,false),zeta22.get(k+1)));
+for(let k=0;k<Nodd;k++) endpointH22=add(endpointH22,mul(endpointDerivative22(k,true),E22.get(k+1)));
+const isolated22=add(laplaceM22(rat(1n,2n)),laplaceM22(rat(5n,2n)));
+const cn22=add(powI(w02,Nodd),add(divI(scale(powI(w02,Nodd-1),BigInt(Nodd)),hOdd),add(divI(powI(w02,Nodd),scale(pi,2n)),rat(1n,2n**BigInt(Nodd)))));
+const rem22=scale(mul(cn22,zeta22.get(Nodd+1)),2n);
+let kernel22=scale(add(isolated22,sub(endpointZero22,endpointH22)),2n);
+kernel22=[kernel22[0]-rem22[1],kernel22[1]+rem22[1]];
+const entry22=add(sub(sub(sub(arch22,prime22),pole),kernel22),hyperbolicTail);
+const compressed22=compressedEven2.A[1][1].map(x=>BigInt(x)*(Q/scale02));
+result.intervals.evenSecondDiagonalArchimedean=arch22.map(decimal); result.intervals.evenSecondDiagonalPrimeTerm=prime22.map(decimal); result.intervals.evenSecondDiagonalSubtractedKernel=kernel22.map(decimal); result.intervals.evenSecondDiagonalTailBound=rem22.map(decimal); result.intervals.evenSecondDiagonalFullEntry=entry22.map(decimal); result.intervals.evenSecondDiagonalCompressedSharedInterval=compressed22.map(decimal);
+result.evenSecondDiagonalOverlap=entry22[0]<=compressed22[1]&&compressed22[0]<=entry22[1];
+result.evenSecondDiagonalContained=entry22[0]>=compressed22[0]&&entry22[1]<=compressed22[1];
+result.evenSecondDiagonalMargins=[decimal(entry22[0]-compressed22[0]),decimal(compressed22[1]-entry22[1])];
 const serialized = JSON.stringify(result, null, 2) + "\n";
 fs.writeFileSync("experiments/results/u76-odd-series-interval.json", serialized);
 console.log(serialized);
 if(oddEntry[1]-oddEntry[0]>Q/10n**50n) throw new Error("odd-entry interval is wider than 10^-50; inspect saved interval components");
 if(entry02[1]-entry02[0]>Q/10n**50n) throw new Error("G02 interval is wider than 10^-50; inspect saved interval components");
 if(!result.evenOffDiagonalContained) throw new Error("direct G02 interval is not contained in the shared compressed interval");
+if(entry22[1]-entry22[0]>Q/10n**50n) throw new Error("G22 interval is wider than 10^-50; inspect saved interval components");
+if(!result.evenSecondDiagonalContained) throw new Error("direct G22 interval is not contained in the shared compressed interval");
