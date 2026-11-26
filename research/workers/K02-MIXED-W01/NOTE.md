@@ -551,3 +551,24 @@ The same argument does not require the selected sample locations to be simple. L
 {\sum_{j=0}^k |c_j|/\sqrt{m_j}}.}
 \]
 For \(k=1\), this reduces exactly to the unequal-multiplicity pair inequality above. Thus the cluster obstruction remains valid without assuming RH-level simplicity, though the locations must be distinct and the coercivity constant remains an input.
+
+
+### Intrinsic derivative-evaluation formulation
+
+The cluster inequality can be stated without inserting a coercivity constant. Let \(\mathcal H_a\) be the local form Hilbert space and \(E_t(f)=\widehat f(t)\) its sample functional. For a real interval \(I\), assume \(t\mapsto E_t\) is \(k\)-times differentiable in \(\mathcal H_a^*\) and define
+\[
+\mathcal D_{a,k}(I)=\sup_{t\in I}\|E_t^{(k)}\|_{\mathcal H_a^*}<\infty.
+\]
+For distinct selected sample locations \(x_0=\gamma,\ldots,x_k\in I\) with multiplicities \(m_j\), the same divided-difference argument gives the intrinsic estimate
+\[
+\boxed{\displaystyle
+\delta_a(\gamma)\ge
+\frac{\bigl[\,|c_0|/m_\gamma-\mathcal D_{a,k}(I)/(k!\sqrt{m_\gamma})\,\bigr]_+}
+{\sum_{j=0}^k |c_j|/\sqrt{m_j}}.}
+\]
+This follows directly from \(|F^{(k)}(t)|\le\mathcal D_{a,k}(I)\|f\|_q\) and \(\|f\|_q\le1/\sqrt{m_\gamma}\). It isolates the exact local quantity needed for a quantitative obstruction: the norm of derivative evaluation in the local form space. In the compact-support model, the earlier coercivity argument supplies only the upper estimate
+\[
+\mathcal D_{a,k}(I)\le
+\sqrt{\frac{2a^{2k+1}}{(2k+1)\lambda_a}},
+\]
+when \(I\subset\mathbb R\). Thus the intrinsic statement is independent of a named \(\lambda_a\), while estimating its derivative norm remains the unresolved quantitative input.
