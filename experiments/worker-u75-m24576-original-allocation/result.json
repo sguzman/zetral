@@ -3,10 +3,184 @@
   "heuristic": "Trace-based positive-share allocation. Exact Bareiss leading-minor signs are computed for each scanned point; Number Cholesky is diagnostic only.",
   "scan": [
     {
+      "eighthMass": 0.61,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00002497828805405934
+    },
+    {
+      "eighthMass": 0.5700000000000001,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00006355356035027946
+    },
+    {
+      "eighthMass": 0.6,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00010997692495749609
+    },
+    {
+      "eighthMass": 0.24000000000000002,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00018274774011350843
+    },
+    {
+      "eighthMass": 0.39,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00025141080583688716
+    },
+    {
+      "eighthMass": 0.23,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0005299078846628208
+    },
+    {
+      "eighthMass": 0.52,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0005600008621508777
+    },
+    {
+      "eighthMass": 0.73,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0012493368810864286
+    },
+    {
+      "eighthMass": 0.77,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0015213286477816321
+    },
+    {
+      "eighthMass": 0.48,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0018022954649538803
+    },
+    {
+      "eighthMass": 0.64,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.002172171584568439
+    },
+    {
+      "eighthMass": 0.53,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0021855067599931247
+    },
+    {
+      "eighthMass": 0.84,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0034081589184469397
+    },
+    {
+      "eighthMass": 0.37,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.003914789215524212
+    },
+    {
+      "eighthMass": 0.19,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.00396178299397576
+    },
+    {
+      "eighthMass": 0.29000000000000004,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.004679682252525871
+    },
+    {
+      "eighthMass": 0.56,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0069588034610141075
+    },
+    {
+      "eighthMass": 0.78,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007174641471999288
+    },
+    {
+      "eighthMass": 0.63,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.007382834759651441
+    },
+    {
+      "eighthMass": 0.69,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.011631282610462427
+    },
+    {
+      "eighthMass": 0.18,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.012516035852531188
+    },
+    {
+      "eighthMass": 0.7,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.014193562123143941
+    },
+    {
+      "eighthMass": 0.66,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.014385643480007147
+    },
+    {
+      "eighthMass": 0.62,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.016382703795048432
+    },
+    {
+      "eighthMass": 0.43000000000000005,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.01873157247754065
+    },
+    {
       "eighthMass": 0.2,
       "positiveMinors": 43,
       "approximatePass": false,
       "approximateMinPivot": -0.020090399185266068
+    },
+    {
+      "eighthMass": 0.45000000000000007,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.039034938558219504
+    },
+    {
+      "eighthMass": 0.58,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.041422080906849845
+    },
+    {
+      "eighthMass": 0.21000000000000002,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.04185375190385532
+    },
+    {
+      "eighthMass": 0.55,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.05768003134541084
     },
     {
       "eighthMass": 0.4,
@@ -15,10 +189,70 @@
       "approximateMinPivot": -0.06564727034395534
     },
     {
-      "eighthMass": 0.15,
+      "eighthMass": 0.14,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0661196633710563
+    },
+    {
+      "eighthMass": 0.49,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.11257428285918188
+    },
+    {
+      "eighthMass": 0.59,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.15507195284606848
+    },
+    {
+      "eighthMass": 0.51,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.17463518600951033
+    },
+    {
+      "eighthMass": 0.72,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.18327659729584206
+    },
+    {
+      "eighthMass": 0.79,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.185155527377459
+    },
+    {
+      "eighthMass": 0.27,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.19168589502789046
+    },
+    {
+      "eighthMass": 0.35,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.27384491088395446
+    },
+    {
+      "eighthMass": 0.33,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.3474696523090116
+    },
+    {
+      "eighthMass": 0.15000000000000002,
       "positiveMinors": 43,
       "approximatePass": false,
       "approximateMinPivot": -0.45038458136378456
+    },
+    {
+      "eighthMass": 0.74,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.45666812644004395
     },
     {
       "eighthMass": 0.5,
@@ -27,10 +261,166 @@
       "approximateMinPivot": -0.5616547825544138
     },
     {
+      "eighthMass": 0.31,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.598280727383014
+    },
+    {
+      "eighthMass": 0.82,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.5984488544199995
+    },
+    {
+      "eighthMass": 0.28,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.6230481506394906
+    },
+    {
+      "eighthMass": 0.25,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.6282537332083779
+    },
+    {
+      "eighthMass": 0.22,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7173195696069525
+    },
+    {
+      "eighthMass": 0.54,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7308506564452327
+    },
+    {
+      "eighthMass": 0.6799999999999999,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7432433717326467
+    },
+    {
+      "eighthMass": 0.26,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7595603010196129
+    },
+    {
+      "eighthMass": 0.16,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.7834663157465491
+    },
+    {
+      "eighthMass": 0.33999999999999997,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -0.9348937426564172
+    },
+    {
+      "eighthMass": 0.41000000000000003,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -1.1004199660489302
+    },
+    {
+      "eighthMass": 0.44000000000000006,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -1.2253647529689409
+    },
+    {
+      "eighthMass": 0.83,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -1.2554752437363186
+    },
+    {
+      "eighthMass": 0.32,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -1.548100675004764
+    },
+    {
+      "eighthMass": 0.67,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -1.840779008489572
+    },
+    {
+      "eighthMass": 0.13,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -1.9598367301276545
+    },
+    {
       "eighthMass": 0.65,
       "positiveMinors": 43,
       "approximatePass": false,
       "approximateMinPivot": -2.822147617142232
+    },
+    {
+      "eighthMass": 0.8099999999999999,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -2.9330855987570286
+    },
+    {
+      "eighthMass": 0.76,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -3.6087266221558387
+    },
+    {
+      "eighthMass": 0.47,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -4.900788943764436
+    },
+    {
+      "eighthMass": 0.17,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -5.848673966664268
+    },
+    {
+      "eighthMass": 0.75,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -6.302646923888354
+    },
+    {
+      "eighthMass": 0.71,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -7.683726763287712
+    },
+    {
+      "eighthMass": 0.45999999999999996,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -11.751969944969531
+    },
+    {
+      "eighthMass": 0.38,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -29.59314369971159
+    },
+    {
+      "eighthMass": 0.36,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -37.934220188948245
+    },
+    {
+      "eighthMass": 0.42000000000000004,
+      "positiveMinors": 43,
+      "approximatePass": false,
+      "approximateMinPivot": -81.74254101464994
     },
     {
       "eighthMass": 0.8,
@@ -39,10 +429,16 @@
       "approximateMinPivot": -95.1099154308674
     },
     {
-      "eighthMass": 0.3,
+      "eighthMass": 0.30000000000000004,
       "positiveMinors": 43,
       "approximatePass": false,
       "approximateMinPivot": -116.42182277741992
+    },
+    {
+      "eighthMass": 0.12000000000000001,
+      "positiveMinors": 42,
+      "approximatePass": false,
+      "approximateMinPivot": -0.0027352882148522217
     },
     {
       "eighthMass": 0.075,
@@ -55,6 +451,12 @@
       "positiveMinors": 42,
       "approximatePass": false,
       "approximateMinPivot": -0.004453691134529247
+    },
+    {
+      "eighthMass": 0.11,
+      "positiveMinors": 42,
+      "approximatePass": false,
+      "approximateMinPivot": -0.4976413168987506
     },
     {
       "eighthMass": 0.02,
@@ -87,10 +489,46 @@
       "approximateMinPivot": -0.006604551112009035
     },
     {
+      "eighthMass": 0.85,
+      "positiveMinors": 40,
+      "approximatePass": false,
+      "approximateMinPivot": -0.24206752459191525
+    },
+    {
+      "eighthMass": 0.86,
+      "positiveMinors": 36,
+      "approximatePass": false,
+      "approximateMinPivot": -0.029207876971731474
+    },
+    {
       "eighthMass": 0.001,
       "positiveMinors": 36,
       "approximatePass": false,
       "approximateMinPivot": -2.278017735269877
+    },
+    {
+      "eighthMass": 0.88,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.1461732322752732
+    },
+    {
+      "eighthMass": 0.89,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -0.341070012590587
+    },
+    {
+      "eighthMass": 0.87,
+      "positiveMinors": 35,
+      "approximatePass": false,
+      "approximateMinPivot": -2.4564251478296706
+    },
+    {
+      "eighthMass": 0.9,
+      "positiveMinors": 30,
+      "approximatePass": false,
+      "approximateMinPivot": -1.370503579424337
     },
     {
       "eighthMass": 0.0001,
@@ -123,67 +561,67 @@
       "approximateMinPivot": -2.06254846372782e-28
     }
   ],
-  "selectedMass": 0.2,
+  "selectedMass": 0.61,
   "selectedAllocation": [
-    "798790254057",
-    "1163923802",
-    "45350580",
-    "440190",
-    "30995",
-    "347",
-    "30",
-    "4762",
-    "6748",
-    "6269",
-    "8472",
-    "8927",
-    "13465",
-    "17207",
-    "618364",
-    "13180736",
-    "183632182",
-    "2102103445",
-    "8698558479",
-    "4050219978",
-    "4379179814",
-    "4376700082",
-    "3333611570",
-    "7937478148",
-    "6636108030",
-    "4594743665",
-    "5026383169",
-    "3658967771",
-    "3428480157",
-    "4355043802",
-    "6863461585",
-    "5638332633",
-    "7637050230",
-    "5860770091",
-    "469915563",
-    "6466987428",
-    "2102579674",
-    "2324269411",
-    "4479564887",
-    "860081295",
-    "2906347401",
-    "7076648696",
-    "4279598036",
-    "4604533217",
-    "3569576339",
-    "6500163908",
-    "3688446251",
-    "2915352873",
-    "5468961474",
-    "2362762229",
-    "9833120369",
-    "2199705231",
-    "4902636816",
-    "5623436052",
-    "5029372960",
-    "3479102171",
-    "5529100832",
-    "5477029488",
-    "9076017617"
+    "389410248853",
+    "567412853",
+    "22108408",
+    "214593",
+    "15110",
+    "169",
+    "15",
+    "14524",
+    "20581",
+    "19120",
+    "25840",
+    "27227",
+    "41069",
+    "52482",
+    "1886009",
+    "40201245",
+    "560078155",
+    "6411415509",
+    "26530603360",
+    "12353170933",
+    "13356498433",
+    "13348935250",
+    "10167515287",
+    "24209308352",
+    "20240129493",
+    "14013968179",
+    "15330468667",
+    "11159851702",
+    "10456864479",
+    "13282883596",
+    "20933557835",
+    "17196914532",
+    "23293003201",
+    "17875348777",
+    "1433242466",
+    "19724311656",
+    "6412868006",
+    "7089021705",
+    "13662672906",
+    "2623247950",
+    "8864359574",
+    "21583778521",
+    "13052774008",
+    "14043826312",
+    "10887207835",
+    "19825499918",
+    "11249761066",
+    "8891826262",
+    "16680332495",
+    "7206424798",
+    "29991017124",
+    "6709100955",
+    "14953042290",
+    "17151479960",
+    "15339587528",
+    "10611261622",
+    "16863757536",
+    "16704939938",
+    "27681853731"
   ],
   "exactReplay": {
     "positiveMinors": 43,

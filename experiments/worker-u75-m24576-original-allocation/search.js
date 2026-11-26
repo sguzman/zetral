@@ -31,7 +31,7 @@ function chol(A,E,alpha=0){
  for(let i=0;i<n;i++){let v=B[i][i];for(let k=0;k<i;k++)v-=L[i][k]*L[i][k];if(!(v>0)||!Number.isFinite(v))return{pass:false,minPivot:v};L[i][i]=Math.sqrt(v);minPivot=Math.min(minPivot,v);for(let j=i+1;j<n;j++){let u=B[j][i];for(let k=0;k<i;k++)u-=L[j][k]*L[i][k];L[j][i]=u/L[i][i];}}
  return{pass:true,minPivot};
 }
-const masses=[1e-10,1e-8,1e-6,1e-4,.001,.005,.01,.02,.035,.05,.075,.1,.15,.2,.3,.4,.5,.65,.8,.95];
+const masses=[1e-10,1e-8,1e-6,1e-4,.001,.005,.01,.02,.035,.05,.075,...Array.from({length:81},(_,i)=>0.1+i*0.01),.95];
 function exactPos(A){const B=A.map(row=>row.slice());let prev=1n;for(let k=0;k<n;k++){const p=B[k][k];if(p<=0n)return k;for(let i=k+1;i<n;i++)for(let j=i;j<n;j++){const z=p*B[i][j]-B[i][k]*B[k][j];if(z%prev!==0n)throw Error('Bareiss divisibility');B[i][j]=B[j][i]=z/prev;}prev=p;}return n;}
 const storedWeights=rank.proposal.weights.map(BigInt),storedCount=exactPos(matrix(storedWeights).A);
 const scan=[];
