@@ -216,3 +216,21 @@ all poles are removable and \(u_N(\pm\gamma_n)=e_{\pm n}\) for \(n\le N\). For e
  -\frac{\Delta(z)}{\gamma_k\Delta'(\gamma_k)(1-z/\gamma_k)},
 \]
 a finite limit, regardless of whether the residue sequence \((a_n)\) is square-summable. If \(\sum_n|a_n|^2=\infty\), then \(M_N=\|v_N\|\to\infty\): for each fixed K, \(\liminf_N M_N^2\ge2\sum_{n\le K}|a_n|^2\), and K is arbitrary. Consequently \(h_N=v_N/M_N\rightharpoonup0\), and compactness of C gives \(\|\Pi_NC\Pi_Nh_N\|\to0\). Thus a non-\(\ell^2\) residue sequence is a sufficient condition in this model for simultaneous divergent normalization and weak escape; no necessity claim is made. Near-collisions are a convenient sufficient way to produce one. This lemma is entirely a diagonal spectral construction and does not impose a Weil-form or arithmetic identity.
+
+## Regular-counting diagnostic (numerical evidence only)
+
+To test whether close-pair clustering is essential even in the abstract canonical-product lemma, consider the regular quantiles F(t_n)=n, F(t)=t log(t)/(2 pi), with no deliberately introduced close pairs. For P_M(z)=prod_{j<=M}(1-z^2/t_j^2), the node residue magnitude is
+
+    |a_{n,M}| = |1/(t_n P'_M(t_n))|
+               = (1/2) exp(-sum_{j<=M,j!=n} log|1-t_n^2/t_j^2|).
+
+I evaluated the finite sum in binary64 and approximated the omitted j>M tail by integrating its power-series expansion against the continuous density dF=(log(t)+1)dt/(2 pi), through 20 terms. With the Newton inverse of F, the resulting natural logarithms of residue magnitudes were:
+
+| n | M=1000 | M=2000 | M=4000 | M=8000 |
+|---:|---:|---:|---:|---:|
+| 1 | 1.467980 | 1.467972 | 1.467970 | 1.467969 |
+| 10 | 13.954557 | 13.954378 | 13.954325 | 13.954309 |
+| 50 | 54.885695 | 54.883464 | 54.882801 | 54.882606 |
+| 100 | 98.819041 | 98.812021 | 98.809948 | 98.809340 |
+
+The computed residues grow strongly with the node index over this range, and the cutoff drift for these fixed nodes decreases with M. This suggests that regular T log(T) quantiles may already have non-square-summable canonical-product residues, so artificial close pairs might not be needed to make M_N diverge in the commuting model. This is not established: the density-integral tail omits sum-integral corrections, binary64 was used, and no uniform-in-n error bound or asymptotic for the infinite-product residues was derived. It is a diagnostic and candidate asymptotic question, not a theorem or evidence about zeta ordinates. A proof would require controlling the singular discrete sum near j=n and the tail uniformly as n grows.
