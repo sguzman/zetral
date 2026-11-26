@@ -109,3 +109,11 @@
 - Acceptance: prove a countermodel or a lower bound with all signed-tail estimates; distinguish pair-energy condition from the separate operator escape condition.
 - Stop condition: stop if the high-node sum cannot be bounded uniformly in the row cutoff.
 - K02-MP05 COMPLETE: built the synthetic signed sequence \(\gamma_n=F^{-1}(n)\), \(F(x)=x\log x/(2\pi)\), with exact leading count, simple nodes and convergent canonical product. At (q_T=T), (a=T\log T/2), the pair energy obeys \(\mathcal P_a(T)/N_{\rm dist}(T)\ll_p q_T^{-p}+a^{-p}T^{1-p}\log T+a^{-p}/N_{\rm dist}(T)\); hence (T^2\mathcal P_a(T)/N_{\rm dist}(T)\to0) for (p>2). Signed and high-node tails are included. This is a count-only countermodel, not a zeta model or an operator construction; it isolates why the (q_T\to\infty) regime needs finer pair information and does not verify (G_ad_a\to0). Full argument in NOTE.md.
+
+### Follow-up bounded task K02-MP06 (claimed 2026-11-26)
+
+- Baseline: worker head `452f98de31edd243aba80604950179d2aba842d5`.
+- Question: audit current unconditional positive-proportion small-gap results for whether they lower-bound the K02 distinct-ordinate pair energy, especially in the (q_T\to\infty) regime.
+- Scope: primary-source review of the 2026 Lamzouri theorem and its counted-with-multiplicity definition; no U75 files.
+- Acceptance: state exactly what gap theorem proves, when the gaps are distinct/simple, and whether it controls \\(\mathcal P_a(T)\\) at shrinking scales; record a precise limitation if not.
+- Stop condition: stop once theorem hypotheses and the energy-transfer gap are source-verified.
