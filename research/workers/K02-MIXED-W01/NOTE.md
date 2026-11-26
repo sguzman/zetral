@@ -618,3 +618,21 @@ In particular, for each fixed \(k\), the intrinsic derivative-evaluation identit
 \right|\longrightarrow0.
 \]
 This is an existential diagonal window extracted from compact convergence, not an explicit arithmetic range. It controls normalized kernel jets (and hence normalized derivative-evaluation norms) only. It does not bound projection defects uniformly there, nor does it imply an unnormalized mixed-kernel limit or any explicit relation between \(R(a)\) and \(a\).
+
+
+### Existential normalized mixed-kernel decay on a growing window
+
+Under the K02 hypotheses, strong convergence \(\Pi_a\to I\) implies \(D_a(n)\to0\) for each fixed integer \(n\): only finitely many positive ordinates lie below \(n\), so the supremum is a maximum over a finite set of pointwise convergent defects. Also \(d_a\to0\). Hence for every fixed \(n\),
+\[
+n\bigl(D_a(n)+d_a\bigr)\longrightarrow0.
+\]
+Choose increasing thresholds \(A_n\to\infty\) so that \(n(D_a(n)+d_a)\le1/n\) for all \(a\ge A_n\), and put \(G_a=\max\{n:A_n\le a\}\) (zero before \(A_1\)). Then \(G_a\to\infty\) and
+\[
+G_a\bigl(D_a(G_a)+d_a\bigr)\le1/G_a\longrightarrow0.
+\]
+The previously established K02 finite-window criterion now gives, for every fixed compact \(K\subset\mathbb C\),
+\[
+\sup_{\substack{\gamma\in\Gamma\\0<\gamma\le G_a}}\ \sup_{z\in K}
+\frac{|J_a(\gamma,z)|}{M_a}\longrightarrow0.
+\]
+Thus qualitative pointwise projection convergence does imply existence of some growing ordinate window with uniform *normalized* mixed-kernel decay. This is an RH/source-conditional, existential diagonal result; it gives no effective lower bound on \(G_a\), no conclusion for an owner-prescribed window, and no unnormalized boundedness or decay.
