@@ -86,3 +86,19 @@ For any `f` in the form domain, Tonelli's theorem applies to the nonnegative mul
 `alpha compression - alpha_0 I >= [4 - 1/(1/4+omega^2) + sum_(j>=1) exp(-(j+1/4)h)/(j+1/4)] I`,
 
 where `omega` is the smallest positive solution of `omega tan(omega h/2)=1/2`. The series is convergent for every `h>0`. At `h=62/25`, numerical evaluation gives about `2.31998802335`, compared with `2.28216807827` from the exact first-term bound alone. The inequality itself is analytic; the displayed decimals are illustrative numerical evaluations, not interval-certified endpoints. This remains a bound on `alpha-alpha_0` only.
+
+## Exact eigenvalue bound for every series term
+
+The exponential-kernel norm calculation applies at every rate `r_j=2u_j`, not just `r_0`. Let `omega_j` be the unique root in `(0, pi/h)` of
+
+`omega_j tan(omega_j h/2)=2u_j`.
+
+The top eigenvalue of `E_{2u_j}` is `4u_j/(4u_j^2+omega_j^2)`. Thus the exact bottom of `B_j=(1/u_j)I-E_{2u_j}` is
+
+`c_j(h)=omega_j^2/[u_j(4u_j^2+omega_j^2)]`.
+
+Termwise Tonelli summation now gives the stronger full-series bound
+
+`alpha compression - alpha_0 I >= [sum_(j>=0) c_j(h)] I`.
+
+This root series converges: `0<omega_j<pi/h` implies `0<c_j(h)<(pi/h)^2/(4u_j^3)`. At `h=62/25`, a numerical sum through `j=99,999` is approximately `2.431806049717852`; the same elementary `u_j^-3` comparison bounds the omitted positive tail by less than `2.1e-11`. The root evaluations and displayed decimal are numerical illustrations, not an interval-certified endpoint. The exact root-series inequality is the analytic result and, like the preceding bounds, applies only to `alpha-alpha_0`.
