@@ -102,3 +102,17 @@ Termwise Tonelli summation now gives the stronger full-series bound
 `alpha compression - alpha_0 I >= [sum_(j>=0) c_j(h)] I`.
 
 This root series converges: `0<omega_j<pi/h` implies `0<c_j(h)<(pi/h)^2/(4u_j^3)`. At `h=62/25`, a numerical sum through `j=99,999` is approximately `2.431806049717852`; the same elementary `u_j^-3` comparison bounds the omitted positive tail by less than `2.1e-11`. The root evaluations and displayed decimal are numerical illustrations, not an interval-certified endpoint. The exact root-series inequality is the analytic result and, like the preceding bounds, applies only to `alpha-alpha_0`.
+
+## Large-interval asymptotic of the root-series bound
+
+Let `C(h)=sum_j c_j(h)` be the exact lower-bound series above. For fixed `j`, set `x_j=omega_j h/2`; its equation becomes `x_j tan(x_j)=u_j h`. As `h` tends to infinity, `x_j` tends to `pi/2`, so `h omega_j` tends to `pi` and
+
+`h^2 c_j(h) -> pi^2/(4u_j^3)`.
+
+Moreover `0<omega_j<pi/h` gives the summable domination `h^2 c_j(h)<pi^2/(4u_j^3)`. Dominated convergence therefore proves
+
+`lim_(h->infinity) h^2 C(h) = (pi^2/4) sum_(j>=0) 1/(j+1/4)^3`
+
+`= (pi^2/4) (28 zeta(3) + pi^3) ~= 159.5517039088`.
+
+This is the asymptotic of the proved component lower bound, not an asymptotic for the actual least eigenvalue of the full archimedean or Weil operator.
