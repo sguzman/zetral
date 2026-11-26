@@ -1,13 +1,14 @@
 {
   "baselineEntriesReproduced": true,
   "baselineRadiusCorrectionsReproduced": true,
-  "positiveMinors": 52,
-  "failedMinor": null,
-  "originalEnergyGridMarginNumerator": "0",
+  "positiveMinors": 41,
+  "failedPivotSign": "negative",
+  "originalEnergyGridMarginNumerator": null,
   "energyGridDenominator": "1000000",
-  "nextGridFails": true,
+  "nextGridFails": null,
   "transformedPositiveMinors": 52,
   "transformedEnergyGridMarginNumerator": "95427",
   "transformedEnergyGridDenominator": "1000000",
-  "scope": "Exact replay of the stored finite intervals in original trial coordinates, using the stored allocation and unit direction factors. A finite certificate comparison only; not an analytic positivity proof or an RH/operator construction."
+  "scope": "Exact replay of stored finite intervals in original trial coordinates with each direction factor exactly Q/Q. The audit-local replay copy permits Q as a factor numerator; the repository replay enforces strict numerator<Q. Finite certificate comparison only; not analytic positivity or RH/operator construction.",
+  "factorConvention": "The replay reads each factor interval upper endpoint as numerator over Q; exact unity is Q/Q. The earlier exploratory [1,1] run represented 1/Q and is superseded."
 }
