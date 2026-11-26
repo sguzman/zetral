@@ -764,6 +764,37 @@ An N=128 Jacobi search further improves the fixed-vector endpoint. The explorato
 
 with rational part approximately `2.497159175003540` and endpoint approximately `0.233215667648698`. Together with the exact root-series lower certificate this gives `0.2046595<mu_1<0.233216`. The fixed trial is a variational upper bound for Suzuki's limiting form; it gives no N-to-infinity Ritz error or operator construction. Reproduce the exact upper claim with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial128_certificate.py`; the lower endpoint is checked by `constant_full_form_certificate.py`.
 
+### A quantitative lower bound for the second logarithmic eigenvalue
+
+There is also an unconditional gap estimate for the limiting closed form. Use the unitary Fourier transform and normalize `||f||_2=1`; then Suzuki's form is
+
+`q(f)=gamma+integral_R log|xi|*|fhat(xi)|^2 dxi`, `supp(f) subset [-1,1]`.
+
+For every such `f`, Cauchy–Schwarz gives `|fhat(xi)|^2<=||f||_1^2/(2*pi)<=1/pi`. Hence
+
+`integral_(|xi|<1) log|xi|*|fhat(xi)|^2 dxi >= (1/pi)*integral_(-1)^1 log|xi| dxi = -2/pi`.
+
+Fix `R=19/10>1`, and let `K_R` be the Fourier-band concentration operator on `L^2(-1,1)` with kernel `sin(R(x-y))/(pi(x-y))`. Its eigenvalues satisfy `kappa_1>=kappa_2>=...>=0`, and `trace(K_R)=2R/pi`. The normalized constant vector gives
+
+`kappa_1 >= c_R := [2*Si(2R)-(1-cos(2R))/R]/pi`.
+
+Therefore `kappa_2<=trace(K_R)-c_R`. In any two-dimensional subspace of the form domain, choose a unit vector orthogonal to a top eigenvector of `K_R`; its Fourier mass in `[-R,R]` is at most `kappa_2`, so its mass above `R` is at least `1-kappa_2`. Since `log|xi|>=0` on `1<=|xi|<=R` and `>=log R` above `R`, every two-dimensional subspace contains a unit vector with
+
+`q(f) >= gamma - 2/pi + [1-trace(K_R)+c_R]*log(R)`.
+
+The min–max principle thus bounds the second eigenvalue `mu_2` below by this quantity. `log_form_second_eigenvalue_certificate.py` uses rational Taylor enclosures for `Si(19/5)` and `cos(19/5)`, Machin bounds for pi, the positive atanh series for `log(19/10)`, and the exact harmonic lower bound `gamma>H_50000-log(50000)-1/100000`. Exact Fraction arithmetic certifies
+
+`mu_2 > 0.3463`.
+
+Combined with the N=128 exact trial cap `mu_1<0.233216`, the spectral gap exceeds `0.113`. This does not improve the ground-state bracket by itself, but proves a quantitative isolated bottom without RH. The analytic facts imported from Suzuki are the limiting form definition and compact embedding/compact resolvent (arXiv:2606.09096v4, §§4.1 and 4.6); no RH assumption, numerical eigenvalue, formal proof, human review, or novelty claim is involved. Reproduce the scalar certificate with `python experiments/worker-u72-archimedean-coercivity-audit-w01/log_form_second_eigenvalue_certificate.py`.
+
+The same concentration argument gives a lower growth bound for every eigenvalue. For `n>=2`, take `R_n=n/log(n)>1`. For any n-dimensional subspace, a unit vector can be chosen orthogonal to the first `n-1` eigenvectors of `K_(R_n)`, and the trace bound gives `kappa_n<=trace(K_(R_n))/n=2/(pi*log n)<1`. Therefore
+
+`mu_n >= gamma - 2/pi + (1-2/(pi*log n))*log(n/log n)`
+`      = log n - log log n + gamma - 4/pi + (2/pi)*(log log n)/(log n)`.
+
+Here `pi*log(2)>2` ensures the coefficient of the high-frequency mass is positive for every `n>=2`. In particular, `mu_n >= log n - log log n + gamma - 4/pi`, so the bound explicitly forces logarithmic spectral growth. This min–max estimate is independent of the sharper `n=2` constant-test trace deficit above.
+
 ### Independent check of the Mellin log-moment formula
 
 For `g_i(x)=(1-x^2)^(i+1/4) 1_[-1,1](x)`, its Fourier transform is proportional to `|xi|^(-mu_i) J_(mu_i)(|xi|)`, with `mu_i=i+3/4`. After removing the positive normalization constants, the cross moment is the Weber–Schafheitlin integral
