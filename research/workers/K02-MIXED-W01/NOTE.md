@@ -862,3 +862,19 @@ Therefore \(G_ad_a\to0\) and
 \frac{G_a^2\mathcal P_a(G_a)}{N(G_a)}\to0
 \]
 suffice for normalized mixed-kernel decay on \(K\) for a density-one subset of ordinates up to \(G_a\). The new unresolved input is a bound for this explicitly defined weighted pair-correlation energy at the Fourier scale \(1/a\). This route avoids minimum-spacing and multiplicity-cap hypotheses, but no such arithmetic energy estimate is proved here.
+
+### Montgomery support-range audit for the pair energy
+
+Montgomery's original pair-correlation theorem gives a precise limitation on this proposed input. Under RH, let
+\[
+K(y)=|\widehat\psi(y)|^2,\qquad r_T(u)=K\!\left(\frac{2\pi a}{\log T}u\right)\left(1+\frac{(2\pi u/\log T)^2}{4}\right).
+\]
+The factor in parentheses cancels Montgomery's weight \(w(\gamma-\gamma')=4/(4+(\gamma-\gamma')^2)\) in his identity (3). Since \(\psi\in C_c^\infty(-1,1)\), the Fourier transform of \(K\) is supported in \([-2,2]\) in angular-frequency convention; thus the Fourier support of \(r_T\), in Montgomery's convention \(e(-\alpha u)\), lies in \([-2a/\log T,2a/\log T]\). It is therefore contained in a fixed compact subinterval of \((-1,1)\) when \(2a/\log T\le 1-\eta\) for some fixed \(\eta>0\). The polynomial factor does not enlarge Fourier support.
+
+Montgomery's formula (3), together with his theorem (2), controls the off-diagonal bump sum at this scale by \(O_\eta(N(T))\). If all zeros are simple, this is exactly the off-diagonal part of \(\mathcal P_a(T)\). Along a scale choice with \(q=2a/\log T\to c\in(0,1)\), the limiting pair-correlation measure gives an off-diagonal contribution proportional to
+\[
+N(T)\int_{\mathbb R} K(\pi c u)\left(1-\left(\frac{\sin \pi u}{\pi u}\right)^2\right)\,du,
+\]
+which is finite and strictly positive because \(K(0)=1\) and \(K\) is continuous and nonnegative. Thus, under RH and simplicity, the theorem gives order \(N(T)\), rather than the \(o(N(T)/T^2)\) needed by the density-one kernel criterion. Its support condition also forces \(\log T\gtrsim a\), hence \(T\) is exponentially large in the bump parameter; it cannot make the extra \(T^2\) factor small.
+
+This is a negative applicability result, not a proof that stronger arithmetic information cannot bound \(\mathcal P_a(T)\). Montgomery controls only Fourier support below one (under RH); using the full pair-correlation law outside that proved range would be an additional conjectural input. Source: H. L. Montgomery, “The Pair Correlation of Zeros of the Zeta Function,” *Proc. Sympos. Pure Math.* 24 (1973), 181–193, especially theorem (2), identity (3), and the support discussion immediately after (4), [original paper](https://public.websites.umich.edu/~hlm/paircor1.pdf).
