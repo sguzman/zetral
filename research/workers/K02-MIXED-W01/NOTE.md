@@ -801,3 +801,35 @@ Substitution into the previous estimate yields the explicit error-adaptive bound
 +\widetilde d_a^{1/2}\right)\longrightarrow0.
 \]
 This is an explicit window as a function of the two exact operator errors, rather than an abstract threshold diagonal. It still does not give a rate in \(a\) alone unless quantitative estimates for \(\varepsilon_a\) and \(d_a\) are supplied.
+
+
+### Local-defect/tail decomposition for the Hilbert–Schmidt error
+
+The Hilbert–Schmidt convergence error itself admits a low/high ordinate split. Write \(Q_a=I-\Pi_a\), \(\varepsilon_a=\|C-B_a\|_{\mathrm{HS}}\), and
+\[
+\widetilde D_a(T)=\sup_{\substack{\gamma\in\Gamma\\0<|\gamma|\le T}}\delta_a(\gamma).
+\]
+For the orthogonal decomposition \(\Pi_aH\oplus Q_aH\), the block matrix of \(C-B_a\) has only its two off-diagonal blocks and the \(Q_aCQ_a\) block. Hence
+\[
+\varepsilon_a^2
+=2\|\Pi_a C Q_a\|_{\mathrm{HS}}^2+\|Q_a C Q_a\|_{\mathrm{HS}}^2
+\le2\|Q_a C\|_{\mathrm{HS}}^2.
+\]
+In the normalized sample basis \(e_\gamma=\sqrt{m_\gamma}g_\gamma\), \(Ce_\gamma=\gamma^{-1}e_\gamma\) and \(\|Q_ae_\gamma\|^2=m_\gamma\delta_a(\gamma)^2\). Therefore, for any \(T\ge2\),
+\[
+\varepsilon_a^2
+\le 2\widetilde D_a(T)^2
+\sum_{\substack{\gamma\in\Gamma\\0<|\gamma|\le T}}\frac{m_\gamma}{\gamma^2}
++2\sum_{\substack{\gamma\in\Gamma\\|\gamma|>T}}\frac{m_\gamma}{\gamma^2}
+\le C\widetilde D_a(T)^2+C\frac{\log T}{T}.
+\]
+Here \(\sum_\gamma m_\gamma/\gamma^2<\infty\), and the tail estimate follows by Stieltjes integration from the Riemann–von Mangoldt bound \(N_\Gamma(T)\ll T\log T\).
+
+Under the spacing, multiplicity-cap, and weighted-count hypotheses of the test-function estimate above, that estimate applies symmetrically to all signed target ordinates and gives
+\[
+\varepsilon_a^2\le C_p\left[
+\frac{M_T}{a\sigma_T}
++a^{-2p}T^{1-2p}\log(2T)
++\frac{\log T}{T}\right].
+\]
+This supplies a conditional route from local sample geometry to the global Hilbert–Schmidt error used in the growing-window kernel criterion. The spacing and multiplicity hypotheses are not established for zeta; the estimate gives no unconditional or actual-ordinate rate.
