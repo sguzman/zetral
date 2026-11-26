@@ -565,3 +565,6 @@ Lead owns the alternative FDA02/FDA03 result and scoped FDA04 replay; worker exc
 
 
 - LXXII U72-03 COMPLETE (candidate): checkpoint 4aa5496bd61dd8099485ec858164836430aa0775. Odd 10193 modes M20480; final two chunks and full aggregate recovered with parsed endpoint equality, not byte equality; stored seven-row transform and exact replay fully reproduced (blobs b91ad2ab36a045ab3e4799ce1398f6897af0c167 and fe8ecd3705a9547ae7080e67ab035330b6d1f425), 47/47 and margin 43317/10^6. Even margin 8140/10^6. Next U72-04 independent stored reconstruction, witness/guard and aggregate audits; frontier 2.47 pending closure. No CI, independent original-form evaluation, RH or novelty claim. README and worker scopes unchanged.
+
+
+- LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8046a. Both comparisons 47/47, margins 8140/10^6 even and 43314/10^6 odd. Independent stored audit matched 4418 matrix entries, 94 radii, 94 determinants, 8836 final and 8836 intermediate interval endpoints; witness/guards and odd trial regenerated. LXXIII active, plan 16b3c32d247197669664a0aa5723d59938f74a18, target 2.49, endpoint 121/10, U73-01 next. No independent original-form evaluation, CI, standalone CLI, human/formal review, RH or originality claim. README and worker scopes unchanged.
