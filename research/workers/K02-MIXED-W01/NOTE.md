@@ -925,3 +925,27 @@ Fix any \(Q>0\), and suppose \(q_T=2a/\log T\le Q\) for all sufficiently large \
 for this fixed bump \(\psi_Q\), under RH alone. Therefore the density-one energy criterion cannot hold for bounded \(q_T\) when using this adapted bump.
 
 The bump depends on the chosen bound \(Q\). This does not rule out every other bump choice at the same bounded ratio, and it does not address \(q_T\to\infty\). A useful fixed-bump corollary needs no adaptation: for any fixed admissible \(\psi\), continuity and \(\widehat\psi(0)=1\) give an \(\varepsilon_\psi>0\) with \( |\widehat\psi(y)|\ge1/2\) for \( |y|\le\varepsilon_\psi\). The same simple-gap count then gives \(\liminf\mathcal P_a(T)/N_{\rm dist}(T)\ge1/12\) whenever \(q_T\to0\), under RH alone. Thus the shrinking-ratio obstruction holds for every fixed bump even without global simplicity. The adapted-bump version additionally shows that for any prescribed finite ratio bound \(Q\), there exists a fixed admissible bump that obstructs the whole regime \(q_T\le Q\). Neither statement handles \(q_T\to\infty\) for arbitrary fixed bumps. Source: Montgomery, “The Pair Correlation of Zeros of the Zeta Function,” Corollary 2, equation (7), [original paper](https://public.websites.umich.edu/~hlm/paircor1.pdf).
+
+### Synthetic countermodel at super-mean-spacing bump scale
+
+Riemann–von Mangoldt leading count and simplicity alone do not extend the preceding lower bound to \(q_T\to\infty\). To see this, let \(F(x)=x\log x/(2\pi)\) for \(x\ge x_0>1\), and define distinct ordinates \(\gamma_n=F^{-1}(n)\) for integers \(n\ge n_0=\lceil F(x_0)\rceil\). Then
+\[
+N_{\rm dist}(T)=\#\{n:\gamma_n\le T\}=F(T)+O(1),\qquad \sum_n\gamma_n^{-2}<\infty.
+\]
+All nodes in \(\Gamma=\{\pm\gamma_n\}\) are simple, and the even canonical product \(\Delta(z)=\prod_n(1-z^2/\gamma_n^2)\) converges locally uniformly.
+
+Take \(T\to\infty\), \(q_T=T\), and \(a=T\log T/2\), so \(q_T=2a/\log T\). Fix any admissible bump and write \(K(y)=|\widehat\psi(y)|^2\); for every \(p>0\), \(K(y)\ll_p(1+|y|)^{-p}\). For positive rows \(\gamma_n\le T\), put \(N=N_{\rm dist}(T)\). If \(m\le2N\), then \(\gamma_m<2T\) for large \(T\), and monotonicity of \(F'(x)=(\log x+1)/(2\pi)\) gives
+\[
+|\gamma_m-\gamma_n|\ge\frac{2\pi|m-n|}{\log(2T)+1}.
+\]
+Thus, for \(m\ne n\), \(a|\gamma_m-\gamma_n|\gg q_T|m-n|\), and summing the Schwartz bound over these indices contributes \(O_p(q_T^{-p})\) per row (choose \(p>1\)). For \(m>2N\), one has \(\gamma_m\ge\gamma_{2N}\ge3T/2\) for large \(T\); hence \(|\gamma_m-\gamma_n|\ge\gamma_m/3\), and Stieltjes summation with \(N_{\rm dist}(x)\ll x\log(2x)\) bounds the remaining positive tail per row by \(O_p(a^{-p}T^{1-p}\log T)\), for \(p>1\).
+
+The negative-node contribution to the whole energy is bounded, for \(p>2\), by
+\[
+\sum_{n\le N}\sum_m K(a(\gamma_n+\gamma_m))\ll_p a^{-p}\sum_{n,m}(\gamma_n+\gamma_m)^{-p}=O_p(a^{-p}),
+\]
+where convergence of the double sum follows from the same \(x\log x\) counting bound. Consequently
+\[
+\frac{\mathcal P_a(T)}{N_{\rm dist}(T)}\ll_p q_T^{-p}+a^{-p}T^{1-p}\log T+\frac{a^{-p}}{N_{\rm dist}(T)}.
+\]
+With \(q_T=T\), choosing any fixed \(p>2\) gives \(T^2\mathcal P_a(T)/N_{\rm dist}(T)\to0\). This is only a synthetic node-set countermodel: it has the correct leading count, simple signed nodes and a convergent canonical product, but it is not the zeta zero set and says nothing about the independent operator escape condition \(G_ad_a\to0\). It shows that count and simplicity alone cannot rule out the super-mean-spacing regime; finer arithmetic pair information is needed.
