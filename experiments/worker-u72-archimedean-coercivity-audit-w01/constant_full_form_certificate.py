@@ -144,7 +144,7 @@ def main() -> None:
 
     # Lower bound on Suzuki's small-window constant from the root-series floor.
     mu1_lo = gamma_lo + log_interval(pi_lo)[0] - ln2_hi + ci_series_lo / 2
-    assert mu1_lo > F(1, 5)
+    assert mu1_lo > F(2045, 10000)
 
     # Exact positive-series lower bound for q_alpha on the constant function.
     arch_inc_lo = F(0)
@@ -254,7 +254,7 @@ def main() -> None:
     print("  full constant Rayleigh lower:", float(full_lo))
     print("  certified alpha_0 lower exceeds -27/5:", alpha0_lo > F(-27, 5))
     print("  h<=1/10 full-form margin exceeds 1/20:", short_window_margin > F(1, 20))
-    print("  inferred Suzuki mu_1 lower exceeds 1/5:", mu1_lo > F(1, 5))
+    print("  inferred Suzuki mu_1 lower exceeds 0.2045:", mu1_lo > F(2045, 10000))
     print("  certified lower threshold 19/500:", full_lo > F(19, 500))
     print("  full quotient derivative upper at 62/25:", float(full_deriv_hi))
     print("  strictly decreasing on [247/100, 62/25]:", full_deriv_hi < 0)

@@ -217,6 +217,35 @@ bound. The Euler-constant lower endpoint uses
 `gamma>H_N-log(N+1)`. This is a quantitative lower bound on Suzuki's already
 positive constant, not a claim that the asymptotic itself is new.
 
+There is also an upper bound from the normalized constant trial vector
+`f_a=(2a)^(-1/2)1_(-a,a)`. Its Fourier transform is
+`sqrt(2a) sinc(at)`, where `sinc(x)=sin(x)/x`; it belongs to the logarithmic
+form domain since its transform decays as `O(1/|t|)`. For `2a<log(2)` the
+prime term vanishes, and the pole expectation is `O(a)`. The archimedean
+expectation is
+
+`(1/pi) integral_R alpha(xi/a) sinc^2(xi) dxi`.
+
+The digamma asymptotic gives
+`alpha(t)=log(1+|t|)-log(2pi)+r(t)`, with `r` bounded and tending to zero
+as `|t|->infinity`. After subtracting `log(1/a)`, dominated convergence
+therefore leaves
+`-log(2pi)+(1/pi)integral_R sinc^2(xi)log|xi| dxi`.
+The Mellin integral
+
+`I(s)=integral_0^infinity x^s sinc^2(x)dx`
+`   =pi*2^(-s)/(2 Gamma(2-s) cos(pi*s/2))`
+
+gives `(1/pi)integral_R sinc^2(x)log|x|dx=2I'(0)/pi=1-gamma-log(2)`.
+The Rayleigh principle and Suzuki's Theorem 1.4 consequently imply
+
+`mu_1 <= 1-log(2)`.
+
+Together with the exact-rational lower bound, this brackets the constant as
+`0.2045 < mu_1 <= 1-log(2)`. The lower endpoint uses an odd alternating
+partial sum for `Ci(pi)`; the upper endpoint is an analytic trial bound.
+Neither inequality is a novelty claim for Suzuki's small-window theorem.
+
 ## A concrete very-short-window bound for the full Weil form
 
 Prior-art qualification: Suzuki, arXiv:2606.09096v4, Theorem 1.4, already
