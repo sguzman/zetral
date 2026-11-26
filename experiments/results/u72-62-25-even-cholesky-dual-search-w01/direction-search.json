@@ -1,0 +1,182 @@
+{
+  "method": "SciPy SLSQP bounded multi-start over first 10 normalized-energy coordinates; unit vectors \u00b1e_i plus previous negative direction",
+  "scipy": "1.17.0",
+  "starts": 21,
+  "feasiblePositiveCostReturns": 20,
+  "solverSuccessCount": 7,
+  "bestStart": 17,
+  "bestFloatRatio": 0.8731811577321992,
+  "bestSolverSuccess": true,
+  "bestIterations": 263,
+  "solverMessage": "Optimization terminated successfully",
+  "exactDirectionDenominator": "100000000000000000000",
+  "exactDirection": [
+    "378245340473411392",
+    "-22347036077708083200",
+    "-1518080106889433856",
+    "100000000000000000000",
+    "-14128442237362744",
+    "-5500403718361241",
+    "580386218",
+    "-155013659",
+    "-28864",
+    "-378"
+  ],
+  "exactEnergyUpper": "23309101931823217408038870505699196037460254137541207576870448794691263663394646582163880533",
+  "exactFiniteLower": "20174610940123051447836994466964959829871265633869766512259439025819253244530399946988054522",
+  "exactRankCosts": [
+    "1441600137445124892964532640422172441581497424090395097565458116730640221107037549616022713277388335705834985343463906709293036901012898294637582051528090699200",
+    "15285950033654573776786449380508098640235493856916401067606220236059613030997819154477150729507822170752818482654428380024528239237287140996950704396293126636",
+    "5413357811834532663025679389462911827598793012990165608720576107218597088547166006527982445971671948738290318552016223683386840084748650063137612377156264",
+    "7289743011718371442627082042529753533027136283109500521488153039041489667461938274356135572940396202910707478677509745457287837944246321104482496394664",
+    "816632054864741122290349830899258372761155259197171741882313480125178738791099326384949937940102446297698202988608550997459981857559909313165233792",
+    "878914135575406248250822617163541381904929462388796792295046446859092998273203776840532245770052977380771033274591241732927968167020150553178912",
+    "-158022638973387047003417719576908553151497014389580513435903097115654387123596764687859869725616357203305141772056243751590238954279029888"
+  ],
+  "exactEighthCost": "83988938216535871669876956283613180114570531113198164559004505873974873997480683834154597068688375396407910436703521087807938939580022523614895155366297600",
+  "allExactCostsPositive": false,
+  "searchLog": [
+    {
+      "start": 0,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 191,
+      "ratio": 0.8707177133353352
+    },
+    {
+      "start": 1,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 120,
+      "ratio": 0.8731811556968339
+    },
+    {
+      "start": 2,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 114,
+      "ratio": 0.6189589292935284
+    },
+    {
+      "start": 3,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 110,
+      "ratio": 0.8731787554674119
+    },
+    {
+      "start": 4,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 77,
+      "ratio": 0.8731811205799533
+    },
+    {
+      "start": 5,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 110,
+      "ratio": 0.8731807616636713
+    },
+    {
+      "start": 6,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 132,
+      "ratio": 0.6192689629410072
+    },
+    {
+      "start": 7,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 434,
+      "ratio": 0.750281733310322
+    },
+    {
+      "start": 8,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 66,
+      "ratio": 0.43632605601752183
+    },
+    {
+      "start": 9,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 110,
+      "ratio": 0.4540938895540377
+    },
+    {
+      "start": 10,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 115,
+      "ratio": 0.8731811574497574
+    },
+    {
+      "start": 11,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 211,
+      "ratio": 0.8685629654887741
+    },
+    {
+      "start": 12,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 292,
+      "ratio": 0.8713876628254402
+    },
+    {
+      "start": 13,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 112,
+      "ratio": 0.8731784338866673
+    },
+    {
+      "start": 14,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 161,
+      "ratio": 0.8731811492153645
+    },
+    {
+      "start": 15,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 85,
+      "ratio": 0.8572413371023769
+    },
+    {
+      "start": 16,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 176,
+      "ratio": 0.8731811477034456
+    },
+    {
+      "start": 17,
+      "success": true,
+      "message": "Optimization terminated successfully",
+      "iterations": 263,
+      "ratio": 0.8731811577321992
+    },
+    {
+      "start": 18,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 275,
+      "ratio": 0.6192687495891663
+    },
+    {
+      "start": 19,
+      "success": false,
+      "message": "Inequality constraints incompatible",
+      "iterations": 37,
+      "ratio": 0.44105515599209894
+    }
+  ],
+  "strictAllPositiveAllocationObstruction": false,
+  "reason": "Exact positive-cost hypotheses fail after rationalization."
+}
