@@ -260,12 +260,12 @@ const bernoulli=bernoulliNumbers(160);
 const emX=rat(517n,4n); // 129.25
 const emDebug=[];
 function hurwitzZetaInterval(s) {
-  let prefix=frac(0n);
+  let prefix=ZERO;
   for(let n=0;n<128;n++) {
-    prefix=fadd(prefix,fpow(frac(4n,BigInt(4*n+5)),s));
+    prefix=add(prefix,fracInterval(fpow(frac(4n,BigInt(4*n+5)),s)));
   }
-  let tail=fadd(frac(4n**BigInt(s-1),BigInt(s-1)*517n**BigInt(s-1)),
-                frac(4n**BigInt(s),2n*517n**BigInt(s)));
+  let tail=add(fracInterval(frac(4n**BigInt(s-1),BigInt(s-1)*517n**BigInt(s-1))),
+               fracInterval(frac(4n**BigInt(s),2n*517n**BigInt(s))));
   for(let m=1;m<=80;m++) {
     const rising=risingFactorial(BigInt(s),2*m-1);
     const coefficient=fdiv(bernoulli[2*m],frac(factorial(2*m)));
@@ -273,7 +273,7 @@ function hurwitzZetaInterval(s) {
     const xreciprocal=frac(4n**BigInt(exponent),517n**BigInt(exponent));
     const emTerm=fmul(fmul(coefficient,rising),xreciprocal);
     if(s===2 && [1,2,40,79,80].includes(m)) emDebug.push({m,coefficient:fracInterval(coefficient).map(decimal),rising:fracInterval(rising).map(decimal),xreciprocal:fracInterval(xreciprocal).map(decimal),term:fracInterval(emTerm).map(decimal)});
-    tail=fadd(tail,emTerm);
+    tail=add(tail,fracInterval(emTerm));
   }
   const r=160;
   const risingBound=risingFactorial(BigInt(s),r-1);
@@ -281,7 +281,7 @@ function hurwitzZetaInterval(s) {
   const exponent=s+r-1;
   const rationalRemainder=frac(4n*risingBound[0]*4n**BigInt(exponent),517n**BigInt(exponent));
   const remainder=divI(fracInterval(rationalRemainder),twoPiPower);
-  const raw=fracInterval(fadd(prefix,tail));
+  const raw=add(prefix,tail);
   return [raw[0]-remainder[1],raw[1]+remainder[1]];
 }
 function risingFactorial(s,n) { let v=1n; for(let j=0;j<n;j++) v*=s+BigInt(j); return frac(v); }
