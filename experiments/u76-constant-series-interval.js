@@ -126,11 +126,11 @@ function catalanInterval(terms) {
 const catalan = catalanInterval(280);
 
 // Euler-Maclaurin enclosure for Euler's constant, with the first omitted
-// positive Bernoulli term bounding the alternating remainder at N=64.
-const gammaN = 64n;
+// positive Bernoulli term bounding the alternating remainder at N=8192.
+const gammaN = 8192n;
 let harmonic = ZERO;
 for (let j = 1n; j <= gammaN; j++) harmonic = add(harmonic, rat(1n, j));
-let gamma = sub(sub(harmonic, scale(ln2, 6n)), rat(1n, 2n * gammaN));
+let gamma = sub(sub(harmonic, scale(ln2, 13n)), rat(1n, 2n * gammaN));
 for (const [power, numerator, denominator] of [
   [2n, 1n, 12n], [4n, -1n, 120n], [6n, 1n, 252n], [8n, -1n, 240n],
   [10n, 1n, 132n], [12n, -691n, 32760n], [14n, 1n, 12n], [16n, -3617n, 8160n],
@@ -214,7 +214,7 @@ const overlap = entry[0] <= compressedInterval[1] && compressedInterval[0] <= en
 const result = {
   status: "outward-rounded fixed-point interval evaluation of independently derived G00 formula",
   precision: { decimalDigits: 70, endpointRounding: "floor lower / ceil upper" },
-  parameters: { h: "251/100", catalanEulerTerms: 280, exponentialRemainderTerms: remainderTerms, primePowers: primePowers.map(x => Number(x.q)) },
+  parameters: { h: "251/100", catalanEulerTerms: 280, eulerGammaHarmonicCutoff: Number(gammaN), exponentialRemainderTerms: remainderTerms, primePowers: primePowers.map(x => Number(x.q)) },
   intervals: {
     archimedean: archimedean.map(decimal),
     primeTerm: primeTerm.map(decimal),
