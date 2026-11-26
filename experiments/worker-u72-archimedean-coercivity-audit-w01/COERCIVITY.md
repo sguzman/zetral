@@ -285,6 +285,12 @@ the script propagates exact rational log and inverse-square-root intervals throu
 
 Both test functions lie in the full quadratic-form domain. Their Fourier transforms are `2 sin(at)/(t sqrt(h))` for the constant vector and `2i*c*(a*t*cos(at)-sin(at))/t^2` for the odd linear vector; each is `O(1/|t|)` at infinity and bounded near zero. Since `alpha(t)=O(log(2+|t|))`, the integrals of `|alpha(t)|*|f_hat(t)|^2` converge. On the fixed compact interval the prime sum has finitely many shifts and the pole is finite rank, so those terms are also form-finite.
 
+As a finite-subspace consequence, let `e_0=h^(-1/2)1_[-h/2,h/2]` and `o_1=sqrt(12/h^3)*x*1_[-h/2,h/2]`. Reflection commutes with the archimedean multiplier and the symmetric prime-shift sum; the pole splits into its even `c tensor c` and odd `-s tensor s` terms. Therefore the cross form `q_A(e_0,o_1)` vanishes. The two exact lower bounds above imply
+
+`q_A(a*e_0+b*o_1) >= (19/500)|a|^2+(1/10)|b|^2 >= (19/500)(|a|^2+|b|^2)`.
+
+This is positivity on this explicit two-dimensional subspace only; it is not a lower bound on the orthogonal complement or on the full operator spectrum.
+
 ## Full-form constant test at the campaign window
 
 For the full restored even form on `I=(-h/2,h/2)`, the same normalized constant has an exact quotient decomposition `q_A=q_alpha+q_H-q_P`. The odd pole vector `sinh(x/2)` is orthogonal to this test; for `c(x)=cosh(x/2)`,
