@@ -25,3 +25,8 @@ This establishes a positive interval replay for the selected transformed matrix,
 ## Next work
 
 Optimize or replace the odd congruence transform / energy allocation to obtain a strictly positive exact grid margin. If that cannot be achieved, document the obstruction and pivot to the campaign's U71-04 scoped audit without calling U71-03 a pass. Do not edit lead-owned `STATE.md`, `COORDINATION.md`, or campaign files.
+
+
+## Branch coordination note
+
+Main advanced during this work batch to `f4a293f9af98465642a8b62d92c992cb8e00ebbf` while the lead persisted U71-03 artifacts. Main now has `experiments/results/u71-247-100-odd-t832-m16384-trial-part1.txt` at blob `9538f9268ea8673f24a4a7ca25a86aa4702af3ab`; this worker branch has different contents at the same path (blob `893cbc8fb4b9b4541f418ccb7e66c27a93251693`). Do not merge this branch as-is or use it to overwrite main. The worker trial has five 350,000-character shards; main's part 1 is 470,757 characters. Rename the worker shards under a worker-specific prefix or reconcile against lead's branch before any later integration. The exact transformed replay and audit files otherwise remain on this branch.
