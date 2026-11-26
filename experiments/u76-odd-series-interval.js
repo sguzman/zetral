@@ -351,10 +351,12 @@ const oddScale=BigInt(compressedOdd.scale), oddCompressed=compressedOdd.A[0][0].
 result.status="outward-rounded fixed-point interval evaluation of independent G00 and first-odd formulas";
 result.parameters.oddIntegrationByParts=Nodd; result.parameters.hurwitzTailTerms=80; result.parameters.hurwitzPrefix=128; result.parameters.exponentialEndpointTerms=39;
 result.intervals.oddArchimedean=archOdd.map(decimal); result.intervals.oddPrimeTerm=oddPrime.map(decimal); result.intervals.oddSubtractedKernel=oddKernel.map(decimal); result.intervals.oddFullEntry=oddEntry.map(decimal); result.intervals.oddCompressedSharedInterval=oddCompressed.map(decimal); result.intervals.oddTailBound= remainderBound.map(decimal);
+result.intervals.zeta2=zeta.get(2).map(decimal); result.intervals.zeta221=zeta.get(221).map(decimal); result.intervals.endpointZero=endpointZero.map(decimal); result.intervals.endpointH=endpointH.map(decimal); result.intervals.E1=E.get(1).map(decimal); result.intervals.E220=E.get(220).map(decimal);
 result.oddIntervalOverlapsSharedCompressedInterval=oddEntry[0]<=oddCompressed[1]&&oddCompressed[0]<=oddEntry[1];
 result.oddDirectIntervalContainedInSharedCompressedInterval=oddEntry[0]>=oddCompressed[0]&&oddEntry[1]<=oddCompressed[1];
 result.oddContainmentMargins=[decimal(oddEntry[0]-oddCompressed[0]),decimal(oddCompressed[1]-oddEntry[1])];
 result.caveat="The direct arithmetic formulas are evaluated independently; comparators come from the shared compressed implementation. All finite arithmetic is fixed-point outward-rounded; Hurwitz-zeta uses the stated Euler-Maclaurin integral-remainder majorant.";
+if(oddEntry[1]-oddEntry[0]>Q/10n**50n) throw new Error("odd-entry interval is wider than 10^-50; inspect saved interval components");
 const serialized = JSON.stringify(result, null, 2) + "\n";
 fs.writeFileSync("experiments/results/u76-odd-series-interval.json", serialized);
 console.log(serialized);

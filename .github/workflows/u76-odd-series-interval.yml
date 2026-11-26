@@ -24,7 +24,7 @@ jobs:
           nix develop --command node --version
           nix develop --command node --check experiments/u76-odd-series-interval.js
           nix develop --command node experiments/u76-odd-series-interval.js 2>&1 | tee experiments/results/u76-odd-series-interval.log
-          jq -e '.oddIntervalOverlapsSharedCompressedInterval == true' experiments/results/u76-odd-series-interval.json > /dev/null
+          jq -e '.oddDirectIntervalContainedInSharedCompressedInterval == true' experiments/results/u76-odd-series-interval.json > /dev/null
           jq '{parameters, intervals: {oddArchimedean:.intervals.oddArchimedean, oddPrimeTerm:.intervals.oddPrimeTerm, oddSubtractedKernel:.intervals.oddSubtractedKernel, oddTailBound:.intervals.oddTailBound, oddFullEntry:.intervals.oddFullEntry, oddCompressedSharedInterval:.intervals.oddCompressedSharedInterval}, overlap:.oddIntervalOverlapsSharedCompressedInterval, contained:.oddDirectIntervalContainedInSharedCompressedInterval, margins:.oddContainmentMargins, caveat}' experiments/results/u76-odd-series-interval.json > experiments/results/u76-odd-series-summary.json
       - name: Preserve failure details
         if: failure()
