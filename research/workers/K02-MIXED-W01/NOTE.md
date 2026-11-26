@@ -477,3 +477,32 @@ G_a\left[
 +d_a\right]\longrightarrow0.
 $$
 This is a test-function deduction under explicit minimum-spacing and multiplicity hypotheses; it does not assert those hypotheses for zeta ordinates. In particular, the zero-counting upper bound alone does not control the local spacing term $M_G/\sigma_G$, so this has not yet established any actual growing-window range.
+
+
+## Close-pair obstruction for projection approximation
+
+This gives a local lower bound complementary to the bump-function upper estimate above. It uses only compact support and the local coercivity hypothesis already used to define the form norm. Let \(\lambda_a>0\) satisfy \(Q_W(f)\ge \lambda_a\|f\|_{L^2(-a,a)}^2\) on the smooth core, and put
+\[
+K_a=\sqrt{\frac{2a^3}{3\lambda_a}}.
+\]
+For a core function \(f\), its Fourier transform \(F(t)=\int_{-a}^a f(x)e^{-itx}\,dx\) obeys
+\[
+|F'(t)|\le \left(\int_{-a}^a x^2\,dx\right)^{1/2}\|f\|_2
+\le K_a\|f\|_q.
+\]
+The estimate extends to the form completion: coercivity gives convergence in \(L^2\), and both evaluation and derivative evaluation are continuous in that norm on the bounded interval.
+
+Suppose distinct simple sample locations \(\gamma,\beta\) have weights \(m_\gamma,m_\beta>0\), and write \(\epsilon=|\beta-\gamma|\). In the weighted sample space, the coordinates of \(g_\gamma\) and \(g_\beta\) are respectively \(1/m_\gamma\) and \(1/m_\beta\) at their own locations, with zero at the other. Let \(j=\Pi_a g_\gamma\), represented by its form-domain function \(f\), and let \(\delta_a(\gamma)=\|g_\gamma-j\|\). Contractivity gives \(\|f\|_q=\|j\|\le \|g_\gamma\|=1/\sqrt{m_\gamma}\). The two coordinate errors therefore imply
+\[
+|F(\gamma)-1/m_\gamma|\le \delta_a(\gamma)/\sqrt{m_\gamma},
+\qquad
+|F(\beta)|\le \delta_a(\gamma)/\sqrt{m_\beta}.
+\]
+Combining them with the derivative bound between \(\beta\) and \(\gamma\) yields
+\[
+\boxed{\displaystyle
+\delta_a(\gamma)\ge
+\frac{[1-\epsilon K_a\sqrt{m_\gamma}]_+}
+{\sqrt{m_\gamma}+m_\gamma/\sqrt{m_\beta}}.}
+\]
+For unit weights this is \(\delta_a(\gamma)\ge (1-\epsilon K_a)_+/2\). Thus any pair with \(\epsilon K_a\ll1\) prevents the target sample vector from being well approximated by the local Fourier subspace, with a defect bounded away from zero. This is a conditional geometric obstruction: it does not assert that zeta has such close pairs in the relevant range, nor does it determine the behavior of \(\lambda_a\) as \(a\) grows. In particular, it supplies no actual growing-window conclusion without those inputs.
