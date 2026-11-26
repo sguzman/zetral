@@ -72,10 +72,11 @@ const cutoffReuse = {trialPatchRegenerated: true, oldTrialPatchFieldsMatched: tr
 
 // Regenerate witness and guards through the committed generator and compare
 // with stored exact artifacts; all heavyweight evaluation remains on the runner.
-const generatedWitness = cp.execFileSync(process.execPath, ['experiments/u75-witness-guard.js', '--witness'], {encoding: 'utf8'});
+const childOptions = {encoding: 'utf8', maxBuffer: 32 * 1024 * 1024};
+const generatedWitness = cp.execFileSync(process.execPath, ['experiments/u75-witness-guard.js', '--witness'], childOptions);
 const storedWitness = Array.from({length: 4}, (_, i) => readText(`experiments/u75-witness-part-${i + 1}.txt`)).join('');
 assert(JSON.stringify(JSON.parse(generatedWitness)) === JSON.stringify(JSON.parse(storedWitness)), 'witness regeneration');
-const generatedGuards = cp.execFileSync(process.execPath, ['experiments/u75-witness-guard.js'], {encoding: 'utf8'});
+const generatedGuards = cp.execFileSync(process.execPath, ['experiments/u75-witness-guard.js'], childOptions);
 const storedGuards = readJson('experiments/u75-guard-result.json');
 assert(JSON.stringify(JSON.parse(generatedGuards)) === JSON.stringify(storedGuards), 'guard regeneration');
 const guardRows = storedGuards.rows[0].guards;
