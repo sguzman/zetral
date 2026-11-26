@@ -286,3 +286,19 @@ For completeness, the sum-integral error is (S_n-I(g)=O(\log g)). The function (
 This implies (|a_n|\to\infty), hence ((a_n)\notin\ell^2). In the existing commuting-projection construction, the general residue-sequence lemma therefore gives (M_N\to\infty), weak escape, and \(\|B_Nh_N\|\to0\), while each fixed-sample mixed kernel still has a finite limit. This is an exact analytic statement about the regular canonical product and its abstract diagonal realization. It is not an arithmetic construction, a Weil-form model, or a statement about zeta ordinates.
 
 The derivation uses elementary monotone quadrature and integral estimates; it has not been formalized or independently reviewed. The computer table above remains only a diagnostic corroboration, not a premise in the proof.
+
+### Smooth counting laws with a linear term
+
+The same proof applies to the exact quantiles of (F_{c,d,b}(t)=c,t\log t+d,t+b), where (c>0), on any half-line (t\ge t_0) on which (F'>0), with (b) chosen so (F(t_0)=0). Define (t_n=F^{-1}(n)) and the corresponding genus-zero product. In the density integral the scaled weight becomes
+
+\[
+cg\int_{t_0/g}^\infty (\log g+\log x+1+d/c)f(x)\,dx.
+\]
+
+The constant (1+d/c) multiplies (\int_0^\infty f(x)dx=0), just like (\log g). The logarithmic moment remains (-\pi^2/2); the omitted lower tail is (O((\log g)^2)), and the same monotone cell comparison gives (O(\log g)) sum-integral error. Therefore
+
+\[
+\log\left|\frac1{t_n\Delta'(t_n)}\right|=\frac{c\pi^2}{2}t_n+O((\log t_n)^2).
+\]
+
+For (c=1/(2\pi)), this is again (\pi t_n/4+O((\log t_n)^2)), independent of (d). The smooth Riemann–von Mangoldt main term has precisely this form, with (d=-(1+\log(2\pi))/(2\pi)). This robustness statement concerns exact smooth quantiles only. An (O(\log T)) counting discrepancy does not automatically transfer the residue asymptotic to actual zeros: controlling the discrete logarithmic potential under perturbations, especially near arbitrarily small gaps, remains open here.
