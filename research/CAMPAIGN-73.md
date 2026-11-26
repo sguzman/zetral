@@ -13,3 +13,12 @@ Lead owns campaign; worker scopes unchanged. No independent original-form evalua
 ## U73-01 — Exact witness and guards COMPLETE
 
 [Source](../experiments/u73-witness-guard.js) be1bdc36a9e0fd30f38822877d3a6d5e677d5e7c. Exact rational endpoint 121/10 witness bound 2971/1000, step 16, 41549 checked cells; 807455 serialized characters across two byte-verified parts a2d62789a490904ee47b33e47e579b5de37910ed and 4757040301997016b2f7a2ca17e581e1fbc3b591. [Guard result](../experiments/results/u73-249-100-guards.json) 9338b793dc4f92265a23180122dc73cf2a4cc608 byte-verified. Endpoint slack log(12.1)-2.49 >0.00320545, strictly within log(11)..log(13). LowCount48 fails both sectors; lowCount49 is first common passing support. Use 49. Next U73-02 fresh even h=249/100, J128/KEM20/T832/M20480/lowCount49, staged trial and residuals. Runtime execution; standalone CLI, CI, independent original-form evaluation and formal/human review not performed. Candidate frontier remains 2.48; no RH proof or originality claim.
+
+
+## U73-01 — Exact witness and guards COMPLETE
+
+[Witness and guard generator](../experiments/u73-witness-guard.js) and [guard result](../experiments/results/u73-249-100-guards.json), commit f8498d92aa9fd61f7eb6a42f2fd03fdfaa754ed2. Exact endpoint 121/10 witness bound 2.971, step 16, 41549 cells, 807455 characters in three byte-verified parts. Endpoint slack >0.00320545, positive slacks relative to log(11) and log(13); lowCount48 fails both and 49 passes both, first common adequate support.
+
+## U73-02 — Even staged comparison IN PROGRESS
+
+[Staged source](../experiments/u73-m20480-staged.js) and four byte-verified trial parts at 9ac82af4adcce4dba37f1a490ec2d75111875bde. Fresh h=249/100, J128/KEM20/T832/M20480/lowCount49; 368 complement directions, 49 positive lower energy diagonals. First ten 512-mode chunks 98..10336 each byte-verified; exact contiguous prefix sum (2401 interval pairs) [stored](../experiments/results/u73-249-100-even-t832-m20480-aggregate-prefix-98-10336.json). Continue 10338..20480 (5072 remaining), aggregate and exact replay. Frontier remains 2.48; no positivity claim at 2.49, standalone CLI, independent original-form evaluation, RH or originality claim.

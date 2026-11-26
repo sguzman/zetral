@@ -254,3 +254,6 @@ LXXII CLOSED (candidate) at h=2.48, closure 6d2524ed161f3ce122105e3f8ab24fe591f8
 
 
 - LXXIII U73-01 COMPLETE: campaign checkpoint fab24b7342896f2c96888f87e8f15947c956a440. Endpoint 121/10 witness bound 2.971, 41549 cells, two byte-verified parts; guard result 9338b793dc4f92265a23180122dc73cf2a4cc608, lowCount48 fails both, 49 passes both. Next U73-02 even h=249/100, J128/KEM20/T832/M20480/lowCount49. Candidate frontier 2.48. No independent original-form evaluation, CI, standalone CLI, RH or novelty claim.
+
+
+- LXXIII U73-01 COMPLETE: witness/guard f8498d92aa9fd61f7eb6a42f2fd03fdfaa754ed2, endpoint 121/10, bound 2971/1000, step 16, 41549 checked cells, 807455 characters in three byte-verified parts. Endpoint slack >0.00320545; lowCount48 fails both, 49 passes both. U73-02 IN_PROGRESS: fresh even trial J128/KEM20/T832/M20480/lowCount49, 368 complement modes, 49 positive lower energy diagonals, 1576156 characters in four byte-verified parts, source and trial 9ac82af4adcce4dba37f1a490ec2d75111875bde. First 5120 even residual modes 98..10336 in 10 disjoint byte-verified chunks, exact prefix sum persisted in this checkpoint. Next mode 10338; 5072 modes remain. No comparison or frontier advance at 2.49. No independent original-form evaluation, standalone CLI, RH or novelty claim. README and worker scopes unchanged.
