@@ -1,0 +1,14 @@
+const fs=require('node:fs');const root=__dirname.replace(/\/experiments$/,'')+'/';const read=p=>fs.readFileSync(root+p,'utf8');
+const raw=JSON.parse(read('experiments/results/u72-62-25-even-t832-raw.json'));
+const z=JSON.parse(read('experiments/results/u72-62-25-even-t832-transform.json'));
+const staged=require(root+'experiments/u72-staged.js'),src=staged.extend(read('experiments/tc01-post-log11-em.js'));
+const params={hn:62n,hd:25n,J:128,M:16384,T:832,lowCount:47,KEM:20};
+const f0=require(root+'experiments/lb03-dyadic-tail-factors.js')(src,params,false);
+const f=require(root+'experiments/pc03-constant-oscillatory-factors.js')(src,params,f0);
+const p=require(root+'experiments/lxx-full-energy-proposal.js')(raw,f,z);
+const base=require(root+'experiments/u72-exact-replay.js')(raw,p,null);
+const exact=require(root+'experiments/u72-exact-replay.js')(raw,p,z);
+fs.writeFileSync(root+'experiments/results/u72-62-25-even-t832-allocation.json',JSON.stringify(p));
+fs.writeFileSync(root+'experiments/results/u72-62-25-even-t832-baseline-replay.json',JSON.stringify(base));
+fs.writeFileSync(root+'experiments/results/u72-62-25-even-t832-transformed-replay.json',JSON.stringify(exact));
+console.log(JSON.stringify({score:p.score,weights:p.weights,baseline:{positiveMinors:base.positiveMinors,failedMinor:base.failedMinor},transformed:{positiveMinors:exact.positiveMinors,failedMinor:exact.failedMinor,marginNumerator:exact.marginNumerator,nextGridFails:exact.nextGridFails}}));
