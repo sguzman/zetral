@@ -232,6 +232,50 @@ coarse; it does not enclose the finite partial sum, whose exponentials still
 need outward-rounded evaluation. At h=251/100, the constant is finite and
 explicit, so the bound can be made arbitrarily small as J grows.
 
+### Accelerated exact decomposition
+
+The algebraic part of each summand can instead be summed exactly:
+
+    J_h(a)-E_h(b)
+      = (1/a-1/b) - 1/(h a^2)
+        + exp(-a h)/(h a^2) + exp(-b h)/b,
+    a=2j+1/2, b=2j+1.
+
+The first infinite sum is
+
+    sum_{j>=0} (1/(2j+1/2)-1/(2j+1)) = pi/4 + (log 2)/2.
+
+For a direct verification, write it as the integral
+`integral_0^1 (x^(-1/2)-1)/(1-x^2) dx`; setting `u=sqrt(x)` reduces the
+integrand to `2/((u+1)(u^2+1))`, whose elementary integral is
+`pi/4+(log 2)/2`. The second sum is
+
+    sum_{j>=0} 1/(2j+1/2)^2 = (pi^2+8G)/4,
+
+where `G=sum_{j>=0}(-1)^j/(2j+1)^2` is Catalan's constant. This follows by
+splitting the odd reciprocal-square sum into residue classes 1 and 3 modulo
+4; their sum is `pi^2/8` and their difference is `G`.
+
+Consequently the entire subtracted-kernel component has the exact form
+
+    D_00 = 2 [ pi/4 + (log 2)/2 - (pi^2+8G)/(4h) + R(h) ],
+
+    R(h)=sum_{j>=0} [ exp(-h(2j+1/2))/(h(2j+1/2)^2)
+                     + exp(-h(2j+1))/(2j+1) ].
+
+This representation has a geometric tail. With `q=exp(-2h)`, the remainder
+after j=0,...,J-1 is at most
+
+    [ exp(-h(2J+1/2))/(h(2J+1/2)^2)
+      + exp(-h(2J+1))/(2J+1) ] / (1-q).
+
+Both terms are positive and their denominators increase with j, so this is
+an immediate comparison with geometric series. Unlike the earlier O(1/J)
+bound, the exponential tail is practical at h=251/100. This is an exact
+analytic reduction; evaluation of `pi`, `log 2`, `G`, and the finite
+exponential sum still requires outward-rounded arithmetic before it can be
+compared with the compressed entry interval.
+
 This is the first explicit continuous-term reduction independent of the
 compressed entry routine. The odd first diagonal and general off-diagonal
 entries still require separate formulas. The reduced problem now has a

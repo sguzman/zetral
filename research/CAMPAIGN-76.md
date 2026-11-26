@@ -224,3 +224,11 @@ continuous decomposition, followed by a derivation of the odd first diagonal.
 The method is analytically distinct from
 the midpoint diagnostic and may falsify a term or normalization in the
 compressed entry path.
+
+The rational part has now been summed analytically, giving
+`D_00=2[pi/4+(log 2)/2-(pi^2+8G)/(4h)+R(h)]`, where G is Catalan's constant
+and R is a positive exponential series with explicit geometric tail in the
+direct Gram note. This replaces the coarse O(1/J) tail with an exponentially
+decaying remainder. The formula is derived but not numerically evaluated or
+independently compared with the compressed continuous terms; outward-rounded
+evaluation is the next checkpoint.
