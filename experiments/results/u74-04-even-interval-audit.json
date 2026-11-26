@@ -1,0 +1,22 @@
+{
+  "h": "5/2",
+  "odd": false,
+  "n": 50,
+  "narrowed": [
+    1875,
+    1875,
+    1875,
+    1875,
+    1875,
+    1875,
+    1875
+  ],
+  "matchedEntries": 2500,
+  "matchedRadii": 50,
+  "scope": "Independent stored interval reconstruction only; determinant checks performed separately. Not independent original-form evaluation.",
+  "factorsMatch": true,
+  "transformedEighthMatch": true,
+  "storedNewTailsCompared": true,
+  "originalEighthMatches": 50,
+  "unchangedEighthMatches": 25
+}
