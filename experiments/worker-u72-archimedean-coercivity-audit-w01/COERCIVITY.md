@@ -643,7 +643,7 @@ and
 
 `mu_1 <= rho_12 < 2497265583/10^9 - log(2) - pi/2 < 0.233323`.
 
-This Ritz cap is sharper than the explicit twelve-profile vector cap: their common scalar `-log(2)-pi/2` cancels, and the rational Ritz upper endpoint `2497265583/10^9` is smaller than the exact vector rational part `1583706824907594442232592989897201/634175928969695803725059349324000`. The interval certificate currently covers `N=3,6,12` only.
+This Ritz cap is sharper than the explicit twelve-profile vector cap: their common scalar `-log(2)-pi/2` cancels, and the rational Ritz upper endpoint `2497265583/10^9` is smaller than the exact vector rational part `1583706824907594442232592989897201/634175928969695803725059349324000`. The exact interval certificate also covers `N=16` below.
 
 For `N=16`, exact LDL pivots at `ell=2497222396/10^9` are all positive; at `u=2497222397/10^9`, the first fifteen are positive and the last is negative. Hence
 
@@ -653,4 +653,15 @@ and the rational pi/log enclosures give
 
 `mu_1 <= rho_16 < 2497222397/10^9 - log(2) - pi/2 < 0.233279`.
 
-This is the sharpest certified upper bound in the current note. The exact generalized-eigenvalue intervals are available for `N=3,6,12,16`.
+This was the sharpest certified upper bound before the next extension. The exact generalized-eigenvalue intervals are available for `N=3,6,12,16` and `N=20` below.
+
+
+For `N=20`, exact LDL pivots at `ell=2497200927/10^9` are all positive; at `u=2497200928/10^9`, the first nineteen are positive and the last is negative. Therefore
+
+`2497200927/10^9 < lambda_min(A_20,M_20) < 2497200928/10^9`,
+
+which gives the current bound
+
+`mu_1 <= rho_20 < 2497200928/10^9 - log(2) - pi/2 < 0.233258`.
+
+The exact Ritz intervals are now certified for `N=3,6,12,16,20`.
