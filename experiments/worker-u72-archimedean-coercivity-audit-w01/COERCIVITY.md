@@ -146,3 +146,11 @@ For each fixed `u_j`, implicit differentiation of `omega_j tan(omega_j h/2)=2u_j
 `d omega_j/dh = -[omega_j^2 sec^2(omega_j h/2)/2]/[tan(omega_j h/2)+(omega_j h/2)sec^2(omega_j h/2)] < 0`.
 
 Since `c_j` is strictly increasing as a function of `omega_j`, every `c_j(h)` decreases with `h`; consequently `C(h)=sum_j c_j(h)` is decreasing. Thus the exact certificate `C(62/25)>2.4317843723` also supplies the same lower bound for every `0<h<=62/25`. This interval comparison concerns only the compressed `alpha-alpha_0` form.
+
+## Limitation after restoring the constant multiplier
+
+The full archimedean multiplier is `alpha_0 + (alpha-alpha_0)`, where
+
+`alpha_0 = -EulerGamma - pi/2 - 3 log(2) - log(pi)`.
+
+Combining only the certified increment lower bound `C(62/25)>2.4317843723` with this constant gives a lower endpoint of approximately `-2.94039904693`. Thus this component estimate alone does not certify positivity even for the full archimedean compression, much less the Weil form. This negative lower endpoint is a limitation of the bound and is not evidence that the actual compressed archimedean operator has a negative eigenvalue.
