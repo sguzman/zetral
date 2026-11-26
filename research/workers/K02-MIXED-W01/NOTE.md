@@ -833,3 +833,32 @@ Under the spacing, multiplicity-cap, and weighted-count hypotheses of the test-f
 +\frac{\log T}{T}\right].
 \]
 This supplies a conditional route from local sample geometry to the global Hilbert–Schmidt error used in the growing-window kernel criterion. The spacing and multiplicity hypotheses are not established for zeta; the estimate gives no unconditional or actual-ordinate rate.
+
+
+### Pair-correlation energy version without separation hypotheses
+
+The bump test also yields an aggregate bound without imposing any minimum spacing or multiplicity cap. Fix the same \(\psi\in C_c^\infty(-1,1)\) with \(\widehat\psi(0)=1\), and define
+\[
+\mathcal P_a(G)=
+\sum_{\substack{\gamma\in\Gamma\\0<\gamma\le G}}
+\frac1{m_\gamma^2}
+\sum_{\substack{\lambda\in\Gamma\\\lambda\ne\gamma}}
+m_\lambda\,|\widehat\psi(a(\lambda-\gamma))|^2.
+\]
+The inner sums converge by rapid decay and the weighted zero-counting bound. The exact sample-coordinate calculation in the preceding test-function argument gives directly
+\[
+S_a(G)\le\mathcal P_a(G),
+\]
+with no spacing or multiplicity assumption. Combining this with the mean-square row inequality gives
+\[
+\frac1{N(G)}
+\sum_{\gamma\in\Gamma_G}
+\left(\sup_{z\in K}\frac{|J_a(\gamma,z)|}{M_a}\right)^2
+\le
+2C_K^2G^2\left(\frac{\mathcal P_a(G)}{N(G)}+d_a^2\right).
+\]
+Therefore \(G_ad_a\to0\) and
+\[
+\frac{G_a^2\mathcal P_a(G_a)}{N(G_a)}\to0
+\]
+suffice for normalized mixed-kernel decay on \(K\) for a density-one subset of ordinates up to \(G_a\). The new unresolved input is a bound for this explicitly defined weighted pair-correlation energy at the Fourier scale \(1/a\). This route avoids minimum-spacing and multiplicity-cap hypotheses, but no such arithmetic energy estimate is proved here.
