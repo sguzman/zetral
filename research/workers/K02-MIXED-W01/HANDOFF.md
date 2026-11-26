@@ -73,3 +73,11 @@
 
 - Pair-energy route without spacing: the bump test yields \(S_a(G)\le\mathcal P_a(G)\), where \(\mathcal P_a(G)=\sum_{\gamma\le G}m_\gamma^{-2}\sum_{\lambda\ne\gamma}m_\lambda|\widehat\psi(a(\lambda-\gamma))|^2\). Thus \(G_ad_a\to0\) and \(G_a^2\mathcal P_a(G_a)/N(G_a)\to0\) suffice for density-one normalized mixed-row decay. This removes minimum-spacing and multiplicity-cap assumptions; estimating the weighted pair energy remains open.
 - Montgomery support-range audit: with the exact reciprocal weight cancellation, Montgomery's theorem applies to the bump energy only when (2a/\log T<1) bounded away from 1. Under RH and simple zeros, along fixed (2a/\log T\to c\in(0,1)), the off-diagonal energy is asymptotic to a positive constant times (N(T)); this misses the required (o(N(T)/T^2)). This records a proved-range limitation, not a bound outside the support range or an impossibility theorem. See NOTE.md and Montgomery (1973), original paper linked there.
+
+### Follow-up bounded task K02-MP02 (claimed 2026-11-26)
+
+- Baseline: worker head `e6f7fd1a9de3847a2817c10d91468e8fcb2e7766`.
+- Question: make the fixed-ratio Montgomery pair-energy asymptotic fully explicit, including the varying test function that cancels the original pair weight, support constants, diagonal subtraction, positivity and exact conditional hypotheses.
+- Scope: K02 density-one pair-energy criterion; no edits to lead-owned LXXIV files or finite comparison tasks.
+- Acceptance: a self-contained derivation in NOTE.md and source-backed theorem reference; state the parameter regime and limitations without extending Montgomery beyond proved support.
+- Stop condition: stop if test-family convergence cannot be justified from Montgomery's stated uniformity, and record only the supported bound.
