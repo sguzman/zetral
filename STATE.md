@@ -1,7 +1,7 @@
 # Research state
 
 Date: 2026-11-25 UTC.
-Active campaign: LXXI — Guarded extension (research/CAMPAIGN-71.md). Current candidate frontier h=2.46; latest checkpoint below.
+Active campaign: LXXII — Guarded extension (research/CAMPAIGN-72.md). Current candidate frontier h=2.47; latest checkpoint below.
 Standing owner authorization: select productive bounded in-scope mathematical campaigns autonomously, preserve durable checkpoints, and choose next direction without routine approval. See AGENTS.md and COORDINATION.md. No external submission, new expenses, access changes or mission change authorized. ChatGPT works during conversation turns, not continuously in the background.
 
 Campaigns I–X concluded. Historical states and closures in research/CAMPAIGN-0{1,2,3,4,5,6,7,8,9}-STATE.md and -CLOSURE.md. Historical large-window manuscript v0.2 preserved.
@@ -232,3 +232,8 @@ Resume on continue: reconcile any newer main commits before work; coordinate FDA
 ## Superseding checkpoint — Campaign LXXI
 
 LXX closed (candidate) at h=2.46, closure 9e7cafbf01add3f26817e9ec285d1ff26a67f06b; both exact comparisons 45/45 with independent stored audit, even/odd margins 64987/10^6 and 85965/10^6. LXXI active, U71-01 complete at 52d58686f177d901edb069e2e59874a9f185bdb4, next U71-02 even h=247/100, lowCount46, J128/KEM20/M16384/T832. Latest coordination c43a7ac56c551281a9543138af53b81dad7d5b9c. No independent original-form evaluation, CI, RH or novelty claim.
+
+
+## Superseding checkpoint — Campaign LXXII
+
+LXXI closed (candidate) at h=2.47, closure fa10fc8a21e04b01c8bf50a089f26d0f0b892fc7. Both exact comparisons 46/46; independent stored audit matched 4232 matrix entries, 92 radii, 92 determinants and 8464 aggregate endpoints; regenerated witness/guards matched. Margins 1293/10^6 even, 8/10^6 odd, next grids fail. LXXII active, plan 6993f5ab61c50115ef2a70e75f57ee82631b29be, target h=2.48, endpoint 12, U72-01 next. No independent original-form evaluation, CI, standalone CLI, RH or novelty claim. README and worker scopes unchanged.
