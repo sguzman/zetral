@@ -152,6 +152,30 @@ once `h<4 exp(4 alpha_0)`. This is an explicit sufficient short-window
 condition, not a sharp threshold. It concerns the archimedean compression
 alone and does not establish positivity of the prime-corrected Weil form.
 
+In fact this root-series floor has the sharper asymptotic
+
+`C(h) ~ log(1/h)` as `h` decreases to zero.
+
+To see the lower bound, fix `0<delta<1` and retain only indices with
+`y_j=u_jh<=delta`. Since `x_j^2<=y_j`, we have `x_j^2<=delta`, and
+`cos(x_j)>=1-x_j^2/2>=1-delta/2`. Using `sin(x)<=x` gives
+`tan(x_j)<=x_j/(1-delta/2)`, hence
+`x_j^2>=y_j(1-delta/2)`. Together with
+`y_j^2+x_j^2<=y_j(1+y_j)`, this proves
+
+`c_j(h) >= [(1-delta/2)/(1+delta)] / u_j`.
+
+The harmonic sum over `u_j<=delta/h` is `log(1/h)+O_delta(1)`, so
+`liminf C(h)/log(1/h)>=(1-delta/2)/(1+delta)`. Letting delta decrease
+to zero gives a lower limit of at least one. For the upper bound,
+`c_j<=1/u_j` for all indices, while for `y_j>1`,
+`c_j<=pi^2/(4u_j^3h^2)` because `x_j<pi/2`. The indices with
+`y_j<=1` therefore contribute at most `log(1/h)+O(1)`, and the
+remaining cubic tail is `O(1)` by integral comparison. This proves the
+matching upper limit. Consequently the established full archimedean lower
+floor `alpha_0+C(h)` has leading term `log(1/h)`; this does not identify
+the exact asymptotic of the actual compressed operator's least eigenvalue.
+
 ## Exact-rational finite certificate at `h=62/25`
 
 The root-series decimal can be bounded below without trusting floating-point root evaluations. For `x in [0,pi/2]`, Taylor's theorem gives
