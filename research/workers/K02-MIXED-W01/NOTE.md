@@ -761,3 +761,17 @@ where \(\varepsilon_a=\|C-B_a\|_{\mathrm{HS}}\). Therefore, if \(G_a\to\infty\) 
 \]
 the mean-square normalized mixed-kernel row norm tends to zero. Chebyshev's inequality then implies that for every fixed \(\eta>0\), the proportion of ordinates \(\gamma\le G_a\) with
 \(\sup_{z\in K}|J_a(\gamma,z)|/M_a>\eta\) tends to zero. This is a density-one conclusion. If one additionally assumes simplicity, Riemann–von Mangoldt gives \(N(G)\asymp G\log G\), so a sufficient condition is \(G_a^3\varepsilon_a^2/\log G_a\to0\) together with \(G_ad_a\to0\). No simplicity or asymptotic for \(N(G)\) is used in the general statement.
+
+
+### Close-pair counts force aggregate trace defect
+
+For simple sample points, the pair estimate gives more than a pointwise obstruction. Let \(\{(\gamma_j,\beta_j)\}_{j=1}^P\) be disjoint pairs of distinct simple positive ordinates, all lying in \((0,G]\), with gaps \(\epsilon_j=|\gamma_j-\beta_j|\). The close-pair bound implies
+\[
+S_a(G)\ge\sum_{j=1}^P\delta_a(\gamma_j)^2
+\ge \frac14\sum_{j=1}^P[1-\epsilon_jK_a]_+^2.
+\]
+Consequently, for any \(0<\theta<1\), the number of disjoint pairs in \(\Gamma_G\) with \(\epsilon_jK_a\le\theta\) is at most
+\[
+\frac{4S_a(G)}{(1-\theta)^2}.
+\]
+Thus an aggregate trace-defect estimate tending to \(o(N(G))\) rules out a positive proportion of disjoint pairs at the corresponding \(K_a^{-1}\) scale. This is a conditional connection: the coercivity-dependent scale \(K_a\) is not quantitatively known here, and no zeta close-pair count at that scale is asserted.
