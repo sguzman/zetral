@@ -1,0 +1,71 @@
+{
+  "results": [
+    {
+      "T": 768,
+      "score": 1.0217085825194685,
+      "upperFirstTwo": [
+        [
+          1.0000000000000004,
+          0.9999999135888302
+        ],
+        [
+          0.9999999135888302,
+          1.0000000000000007
+        ]
+      ],
+      "lowerFirstTwo": [
+        [
+          0.8850495083332908,
+          0.8853220845011975
+        ],
+        [
+          0.8853220845011975,
+          0.8850748012784341
+        ]
+      ],
+      "baselineRadiusFirstTwo": [
+        8.668724328178444e-16,
+        1.168426426778426e-15
+      ],
+      "maxBaselineRelativeRadius": 1.168426426778426e-15,
+      "approxMinUpper": 8.197794613664344e-8,
+      "approxMinLower": -0.00026000989054831094,
+      "maxUpperOffDiagonal": 0.9999999135888302,
+      "exactSecondMinorSign": -1
+    },
+    {
+      "T": 832,
+      "score": 0.9280415701115964,
+      "upperFirstTwo": [
+        [
+          1.0000000000000027,
+          0.9999996399237957
+        ],
+        [
+          0.9999996399237957,
+          1.0000000000000004
+        ]
+      ],
+      "lowerFirstTwo": [
+        [
+          0.8879786074560927,
+          0.8882572374739487
+        ],
+        [
+          0.8882572374739487,
+          0.8881063779749214
+        ]
+      ],
+      "baselineRadiusFirstTwo": [
+        3.538677815206855e-15,
+        1.055430198872622e-15
+      ],
+      "maxBaselineRelativeRadius": 3.538677815206855e-15,
+      "approxMinUpper": 3.5566225363816586e-7,
+      "approxMinLower": -0.0002148797732782434,
+      "maxUpperOffDiagonal": 0.9999996399237957,
+      "exactSecondMinorSign": -1
+    }
+  ],
+  "scope": "floating diagnostic from stored intervals and exact replay matrix; only minor signs are exact"
+}
