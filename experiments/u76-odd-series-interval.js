@@ -326,7 +326,7 @@ for(const {q,p} of primePowers) {
   const F=sub(mul(sub(ONE,divI(lq,hOdd)),c),divI(s,pi));
   oddPrime=add(oddPrime,scale(mul(mul(logInteger(p),divI(ONE,sqrtIntegerInterval(q))),F),2n));
 }
-const Nodd=220;
+const Nodd=260;
 const zeta=new Map(); for(let r=2;r<=Nodd+1;r++) zeta.set(r,scale(hurwitzZetaInterval(r),1n,2n**BigInt(r)));
 const zeta22=new Map(); for(let r=2;r<=Nodd+1;r++) zeta22.set(r,scale(hurwitzZetaInterval(r,9n),1n,2n**BigInt(r)));
 let endpointZero=ZERO, endpointH=ZERO;
