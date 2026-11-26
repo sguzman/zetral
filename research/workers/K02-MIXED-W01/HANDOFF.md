@@ -82,3 +82,11 @@
 - Acceptance: a self-contained derivation in NOTE.md and source-backed theorem reference; state the parameter regime and limitations without extending Montgomery beyond proved support.
 - Stop condition: stop if test-family convergence cannot be justified from Montgomery's stated uniformity, and record only the supported bound.
 - K02-MP02 COMPLETE: justified the T-varying test family from Schwartz convergence and Montgomery's uniform theorem on compact subsets of \((-1,1)\); derived the off-diagonal constant by subtracting the diagonal via the triangular Fourier identity. The worker energy also includes negative ordinates and ordinates above T: bounded opposite-sign pairs by \(O_p(a^{-p})\) and positive boundary-crossing pairs by \(O(\log^2T)\), both using Riemann–von Mangoldt and rapid decay. Conditional conclusion: under RH and simplicity, for \(q_T=2a/\log T\to c\in(0,1)\), \(\mathcal P_a(T)/N(T)\to I(c)>0\), which rules out the density-one energy criterion on this fixed-ratio range. No uniform claim as c approaches 0 or 1, no use beyond Montgomery's proved support, no conclusion without simplicity. Details and source in NOTE.md.
+
+### Follow-up bounded task K02-MP03 (claimed 2026-11-26)
+
+- Baseline: worker head `f5c35f83c13b13c90979b5f07df9375286a57825`.
+- Question: extend the RH+simplicity Montgomery obstruction to the shrinking support regime (q_T=2a/\log T\to0), with (a\to\infty).
+- Scope: parameter-uniform asymptotics for the same K02 bump energy, no lead-owned Campaign LXXIV files.
+- Acceptance: prove or refute \\(\mathcal P_a(T)/N(T)\\asymp 1/q_T\\) from Montgomery's stated uniform theorem, including test-family, diagonal, and truncation errors; state exact hypotheses.
+- Stop condition: if the stated (o(1)) theorem remainder cannot be controlled relative to the growing main term, record the obstruction and do not assert a no-go extension.
