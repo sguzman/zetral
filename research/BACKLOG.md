@@ -103,8 +103,10 @@ analytic theorems and from any RH implication.
   reconstructs stored components but does not independently evaluate the
   original Weil form. Campaign LXXVI is the active source-form audit; its
   symbolic correlation and parity reduction is in
-  research/positivity/U76-01-direct-arithmetic-Gram.md. The low-entry numerical
-  evaluation and compressed-basis mapping remain unverified.
+  research/positivity/U76-01-direct-arithmetic-Gram.md. Exploratory midpoint
+  values are persisted, but have no rigorous quadrature enclosure; the
+  same-index compressed intervals differ and the test-function map remains
+  unverified.
 - **Design / falsification:** Reconstruct from source formulas rather than the
   stored assembled matrices; independently regenerate witness and guards;
   verify every mode range and rational endpoint; compare with adjacent failing

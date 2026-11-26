@@ -1,0 +1,42 @@
+name: U76 low-entry audit
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: u76-low-entry-audit
+  cancel-in-progress: false
+jobs:
+  direct-form:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: cachix/install-nix-action@v31
+      - name: Run reproducible direct-form and comparison probes
+        run: |
+          set -euo pipefail
+          nix develop --command node --version
+          nix develop --command node --check experiments/u76-direct-diagnostic.js
+          nix develop --command node experiments/u76-direct-diagnostic.js
+          nix develop --command node --check experiments/u76-compressed-entry-probe.js
+          nix develop --command node experiments/u76-compressed-entry-probe.js
+          jq -n --slurpfile d experiments/results/u76-direct-diagnostic.json \
+            --slurpfile c experiments/results/u76-compressed-entry-probe.json \
+            '{direct:{runtime:$d[0].runtime,status:$d[0].status,endpoint:$d[0].primePowerEndpoint,rows:$d[0].rows},compressed:{runtime:$c[0].runtime,status:$c[0].status,output:$c[0].output}}' \
+            > experiments/results/u76-low-entry-summary.json
+      - name: Commit and push runner readback
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiments/results/u76-direct-diagnostic.json \
+            experiments/results/u76-compressed-entry-probe.json \
+            experiments/results/u76-low-entry-summary.json
+          if git diff --cached --quiet; then
+            echo 'Runner outputs match the committed artifacts.'
+            exit 0
+          fi
+          git commit -m 'U76: run direct low-entry audit on Actions'
+          git push origin HEAD:main

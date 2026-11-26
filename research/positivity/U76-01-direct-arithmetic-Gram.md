@@ -93,3 +93,51 @@ Source: Suzuki, arXiv:2606.09096v4, §1.1 (arithmetic W and Q_W). This
 source states that positivity of the original Weil form on all compactly
 supported smooth tests is equivalent to RH. The present finite symbolic
 reduction proves neither positivity nor RH.
+
+## Exploratory low-entry comparison (2026-11-26)
+
+The direct formula was evaluated by the separate script
+experiments/u76-direct-diagnostic.js using composite midpoint quadrature in
+IEEE-754 double precision at a=2.51. Refinement used N=2^12, 2^14, 2^16,
+2^18, and 2^20 subintervals. At the final mesh:
+
+    G_00                  = 0.019197802326197156
+    G_11                  = 0.019352169298925016
+    G_1,-1                = 0.019249031648779225
+    G_11 - G_1,-1         = 0.00010313765014579104
+
+Between the last two meshes, the changes were approximately 5.89e-11 for
+G_00 and 9.61e-12 for the odd diagonal. These are observed discretization
+differences only, not rigorous error bounds. The direct prime-power list
+contains all powers q<=151; exp(5.02) is between 151 and 152.
+
+The same-index low-support probe of the existing compressed code produced,
+at Q=10^66, h=251/100, J=128, T=4, M=6, lowCount=1, KEM=20:
+
+    compressed even A[0,0] = [39010612883096363023510418276624185312940219011026208353945855967,
+                              39010612883096363023510418276624185312940219011026208353948085882] / Q
+    compressed odd  A[0,0] = [69482970314056417111772062543954534383073523169947604567622812363,
+                              69482970314056417111772062543954534383073523169947604567627307544] / Q
+
+The intervals are exact outputs of the existing compressed implementation,
+extracted by experiments/u76-compressed-entry-probe.js. That probe reuses the
+production entry code, so it is a comparator only, not an independent
+calculation. The apparent same-index values differ substantially from the
+direct raw Fourier Gram entries. This does not falsify either result: the
+compressed A matrix includes additional transformations, and no theorem or
+change-of-basis identity has been derived that identifies A[0,0] with G_00 or
+the odd entry with G_11-G_1,-1. The new actionable gap is the missing
+test-function map and its normalization.
+
+Reproduction:
+
+    node --check experiments/u76-direct-diagnostic.js
+    node experiments/u76-direct-diagnostic.js
+    node --check experiments/u76-compressed-entry-probe.js
+    node experiments/u76-compressed-entry-probe.js
+
+Artifacts: experiments/results/u76-direct-diagnostic.json and
+experiments/results/u76-compressed-entry-probe.json. The direct values are
+exploratory floating-point evidence only; the compressed intervals are
+replayed from the shared implementation. No original-form certificate or
+LXXV basis map has been established.

@@ -6,6 +6,8 @@ This is the chronological campaign record, not the public project overview. For 
 
 LXXV closed as a finite candidate at h=2.51 after the hosted exact stored-component audit passed. The audit did not independently evaluate the original Weil quadratic form. LXXVI is active to investigate that gap; its source audit identified an existing direct arithmetic Gram formula, but no comparison against the compressed entry implementation has yet been verified. See [LXXV closure](research/CAMPAIGN-75-CLOSURE.md) and [LXXVI plan/checkpoint](research/CAMPAIGN-76.md).
 
+The subsequent low-entry diagnostic gives unvalidated midpoint values for the raw exponential-basis even and odd entries. A probe of the existing compressed A matrix returns different exact intervals at corresponding low indices; because the map between test functions has not been derived, this is an unresolved basis-mapping gap rather than a certificate discrepancy. The scripts and artifacts are recorded in the LXXVI campaign file.
+
 ## Campaigns XII–LVII
 
 | Campaign | Outcome and limitations |

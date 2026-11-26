@@ -127,3 +127,35 @@ tail formula. This is a preserved failed falsification, not a certificate.
 Numerical entry evaluation and the map from LXXV's every-other-frequency basis
 and common scaling remain open. Next evaluate low even/odd entries directly;
 scale only after a justified basis map is established.
+
+## U76-02 low-entry diagnostic checkpoint (2026-11-26)
+
+Direct raw Fourier Gram values at a=2.51 were evaluated by midpoint
+refinement through 2^20 subintervals. The final double-precision values are
+G_00=0.019197802326197156 and G_11-G_1,-1=0.00010313765014579104; changes
+over the final 4x refinement were 5.89e-11 and 9.61e-12 respectively. These
+are exploratory discretization diagnostics without rigorous error bounds.
+The prime-power sum includes q<=151, consistent with exp(5.02) in (151,152).
+
+A low-index extraction from the existing compressed source returned exact
+intervals approximately [0.03901061288309636,0.03901061288309636] for its
+even A[0,0] and [0.06948297031405641,0.06948297031405641] for the odd A[0,0].
+The exact numerators and shared-code provenance are preserved in
+experiments/results/u76-compressed-entry-probe.json. These differ from the
+direct raw Gram values, but no same-entry relation has been proved; A includes
+compressed transformations. Therefore this is a failed same-index mapping
+attempt, not a contradiction in the LXXV certificate.
+
+Reproducible scripts and output files:
+experiments/u76-direct-diagnostic.js,
+experiments/results/u76-direct-diagnostic.json,
+experiments/u76-compressed-entry-probe.js, and
+experiments/results/u76-compressed-entry-probe.json. Both scripts pass
+node --check. Next derive the actual test-function map underlying A and its
+normalization. Until then, full 52x52 source-form comparison is premature.
+
+The manual workflow .github/workflows/u76-low-entry-audit.yml has been added
+to replay these two bounded diagnostics in the repository's locked Nix Node
+environment and commit a compact summary. It has not yet been dispatched.
+The direct midpoint values remain non-certified; the workflow is a
+reproducibility check and does not change that evidence level.
