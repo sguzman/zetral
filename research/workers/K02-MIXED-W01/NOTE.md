@@ -716,3 +716,28 @@ G_a d_a\to0,\qquad
 \frac{G_a^2S_a(G_a)}{N(G_a)}\to0,
 \]
 choose \(\eta_a\to0\) with \(G_a^2S_a(G_a)/(N(G_a)\eta_a^2)\to0\) (for example, the fourth root of this ratio, with any positive vanishing choice when it is zero). Then both hypotheses of the preceding density-one criterion hold.
+
+
+### Spectral Hilbert–Schmidt control of the aggregate defect
+
+The aggregate defect is bounded by a global operator approximation error. Let \(e_\gamma=\sqrt{m_\gamma}\,g_\gamma\), so the \(e_\gamma\) are orthonormal coordinate vectors and \(C e_\gamma=\gamma^{-1}e_\gamma\) for positive ordinates. Since \(m_\gamma\ge1\), for \(0<\gamma\le G\),
+\[
+\delta_a(\gamma)^2
+=\frac1{m_\gamma}\|Q_ae_\gamma\|^2
+\le \frac{G^2}{\gamma^2}\|Q_ae_\gamma\|^2
+=G^2\|Q_aCe_\gamma\|^2.
+\]
+Summing over positive ordinates up to \(G\) and then extending the sum to a full orthonormal basis gives
+\[
+S_a(G)\le G^2\|Q_aC\|_{\mathrm{HS}}^2
+\le G^2\|C-B_a\|_{\mathrm{HS}}^2,\qquad B_a=\Pi_aC\Pi_a.
+\]
+The second inequality follows from \(Q_a(C-B_a)=Q_aC\). In the K01 setting, \(C\) is Hilbert–Schmidt because its eigenvalues are \(1/\gamma\) and the Riemann–von Mangoldt count gives \(\sum_{\gamma>0}\gamma^{-2}<\infty\); \(\Pi_a\to I\) strongly then implies \(B_a\to C\) in Hilbert–Schmidt norm, as recorded in K01.
+
+Consequently \(D_a(G)\le\sqrt{S_a(G)}\le G\varepsilon_a\), where \(\varepsilon_a=\|C-B_a\|_{\mathrm{HS}}\to0\), and K02's row estimate yields the explicit sufficient criterion
+\[
+\sup_{\substack{0<\gamma\le G_a\\\gamma\in\Gamma}}\sup_{z\in K}
+\frac{|J_a(\gamma,z)|}{M_a}
+\le C_K\bigl(G_a^2\varepsilon_a+G_ad_a\bigr).
+\]
+Thus any prescribed range satisfying \(G_a^2\varepsilon_a+G_ad_a\to0\) has uniform normalized mixed-kernel decay. Since \(\varepsilon_a,d_a\to0\), some unquantified \(G_a\to\infty\) satisfies this criterion. This does not give a numerical growth rate without quantitative bounds on \(\varepsilon_a\) and \(d_a\).

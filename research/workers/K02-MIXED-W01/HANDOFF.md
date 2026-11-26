@@ -60,3 +60,5 @@
 - Aggregate trace-defect criterion: \(S_a(G)=\sum_{\gamma\le G}\delta_a(\gamma)^2\) equals the finite-rank trace \(\operatorname{Tr}(R_G(I-\Pi_a))\) and the sum of diagonal kernel deficits \(1/m_\gamma-J_a(\gamma,\gamma)\). Markov's inequality plus the pointwise K02 row bound shows: if \(G_a(\tau_a+d_a)\to0\) and \(S_a(G_a)/(N(G_a)\tau_a^2)\to0\), then the normalized mixed kernel tends uniformly to zero on any fixed compact for all but \(o(N(G_a))\) distinct ordinates. This supplies a conditional aggregate route, but no such \(S_a(G)\) estimate is established.
 
   A compact sufficient specialization is \(G_ad_a\to0\) and \(G_a^2S_a(G_a)/N(G_a)\to0\); choose \(\tau_a=\eta_a/G_a\) with \(\eta_a\to0\) but larger than the square root of the aggregate-defect ratio.
+
+- Hilbert–Schmidt refinement: using the sample eigenbasis \(Ce_\gamma=\gamma^{-1}e_\gamma\), proved \(S_a(G)\le G^2\|(I-\Pi_a)C\|_{\rm HS}^2\le G^2\|C-B_a\|_{\rm HS}^2\). Hence \(D_a(G)\le G\varepsilon_a\), and the mixed row criterion becomes \(C_K(G_a^2\varepsilon_a+G_ad_a)\). K01 records \(\|C-B_a\|_{\rm HS}\to0\), so an existential window follows; an explicit range still requires quantitative rates.
