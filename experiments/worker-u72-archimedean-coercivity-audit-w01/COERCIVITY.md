@@ -262,3 +262,17 @@ At `h=62/25`, this gives `q_alpha(f) <= alpha_0+109/31`. Also `alpha_0=-gamma-pi
 `q_alpha(f)< -9/2+109/31 = -61/62 <0`.
 
 This proves the standalone archimedean compression has a negative direction at `h=62/25`; it does not show that the full Weil form is negative, since the pole and prime contributions can change the Rayleigh quotient. It also does not conflict with the positive lower bound for `alpha-alpha_0`, because the negative constant `alpha_0` is restored here.
+
+## Full-form constant test at the campaign window
+
+For the full restored even form on `I=(-h/2,h/2)`, the same normalized constant has an exact quotient decomposition `q_A=q_alpha+q_H-q_P`. The odd pole vector `sinh(x/2)` is orthogonal to this test; for `c(x)=cosh(x/2)`,
+
+`q_H=2|<f,c>|^2=32 sinh^2(h/4)/h`.
+
+The truncated prime shifts give
+
+`q_P=2 sum_(n>=2, log(n)<h) [Lambda(n)/sqrt(n)]*(1-log(n)/h)`.
+
+At `h=62/25`, `log(12)>h`, so only `n=2,3,4,5,7,8,9,11` contribute. `constant_full_form_certificate.py` uses exact `Fraction` intervals: Machin's arctangent series for pi; positive atanh series with explicit tails for logarithms; `gamma < H_N-log N` at `N=5000`; a positive Taylor partial sum to lower-bound each `1-exp(-2u_j h)` for `j=0,...,299`; a positive Taylor partial sum for `sinh`; and rational upper bounds on `1/sqrt(n)` and the finite prime terms. It asserts the full constant Rayleigh quotient exceeds `19/500=0.038`.
+
+Thus the full-form constant direction is strictly positive at this window even though the standalone archimedean component is strictly negative on the same vector. This is only a one-vector Rayleigh lower bound; it does not prove positivity of the full operator or any finite Schur comparison. Run with `python experiments/worker-u72-archimedean-coercivity-audit-w01/constant_full_form_certificate.py`.
