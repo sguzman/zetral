@@ -243,6 +243,7 @@ const fsub = (a,b) => frac(a[0]*b[1]-b[0]*a[1],a[1]*b[1]);
 const fmul = (a,b) => frac(a[0]*b[0],a[1]*b[1]);
 const fdiv = (a,b) => frac(a[0]*b[1],a[1]*b[0]);
 const fint = n => [BigInt(n),1n];
+function fpow(x,n) { let y=frac(1n),b=x,k=n; while(k){if(k%2)y=fmul(y,b);k=Math.floor(k/2);if(k)b=fmul(b,b);}return y; }
 const fracInterval = a => rat(a[0],a[1]);
 const factorial = n => { let x=1n; for(let j=2n;j<=BigInt(n);j++) x*=j; return x; };
 function bernoulliNumbers(nmax) {
@@ -259,28 +260,28 @@ const bernoulli=bernoulliNumbers(160);
 const emX=rat(517n,4n); // 129.25
 const emDebug=[];
 function hurwitzZetaInterval(s) {
-  let total=ZERO;
+  let prefix=frac(0n);
   for(let n=0;n<128;n++) {
-    const base=rat(BigInt(4*n+5),4n);
-    let den=ONE; for(let k=0;k<s;k++) den=mul(den,base);
-    total=add(total,divI(ONE,den));
+    prefix=fadd(prefix,fpow(frac(4n,BigInt(4*n+5)),s));
   }
-  let tail=add(divI(ONE,mul(rat(BigInt(s-1)),powI(emX, s-1))),
-               scale(divI(ONE,powI(emX,s)),1n,2n));
+  let tail=fadd(frac(4n**BigInt(s-1),BigInt(s-1)*517n**BigInt(s-1)),
+                frac(4n**BigInt(s),2n*517n**BigInt(s)));
   for(let m=1;m<=80;m++) {
-    const rising=fracInterval(risingFactorial(BigInt(s),2*m-1));
-    const coefficient=fracInterval(fdiv(bernoulli[2*m],frac(factorial(2*m))));
-    const xpower=divI(ONE,powI(emX,s+2*m-1));
-    const emTerm=mul(mul(coefficient,rising),xpower);
-    if(s===2 && [1,2,40,79,80].includes(m)) emDebug.push({m,coefficient:coefficient.map(decimal),rising:rising.map(decimal),xpower:xpower.map(decimal),term:emTerm.map(decimal)});
-    tail=add(tail,emTerm);
+    const rising=risingFactorial(BigInt(s),2*m-1);
+    const coefficient=fdiv(bernoulli[2*m],frac(factorial(2*m)));
+    const exponent=s+2*m-1;
+    const xreciprocal=frac(4n**BigInt(exponent),517n**BigInt(exponent));
+    const emTerm=fmul(fmul(coefficient,rising),xreciprocal);
+    if(s===2 && [1,2,40,79,80].includes(m)) emDebug.push({m,coefficient:fracInterval(coefficient).map(decimal),rising:fracInterval(rising).map(decimal),xreciprocal:fracInterval(xreciprocal).map(decimal),term:fracInterval(emTerm).map(decimal)});
+    tail=fadd(tail,emTerm);
   }
   const r=160;
-  const risingBound=fracInterval(risingFactorial(BigInt(s),r-1));
+  const risingBound=risingFactorial(BigInt(s),r-1);
   const twoPiPower=powI(scale(pi,2n),r);
-  const xPower=powI(emX,s+r-1);
-  const remainder=scale(divI(mul(risingBound,divI(ONE,xPower)),twoPiPower),4n);
-  const raw=add(total,tail);
+  const exponent=s+r-1;
+  const rationalRemainder=frac(4n*risingBound[0]*4n**BigInt(exponent),517n**BigInt(exponent));
+  const remainder=divI(fracInterval(rationalRemainder),twoPiPower);
+  const raw=fracInterval(fadd(prefix,tail));
   return [raw[0]-remainder[1],raw[1]+remainder[1]];
 }
 function risingFactorial(s,n) { let v=1n; for(let j=0;j<n;j++) v*=s+BigInt(j); return frac(v); }
