@@ -2,12 +2,21 @@
 
 ## Verified
 
+Starting from the six raw parts' stored component intervals, I independently
+reconstructed the integer congruence for the upper-energy, finite, and seven
+rank components. I then applied the saved allocation weights, all specified
+outward ceilings/floors, symmetric interval intersections, midpoint/radius
+correction, and diagonal scaling to rebuild the final lower integer matrix.
+It matches every entry in
+`tc02-49-20-even-m12288-t832-transformed-certificate.json`. For the changed
+coordinate's eighth loss, this reconstruction uses the certificate's saved
+`eighthUpper` value as input; it does not validate how that value was derived.
+
 Using a separate Python integer Bareiss implementation, I replayed the 44
-leading principal minors saved in
-`tc02-49-20-even-m12288-t832-transformed-certificate.json`. Every division was
-exact, all 44 pivots were positive, and every pivot string matched the
-certificate. The first pivot is `929226141064924700398`; the final pivot has
-2,676 decimal digits.
+leading principal minors of the rebuilt matrix. Every division was exact, all
+44 pivots were positive, and every pivot string matched the certificate. The
+first pivot is `929226141064924700398`; the final pivot has 2,676 decimal
+digits.
 
 I also rebuilt the fixed-energy grid matrix from the stored lower integer
 matrix and its 44 positive energy upper endpoints. The reported grid value
@@ -24,15 +33,12 @@ python3 experiments/worker-TC02-TC04/replay_transformed_minors.py
 
 ## Scope
 
-This is an independent arithmetic replay of the *stored final matrix*, not a
-fresh reconstruction of that matrix from the six raw parts. In particular, I
-did not independently rederive the transformed eighth-tail coefficient,
-outward interval congruence, or all matrix entries from source coefficients.
-The exact positive minors therefore verify the final certificate's integer
-positivity computation, conditional on its saved lower matrix and stated
-energy endpoints. The row transform itself has determinant `100000`, hence
-preserves the finite trial span; this fact does not independently verify the
-tail majorant.
+The changed transformed eighth-tail coefficient is not independently
+rederived from source coefficients. The matrix reconstruction and exact
+positive minors are therefore conditional on that saved coefficient and its
+stated energy endpoints. The row transform itself has determinant `100000`,
+hence preserves the finite trial span; this fact does not independently
+verify the tail majorant.
 
 No conclusion is drawn about the original form beyond the stated comparison,
 and this audit is not a full independent original-form evaluation, RH result,
