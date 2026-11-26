@@ -26,16 +26,20 @@ The absolute prime-power coefficient mass is asymptotic to `2 exp(h/2)`, so
 triangle/absolute-mass estimates cannot be uniform. Along `h=2 pi m`, `n=m`,
 the normalized sine component has absolute limit `1/2`; automatic phase
 cancellation fails. See `research/positivity/B1-01-theta-cutoff-scope.md`.
-Next derive a uniform endpoint-main-term/error expansion for all relevant
-`alpha=n*pi/h` and propagate it through the square and rank allocation.
+The compact-frequency endpoint expansion is now proved uniformly for
+`|alpha|<=A` by partial summation and the PNT. Next propagate it through the
+`n^(-p)/g(n)` weighted squares and rank allocation, then control `alpha>A`
+without losing the exact positive slack.
 
 ### B1 — Analytical extension beyond finite cutoffs
 
 - **Question / hypothesis:** Can the certified finite quadratic-form positivity
   frontier be extended to an unbounded parameter range by an analytic tail
   inequality, without a new finite verification at every endpoint? The
-  working hypothesis is that the existing theta-cardinal decomposition may
-  expose a tail term with sign or a summable domination; this is open.
+  theta-cardinal shortcut is inapplicable. The live hypothesis is that a
+  cancellation-aware endpoint expansion of the growing arithmetic shifts,
+  combined with the archimedean term and the exact weighted-square structure,
+  may yield a uniform majorant; the square-summation step is open.
 - **Evidence and prerequisites:** Candidate finite frontier currently `h=2.51`;
   LXXV tests `h=2.51`. Read `research/theta-cardinal-bound.md`,
   `research/reconstruction.md`, the current campaign proof assumptions, and

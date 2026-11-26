@@ -136,3 +136,46 @@ range used by the high-mode comparison; then propagate it through the square
 and exact rank allocation. Falsify that proposed decomposition near
 successive prime-power thresholds. The full signed matrix inequality remains
 open.
+
+## B1-03: compact-frequency uniform endpoint expansion
+
+This next step can be proved at the level of the raw shift coefficient.
+Let `theta(x)=sum_{p<=x} log p=x+o(x)` (PNT), and for fixed `A>0` define
+`f_alpha(t)=t^(-1/2+i alpha)`, `|alpha|<=A`. Partial summation gives
+
+    sum_{p<=X} log(p) p^(-1/2+i alpha)
+      = X^(1/2+i alpha)/(1/2+i alpha) + o_A(sqrt(X)),
+
+uniformly for `|alpha|<=A`. Indeed, writing `E(t)=theta(t)-t=o(t)`, the
+boundary error is `E(X)f_alpha(X)=o(sqrt(X))`; for the integral error use
+`|f'_alpha(t)| <= (1/2+A)t^(-3/2)`, split at a fixed `T`, and bound the
+remaining part by `epsilon * integral_T^X t^(-1/2)dt`. This proof gives
+uniform little-o without requiring a quantitative PNT remainder. Prime
+squares contribute `O(log^2 X)` uniformly by comparison with all integers;
+powers `k>=3` contribute `O(1)` uniformly by absolute convergence.
+
+Consequently, for the full prime-power shift sum
+`C(X,alpha)=sum_{p^k<=X} log(p) p^(-k/2+i alpha k)`,
+
+    C(X,alpha)/B(X)
+       = exp(i alpha h)/(2(1/2+i alpha)) + o_A(1),
+       B(X)=C(X,0)~2 sqrt(X),    X=exp(h),
+
+uniformly for `|alpha|<=A`. At BC03's mode phase `alpha=n*pi/h`,
+`exp(i alpha h)=(-1)^n`, so its sine projection satisfies
+
+    Im(C/B) = -(-1)^n alpha/(2(1/4+alpha^2)) + o_A(1).
+
+This both explains B1-02 and extends it uniformly over every compact scaled
+frequency interval. In the BC03 normalization the constant multiplier
+`2 sqrt(2)/pi` cancels. If the cutoff `M` is chosen proportional to `h`,
+the archimedean coefficient bound remains `O(1)` and is negligible relative
+to `B(X)`. This is a rigorous asymptotic result for raw coefficients under
+the unconditional PNT, not yet a bound for the squared, weighted matrix tail.
+
+**Next question.** Can this compact-frequency main term be squared and summed
+against the actual `n^(-p)/g(n)` weights uniformly, while a separate bound
+controls `alpha>A` and the full matrix cross terms? A useful falsification
+attempt is to track the exact `g(n)` lower bound and rank factor as `M` and
+the number of shifts grow; a bounded normalized modal coefficient alone does
+not imply positive residual slack.
