@@ -56,3 +56,7 @@
 
 - No-universal-rate countermodel: for any prescribed nondecreasing \(G_n\to\infty\), constructed nested strong projections with compact \(C\), weakly escaping \(h_n\), and \(\|B_nh_n\|\to0\), but \(D_n(G_n)=1\). Thus qualitative assumptions alone imply no predetermined window rate. This does not satisfy all K02 analytic-family/Weil identities.
 - Prior-art check: Avdonin–Ivanov (2009), DOI 10.1007/BF03549514, already use divided differences for non-separated Paley–Wiener sampling, including normalized close-pair differences (Introduction, Definition 2, Example 4); Hermite–Genocchi is standard (DLMF §3.3). The particular K02 projection-defect application has not been established as new or as absent from prior literature; no novelty claim.
+
+- Aggregate trace-defect criterion: \(S_a(G)=\sum_{\gamma\le G}\delta_a(\gamma)^2\) equals the finite-rank trace \(\operatorname{Tr}(R_G(I-\Pi_a))\) and the sum of diagonal kernel deficits \(1/m_\gamma-J_a(\gamma,\gamma)\). Markov's inequality plus the pointwise K02 row bound shows: if \(G_a(\tau_a+d_a)\to0\) and \(S_a(G_a)/(N(G_a)\tau_a^2)\to0\), then the normalized mixed kernel tends uniformly to zero on any fixed compact for all but \(o(N(G_a))\) distinct ordinates. This supplies a conditional aggregate route, but no such \(S_a(G)\) estimate is established.
+
+  A compact sufficient specialization is \(G_ad_a\to0\) and \(G_a^2S_a(G_a)/N(G_a)\to0\); choose \(\tau_a=\eta_a/G_a\) with \(\eta_a\to0\) but larger than the square root of the aggregate-defect ratio.

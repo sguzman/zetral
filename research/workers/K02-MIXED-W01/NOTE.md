@@ -674,3 +674,45 @@ because \(N_n<k\le G_n\) for some integer \(k\). Thus \(G_n(D_n(G_n)+d_n)\not\to
 ## Prior-art boundary for the divided-difference obstruction
 
 The divided-difference method itself is classical and must not be presented as new. Avdonin and Ivanov, “Sampling Problem for Non-separated Sets and Divided Differences,” *Sampling Theory in Signal and Image Processing* 8(2) (2009), 181–199, DOI [10.1007/BF03549514](https://doi.org/10.1007/BF03549514), explicitly treat divided differences as stable data for clusters of close Paley–Wiener sample points: see their Introduction, Definition 2, and Example 4 (including the normalized difference \((f(n+\delta_n)-f(n))/\delta_n\)). The Hermite–Genocchi identity used to bound these divided differences by a derivative supremum is standard; see [NIST DLMF §3.3](https://dlmf.nist.gov/3.3). This targeted search found related classical sampling theory but did not establish whether the particular projection-defect inequality in this note has appeared before. No novelty or priority claim is made; a broader literature review would be needed before one.
+
+
+### Aggregate trace-defect criterion for most ordinates
+
+Uniform control of the maximum defect is stronger than necessary if the goal is to control most mixed-kernel rows. For \(G>0\), let
+\[
+\Gamma_G=\{\gamma\in\Gamma:0<\gamma\le G\},\quad
+N(G)=|\Gamma_G|,\quad
+S_a(G)=\sum_{\gamma\in\Gamma_G}\delta_a(\gamma)^2.
+\]
+K02's exact diagonal identity gives
+\[
+S_a(G)=\sum_{\gamma\in\Gamma_G}\left(\frac1{m_\gamma}-J_a(\gamma,\gamma)\right).
+\]
+It is also a finite-rank trace defect: with
+\[
+R_G=\sum_{\gamma\in\Gamma_G}|g_\gamma\rangle\langle g_\gamma|\ge0,\qquad Q_a=I-\Pi_a,
+\]
+one has \(S_a(G)=\operatorname{Tr}(R_GQ_a)=\operatorname{Tr}(Q_aR_GQ_a)\). This follows termwise from \(\langle Q_ag_\gamma,g_\gamma\rangle=\|Q_ag_\gamma\|^2\); it does not require the \(g_\gamma\) to be unit vectors.
+
+For any threshold \(\tau>0\), Markov's inequality gives
+\[
+\#\{\gamma\in\Gamma_G:\delta_a(\gamma)>\tau\}\le S_a(G)/\tau^2.
+\]
+For every remaining ordinate, the pointwise version of the K02 estimate yields
+\[
+\sup_{z\in K}\frac{|J_a(\gamma,z)|}{M_a}
+\le C_K G\bigl(\tau+d_a\bigr)
+\]
+on each fixed compact \(K\). Consequently, along any choices \(G_a\to\infty\), \(\tau_a>0\) with \(G_a(\tau_a+d_a)\to0\) and
+\[
+\frac{S_a(G_a)}{N(G_a)\tau_a^2}\longrightarrow0,
+\]
+the normalized mixed kernel tends uniformly to zero on \(K\) for all but \(o(N(G_a))\) ordinates up to \(G_a\). This is a conditional density-one criterion in terms of an aggregate projection trace defect. No bound on \(S_a(G)\) at a prescribed range is currently supplied, and without simplicity \(N(G)\) here counts distinct ordinates rather than multiplicity.
+
+
+A single sufficient condition follows by taking \(\tau_a=\eta_a/G_a\). If
+\[
+G_a d_a\to0,\qquad
+\frac{G_a^2S_a(G_a)}{N(G_a)}\to0,
+\]
+choose \(\eta_a\to0\) with \(G_a^2S_a(G_a)/(N(G_a)\eta_a^2)\to0\) (for example, the fourth root of this ratio, with any positive vanishing choice when it is zero). Then both hypotheses of the preceding density-one criterion hold.
