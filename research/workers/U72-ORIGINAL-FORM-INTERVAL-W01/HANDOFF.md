@@ -7,7 +7,7 @@
 
 ## Result
 
-The standalone interval implementation evaluates the full quadratic form on each of the first three stored rational comparison directions, supported on 417 even modes (47 low modes and 370 trial modes). All three computed outward intervals are contained in the staged exact enclosures. An independent 120-digit point computation also lies inside each outward interval.
+The standalone interval implementation evaluates the full quadratic form on each of the first three stored rational comparison directions, supported on 417 even modes (47 low modes and 370 trial modes). All three computed outward intervals are contained in the staged exact enclosures. An independent 120-digit point computation also lies inside each outward interval; the output is on `origin/worker/u72-original-form-probe-w01` at `experiments/results/u72-original-form-probe-w01/entries-00-02-120dps.json` (blob `be1dc31eacec3682f3750716f9c839251555d339`).
 
 This is a scoped machine interval check of three directions, not a full matrix audit or an RH/operator proof. It depends on mpmath.iv's outward rounding for elementary functions and the Euler–Maclaurin remainder inequalities below; the software and derivation have not received human or formal verification.
 
