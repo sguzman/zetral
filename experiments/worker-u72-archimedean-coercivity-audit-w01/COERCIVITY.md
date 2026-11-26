@@ -219,8 +219,8 @@ bound. For Euler's constant, put `a_n=H_n-log(n)`. Then
 majorant yields `gamma>H_n-log(n)-1/(2n)`. The summand inequality follows by
 putting `x=1/k`: the derivative of `x^2/(2(1+x))-integral_0^x t/(1+t)^2dt`
 is `x^2/(2(1+x)^2)>0`, and its value at zero is zero. With `n=50000`, the updated
-exact-rational script now certifies `mu_1>0.20465` (previously only the
-coarser threshold `0.2046` was recorded). This remains a quantitative lower
+exact-rational script now certifies `mu_1>0.2046595` (the rational endpoint
+computed by the script is about `0.20465955080540063`). This remains a quantitative lower
 bound on Suzuki's already positive constant, not a claim that the asymptotic
 itself is new.
 
@@ -762,7 +762,7 @@ An N=128 Jacobi search further improves the fixed-vector endpoint. The explorato
 
 `mu_1 <= rational_part - log(2) - pi/2 < 0.233216`,
 
-with rational part approximately `2.497159175003540` and endpoint approximately `0.233215667648698`. Thus the certified bracket sharpens to `0.20465<mu_1<0.233216`. The fixed trial is a variational upper bound for Suzuki's limiting form; it gives no N-to-infinity Ritz error or operator construction. Reproduce the exact claim with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial128_certificate.py`.
+with rational part approximately `2.497159175003540` and endpoint approximately `0.233215667648698`. Together with the exact root-series lower certificate this gives `0.2046595<mu_1<0.233216`. The fixed trial is a variational upper bound for Suzuki's limiting form; it gives no N-to-infinity Ritz error or operator construction. Reproduce the exact upper claim with `python experiments/worker-u72-archimedean-coercivity-audit-w01/jacobi_trial128_certificate.py`; the lower endpoint is checked by `constant_full_form_certificate.py`.
 
 ### Independent check of the Mellin log-moment formula
 

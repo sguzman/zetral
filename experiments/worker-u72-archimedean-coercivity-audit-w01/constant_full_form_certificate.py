@@ -151,6 +151,7 @@ def main() -> None:
     mu1_lo = gamma_lo + log_interval(pi_lo)[0] - ln2_hi + ci_series_lo / 2
     assert mu1_lo > F(2046, 10000)
     assert mu1_lo > F(20465, 100000)
+    assert mu1_lo > F(2046595, 10_000_000)
 
     # Two-profile logarithmic Rayleigh trial, derived in COERCIVITY.md.
     # The exact moment matrix has entries M_ij*q_ij, where M/pi is
@@ -316,6 +317,7 @@ def main() -> None:
     print("  certified Suzuki mu_1 lower:", float(mu1_lo))
     print("  inferred Suzuki mu_1 lower exceeds 0.2046:", mu1_lo > F(2046, 10000))
     print("  inferred Suzuki mu_1 lower exceeds 0.20465:", mu1_lo > F(20465, 100000))
+    print("  inferred Suzuki mu_1 lower exceeds 0.2046595:", mu1_lo > F(2046595, 10_000_000))
     print("  certified two-profile Suzuki mu_1 upper:", float(mu1_hi))
     print("  two-profile upper is below 0.234669:", mu1_hi < F(234669, 1_000_000))
     print("  certified six-profile Suzuki mu_1 upper:", float(mu6_hi))
