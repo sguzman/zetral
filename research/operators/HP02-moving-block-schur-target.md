@@ -45,7 +45,9 @@ Consequently the Schur correction satisfies
 Thus for fixed low dimension, fixed-low block convergence plus
 `q_N<=q<1-R/G_m` and
 `||E_PQ W^(-1/2)|| -> 0` imply uniform convergence of the low Schur
-complement on `K`. Rouché's theorem then transfers root counts on contours
+complement on `K` when both weighted off-diagonal factors vanish; the stated
+single-factor condition suffices for symmetric block pencils, where their
+operator norms agree. Rouché's theorem then transfers root counts on contours
 around isolated reference eigenvalues. To exclude compact spectral
 pollution, the same Schur convergence is required away from those contours.
 This is a sufficient criterion; it is not a necessary condition.
@@ -93,12 +95,43 @@ weighted trace of the whitened positive tail, rather than control of each
 entry separately.
 
 The scalar ground-state shift `epsilon I` is separate from the positive
-tail. Its entry is
+tail. Its normalized entry is
+`epsilon u_z^T(D-xi I)u_w`, equivalently
 `epsilon [r(z)^T e + (w-xi)r(z)^T r(w)]/sqrt(g_k g_l)`.
-HP-02.4's estimate `epsilon ||e||^2=O(N/L)` controls fixed low rows and
-columns but does not by itself sum this term over moving high `w`. A full
-Schur bound must control that weighted shift row too, or absorb it through
-high-block coercivity.
+For fixed low `z` and all `|w|>=gamma_(m+1)`, once `nu_(N,L)<=gamma_(m+1)/2`,
+the interpolation identity and `||r(v)||<=||e||/(|v|-nu_(N,L))` imply
+`||u_z||<=2||e||/(|z|sqrt(g_k))` and
+`||(D-xi I)u_w||<=C_(m,K)||e||/sqrt(g_l)`. Therefore
+
+    sum_(l>m, signs) |epsilon u_z^T(D-xi I)u_w|^2/|gamma_l|
+      <= C_(z,m,K) (epsilon ||e||^2)^2/g_k
+           sum_(l>m, signs) 1/(g_l |gamma_l|).
+
+HP-02.4 gives `epsilon ||e||^2=O(1/N)` and HP-02.3 gives `g_k -> infinity`
+for fixed `k`. Thus the shift row vanishes if the displayed inverse-metric
+sum grows more slowly than `N^2 g_k` (in particular, if it is uniformly
+bounded). This refines the separate shift target but does not prove the
+required moving-index estimate: the source's sine and interpolation bounds
+are not uniform over all `l>m`.
+
+## Count-only falsification — HP-02.7
+
+The inverse-metric sum in HP-02.5/6 cannot be bounded from an ordinate
+counting law and sine separation alone. In Shi's product formula,
+`R'_(N,L)(gamma_l)` contains the factor
+`(gamma_l^2-gamma_j^2)` for every `j!=l`. If a distinct pair has
+`gamma_l=gamma_j+delta`, while the other factors and the finite grid
+denominator stay nonzero, then `|R'_(N,L)(gamma_l)|=O(delta)` and
+`omega_(l,N,L)=O(delta^2)` for fixed `N,L` with a nonzero sine factor.
+Consequently `1/(g_l gamma_l)` can be made arbitrarily large by taking
+`delta` sufficiently small. A finite number of such close pairs in each
+widely separated height block can be inserted into an abstract sequence
+with the same coarse `T log T` counting scale; the offset lemma still
+separates the sine factors almost surely, but does not repair the derivative
+factor. This falsifies a proposed deduction from count growth plus sine
+avoidance only. It neither models nor asserts close pairs among actual zeta
+zeros. A zeta-specific spacing/derivative estimate or a basis-invariant
+aggregate method is still required.
 
 ## What the source currently supplies
 

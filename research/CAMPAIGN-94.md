@@ -138,6 +138,27 @@ is established. Next investigate whether arithmetic-side formulas can bound
 the weighted blocks independently of zero ordinates; if not, pivot to a
 qualitatively different operator construction while retaining this criterion.
 
+### Shift-row refinement — HP-02.6
+
+Using `D r(w)=e+w r(w)` and the interpolation-vector norm bound, the
+normalized scalar shift row has weighted square sum at most
+`C_(z,m,K) (epsilon ||e||^2)^2/g_k * sum_(l>m,signs) 1/(g_l |gamma_l|)`.
+Thus the known `O(1/N)` cancellation and fixed-low `g_k` growth would control
+this row if the inverse-metric sum is `o(N^2 g_k)`. The source does not give
+that moving-index bound, so this is conditional progress only. Full
+derivation is appended to the HP-02.5 note.
+
+### Count-only countermodel — HP-02.7
+
+The exact interpolation product gives an abstract obstruction to deriving the
+moving inverse-metric sum from a `T log T` counting law plus sine separation:
+a sparse sequence of exceptionally close pairs preserves the coarse count
+scale but drives a corresponding `g_l` to zero and one term of the sum to
+infinity. This is not a model of actual zeta zeros. Thus the current generic
+inputs are insufficient; a zeta-specific spacing/derivative estimate or a
+basis-invariant aggregate method is needed. See the countermodel in
+`research/operators/HP02-moving-block-schur-target.md`.
+
 ## Dependencies and acceptance
 
 - Primary source arXiv:2609.04908 v12, especially §§4.9 and 5.

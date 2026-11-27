@@ -729,3 +729,21 @@ moving-row estimate for the scalar shift. The source's fixed-pair estimates do
 not supply these bounds, so the result is a conditional criterion only. Paper
 potential: supporting appendix lemma; not an operator construction or
 standalone novelty claim. See `research/operators/HP02-moving-block-schur-target.md`.
+
+## HP-02.6 — Scalar-shift moving-row bound (2026-11-27)
+
+The interpolation-vector norm inequality and displacement identity bound the
+weighted shift-row square sum by
+`C (epsilon ||e||^2)^2/g_k * sum_(l>m)1/(g_l |gamma_l|)`. Since
+`epsilon ||e||^2=O(1/N)`, growth of the inverse-metric sum slower than
+`N^2 g_k` suffices. This conditional refinement does not bound that sum or
+establish spectral transfer; it is potential appendix material only.
+
+## HP-02.7 — Count-only obstruction for moving metric weights (2026-11-27)
+
+The interpolation product shows that sparse abstract close pairs can preserve
+the coarse `T log T` counting scale and almost-sure sine separation while
+forcing an inverse metric weight, hence the moving sum, arbitrarily large.
+This rules out deriving the needed bound from those coarse inputs alone. It
+does not model actual zeta gaps. See the HP-02.7 section in
+`research/operators/HP02-moving-block-schur-target.md`.
