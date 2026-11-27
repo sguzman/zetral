@@ -6,6 +6,16 @@ campaign files contain the detailed derivations and evidence. Re-rank after
 each material result. Keep finite positivity certificates distinct from
 analytic theorems and from any RH implication.
 
+### LXXVII / RHA-04 — Audit analytic inputs to zero-free reduction (high priority)
+
+- **Question / hypothesis:** Does the pinned zero-density theorem for quadratic twists give the uniform bad-prime count needed to choose a twist with no zero in the target rectangle, under exactly the modulus and class assumptions?
+- **Prerequisites/evidence:** RHA-03 checked residue signs, Landau application, and order extraction. Pinned source: `Lib/Analytic/QuadraticTwist.lean` at `72fead102f663d5c7a407964a13dc0cf9d977207`; the selection lemma invokes `zero_density_quadTwist` and divergence of primes in an invertible residue class.
+- **Expected information gain:** Verify the device removing the no-real-zero restriction, or locate the exact analytic estimate still required.
+- **Design/falsification:** Trace the bad-prime bound through zero counting, conductor/level changes, and summability; check uniformity in character and compact height. Probe `β→1/2+`, `H=0`, and induced characters. Separately trace the transform identity to partial summation and its constant at `s=1`.
+- **Dependencies:** Pinned readable source and library hypotheses; no local large build or dataset.
+- **Acceptance:** Source-linked dependency graph with checked quantifiers/constants and an independent selection contradiction, or a concrete gap under stated assumptions.
+- **Verification:** Manual independent proof audit; exact rational inequalities if needed. Source inspection is not kernel verification.
+
 ## Priority order
 
 ### Current execution note — LXXVII proof-status pivot (2026-11-26)

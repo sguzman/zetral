@@ -206,3 +206,39 @@ parameter-dependent `HasLogBound` dominance, and especially the criterion
 zero exclusion. No independent Lean build or proof-term check was run. Next
 audit that analytic criterion and its hypotheses before deciding whether to
 attack a geometric input theorem.
+
+## RHA-03 — One-sided prime-remainder zero exclusion
+
+Pinned source files: `New/Reduction/Zeros/Criterion.lean`,
+`Lib/Analytic/Landau.lean`, `New/Reduction/Zeros/PrimeError.lean`, and
+`Lib/Analytic/QuadraticTwist.lean` at
+`lsernau/grh-lean@72fead102f663d5c7a407964a13dc0cf9d977207`.
+
+The criterion assumes `8 | q₀`, `d₀ ≡ 7 (mod 8)`, `(d₀,q₀)=1`,
+`β>1/2`, and, for every prime in that class, the eventual one-sided bound
+`R_d,q₀(x) ≤ x^(β−1)`. It concludes `L(ρ,ψ)≠0` for all characters modulo
+`q₀` when `ρ≠1` and `Re ρ>β`.
+
+**Manual implication audit.** For fixed target `ρ`, the quadratic-twist
+selection lemma chooses a prime in the class whose twists have no zeros in
+`β≤Re s`, `|Im s|≤|Im ρ|`. The prime-remainder transform has simple-pole
+residue equal to the sum of untwisted entire-L orders minus twisted orders,
+divided by `φ(q₀)s(1−s)`. In the target rectangle the twist orders vanish,
+leaving the nonnegative integer sum `n(s)` of untwisted orders. At real
+`x>β`, the residue has nonnegative real part: its denominator is positive
+for `β<x<1`; for `x≥1`, every entire-L order is zero. Substituting
+`x=e^v` transfers the one-sided bound to Landau's lemma's hypothesis
+`E(v)≤exp((β−1)v)`. Landau then forces the residue at `ρ` to vanish.
+Since `Re ρ>β>1/2`, `ρ` is neither 0 nor 1; the residue denominator is
+nonzero, so `n(ρ)=0`. Every summand is a nonnegative order, hence the target
+order vanishes. The principal-character normalization `(s−1)L(s,χ₀)` is
+removed using `ρ≠1`.
+
+This checks the displayed implication, sign, and normalization bookkeeping
+against the pinned Lean source. It does not independently reprove the
+quantitative zero-density estimate that selects a good twist prime, its
+zero-counting and analytic inputs, the prime-class divergence argument, or
+the prime-remainder transform derivation. No local Lean rebuild or axiom
+audit was performed. The result is conditional on the stated uniform-in-prime
+remainder bound, which Zetral has not established. No Zetral RH proof is
+claimed.

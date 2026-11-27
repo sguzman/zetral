@@ -1,5 +1,9 @@
 # Research history
 
+## 2026-11-26 — LXXVII RHA-03
+
+Manually audited the pinned one-sided prime-remainder zero-exclusion reduction: the twist-free rectangle leaves nonnegative untwisted order sums; the real residue sign matches Landau's lemma; vanishing at the target implies its order is zero after excluding 0 and 1. The quantitative twist-selection/zero-density proof and transform derivation remain unaudited. No Lean rebuild or Zetral RH proof is claimed. Details: `research/CAMPAIGN-77.md`.
+
 This is the chronological campaign record, not the public project overview. For the scientific scope and curated entry points, see [README.md](README.md). For current working details, see [STATE.md](STATE.md) and the latest checkpoint in [COORDINATION.md](COORDINATION.md).
 
 ## 2026-11-26 — LXXV closeout and LXXVI source audit
