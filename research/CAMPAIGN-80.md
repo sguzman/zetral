@@ -38,6 +38,22 @@ fixed-strip logarithmic-derivative estimate. The remaining task is to control
 the constants as the contour approaches the critical line, or to prove an
 actual lower bound along a sequence of frequencies/endpoints.
 
+## Checkpoint B1-12 — zero-residue shift
+
+`research/positivity/B1-12-zero-residue-explicit-formula.md` shifts the
+B1-11 pole-removed integral to `Re(s)=b`, `1/8<b<1/6`. Under RH the only
+crossed singularities are the nontrivial zero poles from the `k=1` prime-zeta
+term and the additional `q=1/2` pole from `k=2`. Their residues give an
+absolutely convergent smoothed zero sum plus a Schwartz correction. The
+Riemann–von Mangoldt local zero count controls that sum by
+`O_η(log(2+|ξ|))`; the right-line remainder is
+`O_(b,η)(exp(-b h) log(2+|ξ|))`. Thus `c_h=O_η(1)` uniformly for `h≥0`,
+conditional on RH and the cited fixed-strip logarithmic-derivative and
+zero-counting estimates. This is only the smoothed first-prime component;
+it gives no sign or full-form positivity. The contour proof has not been
+formalized or independently machine-checked. Next seek a lower-bound
+counterexample route or incorporate the compensating archimedean term.
+
 ## Information gain and falsification
 
 A uniform bound for `c_h` would extend first-prime cancellation to bounded

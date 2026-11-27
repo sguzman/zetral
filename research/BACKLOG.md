@@ -161,6 +161,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B1-11):** Under RH, Mellin inversion and the prime-zeta Möbius identity continue the prime-only sum to `Re(q)>1/2`; shifting to `Re(s)=−δ` crosses only the main pole, whose residue is exactly the subtracted smooth measure. Chirre–Gonçalves' fixed-strip RH bound for `ζ'/ζ` gives `|Δ_hat_h(ξ)|≪_(δ,η)e^(δh)(log(2+|ξ|))^(1−2δ)`, hence `c_h≪_(δ,η)e^(δh)` and `c_h=O_ε(e^(εh))` for every ε>0. This is a subexponential upper bound conditional on RH, not a uniform bound or positivity result. Next control constants as δ→0 or prove a lower bound. See `research/CAMPAIGN-80.md` and `research/positivity/B1-11-prime-zeta-contour-shift.md`.
 
+**Progress (2026-11-27, B1-12):** A second RH-conditional contour shift to `Re(s)=b`, `1/8<b<1/6`, yields an explicit smoothed zero-residue expansion. It crosses both the `k=1` nontrivial-zero poles and the `k=2` pole at `q=1/2`; omitting the latter would leave an incorrect formula. Absolute convergence and the `O(log(2+|ξ|))` bound follow from Schwartz decay and the classical unit-interval zero count. The shifted line contributes `O(exp(-bh)log(2+|ξ|))`, proving `c_h=O_η(1)` uniformly in `h≥0` under RH. This is a first-prime smoothed multiplier bound, not a positivity theorem. The derivation is manual, with exact hypotheses and contour argument recorded in `research/positivity/B1-12-zero-residue-explicit-formula.md`; it has not been machine checked. Next challenge it via a lower-bound argument and test whether the corresponding prime and archimedean residues cancel in the full form.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

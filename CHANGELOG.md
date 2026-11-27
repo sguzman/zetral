@@ -253,3 +253,14 @@ frequency-uniform error bounds remain to be proved.
 main pole by contour shift and proves the logarithmic-dual constant is
 `O_ε(exp(εh))` for every fixed ε>0, conditional on RH. This subexponential
 upper bound does not establish boundedness, a lower bound, or positivity.
+
+## LXXX high-frequency multiplier checkpoint — B1-12 (2026-11-27)
+
+`research/positivity/B1-12-zero-residue-explicit-formula.md` shifts the
+pole-removed Mellin integral across the critical line under RH. The expansion
+includes both the nontrivial zero residues and the `k=2` prime-zeta pole at
+`q=1/2`. Classical local zero counting and Schwartz decay give
+`c_h=O_η(1)` uniformly for `h≥0`, conditional on RH and the cited
+logarithmic-derivative estimate. This bound concerns only the smoothed
+first-prime endpoint term and proves no positivity or spectral result. The
+derivation is not machine checked.
