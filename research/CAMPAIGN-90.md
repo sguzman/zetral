@@ -1,6 +1,7 @@
 # Campaign XC — RH criterion from bounded complete packet values
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED analytically within the
+fixed-profile boundedness criterion (2026-11-27).
 
 ## Precise question
 
@@ -51,3 +52,19 @@ Either prove both directions with exact hypotheses and bounded-remainder
 estimates, or identify a concrete obstruction and retain the result only as
 a one-way implication. State whether the criterion is merely a reformulation
 of B1-17/classical criteria. Do not infer positivity, coercivity, or RH.
+
+## Closure — B1-22
+
+For each fixed profile, all terms other than the first-prime endpoint
+discrepancy have a bounded-in-shift remainder. Thus `W_h=-D_phi(h)+O_g(1)`.
+Under RH, B1-21b supplies the forward bound. Conversely, bounded complete
+values for every fixed profile imply boundedness of every fixed `D_phi`; the
+B1-17 Laplace-pole argument then excludes off-critical-line zeros. This proves
+the stated RH-equivalent criterion. It is a reformulation of a classical
+Mellin/convolution mechanism, with no novelty claim. It gives no positivity
+criterion on this restricted family, coercivity, or proof of RH. Full audit:
+`research/positivity/B1-22-complete-packet-boundedness-criterion.md`.
+
+Next: test whether nonnegativity alone on the restricted paired-packet family
+detects off-line zeros. The boundedness criterion uses both signs of the
+form; positivity controls only one sign, so B1-22 does not answer this.

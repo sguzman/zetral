@@ -614,3 +614,15 @@ that scope. Campaign XC now tests whether boundedness of complete packet
 values for each fixed profile is equivalent to RH. See
 `research/positivity/B1-21b-log-domain-remainder-bounds.md` and
 `research/CAMPAIGN-90.md`.
+
+### XC closure and XCI activation — boundedness criterion and positivity test
+
+B1-22 verifies `W_h=-D_phi(h)+O_g(1)` for each fixed paired profile. Hence
+boundedness of complete values for every fixed profile is RH-equivalent by
+B1-17's Laplace-pole argument; this is a classical-mechanism reformulation,
+not a novelty claim or RH proof. Campaign XCI asks the distinct question
+whether positivity alone on this restricted packet family implies RH. The
+one-sided sign condition does not directly provide the two-sided boundedness
+used by the pole argument. See
+`research/positivity/B1-22-complete-packet-boundedness-criterion.md` and
+`research/CAMPAIGN-91.md`.

@@ -304,7 +304,7 @@ Campaign file: `research/CAMPAIGN-89.md`.
 
 **Progress (2026-11-27, B1-21a/b):** Prime-square and higher powers are uniformly bounded unconditionally on normalized packets. The continuous term has Fourier multiplier `O(log(2+|xi|))` and extends to `H^log`; the pole term is controlled by the packet L² norm. The archimedean `exp(h/2)` term cancels the first-prime main term, whose residual is uniformly H^log-bounded under RH by B1-20. Thus the full form is uniformly bounded by `C_L ||g||_log²` on this paired family under RH. This is no positivity, coercivity or arbitrary-test-function estimate. Derivation: `research/positivity/B1-21b-log-domain-remainder-bounds.md`; campaign record: `research/CAMPAIGN-89.md`.
 
-### B1-22 / XC — RH criterion from bounded complete packet values (active)
+### B1-22 / XC — RH criterion from bounded complete packet values (closed)
 
 Campaign file: `research/CAMPAIGN-90.md`.
 
@@ -315,6 +315,20 @@ Campaign file: `research/CAMPAIGN-90.md`.
 - **Dependencies:** B1-17's source identities and classical zero-pole structure; fixed-window support; prior-art comparison with Báez-Duarte's Mellin/convolution criteria.
 - **Acceptance:** Prove both directions or exhibit a remainder obstruction. No uniformity in `g`, positivity, coercivity, novelty, or RH proof is inferred.
 - **Verification:** Independent sign/factor audit from the pinned source, exact quantifiers, and a clear distinction between this reformulation and existing equivalent criteria. No computation is needed or probative.
+
+**Result (2026-11-27):** For each fixed profile, the complete form is `-D_phi(h)+O_g(1)`; all non-first-prime terms and the archimedean main-term remainder are bounded in shift. RH gives boundedness by B1-21b. Conversely, bounded complete values for each fixed profile give bounded `D_phi`, and B1-17's Laplace-pole argument yields RH. This is a classical-structure reformulation, not a novelty claim. Full audit: `research/positivity/B1-22-complete-packet-boundedness-criterion.md`.
+
+### B1-23 / XCI — Restricted paired-packet positivity criterion (active)
+
+Campaign file: `research/CAMPAIGN-91.md`.
+
+- **Question / hypothesis:** Does nonnegativity of the complete Weil form on every paired packet, over all compact real profiles, windows, and shifts, imply RH?
+- **Prerequisites:** B1-22's bounded-remainder decomposition; B1-17's off-line pole detection; Weil's explicit-formula criterion and the exact direct formula.
+- **Expected information gain:** Determine whether this special one-parameter packet family is RH-determining under a one-sided sign condition, or establish that B1-22's two-sided boundedness mechanism cannot transfer.
+- **Design / falsification:** Verify RH-to-positivity; for a hypothetical off-line zero, seek negative values while allowing no rightmost zero and accounting for cancellations. Test polarization/profile perturbations that stay in the packet class. If no implication follows, preserve a rigorous one-sided-growth obstruction or abstract countermodel without claiming a zeta counterexample.
+- **Dependencies:** Prime-zeta continuation, residue multiplicities, prior-art review for restricted Weil test families.
+- **Acceptance:** Proof of the restricted converse or a rigorous obstruction to the pole-detection route; separate established directions and conditional hypotheses.
+- **Verification:** Exact `g,L,h` quantifiers, signs, and multiplicities. Finite numerical scans are non-probative.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 

@@ -109,10 +109,15 @@ on RH. This proves no sign, coercivity, or arbitrary-test-function bound.
 Details: `research/positivity/B1-20-rh-log-dual-bound.md`,
 `research/positivity/B1-21-prime-power-log-domain-bound.md`,
 `research/positivity/B1-21b-log-domain-remainder-bounds.md`, and
-`research/CAMPAIGN-89.md`. Active next question: Campaign XC asks whether
-boundedness in `h` of the complete form for each fixed paired profile is an
-RH-equivalent criterion; see `research/CAMPAIGN-90.md` and B1-22 in the
-backlog.
+`research/CAMPAIGN-89.md`. B1-22 proves that boundedness in `h` of the
+complete form for each fixed paired profile is RH-equivalent:
+`W_h=-D_phi(h)+O_g(1)`, and B1-17's Laplace-pole argument supplies the
+converse. This is a classical-mechanism reformulation, not novelty or an RH
+proof. See `research/positivity/B1-22-complete-packet-boundedness-criterion.md`
+and closed `research/CAMPAIGN-90.md`. Active Campaign XCI/B1-23 asks whether
+positivity alone on the restricted paired-packet family implies RH; this
+one-sided condition does not directly give the boundedness needed by the
+Laplace argument. See `research/CAMPAIGN-91.md`.
 
 Date: 2026-11-27 UTC.
 Closed bounded campaign: LXXXV, Hermite de Branges spaces and Weil compression; see `research/CAMPAIGN-85.md`. B3-05 excludes direct use of Goncalves–Littmann's standard bounded-derivative higher-jet theorem on all zeta ordinates: its hypotheses force uniform node separation, while Selberg's odd-multiplicity count recalled by Heath-Brown gives `#(Gamma∩[0,T]) >= c T log T`. This does not rule out nonuniform interpolation or another completion. LXXXIV closed within stated scope: B3-04 proves derivative-sample unboundedness is invariant under equivalent renorming of the RH-conditional Weil completion, and identifies the new inverse-compression identity required by any genuinely different completion. Established Hermite interpolation in `H(E^2)` is relevant prior art but supplies no zeta-specific Weil compression. LXXXIII closed within stated scope: B1-17 derives `RH iff sup_h c_h<∞` by Laplace-transform pole detection; B1-18 and B1-19 identify the multiplier's exponential type with `Theta−1/2`, where `Theta=sup Re(rho)`. This is an RH-equivalent criterion and classical zero-abscissa mechanism, not an RH proof or novelty claim. LXXXII closed within structural scope: B1-16 gives the exact phase-orbit criterion for packet liminf; the actual value remains tied to unproved zero-ordinate relations. LXXX closed within scope: B1-12 proves `c_h=O_η(1)` uniformly under RH; B1-13 proves positive limsup; B1-14 bounds the fixed-profile full form. LXXXI closed within scope: B1-15 proves a nonzero zero-residue coefficient survives in the full direct form for a chosen profile, conditional on RH; Suzuki's spectral formula cross-checks it and gives nonnegativity under RH. No full-space coercivity follows. The contour and sampling derivations are manual and have not been machine-checked. Campaign LXXVIII's distinct-spectrum and derivative-sample audit is closed within scope in `research/CAMPAIGN-78-CLOSURE.md`; broader Hilbert–Pólya construction remains open.
