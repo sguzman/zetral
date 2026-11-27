@@ -1,6 +1,6 @@
 # Campaign LXXXVI — The critical limit of shifted-xi canonical systems
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED WITHIN SCOPE (2026-11-27).
 
 ## Precise question
 
@@ -116,3 +116,40 @@ Next compare the explicit limit kernel and multiplication operator with the
 arithmetic Weil local forms: derive the candidate compression map, test its
 norm on compact-test vectors, and search for a falsifiable mismatch before
 claiming any operator correspondence.
+
+## Checkpoint B3-10: exact arithmetic transport, but no operator-limit proof
+
+The Cauchy-transform RKHS in B3-09 is unitarily identified with Suzuki's
+global Weil completion by composing its Cauchy transform with the source's
+weighted zero-sampling map. On compact tests the map is the explicit series
+`(1/sqrt(pi)) sum_gamma m_gamma hat(u)(gamma)/(gamma-z)`, and its norm is
+exactly the Weil form. Unitary conjugation transports the global
+self-adjoint operator and Theorem 3.3 inverse-compression identity with all
+domains intact. This is an exact bridge for the *endpoint model*, conditional
+on RH and Suzuki's source theorems; it is not independent of zero data and
+does not prove strong-resolvent convergence from positive shifts. Full audit:
+`research/operators/B3-10-arithmetic-compression-transport.md`.
+
+Next audit the family of self-adjoint extensions whose eigenvalues are zeros
+of `A^omega`: establish vague convergence of their eigenvalue-counting
+measures by Hurwitz, then test whether any common-space operator convergence
+can preserve multiplicity. Keep counting-measure convergence separate from
+geometric eigenspace multiplicity.
+
+## Checkpoint B3-11: positive-shift eigenvalue counting measures converge
+
+Under RH, the associated self-adjoint extensions have simple real spectra
+given by the zeros of `A^omega` for every positive shift. Since
+`A^omega -> xi(1/2-i z)` locally uniformly, Hurwitz's theorem proves vague
+convergence of their eigenvalue-counting measures to the xi zero-divisor
+measure, including multiplicities as cluster masses. This is the same measure
+as B3-09's Herglotz measure. It does not prove strong-resolvent convergence:
+when a limiting zero is multiple, the scalar endpoint RKHS still has only one
+eigendirection at that ordinate. Details and exact source hypotheses are in
+`research/operators/B3-11-shifted-spectrum-vague-limit.md`.
+
+Next determine whether a common-space identification can promote this vague
+measure limit to strong-resolvent convergence, or whether a multiplicity
+fiber obstruction prevents that for the scalar RKHS limit. The zero-divisor
+measure convergence itself is accepted only as a conditional spectral-measure
+result, not a complete operator limit.

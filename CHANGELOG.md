@@ -394,3 +394,49 @@ self-adjoint and has the distinct signed ordinates as simple eigenvalues.
 This is a zero-defined conditional model, not an RH proof; the arithmetic
 Weil compression remains unproved. See
 `research/operators/B3-09-nevanlinna-kernel-and-zero-measure.md`.
+
+### LXXXVI checkpoint — B3-10 arithmetic transport (2026-11-27)
+
+The limit-kernel RKHS is unitarily equivalent to Suzuki's global Weil
+completion through the weighted zero-sampling map and a Cauchy transform.
+This explicitly transports the local inverse-compression identity and its
+domains to the endpoint RKHS. It is the existing RH-conditional,
+zero-defined model in a new representation, not a strong-resolvent limit of
+the positive-shift operators. Next: eigenvalue-counting measure convergence
+and the multiplicity audit. See
+`research/operators/B3-10-arithmetic-compression-transport.md`.
+
+### LXXXVI checkpoint — B3-11 spectral counting-measure limit (2026-11-27)
+
+Under RH, `A^omega` zeros are simple spectra of self-adjoint extensions for
+positive shifts and converge locally as zero divisors to the critical xi
+zeros. Hurwitz gives vague convergence of the eigenvalue-counting measures,
+including multiplicities as cluster masses. It does not give
+strong-resolvent convergence, and the scalar endpoint operator still has
+simple eigenspaces. See
+`research/operators/B3-11-shifted-spectrum-vague-limit.md`.
+
+## LXXXVI closure and LXXXVII activation (2026-11-27)
+
+LXXXVI closes within a conditional spectral-basis strong-resolvent limit:
+ordered-eigenbasis unitaries place the shifted de Branges extensions on a
+common multiplicity-fiber space, and the arithmetic compression transfers
+through a diagonal isometry. The limit is noncanonical and zero-dependent.
+LXXXVII pivots to the Lagarias Pick criterion. B4-01 identifies the
+first-order limit kernel with its classical Nevanlinna kernel; B4-02 derives
+a negative witness from any hypothetical off-line zero and proves that a
+finite Pick matrix alone cannot certify global positivity. See
+`research/CAMPAIGN-86-CLOSURE.md`, `research/CAMPAIGN-87.md`, and the B4 notes.
+
+## LXXXVII closure and LXXXVIII activation (2026-11-27)
+
+LXXXVII closes within its Pick-kernel witness and generic finite-matrix
+scope. B4-03 gives an explicit perturbation threshold preserving a finite
+positive Pick matrix while inserting an unsampled pole; this is not an
+xi-specific impossibility theorem. LXXXVIII investigates whether Suzuki's
+horizontal xi shifts connect to de Bruijn-Newman heat flow. B5-01 derives
+the exact multipliers `cosh(2 omega u)` and `exp(t u^2)`, with a shared
+second-order term at `t=2 omega^2` but different fourth-order terms. B5-02
+rules out a positive mixture over real heat times by a negative-variance
+contradiction. General operator intertwiners and zero-set relations remain
+open. See the LXXXVII closure, `research/CAMPAIGN-88.md`, and B4/B5 notes.

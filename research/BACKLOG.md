@@ -212,7 +212,7 @@ a finite positive block into a lower bound for the full form. See
 
 **Closure / pivot (2026-11-27):** The bounded direct Hermite-sampling/Weil-compression bridge is closed within scope. Standard bounded-derivative jets fail the zeta-node separation hypothesis; nonuniform doubling-phase theory covers values only and its uniform density criteria are not established for distinct zeta nodes; equivalent renorming cannot repair the derivative functional. No impossibility of other jet spaces is claimed. Closure: `research/CAMPAIGN-85-CLOSURE.md`.
 
-### LXXXVI — Critical limit of shifted-xi canonical systems (active)
+### LXXXVI — Critical limit of shifted-xi canonical systems (closed within scope)
 
 - **Question / hypothesis:** Can the positive-shift de Branges/canonical-system family `E^omega(z)=xi(1/2+omega-iz)` have a nontrivial operator/resolvent limit as `omega->0+`, with spectral correspondence to xi zeros under RH and an arithmetic Weil-compression identity?
 - **Prerequisites:** B3-07; Suzuki, RIMS Kôkyûroku Bessatsu B34 (2012), Proposition 1.2, Theorem 2.3, §§1.1–1.2; Zetral's local arithmetic forms and compression theorem.
@@ -226,6 +226,41 @@ a finite positive block into a lower bound for the full form. See
 **Progress (2026-11-27, B3-08):** Under RH, `Theta_omega -> 1` locally uniformly; the orthogonal projections onto the model spaces `K(Theta_omega)` in the shared `H^2(C+)` converge strongly to zero. Yet the reproducing kernels divided by `omega` converge locally uniformly to an explicit positive-semidefinite kernel formed from `xi'/xi`. This identifies a candidate renormalized RKHS while leaving operator convergence and arithmetic compression open. See `research/operators/B3-08-model-space-collapse-and-rescaled-kernel.md`.
 
 **Progress (2026-11-27, B3-09):** The even Hadamard product identifies the B3-08 kernel exactly as the Herglotz Cauchy-transform kernel of the signed zero-counting measure `mu=sum m_gamma(delta_gamma+delta_-gamma)`. Its RKHS is the Cauchy-transform image of `L^2(mu)`; real-coordinate multiplication is self-adjoint with spectrum the distinct signed ordinates. This is conditional on RH and defines the operator using xi's zeros. Multiplicities are atom weights, not eigenspace dimensions. Next test whether an arithmetic Weil compression map exists and attempt a norm mismatch. See `research/operators/B3-09-nevanlinna-kernel-and-zero-measure.md`.
+
+**Progress (2026-11-27, B3-10):** Composing the Cauchy-transform unitary with Suzuki's weighted zero-sampling map gives an explicit unitary from the global Weil completion to the limit-kernel RKHS. Compact-test norms agree exactly with the Weil form, and the local inverse-compression identity transports with domains intact. This is an endpoint representation of the existing RH-conditional zero-defined model, not a new operator or a strong-resolvent limit of the positive-shift family. Next audit spectral counting-measure convergence and multiplicity. See `research/operators/B3-10-arithmetic-compression-transport.md`.
+
+**Progress (2026-11-27, B3-11):** Under RH, the self-adjoint extensions with zeros of `A^omega` as spectra have simple real eigenvalues for positive shifts; local uniform convergence `A^omega -> xi(1/2-i z)` and Hurwitz imply vague convergence of eigenvalue-counting measures to the zero-divisor measure, including multiplicities as cluster masses. This is not strong-resolvent convergence and the scalar endpoint RKHS still has one eigendirection per distinct ordinate. Next test common-space strong-resolvent convergence and multiplicity fibers. See `research/operators/B3-11-shifted-spectrum-vague-limit.md`.
+
+**Closure / pivot (2026-11-27):** LXXXVI is complete within its conditional endpoint-model scope. Spectral-basis unitaries give strong-resolvent convergence to a multiplicity-fiber diagonal operator, and Suzuki's inverse compression transports through the diagonal isometric embedding. The identification is noncanonical and zero-dependent; additional fibers are invisible to current arithmetic samples. Closure: `research/CAMPAIGN-86-CLOSURE.md`.
+
+### LXXXVII — Pick-kernel positivity and finite RH witnesses (closed within scope)
+
+- **Question / hypothesis:** Can the first-order `xi'/xi` Nevanlinna kernel yield effective analytic bounds or finite witnesses, and what global information must accompany finite Pick matrices?
+- **Prerequisites:** B4-01; Lagarias 1999, Theorem 1.1 and equations (1.5), (1.19); standard Nevanlinna kernel criteria; local Laurent expansion of `xi'/xi`.
+- **Information gain:** A local negative witness describes how a hypothetical off-line zero violates kernel positivity; a finite-sample obstruction prevents mistaking matrix checks for global RH proof.
+- **Design/falsification:** Derive the mapped pole residue and dominate the regular part on an isolating disk. Test the witness sign; construct finite Pick data that remain positive despite an unsampled pole. Seek effective bounds only with explicit zero isolation and analytic coverage.
+- **Acceptance:** Prove a quantitative off-line-zero witness and finitary limitation, or a rigorously global certificate with coverage/error bounds. No finite numerical evidence alone passes.
+- **Verification:** Independent residue/sign audit and primary prior-art comparison; interval computations only if useful.
+
+**Progress (2026-11-27, B4-01):** The B3-08 kernel is exactly the Nevanlinna kernel of `h(z)=i xi'(1/2-i z)/xi(1/2-i z)`. Holomorphy and positive semidefiniteness are equivalent to RH, but this is Lagarias/Hinkkanen prior art, not a new criterion. See `research/operators/B4-01-pick-kernel-rh-equivalence.md`.
+
+**Progress (2026-11-27, B4-02):** Any hypothetical off-line zero maps to an interior pole with residue `-m`; moving a small distance vertically toward the real axis yields `Im h<0` once the pole dominates the regular part. The witness is rationally approximable but not effective without a zero-isolating disk and regular-part bound. A finite Pick matrix alone cannot certify the Pick property: a small meromorphic perturbation preserves any fixed finite positive-definite sample matrix while adding an unsampled pole. This generic fact is not an xi-specific finite impossibility theorem. See `research/operators/B4-02-offline-pole-witness-and-finite-test-obstruction.md`.
+
+**Progress (2026-11-27, B4-03):** For each fixed finite set, the matrix perturbation has an explicit threshold `|epsilon|<lambda_min(P0)/(2||B||)`, preserving strict positivity while inserting an unsampled pole. LXXXVII closes within the generic finitary scope; no xi-specific impossibility theorem or effective witness location is proved. Closure: `research/CAMPAIGN-87-CLOSURE.md`.
+
+### LXXXVIII — Shifted-xi systems and de Bruijn-Newman flow (active)
+
+- **Question / hypothesis:** Is Suzuki's horizontal-shift family `A^omega` related to the de Bruijn-Newman heat flow by an exact, positivity-preserving operator or zero-set correspondence, or do the Fourier multipliers obstruct the natural transfers?
+- **Prerequisites:** Suzuki 2012 equations (1.1), (1.2), Proposition 1.2; Polymath 2019 equations (1)–(4); Rodgers–Tao Theorem 1.1; exact Fourier scaling in B5-01.
+- **Information gain:** Distinguishes a genuine spectral bridge from matching low-order perturbations and may expose an alternate operator route or a precise no-go.
+- **Design / falsification:** Compare exact Fourier multipliers, all scale factors and Taylor generators; test scalar time identification and positive heat-time mixtures; then attempt a weaker zero-motion or canonical-system correspondence.
+- **Dependencies:** Super-exponential Fourier kernel and entire continuation; de Bruijn-Newman real-zero threshold; Suzuki shifted-zero theorem and its RH hypotheses.
+- **Acceptance:** Construct a correspondence with domains and hypotheses, or rule out the natural scalar-time and positive-mixture routes while leaving general intertwiners expressly open.
+- **Verification:** Independent sign/scale derivation against primary sources. No numerical zero data; computation only if it adds information not contained in exact symbols.
+
+**Progress (2026-11-27, B5-01):** With `F_t(z)=8H_t(2z)`, the Suzuki shift multiplier is `cosh(2 omega u)`, while heat evolution has `exp(tu^2)`. Matching the quadratic term forces `t=2omega^2`, but fourth-order coefficients differ; thus this is not an exact scalar-time identification. See `research/operators/B5-01-shifted-xi-versus-heat-flow.md`.
+
+**Progress (2026-11-27, B5-02):** A positive probability mixture of real heat times would force first two moments with negative variance, so no such mixture yields the shift multiplier for nonzero omega. This leaves signed mixtures and general intertwiners open. See `research/operators/B5-02-no-positive-heat-mixture.md`.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 
