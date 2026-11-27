@@ -208,3 +208,13 @@ art review remain prerequisites.
   [`CAMPAIGN-97.md`](CAMPAIGN-97.md); the weighted-Chebyshev prior-art review
   is incomplete. Not paper-ready; revisit only if a later source version
   promotes the estimate to an unconditional lemma.
+- **PWPB-03.2 — uniform arithmetic Gram audit (not a paper result).** A
+  recent rStation working draft claims a common growing-space repair and
+  polynomial Gram lower bound for its canonical arithmetic prolate family.
+  I independently checked the finite Mobius inversion and the fixed-product
+  uncertainty-gap step in its Gram lemma. This is an audit of part of an
+  external draft, not a Zetral theorem; its own independent verification is
+  pending. The draft explicitly does not identify its family with ACG's
+  convolved low-mode conditioning space and does not settle the Schur sign.
+  This comparison is worth retaining as a research lead, but is not
+  standalone paper material. See [`CAMPAIGN-97.md`](CAMPAIGN-97.md).

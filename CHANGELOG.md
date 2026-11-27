@@ -1019,3 +1019,16 @@ the decisive Schur lower bound open; the estimate appears as strategy
 discussion, not a proved lemma used to claim RH. Prior-art comparison and
 any exact remainder audit remain open. Full derivation:
 `research/CAMPAIGN-97.md`.
+
+## XCVII PWPB-03.2 — uniform arithmetic Gram literature audit (2026-11-27)
+
+Checked the new rStation working draft *Uniform prolate spaces and
+multiplicity in the near-zero spectrum of the Weil form* against ACG's
+open R2 problem. Independently verified the finite Mobius inverse and
+fixed-product uncertainty-gap step in its canonical arithmetic Gram lemma.
+This draft's growing-space result is not identified with ACG's convolved
+low-mode vectors and leaves the transition/pole Schur sign open; its page
+marks independent verification pending. Thus it is a relevant research
+lead, not a resolution of R2 or a Zetral theorem. Next test for a
+quantitatively controlled synthesis map between the two spaces. Full note:
+`research/CAMPAIGN-97.md`.

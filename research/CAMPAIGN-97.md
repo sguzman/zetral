@@ -354,6 +354,54 @@ low-block estimate (R2) and the Gram lower bound at the edge of the Fuchs
 ladder. Do not label a source error unless the source uses (H) as an
 unconditional proved estimate.
 
+### PWPB-03.2 — independent audit of the growing arithmetic Gram route
+
+#### Literature refresh and precise question
+
+The 15 November 2026 rStation working draft *Uniform prolate spaces and
+multiplicity in the near-zero spectrum of the Weil form*
+([Paper 163 v1](https://rstation.ai/problems/riemann_hypothesis/papers/163/v1))
+claims a uniform lower bound for the canonical arithmetic prolate map on a
+growing concentrated space. Its page labels the draft “Independent
+verification pending”; the page's attached automated reviewer report is
+not independent verification. The draft explicitly says this canonical
+space is not identified with the convolved conditioning families in
+Andrews–Connes–La Gatta (ACG), and that its result does not prove the
+transition/pole Schur sign. This is relevant new literature, but does not
+by itself close ACG's R2.
+
+Question: does the new uniform arithmetic Gram argument imply the Gram
+bound required for ACG's convolved low block, or does it establish a
+different result? Audit its exact common-interval inverse and its relation
+to the two spaces before transferring any estimate.
+
+#### Independent check of the common-interval inverse
+
+For the draft Lemma 5, set J=[r,lambda], G(u)=sqrt(u)f(u), and D_nG(u)=G(nu), with zero extension above lambda. On L2(J,du/u), each D_n is a contraction, D_m D_n=D_mn, and D_n=0 for n>N=floor(lambda/r). Thus E f=sum_{n<=N} n^(-1/2)D_nG. Finite Dirichlet convolution gives the exact inverse G=sum_{n<=N} mu(n)n^(-1/2)D_n E f. Its norm is at most sum n^(-1/2)<=2sqrt(N), so ||E f||^2_{L2(J,du/u)} >= (4N)^(-1) integral_r^lambda |f(u)|^2 du.
+
+Take r=R/lambda and let B_lambda be Fourier projection to [-lambda,lambda]. Scaling gives ||1_{[-r,r]}B_lambda||=kappa_R<1: the restricted band projection is compact, and norm one would give a nonzero function both band-limited and compactly supported. If ||(1-B_lambda)f||<=eta_R||f|| with eta_R=(1-kappa_R)/2, then ||1_{[-r,r]}f||<||f|| by a fixed factor. Evenness leaves a fixed positive fraction of mass on r<=|u|<=lambda. Since N<=lambda^2/R, the claimed lower bound ||1_[R/lambda,lambda] E f||^2 >= c_R lambda^(-2)||f||_2^2 follows. This independently checks the inverse algebra and fixed-product concentration step of Lemma 5, not the whole draft endpoint ODE, tail, or operator-residual argument.
+
+The rStation construction instead gives a common linear repair and a
+uniform lower norm for its own canonical \(\mathcal E(H_{\lambda,\tau})\)
+space, with polynomial losses; its conclusion is a near-zero spectral
+count. Because no map from that space to ACG's convolved families
+\(e_m^\lambda*e_n^*\) is established, the transfer needed for R2 remains
+open. Nor does a lower Gram bound alone prove the Schur complement's sign.
+Disposition: close this bounded source-and-lemma audit as a useful
+independent verification and scope distinction; do not count it as a
+resolution of R2 or as a new Zetral theorem. No novelty or paper-readiness
+claim.
+
+#### Next question
+
+Test for an explicit intertwining or bounded synthesis map from the ACG
+convolved low-mode span to the canonical arithmetic prolate span, retaining
+the full form norm and pole directions. Acceptance is either (i) a
+quantified map with polynomially controlled norm and inverse/Gram bound
+strong enough to transfer R2, or (ii) a precise obstruction explaining
+why these spans cannot be identified by the proposed common repair. Then
+continue to the transition/pole block; neither result alone closes PWPB-03.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

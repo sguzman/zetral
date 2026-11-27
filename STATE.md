@@ -88,8 +88,14 @@ for the isolated first-prime sum in §8.6 would imply RH by an exact
 Stieltjes identity and Mellin continuation. The source presents it in
 strategy discussion, not as a proved lemma, and Proposition 8.18 still
 assumes the unresolved transition-and-pole lower bound; no source error is
-confirmed. Next audit its uniform low-block estimate (R2) and edge Gram
-lower bound. Mori's
+confirmed. PWPB-03.2 refreshed literature and independently checked the
+common-interval Möbius inverse and fixed-product uncertainty-gap lemma in a
+15 November rStation working draft on uniform canonical prolate spaces.
+That draft's growing-space estimate is not identified with ACG's convolved
+low-mode conditioning vectors, so it does not close R2 or the transition/
+pole Schur problem; its own independent verification is pending. Next test
+whether a quantitatively bounded synthesis map connects those spaces.
+Mori's
 unconditional test-vector upper bounds, including a Lean formalization of
 an upper estimate, do not supply the lower gap. PWPB-02's candidate-side
 estimate is a minor audit correction, not a standalone paper claim. The

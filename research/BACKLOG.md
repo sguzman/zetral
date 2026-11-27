@@ -72,6 +72,20 @@ analytic theorems and from any RH implication.
   edge-uniform low-block estimate (R2) and Gram lower bound, both marked open
   in §8.8; audit these next. Manual derivation and caveats are in
   `research/CAMPAIGN-97.md`; no novelty claim.
+- **PWPB-03.2 literature lead / scope check:** A 15 November 2026 rStation
+  working draft, *Uniform prolate spaces and multiplicity in the near-zero
+  spectrum of the Weil form*, claims a polynomially uniform Gram lower
+  bound and ambient residual on its canonical arithmetic prolate spaces.
+  The draft itself says these spaces are not identified with the convolved
+  families in ACG §8 and that it does not settle their transition/pole Schur
+  sign; the page marks independent verification pending. Independently
+  checked its finite Mobius inverse and fixed-product concentration lemma,
+  but not its full endpoint/tail/residual proof. Next: seek a quantified
+  synthesis/intertwining map between the two spaces or isolate a precise
+  obstruction. Acceptance requires polynomial control of the map and
+  inverse/Gram constants sufficient for R2; even that would not settle the
+  Schur sign. Detailed record: `research/CAMPAIGN-97.md`. No paper-ready
+  Zetral result or novelty claim.
 - **Design / falsification:** Pin the exact form/domain; test whether the
   prolate candidate belongs to the operator domain; derive its form residual
   from prime and archimedean terms; prove a next-eigenvalue/parity gap; bound
