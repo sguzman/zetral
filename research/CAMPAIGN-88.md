@@ -191,6 +191,28 @@ fixed-shift endpoint averages, so the two iterated averages commute. This
 does not provide uniform high-energy tail control or strong-resolvent
 convergence. See `research/operators/B5-12-rank-one-limit-average.md`.
 
-Next determine whether the exponentially high spectral layer from B5-11
-can be controlled in a common operator representation; do not infer global
-resolvent convergence from the commuting endpoint averages alone.
+## Checkpoint B5-13
+
+Assuming RH, apply Langer–Pruckner–Woracek's regular-variation theorem to
+the swapped Weyl function `m_0^*=-1/m_0`. Its asymptotic
+`m_0^*(iy)~2i/log y` has index zero and positive imaginary coefficient. The
+theorem's endpoint exclusions are contradicted by this slow decay; its
+index-zero constant formula then forces off-diagonal primitive ratio
+`delta=0` and scale function `a_H~2/log r`. Using trace normalization and
+the product scale in the theorem gives
+
+    integral_0^x c(t)dt ~ 4x/log^2(1/x),
+    integral_0^x a(t)dt ~ x,
+    integral_0^x b(t)dt = o(x/log(1/x)).
+
+Thus the vanishing entry in the B5-12 Cesaro average has a quantified rate.
+This is a consequence of existing canonical-system theory and the B5-11
+Stirling asymptotic, not a novelty claim. It concerns the inverse-spectral
+limit Hamiltonian and gives no common-space tail bound or global
+strong-resolvent convergence. Full derivation and source-version check:
+`research/operators/B5-13-regular-variation-endpoint-rate.md`.
+
+Next investigate whether this endpoint primitive asymptotic, combined with
+the B5-11 double-scaling Weyl profile, can give a quantitative obstruction
+or criterion for common-space strong-resolvent convergence. Do not infer such
+convergence from endpoint asymptotics alone.

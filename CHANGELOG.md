@@ -537,3 +537,13 @@ average back proves that the limit system's Cesaro average tends to
 double-scaling tail remains nonuniform, so this does not imply global
 strong-resolvent convergence. See
 `research/operators/B5-12-rank-one-limit-average.md`.
+
+### LXXXVIII checkpoint — regular-variation endpoint rate
+
+B5-13 applies the 2025 version of Langer–Pruckner–Woracek's canonical-system
+regular-variation theorem to the swapped limit Weyl function. Under RH, it
+gives `integral_0^x c(t)dt ~ 4x/log^2(1/x)` and a smaller off-diagonal
+primitive, sharpening the B5-12 rank-one endpoint average. This is a
+classical theorem application, not a novelty claim or global operator
+convergence result. See
+`research/operators/B5-13-regular-variation-endpoint-rate.md`.
