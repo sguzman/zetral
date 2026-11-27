@@ -163,6 +163,20 @@ RH-conditional and rules out only smooth, constant projective changes; it
 does not rule out z-dependent transformations or general intertwiners. See
 `research/operators/B5-10-mobius-weyl-obstruction.md`.
 
-Next investigate what extra global domain, boundary, and tail information
-would be needed to convert finite-interval canonical-system convergence into
-an operator correspondence; alternatively test z-dependent transformations.
+## Checkpoint B5-11
+
+For each fixed positive shift, the Weyl quotient tends to `i/omega` at high
+energy, so the associated trace-normalized Hamiltonian has a positive
+definite Cesaro average at the initial endpoint. These averages degenerate
+to `diag(1,0)` as `omega -> 0`, while the limit quotient grows like
+`(i/2)log y`, forcing the limiting Hamiltonian average to have no finite
+endpoint limit. A double scaling `y=exp(lambda/omega)` gives
+`omega m_omega(iy)/i -> tanh(lambda/2)` versus
+`omega m_0(iy)/i -> lambda/2`. This proves nonuniformity of the Weyl limit
+at exponentially high spectral scales, but neither proves nor disproves
+global strong-resolvent convergence. See
+`research/operators/B5-11-high-energy-boundary-layer.md`.
+
+Next identify whether the high-energy layer can be controlled in a common
+operator representation or construct a counterexample showing why the
+finite-interval Hamiltonian convergence is insufficient by itself.

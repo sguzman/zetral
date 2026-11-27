@@ -514,3 +514,14 @@ most quadratic in the limit quotient and grows like `log^2 y`. This rules
 out that near-identity projective repair under RH; it leaves z-dependent
 maps and general intertwiners open. See
 `research/operators/B5-10-mobius-weyl-obstruction.md`.
+
+### LXXXVIII checkpoint — high-energy endpoint layer
+
+B5-11 derives a double-scaling profile at heights `exp(lambda/omega)`:
+the shifted Weyl functions approach `tanh(lambda/2)` after normalization,
+while the endpoint function approaches `lambda/2`. By canonical inverse
+spectral theory, finite-shift Hamiltonian averages are positive definite at
+the initial endpoint but degenerate as the shift vanishes; the limiting
+Hamiltonian has no finite Cesaro endpoint average. This demonstrates
+nonuniformity, not failure of global strong-resolvent convergence. See
+`research/operators/B5-11-high-energy-boundary-layer.md`.

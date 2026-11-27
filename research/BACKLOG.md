@@ -278,6 +278,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B5-10):** A positive-imaginary-axis asymptotic shows the second-order mismatch grows like `log^3 y`, while the tangent space of smooth constant Möbius transformations is quadratic in the limit Weyl function and grows only like `log^2 y`. Thus this natural projective correction also fails under RH. Z-dependent or singular transformations and general intertwiners remain open. Next identify the additional conditions needed for operator convergence or probe a z-dependent route. See `research/operators/B5-10-mobius-weyl-obstruction.md`.
 
+**Progress (2026-11-27, B5-11):** A double scaling `y=exp(lambda/omega)` yields distinct hyperbolic-tangent and linear profiles for the shifted and endpoint Weyl functions. Canonical inverse theory translates this into noncommuting endpoint limits: finite-shift initial averages tend to `diag(1,0)`, while the limit Hamiltonian has no finite Cesaro average at zero. This is nonuniform high-energy behavior, not a strong-resolvent counterexample. Next seek a common-space tail bound or an abstract counterexample to inferring global operator convergence from local canonical convergence. See `research/operators/B5-11-high-energy-boundary-layer.md`.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and
