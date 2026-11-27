@@ -1,5 +1,25 @@
 # Research history
 
+## 2026-11-27 — HP-02.3 fixed-low random-window bound
+
+For `L_N=N^2+U` with one fixed uniform offset, period counting and
+Borel–Cantelli give eventual `N^-3` simultaneous sine separation almost
+surely without choosing each window from the ordinates. The exact
+interpolation product and the Riemann–von Mangoldt upper count then imply
+super-exponential growth of every fixed-low metric weight. This makes the
+existing RH-conditioned normalized fixed-pair `Delta G` tail tend to zero.
+The offset is not explicitly certified; the bound says nothing about moving
+indices, `Delta K`, Schur coupling, high-block invertibility or arithmetic
+spectral transfer. Manual derivation only, no Lean proof or novelty claim.
+Details: `research/operators/HP02-fixed-low-random-window.md` and
+`research/CAMPAIGN-94.md`.
+
+Added `research/PAPER-PIPELINE.md` to track which consolidated results are
+plausible manuscript candidates and what proof-audit, scope, and prior-art
+work each still needs. It classifies HP-02.3 as supporting material rather
+than a standalone paper, and identifies existing candidate manuscripts
+without presenting them as verified or novel.
+
 ## 2026-11-26 — LXXVII RHA-03
 
 Manually audited the pinned one-sided prime-remainder zero-exclusion reduction: the twist-free rectangle leaves nonnegative untwisted order sums; the real residue sign matches Landau's lemma; vanishing at the target implies its order is zero after excluding 0 and 1. The quantitative twist-selection/zero-density proof and transform derivation remain unaudited. No Lean rebuild or Zetral RH proof is claimed. Details: `research/CAMPAIGN-77.md`.

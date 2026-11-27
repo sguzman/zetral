@@ -153,9 +153,19 @@ resolvent control alone are insufficient; the weighted coupling must vanish.
 HP-02.2 normalizes the source's fixed-low tail-metric estimate explicitly:
 it leaves the fourth-power tail divided by the two low metric weights, still
 RH-conditioned and with no moving-high-block or `Delta K` bound. No
-Prime–Weil Schur estimate is proved. See
-`research/CAMPAIGN-94.md` and
-`research/operators/HP02-low-window-schur-criterion.md`.
+Prime–Weil Schur estimate is proved. HP-02.3 now uses `L_N=N^2+U` with one
+uniform random offset: Borel–Cantelli gives eventual `N^-3` separation of
+the first N sine factors almost surely, and the exact interpolation product
+plus Riemann–von Mangoldt upper count gives super-exponential growth of each
+fixed-low metric weight. The known fixed-pair normalized `Delta G` tail
+therefore vanishes under the source's RH decomposition. This is a
+zero-side, RH-conditioned fixed-low result, not a prime-side estimate or
+spectral transfer; `Delta K`, moving low/high coupling and high-block
+invertibility remain open. See `research/CAMPAIGN-94.md`,
+`research/operators/HP02-low-window-schur-criterion.md`, and
+`research/operators/HP02-fixed-low-random-window.md`. Current manuscript
+triage, including this minor lemma and the repository's larger candidate
+results, is tracked in `research/PAPER-PIPELINE.md`.
 
 Date: 2026-11-27 UTC.
 Closed bounded campaign: LXXXV, Hermite de Branges spaces and Weil compression; see `research/CAMPAIGN-85.md`. B3-05 excludes direct use of Goncalves–Littmann's standard bounded-derivative higher-jet theorem on all zeta ordinates: its hypotheses force uniform node separation, while Selberg's odd-multiplicity count recalled by Heath-Brown gives `#(Gamma∩[0,T]) >= c T log T`. This does not rule out nonuniform interpolation or another completion. LXXXIV closed within stated scope: B3-04 proves derivative-sample unboundedness is invariant under equivalent renorming of the RH-conditional Weil completion, and identifies the new inverse-compression identity required by any genuinely different completion. Established Hermite interpolation in `H(E^2)` is relevant prior art but supplies no zeta-specific Weil compression. LXXXIII closed within stated scope: B1-17 derives `RH iff sup_h c_h<∞` by Laplace-transform pole detection; B1-18 and B1-19 identify the multiplier's exponential type with `Theta−1/2`, where `Theta=sup Re(rho)`. This is an RH-equivalent criterion and classical zero-abscissa mechanism, not an RH proof or novelty claim. LXXXII closed within structural scope: B1-16 gives the exact phase-orbit criterion for packet liminf; the actual value remains tied to unproved zero-ordinate relations. LXXX closed within scope: B1-12 proves `c_h=O_η(1)` uniformly under RH; B1-13 proves positive limsup; B1-14 bounds the fixed-profile full form. LXXXI closed within scope: B1-15 proves a nonzero zero-residue coefficient survives in the full direct form for a chosen profile, conditional on RH; Suzuki's spectral formula cross-checks it and gives nonnegativity under RH. No full-space coercivity follows. The contour and sampling derivations are manual and have not been machine-checked. Campaign LXXVIII's distinct-spectrum and derivative-sample audit is closed within scope in `research/CAMPAIGN-78-CLOSURE.md`; broader Hilbert–Pólya construction remains open.

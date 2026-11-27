@@ -80,6 +80,29 @@ fourth-power tail divided by the two low metric normalizations (HP-02.2),
 but the denominator, the moving high blocks, and the `Delta K` contribution
 remain uncontrolled.
 
+## Fixed-low resonance checkpoint — HP-02.3
+
+For `L_N=N^2+U` with one fixed `U` uniform on `[0,1]`, a uniform phase-period
+count and the first Borel–Cantelli lemma show that almost surely every one of
+the first `N` sine factors is at least `N^-3` for all sufficiently large
+`N`. The selection rule itself does not use ordinates, though the exceptional
+set and the probability-one assertion refer to the fixed actual sequence;
+this gives neither an explicit certified offset nor a deterministic
+preselected-offset guarantee.
+
+Combining this with Shi's exact derivative product and the
+Riemann–von Mangoldt upper count gives, for each fixed `k`,
+`log omega_(k,N,L_N) >= 4N log N - 4N log log(2N) - O_k(N)` almost surely.
+The proof uses distinct ordinates, their separation from the first fixed low
+ordinate after finitely many indices, and `gamma_j >= c j/log(2j)` from the
+zero-count upper bound. The total fourth-power mass `sum m_j/gamma_j^4` is
+finite by dyadic summation. Consequently the HP-02.2 fixed-pair normalized
+`Delta G` tail entries tend to zero under the source's RH decomposition.
+This is a fixed-low RH-conditional metric-tail result in the zero-side
+comparison basis, not a prime-side bound or spectral transfer. It leaves
+`Delta K`, moving low/high coupling, and uniform high-block invertibility
+open. Full derivation and caveats: `research/operators/HP02-fixed-low-random-window.md`.
+
 ## Dependencies and acceptance
 
 - Primary source arXiv:2609.04908 v12, especially §§4.9 and 5.
