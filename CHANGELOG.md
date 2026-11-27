@@ -290,3 +290,13 @@ closure is `research/CAMPAIGN-80-CLOSURE.md`. Campaign LXXXI is active to
 determine whether those zero-residue frequencies cancel in the complete
 direct Weil form on fixed paired edge packets; see
 `research/CAMPAIGN-81.md`.
+
+## LXXXI closure and LXXXII activation (2026-11-27)
+
+`research/positivity/B1-15-full-form-zero-frequency-survival.md` decomposes
+the complete direct Weil form on a paired packet. A suitable profile has a
+nonzero zero-residue coefficient that survives all other terms; Suzuki's
+spectral formula independently confirms its normalization under RH. Campaign
+LXXXI closed within that packet scope, and LXXXII now studies the liminf of
+the nonnegative almost-periodic packet values. See
+`research/CAMPAIGN-81-CLOSURE.md` and `research/CAMPAIGN-82.md`.

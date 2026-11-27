@@ -167,14 +167,16 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B1-14 / LXXX closure):** For each fixed smooth paired edge profile, the RH-conditional B1-12 dual bound controls the first-prime discrepancy by `O_g(1)`. Partial summation with the PNT gives the prime-square endpoint limit `1/2∫(g*g)`; higher prime powers tend to zero. The leading archimedean and first-prime terms cancel, while the remaining continuous/pole terms are bounded by the B1-06 calculation. Thus `Q_W(f_h)=O_g(1)` on this one family under RH, without a sign conclusion. LXXX is closed within scope. The active follow-up LXXXI asks whether the zero-residue frequencies cancel in the full direct form; its acceptance and falsification plan are in `research/CAMPAIGN-81.md`.
 
-### LXXXI — Full-form endpoint zero-frequency cancellation (active)
+**Progress (2026-11-27, B1-15 / LXXXI closure):** Suzuki's direct formula shows the complete paired-packet form has a constant plus the same nonzero zero-residue frequencies as the first-prime discrepancy, with an `o_g(1)` remainder under RH. A suitably narrow nonnegative bump has nonzero Fourier transform at a chosen nonzero zero ordinate, so at least one coefficient survives in the full form. The source's spectral formula independently confirms the coefficient and its positive mean. This does not determine the liminf or prove uniform coercivity. LXXXI is closed within the fixed-packet scope; LXXXII now investigates the liminf and finite phase-orbit constraints in `research/CAMPAIGN-82.md`.
 
-- **Question:** For fixed paired edge packets, do the almost-periodic zero-residue coefficients of the first-prime discrepancy survive in the complete direct Weil form, or cancel against the remaining terms?
-- **Prerequisites:** `research/CAMPAIGN-80-CLOSURE.md`, B1-12 through B1-14, B1-06 packet calculation, and Suzuki v4 §1.1 source audit in `research/CAMPAIGN-76.md`.
-- **Information gain:** A nonzero full-form coefficient would establish persistent oscillation on a concrete test family; exact cancellation would identify a structural mechanism relevant to positivity.
-- **Design/falsification:** Derive each endpoint and every prime-power, archimedean, pole, and continuous term separately. Establish limits or quantified almost-periodic expansions, then compare coefficients at nonzero zero ordinates. O(1) bounds alone do not prove limits or cancellation.
-- **Dependencies/acceptance:** RH for the zero-residue representation and PNT for prime-square limits, stated explicitly. Accept a rigorous coefficient cancellation theorem or a nonzero coefficient in the full-form expansion. Neither result alone proves positivity on the full domain.
-- **Verification:** Source-linked derivation of the complete direct formula and independent residue/normalization audit; no numerical computation is needed unless used only as a diagnostic.
+### LXXXII — Liminf of Weil values on paired edge packets (active)
+
+- **Question:** For fixed paired packets, is the liminf of `Q_W(f_h)` positive, or can it approach zero despite a positive mean and nonzero oscillation?
+- **Prerequisites:** B1-15; absolute convergence and multiplicity convention for the zero series; exact integer relations among the selected ordinates.
+- **Information gain:** A positive liminf would quantify nondegeneracy on this family; a zero-liminf sequence would exhibit degeneration compatible with RH positivity.
+- **Design/falsification:** Characterize finite phase-orbit closures from integer relations, optimize finite truncations on the constrained torus, and bound the infinite tail via Schwartz decay/local zero counts. Do not assume ordinate rational independence.
+- **Dependencies/acceptance:** RH for the spectral/zero expansion, stated explicitly. Accept a rigorous positive lower bound, or a zero-liminf theorem conditional on explicit relation hypotheses. Either conclusion is packet-specific.
+- **Verification:** Prove orbit closure from the relation lattice and audit the infinite-tail passage; no numerical phase scan is proof.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 

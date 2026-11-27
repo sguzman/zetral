@@ -1,6 +1,6 @@
 # Campaign LXXXI — Full-form endpoint zero-frequency cancellation
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED within the fixed-packet scope.
 
 ## Precise question
 
@@ -50,3 +50,12 @@ a lower bound uniform over the full form domain. Keep all contour and source
 results manually classified unless independently verified. No large local
 computation is required; use hosted free CI only if a reproducible numerical
 diagnostic becomes useful.
+
+## Closure and next campaign
+
+B1-15 resolves the cancellation question for a suitable chosen profile: the
+nonzero zero-residue coefficient survives in the full direct form. The
+spectral formula independently confirms the coefficient and gives
+nonnegativity under RH. See `research/CAMPAIGN-81-CLOSURE.md`. The remaining
+question is the liminf of these nonnegative oscillatory values; Campaign
+LXXXII is active in `research/CAMPAIGN-82.md`.
