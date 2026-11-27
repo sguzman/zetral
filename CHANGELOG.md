@@ -527,3 +527,13 @@ lower-right entry, but allows the same rank-one limit; endpoint commutation rema
 demonstrates nonuniformity, not failure of global strong-resolvent
 convergence. See
 `research/operators/B5-11-high-energy-boundary-layer.md`.
+
+### LXXXVIII checkpoint — rank-one endpoint average
+
+B5-12 applies the canonical high-energy theorem to the swapped Weyl
+function `-1/m_0`, which tends to zero. Swapping the resulting Hamiltonian
+average back proves that the limit system's Cesaro average tends to
+`diag(1,0)`, matching the limit of the finite-shift averages. The
+double-scaling tail remains nonuniform, so this does not imply global
+strong-resolvent convergence. See
+`research/operators/B5-12-rank-one-limit-average.md`.

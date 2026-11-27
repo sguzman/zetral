@@ -179,6 +179,18 @@ commute is unresolved. This neither proves nor disproves global strong-resolvent
 convergence. See
 `research/operators/B5-11-high-energy-boundary-layer.md`.
 
-Next settle whether the limiting Hamiltonian average is rank-one or
-nonconvergent, then determine whether the high-energy layer can be controlled
-in a common operator representation.
+## Checkpoint B5-12
+
+The unresolved endpoint average is resolved by applying the canonical
+high-energy theorem to `m_0^*=-1/m_0`. The coordinate swap
+`H_0^*=[ [c,-b],[-b,a] ]` has Weyl function `-1/m_0`; since this tends to
+zero at high energy, its Cesaro Hamiltonian average tends to `diag(0,1)`.
+Swapping back gives
+`x^-1 integral_0^x H_0 -> diag(1,0)`. This matches the limit of the
+fixed-shift endpoint averages, so the two iterated averages commute. This
+does not provide uniform high-energy tail control or strong-resolvent
+convergence. See `research/operators/B5-12-rank-one-limit-average.md`.
+
+Next determine whether the exponentially high spectral layer from B5-11
+can be controlled in a common operator representation; do not infer global
+resolvent convergence from the commuting endpoint averages alone.
