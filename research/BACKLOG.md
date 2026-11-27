@@ -262,6 +262,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B5-02):** A positive probability mixture of real heat times would force first two moments with negative variance, so no such mixture yields the shift multiplier for nonzero omega. This leaves signed mixtures and general intertwiners open. See `research/operators/B5-02-no-positive-heat-mixture.md`.
 
+**Progress (2026-11-27, B5-03):** At any simple zero of the common initial function, shift and heat roots have the same quadratic displacement under `t=2omega^2`; their quartic coefficient difference is `F''''(r)/(12F'(r))`. A toy entire-function check confirms the sign and factor. This is conditional on a simple zero and does not establish nonzero separation for any xi zero. See `research/operators/B5-03-simple-zero-motion-comparison.md`.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

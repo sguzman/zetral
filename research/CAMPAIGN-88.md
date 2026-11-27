@@ -69,6 +69,16 @@ negative variance. This blocks a natural positive-mixture route only; it
 does not rule out signed mixtures or general intertwiners. See
 `research/operators/B5-02-no-positive-heat-mixture.md`.
 
-Next investigate whether a weaker relation survives at the level of zero
-motion or canonical-system operators, rather than equality of Fourier
-symbols.
+## Checkpoint B5-03
+
+At a simple zero of the common initial function, the two zero branches have
+the same quadratic displacement under `t=2 omega^2`; the quartic coefficient
+difference is `F''''(r)/(12F'(r))`. A toy entire function checks the sign and
+factor. This is conditional local perturbation theory and does not assert
+that any xi zero is simple or that the derivative ratio is nonzero. See
+`research/operators/B5-03-simple-zero-motion-comparison.md`.
+
+Next test whether zero motion at higher orders yields a nontrivial identity
+or whether multiple zeros obstruct the local branch comparison, then
+investigate a canonical-system intertwiner independently of the scalar
+Fourier multiplier.

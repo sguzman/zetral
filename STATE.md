@@ -1,6 +1,6 @@
 # Research state
 
-## Current investigation checkpoint — LXXXVIII / B5-02 (2026-11-27)
+## Current investigation checkpoint — LXXXVIII / B5-03 (2026-11-27)
 
 LXXXVI closed within the conditional shifted-xi endpoint scope. Positive-shift
 operators have a noncanonical strong-resolvent limit after ordered-eigenbasis
@@ -14,10 +14,13 @@ zero; B4-03 quantifies the generic finite-matrix obstruction. LXXXVII is
 closed within this scope. LXXXVIII compares Suzuki's horizontal shift with
 de Bruijn-Newman heat flow: the Fourier symbols agree to second order after
 rescaling, but differ at fourth order, and a positive heat-time mixture is
-excluded by a negative-variance calculation. This does not establish a
+excluded by a negative-variance calculation. At a simple initial zero, the
+zero paths agree to quadratic order and differ at quartic order by
+`F''''(r)/(12F'(r))`; this is conditional and does not establish a
 zero-set correspondence. See `research/CAMPAIGN-87-CLOSURE.md`,
 `research/CAMPAIGN-88.md`, and the B4/B5 operator notes. Checkpoint commit and
-remote readback are pending.
+remote readback through `fb7c0fd18d4163cd59743e26623d16f4eb8df415` are
+verified. The B5-03 update is pending commit and remote readback.
 
 Date: 2026-11-27 UTC.
 Closed bounded campaign: LXXXV, Hermite de Branges spaces and Weil compression; see `research/CAMPAIGN-85.md`. B3-05 excludes direct use of Goncalves–Littmann's standard bounded-derivative higher-jet theorem on all zeta ordinates: its hypotheses force uniform node separation, while Selberg's odd-multiplicity count recalled by Heath-Brown gives `#(Gamma∩[0,T]) >= c T log T`. This does not rule out nonuniform interpolation or another completion. LXXXIV closed within stated scope: B3-04 proves derivative-sample unboundedness is invariant under equivalent renorming of the RH-conditional Weil completion, and identifies the new inverse-compression identity required by any genuinely different completion. Established Hermite interpolation in `H(E^2)` is relevant prior art but supplies no zeta-specific Weil compression. LXXXIII closed within stated scope: B1-17 derives `RH iff sup_h c_h<∞` by Laplace-transform pole detection; B1-18 and B1-19 identify the multiplier's exponential type with `Theta−1/2`, where `Theta=sup Re(rho)`. This is an RH-equivalent criterion and classical zero-abscissa mechanism, not an RH proof or novelty claim. LXXXII closed within structural scope: B1-16 gives the exact phase-orbit criterion for packet liminf; the actual value remains tied to unproved zero-ordinate relations. LXXX closed within scope: B1-12 proves `c_h=O_η(1)` uniformly under RH; B1-13 proves positive limsup; B1-14 bounds the fixed-profile full form. LXXXI closed within scope: B1-15 proves a nonzero zero-residue coefficient survives in the full direct form for a chosen profile, conditional on RH; Suzuki's spectral formula cross-checks it and gives nonnegativity under RH. No full-space coercivity follows. The contour and sampling derivations are manual and have not been machine-checked. Campaign LXXVIII's distinct-spectrum and derivative-sample audit is closed within scope in `research/CAMPAIGN-78-CLOSURE.md`; broader Hilbert–Pólya construction remains open.

@@ -440,3 +440,12 @@ second-order term at `t=2 omega^2` but different fourth-order terms. B5-02
 rules out a positive mixture over real heat times by a negative-variance
 contradiction. General operator intertwiners and zero-set relations remain
 open. See the LXXXVII closure, `research/CAMPAIGN-88.md`, and B4/B5 notes.
+
+### LXXXVIII checkpoint — local zero motion
+
+B5-03 derives the implicit zero-branch expansions at a simple zero. The
+Suzuki shift and heat flow have matching quadratic displacement for
+`t=2 omega^2`; their quartic displacement difference is
+`F''''(r)/(12F'(r))`. A toy entire function checks the coefficient. This is
+conditional on simplicity and does not establish a nonzero difference at any
+xi zero. See `research/operators/B5-03-simple-zero-motion-comparison.md`.
