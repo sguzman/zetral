@@ -246,3 +246,10 @@ Campaign LXXIX closed within its stated scope. The active follow-up is
 Campaign LXXX, which investigates the true high-frequency multiplier via a
 smoothed prime-zeta/explicit-formula route; analytic continuation and
 frequency-uniform error bounds remain to be proved.
+
+## LXXX high-frequency multiplier checkpoint — B1-11 (2026-11-27)
+
+`research/positivity/B1-11-prime-zeta-contour-shift.md` removes the smooth
+main pole by contour shift and proves the logarithmic-dual constant is
+`O_ε(exp(εh))` for every fixed ε>0, conditional on RH. This subexponential
+upper bound does not establish boundedness, a lower bound, or positivity.

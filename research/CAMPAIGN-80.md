@@ -32,11 +32,11 @@ This identity is initially used only for `Re(s)>1`. The campaign must not
 substitute it termwise at `Re(s)=1/2` without proving convergence,
 continuation, branch, and contour hypotheses.
 
-The first task is to express the compact log-window cutoff through Mellin
-inversion, isolate the `k=1` zero contribution, the `k≥2` singularities and
-the main pole, and state an explicit remainder valid for the desired
-frequency range. Then estimate `c_h` or produce an actual sequence of
-frequencies/endpoints falsifying a proposed bound.
+Checkpoint B1-11 carried out this route under RH: it isolates and subtracts
+the main pole, then proves a subexponential upper bound for `c_h` using the
+fixed-strip logarithmic-derivative estimate. The remaining task is to control
+the constants as the contour approaches the critical line, or to prove an
+actual lower bound along a sequence of frequencies/endpoints.
 
 ## Information gain and falsification
 
@@ -64,3 +64,13 @@ Accept a proved estimate for `c_h` with explicit `h` dependence, or a
 rigorous lower bound along an explicit sequence. Finite numerical scans do
 not pass. Use hosted free CI for computational work; no expensive local
 datasets or builds.
+
+## Checkpoint B1-11
+
+`research/positivity/B1-11-prime-zeta-contour-shift.md` shifts the Mellin
+contour past only the main pole, subtracts the exact smooth main measure, and
+uses the RH logarithmic-derivative bound on `Re(q)=1/2+δ`. It proves
+`c_h=O_ε(exp(εh))` for every fixed `ε>0`, hence a subexponential
+logarithmic-dual bound under RH. It does not show boundedness of `c_h`, a
+lower bound, or positivity. Next control constants as `δ→0` or obtain an
+actual lower bound.
