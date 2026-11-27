@@ -521,7 +521,9 @@ B5-11 derives a double-scaling profile at heights `exp(lambda/omega)`:
 the shifted Weyl functions approach `tanh(lambda/2)` after normalization,
 while the endpoint function approaches `lambda/2`. By canonical inverse
 spectral theory, finite-shift Hamiltonian averages are positive definite at
-the initial endpoint but degenerate as the shift vanishes; the limiting
-Hamiltonian has no finite Cesaro endpoint average. This demonstrates
-nonuniformity, not failure of global strong-resolvent convergence. See
+the initial endpoint but degenerate as the shift vanishes. The cited theorem
+rules out a limit average for the endpoint Hamiltonian with positive
+lower-right entry, but allows the same rank-one limit; endpoint commutation remains open. This
+demonstrates nonuniformity, not failure of global strong-resolvent
+convergence. See
 `research/operators/B5-11-high-energy-boundary-layer.md`.

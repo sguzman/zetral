@@ -1,7 +1,7 @@
 # B5-11 — Exponential high-energy boundary layer in the canonical limit
 
-Date: 2026-11-27. Status: RH-conditional double-scaling asymptotic and
-canonical endpoint irregularity; no global resolvent conclusion.
+Date: 2026-11-27. Status: RH-conditional double-scaling asymptotic;
+limiting Hamiltonian endpoint average remains unresolved.
 
 ## Question
 
@@ -63,21 +63,21 @@ locally uniform convergence `m_omega -> m_0` in B5-08 is not uniform on
 spectral regions where `omega log |z|` stays bounded away from zero. The
 transition occurs at heights exponential in `1/omega`.
 
-## Endpoint noncommutation
+## What the endpoint theorem does and does not imply
 
-The same conclusion follows from inverse canonical theory. By B5-08,
-`integral_0^x H_omega -> integral_0^x H_0` for each fixed `x`. But
-`m_0(i y)=(i/2)log(y/(2 pi))+O(1/y)` is unbounded at high energy. The
-equivalence in Theorem 3.1 of Eckhardt–Kostenko–Teschl implies that
-`x^(-1) integral_0^x H_0` has no finite limit as `x -> 0+`. Therefore the
-iterated endpoint limits do not commute:
-
-    lim_(omega->0) lim_(x->0) x^(-1) integral_0^x H_omega
-       = diag(1,0),
-
-whereas `lim_(x->0) lim_(omega->0) x^(-1) integral_0^x H_omega` does not
-exist. This does not contradict fixed-`x` convergence; it identifies a
-nonuniform initial-endpoint layer in the inverse-spectral Hamiltonians.
+By B5-08, `integral_0^x H_omega -> integral_0^x H_0` for each fixed `x`.
+The limit quotient `m_0(i y)=(i/2)log(y/(2 pi))+O(1/y)` is unbounded at
+high energy. Theorem 3.1 of Eckhardt–Kostenko–Teschl rules out a limiting
+average whose lower-right entry is positive, since under that hypothesis
+the theorem would force `m_0` to tend to a finite value at infinity. It
+does **not** rule out a rank-one limit with lower-right entry zero. Since
+each average is positive semidefinite with trace one, if it has any limit,
+the theorem and divergence of `m_0` force that limit to be `diag(1,0)`.
+This is exactly the limit of the fixed-`omega` endpoint averages as
+`omega -> 0`. Thus the cited theorem leaves open
+whether the iterated endpoint averages commute: the limit Hamiltonian
+average may tend to `diag(1,0)`, or it may fail to converge. No conclusion
+between these alternatives is claimed.
 
 ## Verification and limits
 
@@ -86,12 +86,15 @@ comes from Stirling's gamma-ratio formula and `zeta(s)=1+O(2^{-s})` on the
 positive real axis; for fixed closed sectors the standard uniform Stirling
 expansion applies. The double-scaling limit is derived by integrating
 `g(s)` over a real interval of length `2 omega`. The Hamiltonian conclusion
-uses the cited canonical-system theorem with trace normalization.
+uses the cited canonical-system theorem with trace normalization. The
+endpoint theorem was checked for its hypothesis `c_0>0`; it covers
+positive-definite limits and rank-one limits with `c_0>0`, but not the
+candidate `diag(1,0)`. Hence no noncommutation claim is made.
 
 This proves neither failure nor validity of global strong-resolvent
 convergence. Nor does it construct an arithmetic Hamiltonian. It shows
 that any resolvent argument must control the nonuniform high-energy tail
-and the rank-one degeneration at the initial endpoint.
+and address the possible rank-one endpoint degeneration.
 
 Primary references:
 

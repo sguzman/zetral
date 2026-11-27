@@ -168,15 +168,17 @@ does not rule out z-dependent transformations or general intertwiners. See
 For each fixed positive shift, the Weyl quotient tends to `i/omega` at high
 energy, so the associated trace-normalized Hamiltonian has a positive
 definite Cesaro average at the initial endpoint. These averages degenerate
-to `diag(1,0)` as `omega -> 0`, while the limit quotient grows like
-`(i/2)log y`, forcing the limiting Hamiltonian average to have no finite
-endpoint limit. A double scaling `y=exp(lambda/omega)` gives
+to `diag(1,0)` as `omega -> 0`. A double scaling
+`y=exp(lambda/omega)` gives
 `omega m_omega(iy)/i -> tanh(lambda/2)` versus
 `omega m_0(iy)/i -> lambda/2`. This proves nonuniformity of the Weyl limit
-at exponentially high spectral scales, but neither proves nor disproves
-global strong-resolvent convergence. See
+at exponentially high spectral scales. The cited endpoint theorem rules
+out a limit average with positive lower-right entry for `H_0`, but does not
+rule out the rank-one limit `diag(1,0)`; whether the endpoint averages
+commute is unresolved. This neither proves nor disproves global strong-resolvent
+convergence. See
 `research/operators/B5-11-high-energy-boundary-layer.md`.
 
-Next identify whether the high-energy layer can be controlled in a common
-operator representation or construct a counterexample showing why the
-finite-interval Hamiltonian convergence is insufficient by itself.
+Next settle whether the limiting Hamiltonian average is rank-one or
+nonconvergent, then determine whether the high-energy layer can be controlled
+in a common operator representation.

@@ -64,9 +64,11 @@ remain open. Full note:
 
 B5-11 identifies an exponential high-energy layer: at `y=exp(lambda/omega)`,
 the normalized shifted Weyl functions have a hyperbolic-tangent profile,
-while the endpoint quotient has a linear profile. In canonical coordinates,
-the initial Cesaro Hamiltonian limits fail to commute as `omega -> 0` and
-`x -> 0`. This establishes nonuniformity but not a global resolvent result.
+while the endpoint quotient has a linear profile. The cited canonical
+endpoint theorem rules out a limit average with positive lower-right entry
+for the limit Hamiltonian but allows the same rank-one limit `diag(1,0)` as
+the finite-shift averages. Endpoint commutation is unresolved. This establishes
+nonuniformity but not a global resolvent result.
 Full note: `research/operators/B5-11-high-energy-boundary-layer.md`.
 
 Date: 2026-11-27 UTC.
