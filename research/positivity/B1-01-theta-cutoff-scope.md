@@ -244,3 +244,47 @@ succeed. The remaining route must prove a joint cancellation or coercivity
 inequality for the combined operator, not merely improve a scalar prime
 majorant. This updates B1-04 from an absolute-mass limitation to a structural
 component-growth obstruction.
+
+## B1-06: archimedean-prime leading cancellation on paired edge packets
+
+The same endpoint geometry gives a leading-order comparison for the
+combined form. Fix real `g in C_c^infinity((0,L))` with `||g||_2=1`; for
+`h>2L`, put
+
+    f_h(x) = (g(x)+g(h-x))/sqrt(2),  0<x<h.
+
+This is a smooth unit vector in the reflection-even sector. Its correlation
+near the right endpoint is
+`S_h(h-v)=(g*g)(v)` for `0<=v<=2L`, where
+`(g*g)(v)=integral g(x)g(v-x) dx`; in the middle of the interval it vanishes.
+The archimedean term in the direct formula therefore has endpoint contribution
+
+    integral_0^h 2 cosh(t/2) S_h(t) dt
+      = C_g exp(h/2) + O_g(1),
+    C_g = integral_0^(2L) exp(-v/2)(g*g)(v) dv
+        = (integral_0^L exp(-x/2)g(x) dx)^2 >= 0.
+
+The prime sum is supported on fixed-size neighborhoods of the two endpoints
+in shift coordinates. The near-zero part is `O_g(1)`. For primes near
+`exp(h)`, the prime number theorem and the change `p=exp(h-v)` give
+
+    sum_p log(p)/sqrt(p) S_h(log p)
+      = C_g exp(h/2) + o_g(exp(h/2)).
+
+Prime squares and higher powers are lower order. Thus the leading
+`exp(h/2)` archimedean and prime terms cancel in the direct Weil expression
+on this family of paired packets. The remaining continuous-kernel,
+pole-subtraction and constant terms are `O_g(1)` after the diagonal
+subtraction at zero. In particular
+
+    Q_W(f_h) = o_g(exp(h/2)).
+
+This is a joint asymptotic for a test family, not a sign estimate: the error
+may have either sign and could still dominate the finite positive margin.
+It neither proves positivity nor produces a negative direction. It explains
+why the prime operator norm growth from B1-05 is matched by the archimedean
+endpoint term on natural boundary packets. A viable uniform proof must
+control the lower-order signed remainder and general interior/endpoint
+profiles. The separate rank-one pole term in the compressed representation
+is part of its rearrangement of these direct continuous terms; it must not be
+counted a second time on top of the direct formula.

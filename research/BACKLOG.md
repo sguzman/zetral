@@ -28,11 +28,11 @@ the normalized sine component has absolute limit `1/2`; automatic phase
 cancellation fails. See `research/positivity/B1-01-theta-cutoff-scope.md`.
 The compact-frequency endpoint expansion is now proved uniformly for
 `|alpha|<=A`. The current `g(n)` guard has double-exponential cutoff under
-absolute mass, and an endpoint test proves the prime component norm itself
-grows at least `c_L exp(h/2)`. Thus a prime-only uniform bound is impossible;
-the next mathematical route must combine the prime, archimedean and pole
-operators before estimating. Derive a joint factorization or coercivity
-inequality and test for counterexamples before requesting hosted compute.
+absolute mass, and the prime component norm grows at least `c_L exp(h/2)`.
+On smooth paired boundary profiles, the direct archimedean and prime terms
+have matching leading coefficient; their difference is only known to be
+`o(exp(h/2))`, with unresolved sign. Next bound this remainder uniformly
+and extend beyond the test family before requesting hosted compute.
 
 ### B1 — Analytical extension beyond finite cutoffs
 
@@ -50,11 +50,13 @@ inequality and test for counterexamples before requesting hosted compute.
   LXXVI's source-form audit has certified a finite even principal block, but
   not the full map. A first scope audit established that the theta-cardinal
   estimate in `research/theta-cardinal-bound.md` cannot directly supply this
-  inequality. Absolute coefficient summation grows like `2 exp(h/2)`, while
-  selected phases remain endpoint-coherent; the prime component norm itself
-  grows at least `c_L exp(h/2)`. Continue with a joint estimate retaining
-  cancellation against the archimedean and pole components; preserve the full
-  original-form mapping as an explicit dependency.
+  inequality. Absolute coefficient summation grows like `2 exp(h/2)`, and
+  the prime component norm grows at least `c_L exp(h/2)`. Smooth paired
+  boundary profiles exhibit matching leading archimedean terms; their
+  difference is `o(exp(h/2))` but its sign is unresolved. Continue by
+  bounding the lower-order signed remainder and extending beyond those
+  profiles; preserve the full original-form mapping as an explicit
+  dependency.
 - **Design / falsification:** Isolate the exact residual after the finite
   low-mode and prime-power terms. Seek a sign theorem, monotone envelope, or
   summable majorant uniform in the endpoint. Test the proposed bound against
