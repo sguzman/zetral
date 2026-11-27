@@ -874,3 +874,16 @@ the quotient `H_-/Z H_cap` carries the zero seminorm inherited from this
 particular `L²(dx)` norm. The range claim was also checked through the adjoint
 kernel. This is a manual candidate pending full graph-domain and source
 review, not a general Hilbert-space no-go or RH result.
+
+## MHS-02.2–.3 — Weighted Mellin quotient candidates (2026-11-27)
+
+Recorded two further manual candidate lemmas in `research/CAMPAIGN-96.md`.
+MHS-02.2 proposes dense range and zero inherited quotient seminorm for the
+family `L²(x^(2 sigma)dx/x)`, `sigma>-2`, `sigma!=1`, using translated
+moment-correcting bumps. MHS-02.3 treats the pole line `sigma=1` by separating
+the simple pole of `zeta(1+i tau)` and proposing a broad-bump approximation in
+the mean-zero multiplier graph norm. The latter estimate is technically
+delicate. Neither derivation has an independent proof audit or formal check;
+they concern only these inherited quotient norms and do not obstruct other
+Hilbert completions. The possible write-up status and audit prerequisites are
+logged in `research/PAPER-PIPELINE.md`.

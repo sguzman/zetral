@@ -140,6 +140,105 @@ second-person audit, or novelty claim is made. The next investigation tests
 whether another natural completion avoids dense range without importing the
 zeros.
 
+## MHS-02.2 — Collapse for a family of weighted multiplicative `L²` norms
+
+The same argument works for
+
+    H_sigma = L²((0,infinity), x^(2 sigma) dx/x),   sigma > -2, sigma != 1.
+
+Every `H_-` function lies in each `H_sigma`. If `f∈H_cap`, evenness and
+`f(0)=0` imply `f(x)=O(x²)` at the origin, while Schwartz decay controls
+infinity; therefore `f∈H_sigma` for `sigma>-2`. Also `Zf∈H_-⊂H_sigma`.
+The unitary map
+`V_sigma f(y)=e^(sigma y)f(e^y)` sends the Mellin transform on
+`Re(s)=sigma` to Fourier transform. On `H_cap`, analytic continuation of the
+Meyer identity gives
+
+    F V_sigma(Zf)(tau)
+       = zeta(sigma+i tau) F V_sigma(f)(tau).
+
+For fixed `sigma != 1`, the symbol `m_sigma(tau)=zeta(sigma+i tau)` and all
+derivatives have polynomial growth: choose a fixed vertical strip around the
+line avoiding the pole at 1, use Euler–Maclaurin continuation for a
+polynomial bound, then Cauchy estimates. The Fourier multiplier
+`M_(m_sigma)` therefore has `C_c^infinity(R)` as a graph core.
+
+The defining moment condition `Ff(0)=0` becomes
+
+    Lambda_sigma(g) = integral_R e^((1-sigma)y) g(y) dy = 0,
+
+under `V_sigma`; `f(0)=0` is automatic for the compactly supported tests
+under consideration. For `sigma<1`, translate the moment-correcting bump to
+`+infinity`; for `sigma>1`, translate it to `-infinity`. Its correcting
+amplitude decays exponentially, while translation preserves the multiplier
+graph norm up to that amplitude. Hence the constrained compact tests from
+`H_cap` remain a graph core for every such `sigma`.
+
+The line function `zeta(sigma+i tau)` is analytic and not identically zero,
+so its zeros are discrete and the multiplication operator has dense range.
+The range `Z H_cap` is graph-core dense in that range and is therefore dense
+in every `H_sigma` above. Consequently the quotient seminorm inherited from
+any of these weighted Hilbert spaces is identically zero. This includes the
+Haar norm (`sigma=0`) and the additive `dx` norm (`sigma=1/2`), among others.
+
+The excluded line `sigma=1` passes through the zeta pole; there the multiplier
+has a singularity at `tau=0` and the moment-zero domain interacts with it.
+The graph-core correction above does not apply, so this line remains an
+explicit next test. This is still only a family of inherited quotient norms,
+not a general obstruction to Hilbert completions.
+
+## MHS-02.3 — The pole line `sigma=1` also has dense range
+
+The excluded line can be handled by separating the pole. Under `V_1`, the
+Mellin multiplier is
+
+    m_1(tau) = zeta(1+i tau) = 1/(i tau) + b(tau),
+
+where `b` extends smoothly across `tau=0` and has polynomially bounded
+derivatives. Meyer's condition `Ff(0)=0` becomes `integral g(y)dy=0`, which
+is exactly the vanishing needed for `m_1(tau) Fg(tau)` to be square
+integrable at the pole.
+
+The graph domain of `M_(m_1)` has norm equivalent near zero to
+`||g||_2 + || Fg/tau ||_2`, and away from zero to a polynomially weighted
+Fourier norm. Its Fourier-side domain is dense: smooth compactly supported
+functions whose support avoids `tau=0` are dense in the weighted `L²` space.
+Their inverse transforms are Schwartz functions of mean zero.
+
+These Schwartz zero-mean functions can be approximated in graph norm by
+compactly supported zero-mean functions. Let `h` be Schwartz with
+`integral h=0`, let `p_R=chi_R h` for standard expanding cutoffs, and write
+`delta_R=integral p_R -> 0`. Choose a fixed compact bump `psi` with
+`integral psi=1`, set `psi_L(y)=L^(-1)psi(y/L)`, and put
+`q_R=p_R-delta_R psi_L`. Then `q_R` is compactly supported with zero mean.
+For `r_R=h-p_R`, one has `integral r_R=-delta_R` and
+`|F r_R(tau)+delta_R| <= epsilon_R |tau|`, where
+`epsilon_R=integral |y r_R(y)|dy -> 0`. Also
+
+    || delta_R (F psi(L tau)-1)/tau ||_2
+       = C |delta_R| sqrt(L),
+
+with finite `C`, since `(F psi(u)-1)/u` is bounded near zero and decays as
+`1/u` at infinity. Choosing `L=max(1,|delta_R|^(-1))` makes this tend to
+zero; the remaining low-frequency contribution is `O(epsilon_R)` and the
+high-frequency contribution tends to zero by Schwartz convergence. The
+regular multiplier part `b` also converges because it has polynomial growth
+and `r_R, delta_R psi_L` tend to zero in the corresponding Sobolev norms.
+Thus `C_c^infinity` zero-mean tests are a graph core for `M_(m_1)`.
+
+Under `V_1`, these tests correspond to compactly supported smooth even
+functions with `f(0)=Ff(0)=0`, so they lie in `H_cap`. The source identity
+therefore identifies the closure of `Z|H_cap` with `M_(m_1)`. Its range is
+dense because the multiplier is nonzero almost everywhere; the pole at the
+single point `tau=0` does not affect this. The quotient Hilbert seminorm
+inherited from `H_1=L²(x dx)` consequently also collapses.
+
+This is a manual graph-core derivation, not formally checked. The weighted
+Sobolev estimate for the regular part and the approximation argument should
+receive a separate audit before external use. It extends the collapse result
+to the previously exceptional pole weight; it remains a statement only about
+this induced family of Hilbert quotient norms.
+
 ## Dependencies and information gain
 
 Dependencies are Meyer's exact function-space definitions, standard nuclear

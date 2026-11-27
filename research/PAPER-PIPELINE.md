@@ -14,7 +14,7 @@ verification, originality, or journal readiness.
 | Fixed-width positivity criterion | Manual deduction that positivity on all translates of packets built from one fixed support width is equivalent to RH. It uses the classical Weil criterion and a Landau singularity argument; it is not an RH proof. | Detailed note at [`B1-24`](positivity/B1-24-fixed-width-positivity-RH-criterion.md). | Novelty and hypothesis comparison are unresolved. Do not prioritize a standalone paper until the exact relation to recent fixed-support and Weil-form criteria is checked by an independent analyst. |
 | HP-02 fixed-low corner and moving-block Schur criterion | HP-02.3–.4 establish an RH-conditioned fixed-low corner limit in zero-side coordinates. HP-02.5–.6 give a conditional weighted Schur criterion and an explicit scalar-shift row estimate. HP-02.7 shows coarse zero-count growth plus sine separation alone cannot control the moving inverse-metric sum, via an abstract close-pair countermodel. | Supporting notes: [`HP02-fixed-low-random-window.md`](operators/HP02-fixed-low-random-window.md), [`HP02-fixed-low-pencil-corner.md`](operators/HP02-fixed-low-pencil-corner.md), [`HP02-moving-block-schur-target.md`](operators/HP02-moving-block-schur-target.md). | Supporting appendix material only. Independent proof audit, prior-art review, and zeta-specific arithmetic moving-block bounds remain required. Countermodel is not about actual zeta gaps; no novelty claim or spectral transfer. |
 | Theta differential-pencil domain audit | All smooth positive local densities fail pair symmetry on the common test core. The natural gauge form is closed and induces the free Laplacian. Kernel-vector and boundary-trace tests constrain domains; the zero-generated span evades the first pointwise test, while essential self-adjointness fixes the natural similarity-domain closure and prevents a core-preserving boundary correction from adding eigenvectors. Density and closure remain open. | Eight explicit milestones recorded below and derived in [`CAMPAIGN-95.md`](CAMPAIGN-95.md), HP-03.1–.8. | Potential short note or comparative-operator appendix after independent operator/domain audit and prior-art review. No general nonlocal no-go or full spectral correspondence is established. |
-| Meyer Fréchet-model Hilbertization barriers | MHS-01: the original infinite-dimensional nuclear Fréchet topology is not Hilbertizable. MHS-02.1: under the natural inherited `L²(dx)` norm, the quotient by `Z H_cap` appears to collapse because the zeta multiplier on `Re(s)=1/2` has dense range and `H_cap` contains a graph core. | Detailed conditional derivation in [`CAMPAIGN-96.md`](CAMPAIGN-96.md); the dense-range argument has an independent orthogonal-complement check, but full source/operator-domain review remains pending. | Supporting section only, not a standalone novelty claim. Verify the multiplier domain/core and inherited quotient norm; this does not rule out other Hilbert completions or establish spectral correspondence. |
+| Meyer Fréchet-model Hilbertization barriers | MHS-01: the original infinite-dimensional nuclear Fréchet topology is not Hilbertizable. MHS-02.1–.3: manual Mellin-multiplier arguments propose collapse of the inherited quotient seminorm for `L²(dx)` and the family `L²(x^(2 sigma) dx/x)`, `sigma>-2`, including the pole line `sigma=1`. Only the `sigma=1/2` dense-range step has an independent adjoint-kernel check; the weighted-family and pole-line graph-core arguments need separate audit. | Detailed derivations in [`CAMPAIGN-96.md`](CAMPAIGN-96.md). These are scoped candidate lemmas, not independently verified results. | Possible supporting section on why Meyer's model does not directly yield these natural Hilbert completions. Audit source spaces, Mellin domains and graph-core proofs; do not generalize to all Hilbert completions or claim a Hilbert–Pólya construction. |
 
 ## Milestone log for write-up planning
 
@@ -92,3 +92,30 @@ carefully scoped obstruction note, not a Hilbert–Pólya construction.
 No item in this register is Lean-verified. Formalization is not presently the
 highest-value next step: the main gaps are analytic hypotheses, source-to-model
 identification, independent proof audit, and prior art.
+
+## Meyer-model write-up candidates (manual, audit pending)
+
+- **MHS-01 — nuclear Fréchet topology obstruction.** A standard compactness
+  argument rules out a compatible Hilbert norm on Meyer's stated
+  infinite-dimensional nuclear Fréchet space. This is a short supporting
+  lemma, not a no-go for weaker completions.
+- **MHS-02.1 — critical-line `L²(dx)` collapse.** Mellin transform identifies
+  the induced map with multiplication by `zeta(1/2+i tau)`; the constrained
+  test core is argued graph-dense and the multiplier has dense range. The
+  inherited quotient seminorm is therefore zero, subject to source/domain
+  verification.
+- **MHS-02.2 — non-pole weighted family.** The same remote-bump argument is
+  proposed for `L²(x^(2 sigma) dx/x)`, `sigma>-2`, `sigma!=1`, extending the
+  collapse claim across a natural continuum of Mellin weights. The
+  parameter-dependent graph-core and source-space details need independent
+  audit.
+- **MHS-02.3 — pole-line weight.** Separating the simple pole of
+  `zeta(1+i tau)` leads to a mean-zero multiplier domain; a scale-dependent
+  broad-bump correction is proposed to prove a compactly supported
+  mean-zero graph core. This is the most technically delicate new lemma and
+  is not ready to state as a theorem in a paper.
+
+These Meyer items are possible sections or appendices in an operator-model
+obstruction paper, not standalone novelty claims. There is no manuscript or
+Lean proof for them; source verification, independent proof audit and prior
+art review remain prerequisites.

@@ -28,13 +28,19 @@ has a separate zero-eigenvalue statement. The infinite-dimensional original
 quotient topology cannot be induced by a Hilbert norm: nuclearity would make
 the Banach identity compact, impossible in infinite dimension. This rules out
 only an equivalent Hilbert topology on `H^0_-`, not weaker completions or the
-dual. MHS-02.1 derives that the natural quotient completion inherited from
-Meyer's additive `L²(dx)` test space collapses: under Mellin-Plancherel, `Z`
-on `H_cap` is the critical-line zeta multiplier, and a constrained compact
-test core remains graph-dense, giving dense range. This is a scoped manual
-result without formal or second-person audit; it rules out only this
-particular completion. Next test alternative natural weights and their
-spectral content. Full record: `research/CAMPAIGN-96.md`.
+dual. MHS-02.1 derives collapse of the inherited `L²(dx)` quotient seminorm
+via the critical-line zeta multiplier and a constrained graph core; its
+dense-range step has an independent orthogonal-complement check. MHS-02.2
+proposes the same collapse for `L²(x^(2 sigma)dx/x)`, `sigma>-2`,
+`sigma!=1`; MHS-02.3 treats the pole line `sigma=1` by separating its simple
+pole and proving a mean-zero graph-core approximation. The latter two are
+manual derivations pending separate audit, especially the pole-line weighted
+estimate. All results are scoped to these inherited quotient norms and do
+not rule out other Hilbert completions. Next audit the Mellin/source-space
+identifications and graph-core estimates, then test a qualitatively different
+Hilbert realization rather than extend weights indefinitely. Write-up
+candidate milestones are logged in `research/PAPER-PIPELINE.md`. Full record:
+`research/CAMPAIGN-96.md`.
 
 The 2026-11-27 literature scan included Hedenmalm's theta pencil, Kim et al.'s
 Suzuki-operator numerics, Liu's degree-two local pencils, and Meyer's
