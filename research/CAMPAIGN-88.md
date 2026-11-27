@@ -137,3 +137,20 @@ heat-flow intertwiner or global strong-resolvent convergence. See
 Next compare canonical Weyl functions under the heat deformation with the
 shifted family: seek an exact transformation law or a coefficient-level
 obstruction, explicitly tracking the different finite-parameter systems.
+
+## Checkpoint B5-09
+
+Direct quotient expansions give the second-order coefficients of
+`m_shift,omega=B^omega/(omega A^omega)` and the heat logarithmic derivative
+`m_heat,t=-F_t'/F_t`. Equality under `t=a omega^2+o(omega^2)` requires a
+specific meromorphic identity. Under RH, Conrey's theorem supplies simple
+critical-line zeros, and the even Hadamard product shows at each such zero
+that `F''` and `F'''` cannot both vanish. A Laurent expansion therefore
+rules out this scalar-time matching through order `omega^2`. The result
+concerns these fixed-normalization Weyl quotients only; general
+intertwiners remain open. See
+`research/operators/B5-09-weyl-quotient-expansion-obstruction.md`.
+
+Next test possible fractional-linear transformations of the Weyl functions
+and investigate what extra structure would be needed to convert finite-
+interval canonical-system convergence into an operator correspondence.

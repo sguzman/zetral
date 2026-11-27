@@ -274,6 +274,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B5-08):** Under RH, local-uniform convergence of the normalized shifted Herglotz functions invokes the classical de Branges continuity theorem: trace-normalized canonical Hamiltonian primitives and finite-interval transfer matrices converge locally uniformly. This gives a canonical-system endpoint limit for the rescaled de Branges pairs, not Suzuki's original arithmetic Hamiltonian, a heat-flow intertwiner, or global strong-resolvent convergence. Next compare heat-flow and shift Weyl functions for an exact transformation law or coefficient obstruction. See `research/operators/B5-08-canonical-system-limit.md`.
 
+**Progress (2026-11-27, B5-09):** Under RH, the second-order Weyl-quotient expansions and a Laurent pole test rule out scalar heat-time matching through order `omega^2` for the fixed normalized quotients. Conrey's classical simple-zero theorem and the paired Hadamard product supply the needed jet nonvanishing without numerical zero input. This does not rule out nonlinear Weyl transforms or general intertwiners. Next test fractional-linear Weyl relations or operator correspondence conditions. See `research/operators/B5-09-weyl-quotient-expansion-obstruction.md`.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

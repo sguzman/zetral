@@ -495,3 +495,13 @@ limit Weyl function. This concerns the rescaled de Branges pairs and is not
 an identification with Suzuki's arithmetic Hamiltonian, a heat-flow
 intertwiner, or global strong-resolvent convergence. See
 `research/operators/B5-08-canonical-system-limit.md`.
+
+### LXXXVIII checkpoint — Weyl quotient expansion
+
+B5-09 computes the second-order expansions of the normalized shifted and
+heat logarithmic-derivative Weyl functions. Under RH, Conrey's simple-zero
+theorem and a paired Hadamard-product calculation establish the jet condition
+needed by a Laurent pole test. This rules out scalar time matching through
+order `omega^2` for these fixed-normalization quotients. General Weyl
+transformations and intertwiners remain open. See
+`research/operators/B5-09-weyl-quotient-expansion-obstruction.md`.
