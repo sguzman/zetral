@@ -230,3 +230,14 @@ show that ordinary derivative evaluation at a fixed ordinate is unbounded in
 the Weil completion norm, ruling out derivative samples as continuous
 coordinates in a multiplicity fiber with that unchanged norm. The construction
 uses RH and the ordinate set as input.
+
+Campaign LXXVIII closed within its bounded audit scope; the broader
+Hilbert–Pólya direction remains active in the research portfolio.
+
+## LXXIX signed endpoint multiplier checkpoint — B1-10 (2026-11-27)
+
+`research/positivity/B1-10-rh-signed-multiplier.md` derives an exact
+Fourier-side Stieltjes identity for the first-prime endpoint discrepancy.
+Under the RH square-root Chebyshev bound it gives an `O(h²)` multiplier bound
+and an `H^(1/2)`-type profile estimate. The bound is conditional, has no sign,
+and does not control the full logarithmic form domain or Weil form.

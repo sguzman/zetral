@@ -1,6 +1,6 @@
 # Campaign LXXVIII — Multiplicity and independence in the global spectral model
 
-Date opened: 2026-11-27. Status: ACTIVE. This bounded investigation audits
+Date opened: 2026-11-27. Status: CLOSED WITHIN SCOPE. This bounded investigation audits
 the existing Hilbert–Pólya candidate; it does not close the original-form or
 analytic positivity campaigns.
 
@@ -36,15 +36,14 @@ fiber with the unchanged Weil norm. It does not rule out a new completion or
 an unbounded sampling map with a stated domain. Details and dependencies are
 in `research/operators/B3-01-distinct-zero-model.md`.
 
-## Next milestone
+## Disposition
 
 The ordinary first derivative coordinate is ruled out for the unchanged
-Weil norm. Next investigate whether a renormalized jet space or another
-operator-theoretic construction can encode multiplicity while preserving an
-explicit local-to-global identity. If that requires a genuinely different
-Hilbert norm, state it as a new candidate and first verify positivity,
-completeness, and compatibility with the localized Weil form. Do not infer
-zero simplicity, RH, or novelty.
+Weil norm. A renormalized jet space would require a genuinely different
+Hilbert norm and a new local-to-global theorem; no concrete candidate is
+currently specified. Full research continuity is recorded in
+`research/CAMPAIGN-78-CLOSURE.md`; the wider Hilbert–Pólya direction remains
+open. Do not infer zero simplicity, RH, or novelty.
 
 ## Acceptance and integrity
 

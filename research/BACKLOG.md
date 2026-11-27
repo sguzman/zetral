@@ -157,6 +157,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B1-09):** Suzuki v1 §2.1 identifies the local form domain as `H^log`, which does not control the derivative required by B1-08. A Fourier-dual estimate proves the endpoint discrepancy is `o(exp(h/2))` uniformly on bounded `H^log` families: the low-frequency range uses PNT integration by parts, and the high-frequency range uses total variation divided by the logarithmic Fourier weight. The bound has no sign and does not control the full L2 unit sphere or full form. Next sharpen the signed multiplier and include remaining terms.
 
+**Progress (2026-11-27, B1-10):** Stieltjes integration by parts gives an exact signed multiplier in terms of the normalized Chebyshev error `R_h(v)`. Under the RH-conditional bound `θ(t)−t=O(sqrt(t) log²t)`, it yields `|Δ_hat_h(ξ)|≤C h²(1+|ξ|)` and an `O(h²)` bound on profiles with bounded `H^(1/2)`-type Fourier norm. This improves fixed-profile scale under RH but does not control `H^log`; the ratio of this majorant to the log weight is unbounded at high frequency. No sign or full-form conclusion follows. Next exploit possible high-frequency oscillation or prove the proposed log-dual estimate fails for the actual multiplier.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and
