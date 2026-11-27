@@ -13,7 +13,62 @@ verification, originality, or journal readiness.
 | Common Clark endpoint limit | Under RH, normalized scalar Clark models for the shifted xi family converge in strong resolvent sense on one Hardy space; a heat-family model has the same endpoint. The limit is not identified with Suzuki's original arithmetic Hamiltonian and does not give a finite-parameter intertwiner. | Two linked operator notes: [`B5-14`](operators/B5-14-clark-strong-resolvent-limit.md) and [`B5-15`](operators/B5-15-shift-heat-common-clark-limit.md). | Independent audit of the model-space embeddings, infinity-atom hypotheses and exact operator identification; search prior work on convergence of Clark models under inner-function limits. Present only as a conditional model-limit result unless the arithmetic identification is proved. |
 | Fixed-width positivity criterion | Manual deduction that positivity on all translates of packets built from one fixed support width is equivalent to RH. It uses the classical Weil criterion and a Landau singularity argument; it is not an RH proof. | Detailed note at [`B1-24`](positivity/B1-24-fixed-width-positivity-RH-criterion.md). | Novelty and hypothesis comparison are unresolved. Do not prioritize a standalone paper until the exact relation to recent fixed-support and Weil-form criteria is checked by an independent analyst. |
 | HP-02 fixed-low corner and moving-block Schur criterion | HP-02.3–.4 establish an RH-conditioned fixed-low corner limit in zero-side coordinates. HP-02.5–.6 give a conditional weighted Schur criterion and an explicit scalar-shift row estimate. HP-02.7 shows coarse zero-count growth plus sine separation alone cannot control the moving inverse-metric sum, via an abstract close-pair countermodel. | Supporting notes: [`HP02-fixed-low-random-window.md`](operators/HP02-fixed-low-random-window.md), [`HP02-fixed-low-pencil-corner.md`](operators/HP02-fixed-low-pencil-corner.md), [`HP02-moving-block-schur-target.md`](operators/HP02-moving-block-schur-target.md). | Supporting appendix material only. Independent proof audit, prior-art review, and zeta-specific arithmetic moving-block bounds remain required. Countermodel is not about actual zeta gaps; no novelty claim or spectral transfer. |
-| Theta differential-pencil domain audit | All smooth positive local densities fail pair symmetry on the common test core. The natural gauge form is closed and induces the free Laplacian. A kernel-vector test constrains domains; the zero-generated span excludes those vectors pointwise. The similarity-transported metric that symmetrizes the transformed expression fails to factor through `L`, and quotienting constants breaks invariance. Density and closure remain open. | Manual derivation in [`CAMPAIGN-95.md`](CAMPAIGN-95.md), HP-03.1–.7. | Potential comparative-operator appendix after independent operator/domain audit and prior-art review. No general nonlocal no-go or full spectral correspondence is established. |
+| Theta differential-pencil domain audit | All smooth positive local densities fail pair symmetry on the common test core. The natural gauge form is closed and induces the free Laplacian. A kernel-vector test constrains domains; the zero-generated span excludes those vectors pointwise. The similarity-transported metric that symmetrizes the transformed expression fails to factor through `L`, and quotienting constants breaks invariance. Density and closure remain open. | Seven explicit milestones recorded below and derived in [`CAMPAIGN-95.md`](CAMPAIGN-95.md), HP-03.1–.7. | Potential short note or comparative-operator appendix after independent operator/domain audit and prior-art review. No general nonlocal no-go or full spectral correspondence is established. |
+
+## Milestone log for write-up planning
+
+These are the completed Zetral results most directly connected to a future
+theta-pencil write-up. “Completed” means the stated calculation or deduction
+was recorded; the entries remain AI-assisted manual mathematics, not
+independently verified theorems. The strongest plausible write-up is a
+carefully scoped obstruction note, not a Hilbert–Pólya construction.
+
+### Major candidate results
+
+- **HP-03.2 — local-weight obstruction.** A formal differential-operator
+  comparison shows no strictly positive smooth density `rho(x) dx` makes the
+  theta pair symmetric on the shared `C_c^infinity` core. The calculation
+  forces `rho` constant and then contradicts the theta asymptotics. This is
+  the cleanest theorem-shaped result in this campaign and could anchor a
+  short paper or a section in an operator-realization audit. Its exact scope
+  (common core) must stay in the statement.
+- **HP-03.5–.6 — domain escape and its limitation.** The pair identity
+  cannot hold on a positive faithful domain containing `k,Dk,D²k`, while a
+  tail estimate shows the source's literal zero-generated finite span
+  excludes those functions pointwise. Together these give a precise
+  obstruction-and-escape result: the kernel test is not a universal no-go.
+  Potentially useful as a technical section paired with HP-03.2; density,
+  closure and completion of that span are unresolved.
+- **HP-03.7 — one natural nonlocal candidate fails.** The similarity-pulled
+  metric fails to factor through `L`, and its constants quotient is not
+  invariant. This is a useful negative construction audit, likely supporting
+  material rather than a standalone paper.
+
+### Supporting milestones
+
+- **HP-03.1:** the direct gauge-weighted space already fails formal symmetry
+  on compactly supported smooth functions; subsumed and generalized by
+  HP-03.2.
+- **HP-03.3:** the boundary problem has one solution direction per zero,
+  regardless of analytic zero order. This identifies a multiplicity gap;
+  it neither asserts a multiple zero nor rules out algebraic multiplicity.
+- **HP-03.4:** the natural gauge graph form is closed and induces the free
+  Laplacian, with the formal kernel excluded from its weighted L2 space.
+  This resolves a form-domain question but is not the desired zeta operator.
+
+### Minimum path to a defensible manuscript
+
+1. Independently audit every sign, domain and theta-asymptotic step in
+   HP-03.1–.7, including the source's complex endpoint conditions.
+2. Check the exact local-weight obstruction and kernel-domain argument
+   against existing work on weighted differential pencils and
+   quasi-self-adjoint operators; make no novelty claim before that review.
+3. State explicitly that the source's zero-defined span may evade the common
+   core obstruction and that no density, self-adjoint realization, or
+   spectral correspondence has been proved.
+4. Only then decide whether the result merits a standalone note. There is
+   currently no LaTeX manuscript for this campaign and no Lean-verified
+   theorem.
 
 ## Immediate triage
 

@@ -35,7 +35,11 @@ the constant gauge mode annihilated by `L`; quotienting that mode fails because
 the transformed operator does not preserve constants. Other nonlocal metrics
 remain open.
 Full records: `research/CAMPAIGN-94-CLOSURE.md` and
-`research/CAMPAIGN-95.md`.
+`research/CAMPAIGN-95.md`. Write-up candidates and milestone-level draft
+readiness for HP-03.1–.7 are catalogued in `research/PAPER-PIPELINE.md`;
+HP-03.2 is the strongest theorem-shaped candidate, subject to independent
+operator/domain audit and prior-art review. No manuscript or formal proof is
+claimed.
 
 LXXXVI closed within the conditional shifted-xi endpoint scope. Positive-shift
 operators have a noncanonical strong-resolvent limit after ordered-eigenbasis
