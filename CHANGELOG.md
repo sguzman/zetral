@@ -505,3 +505,12 @@ needed by a Laurent pole test. This rules out scalar time matching through
 order `omega^2` for these fixed-normalization quotients. General Weyl
 transformations and intertwiners remain open. See
 `research/operators/B5-09-weyl-quotient-expansion-obstruction.md`.
+
+### LXXXVIII checkpoint — projective Weyl obstruction
+
+B5-10 shows that the second-order Weyl mismatch grows like `log^3 y` on
+`z=iy`, while the first variation of a smooth constant Möbius map is at
+most quadratic in the limit quotient and grows like `log^2 y`. This rules
+out that near-identity projective repair under RH; it leaves z-dependent
+maps and general intertwiners open. See
+`research/operators/B5-10-mobius-weyl-obstruction.md`.

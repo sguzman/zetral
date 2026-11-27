@@ -151,6 +151,18 @@ concerns these fixed-normalization Weyl quotients only; general
 intertwiners remain open. See
 `research/operators/B5-09-weyl-quotient-expansion-obstruction.md`.
 
-Next test possible fractional-linear transformations of the Weyl functions
-and investigate what extra structure would be needed to convert finite-
-interval canonical-system convergence into an operator correspondence.
+## Checkpoint B5-10
+
+Writing the second-order quotient difference in terms of `q=-F'/F` gives a
+cubic leading term on the positive imaginary axis: `D_a(iy) ~
+-(i/24)log^3(y)`. A smooth constant real Möbius change near the identity
+has first variation at most quadratic in `q`, hence only `O(log^2 y)` on
+that ray. Therefore no such projective change absorbs the mismatch through
+order `omega^2`, for any scalar `t=a omega^2+o(omega^2)`. This is
+RH-conditional and rules out only smooth, constant projective changes; it
+does not rule out z-dependent transformations or general intertwiners. See
+`research/operators/B5-10-mobius-weyl-obstruction.md`.
+
+Next investigate what extra global domain, boundary, and tail information
+would be needed to convert finite-interval canonical-system convergence into
+an operator correspondence; alternatively test z-dependent transformations.
