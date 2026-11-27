@@ -6,6 +6,59 @@ campaign files contain the detailed derivations and evidence. Re-rank after
 each material result. Keep finite positivity certificates distinct from
 analytic theorems and from any RH implication.
 
+### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
+
+- **Precise question:** Can the prolate candidate `k_lambda` be shown close
+  enough to the full restricted-Weil ground vector `theta_x`, and can the
+  separate finite Fourier truncation `xi_{lambda,N}` be controlled strongly
+  enough that its Mellin transform and determinant converge locally
+  uniformly to Xi?
+- **Evidence / recent literature:** Connes, arXiv:2602.04022v1 (2026-02-03),
+  §§6.4–6.6 and 7.4, reports transform convergence for `k_lambda` and
+  explicitly leaves comparison with the actual Weil-form ground vector open;
+  simplicity/evenness is also unresolved. Connes–Consani–Moscovici,
+  arXiv:2511.22755v1 (2025-11-27), Theorem 1.1 constructs a self-adjoint
+  rank-one perturbation under finite ground-state assumptions. Zetral's
+  finite positivity certificates and Suzuki/prolate limits do not prove this
+  exact full-space eigenvector bridge.
+- **First derived prerequisite:** A normalized trial vector with Rayleigh
+  quotient `m<a_1` and residual `r=||(A-m)v||` satisfies
+  `dist(v,C e_0)<=r/(a_1-m)`. Mellin evaluation on
+  `[lambda^-1,lambda]` has norm
+  `[sinh(2b log(lambda))/b]^(1/2)` uniformly on `|Re z|<=b`; hence the
+  residual/gap ratio must be `o(lambda^-b)` for this route to imply transform
+  convergence. The full-space and finite-truncation approximation legs must
+  each meet this criterion (or a justified form-domain analogue). Boundary
+  normalization for the determinant remains an extra requirement. Full
+  derivation and a degenerating-gap countermodel are in
+  `research/CAMPAIGN-97.md`.
+- **Design / falsification:** Pin the exact form/domain; test whether the
+  prolate candidate belongs to the operator domain; derive its form residual
+  from prime and archimedean terms; prove a next-eigenvalue/parity gap; bound
+  the boundary functional. The abstract two-level family with closing gap
+  falsifies inference from Rayleigh energy alone.
+- **Information gain / dependencies:** Directly tests the missing step in a
+  recent candidate HP construction. Requires source-pinned CCM/Connes
+  definitions, standard compact-resolvent estimates, and semilocal trace
+  formulas; no large data or local heavy computation.
+- **Acceptance / verification:** An independently rederived actual-family
+  residual, gap, parity and normalization estimate strong enough on each
+  compact strip, or a rigorous obstruction showing current hypotheses cannot
+  imply it. Numerical agreement is insufficient; no RH conclusion without
+  the full convergence proof.
+
+### MHS-03.3 — Reciprocal-xi GNS spectral type (scoped result)
+
+Sra's 2026 reciprocal-xi density yields a cyclic unitary representation on
+`L²(xi(1/2)Lambda(x)dx)`. Its Stone generator is multiplication by `x`, with
+purely absolutely continuous spectrum equal to `R` and no eigenvalues,
+because `Lambda` is smooth and strictly positive on `R`. Thus this positive
+kernel does not itself give discrete zero point spectrum and cannot meet the
+atomic-measure condition from MHS-03.1. The construction is not prime-side
+independent, and the source theorem itself uses the zero divisor plus finite
+verified input. It is a scoped negative route result, not a novelty claim;
+details are in `research/CAMPAIGN-96.md`.
+
 ### LXXVII / RHA-04 — Audit analytic inputs to zero-free reduction (high priority)
 
 - **Question / hypothesis:** Does the pinned zero-density theorem for quadratic twists give the uniform bad-prime count needed to choose a twist with no zero in the target rectangle, under exactly the modulus and class assumptions?

@@ -15,6 +15,7 @@ verification, originality, or journal readiness.
 | HP-02 fixed-low corner and moving-block Schur criterion | HP-02.3–.4 establish an RH-conditioned fixed-low corner limit in zero-side coordinates. HP-02.5–.6 give a conditional weighted Schur criterion and an explicit scalar-shift row estimate. HP-02.7 shows coarse zero-count growth plus sine separation alone cannot control the moving inverse-metric sum, via an abstract close-pair countermodel. | Supporting notes: [`HP02-fixed-low-random-window.md`](operators/HP02-fixed-low-random-window.md), [`HP02-fixed-low-pencil-corner.md`](operators/HP02-fixed-low-pencil-corner.md), [`HP02-moving-block-schur-target.md`](operators/HP02-moving-block-schur-target.md). | Supporting appendix material only. Independent proof audit, prior-art review, and zeta-specific arithmetic moving-block bounds remain required. Countermodel is not about actual zeta gaps; no novelty claim or spectral transfer. |
 | Theta differential-pencil domain audit | All smooth positive local densities fail pair symmetry on the common test core. The natural gauge form is closed and induces the free Laplacian. Kernel-vector and boundary-trace tests constrain domains; the zero-generated span evades the first pointwise test, while essential self-adjointness fixes the natural similarity-domain closure and prevents a core-preserving boundary correction from adding eigenvectors. Density and closure remain open. | Eight explicit milestones recorded below and derived in [`CAMPAIGN-95.md`](CAMPAIGN-95.md), HP-03.1–.8. | Potential short note or comparative-operator appendix after independent operator/domain audit and prior-art review. No general nonlocal no-go or full spectral correspondence is established. |
 | Meyer Fréchet-model Hilbertization barriers | MHS-01: the original infinite-dimensional nuclear Fréchet topology is not Hilbertizable. MHS-02.1–.5: a manual Mellin-multiplier argument proposes zero quotient for every absolutely continuous density `w(tau)d tau` bounded above and below by polynomial weights, on every real Mellin line, including the pole. The non-pole tempered-distribution annihilator and pole-line Sobolev graph-core argument were rederived locally, but have no formal or independent external verification. | Detailed derivations and exact Meyer source scope in [`CAMPAIGN-96.md`](CAMPAIGN-96.md). | Possible supporting section describing the limits of ordinary absolutely continuous Mellin Hilbertizations. Obtain independent proof audit and prior-art review; singular measures, super-polynomial weights and non-Mellin Hilbert norms remain open. No Hilbert–Pólya construction is established. |
+| Prolate-to-Weil eigenvector bridge | A residual/gap inequality identifies the scale needed to transfer prolate-candidate convergence to the full restricted-Weil ground vector; a Mellin functional norm shows local-uniform transform convergence requires stronger than unweighted L2 convergence. A second approximation leg controls the finite Fourier truncation used in the CCM operator. Actual-family residuals, gaps, parity, and boundary normalization remain open. | Active campaign [`XCVII`](CAMPAIGN-97.md), motivated by Connes 2026 §§6–7 and Connes–Consani–Moscovici 2025. | Derive both actual-family residual and spectral-gap bounds; settle simplicity/evenness; control the determinant's boundary normalization; audit prior art and source hypotheses. No RH implication or operator convergence is established. |
 
 ## Milestone log for write-up planning
 
@@ -149,3 +150,26 @@ art review remain prerequisites.
   Corollary 4.2 and B3-09/B5-07 are close prior art; not an independent or
   claimed novel construction. Could be a short technical appendix only after
   prior-art and independent proof review.
+- **MHS-03.3 — reciprocal-xi GNS spectral type.** Sra's strictly positive
+  reciprocal-xi density gives a cyclic unitary representation whose Stone
+  generator is multiplication by the real variable, with full purely
+  absolutely continuous spectrum and no eigenvalues. This falsifies the
+  shortcut from that positive kernel to a discrete zero-spectrum operator;
+  it does not rule out resonance information in analytic continuation.
+  The cited source uses zero-divisor information and finite verification, and
+  this is a standard GNS deduction rather than a new construction.
+
+### XCVII milestone / paper note
+
+- **PWPB-01 — residual/gap-to-Mellin criterion.** For a simple compact
+  resolvent ground state, a normalized candidate with Rayleigh quotient `m`
+  and residual `r` is within `r/(a_1-m)` in projective Hilbert distance,
+  provided `m<a_1`. The Mellin functional on `[lambda^-1,lambda]` has norm
+  `sqrt(sinh(2b log(lambda))/b)` on a strip `|Re z|<=b`; hence the product
+  of this growing norm and the candidate-vector error must vanish to obtain
+  local-uniform Mellin convergence. This makes precise why energy closeness
+  alone is insufficient and sets a quantitative target for the recent
+  prolate/Weil operator route. Full derivation and an abstract closing-gap
+  countermodel are in [`CAMPAIGN-97.md`](CAMPAIGN-97.md). This is a useful
+  research lemma, not yet a standalone paper result: specialization to the
+  actual Weil form and the determinant boundary normalization are open.

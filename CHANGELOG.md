@@ -947,3 +947,27 @@ zero-dependent scalar model, but it assumes RH, imports the zero set, and
 does not capture unknown multiplicities. Meyer Corollary 4.2 and the
 repository's B3-09/B5-07 are close prior art; no novelty claim or independent
 operator is asserted. Full derivation is in `research/CAMPAIGN-96.md`.
+
+## Campaign XCVII opened — prolate-to-Weil eigenvector bridge (2026-11-27)
+
+Opened a bounded operator investigation motivated by Connes's 2026 RH survey
+and the Connes–Consani–Moscovici finite-prime spectral triples. Derived the
+general residual/gap estimate for a simple compact-resolvent ground state and
+the exact growth of Mellin evaluation norms on expanding logarithmic windows.
+Together they give the sufficient scale needed to transfer a trial-vector
+approximation to local-uniform transform convergence. A two-level closing-gap
+example shows that Rayleigh energy convergence alone cannot control the
+eigenvector. Specialization to the Weil-form family, parity, and boundary
+normalization are open; no determinant convergence or RH result is claimed.
+See `research/CAMPAIGN-97.md` and `research/BACKLOG.md`.
+
+## MHS-03.3 scoped result — reciprocal-xi positive kernel (2026-11-27)
+
+Applied Sra's positive reciprocal-xi density to its cyclic GNS representation:
+the Stone generator is multiplication by the real variable, has full purely
+absolutely continuous spectrum, and has no eigenvalues. This rules out that
+specific positive kernel as a direct discrete Hilbert–Pólya operator while
+leaving analytic-continuation/resonance approaches open. The cited density
+theorem is not a prime-side construction and its proof uses zero-divisor
+information plus finite verified input. Full scope and caveats are recorded
+in `research/CAMPAIGN-96.md`.

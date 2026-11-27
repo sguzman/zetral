@@ -1,6 +1,6 @@
 # Research state
 
-## Current investigation checkpoint — XCVI / MHS-02 (2026-11-27)
+## Current investigation checkpoint — XCVII / PWPB-01 (2026-11-27)
 
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
@@ -21,7 +21,9 @@ milestone records:
 `research/CAMPAIGN-95-CLOSURE.md`, `research/CAMPAIGN-95.md`, and
 `research/PAPER-PIPELINE.md`.
 
-Active Campaign XCVI/MHS-02 follows a completed MHS-01 source audit. Meyer
+Campaign XCVI's tested Mellin-diagonal line is pivoted after MHS-03.3; its
+broader question of an independently prime-defined singular measure remains
+open. Meyer
 defines `H^0_- = H_- / Z H_cap`, states it is nuclear Fréchet, and gives the
 zero spectrum for its induced generator; the transpose on the continuous dual
 has a separate zero-eigenvalue statement. The infinite-dimensional original
@@ -53,15 +55,32 @@ match unknown analytic multiplicities, prove RH, or provide an independent
 prime-side measure; Meyer Corollary 4.2 and repository B3-09/B5-07 are close
 prior art. Next investigate whether the positive atomic measure can be
 derived independently from prime-side data, taking care not to repackage the
-classical Lagarias/Weil RH-equivalent positivity criterion. Write-up
-candidates are logged in
-`research/PAPER-PIPELINE.md`. Full record:
-`research/CAMPAIGN-96.md`.
+classical Lagarias/Weil RH-equivalent positivity criterion. MHS-03.3 applies
+Sra's 2026 positive reciprocal-xi density to a cyclic GNS representation;
+the generator has purely absolutely continuous full-real spectrum and no
+eigenvalues, so this positive kernel is not a direct discrete zero operator.
+The theorem is not prime-side independent and uses zero-divisor information
+and finite verification. Full record: `research/CAMPAIGN-96.md`.
 
-The 2026-11-27 literature scan included Hedenmalm's theta pencil, Kim et al.'s
-Suzuki-operator numerics, Liu's degree-two local pencils, and Meyer's
-Fréchet-space model; no new unconditional Hilbert–Pólya operator was
-identified. This scan is not comprehensive.
+Active Campaign XCVII / PWPB-01 now targets the prolate-to-Weil ground-vector
+bridge in Connes–Consani–Moscovici's finite-prime self-adjoint operators,
+including both the prolate-to-full-ground-vector step and the finite Fourier
+truncation step. Connes's 2026 survey explicitly leaves comparison of the
+actual bottom eigenvector with its prolate candidate open. A manual
+residual/gap estimate and exact Mellin-functional norm identify the rate
+required for local-uniform transform convergence; an abstract closing-gap
+example shows Rayleigh energy convergence alone is insufficient. The
+actual-family residual, gap, parity, and determinant boundary normalization
+are open. See
+`research/CAMPAIGN-97.md`.
+
+The 2026-11-27 literature refresh also checked Connes's survey
+([arXiv:2602.04022](https://arxiv.org/abs/2602.04022)) and Sra's reciprocal-xi
+positivity paper ([arXiv:2611.02944](https://arxiv.org/abs/2611.02944));
+neither supplies an unconditional limiting operator with the exact zeta-zero
+spectrum. The earlier scan covered Hedenmalm, Kim et al., Liu, and Meyer.
+This scan is targeted, not comprehensive. Paper candidates and milestones
+are tracked in `research/PAPER-PIPELINE.md`.
 
 LXXXVI closed within the conditional shifted-xi endpoint scope. Positive-shift
 operators have a noncanonical strong-resolvent limit after ordered-eigenbasis

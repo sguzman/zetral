@@ -1,6 +1,8 @@
 # Campaign XCVI — Hilbertization of Fréchet spectral models
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: PIVOTED after the MHS-03.3 scoped result.
+The tested Mellin-diagonal cases are recorded below; an independently
+prime-defined singular measure remains open and can reactivate this line.
 
 ## Precise question
 
@@ -484,6 +486,59 @@ the zero-defined scalar spectral measure/model under RH. Thus no novelty is
 claimed; the specific added link is density of the value-evaluation map from
 the compact source tests into the weighted atomic Hilbert space. A targeted
 prior-art review, formal proof and external independent audit remain undone.
+
+## MHS-03.3 — Reciprocal-xi positive kernel gives continuous spectrum
+
+### Source result and precise question
+
+Sra, *On some positivity properties of the Riemann Xi function*,
+[arXiv:2611.02944](https://arxiv.org/abs/2611.02944), v1 (2026-11-02),
+Corollary 2.5, equations (2.9)–(2.10), constructs a strictly positive smooth
+density `Lambda` on `R` with
+
+    1/xi(1/2+t) = integral_R exp(i t x) Lambda(x) dx.
+
+The paper's reciprocal-law construction does not assume RH, but its proof
+uses the zero divisor and published low-zero verification; it is not a
+prime-side construction. The precise question here is whether this new
+positive-definite kernel supplies a discrete Hilbert–Pólya spectrum.
+
+### GNS/spectral calculation
+
+Normalize `d nu(x)=xi(1/2) Lambda(x) dx`, so `nu` is a probability measure.
+On `H=L^2(R,nu)`, define `U_t f(x)=exp(i t x)f(x)` and `Omega(x)=1`.
+Then `U_t` is a strongly continuous unitary group and
+
+    <Omega,U_t Omega> = xi(1/2)/xi(1/2+t).
+
+The vector `Omega` is cyclic: if `f` is orthogonal to every `U_t Omega`, the
+finite measure `conjugate(f) nu` has identically zero Fourier transform;
+Fourier uniqueness forces `f=0` in `L^2(nu)`. Stone's generator is the
+self-adjoint multiplication operator `M_x`, with domain
+`{f : x f(x) in L^2(nu)}`. Since `Lambda` is strictly positive on all of
+`R`, `nu` is equivalent to Lebesgue measure with full support. Thus
+`spec(M_x)=R`, its spectrum is purely absolutely continuous, and it has no
+eigenvalues: an eigenvector at `a` would have to be supported on the
+Lebesgue-null singleton `{a}`.
+
+This is a cyclic unitary representation associated with the reciprocal-xi
+positive kernel, but it cannot itself provide the isolated zeta-zero
+ordinates as eigenvalues. It also does not meet MHS-03.1's atomic
+range-complement condition: an absolutely continuous measure gives zero
+mass to the discrete zero set. This is a standard Bochner/GNS and
+multiplication-operator deduction from Sra's theorem, not a new
+Hilbert–Pólya construction. No prime-side definition or independent proof
+audit is claimed.
+
+### Falsification and disposition
+
+The proposed route “positive reciprocal-xi kernel implies zero point
+spectrum” is falsified by the exact GNS model above. The continuous generator
+may still encode zeros through analytic continuation of its cyclic
+coefficient, but that is a resonance/transform question and does not alter
+the spectral type just proved. Further work on an independent atomic
+prime-side measure is deferred until a concrete candidate is found; simply
+rephrasing Weil positivity would repeat a classical RH-equivalent criterion.
 
 ## Dependencies and information gain
 
