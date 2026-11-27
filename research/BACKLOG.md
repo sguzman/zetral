@@ -200,11 +200,13 @@ a finite positive block into a lower bound for the full form. See
 ### LXXXV — Hermite de Branges spaces and Weil compression (active)
 
 - **Question / hypothesis:** Can the derivative interpolation theorem for `H(E^2)` be instantiated at zeta ordinates with a compatible local Weil norm and inverse-compression identity?
-- **Prerequisites:** B3-04; Goncalves, arXiv:1503.05178, Theorem 1/Corollary 2; Suzuki, arXiv:2610.32704v1, Theorem 3.3; exact xi and distinct-zero-product normalization.
+- **Prerequisites:** B3-04/B3-05; Goncalves Theorem 1/Corollary 2; Goncalves–Littmann, arXiv:1510.08383, Theorem 2; Selberg–Heath-Brown distinct critical-line count; Suzuki, arXiv:2610.32704v1, Theorem 3.3; exact xi and distinct-zero-product normalization.
 - **Information gain:** Connects classical jet sampling to arithmetic operator theory or exposes the exact missing structure, beyond the equivalent-norm no-go.
-- **Design/falsification:** Specify a Hermite-Biehler `E`; check differentiation closure, phase spacing, nonmembership, local norm and nodes; then prove or falsify `(Dbar~_(a,pi))^(-1)=j~_a^*C~j~_a` including domains and density.
+- **Design/falsification:** The standard bounded-`E'/E` theorem is excluded on all zeta ordinates by B3-05. Search for weighted/nonuniform jet sampling with node count `N(T)>=cT log T`; then check the phase, local norm and arithmetic compression identity `(Dbar~_(a,pi))^(-1)=j~_a^*C~j~_a` including domains and density.
 - **Dependencies/acceptance:** Require RH assumptions explicitly. Accept only a fully specified space, sampling theorem, local arithmetic forms and proved compression, or a source-based obstruction for this candidate. A formal derivative interpolation theorem alone is insufficient.
 - **Verification:** Independent theorem-hypothesis and operator-domain audit; no expensive computation or zero-multiplicity claim.
+
+**Progress (2026-11-27, B3-05):** Goncalves–Littmann's higher-order Hermite theorem requires `E'/E` bounded and a positive phase derivative at each node; its proof obtains uniform node separation. Selberg's odd-multiplicity count, recalled in Heath-Brown (1993), gives `cT log T` distinct critical-line ordinates. Thus the full zeta node set cannot satisfy those theorem hypotheses. Marzo–Nitzan–Olsen provide doubling-phase density theory for value sampling, but not higher jets or Weil compression. Weighted/nonuniform jet routes remain open; see `research/operators/B3-05-separation-obstruction-to-zeta-hermite-sampling.md`.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 

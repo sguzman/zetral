@@ -340,3 +340,14 @@ but no zeta-specific arithmetic compression bridge. LXXXV investigates that
 bridge with explicit hypotheses and operator identity. See
 `research/operators/B3-04-equivalent-renorming-obstruction.md` and
 `research/CAMPAIGN-85.md`.
+
+### LXXXV checkpoint — standard Hermite theorem obstruction
+
+Goncalves–Littmann's higher-order interpolation theorem forces uniformly
+separated nodes under its standard bounded-derivative hypotheses. Selberg's
+odd-multiplicity count gives at least `c T log T` distinct zeta ordinates,
+so those hypotheses cannot hold on the full zeta node set. This excludes one
+standard de Branges route, not all nonuniform jet sampling. Doubling-phase
+de Branges theory supports nonuniform value sampling, but supplies no
+higher-jet Weil bridge. See
+`research/operators/B3-05-separation-obstruction-to-zeta-hermite-sampling.md`.
