@@ -241,3 +241,8 @@ Fourier-side Stieltjes identity for the first-prime endpoint discrepancy.
 Under the RH square-root Chebyshev bound it gives an `O(h²)` multiplier bound
 and an `H^(1/2)`-type profile estimate. The bound is conditional, has no sign,
 and does not control the full logarithmic form domain or Weil form.
+
+Campaign LXXIX closed within its stated scope. The active follow-up is
+Campaign LXXX, which investigates the true high-frequency multiplier via a
+smoothed prime-zeta/explicit-formula route; analytic continuation and
+frequency-uniform error bounds remain to be proved.

@@ -1,6 +1,6 @@
 # Campaign LXXIX — Signed multiplier for the first-prime endpoint remainder
 
-Date opened: 2026-11-27. Status: ACTIVE. This analytical investigation
+Date opened: 2026-11-27. Status: CLOSED WITHIN SCOPE. This analytical investigation
 follows Campaign LXXVIII's closure within its bounded operator-audit scope;
 that closure does not end the broader research program.
 
@@ -45,3 +45,7 @@ See `research/positivity/B1-10-rh-signed-multiplier.md` for the exact signed
 formula and conditional `H^(1/2)` bound. Its failure to control the full
 `H^log` unit sphere is explicit; the multiplier's sharp signed behavior and
 all other Weil-form terms remain open.
+
+Closure record: `research/CAMPAIGN-79-CLOSURE.md`. Campaign closure does not
+end the B1 research direction; the high-frequency question continues in
+Campaign LXXX.
