@@ -1,6 +1,7 @@
 # Campaign LXXXIX — Full Weil form on the logarithmic profile domain
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED within the paired-packet
+shift-uniform boundedness scope (2026-11-27).
 Starting repository commit: `50884e1b35f6cb32536aa7cc93d98b1c388c4f85`.
 
 ## Precise question
@@ -68,6 +69,25 @@ Either prove a shift-uniform `H^log` bound for every remaining component, or
 give a rigorous, reproducible obstruction for a named component and state
 whether cancellation in the complete form is still open. No sign, coercivity,
 or RH conclusion is inferred from boundedness alone.
+
+## Closure — B1-21b
+
+The continuous kernel has an even Fourier multiplier bounded by
+`C log(2+|xi|)`, so its quadratic form extends continuously to `H^log` and is
+uniform over the paired packets. The pole term is bounded by the packet
+`L²` norm. In the archimedean term the only growing coefficient is
+`e^(h/2) G_-²`; it cancels the first-prime PNT main term, and the remaining
+first-prime discrepancy is uniformly `H^log`-bounded under RH by B1-20.
+Together with B1-21a, this proves
+`|W(f_h*tilde(f_h))| <= C_L ||g||_log²` for all `h>=0`, conditional on RH.
+The continuous multiplier and prime-power bounds are unconditional.
+
+This closes only the paired-packet upper-bound question. It yields no sign,
+coercivity, arbitrary-test-function estimate, or RH proof. See
+`research/positivity/B1-21b-log-domain-remainder-bounds.md`. The next
+investigation is whether this paired-packet bound can be sharpened to a
+variational criterion equivalent to RH, using B1-17–19 without conflating
+multiplier norms with autocorrelation pairings.
 
 ## Checkpoint B1-21a — non-first-prime arithmetic terms
 

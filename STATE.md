@@ -98,17 +98,21 @@ arithmetic Hamiltonian convergence follows. LXXXVIII is closed within its
 bounded scope; see `research/CAMPAIGN-88-CLOSURE.md` and
 `research/operators/B5-15-shift-heat-common-clark-limit.md`.
 
-B1-20 independently combines B1-12's RH-conditional uniform multiplier
-bound with B1-09's Fourier duality to obtain a uniform `H^log`-dual bound
-for the first-prime residual on its form-domain completion. This does not
-extend to the full Weil form: remaining terms and cross-effects are not
-controlled. B1-21a now proves unconditionally that the prime-square and all
-higher prime-power terms are uniformly bounded over the normalized packet
-family, even on the L² unit profiles. The pole and continuous-kernel terms
-remain to be audited on `H^log`, and no sign of the complete form follows.
-See `research/positivity/B1-20-rh-log-dual-bound.md`,
-`research/positivity/B1-21-prime-power-log-domain-bound.md`, and the active
-campaign plan `research/CAMPAIGN-89.md`.
+B1-20 combines B1-12's RH-conditional uniform multiplier bound with
+B1-09's Fourier duality for the first-prime residual. B1-21a/b closes
+Campaign LXXXIX within the paired-packet boundedness scope: prime powers are
+unconditionally uniformly bounded; the continuous kernel has a logarithmic
+Fourier multiplier and extends to `H^log`; the pole is L²-controlled; and
+the archimedean leading term cancels the first-prime main term. Together
+these give `|W(f_h*tilde(f_h))|<=C_L||g||_log²` uniformly in `h`, conditional
+on RH. This proves no sign, coercivity, or arbitrary-test-function bound.
+Details: `research/positivity/B1-20-rh-log-dual-bound.md`,
+`research/positivity/B1-21-prime-power-log-domain-bound.md`,
+`research/positivity/B1-21b-log-domain-remainder-bounds.md`, and
+`research/CAMPAIGN-89.md`. Active next question: Campaign XC asks whether
+boundedness in `h` of the complete form for each fixed paired profile is an
+RH-equivalent criterion; see `research/CAMPAIGN-90.md` and B1-22 in the
+backlog.
 
 Date: 2026-11-27 UTC.
 Closed bounded campaign: LXXXV, Hermite de Branges spaces and Weil compression; see `research/CAMPAIGN-85.md`. B3-05 excludes direct use of Goncalves–Littmann's standard bounded-derivative higher-jet theorem on all zeta ordinates: its hypotheses force uniform node separation, while Selberg's odd-multiplicity count recalled by Heath-Brown gives `#(Gamma∩[0,T]) >= c T log T`. This does not rule out nonuniform interpolation or another completion. LXXXIV closed within stated scope: B3-04 proves derivative-sample unboundedness is invariant under equivalent renorming of the RH-conditional Weil completion, and identifies the new inverse-compression identity required by any genuinely different completion. Established Hermite interpolation in `H(E^2)` is relevant prior art but supplies no zeta-specific Weil compression. LXXXIII closed within stated scope: B1-17 derives `RH iff sup_h c_h<∞` by Laplace-transform pole detection; B1-18 and B1-19 identify the multiplier's exponential type with `Theta−1/2`, where `Theta=sup Re(rho)`. This is an RH-equivalent criterion and classical zero-abscissa mechanism, not an RH proof or novelty claim. LXXXII closed within structural scope: B1-16 gives the exact phase-orbit criterion for packet liminf; the actual value remains tied to unproved zero-ordinate relations. LXXX closed within scope: B1-12 proves `c_h=O_η(1)` uniformly under RH; B1-13 proves positive limsup; B1-14 bounds the fixed-profile full form. LXXXI closed within scope: B1-15 proves a nonzero zero-residue coefficient survives in the full direct form for a chosen profile, conditional on RH; Suzuki's spectral formula cross-checks it and gives nonnegativity under RH. No full-space coercivity follows. The contour and sampling derivations are manual and have not been machine-checked. Campaign LXXVIII's distinct-spectrum and derivative-sample audit is closed within scope in `research/CAMPAIGN-78-CLOSURE.md`; broader Hilbert–Pólya construction remains open.

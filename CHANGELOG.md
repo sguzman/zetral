@@ -601,3 +601,16 @@ higher-prime-power terms on all normalized paired packet profiles. For
 width, controlled by Chebyshev and partial summation. The pole and
 continuous-kernel terms remain open on the `H^log` unit ball. See
 `research/positivity/B1-21-prime-power-log-domain-bound.md`.
+
+### LXXXIX closure — paired-packet logarithmic bound
+
+B1-21b bounds the continuous-kernel multiplier by `C log(2+|xi|)`, controls
+the pole by the packet L² norm, and checks that the archimedean leading term
+cancels the first-prime main term. With B1-20 and the unconditional
+prime-power bounds, this yields a shift-uniform `H^log` upper bound for the
+complete form on paired packets under RH. The result gives no positivity,
+coercivity, or arbitrary-test-function estimate. LXXXIX closes only within
+that scope. Campaign XC now tests whether boundedness of complete packet
+values for each fixed profile is equivalent to RH. See
+`research/positivity/B1-21b-log-domain-remainder-bounds.md` and
+`research/CAMPAIGN-90.md`.

@@ -290,7 +290,7 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B1-20):** Combining B1-12's RH-conditional uniform bound `sup_h sup_xi |Delta_hat_h(xi)|/log(2+|xi|)<infinity` with B1-09's exact Fourier-duality identity gives a uniform `H^log`-dual bound for the smoothed first-prime endpoint residual on its full local form-domain completion. This is stronger than the B1-10 Chebyshev-only estimate for that component, and resolves the apparent note-level conflict: B1-10's estimate alone loses at high frequency; B1-12 uses the zero-residue contour expansion. It remains a one-component boundedness statement, not full-form positivity or coercivity. Next audit the other terms and the source-form decomposition before inferring any full-form bound. See `research/positivity/B1-20-rh-log-dual-bound.md`.
 
-### B1-21 / LXXXIX — Full-form terms on the logarithmic domain (active)
+### B1-21 / LXXXIX — Full-form terms on the logarithmic domain (closed in scope)
 
 Campaign file: `research/CAMPAIGN-89.md`.
 
@@ -302,7 +302,19 @@ Campaign file: `research/CAMPAIGN-89.md`.
 - **Acceptance:** A proof of the stated uniform bound for all remaining terms, or a reproducible rigorous obstruction for a named component together with a precise statement of whether cancellation in the complete form remains possible. No sign or coercivity claim is needed.
 - **Verification:** Independent derivation from the pinned direct Weil formula, exact constants and Fourier conventions, and adversarial high-frequency test profiles. No numerical evidence substitutes for a form bound; no RH conclusion follows from boundedness alone.
 
-**Progress (2026-11-27, B1-21a):** The prime-power terms `k>=3` are uniformly absolutely bounded over the normalized packet family by `4 sum_p log(p)/(p^(3/2)(1-p^(-1/2)))<infinity`, counting both signs in Suzuki's direct formula. The prime-square self terms use finitely many primes; its cross-term range has fixed multiplicative width `exp(L)`, so Chebyshev plus partial summation gives a uniform `O_L(1)` bound. This is unconditional and uniform over all normalized `L²` profiles, stronger than the fixed-profile estimates in B1-14. The pole and continuous terms on the `H^log` unit ball remain unexamined, and no full-form sign or coercivity follows. See `research/positivity/B1-21-prime-power-log-domain-bound.md`.
+**Progress (2026-11-27, B1-21a/b):** Prime-square and higher powers are uniformly bounded unconditionally on normalized packets. The continuous term has Fourier multiplier `O(log(2+|xi|))` and extends to `H^log`; the pole term is controlled by the packet L² norm. The archimedean `exp(h/2)` term cancels the first-prime main term, whose residual is uniformly H^log-bounded under RH by B1-20. Thus the full form is uniformly bounded by `C_L ||g||_log²` on this paired family under RH. This is no positivity, coercivity or arbitrary-test-function estimate. Derivation: `research/positivity/B1-21b-log-domain-remainder-bounds.md`; campaign record: `research/CAMPAIGN-89.md`.
+
+### B1-22 / XC — RH criterion from bounded complete packet values (active)
+
+Campaign file: `research/CAMPAIGN-90.md`.
+
+- **Question / hypothesis:** Is RH equivalent to boundedness in `h` of the complete direct Weil value for every fixed paired packet profile `g`, with the bound allowed to depend on `g`?
+- **Prerequisites:** B1-17's fixed-profile Laplace-pole detection; B1-21a/b's bounded remainder decomposition; Suzuki's direct formula and prime-zeta continuation.
+- **Expected information gain:** Re-express the existing RH-equivalent first-prime criterion using the complete quadratic form and test whether the bounded remainders preserve detection of off-line zeros.
+- **Design / falsification:** Bound all terms besides the first-prime endpoint discrepancy for each fixed profile; establish RH direction from B1-21b; for the converse, use bounded complete values and bounded remainder to obtain bounded fixed-profile discrepancy pairings and reproduce the Laplace pole contradiction. Audit low-shift ranges and explicit-formula normalization.
+- **Dependencies:** B1-17's source identities and classical zero-pole structure; fixed-window support; prior-art comparison with Báez-Duarte's Mellin/convolution criteria.
+- **Acceptance:** Prove both directions or exhibit a remainder obstruction. No uniformity in `g`, positivity, coercivity, novelty, or RH proof is inferred.
+- **Verification:** Independent sign/factor audit from the pinned source, exact quantifiers, and a clear distinction between this reformulation and existing equivalent criteria. No computation is needed or probative.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 
