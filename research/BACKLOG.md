@@ -211,6 +211,8 @@ a finite positive block into a lower bound for the full form. See
   deficiency-index calculations, and Lean formalization for algebraic operator
   identities where feasible. No RH claim absent the full correspondence.
 
+**Progress (2026-11-27, B3-01/02):** The diagonal global sampling operator has a direct self-adjoint compact-resolvent realization with complete spectrum equal to the distinct signed ordinates, conditional on RH and the sampling model. Its eigenspace at each ordinate is one-dimensional regardless of analytic zero multiplicity; if any zero is multiple, this candidate does not preserve multiplicities. The exact source isometry to scalar `ℓ²(Γ,m)` rules out simply replicating coordinates into larger fibers while retaining only the old sample values. These are structural limitations of this candidate, not a known multiple-zero counterexample. The model is defined using RH/zero data. Next test derivative-enriched sampling against the local embedding and exact inverse-compression identity. See `research/CAMPAIGN-78.md` and `research/operators/B3-01-distinct-zero-model.md`.
+
 ### B4 — Independent audit of the strongest finite certificate
 
 - **Question / hypothesis:** Do the exact endpoint witness, guards, residual

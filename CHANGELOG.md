@@ -215,3 +215,15 @@ actual local form domain as logarithmically weighted Fourier regularity, which
 does not control the derivative used in B1-08. A Fourier-dual PNT estimate
 extends the first-prime endpoint cancellation to bounded logarithmic-domain
 families. It has no sign and gives no L2 coercivity or full-form positivity.
+
+## LXXVIII operator correspondence checkpoint — B3-01/02 (2026-11-27)
+
+`research/operators/B3-01-distinct-zero-model.md` verifies the domain and
+compact-resolvent properties of the global diagonal sampling operator under
+RH. Its spectrum is complete as a set of distinct signed ordinates, but the
+one-coordinate-per-ordinate space does not encode analytic zero multiplicity.
+This limitation is conditional on a multiple zero and is not evidence that
+one exists. The exact scalar sampling isometry also rules out simply
+replicating each coordinate into a higher-dimensional multiplicity fiber
+without adding new data. The construction uses RH and the ordinate set as
+input.
