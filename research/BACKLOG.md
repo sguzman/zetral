@@ -8,6 +8,25 @@ analytic theorems and from any RH implication.
 
 ## Priority order
 
+### Current execution note — LXXVII proof-status pivot (2026-11-26)
+
+The Lean FRO and Mathlib Initiative jointly certified Alpöge's released formal
+RH proof on 2026-11-21. The separate independent verifier reports successful
+build, axiom and multiple checker results; its comparator was interrupted by
+shared-server memory exhaustion. A reported kernel-recheck failure concerns a
+later moving community-maintained branch after a toolchain change, not
+automatically the frozen released artifact. A readable classical guide remains
+in progress and explicitly does not yet prove its reduction's central main
+inequality in prose. These are source-reported facts, not a Zetral replay or
+human audit. See `research/CAMPAIGN-77.md`. RHA-01 independently derived the
+local RKHS kernel criterion conditional on the cited Yoshida nondegeneracy
+and Suzuki v4 threshold theorem; this checks that criterion, not Alpöge's
+proof. RHA-02 pins the readable proof and verifies the main algebraic
+cancellation and exponent transfer. Highest information gain is now to audit
+the analytic prime-remainder zero-exclusion criterion, while retaining
+LXXVI's source-form gap and B1's general positivity question as parallel open
+work. Do not claim Zetral verified or refuted the proof.
+
 ### Current execution note — LXXVI (2026-11-26)
 
 The corrected support-h diagnostic was replayed successfully on Actions run

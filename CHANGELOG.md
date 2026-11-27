@@ -36,6 +36,14 @@ U76-05 derives the first odd diagonal directly as a paired Laplace series. U76-0
 
 U76-08 derived and outward-enclosed the first even off-diagonal `G_02`. Actions run 45911794868 at 200-digit precision and N=260 places the direct interval inside the shared 2x2 compressed interval, with margins about 2.774e-64 and 2.773e-64. The endpoint remainder is below 1.33e-70. This validates one off-diagonal entry only; `G_22` and the rest of the full matrix remain open.
 
+## 2026-11-26 — LXXVII RH proof-status audit opened
+
+The Lean FRO and Mathlib Initiative's joint statement reports that Alpöge's released Lean development proves Mathlib's RH statement and certifies the proof following independent checker and statement-comparison work. An independent verification repository reports its comparator was interrupted by memory exhaustion, while other checks passed. A later moving community branch has a separate kernel re-check issue after a toolchain change; it is not conflated with the frozen released artifact. The human-readable classical reconstruction remains incomplete. LXXVII records exact evidence and starts a pinned, scoped audit of the central main-inequality reduction. This is not an independent Zetral verification. See [Campaign LXXVII](research/CAMPAIGN-77.md).
+
+RHA-01 independently derived Suzuki's local RKHS kernel criterion: a full local lower bound `lambda_R>0` yields `J_a(t,t)<=2R/lambda_R` by zero-extension monotonicity and Fourier point-evaluation, while the converse follows from the first zero of the continuous local bottom eigenvalue and Fourier injectivity. RH-implies-nondegeneracy (citing Yoshida) and Suzuki's RH-failure threshold theorem remain imported. This is a scoped proof-structure audit only; no finite Gram certificate supplies `lambda_R`.
+
+RHA-02 pinned the readable proof at `lsernau/grh-lean@72fead102f663d5c7a407964a13dc0cf9d977207` and independently checked the finite algebraic cancellation behind `star_inequality` and the exponent transfer from its integer prime-remainder estimate to all large real arguments. The geometry A/B/C, encoded parameter dominance and one-sided zero-exclusion criterion remain unaudited; no local Lean build was run.
+
 ## Campaigns XII–LVII
 
 | Campaign | Outcome and limitations |

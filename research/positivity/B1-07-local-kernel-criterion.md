@@ -11,8 +11,9 @@ for a spectral correspondence, and ultimately to RH?
 
 ## Source result
 
-Suzuki, *Local Weil formula and Riemann hypothesis*, arXiv:2611.33001v1,
-submitted 2026-11-24, Theorems 1.1 and 1.3 and Corollary 3.1:
+Suzuki, *The Local Weil Explicit Formula and Related Structures*,
+arXiv:2611.33001v1, version dated 2026-11-24, Theorems 1.1 and 1.3 and
+Corollary 3.1:
 [abstract/version record](https://arxiv.org/abs/2611.33001),
 [full text](https://arxiv.org/html/2611.33001). This is a source-reported
 theorem, not an independent Zetral proof audit.
@@ -36,6 +37,14 @@ kernel estimate J_a(t,t) <= 2R/lambda_R in the paper's normalization, where
 lambda_R is the lower form bound. Zetral's current direct source-form result
 is only a positive 2-by-2 principal block at h=2.51; the full test-function
 map and a full-space lower bound remain unproved (Campaign LXXVI).
+
+The paper's v1 introduction described RH as open at writing, while its
+footnote records the November 20 Alpöge/Claude announcement. On November 21,
+the Lean FRO and Mathlib Initiative issued a joint statement certifying the
+formal RH proof. Campaign LXXVII records this changing external status and
+distinguishes the formally checked artifact from the unfinished
+human-readable reconstruction. This does not change the conditional validity
+or scope of Theorems 1.1 and 1.3 here.
 
 ## Falsification and limits
 
