@@ -42,6 +42,20 @@ RHA-04's square/nonsquare majorant and zero-forces-large-theta-tail exponent con
 - **Acceptance:** A source-linked derivation of the explicit constant and quantifiers, or a concrete missing hypothesis/counterexample. Clearly separate imported theorems from independently derived inequalities.
 - **Verification:** Independent arithmetic derivation; source theorem/version pin; no Lean verification claim without an exact-toolchain build and axiom audit.
 
+**Progress (2026-11-26):** The covering bound in real dimension `2fn` is `(2fn)^2/λ`; the `3r` spanning lemma and rescaling by `N/2` give `6N(fn)^2/λ`, matching `shortBasisConst`. At the standard definite point `λ=1`. The Weyl norm estimate combines exponent `6fn` from determinants and `6·boxes` from the Schur term, bounded by `6M`. The trace/codifferent and transference lemmas remain imported dependencies, not fully re-proved here. Close RHA-07 at scoped manual-derivation level.
+
+### LXXVII / RHA-08 — Audit prime-remainder transform derivation
+
+- **Question / hypothesis:** Does the pinned prime-remainder identity follow with the stated residue, normalization, and zero multiplicities from the Euler product/explicit formula and partial summation, for the exact arithmetic progressions and twists used in RHA-03?
+- **Prerequisites/evidence:** RHA-03 residue/sign audit and RHA-04 twist selection; pinned readable Lean source and classical guide. Primary analytic references must be checked before relying on an imported transform.
+- **Expected information gain:** This is the principal analytic bridge from zero locations to the eventual one-sided prime-remainder bound; auditing it may reveal a hidden assumption or an independent usable criterion.
+- **Design/falsification:** Derive the transform first for `Re(s)>1`, continue meromorphically, track the principal character and trivial zeros, then compare residues at a hypothetical zero with the Lean statement. Check endpoints `s=0,1`, repeated zeros, nonprimitive twists, and the progression normalization. Seek a simple model Dirichlet series that falsifies any claimed implication if a hypothesis is omitted.
+- **Dependencies:** Exact pinned theorem statement; standard explicit-formula inputs; no datasets or local large build.
+- **Acceptance:** Source-linked derivation of the transform and its limiting steps with exact constants/order multiplicities, or a concrete counterexample/gap. State clearly which analytic results are imported.
+- **Verification:** Independent contour/partial-summation derivation, primary literature check, and proof-source comparison; no Lean verification claim without exact-toolchain build and axiom audit.
+
+**Progress (2026-11-26):** The character mean gives `Σλ(n)n^(−s)=s/(φ(q)(s−1))+G_q(s)`; partial summation at `Re(s)>2` yields the exact transform `(G_q(s)/s−Re G_q(1))/(s−1)`. The `s=1` pole cancels by analytic continuation and reality; log-derivative residues give the source's untwisted-minus-twisted order difference with denominator `φ(q)s(1−s)`. Nonvanishing on `Re(s)≥1`, Euler products, partial summation, and the analytic-order lemma are imported. This does not establish the one-sided remainder bound needed by Landau. Close RHA-08 at scoped transform-audit level.
+
 ## Priority order
 
 ### Current execution note — LXXVII proof-status pivot (2026-11-26)

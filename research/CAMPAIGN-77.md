@@ -402,3 +402,114 @@ not a Lean build. The lattice-short-basis estimate, its number-field
 geometry, and admissible-data scale derivation are still outside the audit.
 RHA-06 is accepted only for the short-span-to-ramified-range reduction. Next
 inspect the short-basis existence lemma and explicit Hadamard constants.
+
+## RHA-07 — Geometry-of-numbers short basis and constant audit
+
+**Question.** Do the short-basis construction and Weyl-norm estimate supply
+the explicit uniform bound used by RHA-06, and do the constants match?
+
+**Pinned sources.** The proof is pinned at the same readable commit:
+[`FirstMinimumShortBases.lean`](https://github.com/lsernau/grh-lean/blob/72fead102f663d5c7a407964a13dc0cf9d977207/grh/src/Lib/Adelic/Reduction/FirstMinimumShortBases.lean)
+and [`ShortColumns.lean`](https://github.com/lsernau/grh-lean/blob/72fead102f663d5c7a407964a13dc0cf9d977207/grh/src/New/UpperBound/Size/ShortColumns.lean).
+The source explicitly identifies the covering-radius argument as a weak
+transference bound and cites Lagarias–Lenstra–Schnorr (1990) and Banaszczyk
+(1993) as related geometry-of-numbers results; no novelty is claimed.
+
+**Constant derivation.** Put `m=2fn`, the real dimension of the archimedean
+coordinate space, and let `λ` be the first minimum cut off at 1. The source
+proves that every nonzero vector in the dual of the scaled lattice
+`(2/N)·baseLattice` has norm at least `λ`, using integrality of the pairing,
+trace-dual recovery over the CM field, and the hypothesis `N∈different(E)`.
+Weak transference then gives covering radius at most `m²/λ=(2fn)²/λ`.
+The geometric lemma says a set covering every point within `r` has its
+vectors of norm at most `3r` spanning the real space: if a nonzero vector
+were orthogonal to all such short vectors, take a vector of length `2r` in
+that direction; a covering point lies within `r`, has length at most `3r`,
+and is orthogonal to the direction, making its distance at least `2r`, a
+contradiction. Rescaling from `(2/N)·baseLattice` gives a spanning set of
+original lattice vectors of norm at most
+`(N/2)·3·(2fn)²/λ = 6N(fn)²/λ`. A full spanning set contains an `E`-basis,
+so the columns can be chosen as a matrix in `GL_n(E)`.
+
+At the standard definite space moved by `g`, the source proves `λ=1`:
+an integral vector shorter than 1 would be isotropic, impossible for a
+definite form. The resulting basis is integral after applying `g⁻¹` and has
+every complex-embedding entry bounded by `R=6N(fn)²`. This is exactly
+`shortBasisConst E n N` in the source. In `weylNormSq_det_smul_weylRep_mulVec_weylEval_le`, each determinant contribution across the `f` places costs exponent `6fn`, while the Schur/Weyl contribution costs exponent `6·boxes`; their product is at most `R^(6(fn+boxes))`. The input `M≥fn+boxes` yields `R^(6M)`. The specialized call uses `N=q₁d`, `n=k`, and `M= f k+f a`, with the box count at most `f a`. Its `HasLogBound` inequality includes the compensating `4^f` from RHA-06.
+
+**Falsification and assumptions.** I checked the dimension conversion, the
+covering-to-spanning `3r` argument, the rescaling factor `N/2`, and the
+determinant-plus-Schur exponent count. The `n=0` branch is handled separately;
+for nonempty rank the first minimum is positive by discreteness, and in the
+standard definite space it equals 1. The dual-lattice estimate depends on
+the number-field trace/codifferent lemmas (including `N∈different(E)`), which
+were inspected in the pinned proof but not independently re-proved from
+algebraic number theory. Weak transference is an imported general
+geometry-of-numbers argument; the source itself notes stronger known
+transference bounds. No counterexample to the stated estimate was found.
+This is a scoped manual derivation, not a kernel build, axiom audit, or
+independent reconstruction of all number-field infrastructure. RHA-07 is
+accepted at that scope. Next pivot to the analytic prime-remainder transform,
+whose derivation remains the strongest open link in the zero-exclusion route.
+
+## RHA-08 — Prime-remainder Laplace transform
+
+**Question.** Does the pinned source derive the Laplace transform and zero
+residues with the correct character normalization and multiplicities?
+
+**Pinned source and prior art.** The proof is in
+[`PrimeError.lean` at the readable commit](https://github.com/lsernau/grh-lean/blob/72fead102f663d5c7a407964a13dc0cf9d977207/grh/src/New/Reduction/Zeros/PrimeError.lean).
+Its source comment identifies character orthogonality and partial summation
+as the classical method and cites Davenport, *Multiplicative Number Theory*.
+No novelty is claimed.
+
+**Independent derivation.** Write
+`λ(n)=Λ(n)·1_{n≡1 mod q}·(1−χ_d(n))`, which is nonnegative for prime `d`.
+Character orthogonality writes its Dirichlet series as the mean over
+characters `ψ mod q` of the difference of the `ψ` and `ψχ_d` von Mangoldt
+series. In `Re(s)>1`, the Euler-product identity
+`Σ ψ(n)Λ(n)n^(−s)=−L'/L(s,ψ)` gives the twisted-minus-untwisted logarithmic
+derivative. Replacing each L-function by `E_ψ=entireL(ψ)` removes the
+principal pole: the principal character contributes `1/(s−1)` from the
+Euler product, while the `−1` in the definition of `G_q` adjusts the
+regular part. The result is exactly
+`Σ λ(n)n^(−s)=s/(φ(q)(s−1))+G_q(s)`.
+The relation is first needed for `Re(s)>1`; partial summation is applied in
+the narrower safe region `Re(s)>2`.
+
+For `S_r(y)=y^(−r)Σ_{n≤y}λ(n)n^(r−1)`, partial summation and `y=e^v` give
+`L(s)=(s+r−1)∫₀∞ S_r(e^v)e^((1−s)v)dv`. Hence the transforms of `S_0` and
+`S_1` are `L(s)/(s−1)` and `L(s)/s`. The remainder is
+`R_q(e^v)=S_0(e^v)−S_1(e^v)−v/φ(q)−c_q`, with
+`c_q=Re G_q(1)`. Using `∫v e^((1−s)v)dv=1/(s−1)^2` and
+`∫e^((1−s)v)dv=1/(s−1)`, the main term and the `v/φ(q)` term cancel,
+leaving the exact transform
+`(G_q(s)/s−c_q)/(s−1)` for `Re(s)>2`.
+
+At real `s>2`, this expression is real because the original remainder is
+real. The source extends that reality to `s=1` by analyticity on the real
+ray `s≥1`, and obtains `G_q(1)=c_q`; therefore the apparent pole at `1` is
+removable. This analyticity uses the imported theorem that the completed
+`entireL` factors have no zeros for `Re(s)≥1` (and that the principal factor
+is nonzero at `1`). At any `ρ≠0,1`, the residue of `G_q` is
+`Σ(ord_ρ E_{ψχ_d}−ord_ρ E_ψ)/φ(q)`, since a logarithmic derivative has
+residue the zero order. Dividing by `ρ(ρ−1)` gives
+`Σ(ord_ρ E_ψ−ord_ρ E_{ψχ_d})/[φ(q)ρ(1−ρ)]`, matching the source and RHA-03.
+The continuation is meromorphic and has at most simple poles; on the open
+half-plane `Re(s)>0`, the possible denominator point `s=0` is outside the
+domain, and `s=1` is removable.
+
+**Falsification and boundary.** I checked the principal-character `−1`
+normalization, both partial-summation factors, cancellation of the
+`1/(s−1)^2` term, the residue sign, and the distinction between convergence
+in `Re(s)>2` and meromorphic continuation to `Re(s)>0`. This matches the
+pinned statement; no counterexample was found. Imported dependencies are the
+Euler-product logarithmic-derivative identity, character orthogonality,
+partial summation, nonvanishing of Dirichlet L-functions on `Re(s)≥1`, and
+the analytic-order residue theorem. The formal proof source encodes these
+dependencies, but this was neither a local Lean build nor a re-proof of those
+classical theorems. The one-sided prime-remainder bound required to apply
+Landau remains unestablished by Zetral. RHA-08 is accepted as a manual audit
+of the transform derivation only; next investigate the exact nonvanishing
+and normalization prerequisites, then return to the independent operator
+and analytic-generalization portfolio.

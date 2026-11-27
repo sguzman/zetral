@@ -180,3 +180,21 @@ short-span to ramified-range reduction and the squared-norm cutoff factor
 counterexample was found in the reduction. The lattice-basis existence and
 Hadamard constant remain unaudited; see `research/CAMPAIGN-77.md` and
 `research/BACKLOG.md` for the exact scope and next question.
+
+## LXXVII research audit checkpoint — RHA-07 (2026-11-26)
+
+Manual derivation of the pinned geometry-of-numbers bound: in real dimension
+`2fn`, weak transference gives covering radius `(2fn)^2/λ`; the `3r` spanning
+step and rescaling yield the exact short-basis constant `6N(fn)^2/λ`. At the
+standard definite point `λ=1`; the Weyl determinant and Schur exponents total
+`6(fn+boxes)`, within the stated `6M`. Trace/codifferent and transference
+results remain imported dependencies. Next audit the prime-remainder transform.
+
+## LXXVII research audit checkpoint — RHA-08 (2026-11-26)
+
+Manual audit of the prime-remainder Laplace transform verifies its principal
+character normalization, partial-summation factors, cancellation at `s=1`,
+and untwisted-minus-twisted zero-order residue. Dirichlet nonvanishing on
+`Re(s)≥1` and standard Euler-product and analytic-order results remain
+explicit dependencies; no one-sided remainder bound is established. The next
+investigation switches to B1's analytic endpoint cancellation.
