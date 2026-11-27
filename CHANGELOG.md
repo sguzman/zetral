@@ -683,3 +683,10 @@ constructs a 2x2 coupling example showing why low-block convergence plus
 high-block resolvent control is insufficient. See
 `research/CAMPAIGN-93-CLOSURE.md`, `research/CAMPAIGN-94.md`, and
 `research/operators/HP02-low-window-schur-criterion.md`.
+
+The literature refresh added Liu's arXiv:2605.17645v4 to the prior-art map.
+It develops finite two-channel causal pencils and determinant-curve geometry,
+while explicitly distinguishing the joint spectral curve from a fixed-
+coupling spectrum and disclaiming a global zeta Hilbert–Pólya realization.
+This reinforces the campaign's requirement for an actual limiting spectral
+correspondence; no direct reuse or new result is claimed.
