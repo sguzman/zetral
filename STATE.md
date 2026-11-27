@@ -15,8 +15,10 @@ HP-03.2 extends the formal obstruction to every positive smooth local density
 `rho(x) dx` on that common test core: symmetry forces `rho` constant and then
 requires `phi'^2-phi''` constant, contradicted by the theta asymptotics. This
 does not exclude nonlocal metrics or a smaller zero-defined domain. Next
-analyze the kernel quotient and whether any zero-independent core supports a
-closable pair.
+HP-03.3 observes that the boundary problem has only a one-dimensional
+solution space at each zero, independent of its analytic multiplicity; the
+source itself notes this as weak evidence toward simplicity, not proof.
+Continue with the kernel quotient, zero-independent cores, and multiplicity.
 Full records: `research/CAMPAIGN-94-CLOSURE.md` and
 `research/CAMPAIGN-95.md`.
 

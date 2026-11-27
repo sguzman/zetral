@@ -769,3 +769,12 @@ large-argument asymptotics. This is a no-go only on the common compactly
 supported smooth core; the zero-defined finite span and nonlocal metrics are
 untested. Manual derivation; independent audit pending. Full details in
 `research/CAMPAIGN-95.md`.
+
+## HP-03.3 — Multiplicity scope of the theta boundary problem (2026-11-27)
+
+The source's first-order reduction and endpoint conditions yield a unique
+solution direction at each zero, independently of its analytic order. The
+paper itself notes this weakly supports simplicity, not as proof. Exact zero
+multiplicities are not represented by geometric eigenspace dimension in the
+current boundary problem; an augmented model or simplicity theorem would be
+needed for that notion of correspondence. No multiple zero is asserted.

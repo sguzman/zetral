@@ -88,6 +88,24 @@ domain, but cannot make a differential identity hold on all compact tests if
 that core is included. The derivation is manual and needs independent
 operator review; no numerical work or Lean formalization was used.
 
+## HP-03.3 — Geometric multiplicity of the boundary problem
+
+The reduction in the source's proof is
+`L_phi(Du+alpha u)=0`, hence
+`Du+alpha u=C exp(-phi)`. This is a first-order inhomogeneous equation.
+For real `alpha`, the condition at `0+` fixes the homogeneous integration
+constant and the condition at infinity imposes `C Xi(alpha)=0`; the complex
+variant uses weighted endpoint conditions. In both theorems the solution is
+unique up to scalar at each zero location, independently of the analytic
+order of that zero. The equation detects the
+zero set, but the proof does not encode its multiplicity in eigenspace
+dimension. Hedenmalm himself notes that uniqueness of the eigenfunction lends
+weak support to simplicity (Remark 3.3.2(a)); this is not a proof of
+simplicity. Exact spectral multiplicity would require either a simplicity
+input or an augmented construction. This is a conditional structural
+limitation, not a claim that any zeta zero is multiple and not a proof that
+the analytic pencil has no other notion of algebraic multiplicity.
+
 ## Falsification and next designs
 
 1. Independently re-derive the boundary-value/zero correspondence, including
@@ -100,10 +118,13 @@ operator review; no numerical work or Lean formalization was used.
 3. Next investigate the natural quotient by `ker L=span{e^(-phi)}` and whether the
    induced seminorm is closable and positive definite on a zero-independent
    core.
-4. Seek a Mellin/Fourier or de Branges representation in which the pair
+4. Clarify the boundary problem's multiplicity notion and whether a
+   self-adjoint realization can match analytic zero multiplicity without
+   assuming simplicity.
+5. Seek a Mellin/Fourier or de Branges representation in which the pair
    identity becomes an explicit positive kernel identity. Check whether its
    construction imports the zero set or RH.
-5. Search prior literature on weighted dilation operators, Sturm–Liouville
+6. Search prior literature on weighted dilation operators, Sturm–Liouville
    pencils, generalized self-adjoint operator pairs and the exact theta
    kernel before any novelty statement.
 
