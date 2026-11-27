@@ -173,3 +173,25 @@ art review remain prerequisites.
   countermodel are in [`CAMPAIGN-97.md`](CAMPAIGN-97.md). This is a useful
   research lemma, not yet a standalone paper result: specialization to the
   actual Weil form and the determinant boundary normalization are open.
+- **PWPB-02 — prolate candidate has a nonzero ambient limit.** Under the
+  source's uniform prolate-to-Hermite bound, the zero-extended
+  `k_lambda=E(h_lambda)` converges to the Riemann kernel `k=E(h)` in
+  `L²(du/u)` at rate `O(lambda^-1/2)`. The derivation explicitly adds the
+  Gaussian tail from terms with `nu>lambda`, which the survey's displayed
+  finite-sum pointwise estimate does not include. This is only convergence
+  of the candidate family; combined with PWPB-01 it gives locally uniform
+  transform convergence on every closed substrip `|Re s|<=b<1/2`. No
+  convergence to the Weil-form ground vector or the CCM determinant is
+  proved. Supporting lemma for a source audit, not a standalone paper result.
+- **PWPB-02 literature audit and pivot (2026-11-27).** The later and much
+  closer source Andrews–Connes–La Gatta, [arXiv:2611.13129](https://arxiv.org/abs/2611.13129),
+  already proves stronger candidate and ground-state convergence estimates
+  conditional on its Fuchs-ladder lower-bound hypothesis and windowed Weil
+  positivity. Its Schur-complement reduction identifies an explicit finite
+  bottleneck but leaves its sign open. Mori's recent upper-bound/Lean work
+  gives no lower gap. This is a useful literature and scope correction, not
+  a Zetral mathematical discovery or paper claim. PWPB-03 will audit the
+  exact noncircular status of the lower ladder and Schur-block assumptions.
+  PWPB-02's only possible write-up contribution is the localized Gaussian
+  tail correction to the earlier survey's displayed candidate estimate;
+  that needs independent audit and prior-art review before any paper use.

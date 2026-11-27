@@ -21,6 +21,17 @@ analytic theorems and from any RH implication.
   rank-one perturbation under finite ground-state assumptions. Zetral's
   finite positivity certificates and Suzuki/prolate limits do not prove this
   exact full-space eigenvector bridge.
+- **Critical 2026 update:** Andrews–Connes–La Gatta, arXiv:2611.13129v1
+  (2026-11-09), now gives the closest direct conditional bridge. Under its
+  Fuchs-ladder lower-bound Hypothesis 3.4 and windowed Weil positivity, it
+  proves ground-state simplicity/evenness and quantitative convergence to
+  the prolate/Hermite target; the latter positivity for all scales is
+  equivalent to RH. Its §8 reduces conditional positivity to a finite
+  transition-and-pole Schur block, with the block sign and several
+  uniformity estimates explicitly open. Mori's unconditional test-vector
+  upper bounds (including a Lean-formalized upper estimate) do not supply
+  the missing lower bound or gap. See the updated source audit in
+  `research/CAMPAIGN-97.md`.
 - **First derived prerequisite:** A normalized trial vector with Rayleigh
   quotient `m<a_1` and residual `r=||(A-m)v||` satisfies
   `dist(v,C e_0)<=r/(a_1-m)`. Mellin evaluation on
@@ -32,6 +43,22 @@ analytic theorems and from any RH implication.
   normalization for the determinant remains an extra requirement. Full
   derivation and a degenerating-gap countermodel are in
   `research/CAMPAIGN-97.md`.
+- **PWPB-02 candidate-side progress:** Using Connes's stated uniform
+  `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
+  `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives
+  `||k_lambda-k||_(L²(du/u))=O(lambda^-1/2)` after zero extension to the full
+  multiplicative line; combined with the Mellin functional norm this yields
+  locally uniform transform convergence at rate `O(lambda^(b-1/2))` on any
+  closed strip `|Re s|<=b<1/2`. The normalized candidates converge to a
+  nonzero vector. This repairs a missing term in the displayed pointwise
+  estimate without changing its convergence conclusion. It does not compare
+  to `theta_x` or control the finite truncation; see `research/CAMPAIGN-97.md`.
+- **Priority pivot / PWPB-03:** Audit whether the new paper's lower
+  Fuchs-ladder comparison or finite Schur-block sign can be established
+  noncircularly, and isolate the first exact obstruction. Separate its
+  RH-equivalent positivity input from genuinely weaker statements. Acceptance
+  is a quantified unconditional lower bound or a precise dependency/countermodel;
+  numerical agreement is not sufficient. See `research/CAMPAIGN-97.md`.
 - **Design / falsification:** Pin the exact form/domain; test whether the
   prolate candidate belongs to the operator domain; derive its form residual
   from prime and archimedean terms; prove a next-eigenvalue/parity gap; bound

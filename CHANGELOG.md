@@ -971,3 +971,34 @@ leaving analytic-continuation/resonance approaches open. The cited density
 theorem is not a prime-side construction and its proof uses zero-divisor
 information plus finite verified input. Full scope and caveats are recorded
 in `research/CAMPAIGN-96.md`.
+
+## XCVII PWPB-02 — prolate candidate Hilbert-norm limit (2026-11-27)
+
+Under the stated `O(lambda^-2)` uniform prolate-to-Hermite approximation,
+the zero-extended candidate `k_lambda=E(h_lambda)` converges to
+`k=E(h)` in `L²(du/u)` at rate `O(lambda^-1/2)`. The derivation splits the
+divisor sum at `nu=lambda` and explicitly bounds the Gaussian tail
+`nu>lambda`; this term is absent from the survey's displayed finite-sum
+pointwise estimate but is exponentially small and does not change its
+convergence scale. Combining this Hilbert-norm estimate with PWPB-01 gives
+locally uniform Mellin-transform convergence at rate `O(lambda^(b-1/2))` on
+each closed strip `|Re s|<=b<1/2`. The normalized candidate has a nonzero
+limit. No comparison with the true Weil-form ground eigenvector, finite-truncation
+control, spectral gap, or determinant convergence is established. See
+`research/CAMPAIGN-97.md`.
+
+## XCVII literature audit and PWPB-03 pivot (2026-11-27)
+
+A targeted literature refresh found Andrews–Connes–La Gatta,
+arXiv:2611.13129v1, a direct and materially stronger 2026 treatment of the
+same prolate-to-Weil ground-state bridge. Under its lower Fuchs-ladder
+hypothesis and windowed Weil positivity, it proves quantitative convergence
+of the ground state to prolate and Hermite targets; the all-window positivity
+input is RH-equivalent. Its conditional positivity program reduces to a
+finite transition-and-pole Schur complement whose sign remains open. Mori's
+unconditional bottom-eigenvalue upper bounds and Lean upper estimate do not
+provide a lower spectral gap. Consequently PWPB-02 is recorded only as a
+minor manual tail-correction/source-audit milestone, not a standalone paper
+result or novelty claim. PWPB-03 now audits the lower-ladder and Schur-block
+barriers for a noncircular route. See `research/CAMPAIGN-97.md` and
+`research/PAPER-PIPELINE.md`.

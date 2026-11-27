@@ -1,6 +1,6 @@
 # Research state
 
-## Current investigation checkpoint — XCVII / PWPB-01 (2026-11-27)
+## Current investigation checkpoint — XCVII / PWPB-03 (2026-11-27)
 
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
@@ -62,16 +62,33 @@ eigenvalues, so this positive kernel is not a direct discrete zero operator.
 The theorem is not prime-side independent and uses zero-divisor information
 and finite verification. Full record: `research/CAMPAIGN-96.md`.
 
-Active Campaign XCVII / PWPB-01 now targets the prolate-to-Weil ground-vector
+Active Campaign XCVII / PWPB-03 now targets the prolate-to-Weil ground-vector
 bridge in Connes–Consani–Moscovici's finite-prime self-adjoint operators,
 including both the prolate-to-full-ground-vector step and the finite Fourier
 truncation step. Connes's 2026 survey explicitly leaves comparison of the
 actual bottom eigenvector with its prolate candidate open. A manual
 residual/gap estimate and exact Mellin-functional norm identify the rate
 required for local-uniform transform convergence; an abstract closing-gap
-example shows Rayleigh energy convergence alone is insufficient. The
-actual-family residual, gap, parity, and determinant boundary normalization
-are open. See
+example shows Rayleigh energy convergence alone is insufficient. PWPB-02
+adds an ambient `L²(du/u)` convergence proof for the prolate candidate itself,
+explicitly bounding a Gaussian divisor-sum tail omitted from the survey's
+displayed finite-sum pointwise estimate. Combined with PWPB-01, this proves
+local-uniform transform convergence on every closed substrip of
+`|Re s|<1/2`. The normalized candidates converge to the nonzero Riemann
+kernel, but they are not shown close to the actual Weil-form ground
+eigenvectors. A literature refresh found Andrews–Connes–La Gatta,
+arXiv:2611.13129v1 (2026-11-09), which proves stronger prolate/Hermite
+ground-state convergence estimates under its Fuchs-ladder lower-bound
+hypothesis and windowed Weil positivity. Positivity for all windows is the
+RH-equivalent input; the result is conditional, not an unconditional
+operator construction or RH proof. Its §8 isolates an unresolved finite
+transition-and-pole Schur-complement sign problem. Mori's unconditional
+test-vector upper bounds, including a Lean formalization of an upper
+estimate, do not supply the lower gap. PWPB-02's candidate-side estimate is
+therefore a minor audit correction, not a standalone paper claim. PWPB-03
+will audit whether the ladder lower bound or Schur sign can be obtained
+noncircularly. The finite-truncation convergence and determinant boundary
+normalization remain open. See
 `research/CAMPAIGN-97.md`.
 
 The 2026-11-27 literature refresh also checked Connes's survey

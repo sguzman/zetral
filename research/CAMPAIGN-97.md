@@ -47,6 +47,29 @@ interchangeable.
    ordinary `L²` ground eigenvector of `A_lambda`; their rates cannot be
    transferred by notation alone. Check all exact objects before reusing any
    estimate.
+4. Andrews–Connes–La Gatta, *The uncertainty operator, the Weil ground
+   state and the zeros of zeta*, [arXiv:2611.13129](https://arxiv.org/abs/2611.13129),
+   v1 (2026-11-09), is now the closest direct source. Its Hypothesis 3.4
+   assumes lower as well as upper comparison of low Weil eigenvalues with
+   the Fuchs/prolate ladder. Under this hypothesis and positivity of each
+   windowed Weil form, §6 proves ground-state simplicity/evenness and
+   quantitative convergence to the prolate vector and Hermite target; §7
+   explains that positivity for all windows is the RH-equivalent input.
+   The manuscript therefore supplies a conditional bridge, not an
+   unconditional operator construction or proof of RH. Its numerical
+   evidence is explicitly distinct from Hypothesis 3.4. Section 8 reduces
+   its conditional positivity program to a finite Schur-complement block
+   near ladder-edge and pole modes; §8.8 lists the sign of this block as
+   unresolved.
+5. Mori's public repositories [windowed-form bounds](https://github.com/moriryota/weil-window-upper-bounds)
+   and [prolate-vector bounds](https://github.com/moriryota/prolate-weil-bounds)
+   report unconditional explicit upper bounds for the bottom Rayleigh
+   value, including a Lean formalization of one general test-function
+   estimate. These upper bounds supply neither a lower bound nor a spectral
+   gap, so do not imply ground-eigenvector convergence. The repository
+   explicitly says its Rayleigh-principle transfer to the spectral
+   statement is not formalized; stronger sequel estimates are paper and
+   ball-arithmetic claims, not that Lean theorem.
 
 These are author-reported theorem statements and open steps; this campaign
 has not independently audited those source proofs. No novelty claim is made.
@@ -103,6 +126,135 @@ operator domain (or a justified form-domain substitute), and its residual,
 ground gap, and boundary normalization must satisfy the analogous estimate.
 Neither leg follows merely from the Rayleigh eigenvalue reported for a trial
 space.
+
+## PWPB-02 — Candidate convergence in the ambient Hilbert norm
+
+This strengthens the candidate-side approximation only; it does not show
+that the candidate is close to the actual ground eigenvector. Use the
+survey's normalization in §6.5: `h_lambda` is supported in `[-lambda,lambda]`
+and, by its prolate-to-Hermite estimate and the zero-integral coefficient
+adjustment in the proof of Lemma 7.2, satisfies
+
+    delta_lambda := sup_(|t|<=lambda) |h_lambda(t)-h(t)| <= C lambda^(-2),
+    h(t) = P_4(t) exp(-pi t^2),
+
+where `P_4` is a fixed polynomial of degree at most four. Define
+`k_lambda(u)=E(h_lambda)(u)` on `[lambda^-1,lambda]` and extend it by zero
+outside that interval. Let `k(u)=E(h)(u)`, the Riemann kernel whose Mellin
+transform is Xi.
+
+For `u` in `[lambda^-1,lambda]`, split the defining sum at `nu=lambda`:
+
+    |k_lambda(u)-k(u)|
+      <= delta_lambda lambda u^(-1/2)
+         + sqrt(u) sum_(n>lambda/u) |h(nu)|.
+
+The second term is needed because `h` is not compactly supported. Since
+`|h(t)|<=C(1+t^4)exp(-pi t^2)`, the envelope is decreasing for `t>=2`.
+With `m=floor(lambda/u)+1`, monotone sum-integral comparison gives
+
+    sqrt(u) sum_(n>=m)|h(nu)|
+       <= C exp(-pi lambda^2)
+            (lambda^(9/2)+lambda^3 u^(-1/2))
+       <= C lambda^(9/2) exp(-pi lambda^2),
+
+uniformly for `lambda>=2` and `u` in the interval. Integrating the square
+against `du/u`, and using the source bound on `delta_lambda`, yields
+
+    integral_(lambda^-1)^lambda |k_lambda-k|^2 du/u
+       <= C delta_lambda^2 lambda^2 (lambda-lambda^-1)
+          + C lambda^9 exp(-2 pi lambda^2) log(lambda)
+       <= C/lambda.
+
+Outside this interval `k_lambda=0`. The Poisson identity `k(u)=k(u^-1)`
+and the Gaussian decay of `E(h)(u)` for `u>=lambda` give
+
+    integral_(0)^(lambda^-1) |k|^2 du/u
+       + integral_lambda^infinity |k|^2 du/u
+       <= C lambda^8 exp(-2 pi lambda^2).
+
+Therefore the zero-extended candidate satisfies
+`||k_lambda-k||_(L²(du/u))=O(lambda^(-1/2))`. Since `k` is nonzero, its
+normalized version also converges in this Hilbert norm to `k/||k||`.
+Combining this with the exact Mellin-functional norm from PWPB-01 gives,
+uniformly for `|Re(s)|<=b<1/2`,
+
+    |M(k_lambda-k)(s)| <= C_b lambda^(b-1/2) -> 0,
+
+where `M f(s)=integral f(u)u^s du/u`. Thus the corrected L² estimate also
+implies locally uniform convergence of the candidate transforms on every
+closed substrip strictly inside `|Re(s)|<1/2` (equivalently, the corresponding
+horizontal strips for the Fourier variable `z` in Connes's convention).
+
+### Source audit and scope
+
+Connes's 2026 survey, §6.5, states a transform-convergence bound derived
+from the same uniform prolate-to-Hermite approximation. In the displayed
+pointwise estimate at lines 994–1013 of the arXiv HTML, the count
+`n<=lambda/u` controls only the part with `nu<=lambda`; the omitted terms
+`nu>lambda` are not covered by `delta_lambda` as defined there. The explicit
+Gaussian-tail term above repairs that step for the fixed Hermite profile.
+This is a localized repair, not a refutation of Fact 6.4 or its conclusion:
+the missing tail is Gaussian-small in `lambda` and does not
+change the stated polynomial error scale on closed substrips. The
+prolate-to-Hermite estimate itself is imported and has not been independently
+proved here.
+
+The result gives a nonzero strong limit for the candidate vectors in one
+fixed ambient Hilbert space. This is a manual derivation under an imported
+uniform prolate-to-Hermite estimate, not a novelty claim. A literature
+refresh found the stronger candidate and conditional ground-state estimates
+in arXiv:2611.13129 §§6–7; those claims subsume the main candidate-convergence
+purpose here under their explicit hypotheses. PWPB-02 is currently a
+transparent ambient-space derivation and localized missing-tail correction
+to the earlier survey's displayed estimate, pending independent audit and
+prior-art comparison. It does not establish
+`||theta_x-k_lambda|| -> 0`, a spectral gap, simplicity/evenness of the
+`QW_lambda` ground state, convergence of the finite truncations
+`xi_{lambda,N}`, or determinant normalization. In particular, strong
+convergence of trial vectors is not operator or eigenvector convergence.
+
+## PWPB-03 — Audit the Fuchs-ladder hypothesis and finite Schur bottleneck
+
+### Precise question
+
+Can the lower half of Hypothesis 3.4 in arXiv:2611.13129, or the finite
+transition-and-pole Schur-complement inequalities in its §8, be derived
+from the prime-side/uncertainty-operator structure without assuming Weil
+positivity? Which exact sub-block is the first irreducible obstacle?
+
+### Existing evidence and design
+
+The source's upper ladder bounds are test-vector estimates. Its lower ladder
+bounds imply positivity of the restricted Weil form, so when asserted for
+all window scales they imply RH by Weil's criterion. Under the lower ladder
+hypothesis plus window positivity, §6 derives a ground-state gap and Mellin
+transform convergence. Mori's unconditional Rayleigh upper bounds sharpen
+only the upper side and cannot provide the missing lower gap. Section 8
+isolates a finite Schur block (edge modes and two pole directions), while
+uniform Gram/localization bounds remain open.
+
+First audit the exact definitions, scale conventions, and quantifiers in
+(32), the §8 finite-dimensional space, and inequalities (73)–(74). Separate
+which claimed positivity is RH-equivalent from any potentially weaker
+coercivity statement. Then attempt a lower bound for the Schur block that
+does not use unknown zero locations; test first ladder-entry boundaries,
+the two pole directions, degenerating Gram matrices, and equality cases.
+Construct an abstract finite countermodel if upper ladder bounds plus the
+semilocal uncertainty principle alone do not imply a lower estimate.
+Finally compare its conditional ground-vector rate with PWPB-01's
+residual/gap threshold and the finite Fourier compression theorem, keeping
+operators and normalizations separate.
+
+### Acceptance and verification
+
+Accept either an unconditional noncircular lower bound with all constants
+and domains, or a precise dependency/countermodel showing why the published
+hypotheses do not follow from the upper estimates. Verify by line-by-line
+source audit and an independent derivation of the key block inequalities;
+numerical eigenvalues and conditional source claims are not proofs. No RH
+conclusion or novelty claim is permitted without the full argument and
+prior-art review.
 
 ### Falsification check
 
