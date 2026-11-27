@@ -29,10 +29,11 @@ equivalence to that criterion is assumed.
 
 The implication is proved in
 `research/positivity/B1-24-fixed-width-positivity-RH-criterion.md`. For each
-`L0`, Baire category selects one real even profile `h`, supported in
-`[-d,d]` for `d<L0/2`, whose bilateral Laplace transform is nonzero at every
-nontrivial zero. The fixed packet profile `g(x)=sqrt(2)h(x-L0/2)` makes
-the packet at separation `H=L0+t` a translate of `h+tau_t h`. Positivity
+`L0`, Baire category selects one real profile `h` without a parity
+restriction, supported in `[-d,d]` for `d<L0/2`, whose bilateral Laplace
+transform is nonzero at every reflected centered zero. The fixed packet
+profile `g(x)=sqrt(2)h(x-L0/2)` makes the packet at separation `H=L0+t` a
+translate of `h+tau_t Rh`, where `Rh(x)=h(-x)`. Positivity
 forces the translated cross term plus a constant to be nonnegative for all
 `t>=0`. Its Laplace transform has poles at every centered zero; the pole
 supremum is the convergence abscissa, whether or not attained. The

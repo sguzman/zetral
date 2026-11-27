@@ -123,9 +123,10 @@ Weil criterion applies. The family is not a smaller positivity class when
 all widths are allowed. See `research/positivity/B1-23-even-packet-Weil-criterion.md`
 and closed `research/CAMPAIGN-91.md`. B1-24 closes Campaign XCII: positivity
 for all profiles at any one fixed width and every separation is RH-equivalent.
-The converse uses one Baire-generic even profile, exact packet translation,
-and a Landau singularity argument; it is manual and not machine checked or a
-proof of RH. See `research/positivity/B1-24-fixed-width-positivity-RH-criterion.md`
+The converse uses one Baire-generic arbitrary real profile (no parity
+condition), exact reflected-packet translation, and a Landau singularity
+argument; it is manual, not machine checked, and not a proof of RH or a
+novelty claim. See `research/positivity/B1-24-fixed-width-positivity-RH-criterion.md`
 and `research/CAMPAIGN-92.md`. Campaign XCIII/HP-01 now audits the arithmetic
 finite-matrix route of Shi (arXiv:2609.04908), focusing on whether the
 prime-to-zero relative perturbation target can be attacked without importing

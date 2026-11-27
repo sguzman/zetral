@@ -19,30 +19,31 @@ fixed profile `g`.
 
 ## Fixed-profile construction
 
-Choose `d<L0/2` and let `E` be the real Fréchet space of even smooth
-functions supported in `[-d,d]`. For each nontrivial zeta zero
-`rho=beta+i gamma`, put `z_rho=rho-1/2` and
+Choose `d<L0/2` and let `E` be the real Fréchet space of smooth functions
+supported in `[-d,d]`; no parity condition is imposed. For each nontrivial
+zeta zero `rho=beta+i gamma`, put `z_rho=rho-1/2` and
 
     H_h(z)=integral h(x) exp(z x) dx.
 
-The functional `h -> H_h(z_rho)` is continuous and not identically zero on
-`E`: a sufficiently narrow even unit-mass bump has transform tending to 1
-at that fixed `z_rho`. Its kernel is therefore a proper closed subspace.
-There are countably many zeros, so Baire's theorem gives one real even
-`h in E` such that `H_h(z_rho)!=0` for every nontrivial zero, including
-zeros with multiplicity (the same value is repeated).
+For every zero, the functional `h -> H_h(-z_rho)` is continuous and not
+identically zero on `E`: a sufficiently narrow real unit-mass bump has
+transform tending to 1 at that fixed point. Its kernel is a proper closed
+subspace. There are countably many zeros, so Baire's theorem gives one real
+`h in E` such that `H_h(-z_rho)!=0` for every nontrivial zero. This also
+handles multiplicities, whose repeated terms add at the same pole.
 
 Set `c=L0/2` and fix the profile
 
     g(x)=sqrt(2) h(x-c),
 
 which is supported in `(0,L0)`. For each `t>=0`, use packet separation
-`H=L0+t=2c+t`. Evenness of `h` gives the exact identity
+`H=L0+t=2c+t`. The exact identity is
 
-    f_{g,L0+t}(x)=h(x-c)+h(x-c-t)
-                   = tau_c (h+tau_t h)(x),
+    f_{g,L0+t}(x)=h(x-c)+Rh(x-c-t)
+                   = tau_c (h+tau_t Rh)(x),
 
-where `tau_a h(x)=h(x-a)`. Thus the same profile works for every separation.
+where `Rh(x)=h(-x)` and `tau_a h(x)=h(x-a)`. Thus the same profile works
+for every separation, without requiring `h` to be even.
 
 ## Positivity yields a nonnegative function
 
@@ -55,17 +56,16 @@ The series converges absolutely for smooth compactly supported functions;
 integration by parts gives rapid decay in `|Im z_rho|`, and the zero count
 is `O(T log T)`. Translation invariance follows directly because
 `H_{tau_a f}(z)=exp(a z)H_f(z)` and the two factors in each summand cancel.
-For real even `h`,
+For real `h`,
 
-    F_h(t):=B(tau_t h,h)
-           =sum_rho H_h(z_rho)^2 exp(t z_rho)
+F_h(t):=B(tau_t Rh,h)
+           =sum_rho H_h(-z_rho)^2 exp(t z_rho)
 
-is real. Expanding the quadratic form and using translation invariance gives
-
-    Q(h+tau_t h)=2 Q(h)+2 F_h(t).
-
-By the exact packet representation above, the fixed-width positivity
-hypothesis implies `G_h(t):=F_h(t)+Q(h)>=0` for every `t>=0`.
+is real. Reflection gives `Q(Rh)=Q(h)`, since each summand in the centered
+form is `H_h(z)H_h(-z)` and reflection swaps its factors. Expanding
+`Q(h+tau_t Rh)` using the packet identity and translation invariance gives
+`G_h(t):=F_h(t)+Q(h)>=0` for every `t>=0` under the fixed-width positivity
+hypothesis.
 
 ## Laplace transform and Landau contradiction
 
@@ -74,9 +74,9 @@ Assume RH fails. Let
     alpha=sup_rho Re(z_rho)=sup_rho Re(rho)-1/2 > 0.
 
 There is no assumption that this supremum is attained. Since
-`sum_rho |H_h(z_rho)|^2<infinity` and `Re(z_rho)<=alpha`,
+`sum_rho |H_h(-z_rho)|^2<infinity` and `Re(z_rho)<=alpha`,
 
-    |F_h(t)| <= exp(alpha t) sum_rho |H_h(z_rho)|^2,
+    |F_h(t)| <= exp(alpha t) sum_rho |H_h(-z_rho)|^2,
 
 so the nonnegative `G_h` has a finite Laplace abscissa of convergence
 `sigma_c<=alpha`.
@@ -84,12 +84,12 @@ so the nonnegative `G_h` has a finite Laplace abscissa of convergence
 For `Re(s)>alpha`, absolute convergence permits termwise integration:
 
     integral_0^infty F_h(t) exp(-s t) dt
-       = sum_rho H_h(z_rho)^2/(s-z_rho).
+       = sum_rho H_h(-z_rho)^2/(s-z_rho).
 
 The right side continues meromorphically to the plane: on compact sets away
 from the zeros, its tail converges locally uniformly by the same rapid
 decay and zero count. Each `z_rho` is a genuine pole, with residue equal to
-its multiplicity times `H_h(z_rho)^2`, which is nonzero by construction.
+its multiplicity times `H_h(-z_rho)^2`, which is nonzero by construction.
 Adding the constant `Q(h)` adds only `Q(h)/s` to this transform.
 
 The Laplace transform of the nonnegative function `G_h` is holomorphic in
@@ -123,9 +123,10 @@ forced as the convergence abscissa by the poles approaching its right edge.
 
 - The profile `g` is fixed independently of `t`; this matters because the
   hypothesis only quantifies positivity for each admissible fixed profile.
-- Packet reflection and the `sqrt(2)` factor were expanded explicitly.
+- Packet reflection and the `sqrt(2)` factor were expanded explicitly for
+  arbitrary real profiles; parity is not needed.
 - Distinct zeros have distinct pole locations; multiplicities add and cannot
-  cancel. Generic Baire choice prevents a zero residue from vanishing.
+  cancel. Generic Baire choice of `h` prevents a zero residue from vanishing.
 - Positivity supplies a one-sided lower bound on the cross term, not an
   absolute-value bound. Landau's theorem is the step that converts that
   one-sided condition into a contradiction without a rightmost zero.
