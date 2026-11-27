@@ -155,6 +155,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B1-08):** `research/positivity/B1-08-chebyshev-error-convolution.md` derives an exact Stieltjes formula for the first-prime endpoint residual and proves uniform `o(exp(h/2))` over fixed-support, L2-normalized profiles with bounded H1 norm, using only PNT. This is an analytical extension of B1-06, not full-form coercivity. The derivative norm remains uncontrolled on the full unit sphere; next determine whether the actual test-space norm supplies that control or whether a different cancellation identity avoids it.
 
+**Progress (2026-11-27, B1-09):** Suzuki v1 §2.1 identifies the local form domain as `H^log`, which does not control the derivative required by B1-08. A Fourier-dual estimate proves the endpoint discrepancy is `o(exp(h/2))` uniformly on bounded `H^log` families: the low-frequency range uses PNT integration by parts, and the high-frequency range uses total variation divided by the logarithmic Fourier weight. The bound has no sign and does not control the full L2 unit sphere or full form. Next sharpen the signed multiplier and include remaining terms.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

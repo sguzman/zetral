@@ -207,3 +207,11 @@ Stieltjes formula for the first-prime endpoint residual and proves uniform
 using only the prime number theorem. This sharpens the fixed-profile
 asymptotic, but its derivative dependence leaves the full test-space sphere
 and full-form coercivity unresolved.
+
+## B1 logarithmic-domain endpoint checkpoint — B1-09 (2026-11-27)
+
+`research/positivity/B1-09-log-form-domain-discrepancy.md` identifies the
+actual local form domain as logarithmically weighted Fourier regularity, which
+does not control the derivative used in B1-08. A Fourier-dual PNT estimate
+extends the first-prime endpoint cancellation to bounded logarithmic-domain
+families. It has no sign and gives no L2 coercivity or full-form positivity.
