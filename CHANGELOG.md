@@ -272,3 +272,21 @@ mean-square orthogonality to the B1-12 explicit zero-residue series. At an
 existential fixed frequency it proves `limsup_(h→∞) c_h>0` under RH, so the
 smoothed first-prime multiplier cannot converge to zero. Small subsequences
 remain possible; this gives no full-form sign or positivity result.
+
+## LXXX fixed-profile full-form checkpoint — B1-14 (2026-11-27)
+
+`research/positivity/B1-14-bounded-full-form-edge-packets.md` combines the
+RH-conditional first-prime dual bound with the direct paired-packet formula.
+The prime-square endpoint tends to `1/2 ∫(g*g)` by PNT and higher powers
+decay; after the leading archimedean/first-prime cancellation, the complete
+form is `O_g(1)` for each fixed profile. No sign or full-domain coercivity
+follows.
+
+## LXXX closure and LXXXI activation (2026-11-27)
+
+Campaign LXXX closed within scope after proving a uniform RH-conditional
+bound and positive limsup for the smoothed first-prime multiplier. Its
+closure is `research/CAMPAIGN-80-CLOSURE.md`. Campaign LXXXI is active to
+determine whether those zero-residue frequencies cancel in the complete
+direct Weil form on fixed paired edge packets; see
+`research/CAMPAIGN-81.md`.

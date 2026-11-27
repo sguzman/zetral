@@ -1,6 +1,6 @@
 # Campaign LXXX — High-frequency size of the signed prime endpoint multiplier
 
-Date opened: 2026-11-27. Status: ACTIVE. This follows Campaign LXXIX, which
+Date opened: 2026-11-27. Status: CLOSED within stated scope. This follows Campaign LXXIX, which
 closed after deriving the exact transform and an RH-conditional regularity
 bound.
 
@@ -34,9 +34,9 @@ continuation, branch, and contour hypotheses.
 
 Checkpoint B1-11 carried out this route under RH: it isolates and subtracts
 the main pole, then proves a subexponential upper bound for `c_h` using the
-fixed-strip logarithmic-derivative estimate. The remaining task is to control
-the constants as the contour approaches the critical line, or to prove an
-actual lower bound along a sequence of frequencies/endpoints.
+fixed-strip logarithmic-derivative estimate. B1-12 and B1-13 supersede its
+open subquestions by proving uniform boundedness and a positive limsup,
+respectively.
 
 ## Checkpoint B1-12 — zero-residue shift
 
@@ -66,13 +66,31 @@ all large h nor full-form sign/positivity. The frequency is existential and
 no numerical constant is claimed. See
 `research/positivity/B1-13-almost-periodic-lower-limsup.md`.
 
+## Checkpoint B1-14 — fixed paired-packet full-form bound
+
+For each fixed smooth paired edge profile, B1-12 bounds the first-prime
+discrepancy in the logarithmic dual norm. Direct PNT analysis gives the
+prime-square endpoint limit `1/2 ∫(g*g)` and shows prime powers `k≥3`
+decay. Together with the leading archimedean/first-prime cancellation and
+the bounded continuous/pole terms recorded in B1-06, this yields
+`Q_W(f_h)=O_g(1)` under RH for this family. It gives no sign or coercivity.
+See `research/positivity/B1-14-bounded-full-form-edge-packets.md`.
+
+## Closure and next campaign
+
+The bounded question is resolved within scope: conditional on RH, `c_h` is
+uniformly bounded and has positive limsup. The fixed smooth paired packets
+also have bounded full-form values, without a sign conclusion. See
+`research/CAMPAIGN-80-CLOSURE.md`. The next question is whether the
+almost-periodic zero-residue coefficients cancel in the full direct form;
+Campaign LXXXI is active in `research/CAMPAIGN-81.md`.
+
 ## Information gain and falsification
 
-A uniform bound for `c_h` would extend first-prime cancellation to bounded
-`H^log` profiles. Growth would quantify why that endpoint piece alone cannot
-be controlled by the logarithmic norm. Either result concerns only one
-component; full Weil positivity still requires the other arithmetic and
-archimedean terms.
+A uniform bound for `c_h` extends first-prime cancellation to bounded
+`H^log` profiles under RH; the positive limsup shows that the isolated
+component does not decay. Both results concern only one component; full Weil
+positivity still requires the other arithmetic and archimedean terms.
 
 Try model frequencies near zero ordinates and scales comparable to the
 inverse spacing of prime log-support atoms. Preserve any apparent resonance
