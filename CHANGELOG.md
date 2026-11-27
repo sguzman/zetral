@@ -198,3 +198,12 @@ and untwisted-minus-twisted zero-order residue. Dirichlet nonvanishing on
 `Re(s)≥1` and standard Euler-product and analytic-order results remain
 explicit dependencies; no one-sided remainder bound is established. The next
 investigation switches to B1's analytic endpoint cancellation.
+
+## B1 analytical extension checkpoint — B1-08 (2026-11-27)
+
+`research/positivity/B1-08-chebyshev-error-convolution.md` derives an exact
+Stieltjes formula for the first-prime endpoint residual and proves uniform
+`o(exp(h/2))` over fixed-support, L2-normalized profiles with bounded H1 norm,
+using only the prime number theorem. This sharpens the fixed-profile
+asymptotic, but its derivative dependence leaves the full test-space sphere
+and full-form coercivity unresolved.

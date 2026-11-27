@@ -153,6 +153,8 @@ a finite positive block into a lower bound for the full form. See
   central inequality in Lean if it is compact enough. State separately whether
   any conclusion is conditional on RH or imported identities.
 
+**Progress (2026-11-27, B1-08):** `research/positivity/B1-08-chebyshev-error-convolution.md` derives an exact Stieltjes formula for the first-prime endpoint residual and proves uniform `o(exp(h/2))` over fixed-support, L2-normalized profiles with bounded H1 norm, using only PNT. This is an analytical extension of B1-06, not full-form coercivity. The derivative norm remains uncontrolled on the full unit sphere; next determine whether the actual test-space norm supplies that control or whether a different cancellation identity avoids it.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

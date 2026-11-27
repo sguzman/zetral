@@ -489,7 +489,7 @@ leaving the exact transform
 At real `s>2`, this expression is real because the original remainder is
 real. The source extends that reality to `s=1` by analyticity on the real
 ray `s≥1`, and obtains `G_q(1)=c_q`; therefore the apparent pole at `1` is
-removable. This analyticity uses the imported theorem that the completed
+removable. This analyticity uses the imported theorem that the regularized
 `entireL` factors have no zeros for `Re(s)≥1` (and that the principal factor
 is nonzero at `1`). At any `ρ≠0,1`, the residue of `G_q` is
 `Σ(ord_ρ E_{ψχ_d}−ord_ρ E_ψ)/φ(q)`, since a logarithmic derivative has
@@ -510,6 +510,6 @@ the analytic-order residue theorem. The formal proof source encodes these
 dependencies, but this was neither a local Lean build nor a re-proof of those
 classical theorems. The one-sided prime-remainder bound required to apply
 Landau remains unestablished by Zetral. RHA-08 is accepted as a manual audit
-of the transform derivation only; next investigate the exact nonvanishing
-and normalization prerequisites, then return to the independent operator
-and analytic-generalization portfolio.
+of the transform derivation only. The next selected investigation is B1-08's
+uniform endpoint cancellation on bounded H1 profiles; the zero-exclusion
+route remains open alongside it.
