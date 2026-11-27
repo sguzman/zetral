@@ -150,7 +150,10 @@ XCIV/HP-02 asks whether fixed-low-spectrum transfer can use a Schur complement
 instead of a global whitened norm. HP-02.1 derives the finite-dimensional
 criterion and shows by a 2x2 example that low-block convergence and high-block
 resolvent control alone are insufficient; the weighted coupling must vanish.
-No Prime–Weil block estimate is proved. See
+HP-02.2 normalizes the source's fixed-low tail-metric estimate explicitly:
+it leaves the fourth-power tail divided by the two low metric weights, still
+RH-conditioned and with no moving-high-block or `Delta K` bound. No
+Prime–Weil Schur estimate is proved. See
 `research/CAMPAIGN-94.md` and
 `research/operators/HP02-low-window-schur-criterion.md`.
 

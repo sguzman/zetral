@@ -690,3 +690,9 @@ while explicitly distinguishing the joint spectral curve from a fixed-
 coupling spectrum and disclaiming a global zeta Hilbert–Pólya realization.
 This reinforces the campaign's requirement for an actual limiting spectral
 correspondence; no direct reuse or new result is claimed.
+
+HP-02.2 inserts the source's fixed-low fourth-power tail estimate into the
+Schur route: after whitening, the low tail-metric entries retain division by
+the two low metric weights. This does not control those denominators,
+moving high blocks, or the `Delta K` coupling and remains RH-conditioned.
+No Prime–Weil low-window transfer theorem is established.

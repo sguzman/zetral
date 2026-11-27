@@ -367,8 +367,8 @@ Campaign closure: `research/CAMPAIGN-93-CLOSURE.md`. Full arithmetic transfer re
 Campaign file: `research/CAMPAIGN-94.md`.
 
 - **Question:** Can fixed low generalized eigenvalues be transferred using a stable high-block resolvent and vanishing Schur correction, without the global relative-norm target?
-- **Progress (HP-02.1):** Exact block determinant reduction derived; a Hermitian 2x2 countermodel shows low-block convergence and high-block resolvent control do not suffice without weighted low/high coupling control. This is not a zeta-matrix obstruction.
-- **Next:** Derive the relevant Prime–Weil blocks and determine whether arithmetic-side bounds control high-block invertibility and weighted coupling without RH or zero inputs.
+- **Progress (HP-02.1–.2):** Exact block determinant reduction derived; a Hermitian 2x2 countermodel shows low-block convergence and high-block resolvent control do not suffice without weighted low/high coupling control. From Shi (5.35), a fixed-low tail-metric entry after whitening is bounded by the fourth-power tail divided by the two low metric normalizations; the constants are fixed for each low pair, but this bound is RH-conditioned and does not estimate moving high blocks or the `Delta K` Schur term.
+- **Next:** Derive the complete `Delta K-z Delta G` block formula and determine whether arithmetic-side bounds control high-block invertibility and weighted coupling without RH or zero inputs.
 - **Acceptance:** A verified low-spectrum transfer estimate for the arithmetic pencils, or a precise obstruction to deriving the required block bounds from current explicit-formula estimates. A general Schur criterion alone does not close the campaign.
 
 ### B2 — RH-only coercivity and exceptional-set limits

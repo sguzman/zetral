@@ -89,6 +89,26 @@ neither uniform high-block invertibility nor the weighted coupling bound.
 Under RH, positivity of the zero tail can aid the analysis, but using it as
 a proof of RH would be circular.
 
+The source's exact zero-tail formula gives one concrete low-block reduction.
+For fixed `k,l` and signs `s,t in {+1,-1}`, the normalized tail-metric entry
+in the reference eigenbasis is bounded, under the source's RH decomposition
+and `nu_(N,L)<gamma_1`, by
+
+    |Rhat_(s gamma_k,t gamma_l)|
+      <<_(gamma_k,gamma_l)
+      [sum_(j>N) m_j/gamma_j^4]
+      / [sqrt(m_k m_l) |sin(L gamma_k/2) R'_(gamma_k)
+                            sin(L gamma_l/2) R'_(gamma_l)|].
+
+This follows by dividing equation (5.35) by the two metric square roots
+`sqrt(m_k omega_k m_l omega_l)` from (5.30); the factors `4/L` cancel.
+For fixed low indices the source's implicit constants are fixed, but the
+denominator still needs control. More importantly, (5.35) gives no uniform
+bound as either index moves into the high block, and it only addresses the
+tail metric `Delta G`, not the complete Schur correction involving
+`Delta K`. It is therefore a low-block diagnostic, not yet an arithmetic
+estimate for the proposed criterion.
+
 Next derive the low/high blocks from the exact arithmetic contrast formulas
 and test whether divisor-free/zero-free bounds are available for a fixed
 low window. If not, record the failed transfer route and move to a different

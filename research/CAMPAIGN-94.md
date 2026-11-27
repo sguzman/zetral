@@ -75,7 +75,10 @@ arithmetic contrast formulas. Determine whether the finite-index tail
 estimate controls the low-to-high coupling after high-block inversion, and
 whether any such bound can be obtained without assuming RH or supplying zero
 ordinates to the arithmetic construction. No such arithmetic estimate has
-yet been proved.
+yet been proved. The fixed-low tail-metric block can be bounded by the
+fourth-power tail divided by the two low metric normalizations (HP-02.2),
+but the denominator, the moving high blocks, and the `Delta K` contribution
+remain uncontrolled.
 
 ## Dependencies and acceptance
 
