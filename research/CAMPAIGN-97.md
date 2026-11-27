@@ -51,10 +51,13 @@ interchangeable.
    state and the zeros of zeta*, [arXiv:2611.13129](https://arxiv.org/abs/2611.13129),
    v1 (2026-11-09), is now the closest direct source. Its Hypothesis 3.4
    assumes lower as well as upper comparison of low Weil eigenvalues with
-   the Fuchs/prolate ladder. Under this hypothesis and positivity of each
-   windowed Weil form, §6 proves ground-state simplicity/evenness and
-   quantitative convergence to the prolate vector and Hermite target; §7
-   explains that positivity for all windows is the RH-equivalent input.
+   the Fuchs/prolate ladder. The lower bound for the lowest even and odd
+   sector values makes the full bottom nonnegative for all sufficiently
+   large windows; monotonicity extends positivity to smaller windows, so
+   this hypothesis already contains an RH-strength assertion by Weil's
+   criterion (the source explicitly says it is strictly stronger than
+   window positivity). Under it, §6 proves ground-state simplicity/evenness
+   and quantitative convergence to prolate and Hermite targets.
    The manuscript therefore supplies a conditional bridge, not an
    unconditional operator construction or proof of RH. Its numerical
    evidence is explicitly distinct from Hypothesis 3.4. Section 8 reduces
@@ -226,10 +229,12 @@ positivity? Which exact sub-block is the first irreducible obstacle?
 ### Existing evidence and design
 
 The source's upper ladder bounds are test-vector estimates. Its lower ladder
-bounds imply positivity of the restricted Weil form, so when asserted for
-all window scales they imply RH by Weil's criterion. Under the lower ladder
-hypothesis plus window positivity, §6 derives a ground-state gap and Mellin
-transform convergence. Mori's unconditional Rayleigh upper bounds sharpen
+bounds for the lowest eigenvalue imply positivity of the restricted Weil
+form for all sufficiently large windows; monotonicity then extends it to
+all windows. Thus the lower half of Hypothesis 3.4 already implies RH by
+Weil's criterion (and is strictly stronger, as the source remarks). Under
+that hypothesis, §6 derives a ground-state gap and Mellin transform
+convergence. Mori's unconditional Rayleigh upper bounds sharpen
 only the upper side and cannot provide the missing lower gap. Section 8
 isolates a finite Schur block (edge modes and two pole directions), while
 uniform Gram/localization bounds remain open.
@@ -255,6 +260,99 @@ source audit and an independent derivation of the key block inequalities;
 numerical eigenvalues and conditional source claims are not proofs. No RH
 conclusion or novelty claim is permitted without the full argument and
 prior-art review.
+
+## PWPB-03.1 — Mellin audit of the transition/pole prime estimate
+
+### Source claim under audit
+
+In arXiv:2611.13129v1, §2.1 equation (7) defines `W_p` with all prime
+powers `p^m`; §8.6 (HTML around lines 1138–1145) then discusses the even
+pole direction and writes its first-prime contribution with main sum
+
+    2 sum_(p<=lambda^2) log(p) (2 log(lambda)-log(p)).
+
+and states that this equals `2 lambda^2 + O(lambda log(lambda))` by
+Chebyshev estimates (the `m>=2` terms are placed in an
+`O(lambda log(lambda))` remainder). This is prose in the proposed route to
+Proposition 8.18, not a proved proposition establishing the
+transition-and-pole block sign.
+
+### Exact reduction and conditional obstruction
+
+Put `X=lambda^2`, let `Theta(x)=sum_(p<=x) log(p)`, and set
+
+    S(X)=sum_(p<=X) log(p) log(X/p).
+
+Stieltjes partial summation gives the exact identity
+
+    S(X)=integral_(2^-)^X log(X/t) dTheta(t)
+        =integral_2^X Theta(t) dt/t.
+
+Suppose the displayed-strength error held for this sum:
+
+    S(X)=X+O(sqrt(X) log(X)).                 (H)
+
+Define `A(X)=S(X)-X`. For `Re(s)>1`, Tonelli/Fubini and
+`integral_1^infinity log(y)y^(-s-1)dy=1/s^2` give
+
+    integral_2^infinity A(X) X^(-s-1) dX
+       = s^(-2) sum_p log(p) p^(-s) - 2^(1-s)/(s-1).
+
+Under (H), the integral on the left converges locally uniformly and defines
+a holomorphic function for `Re(s)>1/2`. Consequently
+`P(s)=sum_p log(p)p^(-s)` has a meromorphic continuation to that half-plane
+with no singularities there except possibly at `s=1`.
+
+For `Re(s)>1`, the Euler product identity is
+
+    -zeta'(s)/zeta(s) = P(s) + H_2(s),
+    H_2(s)=sum_p sum_(k>=2) log(p) p^(-ks).
+
+The double sum `H_2` converges normally for `Re(s)>1/2`, since
+`sum_p log(p)p^(-2 sigma)` converges for `sigma>1/2`. Therefore a zero
+`rho` of zeta with `Re(rho)>1/2` would give a pole of `P` at `rho`,
+contradicting the continuation above. By the functional equation, (H)
+implies RH. This is a rigorous conditional implication, not evidence for
+RH and not a proof that the source's asymptotic is false.
+
+Thus, if both displayed `O(lambda log(lambda))` estimates are uniform
+unconditional bounds, subtracting the higher-prime-power remainder from
+the asserted total prime contribution forces (H), and imports an
+RH-strength assertion. Standard Chebyshev/PNT asymptotics
+`Theta(x)~x` yield only `S(X)~X`, not (H). The source presents this in
+discussion on the route to Proposition 8.18, not as a proved lemma; whether
+the error estimate is intended as a heuristic, conditional estimate, or
+rigorously derived bound still needs source-context audit. Its paragraph
+also describes the net pole value through a zero sum, so the full route may
+expose the RH-level dependence rather than claim to remove it.
+
+### Status, falsification, and next check
+
+Status: manual derivation checked algebraically here; not Lean-formalized and
+not independently reviewed. No novelty claim. Next inspect the exact
+source's intended status of the `O` constants and whether the estimate is
+used beyond this discussion. The source definition of `W_p` (equation (7))
+confirms that it sums all powers; §8.6 isolates the `m=1` term and places the
+higher powers in the stated remainder. Its introduction describes §8 as a
+strategy, and Proposition 8.18 explicitly assumes the unresolved
+transition-and-pole lower bound before deriving RH. Thus no proved theorem
+in the article is shown to rely on the square-root-error estimate; the
+source-error allegation is not confirmed. If the `O` estimate is intended
+as unconditional proof rather than heuristic context, it is RH-strength
+and needs a derivation beyond ordinary Chebyshev/PNT asymptotics. The
+prior-art scan found
+Johnston, *On variants of Chebyshev's conjecture* (Ramanujan Journal, 2025),
+which records other RH-equivalent sign criteria for integrals of
+`Theta(x)-x`; those are related but do not establish novelty or identity
+with this logarithmically weighted integral. Determine whether the
+RH-strength estimate is asserted as a theorem, merely an illustrative
+heuristic, or canceled inside the complete Schur block. Acceptance requires
+resolving that distinction from the source and comparing this weighted
+Chebyshev criterion with existing literature. Bounded source-audit
+milestone complete; keep PWPB-03 active for a separate audit of the uniform
+low-block estimate (R2) and the Gram lower bound at the edge of the Fuchs
+ladder. Do not label a source error unless the source uses (H) as an
+unconditional proved estimate.
 
 ### Falsification check
 

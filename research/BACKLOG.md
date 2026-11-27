@@ -59,6 +59,19 @@ analytic theorems and from any RH implication.
   RH-equivalent positivity input from genuinely weaker statements. Acceptance
   is a quantified unconditional lower bound or a precise dependency/countermodel;
   numerical agreement is not sufficient. See `research/CAMPAIGN-97.md`.
+- **PWPB-03.1 potential source-level obstacle:** For
+  `S(X)=sum_(p<=X) log(p)log(X/p)`, partial summation gives
+  `S(X)=integral_2^X Theta(t)dt/t`. A Mellin transform shows
+  `S(X)=X+O(sqrt(X)log X)` would imply RH: it continues
+  `sum_p log(p)p^(-s)` holomorphically to `Re(s)>1/2`, while an off-line
+  zero would force a pole there. This matches the square-root-scale error
+  stated for the first-prime main sum in §8.6 of arXiv:2611.13129, but the
+  source presents it in strategy discussion, not as a proved lemma, and
+  Proposition 8.18 explicitly leaves the transition-and-pole lower bound as
+  a hypothesis. No source error is confirmed. The new useful lead is the
+  edge-uniform low-block estimate (R2) and Gram lower bound, both marked open
+  in §8.8; audit these next. Manual derivation and caveats are in
+  `research/CAMPAIGN-97.md`; no novelty claim.
 - **Design / falsification:** Pin the exact form/domain; test whether the
   prolate candidate belongs to the operator domain; derive its form residual
   from prime and archimedean terms; prove a next-eigenvalue/parity gap; bound

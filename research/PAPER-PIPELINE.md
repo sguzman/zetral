@@ -195,3 +195,16 @@ art review remain prerequisites.
   PWPB-02's only possible write-up contribution is the localized Gaussian
   tail correction to the earlier survey's displayed candidate estimate;
   that needs independent audit and prior-art review before any paper use.
+- **PWPB-03.1 — potential RH-strength Chebyshev remainder in the Schur
+  discussion.** The displayed first-prime sum in §8.6 of
+  [arXiv:2611.13129](https://arxiv.org/abs/2611.13129) is said to be
+  `2 lambda^2+O(lambda log lambda)`. For its isolated main term, an exact
+  Stieltjes identity and Mellin continuation show that this square-root
+  error would imply RH. This is a potentially significant audit lead, not
+  a confirmed source error: equation (7) includes all prime powers,
+  §8.6 is strategy discussion, and Proposition 8.18 explicitly assumes the
+  unresolved Schur lower bound. No proved theorem is shown to depend on the
+  displayed asymptotic. The Mellin implication is manually derived in
+  [`CAMPAIGN-97.md`](CAMPAIGN-97.md); the weighted-Chebyshev prior-art review
+  is incomplete. Not paper-ready; revisit only if a later source version
+  promotes the estimate to an unconditional lemma.

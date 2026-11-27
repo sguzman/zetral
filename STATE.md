@@ -79,16 +79,22 @@ kernel, but they are not shown close to the actual Weil-form ground
 eigenvectors. A literature refresh found Andrews–Connes–La Gatta,
 arXiv:2611.13129v1 (2026-11-09), which proves stronger prolate/Hermite
 ground-state convergence estimates under its Fuchs-ladder lower-bound
-hypothesis and windowed Weil positivity. Positivity for all windows is the
-RH-equivalent input; the result is conditional, not an unconditional
-operator construction or RH proof. Its §8 isolates an unresolved finite
-transition-and-pole Schur-complement sign problem. Mori's unconditional
-test-vector upper bounds, including a Lean formalization of an upper
-estimate, do not supply the lower gap. PWPB-02's candidate-side estimate is
-therefore a minor audit correction, not a standalone paper claim. PWPB-03
-will audit whether the ladder lower bound or Schur sign can be obtained
-noncircularly. The finite-truncation convergence and determinant boundary
-normalization remain open. See
+hypothesis; its lower bound for the lowest even/odd sectors is already
+RH-strength by Weil positivity and window monotonicity. Thus it is not an
+unconditional operator construction or RH proof. Its §8 isolates an
+unresolved finite transition-and-pole Schur-complement sign problem.
+PWPB-03.1 derives that the stated `2 lambda^2+O(lambda log lambda)` estimate
+for the isolated first-prime sum in §8.6 would imply RH by an exact
+Stieltjes identity and Mellin continuation. The source presents it in
+strategy discussion, not as a proved lemma, and Proposition 8.18 still
+assumes the unresolved transition-and-pole lower bound; no source error is
+confirmed. Next audit its uniform low-block estimate (R2) and edge Gram
+lower bound. Mori's
+unconditional test-vector upper bounds, including a Lean formalization of
+an upper estimate, do not supply the lower gap. PWPB-02's candidate-side
+estimate is a minor audit correction, not a standalone paper claim. The
+finite-truncation convergence and determinant boundary normalization
+remain open. See
 `research/CAMPAIGN-97.md`.
 
 The 2026-11-27 literature refresh also checked Connes's survey

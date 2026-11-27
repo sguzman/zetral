@@ -1002,3 +1002,20 @@ minor manual tail-correction/source-audit milestone, not a standalone paper
 result or novelty claim. PWPB-03 now audits the lower-ladder and Schur-block
 barriers for a noncircular route. See `research/CAMPAIGN-97.md` and
 `research/PAPER-PIPELINE.md`.
+
+## XCVII PWPB-03.1 — potential RH-strength prime-sum input (2026-11-27)
+
+Audited the first-prime main sum in §8.6 of arXiv:2611.13129v1. For
+`S(X)=sum_{p<=X} log(p)log(X/p)`, exact Stieltjes partial summation gives
+`S(X)=integral_2^X Theta(t)dt/t`. Its asserted square-root-scale error
+`S(X)=X+O(sqrt(X)log X)` would analytically continue
+`sum_p log(p)p^(-s)` into `Re(s)>1/2`; subtracting the normally convergent
+prime-power terms from `-zeta'/zeta` then excludes any zero there, hence
+implies RH. This is a manual implication, not a proof of RH. The source
+paragraph is exploratory rather than a proved lemma, so this is logged as a
+potential hidden RH-strength input, not a confirmed error. Source Eq. (7)
+confirms the prime-power definition, and Proposition 8.18 explicitly leaves
+the decisive Schur lower bound open; the estimate appears as strategy
+discussion, not a proved lemma used to claim RH. Prior-art comparison and
+any exact remainder audit remain open. Full derivation:
+`research/CAMPAIGN-97.md`.
