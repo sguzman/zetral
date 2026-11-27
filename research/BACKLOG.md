@@ -30,6 +30,18 @@ RHA-04's square/nonsquare majorant and zero-forces-large-theta-tail exponent con
 - **Acceptance:** Source-linked manual proof audit with assumptions and constants checked, or a precise counterexample/gap. No local full build.
 - **Verification:** Independent derivation of the central dimension estimate and adversarial checks of quantifiers and cutoff monotonicity.
 
+**Progress (2026-11-26):** RHA-06 confirms the linear-algebra reduction: `IsShort` has the required uniform p-adic, conjugate, and argument quantifiers; `span_isShort_eq_top` supplies source-space spanning at `exp(errorUnit)/4^f`; each of the `f` difference operators costs a factor 4 in squared norm; and their product has range exactly the ramified subspace. No counterexample was found under these hypotheses. This does not audit the generic short-lattice-basis/Hadamard estimate. Close RHA-06 at this scoped level.
+
+### LXXVII / RHA-07 — Audit short-basis construction and explicit constants
+
+- **Question / hypothesis:** Does `exists_short_basis_stdSpace`, together with the Weyl evaluation and Hadamard bounds, establish the uniform `shortBasisConst^(6M)` estimate for every free-level coset with the exact number-field and different hypotheses supplied by RHA-06?
+- **Prerequisites/evidence:** RHA-06; pinned `ShortColumns.lean` and its defining short-basis source; exact `Data P` scale assumptions. No local large build or dataset.
+- **Expected information gain:** Independently validate or delimit the core geometric input to the span theorem; this is the next key link from parameter bounds to enough forms.
+- **Design/falsification:** Trace the lattice covolume and basis existence statement, verify dependence on the different and rank, recompute the operator norm/determinant exponents in the Weyl bound, and probe low-rank and boundary cases. Attempt a bad-lattice counterexample if any basis hypothesis is omitted.
+- **Dependencies:** Pinned source and exact imported theorem statements; prior-art check before any novelty claim.
+- **Acceptance:** A source-linked derivation of the explicit constant and quantifiers, or a concrete missing hypothesis/counterexample. Clearly separate imported theorems from independently derived inequalities.
+- **Verification:** Independent arithmetic derivation; source theorem/version pin; no Lean verification claim without an exact-toolchain build and axiom audit.
+
 ## Priority order
 
 ### Current execution note — LXXVII proof-status pivot (2026-11-26)

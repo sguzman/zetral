@@ -326,8 +326,9 @@ Gaussian Mellin nonvanishing/compact minimum, and three-lines theorem. Those
 analytic lemmas and the Lean proof term were not independently re-proved or
 rechecked by a kernel build. The investigation is accepted at this scoped
 manual-audit level; it is not a complete independent verification of the
-formal proof. Next audit the parameter-dependent `HasLogBound` dominance,
-then pursue one geometric input to the main inequality.
+formal proof. RHA-05 subsequently audited the final parameter dominance, and
+RHA-06 audited the short-span to ramified-range reduction; the underlying
+short-basis estimate is the next geometric input.
 
 ## RHA-05 — Main-inequality parameter dominance
 
@@ -353,3 +354,51 @@ not audit the derivation of those scale facts from existence of admissible
 data. The dominant unresolved work is now geometric: audit one of the
 main-inequality inputs, beginning with the span/dimension statement
 `span_short_integralRamified_eq_top`.
+
+## RHA-06 — Short forms span the ramified source subspace
+
+**Question.** Does `span_isShort_ramifiedSourceForms_eq_top` produce a
+spanning family at cutoff `exp(errorUnit)`, under the source-space and
+ramification definitions used downstream?
+
+**Pinned evidence.** The readable source is pinned at
+[`lsernau/grh-lean@72fead102f663d5c7a407964a13dc0cf9d977207`,
+`ShortColumns.lean`](https://github.com/lsernau/grh-lean/blob/72fead102f663d5c7a407964a13dc0cf9d977207/grh/src/New/UpperBound/Size/ShortColumns.lean).
+`IsShort B` requires p-adic integrality at every prime and
+`weylNormSq (σ ∘ φ.val g) ≤ B` for every complex automorphism `σ` and every
+finite adelic argument `g` (lines 133–137). The bound is globally quantified,
+not only at the identity or for the un-conjugated form.
+
+**Independent source-level derivation.** The generic lemma
+`span_isShort_eq_top` spans `D.SourceForm` with short forms at
+`B=exp(errorUnit)/4^f` (lines 912–928). Its call supplies the free-level
+condition, conductor-in-different hypothesis, the box-count estimate
+`boxes ≤ f*a`, and the scalar inequality from `D.le_of_hasLogBound`. The
+generic proof reduces to delta forms on free-level cosets, constructs short
+lattice bases, and uses Weyl evaluation vectors; the full
+`exists_short_basis_stdSpace` derivation and Hadamard estimate remain
+unaudited.
+
+Each factor `(1-z_w)` maps a `B`-short form to a `4B`-short form. The squared
+norm estimate is the parallelogram inequality for the difference of the
+form and its translate; p-adic integrality is preserved because the
+translating scalar lies in the integral level. Iterating over `f` places
+gives `4^f B=exp(errorUnit)` (lines 894–906 and `card_piNPlaces=f`). The
+ramified subspace is exactly the range of the product `∏(1-z_w)` (lines
+686–705). Under `T^(N−1)=1` in characteristic zero, vanishing of the sum of
+the first `N−1` powers is equivalent to belonging to `range(1−T)`; the
+finite commuting family gives the range identity for the product. Thus the
+image of the spanning short source set spans the full ramified range, and
+the image map preserves the claimed cutoff. The final theorem packages these
+steps (lines 929–941).
+
+**Falsification and boundary.** A possible cutoff error would be to confuse
+norm with squared norm, which would alter the factor per place; the source's
+`IsShort` and parallelogram estimate both use squared norm, so the factor is
+`4`. The image-of-span step is valid because the image map is linear and the
+source set spans the whole source space. I found no counterexample to this
+reduction under its stated hypotheses. This remains a manual source audit,
+not a Lean build. The lattice-short-basis estimate, its number-field
+geometry, and admissible-data scale derivation are still outside the audit.
+RHA-06 is accepted only for the short-span-to-ramified-range reduction. Next
+inspect the short-basis existence lemma and explicit Hadamard constants.

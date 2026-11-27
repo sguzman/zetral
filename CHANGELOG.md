@@ -171,3 +171,12 @@ Campaign LVI closed (candidate): [corrected adaptive certificate](research/posit
 - [LXIII](research/CAMPAIGN-63.md): active, next target 2.39 below log(11).
 
 - [LXV](research/CAMPAIGN-65.md): [candidate h=2.41](research/positivity/PC04-241-100-crossing.md), both parities 41/41, independent stored audit. LXVI active at target 2.42; full independent original-form verification remains open.
+
+## LXXVII research audit checkpoint — RHA-06 (2026-11-26)
+
+Pinned-source audit of `span_isShort_ramifiedSourceForms_eq_top` verifies the
+short-span to ramified-range reduction and the squared-norm cutoff factor
+`4^f`, conditional on the generic short-basis spanning theorem. No
+counterexample was found in the reduction. The lattice-basis existence and
+Hadamard constant remain unaudited; see `research/CAMPAIGN-77.md` and
+`research/BACKLOG.md` for the exact scope and next question.
