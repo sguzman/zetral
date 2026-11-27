@@ -1,6 +1,6 @@
 # Campaign LXXXII — Liminf of Weil values on paired edge packets
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED within the structural criterion scope.
 
 ## Precise question
 
@@ -31,6 +31,16 @@ liminf is zero conditionally. This is an orbit-closure theorem, not evidence
 that the LI conjecture holds. See
 `research/positivity/B1-16-phase-orbit-liminf-criterion.md`. Lamzouri's
 effective LI is explicitly conjectural ([arXiv:2311.04860v2, §1](https://arxiv.org/html/2311.04860v2)); no exact nontrivial relation is currently used.
+
+## Closure and pivot
+
+The accepted structural result is B1-16's exact orbit-closure criterion,
+including its finite-relation test and tail bound. It yields a zero-liminf
+conditional on LI, but no unconditional determination of the actual liminf.
+The literature audit confirms LI is still formulated as a conjecture, so
+this route cannot presently decide exact phase compatibility. Close LXXXII
+at that scope and pivot to Campaign LXXXIII, the RH-equivalent endpoint dual
+criterion, in `research/CAMPAIGN-83.md`.
 
 ## First investigation
 

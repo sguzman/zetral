@@ -309,3 +309,24 @@ of the zero-ordinate flow. Any incompatible integer relation forces a
 positive liminf; Q-linear independence would imply zero liminf conditionally.
 No such independence or relation is claimed. The classical LI and Lamzouri's
 effective LI are conjectural inputs, not established facts.
+
+## LXXXII closure and LXXXIII activation (2026-11-27)
+
+LXXXII closed within the exact phase-orbit criterion scope; the actual zero
+relations remain unknown. LXXXIII opens a different RH-equivalent route:
+`research/positivity/B1-17-uniform-multiplier-rh-criterion.md` proves that
+uniform boundedness of the first-prime endpoint dual multiplier is
+equivalent to RH, and B1-18 gives an exponential growth lower bound from any
+off-line zero. These are project-specific Mellin/Laplace criteria related
+to established convolution methods, not a proof of RH or a novelty claim.
+See `research/CAMPAIGN-82-CLOSURE.md` and `research/CAMPAIGN-83.md`.
+
+## LXXXIII closure and LXXXIV activation (2026-11-27)
+
+LXXXIII's audit establishes the RH-equivalent uniform endpoint-multiplier
+criterion and matching exponential type `Theta−1/2`. The equality is a
+classical zero-abscissa consequence in this formulation; it does not prove RH
+or claim novelty. LXXXIV returns to Hilbert–Pólya construction and asks
+whether the derivative-sample obstruction survives every equivalent
+renorming of the existing Weil completion. See `research/CAMPAIGN-83.md` and
+`research/CAMPAIGN-84.md`.
