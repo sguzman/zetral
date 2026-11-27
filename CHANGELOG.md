@@ -547,3 +547,13 @@ primitive, sharpening the B5-12 rank-one endpoint average. This is a
 classical theorem application, not a novelty claim or global operator
 convergence result. See
 `research/operators/B5-13-regular-variation-endpoint-rate.md`.
+
+### LXXXVIII checkpoint — common Hardy-space Clark limit
+
+B5-14 combines the strong projection convergence from B5-05 with Clark's
+rank-one formula. After extending the Clark unitaries by `-I` on the
+complements, their Cayley self-adjoint operators converge in strong
+resolvent sense on one `H^2(D)`. The absence of spectral mass at infinity
+is checked from the linear Herglotz coefficient. This concerns the
+normalized scalar Clark models, not the original arithmetic Hamiltonians.
+See `research/operators/B5-14-clark-strong-resolvent-limit.md`.

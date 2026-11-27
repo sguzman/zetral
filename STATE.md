@@ -78,7 +78,17 @@ theorem application with manually checked hypotheses and constants, not a
 new asymptotic theorem or a global operator result. Full note:
 `research/operators/B5-13-regular-variation-endpoint-rate.md`. Next test
 whether the primitive rate and B5-11's double scaling constrain common-space
-tail convergence; endpoint asymptotics alone do not establish it.
+tail convergence; endpoint asymptotics alone do not establish it. B5-14
+then proves strong-resolvent convergence of the normalized Clark spectral
+operators in one `H²(D)`: strong model projection convergence and Clark's
+rank-one formula give strong convergence of unitary Cayley transforms, and
+the zero linear Herglotz coefficient excludes an atom at infinity. The
+operators are extended by zero on model-space complements. This does not
+identify Suzuki's original arithmetic Hamiltonians or the multiplicity-fiber
+operators from B3-12. Full note:
+`research/operators/B5-14-clark-strong-resolvent-limit.md`. Next test the
+same construction for the heat-flow family and compare their common endpoint
+limits. Do not infer a finite-parameter intertwiner from that shared limit.
 
 Date: 2026-11-27 UTC.
 Closed bounded campaign: LXXXV, Hermite de Branges spaces and Weil compression; see `research/CAMPAIGN-85.md`. B3-05 excludes direct use of Goncalves–Littmann's standard bounded-derivative higher-jet theorem on all zeta ordinates: its hypotheses force uniform node separation, while Selberg's odd-multiplicity count recalled by Heath-Brown gives `#(Gamma∩[0,T]) >= c T log T`. This does not rule out nonuniform interpolation or another completion. LXXXIV closed within stated scope: B3-04 proves derivative-sample unboundedness is invariant under equivalent renorming of the RH-conditional Weil completion, and identifies the new inverse-compression identity required by any genuinely different completion. Established Hermite interpolation in `H(E^2)` is relevant prior art but supplies no zeta-specific Weil compression. LXXXIII closed within stated scope: B1-17 derives `RH iff sup_h c_h<∞` by Laplace-transform pole detection; B1-18 and B1-19 identify the multiplier's exponential type with `Theta−1/2`, where `Theta=sup Re(rho)`. This is an RH-equivalent criterion and classical zero-abscissa mechanism, not an RH proof or novelty claim. LXXXII closed within structural scope: B1-16 gives the exact phase-orbit criterion for packet liminf; the actual value remains tied to unproved zero-ordinate relations. LXXX closed within scope: B1-12 proves `c_h=O_η(1)` uniformly under RH; B1-13 proves positive limsup; B1-14 bounds the fixed-profile full form. LXXXI closed within scope: B1-15 proves a nonzero zero-residue coefficient survives in the full direct form for a chosen profile, conditional on RH; Suzuki's spectral formula cross-checks it and gives nonnegativity under RH. No full-space coercivity follows. The contour and sampling derivations are manual and have not been machine-checked. Campaign LXXVIII's distinct-spectrum and derivative-sample audit is closed within scope in `research/CAMPAIGN-78-CLOSURE.md`; broader Hilbert–Pólya construction remains open.

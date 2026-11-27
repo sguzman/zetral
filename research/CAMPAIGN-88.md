@@ -216,3 +216,29 @@ Next investigate whether this endpoint primitive asymptotic, combined with
 the B5-11 double-scaling Weyl profile, can give a quantitative obstruction
 or criterion for common-space strong-resolvent convergence. Do not infer such
 convergence from endpoint asymptotics alone.
+
+## Checkpoint B5-14
+
+B5-05's natural Hardy-space model projections and Clark's rank-one formula
+give more than convergence of subspaces. For the normalized inner functions,
+the Clark unitaries at parameter `-1`, extended by `-I` on the orthogonal
+complements, converge strongly on one fixed `H^2(D)`. The kernel vectors and
+rank-one coefficients converge because the inner functions converge locally
+uniformly and their values at the disk origin stay inside the unit disk.
+The Herglotz linear coefficient is zero for every fixed shift and at the
+limit, so there is no Clark atom at spectral infinity. Cayley transformation
+and continuous functional calculus then give strong-resolvent convergence
+of the self-adjoint Clark operators, extended as zero on the complements.
+
+This is an RH-conditional common-Hardy-space limit for the normalized
+Clark spectral models. It is distinct from convergence of the original
+arithmetic Hamiltonians in `L^2(H_omega)` and from B3-12's
+multiplicity-augmented eigenbasis limit. The derivation and its domain and
+infinity checks are in
+`research/operators/B5-14-clark-strong-resolvent-limit.md`.
+
+Next apply the same construction to the RH-conditional heat-flow
+logarithmic-derivative family. Determine whether both deformations converge
+strongly to the same endpoint Clark operator after the natural Hardy
+embeddings, and keep this zeroth-order convergence separate from the
+B5-09/B5-10 finite-parameter obstructions.

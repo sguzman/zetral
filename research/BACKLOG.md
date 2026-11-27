@@ -284,6 +284,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B5-13):** The regular-variation theorem of Langer–Pruckner–Woracek, applied to `-1/m_0`, sharpens the rank-one endpoint limit under RH: the vanishing primitive satisfies `∫_0^x c(t)dt ~ 4x/log²(1/x)`, the dominant one satisfies `∫_0^x a(t)dt~x`, and the off-diagonal primitive is `o(x/log(1/x))`. This follows from its index-zero case, phase formula and trace constraint; the source and constants are audited in `research/operators/B5-13-regular-variation-endpoint-rate.md`. It does not imply strong-resolvent convergence. Next test whether these primitive asymptotics plus the double-scaled Weyl profile constrain common-space tail convergence.
 
+**Progress (2026-11-27, B5-14):** The normalized model-space projections, together with the explicit Clark rank-one unitary formula, yield strong-resolvent convergence on a fixed `H²(D)` after extending each Clark unitary by `-I` and its self-adjoint Cayley transform by zero on the orthogonal complement. The point at spectral infinity is excluded by the vanishing linear Herglotz coefficient. This is a natural Hardy-space realization of the scalar Clark models, not Suzuki's original arithmetic Hamiltonian or B3-12's multiplicity-fiber augmentation. Next test the same construction for heat flow and compare both endpoint limits. See `research/operators/B5-14-clark-strong-resolvent-limit.md`.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and
