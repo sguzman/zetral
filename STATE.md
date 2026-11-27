@@ -22,7 +22,18 @@ HP-03.4 shows the natural gauge graph form is closed and has trivial kernel
 inside its weighted L2 space, while the formal null vector `e^(-phi)` is
 excluded as nonintegrable. Its associated operator is the free Laplacian, not
 the zeta pair; pair symmetry still fails. Continue with zero-independent
-domains and nonlocal metrics.
+domains and nonlocal metrics. HP-03.5 gives a domain obstruction independent
+of the choice of positive H2 metric: if the pair identity is required on
+`k=e^(-phi)`, `Dk` and `D²k`, it forces `LDk=0`, whereas `LDk=phi''k` is
+nonzero. HP-03.6 proves every finite combination in the source's zero-generated
+span divided by `k` tends to zero at infinity, so this span does exclude
+`k,Dk,D²k` as literal functions. Its density, closure, and zero-independent
+completion remain unproved. HP-03.7 tests the nonlocal metric transported by
+the gauge similarity that makes the transformed differential expression
+self-adjoint: it cannot factor through `L` because it assigns positive norm to
+the constant gauge mode annihilated by `L`; quotienting that mode fails because
+the transformed operator does not preserve constants. Other nonlocal metrics
+remain open.
 Full records: `research/CAMPAIGN-94-CLOSURE.md` and
 `research/CAMPAIGN-95.md`.
 

@@ -786,3 +786,29 @@ Dirichlet form `||Dg||²` on `H¹(R)`, hence closed with associated operator
 `-d²/dx²`. Its kernel is trivial in the weighted L2 space because the formal
 kernel maps to a non-integrable constant. This clarifies the domain issue but
 does not realize the zeta pencil; pair symmetry still fails.
+
+## HP-03.5 — Kernel-vector test for pair domains (2026-11-27)
+
+For any faithful positive `H_2` metric, if the pair-symmetry identity is
+required on `k=e^(-phi)`, `Dk` and `D²k`, it forces `L Dk=0`, but direct
+calculation gives `L Dk=phi''k != 0`. A viable domain must exclude at least
+one of these vectors or modify the identity. Hedenmalm's zero-indexed finite
+span may exclude them; its density and closure are unresolved. This is a
+conditional domain obstruction, not a global no-go theorem.
+
+## HP-03.6 — Asymptotic exclusion from the zero-generated span (2026-11-27)
+
+For each Xi zero, the upper-tail representation of Hedenmalm's eigenfunction
+gives `|u_alpha/k| <= 1/(phi'(x)-|Im alpha|) -> 0` by eventual convexity of
+the theta potential. Hence every finite combination in `H_finite` has ratio
+to `k=e^(-phi)` tending to zero, unlike `k,Dk,D²k`. This confirms the literal
+span evades HP-03.5's domain test, but says nothing about its closure or
+density. Manual estimate; no novelty claim.
+
+## HP-03.7 — Failure of the gauge-similarity metric (2026-11-27)
+
+The metric transported by `g=e^phi u` makes `A=e^phi D e^(-phi)` formally
+self-adjoint, but cannot factor through `L` because the constant gauge mode
+has positive norm while `L` annihilates it. Quotienting constants does not
+help: `A1=i phi'` is not constant. This rejects one natural nonlocal
+construction, not all nonlocal metrics.

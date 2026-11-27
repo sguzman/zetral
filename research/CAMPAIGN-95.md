@@ -127,6 +127,81 @@ source's zero-defined `H_finite` and its null-vector discussion concern a
 different, not-yet-specified ambient domain. No spectral correspondence
 follows from this form calculation.
 
+## HP-03.5 — Kernel-vector domain obstruction for arbitrary positive metrics
+
+Let `k=e^(-phi)`, so `Lk=0`. Suppose `H_2` has a positive-definite inner
+product and the pair identity
+
+    <L D u,L v>_2 = <L u,L D v>_2
+
+is required for `u=k` and `v=Dk`, with `k,Dk,D²k` in the operator domain
+and the positive `H_2` realization faithfully representing nonzero functions.
+Then the identity gives
+
+    ||L Dk||_2² = <Lk,L D²k>_2 = 0.
+
+But direct calculation with `D=-i d/dx` and `L=D-i phi'` gives
+`Dk=i phi' k` and `L Dk=phi'' k`. The theta asymptotics imply
+`phi''` is not identically zero, so `L Dk` is a nonzero function, a
+contradiction. Thus no choice of positive (including nonlocal) `H_2` metric
+can satisfy the pair identity on a domain containing these three vectors.
+
+This is a domain obstruction, not a universal no-go: the source defines
+`H_finite` from zero-indexed eigenfunctions, and it is not known here whether
+that smaller space contains or approximates `k,Dk,D²k` in the relevant graph
+topology. Any construction that evades this lemma must make that domain
+exclusion explicit and still establish density, closability and full spectral
+correspondence. The argument is an exact manual calculation; no Lean proof
+was used.
+
+## HP-03.6 — The zero-generated span evades the pointwise kernel test
+
+For a zero `Xi(alpha)=0`, the source's formula in `x=log t` is
+
+    u_alpha(x)=e^(-i alpha x) integral_(-infinity)^x e^(i alpha y)k(y)dy.
+
+Using the full Mellin integral `Xi(alpha)=0` rewrites this as the negative
+upper tail. Hence
+
+    u_alpha(x)/k(x)
+      = - integral_0^infinity e^(i alpha r)
+             exp(-(phi(x+r)-phi(x))) dr.
+
+The theta asymptotics imply `phi''(x)>0` eventually and `phi'(x)->infinity`.
+For `alpha` fixed, convexity and `|e^(i alpha r)|<=e^(|Im alpha|r)` give,
+for large `x`,
+
+    |u_alpha(x)/k(x)| <= 1/(phi'(x)-|Im alpha|) -> 0.
+
+Every finite linear combination in `H_finite` therefore has ratio to `k`
+tending to zero. Meanwhile `k/k=1`, `(Dk)/k=i phi'` is unbounded, and
+`(D²k)/k=phi''-phi'^2` is unbounded. Thus none of the three vectors used in
+HP-03.5 lies in the literal finite span. This makes the domain escape real,
+not merely hypothetical, and explains why HP-03.5 does not directly rule out
+Hedenmalm's proposed restricted identity.
+
+It does not show `H_finite` is dense, closed, or a core in any zero-independent
+Hilbert space, nor that its completion retains the pair identity. Those are
+the next tests. This is a source-based manual estimate, not a novelty claim.
+
+## HP-03.7 — The similarity metric does not factor through `L`
+
+In the gauge variable `g=e^phi u`, the differential part is
+`A=e^phi D e^(-phi)`. The transported metric
+`||g||_M²=integral e^(-2phi)|g|² dx` makes `A` formally equivalent to the
+self-adjoint `D`. But Hedenmalm's first form must factor through `Lu`, which
+becomes `Dg`; it therefore annihilates constants. The transported metric does
+not: the constant function has finite, strictly positive `M`-norm because
+`e^(-2phi)` is integrable. Thus it cannot be written as
+`<Dg,Dh>_(H_2)` on a domain containing constants.
+
+Subtracting the rank-one projection onto constants produces a semidefinite
+quotient form, but `A1=i phi'` is nonconstant, so `A` does not descend to that
+quotient. This natural similarity-based nonlocal candidate therefore fails
+the required factorization/domain invariance. It is another restricted
+negative result, not a no-go for every nonlocal metric or for the source's
+zero-defined space.
+
 ## Falsification and next designs
 
 1. Independently re-derive the boundary-value/zero correspondence, including
@@ -144,10 +219,14 @@ follows from this form calculation.
 4. Clarify the boundary problem's multiplicity notion and whether a
    self-adjoint realization can match analytic zero multiplicity without
    assuming simplicity.
-5. Seek a Mellin/Fourier or de Branges representation in which the pair
+5. **HP-03.5–.7:** the literal finite span excludes the kernel test vectors
+   pointwise, while the simple transported similarity metric fails to factor
+   through `L`. Determine whether that zero-defined domain is dense and can
+   be completed with a closable pair in a zero-independent topology.
+6. Seek a Mellin/Fourier or de Branges representation in which the pair
    identity becomes an explicit positive kernel identity. Check whether its
    construction imports the zero set or RH.
-6. Search prior literature on weighted dilation operators, Sturm–Liouville
+7. Search prior literature on weighted dilation operators, Sturm–Liouville
    pencils, generalized self-adjoint operator pairs and the exact theta
    kernel before any novelty statement.
 
