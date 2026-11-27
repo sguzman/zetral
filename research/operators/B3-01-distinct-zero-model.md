@@ -112,13 +112,54 @@ conditional local-to-global compression are imported from the pinned source,
 not independently rebuilt here. No novelty claim, Lean check, or numerical
 experiment is made.
 
+## B3-03 — Derivative samples are unbounded in the existing Weil norm
+
+The simplest derivative-enriched repair is ruled out by the project's
+existing kernel asymptotic. Fix a distinct ordinate `γ`. On the local space
+`H_a`, the derivative evaluation
+
+    L'_γ(f) = d/dz [integral f(x) exp(izx) dx] at z=γ
+
+has Riesz vector given (up to the source's conjugate-parameter convention) by
+the derivative of the evaluation vector `u_z` at `γ`. Consequently its local
+functional norm is `||u'_γ||_q`. K02's vector-valued Cauchy estimate gives
+
+    u'_γ/M_a = Δ'(γ)e_a + o(1) in H_a,
+
+where `e_a` is unit and `Δ'(γ)≠0`, because `Δ` has a simple zero at every
+distinct ordinate. L02 gives `M_a→∞`. Hence
+
+    ||L'_γ||_(H_a*)/M_a -> |Δ'(γ)| > 0,
+
+so the norms of this same derivative-evaluation functional on the nested
+local test spaces tend to infinity.
+
+Each local space embeds isometrically into `H_W`, and on compact tests the
+derivative value is independent of the containing interval. If `L'_γ`
+extended to a bounded functional on `H_W`, its restrictions to all these
+local subspaces would have norm at most `||L'_γ||_(H_W*)`, contradicting the
+divergence above. Thus the derivative sample at any fixed `γ` is not a
+continuous coordinate on the existing Weil completion. Adding it with any
+fixed nonzero coefficient, or adding a fixed linear combination with the
+already bounded value sample, remains unbounded. A unitary sampling map into
+a multiplicity fiber therefore cannot use ordinary derivative values while
+retaining the existing Weil norm.
+
+This does **not** rule out a different normed completion, an unbounded
+sampling operator with a specified domain, or a renormalized construction
+with a new local-to-global theorem. The exact K02 asymptotic is conditional
+on RH and Suzuki's imported characteristic limit; no new numerical or formal
+verification was run. The deduction was checked from the stored vector
+kernel estimate and Riesz representation, not by treating numerical kernel
+data as proof.
+
 ## Next precise question
 
-Are derivative/Hermite data at repeated ordinates continuous in the Weil
-completion norm and compatible with local Riesz evaluation? The source's
-scalar sample isometry and one-vector-per-ordinate basis rule out mere
-coordinate-weight changes or fiber replication. A genuine derivative-enriched
-space would need a new isometry and a revised local inverse-compression
-identity. Test continuity first; absent a counterexample or positive bound,
-leave that repair unresolved. Keep the distinct-set correspondence as a valid
-conditional result.
+Can a different completion or unbounded sampling operator encode analytic
+multiplicity while preserving a meaningful local-to-global spectral
+identity? The source's scalar sample isometry and one-vector-per-ordinate
+basis rule out mere coordinate-weight changes or fiber replication, and
+B3-03 rules out ordinary derivative coordinates with the unchanged Weil
+norm. Any new candidate must specify its norm, domain, self-adjoint operator,
+and compression relation before it can count as a repair. Keep the
+distinct-set correspondence as a valid conditional result.

@@ -26,13 +26,25 @@ same scalar sample cannot be onto; its image in each fiber is at most a line.
 This rules out weight changes and naive coordinate replication as a repair,
 but not genuinely new derivative data.
 
+**B3-03:** The stored K02 vector-kernel asymptotic and L02 growth bound imply
+that derivative evaluation at each fixed ordinate has local Riesz norm
+asymptotic to `M_a |Δ'(γ)|`, hence diverges. Since local embeddings are
+isometric and the derivative on compact tests is window-independent, it has
+no bounded extension to the existing global Weil completion. This rules out
+ordinary derivative values as continuous coordinates in a multiplicity
+fiber with the unchanged Weil norm. It does not rule out a new completion or
+an unbounded sampling map with a stated domain. Details and dependencies are
+in `research/operators/B3-01-distinct-zero-model.md`.
+
 ## Next milestone
 
-Test whether derivative/Hermite data at repeated ordinates are continuous in
-the Weil completion norm and compatible with local Riesz evaluation. State
-the conditions for a revised unitary sampling map and prove or refute its
-compatibility with local inverse compression. Do not infer zero simplicity,
-RH, or novelty.
+The ordinary first derivative coordinate is ruled out for the unchanged
+Weil norm. Next investigate whether a renormalized jet space or another
+operator-theoretic construction can encode multiplicity while preserving an
+explicit local-to-global identity. If that requires a genuinely different
+Hilbert norm, state it as a new candidate and first verify positivity,
+completeness, and compatibility with the localized Weil form. Do not infer
+zero simplicity, RH, or novelty.
 
 ## Acceptance and integrity
 
