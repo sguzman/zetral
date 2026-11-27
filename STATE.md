@@ -1,45 +1,45 @@
 # Research state
 
-## Current investigation checkpoint — XCV / HP-03 (2026-11-27)
+## Current investigation checkpoint — XCVI / MHS-02 (2026-11-27)
 
-Campaign XCIV/HP-02 is closed within its audit scope: the fixed-low Schur
-criterion and estimates are recorded, and the available fixed-pair/coarse
-count bounds do not imply moving-block transfer. No arithmetic spectral
-correspondence was proved. Active Campaign XCV/HP-03 audits Hedenmalm's new
-theta differential pencil, arXiv:2606.17494v1. Its boundary-value equation
-encodes the Xi zeros, but the required sesquilinear self-adjoint structure is
-not constructed. HP-03.1 shows the most direct gauge-weighted L2 space fails
-formal symmetry on compactly supported smooth functions; this does not refute
-the identity on the source's smaller, zero-dependent eigenfunction span.
-HP-03.2 extends the formal obstruction to every positive smooth local density
-`rho(x) dx` on that common test core: symmetry forces `rho` constant and then
-requires `phi'^2-phi''` constant, contradicted by the theta asymptotics. This
-does not exclude nonlocal metrics or a smaller zero-defined domain. Next
-HP-03.3 observes that the boundary problem has only a one-dimensional
-solution space at each zero, independent of its analytic multiplicity; the
-source itself notes this as weak evidence toward simplicity, not proof.
-HP-03.4 shows the natural gauge graph form is closed and has trivial kernel
-inside its weighted L2 space, while the formal null vector `e^(-phi)` is
-excluded as nonintegrable. Its associated operator is the free Laplacian, not
-the zeta pair; pair symmetry still fails. Continue with zero-independent
-domains and nonlocal metrics. HP-03.5 gives a domain obstruction independent
-of the choice of positive H2 metric: if the pair identity is required on
-`k=e^(-phi)`, `Dk` and `D²k`, it forces `LDk=0`, whereas `LDk=phi''k` is
-nonzero. HP-03.6 proves every finite combination in the source's zero-generated
-span divided by `k` tends to zero at infinity, so this span does exclude
-`k,Dk,D²k` as literal functions. Its density, closure, and zero-independent
-completion remain unproved. HP-03.7 tests the nonlocal metric transported by
-the gauge similarity that makes the transformed differential expression
-self-adjoint: it cannot factor through `L` because it assigns positive norm to
-the constant gauge mode annihilated by `L`; quotienting that mode fails because
-the transformed operator does not preserve constants. Other nonlocal metrics
-remain open.
-Full records: `research/CAMPAIGN-94-CLOSURE.md` and
-`research/CAMPAIGN-95.md`. Write-up candidates and milestone-level draft
-readiness for HP-03.1–.7 are catalogued in `research/PAPER-PIPELINE.md`;
-HP-03.2 is the strongest theorem-shaped candidate, subject to independent
-operator/domain audit and prior-art review. No manuscript or formal proof is
-claimed.
+Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
+spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
+tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
+common compact core for the direct gauge space and every positive smooth local
+weight. HP-03.3 identifies the geometric-multiplicity limitation; HP-03.4
+identifies the natural graph form with the free Laplacian; HP-03.5–.6 give a
+conditional kernel-vector obstruction and show the source's literal
+zero-generated span evades it pointwise; HP-03.7 rejects the simple
+similarity-transported metric; and HP-03.8 shows its natural similarity
+expression is essentially self-adjoint on the compact core, so no self-adjoint
+core-preserving boundary correction can add the theta solutions as point
+eigenvectors. These manual results do not rule out other metrics or domains,
+and do not prove a global no-go. Density and closure of Hedenmalm's
+zero-defined span remain open. HP-03.2 is the strongest paper-shaped
+candidate, pending independent audit and prior-art review. Full closure and
+milestone records:
+`research/CAMPAIGN-95-CLOSURE.md`, `research/CAMPAIGN-95.md`, and
+`research/PAPER-PIPELINE.md`.
+
+Active Campaign XCVI/MHS-02 follows a completed MHS-01 source audit. Meyer
+defines `H^0_- = H_- / Z H_cap`, states it is nuclear Fréchet, and gives the
+zero spectrum for its induced generator; the transpose on the continuous dual
+has a separate zero-eigenvalue statement. The infinite-dimensional original
+quotient topology cannot be induced by a Hilbert norm: nuclearity would make
+the Banach identity compact, impossible in infinite dimension. This rules out
+only an equivalent Hilbert topology on `H^0_-`, not weaker completions or the
+dual. MHS-02.1 derives that the natural quotient completion inherited from
+Meyer's additive `L²(dx)` test space collapses: under Mellin-Plancherel, `Z`
+on `H_cap` is the critical-line zeta multiplier, and a constrained compact
+test core remains graph-dense, giving dense range. This is a scoped manual
+result without formal or second-person audit; it rules out only this
+particular completion. Next test alternative natural weights and their
+spectral content. Full record: `research/CAMPAIGN-96.md`.
+
+The 2026-11-27 literature scan included Hedenmalm's theta pencil, Kim et al.'s
+Suzuki-operator numerics, Liu's degree-two local pencils, and Meyer's
+Fréchet-space model; no new unconditional Hilbert–Pólya operator was
+identified. This scan is not comprehensive.
 
 LXXXVI closed within the conditional shifted-xi endpoint scope. Positive-shift
 operators have a noncanonical strong-resolvent limit after ordered-eigenbasis

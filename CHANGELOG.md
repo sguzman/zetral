@@ -812,3 +812,65 @@ self-adjoint, but cannot factor through `L` because the constant gauge mode
 has positive norm while `L` annihilates it. Quotienting constants does not
 help: `A1=i phi'` is not constant. This rejects one natural nonlocal
 construction, not all nonlocal metrics.
+
+## HP-03.8 — Core-preserving self-adjoint obstruction (2026-11-27)
+
+In gauge variables the theta equation is `D(A+alpha)g=0`, and the normalized
+source solution satisfies `(A+alpha)g=-i`, with `g->0` at `+infinity`.
+Homogenizing this affine relation suggests a rank-one correction driven by
+`ell(g)=i lim_{x->+infinity}Ag(x)`, which equals 1 on those normalized
+solutions. In the natural similarity metric, multiplication by `e^(-phi)`
+conjugates `A` to `D`; hence `A` on `C_c^infinity` is essentially
+self-adjoint. Any self-adjoint operator on that Hilbert space extending the
+same core action must equal its unique closure, which is unitarily equivalent
+to `D` and has no point spectrum. Thus no boundary correction preserving
+that core action can add theta-zero eigenvectors. The result does not cover
+different metrics or domains that do not extend this core. Manual derivation;
+no formal or independent external audit. A separate algebra pass rederived
+the local-weight defect, kernel-vector identity and gauge conjugation without
+finding a sign error; theta derivative asymptotics and complex endpoint
+hypotheses were not independently reproved.
+
+Literature radar (2026-11-27) recorded Kim et al. arXiv:2607.24830 on
+finite-element numerics for Suzuki's Weil-form operator, Liu arXiv:2605.17645
+on degree-two local pencils with an explicit obstruction to descent to zeta,
+and Meyer arXiv:math/0412277 on a nuclear Fréchet-space spectral model.
+These sources motivate comparisons but do not provide the positive Hilbert
+realization sought by HP-03. Their full claims have not been independently
+audited; no novelty conclusion is drawn.
+
+## Campaign XCV closure and XCVI activation (2026-11-27)
+
+Closed XCV within the explicitly tested classes: positive smooth local
+weights on the common core, the natural gauge graph form, the simple
+similarity metric, and self-adjoint corrections preserving its essentially
+self-adjoint compact core. No global nonexistence theorem or theta Hilbert
+operator was obtained. Full scope and open alternatives are in
+`research/CAMPAIGN-95-CLOSURE.md`. Opened XCVI/MHS-01 to test the original
+nuclear Fréchet topology in Meyer's spectral interpretation for compatible
+Hilbertizability, then examine weaker completions without conflating them
+with the original topology. Plan: `research/CAMPAIGN-96.md`.
+
+## MHS-01 — Original Fréchet topology is not Hilbertizable (2026-11-27)
+
+Source audit of Meyer's quotient and dual distinguishes the induced generator
+on `H^0_-` from the transpose on its continuous dual. The original space is
+stated to be nuclear Fréchet and has infinitely many zero spectral values, so
+it is infinite-dimensional. A compatible Hilbert topology would make it a
+nuclear Banach space; its identity would be compact, contradicting
+infinite-dimensionality. This is a standard topological obstruction, not a
+no-go for weaker Hilbert completions or a new RH result. MHS-02 will test
+whether a natural weaker completion preserves any spectrum.
+
+## MHS-02.1 — Natural additive `L²` quotient candidate collapses (2026-11-27)
+
+Under the unitary logarithmic/Mellin transform from `L²(dx)` to `L²(dy)`,
+Meyer's zeta operator on `H_cap` becomes multiplication by
+`zeta(1/2+i tau)`. A compactly supported log-coordinate test core subject to
+the single moment condition `Ff(0)=0` (with `f(0)=0` automatic for these
+supported tests) remains graph-dense by a remote, small-norm bump correction.
+The critical-line multiplier has dense range, so
+the quotient `H_-/Z H_cap` carries the zero seminorm inherited from this
+particular `L²(dx)` norm. The range claim was also checked through the adjoint
+kernel. This is a manual candidate pending full graph-domain and source
+review, not a general Hilbert-space no-go or RH result.

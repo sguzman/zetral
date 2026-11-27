@@ -1,6 +1,9 @@
 # Campaign XCV — Theta differential pencil and sesquilinear realization
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED WITHIN THE TESTED REALIZATION CLASSES.
+
+Closure note: `research/CAMPAIGN-95-CLOSURE.md`. This closure does not assert
+a global no-go or resolve the remaining nonlocal/domain questions.
 
 ## Precise question
 
@@ -21,6 +24,33 @@ the critical strip. It then explicitly leaves the construction of a suitable
 sesquilinear structure open. Its `H_finite` is defined as the finite span of
 functions indexed by the zeros themselves; consequently that space is
 zero-dependent as currently formulated.
+
+### Literature radar (checked 2026-11-27)
+
+- Kim et al., [arXiv:2607.24830](https://arxiv.org/abs/2607.24830), posted
+  2026-07-23, report finite-element computations for Suzuki's Weil-form
+  operator and explicitly say the work does not prove RH. It appears relevant
+  to the repository's Suzuki/Weil positivity campaigns and numerical
+  reproducibility; it does not address the present theta-pair domain problem.
+  Treat its numerical and operator claims as preprint claims pending a
+  separate source/derivation audit.
+- Liu, [arXiv:2605.17645](https://arxiv.org/abs/2605.17645), posted
+  2026-05-17, studies local degree-two Euler-factor pencils on a branched
+  spectral curve; its abstract expressly records an obstruction to descent
+  to zeta. This is not a global self-adjoint zeta operator, but is relevant
+  background for distinguishing local L-factor models from a global
+  Hilbert–Pólya correspondence.
+- Meyer, [arXiv:math/0412277](https://arxiv.org/abs/math/0412277), constructs
+  a nuclear Fréchet-space operator whose spectrum encodes the nontrivial
+  zeros with algebraic multiplicity. This predates the current campaign and
+  is a necessary comparison for broad “spectral interpretation” claims; its
+  topological-vector-space setting is distinct from the positive Hilbert
+  self-adjoint realization sought here.
+
+This scan found no result that supplies the missing positive Hilbert-space
+realization for Hedenmalm's pair. A manuscript literature review still needs
+the full sources, references and versions checked; this short scan is not a
+novelty assessment.
 
 The proposed `L_phi` is gauge-conjugate to dilation differentiation. In
 logarithmic coordinate `x=log t`, put `D=-i d/dx` and
@@ -202,6 +232,68 @@ the required factorization/domain invariance. It is another restricted
 negative result, not a no-go for every nonlocal metric or for the source's
 zero-defined space.
 
+## HP-03.8 — No core-preserving self-adjoint correction on the natural metric
+
+The gauge variable gives a precise affine form of the theta eigenproblem.
+With `g=e^phi u` and `A=e^phi D e^(-phi)=D+i phi'`, one has
+
+    U L u = Dg,             U L D u = DAg.
+
+Thus the source equation `L(Du+alpha u)=0` becomes
+`D(A+alpha)g=0`. For the source's normalized integral solution,
+direct differentiation gives `(A+alpha)g=-i`; HP-03.6 gives
+`g(x)->0` as `x->+infinity`. Hence `Ag->-i` there. A tempting homogeneous
+operator correction is
+
+    T g = A g + i ell(g) 1,       ell(g) = i lim_(x->+infinity) A g(x),
+
+because `ell(g_alpha)=1` would imply `T g_alpha=-alpha g_alpha`. This is
+only a formal eigenvector identity: it does not establish that `ell` is
+defined on a dense domain, that `1` belongs to the chosen Hilbert space, or
+that `T` is symmetric or self-adjoint.
+
+There is a stronger obstruction for the natural similarity metric
+`M=L²(e^(-2phi) dx)`. Multiplication by `e^(-phi)` is unitary from `M` to
+`L²(dx)` and conjugates `A` to `D`; it maps `C_c^infinity(R)` onto itself.
+Since `D|C_c^infinity(R)` is essentially self-adjoint, so is this restriction
+of `A`, and its unique self-adjoint closure is unitarily equivalent to `D`.
+Under Fourier transform, `D` is multiplication by the real frequency `xi`;
+an eigenfunction would have Fourier support in the singleton `{lambda}`, a
+null set, and hence must vanish in `L²`. Thus the closure has no point
+spectrum.
+For every compactly supported test function, the proposed boundary correction
+vanishes, so any self-adjoint `T` on `M` that contains this test core and
+agrees there with `A` must equal that unique closure. But `D` on the line has
+no point spectrum. Therefore no such `T` can have any normalized theta
+solution in its domain as an eigenvector. In particular the displayed
+rank-one boundary correction cannot turn this core into a self-adjoint
+operator with the desired Xi-zero eigenvectors.
+
+Equivalently, the proposed trace `ell` vanishes on the operator core. A
+graph-continuous extension to the full domain of `A` must vanish everywhere,
+so it cannot equal 1 on a normalized theta solution. This continuity argument
+is weaker than essential self-adjointness but also diagnoses the failure of
+the proposed correction. The no-go is restricted to the same Hilbert metric
+and a self-adjoint operator extending this core action. A construction that
+changes the Hilbert metric or excludes/modifies this core is not covered; nor
+is it established here that the theta solutions belong to the natural domain.
+
+The derivation is manual. It uses the source's boundary equation and standard
+unitary-conjugation/core facts; no formal proof or independent external audit
+has been completed.
+
+### Scoped algebra recheck (2026-11-27)
+
+A separate derivation of the common-core local-weight calculation gives
+`B=D-iq`, `A=D+i s'`, and `C=B*B=D²+q²-q'`; the symmetry defect is
+`A*C-CA=-i((q²-q')'+s'C+Cs')`. Its `D²` coefficient is `-2i s'`, matching
+HP-03.2's forced constant density. Direct differentiation also reproduces
+`Dk=i phi' k` and `LDk=phi''k`, and the gauge conjugation in HP-03.8 sends
+`A` to `D`. No sign error was found in these algebraic steps. This recheck
+does not independently verify differentiated theta asymptotics, Hedenmalm's
+complex endpoint theorem, or the relevant source-domain hypotheses; it is
+not a second-person or machine-checked audit.
+
 ## Falsification and next designs
 
 1. Independently re-derive the boundary-value/zero correspondence, including
@@ -223,10 +315,15 @@ zero-defined space.
    pointwise, while the simple transported similarity metric fails to factor
    through `L`. Determine whether that zero-defined domain is dense and can
    be completed with a closable pair in a zero-independent topology.
-6. Seek a Mellin/Fourier or de Branges representation in which the pair
+6. **HP-03.8:** the natural similarity expression is essentially
+   self-adjoint on the compact core, so no different self-adjoint extension
+   on that metric can realize the theta eigenfunctions while preserving the
+   core action. Test genuinely different metrics or a domain not extending
+   that core, while proving density and preventing extraneous spectrum.
+7. Seek a Mellin/Fourier or de Branges representation in which the pair
    identity becomes an explicit positive kernel identity. Check whether its
    construction imports the zero set or RH.
-7. Search prior literature on weighted dilation operators, Sturm–Liouville
+8. Search prior literature on weighted dilation operators, Sturm–Liouville
    pencils, generalized self-adjoint operator pairs and the exact theta
    kernel before any novelty statement.
 
