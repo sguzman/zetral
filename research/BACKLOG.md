@@ -27,11 +27,12 @@ triangle/absolute-mass estimates cannot be uniform. Along `h=2 pi m`, `n=m`,
 the normalized sine component has absolute limit `1/2`; automatic phase
 cancellation fails. See `research/positivity/B1-01-theta-cutoff-scope.md`.
 The compact-frequency endpoint expansion is now proved uniformly for
-`|alpha|<=A` by partial summation and the PNT. The absolute-mass substitution
-in the current `g(n)` guard forces `n>2h exp(c exp(h/2))`; it is
-double-exponential and not computationally viable. Improve the prime bound
-using endpoint cancellation, propagate through `n^(-p)/g(n)` and rank
-allocation, and control `alpha>A` before requesting hosted compute.
+`|alpha|<=A`. The current `g(n)` guard has double-exponential cutoff under
+absolute mass, and an endpoint test proves the prime component norm itself
+grows at least `c_L exp(h/2)`. Thus a prime-only uniform bound is impossible;
+the next mathematical route must combine the prime, archimedean and pole
+operators before estimating. Derive a joint factorization or coercivity
+inequality and test for counterexamples before requesting hosted compute.
 
 ### B1 — Analytical extension beyond finite cutoffs
 
@@ -50,10 +51,10 @@ allocation, and control `alpha>A` before requesting hosted compute.
   not the full map. A first scope audit established that the theta-cardinal
   estimate in `research/theta-cardinal-bound.md` cannot directly supply this
   inequality. Absolute coefficient summation grows like `2 exp(h/2)`, while
-  selected phases remain endpoint-coherent. Naive mass in the inherited
-  `g(n)` guard gives a double-exponential mode cutoff. Continue with a
-  sharper endpoint-aware prime bound; preserve the full original-form mapping
-  as an explicit dependency.
+  selected phases remain endpoint-coherent; the prime component norm itself
+  grows at least `c_L exp(h/2)`. Continue with a joint estimate retaining
+  cancellation against the archimedean and pole components; preserve the full
+  original-form mapping as an explicit dependency.
 - **Design / falsification:** Isolate the exact residual after the finite
   low-mode and prime-power terms. Seek a sign theorem, monotone envelope, or
   summable majorant uniform in the endpoint. Test the proposed bound against

@@ -200,3 +200,47 @@ spectrum and does not preclude a substantially sharper prime cancellation
 bound or a different decomposition. The next campaign step must improve
 `P(h)` before attempting any large hosted generation. A finite sample at
 larger `h` cannot change this asymptotic limitation.
+
+## B1-05: the prime shift operator norm itself grows
+
+The preceding growth is not only a weakness of the triangle inequality. In
+log coordinates on `L^2(0,h)`, write the positive symmetrized shift operator
+as
+
+    P_h = sum_{p^k<exp(h)} b_{p^k}(T_{log(p^k)}+T^*_{log(p^k)}),
+    b_{p^k}=log(p)/p^(k/2),
+
+up to the fixed positive normalization in the Weil form. Here each `T_s` is
+translation by `s` with zero extension outside `(0,h)`. Fix `L>0`, take
+`h>2L`, and use the unit vector
+
+    f_h=(2L)^(-1/2) (1_[0,L] + 1_[h-L,h]).
+
+For a prime `p` with `v=log(exp(h)/p)` in `(0,L)`, the overlap of the left
+and right edge intervals under translation by `s=log p=h-v` has length `v`.
+Therefore
+`<f_h,(T_s+T_s^*)f_h>=v/L`. All other prime and prime-power expectations
+are nonnegative because `f_h` is nonnegative, so retaining only these primes
+gives a lower bound for `<f_h,P_h f_h>`.
+
+The PNT, uniformly on `[exp(h-L),exp(h)]`, yields
+
+    sum_{exp(h-L)<p<exp(h)} log(p)/sqrt(p) * (h-log(p))/L
+      ~ exp(h/2) * c_L,
+    c_L = (1/L) integral_0^L v exp(-v/2) dv
+        = (4/L)(1-(1+L/2)exp(-L/2)) > 0.
+
+Hence `||P_h|| >= c_L exp(h/2)(1+o(1))` (times the fixed Weil
+normalization). For `L=1`, `c_L` is about `0.3608`. This proves that the
+prime shift component itself has unbounded norm; no cancellation among its
+positive shift coefficients can make a uniform operator-norm bound possible.
+
+The negative prime contribution to the full Weil operator may still be
+offset by the archimedean and pole terms on the same vectors. Thus this is
+not a negative direction for the full form and does not refute RH. It does
+show that any approach which separates the prime component and bounds it
+uniformly before combining it with the archimedean contribution cannot
+succeed. The remaining route must prove a joint cancellation or coercivity
+inequality for the combined operator, not merely improve a scalar prime
+majorant. This updates B1-04 from an absolute-mass limitation to a structural
+component-growth obstruction.
