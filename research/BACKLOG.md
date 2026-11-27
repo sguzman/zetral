@@ -358,6 +358,8 @@ Campaign file: `research/CAMPAIGN-93.md`.
 - **Acceptance:** A source-audited zero-independent relative transfer estimate strong enough for a spectral limit, or a rigorous obstruction under explicit hypotheses and a materially different follow-up route. Numerical resemblance to known zeros is not spectral correspondence.
 - **Verification:** Independent pencil algebra audit and countermodel; primary-source comparison; exact arithmetic or hosted computation only when it tests a stated finite bound. Any limiting theorem must prove self-adjointness, full spectrum, multiplicities, and absence of spectral pollution.
 
+**Progress (2026-11-27, HP-01.1):** Independently translated the paper's fixed-index tail estimate to the `2N`-dimensional reference eigenbasis. The whitened operator norm requires uniform control of each tail entry divided by the square roots of the two reference metric weights, with a dimension factor; the source's fixed-`z,w` constants and possible small sine/interpolation factors do not supply this. A two-dimensional positive-metric countermodel shows why unwhitened norm convergence is insufficient, but does not model or refute the actual zeta matrices. Next quantify simultaneous resonance avoidance and the remaining interpolation-weight lower bound, then attempt a prime-side compressed estimate.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

@@ -654,3 +654,12 @@ see `research/CAMPAIGN-93.md`. The literature check also refreshed the
 external Lean proof status: the original and condensed proof versions now
 have separately reported completed machine-check suites, but Zetral did not
 replay either artifact. See `literature/rh-2026-verification.md`.
+
+HP-01.1 independently rewrites the finite-zero tail control in the
+reference-metric eigenbasis. The fixed-index `O_(z,w)` estimate does not give
+the uniform normalized entries needed for the growing-dimensional relative
+operator norm; explicit metric weights introduce resonance and conditioning
+factors. A 2x2 example rules out inferring relative convergence from
+unwhitened operator-norm convergence alone. This identifies the first
+quantitative bottleneck, not an obstruction to the arithmetic construction.
+See `research/operators/HP01-relative-tail-metric-audit.md`.

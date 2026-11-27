@@ -105,8 +105,21 @@ whitened norm is `1/sqrt(epsilon_n)`. This is a logical countermodel to that
 shortcut, not a model of zeta matrices and not an obstruction to the paper's
 stronger target.
 
-The next milestone is an independent derivation of the paper's finite
-quotient algebra and exact zero-tail matrix elements, followed by an attempt
-to bound the normalized tail without using zeros. No computation is needed
-for the 2-by-2 countermodel. Source review is manual; no claim of independent
-reproduction of the paper's numerical experiment is made.
+HP-01.1 independently translates the fixed-index tail estimate into the
+normalized reference eigenbasis. The `2N`-dimensional whitened norm is at
+most `2N` times the largest tail entry divided by the square roots of the
+corresponding reference weights, plus separately controlled shift terms.
+The paper's `O_(z,w)` estimate for fixed spectral points does not provide
+uniform constants for moving indices, and the explicit weights can be small
+near sine resonance or when the interpolation derivative is small. Thus the
+estimate does not establish the relative transfer theorem. This matches the
+paper's stated gap; it is an independent scope audit, not a counterexample
+to the actual zeta matrices.
+
+The next milestone is to inspect whether simultaneous sine-resonance
+avoidance can be obtained for a controlled `N,L` coupling and then determine
+what lower bound is needed for the interpolation derivatives / small metric
+directions. In parallel, attempt a prime-side compressed-form estimate that
+does not decompose through zero ordinates. No numerical computation is
+needed at this stage. Source review is manual; the paper's arithmetic
+numerical experiment has not been independently reproduced.
