@@ -351,3 +351,46 @@ standard de Branges route, not all nonuniform jet sampling. Doubling-phase
 de Branges theory supports nonuniform value sampling, but supplies no
 higher-jet Weil bridge. See
 `research/operators/B3-05-separation-obstruction-to-zeta-hermite-sampling.md`.
+
+### LXXXV checkpoint — doubling-phase density and multiplicity audit
+
+`research/operators/B3-06-doubling-phase-density-gap.md` checks the exact
+Marzo–Nitzan–Olsen value-sampling hypotheses. A logarithmic phase weight has
+the right centered density scale, but the theorem needs uniform translated
+interval densities, while Riemann–von Mangoldt counts multiplicity and the
+candidate nodes are distinct. Under RH plus simplicity the centered density
+is at the critical threshold, outside the strict sufficient direction. This
+does not disprove actual sampling; it leaves higher jets and Weil compression
+unresolved. This was followed by a canonical-system audit of multiplicities and the arithmetic
+compression gap.
+
+## LXXXV closure and LXXXVI activation (2026-11-27)
+
+LXXXV closed within the bounded direct Hermite-sampling/Weil-compression
+investigation; this does not rule out all nonuniform jet spaces. The
+canonical-system audit found established shifted-xi operators for positive
+shifts, while direct substitution at the critical endpoint degenerates to a
+real-entire function. LXXXVI now asks whether a renormalized operator limit
+exists and whether it can be linked to the arithmetic Weil form. See
+`research/CAMPAIGN-85-CLOSURE.md`, `research/operators/B3-07-shifted-xi-canonical-system-endpoint.md`,
+and `research/CAMPAIGN-86.md`.
+
+### LXXXVI checkpoint — B3-08 model-space limit (2026-11-27)
+
+Under RH, the shifted-xi inner functions converge locally uniformly to `1`,
+so the corresponding model-space projections in common `H^2(C+)` converge
+strongly to zero. The kernels scaled by `1/omega`, however, converge to an
+explicit positive-semidefinite kernel involving `xi'/xi`. This supplies a
+candidate renormalized RKHS; no operator convergence or arithmetic
+compression is established. See
+`research/operators/B3-08-model-space-collapse-and-rescaled-kernel.md`.
+
+### LXXXVI checkpoint — B3-09 zero-measure operator model (2026-11-27)
+
+Under RH, the even Hadamard product identifies the rescaled kernel with a
+Cauchy-transform RKHS for the signed zero-counting measure, with analytic
+multiplicities as atom weights. Real-coordinate multiplication is
+self-adjoint and has the distinct signed ordinates as simple eigenvalues.
+This is a zero-defined conditional model, not an RH proof; the arithmetic
+Weil compression remains unproved. See
+`research/operators/B3-09-nevanlinna-kernel-and-zero-measure.md`.

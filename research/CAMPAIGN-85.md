@@ -1,6 +1,6 @@
 # Campaign LXXXV — Hermite de Branges spaces and Weil compression
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED WITHIN SCOPE (2026-11-27).
 
 ## Precise question
 
@@ -73,3 +73,15 @@ extension survives without uniform Euclidean separation.
   on RH or on the canonical product.
 - **Verification:** Independent theorem-hypothesis audit and operator-domain
   review. No expensive local computation. No claim of RH or zero multiplicity.
+
+## Checkpoint B3-06: doubling-phase value sampling is not yet a zeta bridge
+
+`research/operators/B3-06-doubling-phase-density-gap.md` audits the exact
+Marzo–Nitzan–Olsen density conditions. The natural comparison weight
+`phi'(t)=1/2 log(2+|t|)` is doubling and matches the centered zero-counting
+scale at density `1/pi`, but Riemann–von Mangoldt counts multiplicity while
+the proposed nodes are distinct, and centered counts do not control the
+uniform densities over translated intervals. Even assuming RH and simple
+zeros, the density is at the theorem's critical threshold, not its strict
+sufficient range. No failure of sampling is proved. This route audit led to
+the separate shifted-xi canonical-system investigation in Campaign LXXXVI.

@@ -197,7 +197,7 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B3-04 / LXXXIV closure):** If two norms on the compact-test union are equivalent with constants `a,b`, every dual norm changes by at most factors `1/a,1/b`; boundedness is invariant. Since B3-03's fixed derivative sample has local norms diverging like `M_a|Delta'(gamma)|` and the local spaces embed isometrically, it is unbounded globally and under every equivalent renorming. Suzuki's compression identity explicitly uses those isometric embeddings. Goncalves' established `H(E^2)` Hermite interpolation shows changed spaces can carry jets, but provides no zeta-specific compression. See `research/operators/B3-04-equivalent-renorming-obstruction.md`.
 
-### LXXXV — Hermite de Branges spaces and Weil compression (active)
+### LXXXV — Hermite de Branges spaces and Weil compression (closed within scope)
 
 - **Question / hypothesis:** Can the derivative interpolation theorem for `H(E^2)` be instantiated at zeta ordinates with a compatible local Weil norm and inverse-compression identity?
 - **Prerequisites:** B3-04/B3-05; Goncalves Theorem 1/Corollary 2; Goncalves–Littmann, arXiv:1510.08383, Theorem 2; Selberg–Heath-Brown distinct critical-line count; Suzuki, arXiv:2610.32704v1, Theorem 3.3; exact xi and distinct-zero-product normalization.
@@ -206,7 +206,26 @@ a finite positive block into a lower bound for the full form. See
 - **Dependencies/acceptance:** Require RH assumptions explicitly. Accept only a fully specified space, sampling theorem, local arithmetic forms and proved compression, or a source-based obstruction for this candidate. A formal derivative interpolation theorem alone is insufficient.
 - **Verification:** Independent theorem-hypothesis and operator-domain audit; no expensive computation or zero-multiplicity claim.
 
-**Progress (2026-11-27, B3-05):** Goncalves–Littmann's higher-order Hermite theorem requires `E'/E` bounded and a positive phase derivative at each node; its proof obtains uniform node separation. Selberg's odd-multiplicity count, recalled in Heath-Brown (1993), gives `cT log T` distinct critical-line ordinates. Thus the full zeta node set cannot satisfy those theorem hypotheses. Marzo–Nitzan–Olsen provide doubling-phase density theory for value sampling, but not higher jets or Weil compression. Weighted/nonuniform jet routes remain open; see `research/operators/B3-05-separation-obstruction-to-zeta-hermite-sampling.md`.
+**Progress (2026-11-27, B3-05):** Goncalves–Littmann's higher-order Hermite theorem requires `E'/E` bounded and a positive phase derivative at each node; its proof obtains uniform node separation. Selberg's odd-multiplicity count, recalled in Heath-Brown (1993), gives `cT log T` distinct critical-line ordinates. Thus the full zeta node set cannot satisfy those theorem hypotheses. See `research/operators/B3-05-separation-obstruction-to-zeta-hermite-sampling.md`.
+
+**Progress (2026-11-27, B3-06):** Marzo–Nitzan–Olsen's doubling-phase theorem concerns values and uses uniform densities over all translated intervals. The natural phase weight `phi'=1/2 log(2+|t|)` is doubling and has centered multiplicity-counted density `1/pi` under RH, exactly at the sampling threshold. Riemann–von Mangoldt does not transfer this to distinct ordinates or uniform density; with RH and simplicity, the strict sufficient threshold still cannot be reached from the centered ratio. This is a limitation of available inference, not a counterexample to sampling. Higher jets and the Weil compression identity remain absent. See `research/operators/B3-06-doubling-phase-density-gap.md`.
+
+**Closure / pivot (2026-11-27):** The bounded direct Hermite-sampling/Weil-compression bridge is closed within scope. Standard bounded-derivative jets fail the zeta-node separation hypothesis; nonuniform doubling-phase theory covers values only and its uniform density criteria are not established for distinct zeta nodes; equivalent renorming cannot repair the derivative functional. No impossibility of other jet spaces is claimed. Closure: `research/CAMPAIGN-85-CLOSURE.md`.
+
+### LXXXVI — Critical limit of shifted-xi canonical systems (active)
+
+- **Question / hypothesis:** Can the positive-shift de Branges/canonical-system family `E^omega(z)=xi(1/2+omega-iz)` have a nontrivial operator/resolvent limit as `omega->0+`, with spectral correspondence to xi zeros under RH and an arithmetic Weil-compression identity?
+- **Prerequisites:** B3-07; Suzuki, RIMS Kôkyûroku Bessatsu B34 (2012), Proposition 1.2, Theorem 2.3, §§1.1–1.2; Zetral's local arithmetic forms and compression theorem.
+- **Information gain:** A proved limit plus arithmetic bridge supplies a serious Hilbert–Pólya route; a precise endpoint degeneration obstruction removes this direct continuation strategy.
+- **Design/falsification:** Pin the Hamiltonian formulas and parameter ranges. Define common-space maps; test resolvent/kernel/spectral-measure convergence and independently separate it from local uniform convergence of characteristic functions. Require domains, multiplicities and exact compression.
+- **Acceptance:** Prove nontrivial operator convergence in a stated topology, spectral correspondence and arithmetic identity, or prove a precise obstruction to the canonical endpoint limit. A zero-set limit alone is insufficient.
+- **Verification:** Independent source and operator-domain audit; no expensive local computation.
+
+**Progress (2026-11-27, B3-07):** Suzuki's shifted-xi construction is established prior art: `E^omega` is Hermite–Biehler for `omega>=1/2` unconditionally and for `0<omega<1/2` under RH's sufficient condition; its extensions realize zeros of shifted `A^omega,B^omega`. At `omega=0`, `E^0=E^0#` and `Theta_0=1`, so direct substitution yields no strict de Branges space. This does not preclude a renormalized limit. Common-space convergence and arithmetic compression remain open. See `research/operators/B3-07-shifted-xi-canonical-system-endpoint.md`.
+
+**Progress (2026-11-27, B3-08):** Under RH, `Theta_omega -> 1` locally uniformly; the orthogonal projections onto the model spaces `K(Theta_omega)` in the shared `H^2(C+)` converge strongly to zero. Yet the reproducing kernels divided by `omega` converge locally uniformly to an explicit positive-semidefinite kernel formed from `xi'/xi`. This identifies a candidate renormalized RKHS while leaving operator convergence and arithmetic compression open. See `research/operators/B3-08-model-space-collapse-and-rescaled-kernel.md`.
+
+**Progress (2026-11-27, B3-09):** The even Hadamard product identifies the B3-08 kernel exactly as the Herglotz Cauchy-transform kernel of the signed zero-counting measure `mu=sum m_gamma(delta_gamma+delta_-gamma)`. Its RKHS is the Cauchy-transform image of `L^2(mu)`; real-coordinate multiplication is self-adjoint with spectrum the distinct signed ordinates. This is conditional on RH and defines the operator using xi's zeros. Multiplicities are atom weights, not eigenspace dimensions. Next test whether an arithmetic Weil compression map exists and attempt a norm mismatch. See `research/operators/B3-09-nevanlinna-kernel-and-zero-measure.md`.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 
