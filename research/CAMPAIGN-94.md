@@ -124,6 +124,20 @@ ordinate-dependent zero-side basis to analyze the arithmetic matrices; it
 does not bound any moving low/high block or high-block inverse. Full proof:
 `research/operators/HP02-fixed-low-pencil-corner.md`.
 
+## Moving-block checkpoint — HP-02.5
+
+The weighted Schur criterion now identifies sufficient moving-block targets:
+uniform relative high-block coercivity and vanishing two-sided weighted
+low/high coupling. In the RH-conditioned positive zero-tail coordinates,
+Cauchy–Schwarz reduces the latter to explicit sums `T_1` and `T_2` (full
+formula and assumptions in `research/operators/HP02-moving-block-schur-target.md`).
+The scalar ground-state shift has an additional moving-row term not covered by
+HP-02.4's fixed-row cancellation. Available source estimates are fixed-pair
+only and do not bound these targets. No zeta obstruction or spectral transfer
+is established. Next investigate whether arithmetic-side formulas can bound
+the weighted blocks independently of zero ordinates; if not, pivot to a
+qualitatively different operator construction while retaining this criterion.
+
 ## Dependencies and acceptance
 
 - Primary source arXiv:2609.04908 v12, especially §§4.9 and 5.

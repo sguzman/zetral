@@ -721,3 +721,11 @@ Schur route: after whitening, the low tail-metric entries retain division by
 the two low metric weights. This does not control those denominators,
 moving high blocks, or the `Delta K` coupling and remains RH-conditioned.
 No Prime–Weil low-window transfer theorem is established.
+# HP-02.5 — Moving-block Schur targets (2026-11-27)
+
+Derived a weighted high-block invertibility criterion and reduced positive-tail
+low/high coupling to two explicit moving-index sums. Identified a separate
+moving-row estimate for the scalar shift. The source's fixed-pair estimates do
+not supply these bounds, so the result is a conditional criterion only. Paper
+potential: supporting appendix lemma; not an operator construction or
+standalone novelty claim. See `research/operators/HP02-moving-block-schur-target.md`.
