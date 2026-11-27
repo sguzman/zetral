@@ -268,6 +268,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B5-05):** Under RH, the positive normalization `B^omega/omega` preserves the HB property and gives a nontrivial common-`H^2` limit of model spaces, with strongly convergent orthogonal projections. The limit inner function is the Cayley transform of the Lagarias function; the model kernel is an explicit gauge transform of its Pick kernel. This does not prove operator or resolvent convergence. See `research/operators/B5-05-normalized-debranges-pair-limit.md`.
 
+**Progress (2026-11-27, B5-06):** The positive atomic Herglotz measure of `q_omega=B^omega/(omega A^omega)` converges vaguely by local contour integrals to `sum m_r delta_r`, the xi zero divisor. At a limiting multiple zero, this proves convergence of total cluster mass, not a canonical distribution among shifted eigenvectors. It is not strong-resolvent convergence. See `research/operators/B5-06-h-root-measure-cluster-limit.md`.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

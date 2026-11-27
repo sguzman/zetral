@@ -99,6 +99,16 @@ not a resolvent/operator limit; the limiting kernels are related by an
 explicit gauge and are not identical. See
 `research/operators/B5-05-normalized-debranges-pair-limit.md`.
 
+## Checkpoint B5-06
+
+For the Herglotz quotients `q_omega=B^omega/(omega A^omega)`, the positive
+residue masses in each cluster around a zero of `F` converge to that zero's
+analytic multiplicity. A contour integral of `q_omega` gives the total mass
+without resolving how it splits among shifted simple roots. This proves
+vague convergence of the positive atomic Herglotz measures to the B3-09
+zero-divisor measure under RH; it does not prove strong-resolvent
+convergence. See `research/operators/B5-06-h-root-measure-cluster-limit.md`.
+
 Next investigate a canonical-system intertwiner independently of the scalar
 Fourier multiplier and distinguish any possible operator relation from
 equality of zero sets.

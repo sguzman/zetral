@@ -467,3 +467,11 @@ a Cayley transform of the Lagarias Pick function. This establishes no
 operator resolvent convergence. The de Branges and model-space kernels have
 different normalizations related by an explicit gauge. See
 `research/operators/B5-05-normalized-debranges-pair-limit.md`.
+
+### LXXXVIII checkpoint — Herglotz measure limit
+
+B5-06 proves under RH that the positive atomic Herglotz measures of
+`B^omega/(omega A^omega)` converge vaguely to the xi zero-divisor measure.
+Local contour integrals show the total mass near a limiting zero tends to
+its analytic multiplicity. No strong-resolvent conclusion follows. See
+`research/operators/B5-06-h-root-measure-cluster-limit.md`.
