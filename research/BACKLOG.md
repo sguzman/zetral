@@ -266,6 +266,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B5-04):** For a hypothetical order-four zero, shift and heat perturbations have different leading scaled root polynomials on `delta=omega*x`, with explicit four-root clusters certified locally by Rouché. This demonstrates the multiple-zero gap in the simple-root argument but does not claim that xi has a multiple zero. See `research/operators/B5-04-multiple-zero-splitting.md`.
 
+**Progress (2026-11-27, B5-05):** Under RH, the positive normalization `B^omega/omega` preserves the HB property and gives a nontrivial common-`H^2` limit of model spaces, with strongly convergent orthogonal projections. The limit inner function is the Cayley transform of the Lagarias function; the model kernel is an explicit gauge transform of its Pick kernel. This does not prove operator or resolvent convergence. See `research/operators/B5-05-normalized-debranges-pair-limit.md`.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

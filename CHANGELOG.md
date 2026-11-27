@@ -457,3 +457,13 @@ B5-04 analyzes an order-four zero in a general analytic function. Under the
 different quartic polynomials with explicit simple real roots; Rouché gives
 the nearby local root clusters. This is conditional and does not assert a
 multiple xi zero. See `research/operators/B5-04-multiple-zero-splitting.md`.
+
+### LXXXVIII checkpoint — normalized de Branges limit
+
+B5-05 rescales Suzuki's imaginary component by `1/omega`. Under RH this
+preserves the HB property and gives a nonzero common-`H^2` model-space limit;
+the orthogonal projections converge strongly. The limiting inner function is
+a Cayley transform of the Lagarias Pick function. This establishes no
+operator resolvent convergence. The de Branges and model-space kernels have
+different normalizations related by an explicit gauge. See
+`research/operators/B5-05-normalized-debranges-pair-limit.md`.

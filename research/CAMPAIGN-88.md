@@ -88,6 +88,17 @@ simple-zero expansion cannot cover the multiple-zero case by continuity.
 It is conditional on multiplicity four and says nothing about whether xi has
 such a zero. See `research/operators/B5-04-multiple-zero-splitting.md`.
 
+## Checkpoint B5-05
+
+Under RH, replacing Suzuki's `B^omega` by `B^omega/omega` preserves the
+Hermite-Biehler property and yields `E_tilde^omega -> F+iF'`. The normalized
+inner functions converge locally to a Cayley transform of the Lagarias
+Pick function. Their model-space projections in a common `H^2(C+)` converge
+strongly to the nonzero limit model space. This is a natural subspace limit,
+not a resolvent/operator limit; the limiting kernels are related by an
+explicit gauge and are not identical. See
+`research/operators/B5-05-normalized-debranges-pair-limit.md`.
+
 Next investigate a canonical-system intertwiner independently of the scalar
 Fourier multiplier and distinguish any possible operator relation from
 equality of zero sets.
