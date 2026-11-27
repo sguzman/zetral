@@ -747,3 +747,25 @@ forcing an inverse metric weight, hence the moving sum, arbitrarily large.
 This rules out deriving the needed bound from those coarse inputs alone. It
 does not model actual zeta gaps. See the HP-02.7 section in
 `research/operators/HP02-moving-block-schur-target.md`.
+
+## Campaign XCIV closure and XCV activation (2026-11-27)
+
+Closed XCIV within the audit scope: the available fixed-pair and coarse-count
+estimates do not imply moving-block Schur transfer. The arithmetic operator
+problem remains open. Opened XCV to audit Hedenmalm's theta differential
+pencil (arXiv:2606.17494v1). HP-03.1 shows its natural gauge-weighted L2
+realization fails the formal pair-symmetry identity on compactly supported
+smooth functions. This does not settle the paper's identity on its smaller
+zero-dependent eigenfunction span or exclude other inner products. Details:
+`research/CAMPAIGN-94-CLOSURE.md` and `research/CAMPAIGN-95.md`.
+
+## HP-03.2 — Local-weight formal-symmetry obstruction (2026-11-27)
+
+For a general positive smooth local density `rho(x) dx`, unitary conjugation
+reduces the pair symmetry condition to a differential identity whose second-
+order coefficient forces `rho` to be constant. The remaining condition
+requires `phi'^2-phi''` constant, contradicted by the theta kernel's
+large-argument asymptotics. This is a no-go only on the common compactly
+supported smooth core; the zero-defined finite span and nonlocal metrics are
+untested. Manual derivation; independent audit pending. Full details in
+`research/CAMPAIGN-95.md`.

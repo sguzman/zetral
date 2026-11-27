@@ -362,14 +362,25 @@ Campaign file: `research/CAMPAIGN-93.md`.
 
 Campaign closure: `research/CAMPAIGN-93-CLOSURE.md`. Full arithmetic transfer remains open; Campaign XCIII only establishes what the currently cited fixed-index/uncompressed estimates fail to supply.
 
-### XCIV / HP-02 — Fixed-low-spectrum Schur transfer (active)
+### XCV / HP-03 — Theta differential pencil and sesquilinear realization (active)
+
+Campaign file: `research/CAMPAIGN-95.md`.
+
+- **Question:** Does Hedenmalm's theta-based generalized differential eigenproblem admit a positive, zero-independent Hilbert-space realization with complete spectrum and rigorous self-adjointness?
+- **Evidence (HP-03.1–.2):** Hedenmalm, arXiv:2606.17494v1 §§2.2–4.2 characterizes Xi zeros by a theta-kernel boundary-value pencil, then explicitly leaves the appropriate inner product unresolved. Its finite span is currently indexed by zeros. The gauge-weighted space fails formal symmetry; the general local-density calculation shows any positive smooth local weight on the common `C_c^infinity` core must be constant and then satisfy a false theta-potential ODE.
+- **Design / falsification:** Analyze boundary forms on domains smaller than `C_c^infinity`, the quotient by `ker L`, and nonlocal Mellin/Fourier or de Branges metrics. Check whether any candidate core is zero-independent and whether the induced seminorm is closable. Do not extend the local-weight no-go to these untested classes.
+- **Information gain:** Either obtain an actual self-adjoint spectral model or sharply identify why the tempting weighted-dilation realization does not supply one.
+- **Acceptance:** A densely defined positive/closable realization with exact zero correspondence, multiplicity, completeness and no extra spectrum, or a rigorous no-go for a stated class of weights. No RH/novelty claim from an eigenvalue encoding alone.
+- **Verification:** Independent operator algebra, domain and boundary audit, targeted prior art; Lean only for algebraic identities after analytic domains are settled.
+
+### XCIV / HP-02 — Fixed-low-spectrum Schur transfer (closed within audit scope)
 
 Campaign file: `research/CAMPAIGN-94.md`.
 
 - **Question:** Can fixed low generalized eigenvalues be transferred using a stable high-block resolvent and vanishing Schur correction, without the global relative-norm target?
 - **Progress (HP-02.1–.7):** Exact Schur reduction and a 2x2 coupling countermodel establish the weighted low/high condition. The zero-independent random-offset schedule gives almost-sure sine separation and super-exponential growth for each fixed-low metric weight; the RH-conditioned tail then vanishes on each fixed low corner. HP-02.5 states moving-block coercivity and tail targets; HP-02.6 reduces the scalar-shift row to `(epsilon ||e||^2)^2/g_k` times `Σ_(l>m)1/(g_l|gamma_l|)`. HP-02.7 shows count growth plus sine separation alone cannot bound this sum: sparse abstract close pairs preserve coarse `T log T` growth while degenerating the interpolation derivative. This is not a claim about zeta gaps. Zeta-specific derivative control or a basis-invariant aggregate estimate remains open; no spectral transfer or operator construction is established. Details are in the three `HP02-*` operator notes.
 - **Write-up tracking:** `research/PAPER-PIPELINE.md` records manuscript candidates, their scope and outstanding independent audits/prior-art checks; HP-02.3 is supporting lemma material, not a standalone paper result.
-- **Next:** Extend the positive-tail and shift estimates to a fixed-low/moving-high block, and bound the high-block inverse or identify a countermodel to the available bounds. Any transfer theorem still needs prime-side estimates independent of RH and the ordinate basis.
+- **Closure / next direction:** Within the audit scope, the cited fixed-pair and coarse-count estimates fail to imply the required moving-block hypotheses; HP-02.7 gives a generic count-preserving close-pair obstruction, not a zeta counterexample. Arithmetic transfer remains open. Continue via the distinct theta-pencil campaign XCV/HP-03, and retain a possible future pivot to basis-invariant aggregate bounds.
 - **Acceptance:** A verified low-spectrum transfer estimate for the arithmetic pencils, or a precise obstruction to deriving the required block bounds from current explicit-formula estimates. A general Schur criterion alone does not close the campaign.
 
 ### B2 — RH-only coercivity and exceptional-set limits

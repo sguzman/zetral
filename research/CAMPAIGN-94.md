@@ -1,6 +1,7 @@
 # Campaign XCIV — Fixed-low-spectrum transfer by Schur complements
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED within bounded audit scope; arithmetic
+spectral transfer remains unresolved. Closure: `research/CAMPAIGN-94-CLOSURE.md`.
 
 ## Precise question
 

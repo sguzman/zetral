@@ -1,6 +1,24 @@
 # Research state
 
-## Current investigation checkpoint — XCIV / HP-02 (2026-11-27)
+## Current investigation checkpoint — XCV / HP-03 (2026-11-27)
+
+Campaign XCIV/HP-02 is closed within its audit scope: the fixed-low Schur
+criterion and estimates are recorded, and the available fixed-pair/coarse
+count bounds do not imply moving-block transfer. No arithmetic spectral
+correspondence was proved. Active Campaign XCV/HP-03 audits Hedenmalm's new
+theta differential pencil, arXiv:2606.17494v1. Its boundary-value equation
+encodes the Xi zeros, but the required sesquilinear self-adjoint structure is
+not constructed. HP-03.1 shows the most direct gauge-weighted L2 space fails
+formal symmetry on compactly supported smooth functions; this does not refute
+the identity on the source's smaller, zero-dependent eigenfunction span.
+HP-03.2 extends the formal obstruction to every positive smooth local density
+`rho(x) dx` on that common test core: symmetry forces `rho` constant and then
+requires `phi'^2-phi''` constant, contradicted by the theta asymptotics. This
+does not exclude nonlocal metrics or a smaller zero-defined domain. Next
+analyze the kernel quotient and whether any zero-independent core supports a
+closable pair.
+Full records: `research/CAMPAIGN-94-CLOSURE.md` and
+`research/CAMPAIGN-95.md`.
 
 LXXXVI closed within the conditional shifted-xi endpoint scope. Positive-shift
 operators have a noncanonical strong-resolvent limit after ordered-eigenbasis
@@ -171,6 +189,8 @@ the shift term is controlled by an exact cancellation in
 `research/operators/HP02-fixed-low-pencil-corner.md`. Current manuscript
 triage, including these supporting lemmas and the repository's larger
 candidate results, is tracked in `research/PAPER-PIPELINE.md`.
+
+## Previous checkpoint — Campaign XCIV / HP-02
 
 HP-02.5 sharpens the Schur route: a weighted high-block coercivity bound and
 vanishing weighted low/high coupling suffice for fixed-window root transfer;
