@@ -23,6 +23,17 @@ The spectral space is topological-vector-space based, not a positive Hilbert
 space. The exact role of zero dependence in any subsequent Hilbert completion
 is an open part of this campaign.
 
+Source conventions checked against v3 (2013): §2 defines `H_cap` as the
+**even** Schwartz functions with `f(0)=Ff(0)=0` (equation (11) and the line
+following the Poisson formula); Theorem 3.3 states `Zf in H_-` iff
+`f in H_cap`; equation (13) gives the Mellin multiplier identity initially
+for `Re(s)>1` on `S_>`; and equation (14) plus the preceding analytic
+continuation gives the corresponding entire identity for `f in H_cap`.
+Using equation (13) alone on arbitrary Mellin lines would be unjustified.
+Meyer §2 defines `H_-` as the intersection of the multiplicative Schwartz
+spaces for all real weights, supplying the endpoint decay used in the
+weighted Hilbert inclusions here.
+
 ## MHS-01 — Compatible Hilbert topology obstruction (complete)
 
 ### Question
@@ -89,7 +100,8 @@ hand-checked; no Lean proof or independent external audit was used.
 Let `V:L²((0,infinity),dx)->L²(R,dy)` be the unitary
 `(Vf)(y)=e^(y/2)f(e^y)`. Its Fourier transform is the Mellin transform of
 `f` on the line `s=1/2+i tau`. For `f` in Meyer's
-`H_cap={f in S(R): f(0)=Ff(0)=0}`, the source's Poisson-summation theorem
+`H_cap={f in S(R): f is even, f(0)=Ff(0)=0}`, the source's
+Poisson-summation theorem
 gives `Zf in H_-`, and analytic continuation of its Mellin identity yields
 
     F V(Zf)(tau) = zeta(1/2+i tau) F V(f)(tau).
@@ -239,11 +251,176 @@ receive a separate audit before external use. It extends the collapse result
 to the previously exceptional pole weight; it remains a statement only about
 this induced family of Hilbert quotient norms.
 
+## MHS-02.4 — Log-Sobolev completions also have zero quotient (manual audit)
+
+For fixed `sigma` and integer `k>=0`, put
+
+    H_(sigma,k) = {f : V_sigma f in H^k(R)},
+    ||f||_(sigma,k) = ||V_sigma f||_(H^k),
+
+where `V_sigma f(y)=e^(sigma y)f(e^y)`. This is a Hilbert norm on a dense
+completion of the multiplicative test space, with `H_(sigma,0)=H_sigma`.
+Every Meyer `H_-` function belongs to all these spaces because it is rapidly
+decreasing with all multiplicative derivatives at both endpoints. The
+compact log-coordinate tests used above belong to `H_cap`, and their zeta
+images belong to `H_(sigma,k)` because their Fourier transforms are Schwartz
+and `zeta(sigma+i tau)` has polynomial growth.
+
+For `sigma!=1`, let `T_sigma g=F^{-1}(m_sigma Fg)` on compactly supported
+`g` satisfying `Lambda_sigma(g)=integral e^((1-sigma)y)g(y)dy=0`. Suppose
+`h in H^k` is orthogonal to all such `T_sigma g` in the `H^k` inner product.
+The functional
+
+    S(g) = <h,T_sigma g>_(H^k)
+
+extends to a tempered distribution: in Fourier coordinates its pairing is
+bounded by `||h||_(H^k)` times a Schwartz seminorm of `g`, since `m_sigma`
+has polynomial growth. It annihilates the kernel of the nonzero functional
+`Lambda_sigma` on `C_c^infinity`, so `S=c Lambda_sigma` for a scalar `c`.
+Writing `a=1-sigma`, the latter is the distribution `c e^(a y)`. If
+`sigma!=1`, this exponential is not tempered unless `c=0`; hence `S=0`.
+On every open interval where `m_sigma` is nonzero, the Fourier identity for
+`S=0` implies `Fh=0`. The zeros of the nonzero analytic function
+`zeta(sigma+i tau)` are discrete, so `h=0` in `H^k`. Thus the range is dense
+in `H_(sigma,k)` for every fixed non-pole `sigma` and finite integer `k`.
+
+For `sigma=1`, the same orthogonal-complement argument applies after using
+the mean-zero graph core from MHS-02.3 in the stronger norm
+
+    ||g||_(H^k) + ||m_1 Fg||_(H^k).
+
+The cutoff tail `r_R` tends to zero in every fixed Sobolev norm. The broad
+correction `delta_R psi_L`, with `L=|delta_R|^(-1)` when `delta_R!=0`, tends
+to zero in each such norm by scaling. Near `tau=0`, the pole term is
+controlled by
+`|F r_R(tau)+delta_R| <= epsilon_R |tau|` and
+`||delta_R(F psi(L tau)-1)/tau||_2=C|delta_R|sqrt(L)`; the extra Sobolev
+weight is bounded there. For `|tau|>=1`, the cutoff tail tends to zero in
+every fixed polynomially weighted Fourier norm. For the broad correction,
+scaling gives `||delta_R (1+|tau|)^N Fpsi(L tau)||_2=
+O(|delta_R|/sqrt(L))` for every fixed `N` and `L>=1`; on `|tau|>=1`, the
+additional factor `1/tau` is harmless and the Schwartz tail of `Fpsi` only
+improves the bound. This controls both the pole term and the
+polynomial-growth regular part `b`. This proves the needed graph-core
+approximation for each fixed finite `k`. Orthogonality then extends to
+Fourier tests supported away from zero, forcing `Fh=0` off the singleton
+`{0}`; an `L²` function supported on one point is zero. Hence the pole-line
+range is dense as well.
+
+Consequently the quotient seminorm inherited from every `H_(sigma,k)` is
+zero for finite integer `k>=0` and real `sigma`; this includes the pole line.
+This is a wider negative result for the simple Sobolev-strengthened Mellin
+norms, not for arbitrary Hilbert norms or completions. The non-pole
+orthogonal-complement argument and pole-line scaling estimates were rederived
+in this audit batch; this remains a hand-checked derivation, not a formal
+proof or an independent external review. No novelty claim is made.
+
+## MHS-02.5 — Polynomially moderate Mellin densities (generalization)
+
+The same obstruction extends beyond the Sobolev weights. Let `w` be a
+measurable function satisfying, almost everywhere, for some `N>=0` and
+constants `0<c<=C<infinity`,
+
+    c(1+tau^2)^(-N) <= w(tau) <= C(1+tau^2)^N.
+
+Use the Hilbert norm
+
+    ||f||_(sigma,w)^2 = integral_R w(tau) |F(V_sigma f)(tau)|^2 d tau.
+
+The Schwartz class is dense in `L²(w d tau)` under these two-sided
+polynomial bounds, and all `H_-` Mellin transforms belong to it. For
+`sigma!=1`, if `h` is orthogonal to `Z H_cap`, then
+
+    S(g)=integral_R w(tau) conjugate(Fh(tau))
+                         zeta(sigma+i tau) Fg(tau) d tau
+
+annihilates all compactly supported `g` with
+`integral e^((1-sigma)y)g(y)dy=0`. The upper bound on `w`, the polynomial
+growth of zeta on this non-pole line, and `h in L²(w)` make `S` a tempered
+distribution. The annihilator of the kernel of that one moment functional
+is its scalar span, represented by `e^((1-sigma)y)`. Since this is not
+tempered for `sigma!=1`, `S=0`. Locally `w` is bounded above and below, so
+the Fourier-side identity and nonvanishing of zeta almost everywhere imply
+`h=0` almost everywhere. Thus the range is dense.
+
+For `sigma=1`, choose an integer Sobolev order `k>=N`. The mean-zero
+compact-test graph core proved in MHS-02.3–.4 converges in
+`||g||_(H^k)+||m_1 Fg||_(H^k)`, which dominates the corresponding
+`L²(w)` graph norm by the upper polynomial bound. Orthogonality therefore
+extends to inverse Fourier transforms of smooth tests supported away from
+`tau=0`. It forces `w conjugate(Fh)m_1=0` as a distribution off zero. Since
+`w>0` almost everywhere and `m_1` is nonzero almost everywhere, `h=0`.
+This proves dense range on the pole line too.
+
+Therefore every Hilbert completion in this class—Mellin-Plancherel with a
+strictly positive, polynomially moderate absolutely continuous density—has
+zero quotient by `Z H_cap`. This includes MHS-02.1–.4. The result does not
+cover singular spectral measures (including atomic masses at zeros), weights
+with super-polynomial growth or decay, or Hilbert norms not diagonal in the
+Mellin transform. It is a manually derived generalization; no formal,
+independent external audit, or novelty determination has been completed.
+
+## MHS-03.1 — Exact criterion for a singular diagonal Mellin model
+
+This is an abstract classification inside the Mellin-diagonal ansatz, not a
+construction of a new norm on Meyer's quotient. Let `mu` be a positive
+locally finite Borel measure on `R`, let
+`m_sigma(tau)=zeta(sigma+i tau)`, and let `M_m` be its maximal multiplication
+operator on `L²(mu)`. For `sigma=1`, require `mu({0})=0` so that the zeta
+pole is absent from the measure space; otherwise this ordinary multiplication
+ansatz is undefined there and needs a separate singular-domain construction.
+Under this condition its domain is dense and the operator is closed. The
+adjoint is multiplication by `conjugate(m_sigma)`, so
+
+    closure(range M_m)^perp = ker(M_m*)
+                            = L²(mu restricted to Z_sigma),
+
+where `Z_sigma={tau : m_sigma(tau)=0}`, with the pole excluded when
+`sigma=1`.
+Thus the Hilbert quotient by the closed multiplier range is nonzero exactly
+when `mu(Z_sigma)>0`. Since `Z_sigma` is discrete, this requires at least one
+atom at a zeta zero on that line. This is the precise contrast with the
+absolutely continuous measures of MHS-02.5.
+
+For the normalized dilation group on `L²(mu)`, the generator is (up to sign)
+the self-adjoint multiplication operator `A=M_tau`, with domain
+`{g: tau*g in L²(mu)}`. Its spectrum is `supp(mu)` and its eigenspace at
+`gamma` is `L²(mu|_{ {gamma} })`; in scalar `L²(mu)`, an atom contributes
+one-dimensional eigenspace, regardless of its mass. Therefore an exact
+spectral model of all zeta-zero ordinates within this ansatz requires:
+
+1. support of `mu` exactly at the ordinates, to avoid extra continuous
+   spectrum;
+2. atoms at each ordinate, for point spectrum and nonzero quotient;
+3. vector-valued fibers of dimension equal to analytic zero multiplicity if
+   multiplicities are to match when a multiple zero occurs.
+
+This calculation classifies the **maximal** multiplier model. It does not
+prove that Meyer's restricted `Z(H_cap)` is a graph core in `L²(mu)` for a
+singular measure, nor that its quotient generator is intertwined with
+`M_tau`. Those domain and intertwining steps are essential and remain open;
+the support criterion alone is not a Hilbert–Pólya construction.
+
+Choosing `mu` directly as a sum of atoms at the zero ordinates (and choosing
+the fibers from their multiplicities) simply imports the target data. That
+is a zero-dependent encoding, not an independent Hilbert–Pólya construction.
+A measure defined independently, for example from prime-side data, whose
+atoms and support can then be proved to have these exact properties would be
+substantive; no such measure is constructed here. The multiplication facts
+above are elementary consequences of the spectral theorem for multiplication
+operators. The RH-conditional zero-supported measure and its scalar
+multiplicity limitation are already developed in
+`research/operators/B3-09-nevanlinna-kernel-and-zero-measure.md` and
+`research/operators/B5-07-clark-model-for-normalized-limit.md`; B4-01 records
+the classical Lagarias/Hinkkanen positivity equivalence. MHS-03.1 is a
+cross-campaign diagnostic and scope clarification, not a novelty claim.
+
 ## Dependencies and information gain
 
 Dependencies are Meyer's exact function-space definitions, standard nuclear
-space facts, and the classical infinitude of nontrivial zeta zeros. No large
-dataset or computation is needed. Expected information gain: distinguish a
+space facts, tempered-distribution facts, and the classical infinitude of
+nontrivial zeta zeros. No large dataset or computation is needed. Expected
+information gain: distinguish a
 mere change of topology from an actual route to a self-adjoint operator, and
 identify whether the existing Fréchet construction has a meaningful Hilbert
 completion.

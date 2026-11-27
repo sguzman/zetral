@@ -14,7 +14,7 @@ verification, originality, or journal readiness.
 | Fixed-width positivity criterion | Manual deduction that positivity on all translates of packets built from one fixed support width is equivalent to RH. It uses the classical Weil criterion and a Landau singularity argument; it is not an RH proof. | Detailed note at [`B1-24`](positivity/B1-24-fixed-width-positivity-RH-criterion.md). | Novelty and hypothesis comparison are unresolved. Do not prioritize a standalone paper until the exact relation to recent fixed-support and Weil-form criteria is checked by an independent analyst. |
 | HP-02 fixed-low corner and moving-block Schur criterion | HP-02.3–.4 establish an RH-conditioned fixed-low corner limit in zero-side coordinates. HP-02.5–.6 give a conditional weighted Schur criterion and an explicit scalar-shift row estimate. HP-02.7 shows coarse zero-count growth plus sine separation alone cannot control the moving inverse-metric sum, via an abstract close-pair countermodel. | Supporting notes: [`HP02-fixed-low-random-window.md`](operators/HP02-fixed-low-random-window.md), [`HP02-fixed-low-pencil-corner.md`](operators/HP02-fixed-low-pencil-corner.md), [`HP02-moving-block-schur-target.md`](operators/HP02-moving-block-schur-target.md). | Supporting appendix material only. Independent proof audit, prior-art review, and zeta-specific arithmetic moving-block bounds remain required. Countermodel is not about actual zeta gaps; no novelty claim or spectral transfer. |
 | Theta differential-pencil domain audit | All smooth positive local densities fail pair symmetry on the common test core. The natural gauge form is closed and induces the free Laplacian. Kernel-vector and boundary-trace tests constrain domains; the zero-generated span evades the first pointwise test, while essential self-adjointness fixes the natural similarity-domain closure and prevents a core-preserving boundary correction from adding eigenvectors. Density and closure remain open. | Eight explicit milestones recorded below and derived in [`CAMPAIGN-95.md`](CAMPAIGN-95.md), HP-03.1–.8. | Potential short note or comparative-operator appendix after independent operator/domain audit and prior-art review. No general nonlocal no-go or full spectral correspondence is established. |
-| Meyer Fréchet-model Hilbertization barriers | MHS-01: the original infinite-dimensional nuclear Fréchet topology is not Hilbertizable. MHS-02.1–.3: manual Mellin-multiplier arguments propose collapse of the inherited quotient seminorm for `L²(dx)` and the family `L²(x^(2 sigma) dx/x)`, `sigma>-2`, including the pole line `sigma=1`. Only the `sigma=1/2` dense-range step has an independent adjoint-kernel check; the weighted-family and pole-line graph-core arguments need separate audit. | Detailed derivations in [`CAMPAIGN-96.md`](CAMPAIGN-96.md). These are scoped candidate lemmas, not independently verified results. | Possible supporting section on why Meyer's model does not directly yield these natural Hilbert completions. Audit source spaces, Mellin domains and graph-core proofs; do not generalize to all Hilbert completions or claim a Hilbert–Pólya construction. |
+| Meyer Fréchet-model Hilbertization barriers | MHS-01: the original infinite-dimensional nuclear Fréchet topology is not Hilbertizable. MHS-02.1–.5: a manual Mellin-multiplier argument proposes zero quotient for every absolutely continuous density `w(tau)d tau` bounded above and below by polynomial weights, on every real Mellin line, including the pole. The non-pole tempered-distribution annihilator and pole-line Sobolev graph-core argument were rederived locally, but have no formal or independent external verification. | Detailed derivations and exact Meyer source scope in [`CAMPAIGN-96.md`](CAMPAIGN-96.md). | Possible supporting section describing the limits of ordinary absolutely continuous Mellin Hilbertizations. Obtain independent proof audit and prior-art review; singular measures, super-polynomial weights and non-Mellin Hilbert norms remain open. No Hilbert–Pólya construction is established. |
 
 ## Milestone log for write-up planning
 
@@ -119,3 +119,24 @@ These Meyer items are possible sections or appendices in an operator-model
 obstruction paper, not standalone novelty claims. There is no manuscript or
 Lean proof for them; source verification, independent proof audit and prior
 art review remain prerequisites.
+
+- **MHS-02.4 — finite log-Sobolev strengthening.** Orthogonal-complement
+  argument extends the dense-range/zero-quotient candidate from the weighted
+  `L²` family to every finite integer Sobolev order in logarithmic
+  coordinates, including the pole line after a weighted graph-core estimate.
+  This is a potentially useful unifying lemma, not a separate paper result
+  until independently checked and compared with prior work.
+- **MHS-02.5 — polynomially moderate Mellin densities.** A tempered-distribution
+  annihilator argument consolidates the weighted and finite Sobolev cases:
+  any strictly positive absolutely continuous Mellin density bounded above
+  and below by polynomial weights appears to give a dense `Z H_cap` range,
+  including on the pole line. Potentially a useful unifying proposition, but
+  it is still manual and its significance is limited to this norm class.
+- **MHS-03.1 — singular diagonal-measure criterion.** In the maximal
+  multiplication model, the zeta-multiplier quotient is the subspace
+  supported on atoms at zeta zeros; the dilation generator has spectrum the
+  measure support, with fiber dimension giving multiplicity. This is a
+  standard spectral-theorem calculation and a useful circularity diagnostic:
+  choosing those atoms from the zeros imports the target spectrum. Graph-core
+  identification with Meyer's restricted domain and operator intertwining are
+  still unproved. Not a new construction or standalone paper result.

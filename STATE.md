@@ -33,13 +33,28 @@ via the critical-line zeta multiplier and a constrained graph core; its
 dense-range step has an independent orthogonal-complement check. MHS-02.2
 proposes the same collapse for `L²(x^(2 sigma)dx/x)`, `sigma>-2`,
 `sigma!=1`; MHS-02.3 treats the pole line `sigma=1` by separating its simple
-pole and proving a mean-zero graph-core approximation. The latter two are
-manual derivations pending separate audit, especially the pole-line weighted
-estimate. All results are scoped to these inherited quotient norms and do
-not rule out other Hilbert completions. Next audit the Mellin/source-space
-identifications and graph-core estimates, then test a qualitatively different
-Hilbert realization rather than extend weights indefinitely. Write-up
-candidate milestones are logged in `research/PAPER-PIPELINE.md`. Full record:
+pole and proving a mean-zero graph-core approximation. This batch rechecked
+the Meyer source hypotheses against §2, Theorem 3.3 and equations (13)–(14)
+of arXiv:math/0412277v3; it also caught and corrected an omitted evenness
+condition in the local description of `H_cap`. MHS-02.4 extends the collapse
+candidate to every finite integer Sobolev order in logarithmic coordinates;
+MHS-02.5 consolidates these as one class of absolutely continuous Mellin
+densities bounded above and below by polynomial weights. The non-pole proof
+uses a tempered-distribution annihilator, and the pole-line proof uses a
+weighted mean-zero graph core. These are detailed manual derivations, not a
+formal proof or independent external audit. The result does not cover
+singular measures, super-polynomial weights or non-Mellin Hilbert norms.
+MHS-03.1 now gives the exact criterion within the diagonal measure ansatz:
+the quotient is supported on atoms of the measure at zeta zeros, while the
+generator spectrum is the measure support and fiber dimension controls
+multiplicity. This classifies the maximal multiplier only: graph-core
+identification with `Z(H_cap)` and intertwining with the quotient generator
+remain open. Selecting those atoms directly from the zero set is
+zero-dependent and not an independent construction. Next test whether a
+prime-side measure can arise independently with the required atoms and
+multiplicities, and compare that requirement to the existing Weil and
+Clark/de Branges routes. Write-up candidates are logged in
+`research/PAPER-PIPELINE.md`. Full record:
 `research/CAMPAIGN-96.md`.
 
 The 2026-11-27 literature scan included Hedenmalm's theta pencil, Kim et al.'s

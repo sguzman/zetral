@@ -887,3 +887,49 @@ delicate. Neither derivation has an independent proof audit or formal check;
 they concern only these inherited quotient norms and do not obstruct other
 Hilbert completions. The possible write-up status and audit prerequisites are
 logged in `research/PAPER-PIPELINE.md`.
+
+## MHS source/domain audit and MHS-02.4 (2026-11-27)
+
+Checked the claimed source-space hypotheses against Meyer v3 §2, Theorem 3.3,
+and equations (13)–(14): the multiplier identity starts in `Re(s)>1`, while
+the Poisson-summation argument supplies the entire continuation for
+`H_cap`. Corrected the campaign's abbreviated `H_cap` description to include
+evenness. A detailed manual argument now proposes dense range for the
+Mellin-induced operator in every finite integer log-Sobolev norm and real
+weight, including the pole line. It uses a tempered-distribution annihilator
+for non-pole weights and a scale-dependent mean-zero graph core at the pole.
+This has no formal or independent external verification; it rules out only
+this named norm family, not general Hilbert completions. Full derivation and
+write-up disposition: `research/CAMPAIGN-96.md` and
+`research/PAPER-PIPELINE.md`.
+
+## MHS-02.5 — Polynomially moderate Mellin-density obstruction (2026-11-27)
+
+Generalized the previous weighted/Sobolev calculation to Mellin Hilbert
+norms with any measurable density `w(tau)` satisfying two-sided polynomial
+bounds. The non-pole proof uses the tempered-distribution annihilator of the
+single transformed `H_cap` moment condition; the pole line follows by
+dominating the weighted graph norm by a sufficiently high finite Sobolev
+order. The conclusion is dense range and zero inherited quotient seminorm
+within this specific absolutely continuous norm class. Singular spectral
+measures, super-polynomial weights and non-Mellin norms are excluded. This is
+a manual derivation without formal or independent external review; no
+novelty claim is made. See `research/CAMPAIGN-96.md` and the milestone entry
+in `research/PAPER-PIPELINE.md`.
+
+## MHS-03.1 — Singular diagonal-measure criterion (2026-11-27)
+
+For the maximal multiplication model `M_zeta` on `L²(mu)`, the orthogonal
+complement of its range closure is exactly the functions supported on the
+zeta-zero set. A nonzero Hilbert quotient therefore requires measure atoms at
+zeros. The normalized dilation generator is multiplication by the Mellin
+frequency; its spectrum is `supp(mu)` and point eigenspace dimension is the
+fiber dimension at each atom. An atomic measure selected from zero ordinates
+and multiplicities simply imports the target data. A prime-side definition
+whose atoms/support can independently be proved to match would be substantive,
+but none is constructed here. The result does not establish that Meyer's
+restricted `Z(H_cap)` is a graph core for this singular measure or that the
+quotient generator is intertwined with multiplication by frequency. This is
+a scoped standard spectral-theorem calculation, not a new operator or
+novelty claim. See
+`research/CAMPAIGN-96.md` and the paper-pipeline milestone log.
