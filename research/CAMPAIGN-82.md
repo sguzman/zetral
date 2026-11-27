@@ -22,6 +22,16 @@ spectral form. Nonzero coefficients imply a positive variance, but neither
 mean nor variance decides the infimum. No rational-independence hypothesis
 for the zero ordinates is known or assumed here.
 
+Checkpoint B1-16 proves an exact criterion: the liminf is zero exactly when
+the target cancellation phases lie in the closure of the one-parameter
+zero-ordinate flow. Finite phase closures are determined by the exact integer
+relation lattice. If any relation is incompatible, compactness gives a
+positive liminf; if the positive ordinates are Q-linearly independent, the
+liminf is zero conditionally. This is an orbit-closure theorem, not evidence
+that the LI conjecture holds. See
+`research/positivity/B1-16-phase-orbit-liminf-criterion.md`. Lamzouri's
+effective LI is explicitly conjectural ([arXiv:2311.04860v2, §1](https://arxiv.org/html/2311.04860v2)); no exact nontrivial relation is currently used.
+
 ## First investigation
 
 For each finite set of ordinates, characterize the closure of the one-parameter

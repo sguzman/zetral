@@ -300,3 +300,12 @@ spectral formula independently confirms its normalization under RH. Campaign
 LXXXI closed within that packet scope, and LXXXII now studies the liminf of
 the nonnegative almost-periodic packet values. See
 `research/CAMPAIGN-81-CLOSURE.md` and `research/CAMPAIGN-82.md`.
+
+## LXXXII phase-orbit checkpoint — B1-16 (2026-11-27)
+
+`research/positivity/B1-16-phase-orbit-liminf-criterion.md` characterizes
+the packet liminf by an exact phase-compatibility condition in the closure
+of the zero-ordinate flow. Any incompatible integer relation forces a
+positive liminf; Q-linear independence would imply zero liminf conditionally.
+No such independence or relation is claimed. The classical LI and Lamzouri's
+effective LI are conjectural inputs, not established facts.
