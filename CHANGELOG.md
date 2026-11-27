@@ -933,3 +933,17 @@ quotient generator is intertwined with multiplication by frequency. This is
 a scoped standard spectral-theorem calculation, not a new operator or
 novelty claim. See
 `research/CAMPAIGN-96.md` and the paper-pipeline milestone log.
+
+## MHS-03.2 — Zero-dependent Hilbert completion benchmark (2026-11-27)
+
+Assuming RH, define a finite atomic measure on the distinct zero ordinates with
+weights `exp(-gamma^2)` and map Meyer test functions to their Mellin values
+there. A finite-measure annihilator argument proves compact `H_cap` tests are
+dense in `L²(mu)`; the descended quotient seminorm therefore has this atomic
+space as its Hausdorff completion. Normalized dilation extends to the
+self-adjoint multiplication operator with spectrum the distinct ordinates.
+This explicitly closes the graph-core/intertwining gap for this
+zero-dependent scalar model, but it assumes RH, imports the zero set, and
+does not capture unknown multiplicities. Meyer Corollary 4.2 and the
+repository's B3-09/B5-07 are close prior art; no novelty claim or independent
+operator is asserted. Full derivation is in `research/CAMPAIGN-96.md`.

@@ -44,16 +44,17 @@ uses a tempered-distribution annihilator, and the pole-line proof uses a
 weighted mean-zero graph core. These are detailed manual derivations, not a
 formal proof or independent external audit. The result does not cover
 singular measures, super-polynomial weights or non-Mellin Hilbert norms.
-MHS-03.1 now gives the exact criterion within the diagonal measure ansatz:
-the quotient is supported on atoms of the measure at zeta zeros, while the
-generator spectrum is the measure support and fiber dimension controls
-multiplicity. This classifies the maximal multiplier only: graph-core
-identification with `Z(H_cap)` and intertwining with the quotient generator
-remain open. Selecting those atoms directly from the zero set is
-zero-dependent and not an independent construction. Next test whether a
-prime-side measure can arise independently with the required atoms and
-multiplicities, and compare that requirement to the existing Weil and
-Clark/de Branges routes. Write-up candidates are logged in
+MHS-03.1 gives the maximal diagonal-measure criterion. MHS-03.2 closes its
+domain gap for one deliberately zero-dependent construction: under RH, the
+weighted Mellin-evaluation seminorm on distinct zero ordinates has dense
+`H_cap` image, and normalized dilation extends to the self-adjoint operator
+`M_gamma` with exactly those distinct ordinates as spectrum. This does not
+match unknown analytic multiplicities, prove RH, or provide an independent
+prime-side measure; Meyer Corollary 4.2 and repository B3-09/B5-07 are close
+prior art. Next investigate whether the positive atomic measure can be
+derived independently from prime-side data, taking care not to repackage the
+classical Lagarias/Weil RH-equivalent positivity criterion. Write-up
+candidates are logged in
 `research/PAPER-PIPELINE.md`. Full record:
 `research/CAMPAIGN-96.md`.
 

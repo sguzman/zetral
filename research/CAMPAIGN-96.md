@@ -415,6 +415,76 @@ multiplicity limitation are already developed in
 the classical Lagarias/Hinkkanen positivity equivalence. MHS-03.1 is a
 cross-campaign diagnostic and scope clarification, not a novelty claim.
 
+## MHS-03.2 — A zero-dependent Hilbert completion of Meyer's quotient
+
+Assume RH and let `Gamma` be the set of distinct signed ordinates of the
+nontrivial zeros. Put
+
+    mu = sum_(gamma in Gamma) exp(-gamma^2) delta_gamma,
+    Jf(gamma) = fhat(1/2+i gamma),
+    p_mu(f)^2 = sum_(gamma in Gamma) exp(-gamma^2)
+                         |fhat(1/2+i gamma)|^2.
+
+The Riemann–von Mangoldt bound implies `mu(R)<infinity`. For `f in H_-`,
+its Mellin transform on the critical line is rapidly decreasing, so `p_mu`
+is finite and continuous on the Meyer Fréchet space. If `g in H_cap`, the
+continued Mellin identity gives
+`(Zg)hat(1/2+i gamma)=zeta(1/2+i gamma) ghat(1/2+i gamma)=0`.
+Consequently `p_mu` descends to a seminorm on `H^0_-`.
+
+The image of `H_cap` under `J` is dense in `L²(mu)`. To prove this, it
+suffices to test compact log-coordinate functions `g in C_c^infinity(R)`
+satisfying the one transformed Fourier-moment condition
+`integral e^(y/2)g(y)dy=0`; their inverse Mellin transforms extend to even
+compactly supported smooth functions in `H_cap`. Suppose
+`c=(c_gamma) in L²(mu)` is orthogonal to all their evaluation vectors. The
+finite complex measure
+
+    nu = sum_(gamma in Gamma) exp(-gamma^2) conjugate(c_gamma) delta_gamma
+
+is finite by Cauchy–Schwarz and `mu(R)<infinity`. Its Fourier transform
+`F(y)=integral exp(i gamma y)d nu(gamma)` is bounded and continuous.
+Orthogonality says `integral g(y)F(y)dy=0` whenever
+`integral e^(y/2)g(y)dy=0`. The annihilator of this codimension-one test
+kernel consists of scalar multiples of `e^(y/2)` as distributions. Since
+`F` is bounded and `e^(y/2)` is unbounded, the scalar is zero. Uniqueness
+of the Fourier transform of finite measures gives `nu=0`, hence `c=0`.
+Therefore `J(H_cap)` is dense, and so is `J(H_-)`.
+
+The Hausdorff completion of `H^0_-` in the seminorm `p_mu` is thus
+`L²(mu)`. Meyer's dilation `lambda_(e^t) f(x)=f(e^(-t)x)` satisfies
+
+    J(e^(-t/2) lambda_(e^t) f)(gamma)
+        = exp(i gamma t) Jf(gamma).
+
+The normalized dilation extends to a strongly continuous unitary group;
+Stone's theorem identifies its self-adjoint generator with multiplication by
+`gamma` on the maximal domain `{c: sum exp(-gamma^2) gamma^2
+|c_gamma|^2 < infinity}`. Since the ordinates have no finite accumulation,
+the spectrum is exactly the set of distinct ordinates, with one-dimensional
+eigenspace at each. This recovers the zero set as a self-adjoint spectrum
+under RH, and explicitly handles the graph-core/density and intertwining
+steps missing from the abstract MHS-03.1 criterion. The seminorm kernel is
+invariant under dilation because the action multiplies each evaluation by a
+nonzero scalar, so the unitary group is genuinely induced from the Meyer
+quotient before completion.
+
+This does **not** give an independent Hilbert–Pólya construction: RH is
+assumed to put every zero on the real ordinate axis, and the atoms are
+defined from those zero ordinates. The scalar model also records analytic
+multiplicity only as optional atom weights, not eigenspace dimension; if any
+zero is multiple, exact self-adjoint multiplicity is not matched by this
+scalar completion. No simplicity assumption is made. The norm further
+collapses every class invisible to zero evaluation, so it is a Hausdorff
+quotient of Meyer's Fréchet quotient, not an equivalent Hilbert topology.
+This is a concrete conditional benchmark and a manual analytic deduction;
+Meyer's Corollary 4.2 already identifies evaluation functionals and derivative
+jets in the continuous dual, while repository notes B3-09/B5-07 already give
+the zero-defined scalar spectral measure/model under RH. Thus no novelty is
+claimed; the specific added link is density of the value-evaluation map from
+the compact source tests into the weighted atomic Hilbert space. A targeted
+prior-art review, formal proof and external independent audit remain undone.
+
 ## Dependencies and information gain
 
 Dependencies are Meyer's exact function-space definitions, standard nuclear

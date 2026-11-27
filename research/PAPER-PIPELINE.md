@@ -140,3 +140,12 @@ art review remain prerequisites.
   choosing those atoms from the zeros imports the target spectrum. Graph-core
   identification with Meyer's restricted domain and operator intertwining are
   still unproved. Not a new construction or standalone paper result.
+- **MHS-03.2 — zero-dependent evaluation completion.** Under RH, a summable
+  atomic Mellin-evaluation seminorm descends to Meyer's quotient; a finite
+  measure/Fourier-uniqueness argument proves the restricted `H_cap` image is
+  dense, and normalized dilation becomes self-adjoint multiplication by the
+  ordinates. This fills a graph-core gap for this chosen model, but inputs RH
+  and the zero set and misses multiplicity if zeros are multiple. Meyer
+  Corollary 4.2 and B3-09/B5-07 are close prior art; not an independent or
+  claimed novel construction. Could be a short technical appendix only after
+  prior-art and independent proof review.
