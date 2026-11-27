@@ -242,3 +242,34 @@ the prime-remainder transform derivation. No local Lean rebuild or axiom
 audit was performed. The result is conditional on the stated uniform-in-prime
 remainder bound, which Zetral has not established. No Zetral RH proof is
 claimed.
+
+## RHA-04 — Quadratic-twist prime selection (partial dependency audit)
+
+The pinned source defines a bad prime by the existence of a zero for some
+character in the closed box `Re s ≥ β`, `|Im s| ≤ H`. For primitive twist
+character of conductor `M`, `exists_card_zero_quadTwist_le` applies the
+per-zero lower bound `J(d,T)>T^(2δ)` and the mean estimate
+`Σ_{0<d≤T²}J(d,T)≤C T^(2+δ)`, yielding at most `C T^(2−δ)` bad primes.
+The mean estimate is reduced by Cauchy–Schwarz and integration to a
+pointwise second moment for theta series twisted by Jacobi symbols. The
+source says that second moment expands into pairs, with square odd parts
+bounded trivially and nonsquare pairs bounded by Pólya–Vinogradov.
+
+The lift from modulus `N` to its finitely many primitive inducing characters
+is coherent: at `T=√(NX)`, `M d≤T²` holds for every `d≤X` because `M|N`;
+the nonvanishing Euler factors preserve a zero when changing levels. The
+fixed-modulus count is therefore `O(X^(1−δ/2))`. If every prime of an
+invertible class were bad, the bound implies convergence of the weighted
+prime series `Σ log(p)/p` by partial summation (the exponent is strictly
+below one), contradicting its divergence in that class. This supports the
+prime-selection quantifiers and exponent transfer in RHA-03.
+
+**Audit boundary.** This is an independent algebra/quantifier check of the
+counting scaffold, not a proof of the two analytic inputs. The key theorem
+`eventually_rpow_lt_thetaTailIntegral` relies on a three-lines argument and
+the Gaussian Mellin factor's positive minimum on a compact rectangle; the
+key mean-square theorem `sum_sq_thetaSeries_jacobiSym_le` relies on a
+uniformly summable pair majorant with the Pólya–Vinogradov cancellation
+estimate. Neither has yet been independently rederived or checked against
+all imported lemmas. The next task is to audit that second-moment estimate,
+including its square/nonsquare split and uniformity for `u≥1/T`.

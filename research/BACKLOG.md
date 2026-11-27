@@ -16,6 +16,8 @@ analytic theorems and from any RH implication.
 - **Acceptance:** Source-linked dependency graph with checked quantifiers/constants and an independent selection contradiction, or a concrete gap under stated assumptions.
 - **Verification:** Manual independent proof audit; exact rational inequalities if needed. Source inspection is not kernel verification.
 
+**Progress note (2026-11-26):** RHA-04 checked the exponent arithmetic and primitive-character/modulus lift, and confirmed the partial-summation contradiction. The analytic three-lines lower bound and Jacobi-symbol second moment remain the acceptance-critical items.
+
 ## Priority order
 
 ### Current execution note — LXXVII proof-status pivot (2026-11-26)
