@@ -273,3 +273,58 @@ uniformly summable pair majorant with the Pólya–Vinogradov cancellation
 estimate. Neither has yet been independently rederived or checked against
 all imported lemmas. The next task is to audit that second-moment estimate,
 including its square/nonsquare split and uniformity for `u≥1/T`.
+
+**RHA-04 second-moment derivation.** Let `r=ordCompl[2](nm)`. If `r` is a
+square, the character sum over `v≤T²` is bounded trivially by `T²`; Gaussian
+decay with `A=1/2+δ` bounds the remaining factor by
+`C u^(−2δ)(nm)^(−1/2−δ)`. On pairs with square odd part, write
+`nm=l²` or `2l²`. For fixed `k∈{1,2}`, `knm` square implies a
+parameterization `kn=a b²`, `m=a c²` with `a,b,c≥1`. Therefore
+`(knm)^(−σ)=(abc)^(−2σ)` for `σ=1/2+δ`; summing this weight over all
+triples gives a finite majorant because `2σ>1`. This verifies the summability
+mechanism used for the square branch, including the factor `2^σ` when
+`nm=2l²`.
+
+If `r` is not a square, it is an odd positive nonsquare. Its Jacobi symbol is
+a nonprincipal Dirichlet character modulo `r`, so Pólya–Vinogradov gives
+`|Σ_{v≤T²}(-v/r)|≤2√r(1+log r)`. The elementary inequality
+`1+log n ≤ (1+2/δ)n^(δ/2)` for `n≥1` weakens this to
+`2(1+2/δ)(nm)^(1/2+δ/2)`. Gaussian decay with `A=3/2+δ` then leaves
+the pair weight `(nm)^(−1−δ/2)` and the factor
+`u^(−2)u^(−2δ)`. Since `u≥1/T`, `u^(−2)≤T²`. The pair weights are
+summable because `Σ n^(−1−δ/2)` converges. Thus both branches give one
+summable majorant independent of `T,u,α`; expanding the theta-series square
+and applying Tonelli/HasSum justifies the second-moment bound. Cauchy–Schwarz
+and integrating `T²u^(−δ)/u` from `1/T` to infinity produce the stated
+`O(T^(2+δ))` total-integral estimate.
+
+This independent derivation checks the exponent budget, edge case `r=1`
+(which belongs to the square branch), uniform range `u≥1/T`, and absolute
+summability architecture against the source. It treats Pólya–Vinogradov,
+Gaussian Mellin/weight identities, and the countable-sum interchange as
+standard imported results rather than reproving them. The per-zero estimate
+is separately audited below, with its functional-equation and three-lines
+inputs retained as explicit dependencies.
+
+**RHA-04 per-zero estimate.** The pinned `three_lines_bound_of_LFunction_eq_zero`
+uses `Ψ(z)=Γ_j(z)L(z,χ)𝓜(z,T)−Γ_j(z)^2`. On `Re z=1/2`, the functional-equation
+folding of the theta integral bounds `|Γ_jL|≤2J`; the mollifier satisfies
+`|𝓜|≤J`. Under `J≤T^(2δ)`, `T≥1`, and boundedness of `Γ_j` in the strip,
+these give `|Ψ|≤C T^(4δ)`. On `Re z=2`, the truncated Mellin identity
+approximates `Γ_j/L` with error `O(1/T)`; together with `|Γ_jL|≤3`, this gives
+`|Ψ|≤C/T`. Three-lines interpolation across width `3/2`, at a zero with
+`σ≥1/2+9δ`, uses weight `(σ−1/2)/(3/2)≥6δ`. Its exponent is
+`4δ(1−w)−w ≤ −2δ`, hence `|Γ_j(s)|²=|Ψ(s)|≤C T^(−2δ)`.
+For a zero, `1/2≤σ≤1` (zeros are absent for `σ≥1`), and bounded height puts
+`s` in a compact rectangle where the Gaussian Mellin factor has a positive
+minimum `c`. Choosing `T` so `C T^(−2δ)<c²` is a contradiction. Thus every
+zero in the specified box forces `J>T^(2δ)`.
+
+This closes the algebraic and quantifier audit of RHA-04's selection scaffold,
+conditional on the pinned functional-equation folding, mollifier approximation,
+Gaussian Mellin nonvanishing/compact minimum, and three-lines theorem. Those
+analytic lemmas and the Lean proof term were not independently re-proved or
+rechecked by a kernel build. The investigation is accepted at this scoped
+manual-audit level; it is not a complete independent verification of the
+formal proof. Next audit the parameter-dependent `HasLogBound` dominance,
+then pursue one geometric input to the main inequality.

@@ -18,6 +18,8 @@ analytic theorems and from any RH implication.
 
 **Progress note (2026-11-26):** RHA-04 checked the exponent arithmetic and primitive-character/modulus lift, and confirmed the partial-summation contradiction. The analytic three-lines lower bound and Jacobi-symbol second moment remain the acceptance-critical items.
 
+RHA-04's square/nonsquare majorant and zero-forces-large-theta-tail exponent contradiction are manually checked, conditional on the named standard analytic lemmas. Close this bounded audit at scoped/manual level; do not count it as independent Lean verification.
+
 ## Priority order
 
 ### Current execution note — LXXVII proof-status pivot (2026-11-26)
