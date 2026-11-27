@@ -475,3 +475,13 @@ B5-06 proves under RH that the positive atomic Herglotz measures of
 Local contour integrals show the total mass near a limiting zero tends to
 its analytic multiplicity. No strong-resolvent conclusion follows. See
 `research/operators/B5-06-h-root-measure-cluster-limit.md`.
+
+### LXXXVIII checkpoint — Clark model identification
+
+B5-07 identifies the alpha=-1 Clark measure of the normalized endpoint
+inner function with the xi zero-divisor measure, and recovers the
+RH-conditional multiplication operator already recorded in B3-09/B3-10.
+This is standard Clark theory applied to the normalized pair, not an
+independent operator construction. Strong-resolvent convergence of the
+varying operators remains open. See
+`research/operators/B5-07-clark-model-for-normalized-limit.md`.

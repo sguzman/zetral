@@ -109,6 +109,18 @@ vague convergence of the positive atomic Herglotz measures to the B3-09
 zero-divisor measure under RH; it does not prove strong-resolvent
 convergence. See `research/operators/B5-06-h-root-measure-cluster-limit.md`.
 
+## Checkpoint B5-07
+
+For the limiting Cayley inner function, the alpha=-1 Clark function is
+`-i q`; its Herglotz measure is exactly the xi zero divisor with
+multiplicities as atom masses. Clark's standard model therefore recovers the
+existing RH-conditional zero-defined multiplication operator from the
+normalized de Branges endpoint. This is prior functional-model theory, not
+an independent operator. Vague measure and strong subspace convergence
+still do not establish strong-resolvent convergence of the varying
+operators. See
+`research/operators/B5-07-clark-model-for-normalized-limit.md`.
+
 Next investigate a canonical-system intertwiner independently of the scalar
 Fourier multiplier and distinguish any possible operator relation from
 equality of zero sets.
