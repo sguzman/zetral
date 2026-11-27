@@ -20,6 +20,16 @@ analytic theorems and from any RH implication.
 
 RHA-04's square/nonsquare majorant and zero-forces-large-theta-tail exponent contradiction are manually checked, conditional on the named standard analytic lemmas. Close this bounded audit at scoped/manual level; do not count it as independent Lean verification.
 
+### LXXVII / RHA-06 — Audit the geometric span/dimension input
+
+- **Question:** Does `span_short_integralRamified_eq_top` establish the full source space under the exact short-form cutoff used by `star_inequality`, with no hidden positivity or dimension assumptions?
+- **Evidence/prerequisites:** Pinned `MainInequality.lean` defines `short` by a norm bound uniform over translates and embeddings; `ShortAndEnough.lean` supplies the span theorem and `enough_forms`. RHA-02 verified only the final cancellation; RHA-05 verified final scalar dominance.
+- **Expected information gain:** Independently validate the passage from analytic size estimates to enough independent short vectors, or locate a geometric gap.
+- **Design/falsification:** Trace the span proof through basis selection, lattice covolume and Hadamard estimates. Check the quantifier order over `g` and `σ`, cutoffs, and the treatment of zero vectors. Test the bound's scale dependence at the theorem's boundary cases.
+- **Dependencies:** Pinned Lean 4.35.0/Mathlib source; exact hypotheses in `Data P`.
+- **Acceptance:** Source-linked manual proof audit with assumptions and constants checked, or a precise counterexample/gap. No local full build.
+- **Verification:** Independent derivation of the central dimension estimate and adversarial checks of quantifiers and cutoff monotonicity.
+
 ## Priority order
 
 ### Current execution note — LXXVII proof-status pivot (2026-11-26)

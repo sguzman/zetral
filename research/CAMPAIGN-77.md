@@ -328,3 +328,28 @@ rechecked by a kernel build. The investigation is accepted at this scoped
 manual-audit level; it is not a complete independent verification of the
 formal proof. Next audit the parameter-dependent `HasLogBound` dominance,
 then pursue one geometric input to the main inequality.
+
+## RHA-05 — Main-inequality parameter dominance
+
+At the pinned source, `star_inequality` uses `D.le_of_hasLogBound` for two
+final scalar claims: `4/b²≤1/2` and `|2 err|≤f a (log b)^5`, where
+`err=4 loss+2 indexPerDim`, `loss=f a L^4`,
+`indexPerDim=10 log(1+2b²) f a L^3`, and `L=log b`.
+
+**Independent reduction.** The scale constraints give `L>100` without using
+the encoded `HasLogBound` engine: the size lemma has `m≥10000`, while
+`m≤2 exp(logX/2)`, so `logX>2`; then `logX₁≥10^6 logX` and
+`L≥10^6 logX₁`. In particular `L>100`. Since `b=e^L`,
+`log(1+2b²)≤log 3+2L<2+2L`. Dividing the desired absolute error bound by
+the positive factor `f a L³` reduces it to
+`8L+40 log(1+2b²)≤L²`; the left side is less than `88L+80`, which is at
+most `L²` for `L≥100`. Also `4/b²=4e^(−2L)≤1/2` for `L≥100`. These recover
+the two final inequalities used after cancellation and filling.
+
+This independently checks the parameter-dominance arithmetic and supplies a
+simple explicit sufficient threshold, rather than replaying instance search.
+It relies on the pinned scale inequalities and lower bound `m≥10000`; it does
+not audit the derivation of those scale facts from existence of admissible
+data. The dominant unresolved work is now geometric: audit one of the
+main-inequality inputs, beginning with the span/dimension statement
+`span_short_integralRamified_eq_top`.
