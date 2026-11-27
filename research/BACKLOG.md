@@ -186,7 +186,7 @@ a finite positive block into a lower bound for the full form. See
 - **Dependencies/acceptance:** State RH only for the forward bound. Accept a fully audited equivalence plus a matching upper rate under explicit assumptions, or document a precise obstruction. No RH proof or novelty claim.
 - **Verification:** Compare with classical von Koch and Báez-Duarte criteria; retain exact assumptions and primary sources. No numerical work needed.
 
-### LXXXIV — Stability limits for multiplicity-sensitive sampling (active)
+### LXXXIV — Stability limits for multiplicity-sensitive sampling (closed within scope)
 
 - **Question / hypothesis:** Can derivative samples be made bounded by an equivalent renorming of the existing global Weil completion, preserving the local embeddings and sampling isometry? B3-03 suggests no: equivalent norms preserve boundedness of functionals.
 - **Prerequisites:** `research/operators/B3-01-distinct-zero-model.md`, Suzuki's pinned distinct-ordinate sampling theorem, and kernel estimates K02/L02.
@@ -194,6 +194,17 @@ a finite positive block into a lower bound for the full form. See
 - **Design/falsification:** Prove the two-sided norm comparison statement; rederive derivative unboundedness from local Riesz norms; audit consistency on the compact-test union. Then inspect source conditions for a graph-norm completion and its compression identity.
 - **Dependencies/acceptance:** Under the RH-conditional sampling model and B3-03 assumptions, either find a source-backed multiplicity-sensitive sampling/compression theorem, or prove the equivalent-renorming obstruction and identify the additional unproved structure a new completion needs.
 - **Verification:** Independent functional-analysis audit and primary-source check; no numerical work required. No claim about actual zero multiplicities.
+
+**Progress (2026-11-27, B3-04 / LXXXIV closure):** If two norms on the compact-test union are equivalent with constants `a,b`, every dual norm changes by at most factors `1/a,1/b`; boundedness is invariant. Since B3-03's fixed derivative sample has local norms diverging like `M_a|Delta'(gamma)|` and the local spaces embed isometrically, it is unbounded globally and under every equivalent renorming. Suzuki's compression identity explicitly uses those isometric embeddings. Goncalves' established `H(E^2)` Hermite interpolation shows changed spaces can carry jets, but provides no zeta-specific compression. See `research/operators/B3-04-equivalent-renorming-obstruction.md`.
+
+### LXXXV — Hermite de Branges spaces and Weil compression (active)
+
+- **Question / hypothesis:** Can the derivative interpolation theorem for `H(E^2)` be instantiated at zeta ordinates with a compatible local Weil norm and inverse-compression identity?
+- **Prerequisites:** B3-04; Goncalves, arXiv:1503.05178, Theorem 1/Corollary 2; Suzuki, arXiv:2610.32704v1, Theorem 3.3; exact xi and distinct-zero-product normalization.
+- **Information gain:** Connects classical jet sampling to arithmetic operator theory or exposes the exact missing structure, beyond the equivalent-norm no-go.
+- **Design/falsification:** Specify a Hermite-Biehler `E`; check differentiation closure, phase spacing, nonmembership, local norm and nodes; then prove or falsify `(Dbar~_(a,pi))^(-1)=j~_a^*C~j~_a` including domains and density.
+- **Dependencies/acceptance:** Require RH assumptions explicitly. Accept only a fully specified space, sampling theorem, local arithmetic forms and proved compression, or a source-based obstruction for this candidate. A formal derivative interpolation theorem alone is insufficient.
+- **Verification:** Independent theorem-hypothesis and operator-domain audit; no expensive computation or zero-multiplicity claim.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 

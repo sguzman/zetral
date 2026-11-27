@@ -330,3 +330,13 @@ or claim novelty. LXXXIV returns to Hilbert–Pólya construction and asks
 whether the derivative-sample obstruction survives every equivalent
 renorming of the existing Weil completion. See `research/CAMPAIGN-83.md` and
 `research/CAMPAIGN-84.md`.
+
+## LXXXIV closure and LXXXV activation (2026-11-27)
+
+LXXXIV proves that equivalent renormings cannot bound the derivative samples
+excluded by B3-03, using the local-isometry structure of the Weil completion.
+The prior-art audit finds Hermite interpolation in squared de Branges spaces,
+but no zeta-specific arithmetic compression bridge. LXXXV investigates that
+bridge with explicit hypotheses and operator identity. See
+`research/operators/B3-04-equivalent-renorming-obstruction.md` and
+`research/CAMPAIGN-85.md`.

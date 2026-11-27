@@ -1,6 +1,6 @@
 # Campaign LXXXIV — Stability limits for multiplicity-sensitive sampling
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED within stated scope (2026-11-27).
 
 ## Precise question
 
@@ -48,3 +48,13 @@ Independent functional-analysis proof audit; source audit for any candidate
 sampling theorem; no computation is needed. Evidence levels and assumptions
 must remain explicit. Dependencies: B3-01/B3-03, Suzuki's pinned sampling
 theorem, and local kernel estimates K02/L02.
+
+## Closure and pivot
+
+B3-04 proves equivalent-norm invariance of dual boundedness and applies it to
+the B3-03 local derivative-norm divergence. It also spells out the exact new
+compression identity a genuinely different completion would need. The source
+audit finds relevant prior art: Hermite interpolation in `H(E^2)` is
+established, but the cited theorem supplies no zeta-specific Weil norm or
+compression relation. Close LXXXIV within its stable-obstruction scope and
+open LXXXV to test that precise bridge; see `research/CAMPAIGN-85.md`.
