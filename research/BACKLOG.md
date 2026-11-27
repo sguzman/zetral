@@ -332,7 +332,7 @@ Campaign file: `research/CAMPAIGN-91.md`.
 
 **Result (2026-11-27):** Every real even compactly supported smooth test `q` is exactly realized by a packet: take `A` larger than its support radius, `h=L=2A`, `g(x)=q(x-A)/sqrt(2)`. Then `f_{g,h}=q(·-A)`, and autocorrelation is translation invariant. Thus this is the full even-test class, whose positivity is RH-equivalent by Yoshida's established even-test Weil criterion. This is classical scope reduction, not novelty or a proof. See `research/positivity/B1-23-even-packet-Weil-criterion.md`.
 
-### B1-24 / XCII — Fixed-window paired positivity (active)
+### B1-24 / XCII — Fixed-window paired positivity (closed)
 
 Campaign file: `research/CAMPAIGN-92.md`.
 
@@ -343,6 +343,20 @@ Campaign file: `research/CAMPAIGN-92.md`.
 - **Dependencies:** Exact source normalization, support bookkeeping, continuity of the Weil form in any proposed completion, exact literature hypotheses.
 - **Acceptance:** Prove the implication or identify a rigorous obstruction/countermodel and the missing cross-term control.
 - **Verification:** Audit all support/translation steps; do not infer density from support alone or use finite numerical scans as proof.
+
+**Result (2026-11-27):** For any fixed `L0>0`, fixed-width packet positivity is equivalent to RH. Under a hypothetical off-line zero, a Baire-generic real even profile supported in `[-d,d]`, `d<L0/2`, has transform nonzero at every zero. Its fixed reflected packet profile converts all separations `H=L0+t` to translates of `h+tau_t h`. Positivity makes the cross-term-plus-constant nonnegative; its Laplace transform has poles at every centered zero and finite abscissa equal to `sup Re(rho-1/2)`. The elementary Landau singularity argument contradicts regularity at that positive real abscissa. Manual proof only; no novelty claim, RH proof, or machine check. Full derivation: `research/positivity/B1-24-fixed-width-positivity-RH-criterion.md`.
+
+### XCIII / HP-01 — Arithmetic finite-matrix spectral transfer (active)
+
+Campaign file: `research/CAMPAIGN-93.md`.
+
+- **Question / hypothesis:** Can Shi's finite Prime–Weil matrix pencils (arXiv:2609.04908) converge to the complete zeta-zero spectrum by an arithmetic-side estimate, without assuming RH or inputting zero ordinates?
+- **Evidence and prerequisites:** The paper constructs finite arithmetic matrices from Weil's explicit formula, gives an exact finite zero-side reconstruction, and identifies a scale-invariant relative perturbation estimate (§4.9, equation (4.51)) as its central remaining obstacle. Its zero-side positive-tail decomposition uses RH. Zetral has exact finite positivity tools and RH-conditional Clark limits, but no corresponding pencil transfer.
+- **Expected information gain:** Either find a zero-independent route to a self-adjoint limit, or isolate where arithmetic positivity and relative-tail control become RH-circular or fail in the compressed metric.
+- **Design / falsification:** Audit the definitions and quantifiers of (4.51), its use in spectral perturbation, and all RH dependencies. Test whether ordinary operator-norm tail smallness implies the relative estimate; construct explicit finite-dimensional countermodels if not. Then attempt direct prime-side and form-order bounds in the compressed metric without using zero ordinates as inputs.
+- **Dependencies:** Primary source arXiv:2609.04908 v12; exact Weil-form normalization; prior art on finite quotient and operator constructions.
+- **Acceptance:** A source-audited zero-independent relative transfer estimate strong enough for a spectral limit, or a rigorous obstruction under explicit hypotheses and a materially different follow-up route. Numerical resemblance to known zeros is not spectral correspondence.
+- **Verification:** Independent pencil algebra audit and countermodel; primary-source comparison; exact arithmetic or hosted computation only when it tests a stated finite bound. Any limiting theorem must prove self-adjointness, full spectrum, multiplicities, and absence of spectral pollution.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 
@@ -518,10 +532,10 @@ Campaign file: `research/CAMPAIGN-92.md`.
 
 ## Selection rule
 
-Finish the active bounded LXXV checkpoint and its scoped audit first. Then
-prioritize B1 or B3 when the audit reveals a mathematically precise route; choose
-B2/B5 if the scalar obstruction supplies a tractable theorem; use B6/B8 for a
-qualitatively different route. B7 is enabling work only when measurements show
-that compute or restart reliability is the bottleneck. Do not use repeated
-finite frontier extensions to displace an analytical or operator investigation
-without an explicit evidence-based reason in `STATE.md`.
+Finish the current bounded investigation in `STATE.md`, persist and verify its
+result, then autonomously select the highest-information unfinished campaign.
+Give priority to analytical generalization, RH-independent operator
+construction, exact spectral correspondence, and independent audits. Use
+finite frontier extensions only when evidence shows that they address a stated
+analytic or spectral bottleneck. Check primary literature during material
+campaign transitions; do not imply background monitoring between sessions.

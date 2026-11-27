@@ -639,3 +639,18 @@ arbitrary-pair Cauchy–Schwarz bound and do not immediately answer this
 equal-profile question. See
 `research/positivity/B1-23-even-packet-Weil-criterion.md` and
 `research/CAMPAIGN-92.md`.
+
+### XCII closure and XCIII activation — fixed-width criterion and operator pivot
+
+B1-24 proves that positivity of all equal-reflection packets at one fixed
+profile width and every separation is RH-equivalent. The converse uses a
+Baire-generic even profile and a Laplace-pole/Landau singularity argument;
+the proof is manual, not machine checked, and is not an RH proof or a
+novelty claim. See `research/positivity/B1-24-fixed-width-positivity-RH-criterion.md`
+and `research/CAMPAIGN-92.md`. The next bounded investigation audits Shi's
+finite Prime–Weil matrix pencil and its explicit relative prime-to-zero
+transfer target, without assuming RH in any proposed arithmetic-side limit;
+see `research/CAMPAIGN-93.md`. The literature check also refreshed the
+external Lean proof status: the original and condensed proof versions now
+have separately reported completed machine-check suites, but Zetral did not
+replay either artifact. See `literature/rh-2026-verification.md`.

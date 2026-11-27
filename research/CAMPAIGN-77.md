@@ -513,3 +513,21 @@ Landau remains unestablished by Zetral. RHA-08 is accepted as a manual audit
 of the transform derivation only. The next selected investigation is B1-08's
 uniform endpoint cancellation on bounded H1 profiles; the zero-exclusion
 route remains open alongside it.
+
+## External proof-status update — 2026-11-27
+
+The earlier status note recorded that one independent comparator had been
+interrupted. The current source of record has since changed: Andrew
+Sutherland's MIT verification page (last updated 2026-11-27 17:27 UTC) says
+all checks on the original artifact have finished, including a successful
+122 h 45 min canonical-challenge comparator and acceptance by the default
+and paranoid Lean kernels and additional independent checkers. Michael
+Rubinstein's status page separately reports that the 76,000-line compact and
+300,000-line readable edition passed compilation, axiom inspection, module
+kernel replay and `lake comparator --paranoid` on 2026-11-26. These refer to
+distinct artifacts/toolchains, and are external source reports, not a Zetral
+replay. The classical exposition remains incomplete at its main inequality;
+that is an explanatory gap, not evidence against the formal artifact. Sources:
+https://math.mit.edu/~drew/grh/,
+https://math.mit.edu/~drew/shortgrh/ and
+https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/.

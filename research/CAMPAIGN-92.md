@@ -1,12 +1,12 @@
 # Campaign XCII — Fixed-window paired positivity
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED (manual analytic deduction).
 
 ## Precise question
 
 Fix one width `L0>0`. Is RH equivalent to nonnegativity of
-`W(f_{g,h}*tilde(f_{g,h}))` for every real `g in C_c^infty((0,L0))` and
-every `h>=0`? The unrestricted-width criterion in XCI is classical because
+`W(f_{g,H}*tilde(f_{g,H}))` for every real `g in C_c^infty((0,L0))` and
+every `H>=0`? The unrestricted-width criterion in XCI is classical because
 it realizes every even test. A fixed width cannot do that directly.
 
 ## Evidence and competing outcomes
@@ -25,31 +25,39 @@ admissible pairs of separated short-support functions. Zetral's equal-profile
 reflection packet condition is weaker in its pointwise test geometry; no
 equivalence to that criterion is assumed.
 
-## Information gain and design
+## Result and disposition
 
-A proof would show a single fixed local window, with arbitrary separation,
-already suffices for Weil positivity; a counterexample to the implication
-or a precise gap would clarify why local positivity is currently formulated
-over all radii. First write the fixed-width family on the zero side and
-identify which even test transforms it probes. Then try to recover arbitrary
-compactly supported even tests by decomposition into smaller pieces and
-polarization, tracking whether the packet hypothesis controls the required
-cross terms. Compare those exact inequalities with Danesh's normalized
-two-interval Cauchy–Schwarz condition. Attempt counterexamples at the level
-of abstract Hermitian forms before making zeta-specific claims.
+The implication is proved in
+`research/positivity/B1-24-fixed-width-positivity-RH-criterion.md`. For each
+`L0`, Baire category selects one real even profile `h`, supported in
+`[-d,d]` for `d<L0/2`, whose bilateral Laplace transform is nonzero at every
+nontrivial zero. The fixed packet profile `g(x)=sqrt(2)h(x-L0/2)` makes
+the packet at separation `H=L0+t` a translate of `h+tau_t h`. Positivity
+forces the translated cross term plus a constant to be nonnegative for all
+`t>=0`. Its Laplace transform has poles at every centered zero; the pole
+supremum is the convergence abscissa, whether or not attained. The
+nonnegative-transform singularity argument forces a singularity at the real
+abscissa, where the zero sum is regular, contradicting any off-line zero.
+
+This is a manual deduction from the unconditional zero-side Weil form and
+an explicitly proved Laplace singularity lemma. It is not machine checked,
+does not prove RH, and carries no novelty claim. Danesh's related criterion
+uses arbitrary separated pairs and a normalized bound; this one uses equal
+reflected packets and positivity. The campaign acceptance question is
+resolved at this scope. Constructive or quantitative profile selection
+remains open and would not change the criterion's logical force.
 
 ## Dependencies and verification
 
-Use the pinned Suzuki formula, B1-17's fixed-window Laplace criterion,
-Yoshida's even-test Weil criterion, and the exact hypotheses of
-arXiv:2611.10726. Check support widths, translation invariance and diagonal
-normalization. A claimed density argument must be in a norm on which the
-Weil form is continuous; distributional support approximation alone is not
-enough. No finite computation can establish the implication.
+The zero-side formula, translation law, transform decay and zero count are
+given in Danesh, arXiv:2611.10726, equations (1)–(5). Support widths,
+packet normalization, Baire nonvanishing, pole residues and the Laplace
+singularity step are checked explicitly in B1-24. The zero-free real
+interval follows from the alternating eta series and its relation to zeta
+for `0<s<1`.
 
 ## Acceptance
 
-Prove the fixed-width positivity implication with all cross terms controlled,
-or give a rigorous obstruction/countermodel showing which inference fails.
-Keep conditional statements and analogies separate from a zeta theorem. No
-novelty or RH proof claim is made.
+Closed: prove the fixed-width implication with cross terms controlled, or
+give a countermodel locating a missing inference. The result is a criterion
+equivalence only; RH itself remains unresolved here.
