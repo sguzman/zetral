@@ -33,6 +33,12 @@ On smooth paired boundary profiles, the direct archimedean and prime terms
 have matching leading coefficient; their difference is only known to be
 `o(exp(h/2))`, with unresolved sign. Next bound this remainder uniformly
 and extend beyond the test family before requesting hosted compute.
+Recent primary-source lead: Suzuki, arXiv:2611.33001v1, Theorems 1.1 and
+1.3 and Corollary 3.1 construct local self-adjoint extensions under local
+strict positivity and characterize RH by uniform RKHS diagonal bounds. This
+makes quantitative full-space coercivity a concrete target, but does not turn
+a finite positive block into a lower bound for the full form. See
+`research/positivity/B1-07-local-kernel-criterion.md`.
 
 ### B1 — Analytical extension beyond finite cutoffs
 
