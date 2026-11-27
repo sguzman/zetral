@@ -1,6 +1,7 @@
 # Campaign XCI — Positivity on paired packets as a restricted RH criterion
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED by exact reduction to the even-test
+Weil criterion (2026-11-27).
 
 ## Precise question
 
@@ -63,3 +64,21 @@ assumption, or give a rigorous obstruction demonstrating why the pole
 argument cannot be upgraded from two-sided boundedness to positivity. State
 the established reverse direction separately. No RH proof, novelty claim,
 or operator correspondence follows from an unresolved campaign.
+
+## Closure — B1-23
+
+Every real even compactly supported smooth test `q` is exactly one packet:
+choose `A` larger than its support radius, `h=L=2A`, and
+`g(x)=q(x-A)/sqrt(2)`. Then `f_{g,h}=q(·-A)`, so its autocorrelation and Weil
+value equal those of `q`. Therefore the hypothesis includes the full even
+test class. The established even-test version of Weil's criterion (Yoshida)
+gives the converse to RH; RH gives positivity by the zero-side formula.
+This closes the campaign as a scope reduction to classical theory, not a
+new criterion or proof. Exact derivation and source-status limits are in
+`research/positivity/B1-23-even-packet-Weil-criterion.md`.
+
+Next investigation: seek a strictly smaller or quantitative packet
+subfamily that remains RH-determining, rather than treating this family as
+restricted. In particular test whether bounded-width profile classes or
+paired packets with a fixed support width suffice; do not claim an
+equivalence until the needed localization and density steps are proved.

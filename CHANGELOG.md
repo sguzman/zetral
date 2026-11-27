@@ -626,3 +626,16 @@ one-sided sign condition does not directly provide the two-sided boundedness
 used by the pole argument. See
 `research/positivity/B1-22-complete-packet-boundedness-criterion.md` and
 `research/CAMPAIGN-91.md`.
+
+### XCI closure and XCII activation — even-test reduction
+
+B1-23 shows every real even compactly supported smooth test is exactly a
+paired packet after translation, with `h=L=2A` and
+`g(x)=q(x-A)/sqrt(2)`. The unrestricted packet positivity criterion is
+therefore the established even-test Weil criterion (Yoshida), not a new RH
+criterion. XCII asks whether a single fixed profile width, with arbitrary
+separation, suffices. Recent two-interval criteria use a stronger
+arbitrary-pair Cauchy–Schwarz bound and do not immediately answer this
+equal-profile question. See
+`research/positivity/B1-23-even-packet-Weil-criterion.md` and
+`research/CAMPAIGN-92.md`.

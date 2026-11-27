@@ -318,7 +318,7 @@ Campaign file: `research/CAMPAIGN-90.md`.
 
 **Result (2026-11-27):** For each fixed profile, the complete form is `-D_phi(h)+O_g(1)`; all non-first-prime terms and the archimedean main-term remainder are bounded in shift. RH gives boundedness by B1-21b. Conversely, bounded complete values for each fixed profile give bounded `D_phi`, and B1-17's Laplace-pole argument yields RH. This is a classical-structure reformulation, not a novelty claim. Full audit: `research/positivity/B1-22-complete-packet-boundedness-criterion.md`.
 
-### B1-23 / XCI — Restricted paired-packet positivity criterion (active)
+### B1-23 / XCI — Restricted paired-packet positivity criterion (closed)
 
 Campaign file: `research/CAMPAIGN-91.md`.
 
@@ -329,6 +329,20 @@ Campaign file: `research/CAMPAIGN-91.md`.
 - **Dependencies:** Prime-zeta continuation, residue multiplicities, prior-art review for restricted Weil test families.
 - **Acceptance:** Proof of the restricted converse or a rigorous obstruction to the pole-detection route; separate established directions and conditional hypotheses.
 - **Verification:** Exact `g,L,h` quantifiers, signs, and multiplicities. Finite numerical scans are non-probative.
+
+**Result (2026-11-27):** Every real even compactly supported smooth test `q` is exactly realized by a packet: take `A` larger than its support radius, `h=L=2A`, `g(x)=q(x-A)/sqrt(2)`. Then `f_{g,h}=q(·-A)`, and autocorrelation is translation invariant. Thus this is the full even-test class, whose positivity is RH-equivalent by Yoshida's established even-test Weil criterion. This is classical scope reduction, not novelty or a proof. See `research/positivity/B1-23-even-packet-Weil-criterion.md`.
+
+### B1-24 / XCII — Fixed-window paired positivity (active)
+
+Campaign file: `research/CAMPAIGN-92.md`.
+
+- **Question / hypothesis:** For one fixed `L0`, does positivity for every profile supported in `(0,L0)` and every packet separation imply RH?
+- **Prerequisites:** B1-23's exact even-test realization; B1-17's fixed-window multiplier criterion; Suzuki's local Weil formulation; Danesh arXiv:2611.10726's two-interval Cauchy–Schwarz criterion.
+- **Expected information gain:** Test whether unrestricted packet widths are essential, or whether separation across a single local profile window supplies enough global information.
+- **Design / falsification:** Express fixed-width packet positivity on the zero side; derive what local even tests it contains; try partition and polarization to recover arbitrary cross terms; compare with the stronger arbitrary-pair inequality of Danesh; test abstract Hermitian-form countermodels.
+- **Dependencies:** Exact source normalization, support bookkeeping, continuity of the Weil form in any proposed completion, exact literature hypotheses.
+- **Acceptance:** Prove the implication or identify a rigorous obstruction/countermodel and the missing cross-term control.
+- **Verification:** Audit all support/translation steps; do not infer density from support alone or use finite numerical scans as proof.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 

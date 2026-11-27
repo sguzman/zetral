@@ -117,7 +117,14 @@ proof. See `research/positivity/B1-22-complete-packet-boundedness-criterion.md`
 and closed `research/CAMPAIGN-90.md`. Active Campaign XCI/B1-23 asks whether
 positivity alone on the restricted paired-packet family implies RH; this
 one-sided condition does not directly give the boundedness needed by the
-Laplace argument. See `research/CAMPAIGN-91.md`.
+Laplace argument. B1-23 resolves this: every even compactly supported smooth
+test is exactly represented by a packet, so Yoshida's classical even-test
+Weil criterion applies. The family is not a smaller positivity class when
+all widths are allowed. See `research/positivity/B1-23-even-packet-Weil-criterion.md`
+and closed `research/CAMPAIGN-91.md`. Active Campaign XCII/B1-24 asks whether
+one fixed profile width with arbitrary separation suffices; this is not
+settled by B1-17's multiplier criterion or by the arbitrary-pair results in
+recent two-interval work. See `research/CAMPAIGN-92.md`.
 
 Date: 2026-11-27 UTC.
 Closed bounded campaign: LXXXV, Hermite de Branges spaces and Weil compression; see `research/CAMPAIGN-85.md`. B3-05 excludes direct use of Goncalves–Littmann's standard bounded-derivative higher-jet theorem on all zeta ordinates: its hypotheses force uniform node separation, while Selberg's odd-multiplicity count recalled by Heath-Brown gives `#(Gamma∩[0,T]) >= c T log T`. This does not rule out nonuniform interpolation or another completion. LXXXIV closed within stated scope: B3-04 proves derivative-sample unboundedness is invariant under equivalent renorming of the RH-conditional Weil completion, and identifies the new inverse-compression identity required by any genuinely different completion. Established Hermite interpolation in `H(E^2)` is relevant prior art but supplies no zeta-specific Weil compression. LXXXIII closed within stated scope: B1-17 derives `RH iff sup_h c_h<∞` by Laplace-transform pole detection; B1-18 and B1-19 identify the multiplier's exponential type with `Theta−1/2`, where `Theta=sup Re(rho)`. This is an RH-equivalent criterion and classical zero-abscissa mechanism, not an RH proof or novelty claim. LXXXII closed within structural scope: B1-16 gives the exact phase-orbit criterion for packet liminf; the actual value remains tied to unproved zero-ordinate relations. LXXX closed within scope: B1-12 proves `c_h=O_η(1)` uniformly under RH; B1-13 proves positive limsup; B1-14 bounds the fixed-profile full form. LXXXI closed within scope: B1-15 proves a nonzero zero-residue coefficient survives in the full direct form for a chosen profile, conditional on RH; Suzuki's spectral formula cross-checks it and gives nonnegativity under RH. No full-space coercivity follows. The contour and sampling derivations are manual and have not been machine-checked. Campaign LXXVIII's distinct-spectrum and derivative-sample audit is closed within scope in `research/CAMPAIGN-78-CLOSURE.md`; broader Hilbert–Pólya construction remains open.
