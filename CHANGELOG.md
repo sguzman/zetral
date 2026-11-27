@@ -1,6 +1,6 @@
 # Research history
 
-## 2026-11-27 — HP-02.3 fixed-low random-window bound
+## 2026-11-27 — HP-02.3–.4 fixed-low pencil bounds
 
 For `L_N=N^2+U` with one fixed uniform offset, period counting and
 Borel–Cantelli give eventual `N^-3` simultaneous sine separation almost
@@ -12,7 +12,12 @@ The offset is not explicitly certified; the bound says nothing about moving
 indices, `Delta K`, Schur coupling, high-block invertibility or arithmetic
 spectral transfer. Manual derivation only, no Lean proof or novelty claim.
 Details: `research/operators/HP02-fixed-low-random-window.md` and
-`research/CAMPAIGN-94.md`.
+`research/CAMPAIGN-94.md`. A follow-up uses positive-tail Cauchy–Schwarz and
+Shi's least-eigenvalue product estimate. The barycentric norm and shift
+products cancel exactly, giving `epsilon ||e||^2=O(N/L)=O(1/N)`; therefore
+the full normalized `Delta K-z Delta G` entries tend to zero on every fixed
+low corner, uniformly on compact `z`-sets. The low/high coupling remains
+uncontrolled. See `research/operators/HP02-fixed-low-pencil-corner.md`.
 
 Added `research/PAPER-PIPELINE.md` to track which consolidated results are
 plausible manuscript candidates and what proof-audit, scope, and prior-art

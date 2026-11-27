@@ -103,6 +103,27 @@ comparison basis, not a prime-side bound or spectral transfer. It leaves
 `Delta K`, moving low/high coupling, and uniform high-block invertibility
 open. Full derivation and caveats: `research/operators/HP02-fixed-low-random-window.md`.
 
+## Fixed low-corner checkpoint — HP-02.4
+
+The same schedule controls the complete shifted pencil on every fixed low
+principal corner. In the zero-side basis, the positive-tail contribution to
+`Delta K-xi Delta G` is bounded by Cauchy–Schwarz using (i) the fixed-pair
+`Delta G` tail from (5.35) and (ii) `e^T R e <= 8 L^-1 sum_(j>N)m_j/gamma_j^2`.
+For the scalar ground-state shift, (6.21) combined with the exact barycentric
+denominator lower bound yields the cancellation
+
+    epsilon ||e||_2^2 <= 8(2N+1)L^(-1) sum_(j>N)m_j/gamma_j^2 = O(N/L).
+
+At `L=N^2+U`, this is `O(1/N)`. Together with
+`||r(±gamma_k)||_2 <= 2||e||_2/gamma_k` and HP-02.3's fixed-low metric
+growth, this proves that every fixed normalized matrix entry of
+`Delta K-xi Delta G` tends to zero, uniformly for `xi` in compact sets.
+For each fixed corner there are finitely many entries, so that corner
+converges uniformly. This calculation is RH-conditioned and uses the
+ordinate-dependent zero-side basis to analyze the arithmetic matrices; it
+does not bound any moving low/high block or high-block inverse. Full proof:
+`research/operators/HP02-fixed-low-pencil-corner.md`.
+
 ## Dependencies and acceptance
 
 - Primary source arXiv:2609.04908 v12, especially §§4.9 and 5.

@@ -39,7 +39,12 @@ and consequently, almost surely,
 where `omega_(k,N,L)=(4/L) sin^2(L gamma_k/2) |R'_(N,L)(gamma_k)|^2`.
 The constants may depend on the fixed ordinate and the sequence, but not on
 `N` or `U`. This is a fixed-index statement, not a uniform estimate as `k`
-grows.
+grows. The source's truncation also assumes `gamma_N<T=e^(L_N)`. Selberg's
+`c T log T` lower bound for distinct critical-line ordinates, recalled in
+Heath-Brown and recorded in `research/operators/B3-05-separation-obstruction-to-zeta-hermite-sampling.md`,
+implies `gamma_N=O(N/log(2N))`; hence `gamma_N<e^(N^2)` for all sufficiently
+large `N`. Under RH this verifies the source's retained-zero cutoff for this
+schedule.
 
 ## Almost-sure simultaneous sine bound
 
@@ -136,6 +141,7 @@ summability are manual derivations. Source inputs are Shi,
 [arXiv:2609.04908v12](https://arxiv.org/abs/2609.04908v12), equations
 (5.30)–(5.35), and the classical Riemann–von Mangoldt zero count. The source
 page and the exact interpolation, metric-weight and tail equations were
-checked against the current arXiv HTML on 2026-11-27. No computation, Lean
-proof, independent human review, novelty claim, RH proof or Prime–Weil
+checked against the current arXiv HTML on 2026-11-27. The retained-zero cutoff
+uses the Selberg distinct-ordinate count cited in B3-05. No computation,
+Lean proof, independent human review, novelty claim, RH proof or Prime–Weil
 spectral transfer is claimed.
