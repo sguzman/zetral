@@ -557,3 +557,47 @@ resolvent sense on one `H^2(D)`. The absence of spectral mass at infinity
 is checked from the linear Herglotz coefficient. This concerns the
 normalized scalar Clark models, not the original arithmetic Hamiltonians.
 See `research/operators/B5-14-clark-strong-resolvent-limit.md`.
+
+### LXXXVIII checkpoint — common shift/heat endpoint and closure
+
+B5-15 applies the same Clark/Cayley construction to the RH-conditional
+de Bruijn–Newman family. Its even paired product gives zero linear Herglotz
+coefficient, and Fourier convergence gives the same endpoint inner function.
+The normalized heat Clark models therefore converge in strong resolvent on
+the same `H^2(D)` embedding as the shifted models. At `t=2 omega^2`, their
+resolvent difference tends strongly to zero for each fixed nonreal spectral
+parameter. This gives no finite-parameter intertwiner, spectral-parameter
+uniformity, or original arithmetic Hamiltonian convergence. Campaign LXXXVIII
+closes within this bounded scope; general intertwiners remain open. See
+`research/operators/B5-15-shift-heat-common-clark-limit.md` and
+`research/CAMPAIGN-88-CLOSURE.md`.
+
+### Analytical positivity checkpoint B1-20
+
+Combining B1-12's RH-conditional uniform logarithmic multiplier bound with
+B1-09's Fourier duality yields a uniform `H^log`-dual bound for the smoothed
+first-prime endpoint residual on the form-domain completion. This resolves
+the apparent tension with B1-10: its Chebyshev-only estimate alone loses at
+high frequencies, while B1-12 obtains a stronger bound using the zero
+residues. This remains one bounded term, not positivity or coercivity of the
+full Weil form. See `research/positivity/B1-20-rh-log-dual-bound.md`.
+
+### LXXXIX activation — full-form logarithmic-domain bounds
+
+Campaign LXXXIX begins B1-21: determine whether the remaining terms of the
+direct Weil formula are uniformly bounded on the logarithmic profile domain
+after the leading archimedean/first-prime cancellation. B1-20 bounds only
+the first-prime residual under RH; B1-14's complete-form result is for a
+fixed profile. The campaign will test componentwise bounds and explicit
+high-frequency profiles, while preserving the possibility that only a
+combined cancellation controls the full form. See `research/CAMPAIGN-89.md`.
+
+### LXXXIX checkpoint — prime-power terms
+
+B1-21a proves an unconditional `O_L(1)` bound for the prime-square and
+higher-prime-power terms on all normalized paired packet profiles. For
+`k>=3`, this follows by absolute convergence of the prime-power weights; for
+`k=2`, the cross term samples primes in an interval of fixed multiplicative
+width, controlled by Chebyshev and partial summation. The pole and
+continuous-kernel terms remain open on the `H^log` unit ball. See
+`research/positivity/B1-21-prime-power-log-domain-bound.md`.

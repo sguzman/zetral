@@ -1,6 +1,6 @@
 # Research state
 
-## Current investigation checkpoint — LXXXVIII / B5-13 (2026-11-27)
+## Current investigation checkpoint — LXXXIX / B1-21 (2026-11-27)
 
 LXXXVI closed within the conditional shifted-xi endpoint scope. Positive-shift
 operators have a noncanonical strong-resolvent limit after ordered-eigenbasis
@@ -86,15 +86,35 @@ the zero linear Herglotz coefficient excludes an atom at infinity. The
 operators are extended by zero on model-space complements. This does not
 identify Suzuki's original arithmetic Hamiltonians or the multiplicity-fiber
 operators from B3-12. Full note:
-`research/operators/B5-14-clark-strong-resolvent-limit.md`. Next test the
-same construction for the heat-flow family and compare their common endpoint
-limits. Do not infer a finite-parameter intertwiner from that shared limit.
+`research/operators/B5-14-clark-strong-resolvent-limit.md`. B5-15 applies
+the construction to the RH-conditional heat family. Its paired even product
+gives zero linear Herglotz coefficient, and the Fourier family converges
+locally to the same endpoint; the heat Clark models therefore converge
+strongly in resolvent to the same operator on `H²(D)`. For `t=2omega²`, the
+two resolvents differ strongly by a term tending to zero at each fixed
+nonreal spectral parameter. This is only a common endpoint limit: no
+finite-parameter intertwiner, spectral-parameter uniformity, or original
+arithmetic Hamiltonian convergence follows. LXXXVIII is closed within its
+bounded scope; see `research/CAMPAIGN-88-CLOSURE.md` and
+`research/operators/B5-15-shift-heat-common-clark-limit.md`.
+
+B1-20 independently combines B1-12's RH-conditional uniform multiplier
+bound with B1-09's Fourier duality to obtain a uniform `H^log`-dual bound
+for the first-prime residual on its form-domain completion. This does not
+extend to the full Weil form: remaining terms and cross-effects are not
+controlled. B1-21a now proves unconditionally that the prime-square and all
+higher prime-power terms are uniformly bounded over the normalized packet
+family, even on the L² unit profiles. The pole and continuous-kernel terms
+remain to be audited on `H^log`, and no sign of the complete form follows.
+See `research/positivity/B1-20-rh-log-dual-bound.md`,
+`research/positivity/B1-21-prime-power-log-domain-bound.md`, and the active
+campaign plan `research/CAMPAIGN-89.md`.
 
 Date: 2026-11-27 UTC.
 Closed bounded campaign: LXXXV, Hermite de Branges spaces and Weil compression; see `research/CAMPAIGN-85.md`. B3-05 excludes direct use of Goncalves–Littmann's standard bounded-derivative higher-jet theorem on all zeta ordinates: its hypotheses force uniform node separation, while Selberg's odd-multiplicity count recalled by Heath-Brown gives `#(Gamma∩[0,T]) >= c T log T`. This does not rule out nonuniform interpolation or another completion. LXXXIV closed within stated scope: B3-04 proves derivative-sample unboundedness is invariant under equivalent renorming of the RH-conditional Weil completion, and identifies the new inverse-compression identity required by any genuinely different completion. Established Hermite interpolation in `H(E^2)` is relevant prior art but supplies no zeta-specific Weil compression. LXXXIII closed within stated scope: B1-17 derives `RH iff sup_h c_h<∞` by Laplace-transform pole detection; B1-18 and B1-19 identify the multiplier's exponential type with `Theta−1/2`, where `Theta=sup Re(rho)`. This is an RH-equivalent criterion and classical zero-abscissa mechanism, not an RH proof or novelty claim. LXXXII closed within structural scope: B1-16 gives the exact phase-orbit criterion for packet liminf; the actual value remains tied to unproved zero-ordinate relations. LXXX closed within scope: B1-12 proves `c_h=O_η(1)` uniformly under RH; B1-13 proves positive limsup; B1-14 bounds the fixed-profile full form. LXXXI closed within scope: B1-15 proves a nonzero zero-residue coefficient survives in the full direct form for a chosen profile, conditional on RH; Suzuki's spectral formula cross-checks it and gives nonnegativity under RH. No full-space coercivity follows. The contour and sampling derivations are manual and have not been machine-checked. Campaign LXXVIII's distinct-spectrum and derivative-sample audit is closed within scope in `research/CAMPAIGN-78-CLOSURE.md`; broader Hilbert–Pólya construction remains open.
-Latest LXXVII audits: RHA-03 checks zero-exclusion residue signs and Landau application; RHA-04 checks twist-selection exponents conditional on analytic inputs; RHA-05 reduces parameter dominance to scalar inequalities for `L=log b>100`; RHA-06 audits the short-span to ramified-range reduction; RHA-07 derives the short-basis constant from weak transference; RHA-08 checks the prime-remainder transform and residue normalization. All are scoped manual source audits, not Lean rebuilds. B1-09 shows the local form domain has logarithmic Fourier regularity, not H1, and gives an unconditional PNT-based `o(exp(h/2))` endpoint estimate in that norm. B1-10 derives an exact signed multiplier and, conditionally on RH, an `O(h²)` bound relative to an H^(1/2)-type profile norm. B1-11–19 establish RH-conditional first-prime multiplier boundedness/non-decay, packet oscillation, phase-orbit liminf structure, an RH-equivalent uniform-dual criterion, and its matching zero-abscissa growth rate. No RH proof, zero-ordinate independence, or full-form coercivity is claimed. Next seek a common-space tail bound that handles B5-11's exponential spectral layer; commuting endpoint averages alone do not prove global operator convergence.
+Latest LXXVII audits: RHA-03 checks zero-exclusion residue signs and Landau application; RHA-04 checks twist-selection exponents conditional on analytic inputs; RHA-05 reduces parameter dominance to scalar inequalities for `L=log b>100`; RHA-06 audits the short-span to ramified-range reduction; RHA-07 derives the short-basis constant from weak transference; RHA-08 checks the prime-remainder transform and residue normalization. All are scoped manual source audits, not Lean rebuilds. B1-09 shows the local form domain has logarithmic Fourier regularity, not H1, and gives an unconditional PNT-based `o(exp(h/2))` endpoint estimate in that norm. B1-10 derives an exact signed multiplier and, conditionally on RH, an `O(h²)` bound relative to an H^(1/2)-type profile norm. B1-11–20 establish RH-conditional first-prime multiplier boundedness/non-decay, packet oscillation, phase-orbit liminf structure, an RH-equivalent uniform-dual criterion, its matching zero-abscissa growth rate, and a uniform H^log-dual estimate for the first-prime residual. No RH proof, zero-ordinate independence, or full-form coercivity is claimed. B5-14/B5-15 establish a common endpoint strong-resolvent limit only for normalized Clark models; the exponential spectral layer is not controlled uniformly and Suzuki's original arithmetic Hamiltonian is not identified.
 RHA-04's square/nonsquare majorants, summability, `u≥1/T` exponent budget, and per-zero three-lines exponent contradiction remain conditional on pinned Pólya–Vinogradov, Gaussian/Mellin, functional-equation, and three-lines inputs. RHA-06/07 validate the short-span-to-ramified-range and geometry-of-numbers constant reductions, conditional on trace/codifferent and transference lemmas. RHA-08's transform relies on Euler products, partial summation, Dirichlet nonvanishing on `Re(s)≥1`, and logarithmic-derivative residue theory. None is a Lean rebuild. B1-10 and B1-11's stronger multiplier bounds assume RH and control only the first-prime endpoint component; they do not imply positivity.
-Active portfolio: LXXXVIII shifted-xi/heat-flow operator comparison, B1 analytical extension, LXXVI original-form positivity audit, and LXXVII external formal-proof status audit. External Lean FRO/Mathlib and independent-checker reports are recorded, but Zetral has neither rerun them nor independently audited the full argument. RHA-01–08 are scoped manual audits with explicit dependencies, not a Lean rebuild or complete proof verification. LXXVI remains incomplete: run 45912557912 gives a positive determinant enclosure for the directly evaluated even 2x2 principal block at h=2.51, but not full-form positivity or a complete source-form map. B1-01–19 give local RKHS targets, endpoint estimates, packet-level oscillation results and an equivalent criterion; they do not prove RH or transfer to full-space L2 coercivity. LXXVIII closed within its bounded operator-candidate audit; broader Hilbert–Pólya work remains open. No Zetral RH proof or independent verification of Alpöge's proof is claimed.
+Active portfolio: B1 analytical extension, LXXVI original-form positivity audit, and LXXVII external formal-proof status audit; LXXXVIII is closed within its bounded scope. External Lean FRO/Mathlib and independent-checker reports are recorded, but Zetral has neither rerun them nor independently audited the full argument. RHA-01–08 are scoped manual audits with explicit dependencies, not a Lean rebuild or complete proof verification. LXXVI remains incomplete: run 45912557912 gives a positive determinant enclosure for the directly evaluated even 2x2 principal block at h=2.51, but not full-form positivity or a complete source-form map. B1-01–20 give local RKHS targets, endpoint estimates, packet-level oscillation results and an RH-conditional first-prime H^log dual bound; they do not prove RH or transfer to full-space L2 coercivity. Broader Hilbert–Pólya construction remains open. No Zetral RH proof or independent verification of Alpöge's proof is claimed.
 
 ## U76-09 latest mathematical checkpoint — 2026-11-26
 

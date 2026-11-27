@@ -78,11 +78,13 @@ has no sign conclusion.
 ## Falsification boundary and remaining gap
 
 The local form domain is logarithmic Fourier regularity `H^log`, as recorded
-in B1-09. Estimate (2) gives only a multiplier-to-log-weight majorant
-`C h²(1+|ξ|)/log(2+|ξ|)`, which is unbounded as `|ξ|→∞`; it therefore does
-not yield a uniform `H^log`-dual estimate. This is a failure of the bound,
-not a proof that the true signed multiplier is large or that a negative form
-direction exists. High-frequency cancellation in (1) is unresolved.
+in B1-09. Estimate (2) alone gives only a multiplier-to-log-weight majorant
+`C h²(1+|ξ|)/log(2+|ξ|)`, which is unbounded as `|ξ|→∞`; this estimate alone
+does not yield a uniform `H^log`-dual estimate. A later contour-shift
+argument in B1-12 gives the stronger RH-conditional logarithmic bound by
+summing zero residues; B1-20 records its implication for the `H^log` dual
+norm. This distinction does not change the limitation that the bounded
+piece is only the first-prime endpoint discrepancy, not the full Weil form.
 
 The calculation concerns only the first-prime endpoint piece. It does not
 include higher prime powers, the other endpoint, archimedean or continuous

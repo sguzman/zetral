@@ -1,6 +1,6 @@
 # Campaign LXXXVIII — Shifted-xi systems and de Bruijn-Newman flow
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED within the scalar-deformation and normalized-Clark scope (2026-11-27); see `research/CAMPAIGN-88-CLOSURE.md`.
 
 ## Precise question
 
@@ -237,8 +237,21 @@ multiplicity-augmented eigenbasis limit. The derivation and its domain and
 infinity checks are in
 `research/operators/B5-14-clark-strong-resolvent-limit.md`.
 
-Next apply the same construction to the RH-conditional heat-flow
-logarithmic-derivative family. Determine whether both deformations converge
-strongly to the same endpoint Clark operator after the natural Hardy
-embeddings, and keep this zeroth-order convergence separate from the
-B5-09/B5-10 finite-parameter obstructions.
+This was the final planned test in the bounded campaign scope; its outcome is
+recorded in B5-15 below.
+
+## Checkpoint B5-15
+
+Under RH, Rodgers–Tao's `Lambda>=0` and the classical equivalence
+`RH iff Lambda<=0` give `Lambda=0`; hence the heat family has only real zeros
+for `t>=0`. Its even entire product gives the Herglotz quotient
+`q_t=-F_t'/F_t`; the paired reciprocal-square convergence implies its linear
+Herglotz coefficient is zero. The Fourier representation gives local-uniform
+convergence to `q_0` as `t->0+`. Applying the B5-14 Clark/Cayley construction
+therefore proves strong-resolvent convergence on the same `H²(D)` embedding
+to the B5-07 endpoint operator. Together with B5-14 this implies that the
+shift and heat resolvents differ strongly by a quantity tending to zero at
+each fixed nonreal spectral parameter when `t=2 omega²`. This is a shared
+endpoint limit only: it supplies neither a finite-parameter intertwiner nor
+uniformity in spectral parameter. The product and coefficient argument is
+recorded in `research/operators/B5-15-shift-heat-common-clark-limit.md`.
