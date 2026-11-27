@@ -54,6 +54,18 @@ it gives no sign or full-form positivity. The contour proof has not been
 formalized or independently machine-checked. Next seek a lower-bound
 counterexample route or incorporate the compensating archimedean term.
 
+## Checkpoint B1-13 — non-decay along a sequence
+
+For fixed `ξ`, B1-12 expresses `Δ_hat_h(ξ)` as an absolutely convergent
+Fourier series in `h` plus an exponentially decaying remainder. Choose a
+nonzero zeta-zero ordinate and then a real `ξ` where its cutoff-transform
+coefficient is nonzero. Long-interval mean square of the series is the sum
+of squared coefficients, so `limsup_(h→∞) c_h>0`, conditional on RH. This
+rules out convergence `c_h→0`, but proves neither a positive lower bound for
+all large h nor full-form sign/positivity. The frequency is existential and
+no numerical constant is claimed. See
+`research/positivity/B1-13-almost-periodic-lower-limsup.md`.
+
 ## Information gain and falsification
 
 A uniform bound for `c_h` would extend first-prime cancellation to bounded

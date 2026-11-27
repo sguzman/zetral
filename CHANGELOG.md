@@ -264,3 +264,11 @@ includes both the nontrivial zero residues and the `k=2` prime-zeta pole at
 logarithmic-derivative estimate. This bound concerns only the smoothed
 first-prime endpoint term and proves no positivity or spectral result. The
 derivation is not machine checked.
+
+## LXXX high-frequency multiplier checkpoint — B1-13 (2026-11-27)
+
+`research/positivity/B1-13-almost-periodic-lower-limsup.md` applies
+mean-square orthogonality to the B1-12 explicit zero-residue series. At an
+existential fixed frequency it proves `limsup_(h→∞) c_h>0` under RH, so the
+smoothed first-prime multiplier cannot converge to zero. Small subsequences
+remain possible; this gives no full-form sign or positivity result.
