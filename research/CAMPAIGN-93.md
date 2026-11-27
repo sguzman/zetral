@@ -1,6 +1,8 @@
 # Campaign XCIII — Arithmetic finite-matrix spectral transfer
 
-Date opened: 2026-11-27. Status: ACTIVE.
+Date opened: 2026-11-27. Status: CLOSED within the fixed-index tail-audit
+scope; see `research/CAMPAIGN-93-CLOSURE.md`. The Prime–Weil transfer problem
+itself remains open.
 
 ## Precise question
 
@@ -123,3 +125,20 @@ directions. In parallel, attempt a prime-side compressed-form estimate that
 does not decompose through zero ordinates. No numerical computation is
 needed at this stage. Source review is manual; the paper's arithmetic
 numerical experiment has not been independently reproduced.
+
+HP-01.2 establishes a finite-family metric-parameter bound and isolates its
+limit. For any `N` frequencies bounded below by `gamma_*`, a union-bound
+argument selects `L in [T,2T]` with all retained sine factors at least
+`1/[100N(1+1/(gamma_*T))]`. The selection depends on the ordinates, so it is
+not an arithmetic-independent parameter rule. The exact product formula
+(5.31) also shows that a retained interpolation derivative tends to zero
+when two frequencies coalesce while the grid is held away from them. Thus
+frequency count and a positive lower frequency alone cannot bound the metric
+weights. This is an abstract countermodel, not a claim about actual zeta
+gaps. See `research/operators/HP01-simultaneous-resonance-bound.md`.
+
+Next investigate whether averaging the arithmetic pencils over an `L`
+interval can replace pointwise resonance avoidance while retaining an
+arithmetic-defined common Hilbert space; separately test whether the exact
+prime-side matrix form yields a derivative-free/basis-invariant relative
+estimate. Sine averaging alone does not control interpolation conditioning.

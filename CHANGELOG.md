@@ -663,3 +663,23 @@ factors. A 2x2 example rules out inferring relative convergence from
 unwhitened operator-norm convergence alone. This identifies the first
 quantitative bottleneck, not an obstruction to the arithmetic construction.
 See `research/operators/HP01-relative-tail-metric-audit.md`.
+
+HP-01.2 proves an elementary simultaneous-resonance avoidance bound: for
+`N` fixed frequencies bounded below by `gamma_*`, some `L` in `[T,2T]`
+keeps every sine factor above `1/[100N(1+1/(gamma_*T))]`. The selection
+depends on the frequencies. The source's product formula for the
+interpolation derivative admits an abstract close-pair degeneration, so
+frequency count and a positive lower frequency alone do not give metric
+coercivity; this is not a claim about actual zeta gaps. Fixed-frequency
+averaging removes the sine loss but does not control the `L`-dependent
+interpolation derivatives. See
+`research/operators/HP01-simultaneous-resonance-bound.md`.
+
+Campaign XCIII is closed within the audit of the available fixed-index and
+uncompressed estimates, not as a resolution of the arithmetic transfer
+problem. Campaign XCIV now tests fixed-low-spectrum transfer by Schur
+complements. HP-02.1 derives the exact finite-dimensional reduction and
+constructs a 2x2 coupling example showing why low-block convergence plus
+high-block resolvent control is insufficient. See
+`research/CAMPAIGN-93-CLOSURE.md`, `research/CAMPAIGN-94.md`, and
+`research/operators/HP02-low-window-schur-criterion.md`.

@@ -1,6 +1,6 @@
 # Research state
 
-## Current investigation checkpoint — XCIII / HP-01 (2026-11-27)
+## Current investigation checkpoint — XCIV / HP-02 (2026-11-27)
 
 LXXXVI closed within the conditional shifted-xi endpoint scope. Positive-shift
 operators have a noncanonical strong-resolvent limit after ordered-eigenbasis
@@ -136,7 +136,23 @@ or RH proof is established in Zetral. HP-01.1 translates the paper's
 fixed-index fourth-power tail estimate into its whitened metric coordinates:
 the implied constants and explicit metric weights are not controlled
 uniformly as the dimension grows, so it does not yield spectral transfer.
-See `research/operators/HP01-relative-tail-metric-audit.md`.
+See `research/operators/HP01-relative-tail-metric-audit.md`. HP-01.2 proves
+an existential `L`-selection bound avoiding simultaneous sine resonances at
+loss `O(1/N)` for a finite frequency family, but the selection depends on
+the ordinates and does not control the interpolation derivative. Its exact
+product formula admits an abstract coalescing-frequency countermodel to any
+derivative lower bound based only on a frequency lower bound and zero count;
+this says nothing about actual zeta gap sizes. Campaign XCIII is closed
+within the fixed-index tail-audit scope; full transfer remains open. See
+`research/CAMPAIGN-93-CLOSURE.md` and
+`research/operators/HP01-simultaneous-resonance-bound.md`. Active Campaign
+XCIV/HP-02 asks whether fixed-low-spectrum transfer can use a Schur complement
+instead of a global whitened norm. HP-02.1 derives the finite-dimensional
+criterion and shows by a 2x2 example that low-block convergence and high-block
+resolvent control alone are insufficient; the weighted coupling must vanish.
+No Prime–Weil block estimate is proved. See
+`research/CAMPAIGN-94.md` and
+`research/operators/HP02-low-window-schur-criterion.md`.
 
 Date: 2026-11-27 UTC.
 Closed bounded campaign: LXXXV, Hermite de Branges spaces and Weil compression; see `research/CAMPAIGN-85.md`. B3-05 excludes direct use of Goncalves–Littmann's standard bounded-derivative higher-jet theorem on all zeta ordinates: its hypotheses force uniform node separation, while Selberg's odd-multiplicity count recalled by Heath-Brown gives `#(Gamma∩[0,T]) >= c T log T`. This does not rule out nonuniform interpolation or another completion. LXXXIV closed within stated scope: B3-04 proves derivative-sample unboundedness is invariant under equivalent renorming of the RH-conditional Weil completion, and identifies the new inverse-compression identity required by any genuinely different completion. Established Hermite interpolation in `H(E^2)` is relevant prior art but supplies no zeta-specific Weil compression. LXXXIII closed within stated scope: B1-17 derives `RH iff sup_h c_h<∞` by Laplace-transform pole detection; B1-18 and B1-19 identify the multiplier's exponential type with `Theta−1/2`, where `Theta=sup Re(rho)`. This is an RH-equivalent criterion and classical zero-abscissa mechanism, not an RH proof or novelty claim. LXXXII closed within structural scope: B1-16 gives the exact phase-orbit criterion for packet liminf; the actual value remains tied to unproved zero-ordinate relations. LXXX closed within scope: B1-12 proves `c_h=O_η(1)` uniformly under RH; B1-13 proves positive limsup; B1-14 bounds the fixed-profile full form. LXXXI closed within scope: B1-15 proves a nonzero zero-residue coefficient survives in the full direct form for a chosen profile, conditional on RH; Suzuki's spectral formula cross-checks it and gives nonnegativity under RH. No full-space coercivity follows. The contour and sampling derivations are manual and have not been machine-checked. Campaign LXXVIII's distinct-spectrum and derivative-sample audit is closed within scope in `research/CAMPAIGN-78-CLOSURE.md`; broader Hilbert–Pólya construction remains open.

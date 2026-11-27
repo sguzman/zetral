@@ -346,7 +346,7 @@ Campaign file: `research/CAMPAIGN-92.md`.
 
 **Result (2026-11-27):** For any fixed `L0>0`, fixed-width packet positivity is equivalent to RH. Under a hypothetical off-line zero, a Baire-generic arbitrary real profile supported in `[-d,d]`, `d<L0/2`, has transform nonzero at every reflected centered zero. Its fixed reflected packet profile converts all separations `H=L0+t` to translates of `h+tau_t Rh`. Positivity makes the cross-term-plus-constant nonnegative; its Laplace transform has poles at every centered zero and finite abscissa equal to `sup Re(rho-1/2)`. The elementary Landau singularity argument contradicts regularity at that positive real abscissa. Manual proof only; no novelty claim, RH proof, or machine check. Full derivation: `research/positivity/B1-24-fixed-width-positivity-RH-criterion.md`.
 
-### XCIII / HP-01 — Arithmetic finite-matrix spectral transfer (active)
+### XCIII / HP-01 — Arithmetic finite-matrix spectral transfer (closed at audit scope)
 
 Campaign file: `research/CAMPAIGN-93.md`.
 
@@ -358,7 +358,18 @@ Campaign file: `research/CAMPAIGN-93.md`.
 - **Acceptance:** A source-audited zero-independent relative transfer estimate strong enough for a spectral limit, or a rigorous obstruction under explicit hypotheses and a materially different follow-up route. Numerical resemblance to known zeros is not spectral correspondence.
 - **Verification:** Independent pencil algebra audit and countermodel; primary-source comparison; exact arithmetic or hosted computation only when it tests a stated finite bound. Any limiting theorem must prove self-adjointness, full spectrum, multiplicities, and absence of spectral pollution.
 
-**Progress (2026-11-27, HP-01.1):** Independently translated the paper's fixed-index tail estimate to the `2N`-dimensional reference eigenbasis. The whitened operator norm requires uniform control of each tail entry divided by the square roots of the two reference metric weights, with a dimension factor; the source's fixed-`z,w` constants and possible small sine/interpolation factors do not supply this. A two-dimensional positive-metric countermodel shows why unwhitened norm convergence is insufficient, but does not model or refute the actual zeta matrices. Next quantify simultaneous resonance avoidance and the remaining interpolation-weight lower bound, then attempt a prime-side compressed estimate.
+**Progress (2026-11-27, HP-01.1–.2):** The fixed-index tail estimate does not control the whitened norm because its constants are not uniform over moving basis indices and the relative metric can degenerate; a 2D positive-metric countermodel falsifies the generic unwhitened-to-relative inference. A period-counting/union-bound lemma proves that for any finite family of `N` frequencies bounded below by `gamma_*`, some `L in [T,2T]` keeps all sine factors above `1/[100N(1+1/(gamma_*T))]`. This L is selected using the zero ordinates and gives no control of the interpolation derivative. The source's exact product formula shows that derivative can tend to zero in an abstract close-pair family, so frequency count and a lower frequency bound alone cannot certify the relative metric. This is not evidence of close zeta zeros and does not refute the actual pencil. Next test an averaged-L metric and a derivative-free prime-side estimate. Full note: `research/operators/HP01-simultaneous-resonance-bound.md`.
+
+Campaign closure: `research/CAMPAIGN-93-CLOSURE.md`. Full arithmetic transfer remains open; Campaign XCIII only establishes what the currently cited fixed-index/uncompressed estimates fail to supply.
+
+### XCIV / HP-02 — Fixed-low-spectrum Schur transfer (active)
+
+Campaign file: `research/CAMPAIGN-94.md`.
+
+- **Question:** Can fixed low generalized eigenvalues be transferred using a stable high-block resolvent and vanishing Schur correction, without the global relative-norm target?
+- **Progress (HP-02.1):** Exact block determinant reduction derived; a Hermitian 2x2 countermodel shows low-block convergence and high-block resolvent control do not suffice without weighted low/high coupling control. This is not a zeta-matrix obstruction.
+- **Next:** Derive the relevant Prime–Weil blocks and determine whether arithmetic-side bounds control high-block invertibility and weighted coupling without RH or zero inputs.
+- **Acceptance:** A verified low-spectrum transfer estimate for the arithmetic pencils, or a precise obstruction to deriving the required block bounds from current explicit-formula estimates. A general Schur criterion alone does not close the campaign.
 
 ### B2 — RH-only coercivity and exceptional-set limits
 
