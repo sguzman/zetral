@@ -272,6 +272,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B5-07):** Clark's alpha=-1 model for the limiting normalized inner function has measure equal to the xi zero divisor, since its Herglotz function is `-i q`. This recovers the existing conditional zero-defined multiplication model, not a zero-independent construction. Strong-resolvent convergence of the varying operators remains open. See `research/operators/B5-07-clark-model-for-normalized-limit.md`.
 
+**Progress (2026-11-27, B5-08):** Under RH, local-uniform convergence of the normalized shifted Herglotz functions invokes the classical de Branges continuity theorem: trace-normalized canonical Hamiltonian primitives and finite-interval transfer matrices converge locally uniformly. This gives a canonical-system endpoint limit for the rescaled de Branges pairs, not Suzuki's original arithmetic Hamiltonian, a heat-flow intertwiner, or global strong-resolvent convergence. Next compare heat-flow and shift Weyl functions for an exact transformation law or coefficient obstruction. See `research/operators/B5-08-canonical-system-limit.md`.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

@@ -485,3 +485,13 @@ This is standard Clark theory applied to the normalized pair, not an
 independent operator construction. Strong-resolvent convergence of the
 varying operators remains open. See
 `research/operators/B5-07-clark-model-for-normalized-limit.md`.
+
+### LXXXVIII checkpoint — canonical-system endpoint limit
+
+B5-08 applies the classical de Branges continuity theorem to the normalized
+shifted Herglotz functions. Under RH, the trace-normalized Hamiltonian
+primitives and finite-interval transfer matrices converge to those of the
+limit Weyl function. This concerns the rescaled de Branges pairs and is not
+an identification with Suzuki's arithmetic Hamiltonian, a heat-flow
+intertwiner, or global strong-resolvent convergence. See
+`research/operators/B5-08-canonical-system-limit.md`.

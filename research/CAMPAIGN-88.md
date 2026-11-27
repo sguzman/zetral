@@ -121,6 +121,19 @@ still do not establish strong-resolvent convergence of the varying
 operators. See
 `research/operators/B5-07-clark-model-for-normalized-limit.md`.
 
-Next investigate a canonical-system intertwiner independently of the scalar
-Fourier multiplier and distinguish any possible operator relation from
-equality of zero sets.
+## Checkpoint B5-08
+
+Under RH, `m_omega=B^omega/(omega A^omega)` and `m_0=-F'/F` are Herglotz
+functions with `m_omega -> m_0` locally uniformly on `C+`. De Branges'
+continuity theorem for trace-normalized canonical systems therefore gives
+locally uniform convergence of the integrated Hamiltonians and of the
+finite-interval transfer matrices for the corresponding inverse-spectral
+systems. This is a canonical-system endpoint limit for the *rescaled*
+de Branges pairs; it does not identify Suzuki's original arithmetic
+Hamiltonian, provide pointwise Hamiltonian convergence, or prove a
+heat-flow intertwiner or global strong-resolvent convergence. See
+`research/operators/B5-08-canonical-system-limit.md`.
+
+Next compare canonical Weyl functions under the heat deformation with the
+shifted family: seek an exact transformation law or a coefficient-level
+obstruction, explicitly tracking the different finite-parameter systems.
