@@ -106,6 +106,27 @@ input or an augmented construction. This is a conditional structural
 limitation, not a claim that any zeta zero is multiple and not a proof that
 the analytic pencil has no other notion of algebraic multiplicity.
 
+## HP-03.4 — Closability and kernel of the natural gauge form
+
+In `H_2=L²(e^(2phi)dx)`, the map `Uu=e^phi u` is unitary and
+`U L U^(-1)=D=-i d/dx`. The form
+
+    q[u]=||L u||_(H_2)^2
+
+therefore becomes `q[g]=||Dg||_(L²)^2` with form domain `H¹(R)`. It is a
+closed nonnegative form because `q[g]+||g||²` is the usual `H¹` norm; its
+associated self-adjoint operator is `D²=-d²/dx²`. The form has trivial kernel
+inside `H_2`: `Dg=0` forces `g` constant, and the only constant in
+`L²(R,dx)` is zero. The formal vector `e^(-phi)` is not in `H_2`, since its
+weighted squared norm is `integral_R 1 dx=+infinity`.
+
+This resolves closability for the natural gauge choice but does not solve the
+zeta pencil: the induced comparison operator is the free Laplacian, and
+HP-03.1 shows `(L D,L)` is not symmetric in this form on the test core. The
+source's zero-defined `H_finite` and its null-vector discussion concern a
+different, not-yet-specified ambient domain. No spectral correspondence
+follows from this form calculation.
+
 ## Falsification and next designs
 
 1. Independently re-derive the boundary-value/zero correspondence, including
@@ -115,9 +136,11 @@ the analytic pencil has no other notion of algebraic multiplicity.
    pair symmetry on the common compactly supported smooth core. Extend this
    audit only if the candidate domain does not contain that core; in that case
    compute the exact boundary form on the proposed domain.
-3. Next investigate the natural quotient by `ker L=span{e^(-phi)}` and whether the
-   induced seminorm is closable and positive definite on a zero-independent
-   core.
+3. **Completed for the natural gauge space as HP-03.4:** the graph form is
+   closed and its kernel is trivial because `e^(-phi)` is excluded from
+   `H_2`. Determine whether any zero-independent domain containing the
+   source's eigenfunctions can also accommodate the formal null vector and
+   yield a positive quotient.
 4. Clarify the boundary problem's multiplicity notion and whether a
    self-adjoint realization can match analytic zero multiplicity without
    assuming simplicity.

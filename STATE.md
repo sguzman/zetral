@@ -18,7 +18,11 @@ does not exclude nonlocal metrics or a smaller zero-defined domain. Next
 HP-03.3 observes that the boundary problem has only a one-dimensional
 solution space at each zero, independent of its analytic multiplicity; the
 source itself notes this as weak evidence toward simplicity, not proof.
-Continue with the kernel quotient, zero-independent cores, and multiplicity.
+HP-03.4 shows the natural gauge graph form is closed and has trivial kernel
+inside its weighted L2 space, while the formal null vector `e^(-phi)` is
+excluded as nonintegrable. Its associated operator is the free Laplacian, not
+the zeta pair; pair symmetry still fails. Continue with zero-independent
+domains and nonlocal metrics.
 Full records: `research/CAMPAIGN-94-CLOSURE.md` and
 `research/CAMPAIGN-95.md`.
 

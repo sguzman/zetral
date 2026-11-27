@@ -778,3 +778,11 @@ paper itself notes this weakly supports simplicity, not as proof. Exact zero
 multiplicities are not represented by geometric eigenspace dimension in the
 current boundary problem; an augmented model or simplicity theorem would be
 needed for that notion of correspondence. No multiple zero is asserted.
+
+## HP-03.4 — Natural gauge-form closure (2026-11-27)
+
+Under the unitary gauge map, the natural form `||L_phi u||²` is the standard
+Dirichlet form `||Dg||²` on `H¹(R)`, hence closed with associated operator
+`-d²/dx²`. Its kernel is trivial in the weighted L2 space because the formal
+kernel maps to a non-integrable constant. This clarifies the domain issue but
+does not realize the zeta pencil; pair symmetry still fails.
