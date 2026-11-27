@@ -264,6 +264,8 @@ a finite positive block into a lower bound for the full form. See
 
 **Progress (2026-11-27, B5-03):** At any simple zero of the common initial function, shift and heat roots have the same quadratic displacement under `t=2omega^2`; their quartic coefficient difference is `F''''(r)/(12F'(r))`. A toy entire-function check confirms the sign and factor. This is conditional on a simple zero and does not establish nonzero separation for any xi zero. See `research/operators/B5-03-simple-zero-motion-comparison.md`.
 
+**Progress (2026-11-27, B5-04):** For a hypothetical order-four zero, shift and heat perturbations have different leading scaled root polynomials on `delta=omega*x`, with explicit four-root clusters certified locally by Rouché. This demonstrates the multiple-zero gap in the simple-root argument but does not claim that xi has a multiple zero. See `research/operators/B5-04-multiple-zero-splitting.md`.
+
 ### B2 — RH-only coercivity and exceptional-set limits
 
 - **Question / hypothesis:** Do the RH-only nested-window growth theorem and

@@ -449,3 +449,11 @@ Suzuki shift and heat flow have matching quadratic displacement for
 `F''''(r)/(12F'(r))`. A toy entire function checks the coefficient. This is
 conditional on simplicity and does not establish a nonzero difference at any
 xi zero. See `research/operators/B5-03-simple-zero-motion-comparison.md`.
+
+### LXXXVIII checkpoint — multiple-zero splitting
+
+B5-04 analyzes an order-four zero in a general analytic function. Under the
+`delta=omega*x` scaling, Suzuki-shift and heat-flow perturbations converge to
+different quartic polynomials with explicit simple real roots; Rouché gives
+the nearby local root clusters. This is conditional and does not assert a
+multiple xi zero. See `research/operators/B5-04-multiple-zero-splitting.md`.

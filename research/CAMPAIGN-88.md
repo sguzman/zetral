@@ -78,7 +78,16 @@ factor. This is conditional local perturbation theory and does not assert
 that any xi zero is simple or that the derivative ratio is nonzero. See
 `research/operators/B5-03-simple-zero-motion-comparison.md`.
 
-Next test whether zero motion at higher orders yields a nontrivial identity
-or whether multiple zeros obstruct the local branch comparison, then
-investigate a canonical-system intertwiner independently of the scalar
-Fourier multiplier.
+## Checkpoint B5-04
+
+For a hypothetical order-four zero, the shift and heat zero branches split
+on the `delta=omega*x` scale to different quartic polynomials. Their four
+limiting scaled roots are explicit and simple; Rouché's theorem transfers
+them to local root clusters for small positive shift. This shows the
+simple-zero expansion cannot cover the multiple-zero case by continuity.
+It is conditional on multiplicity four and says nothing about whether xi has
+such a zero. See `research/operators/B5-04-multiple-zero-splitting.md`.
+
+Next investigate a canonical-system intertwiner independently of the scalar
+Fourier multiplier and distinguish any possible operator relation from
+equality of zero sets.
