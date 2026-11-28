@@ -1188,6 +1188,20 @@ specific rate; if none control the tail Weyl error, record the limitation and
 select the arithmetic multiplicity-lift question as the next distinct
 operator investigation.
 
+### PWPB-03.41 — Source-specific Weyl-rate audit and pivot
+
+Inspection of Suzuki arXiv:2611.33001v1 §8 finds monotone root convergence
+and locally uniform Weyl/kernel limits, plus the quantitative bound
+`m_a>=a^2/ell_infinity`. It supplies no modulus for `q_a-Q_xi`, the string
+length deficit, or the kernel-weight error. Theorem 8.2's proof uses a
+fixed-cutoff / then cutoff-to-infinity weighted-average argument with no
+tail modulus, so it is qualitative as written. This does not prove no rate
+exists for the arithmetic system. The quantitative-rate path is therefore
+not advanced by the inspected estimates; the next campaign question is a
+prime-defined positive matrix-valued local Weil form that could encode
+multiplicity fibers without inserting zeros. Details:
+`research/operators/B3-37-suzuki-rate-audit.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

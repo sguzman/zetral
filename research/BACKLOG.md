@@ -276,6 +276,12 @@ analytic theorems and from any RH implication.
   estimates for additional quantitative tail control; otherwise pivot to a
   prime-defined multiplicity-sensitive operator lift. Details:
   `research/operators/B3-36-no-universal-rate-for-qualitative-weyl-limits.md`.
+- **PWPB-03.41 source-specific rate audit:** Suzuki §8 gives monotone roots
+  and `m_a>=a^2/ell_infinity`, but no modulus for the Weyl or kernel limits;
+  the proof is compactness/weighted-average qualitative. This does not rule
+  out an arithmetic rate. Next formulate a prime-defined positive
+  matrix-valued local Weil form with non-tautological multiplicity fibers.
+  Details: `research/operators/B3-37-suzuki-rate-audit.md`.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

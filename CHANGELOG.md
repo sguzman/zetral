@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.41 Suzuki Weyl-rate source audit
+
+Inspected the specific asymptotic estimates in Suzuki arXiv:2611.33001v1.
+The source gives monotone root convergence and `m_a>=a^2/ell_infinity`, but
+no explicit Weyl/kernel error modulus; its locally uniform limits use
+Montel and a fixed-cutoff weighted-average argument. This records a limit
+of the current estimates, not impossibility of a rate for the arithmetic
+system. Details: `research/operators/B3-37-suzuki-rate-audit.md`.
+
 ## 2026-11-27 — PWPB-03.40 qualitative Weyl-rate obstruction
 
 Constructed a two-atom positive Herglotz model whose two simple poles

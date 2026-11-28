@@ -281,6 +281,15 @@ does not constrain Suzuki's arithmetic family if its Hamiltonian supplies
 additional estimates. Details:
 `research/operators/B3-36-no-universal-rate-for-qualitative-weyl-limits.md`.
 
+PWPB-03.41 inspected Suzuki's specific §8 estimates. Monotone root
+convergence and the lower bound `m_a>=a^2/ell_infinity` are quantitative,
+but the Weyl/kernel convergence proof has no stated modulus: it uses a
+fixed-cutoff then cutoff-to-infinity argument. No arithmetic rate is ruled
+out, but none is available from the published bounds inspected. The next
+direction is a prime-defined positive matrix-valued local Weil form with
+non-tautological multiplicity fibers. Details:
+`research/operators/B3-37-suzuki-rate-audit.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
