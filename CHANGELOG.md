@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.48 qualitative localization obstruction
+
+Constructed an abstract orthogonal tail with the known `n^(-1/2)` angle
+scale, polynomial local trace growth and fixed-window tail convergence, but
+only `1/log(n0)` low-frequency leakage. This rules out deriving a polynomial
+tail-index rate from those qualitative estimates alone; it is not a model of
+the arithmetic semilocal Hankel operator and does not refute H2′. Details:
+`research/operators/B3-48-slow-localization-abstract-model.md`.
+
 ## 2026-11-28 — PWPB-03.51 moving zero-retention proof audit
 
 Inspected Paper IV §7 and Appendix A.2–A.7 directly. The focused manual audit

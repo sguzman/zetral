@@ -400,6 +400,14 @@ counterexample. B3-44's real-modulation inequality is necessary evidence but
 does not establish the required arithmetic decay. The finite-characteristic
 branch is preserved as conditional prior art; it does not supply the missing
 H2′ estimate or an operator correspondence.
+
+PWPB-03.48 follow-up: B3-48 gives an exact abstract orthogonal model with
+`kappa_n=n^(-1/2)`, local trace `O(sqrt(R))`, and fixed-window tail convergence,
+while its low-frequency tail mass decays only like `1/log(n0)`. This shows no
+polynomial tail-index rate follows from those qualitative inputs alone. It is
+not the semilocal Hankel/local-factor operator and does not refute ACG's H2′
+claim; the next proof attempt must use actual local-factor structure. Details:
+`research/operators/B3-48-slow-localization-abstract-model.md`.
 The ACG H2′ localization investigation (PWPB-03.48) remains open and
 resumable; its real-modulation necessary criterion is in B3-44.
 

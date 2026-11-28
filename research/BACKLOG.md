@@ -193,6 +193,10 @@ control this weighted trace by itself.
   inequality from real cosine/sine modulations, and a stronger sufficient
   pointwise density majorant. The averaged test gives a concrete way to
   inspect frequency localization without extending H2′ to complex tests.
+  B3-48 gives an abstract orthogonal countermodel with angles `n^(-1/2)`,
+  polynomial local trace growth and fixed-window tail convergence, yet only
+  `1/log(n0)` low-frequency leakage. Thus the desired rate cannot follow from
+  those qualitative facts alone; the model is not the arithmetic operator.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
   frequency localization of the high-index near-self-dual modes, but local
   trace-class and global operator-norm estimates alone are insufficient.
@@ -206,8 +210,8 @@ control this weighted trace by itself.
   estimate; split bounded and dyadic-high Mellin frequencies; derive a bound
   that uses the actual local-factor/Hankel structure and compare exponents
   with the Gevrey/Fourier tail. Test each proposed inference against the
-  non-Hilbert–Schmidt countermodel B3-23. Do not assert the transition/pole
-  Schur block sign, which remains separate.
+  non-Hilbert–Schmidt countermodel B3-23 and slow-leakage model B3-48. Do not
+  assert the transition/pole Schur block sign, which remains separate.
 - **Dependencies:** Source-pinned normalization of the semilocal scaling
   action and the accepted B3-20–23 derivations.
 - **Acceptance:** A proof of (66) with explicit dependence on `n0,R,t,S` and

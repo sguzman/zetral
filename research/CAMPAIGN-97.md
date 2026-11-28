@@ -1345,6 +1345,15 @@ for the actual arithmetic density. Next derive the needed decay in `n0`
 uniformly over these frequency translates using the semilocal Hankel symbol;
 otherwise give a source-structured counterexample to the proposed bound.
 
+Bounded-input obstruction (2026-11-28): B3-48 constructs an abstract
+orthogonal tail with `kappa_n ~ n^(-1/2)`, local trace `O(sqrt(R))` and
+fixed-window tail convergence, but low-frequency tail mass only
+`~1/log(n0)`. Thus those qualitative operator facts cannot imply a polynomial
+tail-index rate by themselves. This is not a Hankel or arithmetic-local
+factor model and does not refute H2′ for the actual semilocal operator. The
+remaining target is specifically a quantitative low-frequency leakage bound
+using the product `u=u_infinity product_p u_p`.
+
 Literature pivot (2026-11-28): targeted search found Suvlu's four-paper
 *Weil form operators* draft series, including a separate conditional
 finite-characteristic zero-retention route. B3-45 independently checks only
