@@ -1015,6 +1015,19 @@ for `||(A_lambda-m_lambda)k_lambda||`, and no ground-state gap bound, follows.
 Detailed argument and limits:
 `research/operators/B3-26-prolate-candidate-operator-domain.md`.
 
+### PWPB-03.31 — Exact residual decomposition and source normalization check
+
+Rewrote the CCM form as a compressed Fourier multiplier, a rank-two pole
+operator, and finitely many paired translations by `±log n` with coefficient
+`Lambda(n)/sqrt(n)`. This gives a fixed-normalization expression for the
+prolate candidate residual. Direct conversion of CCM equation (3.19) to the
+unitary Fourier transform gives multiplier `2 theta'(t)`, while the
+compactness paragraph in Theorem 3.6 names `theta'(t)`. The factor does not
+alter logarithmic-domain or compactness claims, but it remains an unresolved
+normalization discrepancy for exact residual calculations. No cancellation,
+decay estimate, or spectral gap has been established. Derivation:
+`research/operators/B3-27-exact-restricted-Weil-operator-decomposition.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

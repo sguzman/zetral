@@ -1,5 +1,16 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.31 exact operator decomposition
+
+Derived the restricted Weil operator from the explicit form as a compressed
+Fourier multiplier, rank-two pole term and finite symmetric prime shifts,
+giving an exact expression for the prolate candidate residual. Found an
+unresolved factor-of-two normalization difference between equation (3.19)
+and the multiplier stated in Theorem 3.6; it does not affect domain or
+compactness but must be settled for residual calculations. No decay or gap
+bound. Details:
+`research/operators/B3-27-exact-restricted-Weil-operator-decomposition.md`.
+
 ## 2026-11-27 — PWPB-03.30 prolate candidate domain
 
 Verified that the prolate-derived vector belongs to the restricted Weil

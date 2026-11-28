@@ -32,13 +32,14 @@ coordinates and bounded variation. Its Fourier transform satisfies
 
     |k_hat_lambda(t)| <= C_lambda/(1+|t|).
 
-The restricted Weil form has, for fixed lambda, an archimedean part given by
-the Fourier multiplier
-
-    m(t) = 2 partial_t theta(t)/(2 pi),
-
-where `m` is bounded near finite t and grows as `O(log(2+|t|))`. Thus
-`m(t) k_hat_lambda(t)` is square-integrable: its high-frequency square is
+The restricted Weil form has, for fixed lambda, an archimedean part whose
+operator multiplier under the unitary Fourier transform is
+`2 partial_t theta(t)`. Equation (3.19) uses the unnormalized transform with
+coefficient `2 partial_t theta/(2 pi)`; converting to the unitary transform
+gives this multiplier. It is bounded near finite t and grows as
+`O(log(2+|t|))`. Thus
+`2 partial_t theta(t) k_hat_lambda(t)` is square-integrable: its
+high-frequency square is
 bounded by a constant times `log²(2+|t|)/(1+|t|)²`. In particular the
 zero-extended candidate lies in the operator domain of the full-line
 multiplier.
@@ -46,8 +47,8 @@ multiplier.
 The Hilbert space for `A_lambda` is the closed subspace of functions
 supported on the log-window. The operator associated with the restricted
 archimedean form is the compression of the full-line multiplier: for a
-supported `f` with `m f_hat in L²`, its action is
-`P_lambda F^-1(m f_hat)`. This follows directly by testing the form against
+supported `f` with `2 theta' (Uf) in L²`, its action is
+`P_lambda U^-1(2 theta' Uf)`. This follows directly by testing the form against
 supported vectors. The remaining fixed-window terms are bounded operators:
 there are finitely many prime terms (`n<=lambda²`), and the two pole
 evaluations are bounded linear functionals on a compact interval. Bounded
@@ -80,4 +81,8 @@ definitions and standard bounded-variation Fourier decay and bounded
 perturbation facts. It is an independent derivation of domain membership,
 not an audit of the papers' prolate asymptotics or Weil-form identities. No
 residual computation, numerical experiment, formalization, or novelty claim
-is made.
+is made. The source's Theorem 3.6 describes the multiplier as
+`partial_t theta(t)` in its compactness argument, whereas direct conversion
+of equation (3.19) gives `2 partial_t theta(t)` for the exact operator. This
+factor does not affect the logarithmic domain or compactness conclusion, but
+the exact normalization should be reconciled before residual numerics.
