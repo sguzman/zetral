@@ -154,6 +154,15 @@ fixed approximation numbers, not the infinite tail/trace norm or H2′. Next
 investigate a resolvent or weighted trace estimate for the residual tail.
 Details: `research/operators/B3-22-uniform-finite-prime-operator-approximation.md`.
 
+PWPB-03.27 established why this does not yet control H2′: operator-norm
+residual alone cannot control `Tr(B R B*)` for bounded non-Hilbert–Schmidt
+`B`, as a diagonal finite-rank countermodel shows. In the Mellin model,
+nonzero `theta(f)` is not compact/HS globally, so the simple HS estimate is
+unavailable. The actual semilocal trace is more structured and remains open.
+Next seek localized Schatten bounds or direct singular-vector frequency
+localization. Details:
+`research/operators/B3-23-operator-norm-does-not-control-weighted-trace.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

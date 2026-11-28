@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.27 weighted trace norm boundary
+
+Showed that operator-norm convergence alone does not control weighted trace
+pairings for bounded non-Hilbert–Schmidt factors, and that the Mellin
+multiplication operator `theta(f)` is not globally Hilbert–Schmidt. This
+does not obstruct the structured ACG tail estimate; it identifies the need
+for localized Schatten or frequency bounds. Details:
+`research/operators/B3-23-operator-norm-does-not-control-weighted-trace.md`.
+
 ## 2026-11-27 — PWPB-03.26 uniform operator-norm truncation
 
 Truncating each finite-prime factor separately gives a factorized

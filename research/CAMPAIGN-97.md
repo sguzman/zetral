@@ -949,6 +949,18 @@ fixed approximation numbers but not the infinite singular-value tail or
 H2′. Full bound and caveats:
 `research/operators/B3-22-uniform-finite-prime-operator-approximation.md`.
 
+### PWPB-03.27 — Trace control requires localization beyond operator norm
+
+Proved the standard Hilbert–Schmidt criterion for converting operator-norm
+error into a weighted trace bound, then falsified any norm-only inference
+with a fixed bounded non-Hilbert–Schmidt diagonal weight and positive
+finite-rank residuals whose operator norms vanish while their weighted
+traces stay one. In the Mellin model, nonzero `theta(f)` is a multiplication
+operator and is not compact/HS on the full space, so the global HS shortcut
+does not apply. The actual ACG trace remains structured and may still have
+quantitative decay. Next seek localized Schatten bounds or prove H2′ directly.
+Details: `research/operators/B3-23-operator-norm-does-not-control-weighted-trace.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

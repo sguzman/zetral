@@ -138,12 +138,14 @@ analytic theorems and from any RH implication.
   singular-index/frequency localization estimate remains open. Pursue that
   only for the structured semilocal Hankel operator, retaining the separate
   transition/pole Schur-sign problem.
-  PWPB-03.25 now gives an exact finite-prime Fourier expansion and
-  Bohr-mean-square truncation, with a polynomial-in-X support bound at fixed
-  accuracy. PWPB-03.26 strengthens this to factored uniform
-  operator-norm approximation with O_epsilon(|S|) local terms. Next test
-  whether its residual can be upgraded to a trace/weighted-tail bound on a
-  justified Gevrey/form-domain class; neither norm alone controls H2′.
+  PWPB-03.25 gives an exact finite-prime Fourier expansion and
+  Bohr-mean-square truncation. PWPB-03.26 strengthens this to factored
+  uniform operator-norm approximation with O_epsilon(|S|) local terms.
+  PWPB-03.27 proves a norm-only trace upgrade cannot hold for general
+  bounded non-HS test factors; `theta(f)` is non-HS on the full Mellin
+  space. Next seek a localized Schatten bound or direct frequency
+  localization for the actual semilocal tail, rather than a general
+  operator-norm argument.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
