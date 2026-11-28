@@ -1463,3 +1463,17 @@ archimedean Mellin-tail result to each isolated block. The source tail is
 imported; its dependence on the moving scale is not independently derived.
 Summability over shifts and stability under operator addition remain open.
 Full calculation: `research/operators/B3-52-exact-single-shift-localization-transfer.md`.
+
+## XCVII PWPB-03.54 — Scale-explicit tail past the Slepian bulk (2026-11-28)
+
+A rank-`N` Taylor approximation of the finite-Fourier kernel gives the
+uniform singular-value bound `kappa_n(T)<=2T*2^(-(n-1))` once
+`n-1>=4 pi e T^2`. Thus the Mellin-localized tail of one block is at most
+`4T*2^(-n0)` for `n0>=4 pi e T^2`. The local geometric weight
+`(1-p^-1)p^-m/2` cancels `T=t p^(m/2)`, so the sum of separately estimated
+geometric shifts lying below the cutoff scale is exponentially small, with
+only `O(log_p n0)` terms. This does not control shifts whose Slepian bulk is
+above `n0`, and separate block estimates do not control the operator sum.
+The Taylor bound is independently derived; its one-dimensional rectangle
+form also appears in Azimifard arXiv:2610.09406v1, Lemma 2.3. Full derivation:
+`research/operators/B3-53-scale-explicit-isolated-tail-bound.md`.

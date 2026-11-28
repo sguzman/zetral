@@ -87,7 +87,8 @@ frequency \(R\) once \(n\gg Rt\). The identity above transfers that
 archimedean statement to each *fixed* isolated shift at its moving scale
 `T=t exp(tau/2)`. The source's qualitative super-exponential assertion is
 imported here; this note does not independently derive its constants or
-uniformity in \(T\).
+uniformity in \(T\). B3-53 independently derives an explicit exponential
+tail once the index cutoff exceeds a constant times `T^2`.
 
 Two gaps remain. First, the bound must be quantified uniformly as
 `T=t p^(m/2)` grows with positive `m`, strongly enough to sum over all prime

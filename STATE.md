@@ -451,6 +451,18 @@ Uniformity as `T` grows with `m`, summability over prime powers, and mixing
 under operator addition remain open. Details:
 `research/operators/B3-52-exact-single-shift-localization-transfer.md`.
 
+Scale-explicit partial bound (2026-11-28): B3-53 approximates the
+finite-Fourier kernel by a rank-`N` Taylor polynomial. It gives
+`kappa_n(T) <= 2T 2^(-(n-1))` for `n-1 >= 4 pi e T^2`, hence localized
+archimedean tail at most `4T 2^(-n0)` when `n0 >= 4 pi e T^2`. For a prime's
+geometric shifts, the local coefficient cancels the factor `T` and the sum
+of the separately estimated shifts below the bulk scale is
+`O(t log_p(n0) 2^(-n0))`. This does not bound shifts whose effective scale
+exceeds the cutoff, nor the negative trace of the operator sum. The elementary
+rank approximation is independently derived; the same rectangle estimate
+appears in Azimifard arXiv:2610.09406v1 Lemma 2.3. Details:
+`research/operators/B3-53-scale-explicit-isolated-tail-bound.md`.
+
 PWPB-03.48 first lemma: applying H2′ to the real tests
 `f(u)cos(T log u)` and `f(u)sin(T log u)` yields an exact necessary
 symmetric moving-average inequality for the semilocal tail Mellin density.

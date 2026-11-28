@@ -1,5 +1,13 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.54 scale-explicit isolated tail
+
+Derived a finite-rank Taylor bound for prolate singular values beyond the
+effective Slepian scale and summed the resulting isolated-shift bounds over
+the geometric modes covered by the cutoff. The high-scale regime and
+operator-sum mixing remain open. Independently derived the approximation;
+no numerical or formal check.
+
 ## 2026-11-28 — PWPB-03.53 isolated-shift localization transfer
 
 Derived an exact equality between the Mellin-localized negative-pair trace
