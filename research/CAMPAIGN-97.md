@@ -910,6 +910,18 @@ next question is which exact arithmetic input in ACG §8 rules out this model.
 Full construction and scope:
 `research/operators/B3-19-two-projection-ladder-countermodel.md`.
 
+### PWPB-03.24 — Local tail bounds do not imply the required rate
+
+Audited ACG §8.3's exact dependency: Lemma 8.9 gives polynomial growth of
+local Mellin mass, while Lemma 8.8 gives convergence of each fixed-window
+tail with no rate; Remark 8.10 says a separate relative-density estimate is
+needed for H2′ and polynomial conditioning. An explicit moving-bump density
+has both qualitative properties but relative tail size only
+`1/log(n0)`, slower than every power. Thus those two bounds alone cannot
+provide the polynomial rate. The model is not a spectral density of the
+actual semilocal Hankel operator, so H2′ remains open. Details:
+`research/operators/B3-20-local-tail-no-rate.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

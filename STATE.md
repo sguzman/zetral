@@ -124,6 +124,15 @@ are absent and could rule it out. Next identify which source-specific
 quantitative hypothesis excludes this model. Full construction:
 `research/operators/B3-19-two-projection-ladder-countermodel.md`.
 
+PWPB-03.24 audited the quantitative tail input behind ACG's H2′. Local
+polynomial Mellin-mass growth plus fixed-window tail convergence do not imply
+the polynomial-in-cutoff relative density estimate needed for polynomial
+conditioning dimensions: a positive moving-bump density meets both yet has
+relative tail `1/log(n0)`. This is not the semilocal spectral density, so H2′
+remains open. Next derive index/frequency localization for the actual
+semilocal Hankel singular vectors. Details:
+`research/operators/B3-20-local-tail-no-rate.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

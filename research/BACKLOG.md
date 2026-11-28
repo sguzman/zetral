@@ -133,7 +133,11 @@ analytic theorems and from any RH implication.
   upper ladder bounds cannot force the missing lower bound. Next isolate the
   exact arithmetic/trace hypothesis in ACG §8 that excludes this model;
   retain the distinction between this structural countermodel and the actual
-  Weil form.
+  Weil form. PWPB-03.24 further shows the proved local trace-class tail bound
+  does not imply the polynomial relative-density rate H2′ needs; an actual
+  singular-index/frequency localization estimate remains open. Pursue that
+  only for the structured semilocal Hankel operator, retaining the separate
+  transition/pole Schur-sign problem.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

@@ -1,5 +1,13 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.24 local tail rate obstruction
+
+Constructed a positive moving-bump density showing that polynomial local
+mass bounds and fixed-window tail convergence do not imply the polynomial
+relative tail estimate needed for H2′. This is not the actual semilocal
+spectral density; its quantitative localization remains open. Details:
+`research/operators/B3-20-local-tail-no-rate.md`.
+
 ## 2026-11-27 — PWPB-03.23 qualitative uncertainty countermodel
 
 Constructed projection pairs with compact compressed product, no common
