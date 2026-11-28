@@ -1127,6 +1127,25 @@ step; then test whether any source-supported lower spectral bound or gap
 estimate can identify the nearby eigenvalue. Do not infer ground-state
 convergence from residual decay alone.
 
+### PWPB-03.38 — Direct residual audit
+
+A second derivation checks the endpoint jump in the zero-extended tail,
+evaluates both pole functionals with the log-window scaling, and integrates
+the paired prime-power shifts on their exact supports. The jump prevents an
+`H^1(R)` claim, but the tail is in `H^alpha(R)` for each `alpha<1/2`; the
+second pole functional is the dominant `D_lambda lambda` term; and both
+prime-sum ranges contribute at most `O(D_lambda lambda log(lambda+2))`.
+The form-core identity extends by the closed-form representation theorem
+once the `L2` component bounds are established. No discrepancy was found in
+the B3-33 exponent. This is a same-project derivation, not external or human
+review, and imported ACG/CCM theorems remain unaudited. Full details and
+falsification checks: `research/operators/B3-34-residual-estimate-audit.md`.
+
+Next priority: investigate whether the available lower bound that separates
+this approximate spectral point from the bottom is equivalent to Weil
+positivity/RH. If so, record the circularity obstruction and pivot to the
+Suzuki operator/multiplicity correspondence audit.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

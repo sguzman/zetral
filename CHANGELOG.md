@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.38 direct residual audit
+
+Rechecked the tail jump's fractional Sobolev regularity, both pole scalings,
+the exact paired-shift support, and the two weighted prime-sum ranges. The
+largest contribution is `O(D_lambda lambda log(lambda+2))`, confirming the
+PWPB-03.37 residual exponent. This is same-project derivation, not external
+review; source theorems remain imported. Full audit:
+`research/operators/B3-34-residual-estimate-audit.md`.
+
 ## 2026-11-27 — PWPB-03.37 smoothed prolate operator residual
 
 Extended the exact radical-tail split to a weak operator identity. Sobolev

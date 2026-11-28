@@ -255,6 +255,14 @@ estimate conditional on the imported ACG/CCM source identities, not an
 operator construction. Derivation and scope:
 `research/operators/B3-33-smoothed-prolate-operator-residual.md`.
 
+PWPB-03.38 directly rederived the `H^alpha` jump-tail bound (`alpha<1/2`),
+the two distinct pole scalings, and both ranges of the weighted prime-shift
+sum; it also checked the closed-form passage from the weak core identity to
+`Dom(A_lambda)`. No residual exponent discrepancy was found. This is an
+internal independent derivation, not outside review; imported ACG/CCM source
+results remain unaudited. Details:
+`research/operators/B3-34-residual-estimate-audit.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

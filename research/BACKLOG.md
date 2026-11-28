@@ -251,6 +251,14 @@ analytic theorems and from any RH implication.
   eigenvalue. Imported source hypotheses remain; no spectral correspondence
   follows. Full derivation:
   `research/operators/B3-33-smoothed-prolate-operator-residual.md`.
+- **PWPB-03.38 estimate audit:** Direct rederivation confirms the endpoint
+  jump requires `H^alpha`, `alpha<1/2`; the larger pole functional scales as
+  `D_lambda lambda`; both weighted shift ranges sum to
+  `O(D_lambda lambda log lambda)`; and the weak form extends to the operator
+  domain. No rate error found, but this is same-project checking rather than
+  external review. Next test whether an available low-spectrum lower bound
+  is RH-equivalent, then pivot to Suzuki source-chain/multiplicity audit.
+  Details: `research/operators/B3-34-residual-estimate-audit.md`.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives
