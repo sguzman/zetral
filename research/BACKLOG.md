@@ -80,9 +80,10 @@ analytic theorems and from any RH implication.
   matches its Weyl function to `Q_xi` by the transfer quotient. This uses
   standard operator theory and Suzuki's source theorem, not an independent
   proof audit; an exact `H=I` check confirms the sign and ratio convention.
-  Next independently audit endpoint/Weyl hypotheses and
-  investigate multiplicity-sensitive channels compatible with the form
-  chain, or a precise obstruction for a natural class. Full record:
+  PWPB-03.13 proves the scalar eigenspace-dimension-at-most-one obstruction
+  and specifies noncircular matrix-lift requirements. Next independently
+  audit endpoint/Weyl hypotheses and formulate an arithmetic matrix local
+  form or a no-go theorem for a precisely defined lift class. Full record:
   `research/operators/B3-13-prime-defined-canonical-system.md`.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)

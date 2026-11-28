@@ -759,6 +759,20 @@ An exact `H=I` sign check independently confirms the convention:
 `tan(bz)->i` in `C_+`, matching `-y2(0)/y1(0)=i` for the decaying defect
 solution. This checks signs only, not zeta-specific claims.
 
+### PWPB-03.13 — Scalar multiplicity obstruction; matrix-lift target
+
+For any eigenvalue `t`, uniqueness of the initial-value problem for
+`Jy'=-tHy` and the left line `y1(0)=0` show directly that its eigenspace
+has dimension at most one. The Weyl atoms at zero ordinates therefore encode
+analytic multiplicities `m_gamma` as weights, not geometric multiplicities;
+no multiple zero is assumed or known here. General matrix canonical systems
+are established theory (Sakhnovich, Documenta Math. 26 (2021), 583–615),
+but no matrix-valued local Weil-form lift is supplied by that framework. A
+noncircular lift would need arithmetic-defined matrix forms, positivity and
+compatible kernel embeddings, and a matrix Weyl/measure identity without
+zero multiplicities as input. The exact requirements and limits are in
+`research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.13).
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

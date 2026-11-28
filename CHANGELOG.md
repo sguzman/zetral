@@ -37,6 +37,16 @@ An exact `H=I` check independently confirms the boundary sign:
 `-y2(0)/y1(0)=i`; the opposite sign would fail the Nevanlinna condition.
 This is a convention check only, not zeta-specific evidence.
 
+## 2026-11-27 — PWPB-03.13 scalar multiplicity obstruction
+
+The scalar first-order eigenvalue problem with boundary line `y1(0)=0` has
+eigenspaces of dimension at most one by initial-value uniqueness. Its Weyl
+atoms encode analytic zero multiplicity as measure weight, not eigenspace
+dimension. Matrix canonical systems are established prior art, but no
+arithmetic matrix lift is supplied; the requirements for a noncircular lift
+are recorded. No multiple zeta zero or novelty is claimed. Details:
+`research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ## 2026-11-27 — HP-02.3–.4 fixed-low pencil bounds
 
 For `L_N=N^2+U` with one fixed uniform offset, period counting and

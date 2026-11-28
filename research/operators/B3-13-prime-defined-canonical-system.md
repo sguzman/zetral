@@ -377,3 +377,42 @@ chain and investigate whether a scalar multiplicity-one model can be
 upgraded without losing the arithmetic form realization.
 
 Primary source: [Suzuki, arXiv:2611.33001v1, Theorem 6.2, §§4.2–4.3, Propositions 7.2 and 8.1](https://arxiv.org/html/2611.33001).
+
+## PWPB-03.13 — Scalar multiplicity obstruction and matrix-lift target
+
+**Question.** Does the selected scalar self-adjoint realization encode
+analytic zero multiplicity as geometric eigenspace dimension?
+
+**Direct obstruction.** For an eigenvalue `t`, an eigenfunction satisfies
+`J y'=-t H y`. The coefficient matrix is locally integrable, and the
+initial-value problem is unique from `y(0)`. The boundary condition
+`y_1(0)=0` restricts the initial vector to the one-dimensional subspace
+`C(0,1)`. Therefore every eigenspace of this scalar realization has
+dimension at most one. The positive atoms of `M=Q_xi` at ordinates
+`gamma` establish those points as eigenvalues in the standard spectral
+representation; the atom masses `m_gamma` are spectral weights. They cannot
+be geometric multiplicities greater than one. This rederives the scalar
+limitation without assuming zero simplicity.
+
+**Matrix route / prior art.** Matrix-valued canonical systems with
+`2p x 2p` Hamiltonians and `p x p` Weyl–Titchmarsh functions are established
+theory; see Sakhnovich, *On the Class of Canonical Systems Corresponding to
+Matrix String Equations*, Documenta Math. 26 (2021), 583–615. This is
+general framework, not a zeta or Weil-form construction. A legitimate
+arithmetic lift would need (i) a matrix local Weil form defined without
+zero ordinates/multiplicities, (ii) positivity and a compatible nested
+reproducing-kernel chain, (iii) a matrix Weyl identity whose spectral
+measure has the required atomic ranks, and (iv) a proved transfer from that
+measure to `Q_xi` or its zero divisor. Simply taking `Q_xi I_p` or placing
+rank `m_gamma` at each known zero is circular and does not meet (i).
+
+**Finding / limits.** The scalar candidate gives an exact arithmetic-defined
+operator with the zero set as spectral support and multiplicities as
+weights, but it cannot be multiplicity-preserving at the level of
+eigenspace dimensions when a zero is multiple. No known multiple zero is
+asserted, and RH alone does not assert simplicity. The matrix framework
+offers a mathematically distinct next direction, but no arithmetic matrix
+lift has been found or proved. This is a structural obstruction and
+research specification, not a novel theorem claim.
+
+Primary framework source: [Sakhnovich, Documenta Mathematica 26 (2021), 583–615](https://ems.press/content/serial-article-files/26601?nt=1).

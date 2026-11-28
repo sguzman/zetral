@@ -42,7 +42,10 @@ is `Q_xi`. This matches `mu_xi` in boundary-triple normalization. Standard
 boundary-triple theory and Suzuki's analytic theorem are imported; the source
 chain remains unaudited. An independent `H=I` check confirms the boundary
 sign (`tan(bz)->i` and `-y2/y1=i`). Multiplicities remain spectral weights, not
-eigenspace dimensions. The bounded audit is recorded in
+eigenspace dimensions. PWPB-03.13 directly derives the scalar eigenspace
+dimension-at-most-one obstruction and states the requirements for an
+arithmetic-defined matrix lift; general matrix canonical systems are prior
+art, but no zeta/Weil matrix construction is established. The bounded audit is recorded in
 `research/operators/B3-13-prime-defined-canonical-system.md` and
 `research/CAMPAIGN-97.md`.
 
