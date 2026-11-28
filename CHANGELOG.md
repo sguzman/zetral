@@ -1656,3 +1656,34 @@ Weyl and spectral theorems. It is a measure-level post-processing, not a
 local differential operator, RH proof, independent source audit, or novelty
 claim. Full assumptions and limits:
 `research/operators/B3-58-arithmetic-measure-multiplicity-lift.md`.
+
+## XCVII PWPB-03.61 — Local spectral weights converge to zero multiplicities (2026-11-28)
+
+Inspected the full revised Skelly preprint and checked its Theorem 1.7(ii)
+projection-to-weight argument. Under the hypothesis of finitely many
+off-critical zeros, individual simple eigenvalue branches of the
+prime-defined `lambda=0` local operators converge to each zero, with
+reciprocal-norm weights converging to its analytic multiplicity. The key
+scalar limit follows from transported Riesz-projection convergence and a
+compactly supported even test with nonzero Fourier transform at the zero.
+The global Pontryagin embedding and Riesz convergence are imported, not
+independently verified here. This is prior art and a stronger local
+approximation to the B3-58 measure, but not finite-window geometric
+multiplicity, a local multiplicity-`m` operator, or an RH proof. The distinct
+bottom-shifted QER edge model is not covered without an operator/metric
+identification. Details:
+`research/operators/B3-59-local-spectral-weight-multiplicity-audit.md`.
+
+## XCVII PWPB-03.62 — Compression limit misses multiplicity fibers (2026-11-28)
+
+Checked the operator-topology portion of Skelly's conditional compression
+argument: uniformly bounded increasing Pontryagin projections converge
+strongly; the Hilbert–Schmidt global inverse gives Hilbert–Schmidt and
+operator-norm convergence of compressions, yielding rank-one local Riesz
+projections. Compared the zero-weighted scalar target with B3-58's fiber
+lift: diagonal embedding has only one direction per zero, so the existing
+local compressions cannot converge to rank-`m_gamma` eigenspace projections
+at multiple zeros. The source's common limit space also uses zero data. This
+is a limitation of that compression route, not a no-go for a different
+arithmetic matrix construction. Full derivation and assumptions:
+`research/operators/B3-60-compression-limit-and-fiber-obstruction.md`.

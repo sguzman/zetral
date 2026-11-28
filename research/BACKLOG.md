@@ -1201,21 +1201,32 @@ Campaign file: `research/CAMPAIGN-94.md`.
 - **Evidence / limits:** B3-13 gives the scalar eigenspace-dimension-at-most-one
   obstruction. B3-58 lifts Suzuki's RH-conditional integer-weighted global
   Weyl measure to a standard direct-sum multiplication operator and recovers
-  Xi by `det_2`; this resolves geometric multiplicities only after the
-  spectral measure is known. It is not a local extension and has no novelty
-  claim.
-- **Prerequisites / dependencies:** Audit the Suzuki global Weyl and spectral
-  theorems; identify an arithmetic matrix/local datum with integer atomic
-  ranks and controlled Herglotz integrability.
+  Xi by `det_2`. Skelly Theorems 1.6–1.7 additionally give, under finitely
+  many off-line zeros, individual prime-defined local eigenvalue and weight
+  convergence to zeros and multiplicities. B3-59 checks the projection-to-
+  weight step, while importing the global embedding and Riesz convergence.
+  These results give measure-level and asymptotic multiplicity recovery, not
+  one local finite-window differential operator with geometric multiplicity
+  `m_gamma`; no novelty is claimed.
+- **Prerequisites / dependencies:** Independently audit the hypotheses for
+  Skelly's global Pontryagin embedding and Riesz projection convergence;
+  then test whether Suzuki's zero-independent de Branges/canonical-system
+  limit can give common maps or extra channels. B3-60 shows the existing
+  zero-indexed scalar compression has a one-dimensional range in every
+  multiplicity fiber and cannot converge in norm to higher-rank eigenspace
+  projections. Any operator-limit proof must specify how this obstruction is
+  overcome before identifying an arithmetic matrix/local datum.
 - **Design / falsification:** Compare matrix canonical-system ranks,
   boundary multiplicity, and the scalar obstruction. Reject constructions
   that insert `m_gamma` or zero locations by hand or that define the Weyl
   function from Xi itself. Test self-adjointness, compact resolvent, and
   determinant normalization independently.
 - **Information gain / acceptance:** Either provide an explicit local
-  arithmetic operator and rigorous spectral identity, or delimit a genuine
-  obstruction to such a lift. Any source-conditional result must state the
-  premise and cannot be advertised as an independent RH proof.
+  arithmetic operator and rigorous spectral identity, prove a canonical
+  operator-limit/intertwining theorem from the local weighted spectra, or
+  delimit a genuine obstruction to either route. Any source-conditional
+  result must state the premise and cannot be advertised as an independent
+  RH proof.
 - **Verification:** Independent audit of the analytic source chain, exact
   operator-domain argument, and prior-art search before novelty claims.
 

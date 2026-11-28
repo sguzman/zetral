@@ -1568,3 +1568,50 @@ Suzuki's analytic chain, or establish novelty. The next operator question is
 an intrinsic arithmetic multiplicity lift with a noncircular Weyl/spectral
 correspondence. Detailed proof, assumptions, and scope:
 `research/operators/B3-58-arithmetic-measure-multiplicity-lift.md`.
+
+## XCVII PWPB-03.61 — Local spectral weights converge to zero multiplicities (2026-11-28)
+
+Refreshed and read the full revised Skelly preprint, not just its previously
+recorded abstract. Under its Hypothesis 1.5 (finitely many off-line zeros;
+RH is the zero case), Theorems 1.6–1.7 prove that each zero has an associated
+eventually simple local eigenvalue branch `t_a(zeta)->zeta` and its local
+reciprocal-norm spectral weight tends to the analytic multiplicity
+`m_zeta`. The paper's proof uses an isometric embedding into a global
+Pontryagin space and convergence of transported Riesz projections; the
+projection-to-weight implication was independently checked in B3-59, while
+those global hypotheses remain imported. This is stronger than vague
+cluster-mass convergence for the `lambda=0` family. At finite `a` the
+eigenspaces remain one-dimensional: the multiplicity is a limiting weight,
+not geometric multiplicity. This is a material local approximation to the
+B3-58 limiting measure, but not a single local multiplicity-`m_zeta`
+differential operator or an independent RH proof. The result is prior art;
+no novelty claim. The edge quotient QER01–04 uses `lambda=lambda_1(a)` and
+cannot inherit this pointwise result without identifying its operator and
+metric with Skelly's `lambda=0` family. Detailed scope and checked argument:
+`research/operators/B3-59-local-spectral-weight-multiplicity-audit.md`.
+
+## XCVII PWPB-03.62 — Compression limit misses multiplicity fibers (2026-11-28)
+
+Checked the local-operator convergence mechanism after its hypotheses are
+assumed. Uniformly bounded nested Pontryagin projections converge strongly;
+Hilbert–Schmidt compactness of the global inverse upgrades the compressed
+inverse convergence to Hilbert–Schmidt/operator norm; compact spectral
+perturbation then gives rank-one Riesz projections at each distinct zero.
+This is valid conditional on the zero-indexed global sampling embedding.
+Under RH, the scalar global space `ell^2(Gamma,m)` embeds diagonally into the
+B3-58 fiber operator `direct_sum_gamma C^(m_gamma)`. Its image has only one
+direction per fiber, and every local compression remains in that image.
+Thus when a multiple zero exists, the extra `m_gamma-1` eigendirections are
+unreached and rank-one Riesz projections cannot converge to the rank-`m_gamma`
+projection. The existing compression cannot by itself produce B3-58's full
+geometric multiplicity lift; a different local channel/matrix construction
+would be required. This is a conditional structural limitation, not a
+no-go theorem for other constructions. Moreover, the common global space is
+defined from zeros and multiplicities, so the proof is not a zero-independent
+construction of its limit. Details:
+`research/operators/B3-60-compression-limit-and-fiber-obstruction.md`.
+
+Next investigate the zero-independent de Branges/canonical-system direct
+limit from prime-side kernels for common maps or extra multiplicity channels.
+Acceptance requires explicit operator domains, compatible embeddings and a
+topology; scalar spectral-measure convergence alone does not establish it.

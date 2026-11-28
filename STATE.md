@@ -1287,3 +1287,59 @@ Next investigate whether a multiplicity-sensitive realization can be
 obtained intrinsically from prime-side local data with a proved spectral
 correspondence; in parallel continue the full-form positivity/generalization
 campaign rather than treating this conditional lift as the endpoint.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.61 (2026-11-28)
+
+Refreshed the recent Skelly preprint from abstract-only awareness to a
+theorem/proof-level bounded audit. Under its Hypothesis 1.5 (finitely many
+off-critical zeros; RH is the zero-off-line special case), Theorems 1.6–1.7
+give for each zero a simple local eigenvalue branch converging to it and
+reciprocal-norm spectral weights converging to the analytic multiplicity.
+The projection-to-weight implication was independently checked: a compactly
+supported real-even probe nonzero at the zero turns the transported Riesz
+projection limit into the scalar weight limit. The proof imports the
+substantial global Pontryagin embedding and operator/Riesz convergence. This
+is individual local spectral-weight recovery, stronger than mere cluster
+mass convergence, but finite-window eigenspaces remain simple and the
+conclusion is conditional. It materially strengthens the arithmetic
+approximation feeding B3-58, but neither gives a local differential operator
+with geometric multiplicity `m_gamma` nor proves RH. QER01–04 concern the
+different bottom-shifted family `lambda=lambda_1(a)`; transfer to that edge
+quotient is open. Source scope and audit: `research/operators/B3-59-local-spectral-weight-multiplicity-audit.md`.
+
+Next: audit Skelly's global Pontryagin embedding and compact/Riesz convergence,
+locate all finite-off-line-zero dependencies, then test whether the weighted
+local spectra admit an operator-limit/intertwiner to the B3-58 fiber model.
+Do not infer operator convergence from vague or pointwise spectral-measure
+convergence alone.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.62 (2026-11-28)
+
+Audited the topology of Skelly's stated local compression mechanism
+conditional on its zero-indexed sampling embeddings. Stabilized negative
+index plus nested dense sampling subspaces gives uniformly bounded
+Pontryagin-orthogonal projections converging strongly; because the global
+inverse is Hilbert–Schmidt, the compressed inverses converge in
+Hilbert–Schmidt and operator norm. Kato's compact-operator theorem then gives
+one simple local eigenvalue branch and rank-one Riesz projections at each
+distinct zero. This validates the source's local eigenvalue/Riesz step
+conditional on the sampling-space propositions; those propositions were not
+independently reproved.
+
+Compared this scalar target with B3-58's geometric multiplicity lift. The
+normalized diagonal embedding of `ell^2(Gamma,m)` into
+`direct_sum_gamma C^(m_gamma)` has only a one-dimensional range in each
+fiber. Every transported local subspace stays in that range; the additional
+`m_gamma-1` directions at a multiple zero are absent. Rank-one local Riesz
+projections cannot converge in norm to the rank-`m_gamma` target projection.
+This is an exact obstruction to deriving the full fiber lift by the existing
+compression embeddings, not a no-go for a different arithmetic matrix
+construction. The zero-indexed global space itself uses zero data, so the
+compression proof is a conditional spectral comparison, not an independent
+zero-free construction. Full derivation and caveats:
+`research/operators/B3-60-compression-limit-and-fiber-obstruction.md`.
+
+Next investigate the zero-independent de Branges/canonical-system direct
+limit and test whether it can give common operator maps or independent
+channels. If it remains scalar/cyclic, specify the local data a matrix lift
+must provide. Do not claim an operator limit from measure convergence alone.

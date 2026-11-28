@@ -120,3 +120,16 @@ spectral theory. RH is a hypothesis in that source theorem. The Lean RH
 verification cited in STATE.md was not rerun here. No numerical or formal
 verification was used, and the source proofs were not independently audited
 in this bounded construction.
+
+## Relation to the local finite-window multiplicity limit
+
+Skelly's 2026 preprint, Theorems 1.6–1.7, proves under its finite-off-line
+zero hypothesis that the prime-defined local eigenvalue branch `t_a(gamma)`
+converges to each zero and its reciprocal-norm spectral weight converges to
+`m_gamma`. This supplies an arithmetic local approximation to the atomic
+measure lifted above; the bounded theorem-scope check is in
+`B3-59-local-spectral-weight-multiplicity-audit.md`. Each local eigenvalue
+remains simple at finite window, so its weight limit does not itself give
+geometric multiplicity. The canonical fiber construction here remains a
+separate standard post-processing step. Neither result gives one intrinsic
+local differential operator with multiplicity-sensitive eigenspaces.
