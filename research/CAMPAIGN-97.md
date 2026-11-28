@@ -649,6 +649,62 @@ Then test whether multiplicity-sensitive fibers can preserve the arithmetic
 form chain. Detailed chain and limits are in
 `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+### PWPB-03.8 — Arithmetic inputs and canonical operator realization
+
+Suzuki's defining Weil functional is explicitly
+`W(u)=integral u(x)(e^(x/2)+e^(-x/2))dx - sum_n Lambda(n)n^(-1/2)
+(u(log n)+u(-log n))`. The local form, its closure, and `J_a` are therefore
+defined without zero ordinates as input. Theorem 6.2 recovers
+`H(a)=diag(eta(a)^(-1),eta(a))` from `eta=alpha'_a/beta_a=beta'_a/alpha_a`
+almost everywhere, with `alpha_a=J_a(i,0)` and `beta_a=J_a(i,i)/alpha_a`.
+`eta` is positive, so the canonical Hamiltonian is positive definite a.e.
+This pins zero-independent *definition* separately from the RH-dependent
+proof that all local forms are positive and the Weyl function is `i xi'/xi`.
+
+For a tail beginning at any `a0>0`, the standard canonical-system
+realization acts in `L2_H((a0,infinity))`, where
+`||y||²=integral y*H y da`, by `T_H y=-H^(-1)J y'`. Its maximal domain
+requires local absolute continuity and `T_H y` in `L2_H`; a separated
+self-adjoint boundary condition is imposed at `a0`. No boundary condition
+is imposed at infinity because the system is limit point. The source's
+determinant-one Hamiltonian gives `integral_a^b tr H >= 2(b-a)`, which
+ensures this endpoint classification. The self-adjoint spectral measure is
+the Nevanlinna measure of the Weyl function; the partial fraction expansion
+in PWPB-03.7 shows that it is purely atomic on `Gamma` with weights
+`m_gamma`. This imports classical canonical-system spectral theory; the
+operator domain is now identified at that level, but no Zetral Lean proof or
+independent full-source proof audit has been made.
+
+This closes the bounded *source-chain identification* question: the
+literature supplies an arithmetic-defined Hamiltonian and an RH-conditional
+set-level spectral correspondence; the RH premise is available from the
+separately checked formal theorem. It remains an existing literature
+construction, not a novelty claim. It does not establish equality of
+eigenspace dimensions with analytic zero multiplicities. Next examine
+whether multiplicity-sensitive matrix channels can be derived from the same
+prime-side data while preserving the local embeddings, or prove a precise
+obstruction for a natural operator class. Detailed statement and limits are
+in `research/operators/B3-13-prime-defined-canonical-system.md`.
+
+### PWPB-03.9 — Audit the imported global screw/Weyl link
+
+Reopened Suzuki arXiv:2206.03682v4 (version 2026-08-24), Theorems 1.1–1.2.
+Its prime-defined `Psi` satisfies
+`integral_0^infinity Psi(t)e^(izt)dt=-xi'(1/2-iz)/(z^2 xi(1/2-iz))`
+for `Im(z)>1/2`. With `g=-Psi` and `Q_xi=i xi'/xi`, this gives exactly
+`integral g e^(izt)dt=-i Q_xi(z)/z^2`, the source's Krein–Langer
+normalization. Under RH, `Q_xi` is Nevanlinna, and the source checks its
+required growth at infinity; uniqueness identifies the arithmetic `g` with
+the global screw function for `Q_xi`. The sign and factor of `i` in the
+dependency cited by Proposition 7.2 of arXiv:2611.33001v1 agree. This is a
+source-to-source dependency audit and algebraic normalization check, not an
+independent proof of either source's analytic theorems. The integral starts
+as an ordinary convergent transform only in `Im(z)>1/2`; the Weyl function
+on the full upper half-plane comes from the screw/Nevanlinna correspondence.
+Next derive the explicit left-boundary line for the canonical operator and
+investigate multiplicity-sensitive arithmetic channels. Details in
+`research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

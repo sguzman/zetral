@@ -106,13 +106,108 @@ measure level.
 ## Next investigation
 
 Independently audit the exact endpoint and operator statement in Suzuki's
-Proposition 7.2 and Theorem 6.2: pin the common Hilbert space, boundary
-condition, and domain, and verify that the Hamiltonian is specified without
-zero data. Then investigate whether a multiplicity-sensitive extension is
-compatible with the arithmetic form chain; the derivative-jet Jordan
-obstruction in MHS-03.4 rules out only Meyer's unchanged dilation action,
-not all alternatives.
+Proposition 7.2 and Theorem 6.2: derive the explicit left boundary line in
+the operator convention below, and verify the Hamiltonian reconstruction
+from prime-defined kernels. Then investigate whether a multiplicity-sensitive
+extension is compatible with the arithmetic form chain; the derivative-jet
+Jordan obstruction in MHS-03.4 rules out only Meyer's unchanged dilation
+action, not all alternatives.
+
+## PWPB-03.8 — Zero-independent input and operator realization audit
+
+The defining functional is explicitly arithmetic. In the source's (1.2),
+
+    W(u) = integral u(x)(e^(x/2)+e^(-x/2)) dx
+           - sum_(n>=1) Lambda(n)n^(-1/2)(u(log n)+u(-log n)).
+
+For fixed `a`, the form is `Q_W^a(u,v)=W(u*conjugate(v)(-·))` on the
+local test core; its closure and RKHS kernel are built from that form. The
+canonical Hamiltonian then uses only those kernels. In the source's `a`
+coordinate, Theorem 6.2 writes
+
+    H(a) = diag(eta(a)^(-1), eta(a)),
+    eta(a) = alpha_a' / beta_a = beta_a' / alpha_a,
+
+where `alpha_a=J_a(i,0)>0` and `beta_a=J_a(i,i)/alpha_a`; derivatives are
+almost everywhere. I use `eta` to avoid confusing this coefficient with a
+zero ordinate. Thus the *definition* of `H` is zero-independent; RH is used
+to ensure strict positivity of all local forms and to identify the Weyl
+function with `Q_xi`.
+
+The operator framework can be stated explicitly using the source's system
+convention. For any `a0>0`, use
+
+    L2_H = {y : integral_(a0)^infinity y(a)^* H(a)y(a) da < infinity},
+    T_H y = -H(a)^(-1) J y'(a),
+
+with maximal differential domain (locally absolutely continuous `y` and
+`T_H y` in `L2_H`) plus one separated self-adjoint boundary condition at
+the regular left endpoint `a0`. At infinity the system is limit point:
+Theorem 6.2 gives `det H=1`, and the source obtains
+`integral_a^b tr H(c) dc >= 2(b-a)`. Hence there is no right-end boundary
+parameter. The source's Weyl normalization determines which left boundary
+parameter corresponds to `Q_xi`; translating that parameter into an explicit
+boundary line for this operator convention remains to be done. The domain
+description imports standard canonical-system operator theory and is not
+formally verified by Zetral.
+
+The zero-side identity independently checks the spectral measure. Under RH,
+the even Hadamard product and `sum_(gamma>0) m_gamma/gamma^2 < infinity` give
+locally uniform convergence away from poles of
+
+    Q_xi(z) = sum_(gamma>0) 2m_gamma z/(gamma^2-z^2)
+            = sum_(gamma in Gamma) m_gamma/(gamma-z),
+
+with symmetric pairing. For `Im(z)>0`, each paired term has positive
+imaginary part; the Herglotz representation has exactly the atoms
+`m_gamma delta_gamma` and no continuous part. The canonical-system spectral
+theorem identifies this measure with the operator's spectral measure. The
+system is scalar/multiplicity one, so the spectral support is exactly the
+distinct ordinate set, with simple eigenspaces and masses `m_gamma`.
+
+This closes the bounded source-chain question at theorem level: a
+zero-independent arithmetic Hamiltonian definition and an RH-conditional
+spectral correspondence are both present in the literature, and the RH
+premise is supplied by the separately checked Lean result. It does not
+provide multiplicity-preserving eigenspaces when a zero is multiple, and
+does not constitute an independent audit or formal composition of the
+source theorems. No novelty claim is made. The remaining HP question is
+whether an arithmetic-derived higher-multiplicity operator can preserve
+the local form/de Branges embeddings; the existing Jordan-jet obstruction
+only excludes one natural action.
+
+## PWPB-03.9 — Sign and dependency audit of the global Weyl identity
+
+Reopened Suzuki, *Aspects of the screw function corresponding to the
+Riemann zeta-function*, arXiv:2206.03682v4 (version 2026-08-24), Theorems
+1.1–1.2 and equations (1.2), (1.7), (1.8). The source defines the prime-side
+function `Psi`, proves in its initial half-plane that
+
+    integral_0^infinity Psi(t)e^(izt) dt
+        = - xi'(1/2-iz)/(z^2 xi(1/2-iz)),
+
+and sets `g=-Psi`, `Q_xi=i xi'/xi(1/2-iz)`. Therefore
+
+    integral_0^infinity g(t)e^(izt) dt = -i Q_xi(z)/z^2,
+
+which is exactly the Krein–Langer transform convention used to associate a
+screw function to a Nevanlinna function. Under RH, Lagarias's criterion
+makes `Q_xi` Nevanlinna; its growth condition at infinity is verified
+unconditionally in the source. The uniqueness in the Krein–Langer
+correspondence then identifies the prime-defined `g` with the global screw
+function attached to `Q_xi`. This is the imported step used by Suzuki
+2611.33001v1, Proposition 7.2. The sign and factor of `i` agree; no
+normalization discrepancy was found in this link.
+
+This is a source-to-source dependency audit and a direct algebraic sign
+check, not an independent proof of the analytic theorems in either paper.
+The transform identity is initially an ordinary convergent integral only
+for `Im(z)>1/2`; the Weyl function on all of the upper half-plane comes from
+the screw-function/Nevanlinna correspondence, not from claiming that this
+integral converges there. Exact left boundary-line translation and the
+multiplicity-sensitive operator remain open.
 
 Primary source: [Suzuki, arXiv:2611.33001v1](https://arxiv.org/html/2611.33001).
 Formal RH verification scope is summarized in `STATE.md`; no novelty or
-human-review claim is made here.
+human-review claim is made here. Screw-function source:
+[Suzuki, arXiv:2206.03682v4](https://arxiv.org/html/2206.03682).

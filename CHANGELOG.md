@@ -1102,6 +1102,33 @@ atomic spectral-measure support at the distinct zero ordinates and masses
 equal to analytic multiplicities. The formal RH result supplies the RH
 premise at theorem level. This is a literature construction, not a Zetral
 novelty claim or independent audit of Suzuki's proof. Scalar eigenspaces do
-not encode analytic multiplicity, and the exact half-line spectral-domain
-and cyclicity details remain to audit. Full record:
+not encode analytic multiplicity. The exact operator convention was still
+being audited at that checkpoint; PWPB-03.8 below records the bounded
+realization audit. Full record:
 `research/operators/B3-13-prime-defined-canonical-system.md`.
+
+## XCVII PWPB-03.8 — Arithmetic Hamiltonian and operator domain pinned (2026-11-27)
+
+Verified from Suzuki's source that the local form starts from an explicit
+prime-power/archimedean Weil functional, and Theorem 6.2 recovers the
+positive Hamiltonian from its RKHS kernels without zero ordinates as input.
+Pinned the standard weighted canonical-system Hilbert space, maximal
+differential domain, and limit-point right endpoint. The source Weyl
+normalization specifies the left boundary parameter; its explicit boundary
+line in this operator convention remains to derive. Its Weyl measure is
+purely atomic on the distinct ordinates with analytic multiplicities as
+weights. This closes the bounded source-chain identification at theorem
+level, not an independent proof audit; exact operator multiplicity and
+formal composition remain open. See B3-13 and Campaign XCVII.
+
+## XCVII PWPB-03.9 — Global screw/Weyl normalization checked (2026-11-27)
+
+Reopened Suzuki arXiv:2206.03682v4 Theorems 1.1–1.2 and checked the exact
+transform signs: for the prime-defined `g=-Psi`, its Fourier–Laplace
+transform is `-i Q_xi(z)/z^2` in the initial convergence half-plane. Under
+RH the Krein–Langer correspondence identifies it with the global screw
+function for `Q_xi=i xi'/xi`; this is the dependency used in Suzuki's 2026
+Proposition 7.2. The integral itself is not claimed to converge throughout
+the upper half-plane. Source-to-source audit only, not an independent proof
+of either analytic theorem. The explicit left boundary line remains open;
+see B3-13 and Campaign XCVII.

@@ -21,10 +21,16 @@ Suzuki's 2026 local Weil-form/canonical-system paper: its Hamiltonian is
 defined from arithmetic local forms and, under RH, its half-line Weyl
 function is `i xi'/xi`, with spectral support at the distinct zero
 ordinates. This is an existing source result synthesized for Zetral, not a
-new construction or independent source-proof audit. The formal RH result
-discharges its RH premise at theorem level, but matching analytic
+new construction or independent source-proof audit. PWPB-03.8 pins its
+zero-independent prime-power input, kernel-recovered Hamiltonian, and
+standard limit-point self-adjoint realization; under the paper's RH premise
+the Weyl spectral measure is pure atomic on the distinct ordinates. The
+formal RH result discharges that premise at theorem level. Matching analytic
 multiplicity as eigenspace dimension and independently auditing the source
-operator chain remain open. The bounded audit is recorded in
+operator chain remain open. PWPB-03.9 checked the imported global
+screw/Weyl transform sign and normalization across Suzuki's 2023 and 2026
+papers. The explicit left boundary line remains to derive. The bounded audit
+is recorded in
 `research/operators/B3-13-prime-defined-canonical-system.md` and
 `research/CAMPAIGN-97.md`.
 

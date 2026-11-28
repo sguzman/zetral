@@ -70,8 +70,12 @@ analytic theorems and from any RH implication.
   theorem discharges the RH premise at theorem level; no Zetral proof
   composition or independent audit of Suzuki is done. Source canonical-system
   theory plus the atomic Weyl measure gives pure point spectrum on that
-  support at theorem level. Next audit the exact operator/domain and the
-  zero-independent definition of its Hamiltonian. Full record:
+  support at theorem level. PWPB-03.8 pins the arithmetic input and standard
+  operator realization. PWPB-03.9 checked the imported global screw/Weyl
+  transform sign and normalization across Suzuki's 2023 and 2026 sources.
+  Next derive the explicit left boundary line and investigate
+  multiplicity-sensitive channels compatible with the form chain, or a
+  precise obstruction for a natural class. Full record:
   `research/operators/B3-13-prime-defined-canonical-system.md`.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
