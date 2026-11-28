@@ -868,6 +868,19 @@ no-go for another finite-endpoint mechanism or for a number-field geometric
 pairing. Source and derivation:
 `research/operators/B3-17-function-field-endpoint-transfer.md`.
 
+### PWPB-03.21 — Finite-trace obstruction in the geometric model
+
+Audited the Rosati/Frobenius construction in Suzuki's function-field paper.
+Its finite-dimensional algebra has `tau(1)=2g`; its exact pairing uses
+finite power moments. A direct zeta analogue assigning the zero-counting
+measure to a unitary would require `tau(1)=sum_gamma m_gamma=infinity`, by
+Riemann–von Mangoldt, so no finite trace can implement that identification.
+This does not rule out a semifinite or regularized trace, nor the Weil form
+on rapidly decaying test functions. The bounded outcome is a precise
+architecture requirement for any number-field geometric lift, not a global
+no-go. Full derivation and follow-up criteria:
+`research/operators/B3-18-finite-trace-geometric-obstruction.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

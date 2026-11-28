@@ -120,6 +120,11 @@ analytic theorems and from any RH implication.
   through a finite periodic-class encoding, using zero-counting growth. Next
   extract the function-field operator and geometric-pairing ingredients that
   do not require periodicity; test them against the number-field Weil form.
+  PWPB-03.21 ruled out the literal finite-trace Rosati analogue because the
+  zeta zero measure has infinite mass. Next ask whether the prime-side Weil
+  distribution induces a positive semifinite weight on a natural operator
+  ideal; define the domain and test the trace identity on compactly
+  supported functions before attempting an operator construction.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

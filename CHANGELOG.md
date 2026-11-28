@@ -1,5 +1,12 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.21 finite-trace geometric obstruction
+
+Showed that the direct finite-trace Frobenius/Rosati construction cannot
+encode the full zeta zero counting measure because its total mass is
+infinite. Semifinite or regularized number-field pairings remain open.
+Details: `research/operators/B3-18-finite-trace-geometric-obstruction.md`.
+
 ## 2026-11-27 — PWPB-03.20 function-field endpoint comparison
 
 Audited a recent function-field spectral construction and proved that its

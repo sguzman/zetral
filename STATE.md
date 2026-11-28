@@ -102,6 +102,14 @@ give `Omega(T log T)` distinct ordinates versus `O(T)` for finitely many
 classes. This blocks only that direct endpoint transplant. Full comparison:
 `research/operators/B3-17-function-field-endpoint-transfer.md`.
 
+PWPB-03.21 showed that a literal finite-trace Frobenius/Rosati model cannot
+represent the zeta zero counting measure: setting the test polynomial to
+one forces `tau(1)=sum_gamma m_gamma=infinity`. This leaves open semifinite,
+regularized, and test-domain pairings; the rapidly decaying Weil test sums
+can remain finite. The next design target is a prime-defined positive
+semifinite weight with an explicit domain and trace identity. Details:
+`research/operators/B3-18-finite-trace-geometric-obstruction.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
