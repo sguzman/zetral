@@ -1354,6 +1354,16 @@ factor model and does not refute H2′ for the actual semilocal operator. The
 remaining target is specifically a quantitative low-frequency leakage bound
 using the product `u=u_infinity product_p u_p`.
 
+Two-sided singular-vector reduction (2026-11-28): B3-49 uses
+`a_n=(e_n+U* g_n)/sqrt(2(1+kappa_n))` and positive-form Cauchy–Schwarz to
+bound the localized negative-tail trace by right- and left-Hankel leakage
+sums, each with first-moment weight `kappa_n`. Direct Hilbert–Schmidt
+smoothing controls only the squared-angle moment `kappa_n^2`; the missing
+half-power is not supplied by the current trace-class estimates. Next derive
+the first-moment leakage for one prime factor, then track it through the
+finite prime product. Details:
+`research/operators/B3-49-two-sided-hankel-localization-reduction.md`.
+
 Literature pivot (2026-11-28): targeted search found Suvlu's four-paper
 *Weil form operators* draft series, including a separate conditional
 finite-characteristic zero-retention route. B3-45 independently checks only

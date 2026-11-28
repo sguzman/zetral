@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.48 two-sided Hankel localization reduction
+
+Derived a sufficient bound reducing the localized negative-tail trace to
+first-moment Mellin leakage of both right and left singular vectors of the
+Hankel operator. Existing Hilbert–Schmidt smoothing controls only the
+squared-angle moment, exposing the missing half-power quantitatively. The
+actual local-factor estimate remains open. Details:
+`research/operators/B3-49-two-sided-hankel-localization-reduction.md`.
+
 ## 2026-11-28 — PWPB-03.48 qualitative localization obstruction
 
 Constructed an abstract orthogonal tail with the known `n^(-1/2)` angle

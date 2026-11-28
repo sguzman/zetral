@@ -408,6 +408,15 @@ polynomial tail-index rate follows from those qualitative inputs alone. It is
 not the semilocal Hankel/local-factor operator and does not refute ACG's H2′
 claim; the next proof attempt must use actual local-factor structure. Details:
 `research/operators/B3-48-slow-localization-abstract-model.md`.
+
+Further structural reduction: B3-49 expresses the localized negative tail as
+at most the sum of right- and left-Hankel singular-vector leakage, both with
+the required first-moment weight `kappa_n`. The available smoothing estimate
+for `Gamma chi_R^(1/2)` gives only the squared-angle moment `kappa_n^2`; the
+missing half-power is explicit. Next attempt this first-moment bound for a
+single prime factor and then the finite arithmetic product, keeping right and
+left modes separate. Details:
+`research/operators/B3-49-two-sided-hankel-localization-reduction.md`.
 The ACG H2′ localization investigation (PWPB-03.48) remains open and
 resumable; its real-modulation necessary criterion is in B3-44.
 

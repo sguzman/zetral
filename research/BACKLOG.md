@@ -197,6 +197,11 @@ control this weighted trace by itself.
   polynomial local trace growth and fixed-window tail convergence, yet only
   `1/log(n0)` low-frequency leakage. Thus the desired rate cannot follow from
   those qualitative facts alone; the model is not the arithmetic operator.
+- **Structural reduction:** B3-49 writes each negative pair vector as
+  `(e_n+U* g_n)/sqrt(2(1+kappa_n))`, giving a sufficient two-sided
+  first-moment leakage bound for right/left Hankel singular vectors. Available
+  smoothing identities naturally control `kappa_n^2` moments, leaving the
+  explicit half-power gap to the required `kappa_n` trace.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
   frequency localization of the high-index near-self-dual modes, but local
   trace-class and global operator-norm estimates alone are insufficient.
@@ -206,9 +211,10 @@ control this weighted trace by itself.
 - **Information gain:** Either the quantitative analytic input for ACG's
   positive-complement theorem, or a precise obstruction to deriving it from
   currently known semilocal Hankel bounds.
-- **Design / falsification:** Write (66) as a localized spectral-density
-  estimate; split bounded and dyadic-high Mellin frequencies; derive a bound
-  that uses the actual local-factor/Hankel structure and compare exponents
+- **Design / falsification:** Prove the two first-moment leakage sums in
+  B3-49, first for one local factor and then for the actual finite prime
+  product. Split bounded and dyadic-high Mellin frequencies; use actual
+  local-factor/Hankel structure and compare exponents
   with the Gevrey/Fourier tail. Test each proposed inference against the
   non-Hilbert–Schmidt countermodel B3-23 and slow-leakage model B3-48. Do not
   assert the transition/pole Schur block sign, which remains separate.
