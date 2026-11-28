@@ -1,5 +1,24 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.48 real modulation criterion for H2′ (partial)
+
+Derived an exact symmetric moving-average inequality for ACG's tail Mellin
+density using two real cosine/sine modulations, respecting the source's
+real-test quantifier. A pointwise density majorant is sufficient but
+stronger than needed. This gives a diagnostic criterion; the arithmetic
+frequency-localization estimate remains open. Details:
+`research/operators/B3-44-H2prime-real-modulation-probe.md`.
+
+## 2026-11-28 — PWPB-03.47 finite-certificate transfer audit
+
+Pinned the exact implication boundary: positivity of every nested Galerkin
+cutoff of the same fixed-window Weil form implies full positivity, but one
+finite cutoff does not. Zetral's LXXV exact certificate has no independent
+evaluation of ACG's original Weil form and no established common-form/core
+map, so it does not transfer to ACG's ground spectrum. The source's lower
+bounds for both lowest parity sectors are RH-strength via Weil positivity.
+Details: `research/operators/B3-43-finite-certificate-transfer-boundary.md`.
+
 ## 2026-11-28 — PWPB-03.46 direct prime-side transform derivation
 
 Derived Suzuki's explicit prime/archimedean transform term by term and

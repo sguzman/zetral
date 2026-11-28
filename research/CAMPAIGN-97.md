@@ -1290,11 +1290,15 @@ term, with sum/integral exchanges justified for `Im(z)>1/2`. See
 manual audit of an existing theorem; it does not establish the source's
 canonical-system or spectral-transform results.
 
-Next: audit whether the low Weil-spectrum/prolate comparison hypotheses in
-Andrews–Connes–La Gatta follow from Zetral's existing finite positivity
-results, or isolate the exact missing full-space lower bound. Preserve the
-distinction between the ordinary Weil form and Suzuki's inverse-compression
-or theta-pencil operators.
+Completed the certificate-transfer audit as PWPB-03.47; the evidence boundary
+and exact variational implication are recorded in
+`research/operators/B3-43-finite-certificate-transfer-boundary.md`.
+
+Next: attempt a quantitative, frequency-localized trace bound for ACG's
+semilocal tail condition (H2′), focusing on the polynomial-rate localized
+estimate (66). The local trace-class limit and operator-norm obstruction are
+already audited in B3-20–23; use the structured semilocal Hankel operator and
+keep the transition/pole Schur-sign problem separate.
 
 ### PWPB-03.46 — Direct prime/archimedean transform derivation
 
@@ -1307,6 +1311,39 @@ termwise transform for `Im(z)>1/2`; the Lerch-series majorant is summable.
 This is a hand-checked derivation of Suzuki Theorem 1.1(1), not an independent
 new theorem or RH result. Full derivation and scope:
 `research/operators/B3-42-explicit-transform-derivation.md`.
+
+### PWPB-03.47 — Finite positivity certificates and the full Weil spectrum
+
+At fixed `lambda`, positivity of every nested Fourier Galerkin compression
+of the same closed Weil form is equivalent to positivity of the full form,
+by the source-pinned `mu_N(lambda) downarrow mu(lambda)` limit in B3-24. A
+single finite cutoff does not suffice; an explicit diagonal countermodel is
+recorded in B3-43. The LXXV candidate certificate has no independently
+verified evaluation of the ACG original Weil form, and no common-form
+identity/dense-core map to ACG `QW_lambda` is established in Zetral. ACG
+Hypothesis 3.4's lower bounds for both lowest parity sectors imply window
+positivity and hence RH, per its Remark 3.5. This is a source/repository
+scope audit, not a transfer theorem or an RH proof. Full note:
+`research/operators/B3-43-finite-certificate-transfer-boundary.md`.
+
+Next (PWPB-03.48) quantitative target: ACG's localized semilocal tail estimate (66),
+which supplies the H2′ high-index/frequency control and is not implied by the
+fixed-frequency trace-class convergence or the finite-prime operator-norm
+approximation in B3-20–23.
+
+### PWPB-03.48 — Real modulation probes for the H2′ tail (partial)
+
+For a fixed real smooth test `f`, the two admissible real modulations
+`f cos(T log u)` and `f sin(T log u)` combine by the parallelogram identity
+into the symmetric moving average of the tail Mellin density at frequencies
+`+T` and `-T`. H2′ therefore implies the exact averaged inequality (1) in
+`research/operators/B3-44-H2prime-real-modulation-probe.md`, with right side
+`epsilon_t(n0)(log(2+T)+O_f(1))`. Conversely, the pointwise majorant
+`rho_tail(s)<=epsilon_t(n0)log(2+|s|)` suffices for H2′ but is stronger than
+necessary. This provides a real-test criterion, not a quantitative estimate
+for the actual arithmetic density. Next derive the needed decay in `n0`
+uniformly over these frequency translates using the semilocal Hankel symbol;
+otherwise give a source-structured counterexample to the proposed bound.
 
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin

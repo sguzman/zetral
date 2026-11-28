@@ -348,10 +348,33 @@ correspondence or RH proof. The canonical-system and spectral-transform
 theorems remain imported. Details:
 `research/operators/B3-42-explicit-transform-derivation.md`.
 
-Next: audit whether the hypotheses for ACG's low Weil-spectrum/prolate
-comparison follow from Zetral's existing finite positivity results, or state
-the exact missing full-space lower bound. Keep the ordinary Weil form
-operator distinct from Suzuki compression and theta-pencil models.
+PWPB-03.47 audited the transfer boundary from Zetral's exact finite
+positivity certificates to ACG's full-window Weil form. At fixed window,
+positivity of every nested Galerkin cutoff of the same form implies full
+positivity via the `N -> infinity` Rayleigh–Ritz limit, but a single finite
+cutoff does not. The LXXV certificate does not independently evaluate the
+ACG form, and Zetral has no established common-form/dense-core map between
+them. ACG's lower bounds for both lowest parity sectors in Hypothesis 3.4
+imply all-window Weil positivity and hence RH; the source itself notes this.
+This is an evidence-scope audit, not RH progress or an operator transfer.
+Details: `research/operators/B3-43-finite-certificate-transfer-boundary.md`.
+
+Next: pursue a quantitative frequency-localized trace bound for ACG's
+semilocal high-index tail condition (H2′), especially its polynomial-rate
+localized estimate (66). Existing local trace-class convergence and
+operator-norm approximations do not imply this relative bound. See
+PWPB-03.48 in `research/BACKLOG.md`.
+
+PWPB-03.48 first lemma: applying H2′ to the real tests
+`f(u)cos(T log u)` and `f(u)sin(T log u)` yields an exact necessary
+symmetric moving-average inequality for the semilocal tail Mellin density.
+Its right side is `epsilon_t(n0)(log(2+T)+O_f(1))`; this follows by Mellin
+Plancherel and the rapid decay of the fixed smooth test transform. A
+pointwise density majorant by `epsilon_t(n0)log(2+|s|)` is sufficient but
+stronger than necessary. The result respects the source's real-test
+quantifier and does not prove H2′; uniform quantitative estimates for the
+actual arithmetic density remain open. Details:
+`research/operators/B3-44-H2prime-real-modulation-probe.md`.
 
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the

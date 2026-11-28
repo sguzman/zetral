@@ -169,39 +169,53 @@ are recorded in `research/operators/B3-42-explicit-transform-derivation.md`.
 This checks Suzuki's existing identity from the explicit formula; it is not a
 novel transform theorem or a proof of the operator/spectral correspondence.
 
-**PWPB-03.46 — audit the low-spectrum hypotheses in the Weil/prolate bridge:**
-Determine whether the hypotheses in Andrews–Connes–La Gatta's comparison of
-the low Weil spectrum with the Fuchs/prolate ladder can be obtained from
-Zetral's existing exact positivity/cutoff results, or identify a precise
-missing lower bound. Keep the ordinary `L^2` Weil operator distinct from the
-Suzuki inverse-compression and theta-pencil operators.
+**PWPB-03.46 — finite-certificate transfer boundary (complete):** Fixed-window
+Galerkin positivity for every cutoff of the same form implies full form
+positivity by the `N -> infinity` Rayleigh–Ritz limit; one finite cutoff does
+not. The LXXV certificate's own audit does not evaluate the ACG original Weil
+form, and Zetral has no established common-form identity/dense-core map to
+transfer it. ACG's two lowest-sector lower bounds in Hypothesis 3.4 imply
+window positivity and hence RH, as the source itself notes. Details:
+`research/operators/B3-43-finite-certificate-transfer-boundary.md`.
 
-- **Question:** For the exact `QW_lambda` family and pinned parameter
-  conventions in Campaign XCVII, do the proved estimates imply the needed
-  lower comparison for the low even and odd eigenvalues and the sector
-  simplicity/evenness assumptions, uniformly in the asymptotic regime?
-- **Hypothesis:** Existing finite positivity certificates plus published
-  prolate asymptotics do not by themselves imply these full-space spectral
-  lower bounds; a residual/gap or form-domain comparison remains necessary.
-- **Prerequisites:** Campaign XCVII source normalization; ACG Hypothesis 3.4
-  and its exact eigenvalue conventions; Zetral positivity notes/certificates;
-  min-max and parity-sector variational principles.
-- **Information gain:** Either a valid bridge from existing certificates to
-  the candidate operator's low spectrum, or a rigorous identification of the
-  unbridged inequality and its scaling.
-- **Design / falsification:** Translate each cited estimate into the same
-  `lambda` and sector normalization; check whether each is an upper or lower
-  bound and whether it concerns the full operator or a compression. Attempt a
-  finite-dimensional parity-crossing countermodel to any inference from an
-  upper ladder alone. Do not use zeros as inputs.
-- **Dependencies:** Campaign XCVII and its cited primary sources; exact
-  positivity certificates already in the repository.
-- **Acceptance:** A source-pinned implication proof with all hypotheses, or a
-  counterexample / quantified missing bound; record independent review and
-  formal status honestly.
-- **Verification:** Re-derive min-max implications separately, compare exact
-  operator definitions and parameter maps, and search prior literature
-  before any novelty claim. No large local computation is required.
+**PWPB-03.48 — Quantitative frequency localization for the semilocal tail (active):**
+Investigate the ACG (H2′) relative trace estimate for the negative
+near-self-dual tail `N_t^(n0)` acting against the scaling transform. The
+source's local trace-class bound gives convergence at each fixed frequency
+window but no uniform rate; its requested polynomial-in-`R` localization is
+equation (66). Existing exact finite-prime symbol approximation does not
+control this weighted trace by itself.
+
+- **Question:** Can one prove a quantitative bound for
+  `Tr(M_chi_R N_t^(n0))` or the Mellin tail density that decays in `n0`
+  uniformly at polynomial growth in `R`, strongly enough to establish (66)?
+- **Partial result:** B3-44 derives a necessary symmetric moving-average
+  inequality from real cosine/sine modulations, and a stronger sufficient
+  pointwise density majorant. The averaged test gives a concrete way to
+  inspect frequency localization without extending H2′ to complex tests.
+- **Hypothesis:** The dyadic prime-power shift structure should yield
+  frequency localization of the high-index near-self-dual modes, but local
+  trace-class and global operator-norm estimates alone are insufficient.
+- **Prerequisites:** ACG arXiv:2611.13129v1 §§8.3–8.4, Lemmas 8.8–8.9,
+  (H2′), (65)–(66), Remark 8.10; Zetral B3-20–23 and finite-prime expansion
+  B3-21/22.
+- **Information gain:** Either the quantitative analytic input for ACG's
+  positive-complement theorem, or a precise obstruction to deriving it from
+  currently known semilocal Hankel bounds.
+- **Design / falsification:** Write (66) as a localized spectral-density
+  estimate; split bounded and dyadic-high Mellin frequencies; derive a bound
+  that uses the actual local-factor/Hankel structure and compare exponents
+  with the Gevrey/Fourier tail. Test each proposed inference against the
+  non-Hilbert–Schmidt countermodel B3-23. Do not assert the transition/pole
+  Schur block sign, which remains separate.
+- **Dependencies:** Source-pinned normalization of the semilocal scaling
+  action and the accepted B3-20–23 derivations.
+- **Acceptance:** A proof of (66) with explicit dependence on `n0,R,t,S` and
+  correct domains, or a rigorous countermodel delimiting what the established
+  estimates imply. Numerical singular-value evidence alone does not pass.
+- **Verification:** Independently derive the localized trace identity and
+  validate the operator ideal/density manipulations; check source and prior
+  art. No large local data or computation is required.
 
 **PWPB-03.44 follow-up — global Weyl identification audit:** Suzuki's
 arithmetic canonical system has a complete scalar spectral representation
