@@ -606,6 +606,49 @@ move to an independent HP route. Source anchor:
 `IsComparisonOperator.exists_normDet_sq_mul_det_eq` and its use in
 `heightLe_liftDeterminant_ratio` at the pinned compact revision above.
 
+### PWPB-03.7 — Prime-defined half-line canonical-system candidate
+
+**Question.** Does Suzuki's local Weil-form/de Branges chain give one
+prime-side-defined self-adjoint spectral realization of the zeta ordinates,
+rather than only zero-defined sampling models or finite-window operators?
+
+**Finding (source-grounded synthesis; not an independent source-proof audit).**
+Suzuki, arXiv:2611.33001v1 (version 2026-11-24), constructs local RKHS
+kernels `J_a` from arithmetic Weil forms and recovers the canonical
+Hamiltonian coefficient from these kernels in Theorem 6.2. Under RH,
+Proposition 7.2 identifies the Weyl function of the common half-line system
+as `Q_xi(z)=i xi'(1/2-iz)/xi(1/2-iz)`. The corresponding global spectral
+measure is `mu_xi=sum_gamma m_gamma delta_gamma`. The Hadamard product checks
+the normalization:
+
+    Q_xi(z) = sum_(gamma in Gamma) m_gamma/(gamma-z),
+
+with symmetric summation, simple poles of residue `-m_gamma`, and positive
+atomic masses `m_gamma`. Thus the arithmetic-defined half-line spectral
+model has support exactly the set of distinct signed ordinates. Its scalar
+eigenspaces are simple; analytic multiplicities occur as spectral weights,
+not eigenspace dimensions. The finite-window extension spectra are not the
+zero set: Proposition 7.1 gives phase interlacing and says the global zero
+measure is nonorthogonal on every finite local space. The correspondence is
+at the common half-line system/spectral-measure level.
+
+The Hamiltonian is defined from local Weil forms, not by inserting zero
+ordinates into a diagonal operator. The separate RH premise is available
+from the independently kernel-checked Lean theorem and Weil's criterion,
+subject to trust in the audited kernels and Mathlib semantics. Zetral has not
+formally composed these results or independently audited Suzuki's proof.
+This is an existing literature construction, not a Zetral novelty claim or
+an independent proof of RH. It advances the portfolio from the zero-defined
+B3-01 model to a prime-defined operator candidate with a theorem-level
+RH-conditional Weyl identity; exact analytic multiplicities as eigenspace
+dimensions remain unmatched.
+
+**Next.** Audit the common Hilbert space, boundary realization, limit-point
+domain, and prove the Hamiltonian's definition is independent of zero data.
+Then test whether multiplicity-sensitive fibers can preserve the arithmetic
+form chain. Detailed chain and limits are in
+`research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

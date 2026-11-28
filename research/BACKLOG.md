@@ -6,7 +6,7 @@ campaign files contain the detailed derivations and evidence. Re-rank after
 each material result. Keep finite positivity certificates distinct from
 analytic theorems and from any RH implication.
 
-### PWPB-03.4 — Formal RH proof to operator extraction (new top priority)
+### PWPB-03.4 — Formal RH proof to operator extraction (active)
 
 - **Precise question:** Does the theta-lift / arithmetic Gram mechanism in
   the independently kernel-checked Alpöge–Claude Lean proof admit a natural
@@ -35,10 +35,15 @@ analytic theorems and from any RH implication.
   RH theorem from an operator construction. No Zetral rerun of the massive
   Lean verification is planned; rely on the external independent audit and
   inspect the compact source selectively.
-- **Status:** Activated as PWPB-03.4. PWPB-03.5 extracted the proof's
+- **Status:** PWPB-03.5 extracted the proof's
   finite-dimensional comparison operator; PWPB-03.6 ruled out its direct
-  compression determinant as a zeta-zero spectral determinant. No HP
-  operator or new zero-spectrum correspondence has been established.
+  compression determinant as a zeta-zero spectral determinant. PWPB-03.7
+  identified a stronger existing-literature route through Suzuki's
+  prime-defined half-line canonical system. Its Weyl identity yields the
+  distinct zero ordinates as spectral support under RH, whose premise is
+  available from the external checked Lean theorem. Independent audit of the
+  full construction, boundary realization and multiplicity match remains
+  open; this is not a Zetral novelty claim.
 - **PWPB-03.5 source audit:** The pinned Lean development does contain a
   finite-dimensional positive comparison operator
   `U_vartheta = c_j glue_vartheta glue_vartheta*`. Its exact identity
@@ -54,6 +59,20 @@ analytic theorems and from any RH implication.
   compression determinant as Xi, while leaving renormalized limits open.
   Next seek a separate common-space trace/transfer operator. Full exact
   statement, derivation, and qualification: `research/CAMPAIGN-97.md`.
+
+- **PWPB-03.7 prime-defined canonical-system candidate:** Suzuki's local
+  Weil-form kernels determine a canonical Hamiltonian from arithmetic data;
+  under RH its half-line Weyl function is `i xi'/xi`, with atomic spectral
+  measure `sum m_gamma delta_gamma`. This gives support at the distinct zero
+  ordinates, while scalar eigenspaces remain simple and analytic
+  multiplicities occur as measure weights. The finite-window spectra are
+  phase-interlacing approximants, not the zero set itself. The formal RH
+  theorem discharges the RH premise at theorem level; no Zetral proof
+  composition or independent audit of Suzuki is done. Source canonical-system
+  theory plus the atomic Weyl measure gives pure point spectrum on that
+  support at theorem level. Next audit the exact operator/domain and the
+  zero-independent definition of its Hamiltonian. Full record:
+  `research/operators/B3-13-prime-defined-canonical-system.md`.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

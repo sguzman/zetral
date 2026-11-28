@@ -15,12 +15,18 @@ these are independently reported verification results, conditional on kernel
 soundness and the intended Mathlib semantics. Rubinstein's conventional
 exposition remains a work in progress and explicitly leaves thirteen classical
 hypotheses in the main inequality unreconstructed/proved in that exposition.
-This is a verified formal proof claim, not an operator construction: the RH
-statement is now formally proved in the checked development, but no
-Hilbert–Pólya operator or spectral correspondence follows from that proof.
-The active follow-up is to understand the proof's main inequality and test
-whether its arithmetic/theta-lift mechanism yields a rigorous spectral model;
-see PWPB-03.4 in `research/CAMPAIGN-97.md` and the prioritized backlog.
+This is a verified formal proof claim, not an operator construction by
+itself. PWPB-03.7 has identified a separate, stronger operator route in
+Suzuki's 2026 local Weil-form/canonical-system paper: its Hamiltonian is
+defined from arithmetic local forms and, under RH, its half-line Weyl
+function is `i xi'/xi`, with spectral support at the distinct zero
+ordinates. This is an existing source result synthesized for Zetral, not a
+new construction or independent source-proof audit. The formal RH result
+discharges its RH premise at theorem level, but matching analytic
+multiplicity as eigenspace dimension and independently auditing the source
+operator chain remain open. The bounded audit is recorded in
+`research/operators/B3-13-prime-defined-canonical-system.md` and
+`research/CAMPAIGN-97.md`.
 
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the

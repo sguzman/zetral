@@ -1092,3 +1092,16 @@ nonzero nilpotent Jordan block at a multiple zero. No positive Hilbert norm
 can make that action unitary, so the direct jet-fiber repair is ruled out if
 multiple zeros exist. This is a conditional, scoped obstruction, not a no-go
 for other constructions or a novelty claim. See `research/CAMPAIGN-96.md`.
+
+## XCVII PWPB-03.7 — Prime-defined canonical-system route (2026-11-27)
+
+Audited the logical connection in Suzuki's 24 November local Weil-form paper:
+its canonical Hamiltonian is recovered from kernels of arithmetic local
+forms; under RH the common half-line Weyl function is `i xi'/xi`, with
+atomic spectral-measure support at the distinct zero ordinates and masses
+equal to analytic multiplicities. The formal RH result supplies the RH
+premise at theorem level. This is a literature construction, not a Zetral
+novelty claim or independent audit of Suzuki's proof. Scalar eigenspaces do
+not encode analytic multiplicity, and the exact half-line spectral-domain
+and cyclicity details remain to audit. Full record:
+`research/operators/B3-13-prime-defined-canonical-system.md`.
