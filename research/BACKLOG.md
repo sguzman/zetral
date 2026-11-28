@@ -83,10 +83,13 @@ analytic theorems and from any RH implication.
   PWPB-03.13 proves the scalar eigenspace-dimension-at-most-one obstruction
   and specifies noncircular matrix-lift requirements. PWPB-03.14 independently
   audits endpoint trace and transfer algebra, finding no mismatch while
-  isolating the imported limit-point and spectral theorems. Next independently
-  audit analytic cutoff-Weyl convergence and formulate an arithmetic matrix
-  local form or a no-go theorem for a precisely defined lift class. Full
-  record:
+  isolating the imported limit-point and spectral theorems. PWPB-03.15 records
+  Xu's Nov. 25 RH-conditional lower densities for simple/distinct zeros;
+  useful for the simple-spectrum portion but it does not settle all
+  multiplicities and has not been independently audited here. Next
+  independently audit analytic cutoff-Weyl convergence and formulate an
+  arithmetic matrix local form or a no-go theorem for a precisely defined
+  lift class. Full record:
   `research/operators/B3-13-prime-defined-canonical-system.md`.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)

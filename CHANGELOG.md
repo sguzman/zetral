@@ -56,6 +56,15 @@ theorem, abstract boundary-triple theory and Suzuki's analytic Weyl limit
 remain imported; no independent source-proof claim. Details:
 `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+## 2026-11-27 — PWPB-03.15 multiplicity literature refresh
+
+Added Xu's 2026-11-25 preprint arXiv:2611.34546v1: under RH it claims
+liminf proportions at least 0.7127406684 simple and 0.8536823046 distinct,
+with exact rational certificates. These claims do not establish all zeros
+simple. RH-premise composition is only theorem-level through the external
+Lean result; Zetral has not audited Xu's proof or certificates. Details and
+scope: `research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ## 2026-11-27 — HP-02.3–.4 fixed-low pencil bounds
 
 For `L_N=N^2+U` with one fixed uniform offset, period counting and

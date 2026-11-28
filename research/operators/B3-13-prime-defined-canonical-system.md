@@ -410,12 +410,22 @@ rank `m_gamma` at each known zero is circular and does not meet (i).
 operator with the zero set as spectral support and multiplicities as
 weights, but it cannot be multiplicity-preserving at the level of
 eigenspace dimensions when a zero is multiple. No known multiple zero is
-asserted, and RH alone does not assert simplicity. The matrix framework
-offers a mathematically distinct next direction, but no arithmetic matrix
-lift has been found or proved. This is a structural obstruction and
-research specification, not a novel theorem claim.
+asserted, and RH alone does not assert simplicity. A recent conditional
+preprint by Xu (arXiv:2611.34546v1, 25 Nov 2026) proves, assuming RH,
+`liminf N_s(T)/N(T) >= 0.7127406684` and
+`liminf N_d(T)/N(T) >= 0.8536823046`, with exact rational certificates.
+If one composes its RH hypothesis with the separately checked Lean result,
+these give theorem-level density statements, subject to trust in that formal
+proof and Xu's preprint. They leave a positive-density-sized exceptional
+allowance and do not prove all zeros simple. Zetral has not audited Xu's
+long-mixed-moment or certificate arguments. The matrix framework offers a
+mathematically distinct next direction, but no arithmetic matrix lift has
+been found or proved. This is a structural obstruction and research
+specification, not a novel theorem claim.
 
 Primary framework source: [Sakhnovich, Documenta Mathematica 26 (2021), 583–615](https://ems.press/content/serial-article-files/26601?nt=1).
+
+Recent multiplicity source: [Xu, arXiv:2611.34546v1](https://arxiv.org/abs/2611.34546).
 
 ## PWPB-03.14 — Independent operator-side audit of PWPB-03.12
 

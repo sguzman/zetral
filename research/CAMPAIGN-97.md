@@ -785,6 +785,22 @@ theory, and Suzuki's cutoff convergence/spectral theorem remain imported;
 this is not an independent proof of Proposition 7.2. Full audit boundary:
 `research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.14).
 
+### PWPB-03.15 — Fresh RH-conditional zero-multiplicity bounds
+
+Literature refresh found Yuanda Xu, arXiv:2611.34546v1, submitted
+2026-11-25. Its Theorems 1–2 claim, assuming RH,
+`liminf N_s(T)/N(T) >= 0.7127406684` and
+`liminf N_d(T)/N(T) >= 0.8536823046`; the stated constants arise from exact
+rational certificates, long mixed moments and a separate packing argument.
+Composing only the RH premise with the external Lean RH theorem gives these
+density bounds at theorem level, subject to trust in both sources. This is
+relevant to PWPB-03.13: the scalar operator's one-dimensional eigenspaces
+match simple zeros on the guaranteed density subset, but the result does not
+establish simplicity for every zero or eliminate the need to understand
+multiplicity weights. Zetral has not audited Xu's proofs or certificates;
+this is an external preprint result, not a Zetral discovery. Source and
+scope: `research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

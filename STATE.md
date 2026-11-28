@@ -53,6 +53,14 @@ audit is recorded in
 `research/operators/B3-13-prime-defined-canonical-system.md` and
 `research/CAMPAIGN-97.md`.
 
+Literature refresh 2026-11-27: Xu's 2026-11-25 preprint arXiv:2611.34546v1
+claims under RH lower densities `liminf N_s/N >= 0.7127406684` and
+`liminf N_d/N >= 0.8536823046`, with exact rational certificates. The RH
+premise is available from the externally checked Lean theorem at theorem
+level; Zetral has not independently audited Xu's proof/certificates. This
+refines the scalar multiplicity discussion but does not establish simplicity
+of every zero. See PWPB-03.15 in Campaign XCVII and B3-13.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
