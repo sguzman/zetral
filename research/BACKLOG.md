@@ -202,6 +202,10 @@ control this weighted trace by itself.
   first-moment leakage bound for right/left Hankel singular vectors. Available
   smoothing identities naturally control `kappa_n^2` moments, leaving the
   explicit half-power gap to the required `kappa_n` trace.
+- **Finite-symbol tool:** B3-50 proves an exponentially small total-log-shift
+  operator-norm truncation for each fixed prime set, with explicit constant
+  `product_p A_p(theta)`. That constant grows with the prime set, and the
+  truncation still does not control singular-vector leakage.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
   frequency localization of the high-index near-self-dual modes, but local
   trace-class and global operator-norm estimates alone are insufficient.
@@ -211,10 +215,12 @@ control this weighted trace by itself.
 - **Information gain:** Either the quantitative analytic input for ACG's
   positive-complement theorem, or a precise obstruction to deriving it from
   currently known semilocal Hankel bounds.
-- **Design / falsification:** Prove the two first-moment leakage sums in
-  B3-49, first for one local factor and then for the actual finite prime
-  product. Split bounded and dyadic-high Mellin frequencies; use actual
-  local-factor/Hankel structure and compare exponents
+- **Design / falsification:** Analyze the archimedean Hankel composed with
+  one local-factor shift; derive low-frequency leakage for its right and left
+  singular vectors. Then determine whether the exponentially summable
+  total-shift expansion in B3-50 can preserve the bound for a finite prime
+  product, including explicit growth in `S`. Split bounded and dyadic-high
+  Mellin frequencies; compare exponents
   with the Gevrey/Fourier tail. Test each proposed inference against the
   non-Hilbert–Schmidt countermodel B3-23 and slow-leakage model B3-48. Do not
   assert the transition/pole Schur block sign, which remains separate.

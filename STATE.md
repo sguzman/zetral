@@ -417,6 +417,14 @@ missing half-power is explicit. Next attempt this first-moment bound for a
 single prime factor and then the finite arithmetic product, keeping right and
 left modes separate. Details:
 `research/operators/B3-49-two-sided-hankel-localization-reduction.md`.
+
+Finite-symbol step: B3-50 gives a total-log-shift truncation with explicit
+operator-norm remainder `C_(S,theta) exp(-theta T)` for every fixed finite
+prime set and `0<theta<1/2`. The coefficients are exact and the truncation is
+finite, but `C_(S,theta)` grows with the prime set and the estimate does not
+control singular vectors. Next analyze one shifted archimedean Hankel block,
+then test whether its first-moment leakage bound survives the finite product.
+Details: `research/operators/B3-50-total-log-shift-tail-bound.md`.
 The ACG H2′ localization investigation (PWPB-03.48) remains open and
 resumable; its real-modulation necessary criterion is in B3-44.
 

@@ -1364,6 +1364,14 @@ the first-moment leakage for one prime factor, then track it through the
 finite prime product. Details:
 `research/operators/B3-49-two-sided-hankel-localization-reduction.md`.
 
+Finite-symbol refinement (2026-11-28): B3-50 derives the exact exponential
+moment of total log-shift coefficients and a finite truncation whose operator
+error is at most `C_(S,theta) exp(-theta T)`, `0<theta<1/2`. Its explicit
+constant depends on all primes in `S`, and operator-norm control still does
+not imply first-moment singular-vector localization. The next step is a
+single shifted archimedean Hankel block and its two-sided frequency leakage.
+Details: `research/operators/B3-50-total-log-shift-tail-bound.md`.
+
 Literature pivot (2026-11-28): targeted search found Suvlu's four-paper
 *Weil form operators* draft series, including a separate conditional
 finite-characteristic zero-retention route. B3-45 independently checks only

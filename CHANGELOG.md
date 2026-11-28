@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.48 total log-shift truncation
+
+Derived an exact exponential moment for the absolute Fourier coefficients of
+the finite-prime local-factor product. A total log-shift cutoff gives a
+finite convolution and operator-norm remainder `C_(S,theta)e^(-theta T)` for
+each fixed prime set. The constant grows with the set and the bound does not
+control singular-vector leakage. Details:
+`research/operators/B3-50-total-log-shift-tail-bound.md`.
+
 ## 2026-11-28 — PWPB-03.48 two-sided Hankel localization reduction
 
 Derived a sufficient bound reducing the localized negative-tail trace to
