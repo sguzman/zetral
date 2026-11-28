@@ -895,6 +895,21 @@ noncircular arithmetic construction and a multiplicity-sensitive
 correspondence; do not repeat the known scalar model. Recorded in
 `research/operators/B3-18-finite-trace-geometric-obstruction.md`.
 
+### PWPB-03.23 — Countermodel to deriving a lower ladder from qualitative uncertainty
+
+Built an explicit family of orthogonal projection pairs whose compressed
+product is compact, whose ranges have zero intersection, and whose common
+kernel is infinite-dimensional. The associated positive operator
+`2-P-Q` has a smallest eigenvalue `delta_4(lambda)^2`, while all prescribed
+upper Fuchs-ladder bounds remain satisfied. Its ratio to `delta_4` tends to
+zero. Thus upper bounds plus this qualitative two-projection/Sonin geometry
+cannot alone imply a uniform lower ladder comparison. This is an abstract
+countermodel, not a counterexample to the arithmetic Weil form: the prime
+map, trace identity, and quantitative semilocal hypotheses are absent. The
+next question is which exact arithmetic input in ACG §8 rules out this model.
+Full construction and scope:
+`research/operators/B3-19-two-projection-ladder-countermodel.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

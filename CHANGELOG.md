@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.23 qualitative uncertainty countermodel
+
+Constructed projection pairs with compact compressed product, no common
+range vector and infinite-dimensional common kernel, yet with the bottom of
+`2-P-Q` equal to `delta_4(lambda)^2` while the Fuchs-ladder upper bounds hold.
+This shows that those qualitative properties do not force a uniform lower
+ladder estimate. It is not a model of the arithmetic Weil form; ACG's
+prime-side and trace identities remain untested. Details:
+`research/operators/B3-19-two-projection-ladder-countermodel.md`.
+
 ## 2026-11-27 — PWPB-03.22 prior-art reconciliation
 
 Reconciled the finite-trace obstruction with Suzuki's known 2025 global Weil

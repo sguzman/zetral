@@ -114,6 +114,16 @@ source-level synthesis, not an independent audit or new operator. Details:
 `research/operators/B3-18-finite-trace-geometric-obstruction.md` and
 `research/CAMPAIGN-97.md`.
 
+PWPB-03.23 gives an exact abstract countermodel to deriving a lower
+Fuchs-ladder bound from upper ladder estimates plus qualitative
+two-projection uncertainty geometry: `2-P-Q` can have bottom
+`delta_4(lambda)^2` while satisfying those upper bounds, with compact `PQP`,
+zero range intersection, and infinite-dimensional common kernel. It is not
+a model of the prime-side Weil form; the arithmetic-map and trace identities
+are absent and could rule it out. Next identify which source-specific
+quantitative hypothesis excludes this model. Full construction:
+`research/operators/B3-19-two-projection-ladder-countermodel.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

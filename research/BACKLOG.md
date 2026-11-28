@@ -128,6 +128,12 @@ analytic theorems and from any RH implication.
   multiplicity-sensitive correspondence, or prove a scoped obstruction;
   include the known infinite-mass scalar completion as prior art. Do not
   pursue a semifinite trace absent a concrete trace identity/domain proposal.
+  For the active prolate bridge, PWPB-03.23 now proves by an abstract
+  two-projection countermodel that qualitative uncertainty geometry plus
+  upper ladder bounds cannot force the missing lower bound. Next isolate the
+  exact arithmetic/trace hypothesis in ACG §8 that excludes this model;
+  retain the distinction between this structural countermodel and the actual
+  Weil form.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
