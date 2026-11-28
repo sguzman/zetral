@@ -218,3 +218,10 @@ art review remain prerequisites.
   convolved low-mode conditioning space and does not settle the Schur sign.
   This comparison is worth retaining as a research lead, but is not
   standalone paper material. See [`CAMPAIGN-97.md`](CAMPAIGN-97.md).
+- **PWPB-03.3 — Mellin synthesis identity (not a new theorem).** In the
+  exact arithmetic model, an ACG-type convolution factors as
+  `E(h_m *_x q_n)`, with `q_n(u)=u^(-1/2)e_n^*(u)`. This identifies a
+  possible transfer map but gives no uniform conditioning, leakage, full
+  residual, or pole estimate; the semilocal identification is itself open.
+  It is a useful derivation to retain in campaign notes, not standalone
+  paper material.

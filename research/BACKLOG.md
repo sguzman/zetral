@@ -6,6 +6,38 @@ campaign files contain the detailed derivations and evidence. Re-rank after
 each material result. Keep finite positivity certificates distinct from
 analytic theorems and from any RH implication.
 
+### PWPB-03.4 — Formal RH proof to operator extraction (new top priority)
+
+- **Precise question:** Does the theta-lift / arithmetic Gram mechanism in
+  the independently kernel-checked Alpöge–Claude Lean proof admit a natural
+  self-adjoint operator whose spectrum is exactly the nontrivial zeta-zero
+  ordinates, with a proved spectral correspondence? The Lean proof itself
+  establishes RH in its formal environment; operator extraction is a
+  separate objective.
+- **Evidence:** Rubinstein's independent checks report original proof
+  compilation/replay and nanoda validation, plus multiple-kernel checking of
+  the compact edition. Mathlib's own RH statement is proved using only the
+  three standard Lean axioms. A classical exposition by Rubinstein is a
+  working draft and still reduces its central inequality to thirteen
+  classical hypotheses. Source links and exact verification limits are
+  recorded in `research/CAMPAIGN-97.md`.
+- **Prerequisites and design:** Read the main inequality (M), theta-lift
+  definitions, dependency closure, and the classical hypotheses. Test
+  Gram/transfer operators for symmetry, domain, compactness, and exact zero
+  correspondence; compare with PWPB-03 and Suzuki/Weil models.
+- **Expected information gain:** A positive result would connect the new
+  arithmetic proof to Hilbert–Pólya; a negative result could isolate why
+  theta-lift Gram data do not encode the zero divisor as an operator
+  spectrum.
+- **Acceptance / verification:** Source-pinned independent derivation of an
+  operator and theorem-level spectral identification, or a rigorous
+  obstruction in a clearly delimited natural class. Distinguish the formal
+  RH theorem from an operator construction. No Zetral rerun of the massive
+  Lean verification is planned; rely on the external independent audit and
+  inspect the compact source selectively.
+- **Status:** Activated as PWPB-03.4; investigation has not yet extracted an
+  operator or established a new spectral correspondence.
+
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
 - **Precise question:** Can the prolate candidate `k_lambda` be shown close
@@ -86,6 +118,17 @@ analytic theorems and from any RH implication.
   inverse/Gram constants sufficient for R2; even that would not settle the
   Schur sign. Detailed record: `research/CAMPAIGN-97.md`. No paper-ready
   Zetral result or novelty claim.
+- **PWPB-03.3 Mellin synthesis map:** In the exact arithmetic model,
+  `M_s(Eh)=zeta(s+1/2)M_(s+1/2)h`, so the convolution
+  `E(h_m)*e_n^*` factors as `E(h_m *_x q_n)` with
+  `q_n(u)=u^(-1/2)e_n^*(u)`. This is an exact transform identity in its
+  convergence domain, conditional on the model identification; ACG §8.8
+  leaves that identification unresolved for the semilocal pair. The inverse
+  transfer still needs uniform leakage, lower Gram, full residual and pole
+  estimates; the adjoint factor can have an unbounded support tail. Next
+  quantify these first in the archimedean model and test whether the needed
+  multiplier is bounded below on the growing prolate span. No RH or novelty
+  claim. Derivation and exact hypotheses: `research/CAMPAIGN-97.md`.
 - **Design / falsification:** Pin the exact form/domain; test whether the
   prolate candidate belongs to the operator domain; derive its form residual
   from prime and archimedean terms; prove a next-eigenvalue/parity gap; bound

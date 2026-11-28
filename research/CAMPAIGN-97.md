@@ -402,6 +402,114 @@ strong enough to transfer R2, or (ii) a precise obstruction explaining
 why these spans cannot be identified by the proposed common repair. Then
 continue to the transition/pole block; neither result alone closes PWPB-03.
 
+### PWPB-03.3 — Mellin factorization of the convolved arithmetic model
+
+In the arithmetic model, define
+
+    E h(u) = sqrt(u) sum_{n>=1} h(nu),
+    M_s f = integral_0^infinity f(u) u^s du/u.
+
+For compactly supported h and Re(s)>1/2, absolute convergence and the
+change of variables x=nu give
+
+    M_s(E h) = zeta(s+1/2) M_{s+1/2} h.
+
+For multiplicative convolution, M_s(f*g)=(M_s f)(M_s g), and
+M_s(e_n^*)=conjugate(M_{-conjugate(s)} e_n) wherever the integrals
+converge. Consequently, if the ACG vector e_m^lambda is exactly E h_m,
+then
+
+    M_s(e_m^lambda * e_n^*)
+      = zeta(s+1/2) M_{s+1/2}h_m M_s(e_n^*).
+
+Writing q_n(u)=u^(-1/2)e_n^*(u), this is the transform of E g_{m,n}
+with g_{m,n}=h_m *_x q_n, where *_x denotes multiplicative convolution
+on the positive half-line. This gives a precise candidate synthesis map
+in the exact arithmetic model; it does not prove that g_{m,n} belongs to
+the concentrated prolate span. In fact e_n^* generally has an unbounded
+upper support tail when e_n is supported toward zero, so compact support
+and prolate leakage require separate estimates or a common repair.
+
+Scope is essential: ACG §8 describes e_m^lambda as semilocal pair vectors
+and says their identification with the arithmetic E-images of prolate
+functions is still open in the semilocal setting. Thus the displayed map
+is an exact factorization only under the stated arithmetic-model premise;
+it is not an identity for the unresolved semilocal family. Also, at the
+transform level it gives no lower bound for the map: zeros or small values
+of M_s(e_n^*) can make inversion ill-conditioned, and truncating q_n can
+alter the pole components. Acceptance for a transfer requires uniform
+polynomial bounds for the common repair, full operator residual, smallest
+Gram eigenvalue, and both pole directions over n<=n_0(lambda). None are
+established here. This is a precise candidate map plus identified analytic
+requirements, not closure of R2, no-go, new theorem, or paper-ready result.
+
+Primary-source anchors: ACG equations (1) and (67), §8.8 item 1, and
+Remark 8.15(c)-(d); the new rStation draft's Appendix A gives a uniform
+canonical arithmetic-space construction but explicitly does not identify
+it with the ACG convolved families. The next investigation is to quantify
+the Mellin multiplier and tail uniformly, first in the archimedean model,
+then determine whether the semilocal identification can be proved without
+using RH-strength positivity.
+
+### PWPB-03.4 — Audit the formal RH proof and operator relevance
+
+**Question.** Given the independently checked Alpöge–Claude Lean proof of
+RH/Dirichlet GRH, what is its decisive mathematical mechanism, and can its
+arithmetic/theta-lift construction be reformulated as a self-adjoint operator
+with a proved spectral correspondence to the zeta zeros? The question is
+operator extraction and explanatory reconstruction, not whether the formal
+RH theorem has been established by the checked Lean development.
+
+**Evidence (checked 2026-11-27).** Alpöge's announcement says the RH and GRH
+arguments were formalized without assumptions. Michael Rubinstein's
+independent verification page reports for the original release: 175,187
+modules compiled and kernel-replayed; the five main theorems depend only on
+`propext`, `Classical.choice`, and `Quot.sound`; and independent Rust kernel
+nanoda checked 1,484,729 declarations. It hand-checks that the RH theorem is
+Mathlib's `RiemannHypothesis`. The shorter 794-module release has also passed
+compilation and replay, and `lake comparator --paranoid` reports acceptance
+by multiple kernels. Zetral has not independently rerun those computations.
+These results constitute strong independent formal verification, conditional
+on the soundness of the trusted kernels and intended Mathlib definitions.
+
+Rubinstein's 22 November conventional exposition is explicitly a working
+draft. It derives RH from the main inequality (M) and two character estimates,
+but reports that (M) is not proved in the exposition and reduces it to
+thirteen classical hypotheses. This is an exposition/reconstruction gap, not
+a defect in the kernel-checked proof. The original proof's stated route uses
+long chains of theta lifts, arithmetic divisibility and a prime-power sum;
+the exposition describes a prime-sum upper bound with square-root scale.
+The formal proof itself is not a Hilbert–Pólya construction: it supplies no
+self-adjoint operator with zero spectrum and no operator/zero correspondence.
+
+**First investigation.** Extract the exact formal statement and dependency
+closure for (M), classify each of the thirteen classical inputs as proved in
+the exposition, cited/assumed there, or still unreconstructed, then formulate
+a candidate operator from the theta-lift/Gram data. Attempt falsification:
+check whether its natural Gram or transfer operator has compact resolvent,
+whether its eigenvalues encode zero ordinates rather than auxiliary arithmetic
+scales, and whether multiplicity and the functional equation are preserved.
+Do not infer spectral correspondence merely from the RH theorem.
+
+**Acceptance.** A source-pinned and independently checked operator plus an
+explicit theorem identifying its spectrum with the nontrivial zero ordinates,
+or a rigorous obstruction for the natural theta-lift operator class. A useful
+intermediate milestone is an exact operator/Gram identity and a precise list
+of additional spectral hypotheses. Any candidate contingent on RH or on the
+formal theorem must label that dependence.
+
+**Verification and provenance.** Sources checked: Alpöge's announcement
+([remark](https://alpo.ge/remark.pdf)); Rubinstein's independent checks of
+the [original](https://mrubinst.github.io/grh-lean-verification/) and
+[short](https://mrubinst.github.io/grh-lean-compact-check/) formalizations;
+Rubinstein's [22 November working exposition](https://www.math.uwaterloo.ca/~mrubinst/alpoge_claude_grh/zeta-paper_v2.pdf).
+This is a targeted source audit, not a claim that Zetral reproduced the Lean
+build, that the exposition is complete, or that an operator was obtained.
+No large archive was downloaded. Next: inspect the proof's main inequality
+and theta-lift definitions at source level, identify which data could form a
+canonical Hilbert space/operator, and compare that object with PWPB and the
+existing Suzuki/Weil constructions.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

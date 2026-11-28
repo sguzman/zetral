@@ -1032,3 +1032,28 @@ marks independent verification pending. Thus it is a relevant research
 lead, not a resolution of R2 or a Zetral theorem. Next test for a
 quantitatively controlled synthesis map between the two spaces. Full note:
 `research/CAMPAIGN-97.md`.
+
+## XCVII PWPB-03.3 — Mellin synthesis factorization (2026-11-27)
+
+Derived the exact arithmetic-model transform identity
+`M_s(Eh)=zeta(s+1/2)M_(s+1/2)h`. Thus, when an ACG near-self-dual vector
+is exactly `E h_m`, its convolution with `e_n^*` corresponds to
+`E(h_m *_x q_n)`, where `q_n(u)=u^(-1/2)e_n^*(u)`. This supplies a
+candidate map, not the required uniform bounds: prolate concentration,
+smallest Gram eigenvalue, complete operator residual and pole directions
+remain uncontrolled. Moreover, ACG's semilocal/arithmetic identification
+is open. Recorded as a research lead, not a new theorem or paper-ready
+result. See `research/CAMPAIGN-97.md`.
+
+## XCVII PWPB-03.4 — Formal RH proof and operator follow-up (2026-11-27)
+
+Recorded the independently kernel-checked Alpöge–Claude Lean proof and
+Rubinstein's independent checks of both the original and compact releases.
+The theorem is Mathlib's RH statement and the checked theorem depends only on
+standard Lean axioms. Rubinstein's classical exposition remains a working
+draft with its central inequality reduced to thirteen classical hypotheses;
+this is an exposition gap, not a kernel-check failure. The proof is not an
+operator construction. Opened a source-level investigation into whether its
+theta-lift/arithmetic Gram mechanism yields a self-adjoint zero-spectrum
+operator. No Zetral reproduction of the Lean computations or operator result
+is claimed. Sources and scope: `research/CAMPAIGN-97.md`.

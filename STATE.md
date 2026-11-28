@@ -2,6 +2,26 @@
 
 ## Current investigation checkpoint — XCVII / PWPB-03 (2026-11-27)
 
+### Major external development (2026-11-27)
+
+Levent Alpöge announced a Lean proof of RH on 2026-11-20. An independent
+audit by Michael Rubinstein reports that the original 175,187 modules compile,
+all replay through the Lean kernel, the five main theorems use only the three
+standard Lean axioms, and an independent Rust kernel checked 1,484,729
+declarations. The shortened 794-module version also passed compile, kernel
+replay, and a paranoid comparison using multiple kernels. Its theorem
+statement is Mathlib's `RiemannHypothesis`. Zetral has not rerun these builds;
+these are independently reported verification results, conditional on kernel
+soundness and the intended Mathlib semantics. Rubinstein's conventional
+exposition remains a work in progress and explicitly leaves thirteen classical
+hypotheses in the main inequality unreconstructed/proved in that exposition.
+This is a verified formal proof claim, not an operator construction: the RH
+statement is now formally proved in the checked development, but no
+Hilbert–Pólya operator or spectral correspondence follows from that proof.
+The active follow-up is to understand the proof's main inequality and test
+whether its arithmetic/theta-lift mechanism yields a rigorous spectral model;
+see PWPB-03.4 in `research/CAMPAIGN-97.md` and the prioritized backlog.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
@@ -95,6 +115,17 @@ That draft's growing-space estimate is not identified with ACG's convolved
 low-mode conditioning vectors, so it does not close R2 or the transition/
 pole Schur problem; its own independent verification is pending. Next test
 whether a quantitatively bounded synthesis map connects those spaces.
+PWPB-03.3 derives an exact Mellin factorization in the arithmetic model:
+the convolved vector corresponds to E(h_m *_x q_n), with
+q_n(u)=u^(-1/2)e_n^*(u). ACG's semilocal-to-arithmetic identification is
+itself open, and this factorization supplies no uniform leakage, lower-Gram,
+full-residual, or pole bounds. Next quantify the multiplier and tail in the
+archimedean model, then audit the semilocal identification separately.
+PWPB-03.4 responds to the independently kernel-checked Alpöge–Claude RH
+formalization. It records its exact theorem/axiom checks, distinguishes
+formal proof from operator construction, and pivots the next investigation
+to the classical content of the main inequality and possible spectral
+extraction. No Zetral operator has been derived from it yet.
 Mori's
 unconditional test-vector upper bounds, including a Lean formalization of
 an upper estimate, do not supply the lower gap. PWPB-02's candidate-side
