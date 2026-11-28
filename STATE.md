@@ -1343,3 +1343,23 @@ Next investigate the zero-independent de Branges/canonical-system direct
 limit and test whether it can give common operator maps or independent
 channels. If it remains scalar/cyclic, specify the local data a matrix lift
 must provide. Do not claim an operator limit from measure convergence alone.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.63 (2026-11-28)
+
+Proved an exact matrix-Herglotz nonidentifiability example. Any positive
+discrete scalar measure with infinitely many atoms and standard Herglotz
+integrability admits two strictly Herglotz `2x2` lifts with the same scalar
+trace: split the atoms between diagonal entries for rank-one residue at each
+atom, or use half the scalar function times `I_2` for rank-two residues. Thus
+even the complete scalar Weyl function and all its atomic weights do not
+determine matrix atom ranks. This is an abstract structural constraint, not
+a zeta-specific no-go: it says a multiplicity-sensitive matrix operator
+needs extra matrix-valued arithmetic data, not a post-hoc factorization of
+the scalar measure. B3-58's fiber lift remains valid but is one standard
+choice, not an arithmetic matrix factorization. Exact construction:
+`research/operators/B3-61-scalar-measure-does-not-determine-matrix-rank.md`.
+
+Next identify the smallest two-channel local Weil form that can be defined
+from independent prime-side features and compute its reproducing kernel;
+test positivity and whether its matrix kernel can have nontrivial rank
+without inserting zero-indexed channel choices.

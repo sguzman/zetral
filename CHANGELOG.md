@@ -1687,3 +1687,14 @@ at multiple zeros. The source's common limit space also uses zero data. This
 is a limitation of that compression route, not a no-go for a different
 arithmetic matrix construction. Full derivation and assumptions:
 `research/operators/B3-60-compression-limit-and-fiber-obstruction.md`.
+
+## XCVII PWPB-03.63 — Scalar Weyl data do not determine matrix atom rank (2026-11-28)
+
+Constructed two strictly Herglotz `2x2` lifts of any integrable positive
+discrete scalar measure with infinitely many atoms. Splitting its atoms
+between diagonal channels yields rank-one residues; multiplying the scalar
+function by `I_2/2` yields rank-two residues. The matrix traces agree exactly,
+so scalar masses cannot select eigenspace ranks. This is an abstract design
+constraint, not a zeta-specific no-go or a claim against new matrix-valued
+prime-side data. Details:
+`research/operators/B3-61-scalar-measure-does-not-determine-matrix-rank.md`.

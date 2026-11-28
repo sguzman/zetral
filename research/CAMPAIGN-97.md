@@ -1615,3 +1615,21 @@ Next investigate the zero-independent de Branges/canonical-system direct
 limit from prime-side kernels for common maps or extra multiplicity channels.
 Acceptance requires explicit operator domains, compatible embeddings and a
 topology; scalar spectral-measure convergence alone does not establish it.
+
+## XCVII PWPB-03.63 — Scalar Weyl data do not determine matrix atom rank (2026-11-28)
+
+For an integrable positive discrete scalar measure with infinitely many
+atoms, constructed two strictly positive `2x2` matrix Herglotz lifts with
+the same scalar trace. Splitting the atoms across diagonal channels gives
+rank-one residue matrices; taking one half of the scalar function times
+`I_2` gives rank-two residues. Both trace measures are exactly the original
+scalar measure. Thus scalar Weyl data and residue weights cannot determine
+matrix atom rank. This does not rule out a zeta-specific arithmetic matrix
+construction; it establishes that such ranks must come from additional
+matrix-valued prime-side data rather than scalar factorization or choosing
+fibers after the zero set is known. Proof and next design question:
+`research/operators/B3-61-scalar-measure-does-not-determine-matrix-rank.md`.
+
+Next formulate the smallest two-channel local Weil form from independent
+prime-side features and calculate its kernel rank/positivity, with
+zero-independent channel definitions and a falsification attempt.

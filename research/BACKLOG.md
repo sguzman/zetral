@@ -1220,7 +1220,12 @@ Campaign file: `research/CAMPAIGN-94.md`.
   boundary multiplicity, and the scalar obstruction. Reject constructions
   that insert `m_gamma` or zero locations by hand or that define the Weyl
   function from Xi itself. Test self-adjointness, compact resolvent, and
-  determinant normalization independently.
+  determinant normalization independently. B3-61 gives two strictly
+  Herglotz matrix lifts of the same scalar trace with different atomic ranks;
+  so the first experiment must build the matrix kernel from independent
+  prime-side channels before taking its trace. Test the two-channel case for
+  positivity, rank, and whether rank is stable under the growing-window
+  limit.
 - **Information gain / acceptance:** Either provide an explicit local
   arithmetic operator and rigorous spectral identity, prove a canonical
   operator-limit/intertwining theorem from the local weighted spectra, or
