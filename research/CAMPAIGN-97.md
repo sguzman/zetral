@@ -1633,3 +1633,41 @@ fibers after the zero set is known. Proof and next design question:
 Next formulate the smallest two-channel local Weil form from independent
 prime-side features and calculate its kernel rank/positivity, with
 zero-independent channel definitions and a falsification attempt.
+
+## XCVII PWPB-03.64 — Prime-translation channels fail the rank test (2026-11-28)
+
+Tested two explicit candidates under the positive scalar spectral
+representation. One test function and its translate by `log p` give an
+atom `m_gamma v_gamma v_gamma^*`, where
+`v_gamma=(1,exp(i gamma log p))`; it has rank one at every zero. Two
+independent scalar copies, normalized to preserve the scalar trace, give
+`(m_gamma/2)I_2`, rank two at every zero. Thus a prime phase rotates one
+channel but does not add eigendirections, while direct copies give constant
+rank. These fail variable multiplicity matching; they do not rule out an
+internally coupled matrix-valued arithmetic form. Exact computation:
+`research/operators/B3-62-prime-translation-two-channel-rank-test.md`.
+
+Next derive a finite-window kernel for a prime-power convolution acting on
+an internal two-component space. It must have an explicit matrix Weil
+formula and testable positivity; attempt to show its atom rank is constant
+or otherwise mismatched before investing in an operator construction.
+
+## XCVII PWPB-03.65 — One-prime finite-range matrix symbols cannot encode variable rank (2026-11-28)
+
+For a positive `2x2` Laurent-polynomial Gram symbol `B(z)` built from
+finitely many shifts by multiples of one prime logarithm, exact rank
+matching under RH would require `det B(exp(i gamma log p))=0` at every simple
+zero. Conrey's unconditional positive proportion of simple critical zeros
+gives `Omega(T log T)` ordinates, while any fixed phase has only `O(T)` such
+ordinates up to height `T`. The phases therefore contain infinitely many
+points with an accumulation point on the unit circle. The Laurent-polynomial
+identity theorem forces `det B` to vanish identically, so the symbol has
+rank at most one everywhere and cannot represent a multiple zero. This is
+conditional on RH and does not exclude the route if every zero is simple; it
+also does not extend to multi-prime or non-translation-invariant systems.
+No multiple zero is asserted. Full proof and scope:
+`research/operators/B3-63-one-prime-finite-range-matrix-rank-obstruction.md`.
+
+Next either derive a multi-prime symbol together with the phase-distribution
+input needed for a comparable rigidity argument, or pivot to an
+infinite-channel or zero-independent canonical-system construction.

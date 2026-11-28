@@ -1363,3 +1363,44 @@ Next identify the smallest two-channel local Weil form that can be defined
 from independent prime-side features and compute its reproducing kernel;
 test positivity and whether its matrix kernel can have nontrivial rank
 without inserting zero-indexed channel choices.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.64 (2026-11-28)
+
+Falsified two natural two-channel constructions exactly. Translating one
+scalar test function by `log p` gives spectral observation vector
+`(1,exp(i gamma log p))`; each positive matrix atom is an outer product and
+has rank one. Taking two independent scalar Weil copies and normalizing the
+trace to the original scalar measure gives atom `(m_gamma/2)I_2`, rank two at
+every ordinate. Thus prime-shifted observations do not create multiplicity
+channels, while direct sums give constant rank. These are exact design
+failures, not a no-go for an internally coupled matrix-valued arithmetic
+form. Full calculation and next design:
+`research/operators/B3-62-prime-translation-two-channel-rank-test.md`.
+
+Next test a prime-power convolution acting on an internal two-component
+space, rather than scalar observations or independent copies. Derive its
+finite-window matrix kernel and explicit Weil formula; reject it if
+positivity fails or if its rank is fixed across atoms. No source/implementation
+work should be inferred from this proposed design until the arithmetic
+form is actually specified.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.65 (2026-11-28)
+
+Proved a conditional no-go for finite-range two-channel convolution symbols
+using powers of one prime. Such a symbol has a `2x2` positive Laurent
+polynomial Gram matrix `B(exp(i gamma log p))`. Exact multiplicity matching
+requires rank one at every simple zero and rank two at a double zero. By
+Conrey's unconditional lower bound of two fifths simple critical-line zeros
+and Riemann–von Mangoldt, there are `Omega(T log T)` such ordinates; a fixed
+phase `exp(i gamma log p)` occurs only `O(T)` times up to height `T`. Thus
+simple-zero phases have infinitely many accumulation points, forcing
+`det B` to vanish identically. The symbol then has rank at most one at every
+phase and cannot encode any multiple zero. This is conditional on RH and
+fails to rule out the route if all zeros are simple; it is restricted to
+finite one-prime shift symbols, not general matrix systems. Proof and
+assumptions: `research/operators/B3-63-one-prime-finite-range-matrix-rank-obstruction.md`.
+
+Next consider multiple-prime symbols only after identifying the required
+distribution information for their phase points, or pivot to an
+infinite-channel or zero-independent canonical-system approach. Do not
+extend the one-variable identity argument to a higher-dimensional torus.

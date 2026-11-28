@@ -1698,3 +1698,24 @@ so scalar masses cannot select eigenspace ranks. This is an abstract design
 constraint, not a zeta-specific no-go or a claim against new matrix-valued
 prime-side data. Details:
 `research/operators/B3-61-scalar-measure-does-not-determine-matrix-rank.md`.
+
+## XCVII PWPB-03.64 — Prime-translation channels fail the rank test (2026-11-28)
+
+Checked two natural two-channel constructions. A test function and its
+prime-log translate have rank-one matrix atoms because both observe the same
+scalar eigenspace; two independent scalar copies produce constant rank two.
+Neither recovers variable zero multiplicities. The calculation is exact and
+does not rule out genuinely coupled matrix-valued arithmetic data. Details:
+`research/operators/B3-62-prime-translation-two-channel-rank-test.md`.
+
+## XCVII PWPB-03.65 — One-prime finite-range matrix symbols cannot encode variable rank (2026-11-28)
+
+Under RH, a finite-range two-channel symbol in powers of one prime would
+need rank one at all simple zeros and rank two at any double zero. Conrey's
+unconditional simple-zero density and Riemann–von Mangoldt force infinitely
+many distinct phases `exp(i gamma log p)` with a circle accumulation point.
+The Laurent-polynomial determinant must then vanish identically, excluding
+rank two at any phase. This conditionally rules out that architecture if a
+multiple zero exists; it does not rule out all-simple zeros or general
+matrix operators. Details and limits:
+`research/operators/B3-63-one-prime-finite-range-matrix-rank-obstruction.md`.

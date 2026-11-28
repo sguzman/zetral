@@ -1225,7 +1225,15 @@ Campaign file: `research/CAMPAIGN-94.md`.
   so the first experiment must build the matrix kernel from independent
   prime-side channels before taking its trace. Test the two-channel case for
   positivity, rank, and whether rank is stable under the growing-window
-  limit.
+  limit. B3-62 rejects the first natural prime-shift channels (rank one)
+  and independent copies (constant rank two). Next test an internal
+  prime-power convolution as a distinct, potentially coupled construction;
+  derive its exact finite-window matrix kernel and Weil formula before any
+  computation. B3-63 now rules out variable ranks for finite-range symbols
+  from powers of a single prime, conditional on exact matching under RH;
+  extending to several primes requires a distribution theorem for the
+  zero-phase points on a higher-dimensional torus. Pivot if this input is
+  unavailable or the symbol is not finite range.
 - **Information gain / acceptance:** Either provide an explicit local
   arithmetic operator and rigorous spectral identity, prove a canonical
   operator-limit/intertwining theorem from the local weighted spectra, or
