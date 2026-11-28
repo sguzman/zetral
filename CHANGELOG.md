@@ -1,5 +1,13 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.25 finite-prime multiplier expansion
+
+Derived exact local Fourier coefficients and a sparse finite-prime
+truncation with explicit Bohr-mean-square error `O(log X/T)` and support
+size at most `exp(2T+O(1))`. The result is exact-arithmetic and does not
+imply uniform/operator-norm control or H2′. Details:
+`research/operators/B3-21-finite-prime-symbol-expansion.md`.
+
 ## 2026-11-27 — PWPB-03.24 local tail rate obstruction
 
 Constructed a positive moving-bump density showing that polynomial local

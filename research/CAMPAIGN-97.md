@@ -922,6 +922,19 @@ provide the polynomial rate. The model is not a spectral density of the
 actual semilocal Hankel operator, so H2′ remains open. Details:
 `research/operators/B3-20-local-tail-no-rate.md`.
 
+### PWPB-03.25 — Exact finite-prime symbol expansion
+
+Expanded each finite-prime local ratio exactly as a one-sided geometric
+Fourier series. Its squared coefficients form a probability law with mean
+absolute shift `2/p`. For primes `p<=X`, Chebyshev's bound gives expected
+total log-shift `O(log X)`, so retaining shifts of total absolute log-height
+at most `T` gives Bohr mean-square error squared `O(log X/T)` and at most
+`exp(2T+O(1))` candidate rational frequencies. This provides a reproducible
+exact-arithmetic approximation in a specified mean-square norm. It does not
+give uniform symbol or operator-norm control, nor H2′: log-dilation shift
+indices are not the source's Mellin-frequency scale. Full derivation:
+`research/operators/B3-21-finite-prime-symbol-expansion.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

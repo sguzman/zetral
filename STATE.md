@@ -133,6 +133,17 @@ remains open. Next derive index/frequency localization for the actual
 semilocal Hankel singular vectors. Details:
 `research/operators/B3-20-local-tail-no-rate.md`.
 
+PWPB-03.25 derived the exact one-sided geometric Fourier coefficients of
+each finite-prime ratio in the semilocal multiplier. The squared coefficients
+give mean absolute log-shift `2/p`; summing over `p<=X` yields `O(log X)`.
+Thus a total log-shift cutoff `T` gives Bohr mean-square error squared
+`O(log X/T)` and at most `exp(2T+O(1))` rational frequencies. This is an
+exact-arithmetic approximation in Bohr `B²`, not a uniform/operator-norm
+bound and not H2′; it does not quantify singular-vector Mellin localization.
+Next test whether this norm controls the source trace pairing for a fixed
+test class; otherwise pivot to direct Hankel singular-vector localization.
+Full note: `research/operators/B3-21-finite-prime-symbol-expansion.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
