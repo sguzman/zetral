@@ -30,15 +30,20 @@ band map and the uniform tail estimate prove compactness. Thus the associated
 self-adjoint operator `L_lambda` has discrete spectrum tending to infinity.
 
 The same argument gives a crude counting bound. If `E_r` is the spectral
-subspace of `L_lambda` for eigenvalues at most `r>=1`, every unit vector in
-`E_r` has at least half its Fourier mass in `[-exp(2r),exp(2r)]`. For an
-orthonormal basis of `E_r`, summing this low-band mass and using the
-Hilbert–Schmidt trace of the band restriction gives
+subspace of `L_lambda` for eigenvalues at most `r>=1`, choose
+`R=exp(r+1)`. Every unit vector in `E_r` then has at least `1/(r+1)` of its
+Fourier mass in `[-R,R]`, since the mass above `R` is at most
+`r/log(2+R) <= r/(r+1)`. For an orthonormal basis of `E_r`, summing this
+low-band mass and using the Hilbert–Schmidt trace of the band restriction
+gives
 
-    dim(E_r) <= (2 ell/pi) exp(2r)
-              = (4 log(lambda)/pi) exp(2r).
+    dim(E_r) <= (ell/pi) (r+1) exp(r+1)
+              = (2 log(lambda)/pi) (r+1) exp(r+1).
 
-No sharp Weyl law is claimed.
+The less sharp choice `R=exp(2r)` also gives `dim(E_r)<=2 ell exp(2r)/pi`;
+one may take the minimum of the two bounds. For large `r`, the first is
+`O(ell r exp(r))`, improving the exponential rate in the earlier draft. No
+sharp Weyl law is claimed.
 
 ## Bounded perturbation and coercive complement
 
@@ -53,10 +58,10 @@ difference `m(s)-log(2+|s|)` is bounded, the pole term is rank two with norm
 `O(lambda)`, and the prime translations have total coefficient norm at most
 `2 sum_(p^m<=lambda^2) (log p)p^(-m/2)=O(lambda)`.
 
-Fix `delta>0`, set `r=C0 lambda+delta`, let `P=1_[0,r](L_lambda)`, and put
-`Q=1-P`. The low space has finite dimension
+Fix `delta>=1`, set `r=C0 lambda+delta`, let `P=1_[0,r](L_lambda)`, and put
+`Q=1-P`. The low space has finite dimension, with the sharper bound
 
-    N <= (4 log(lambda)/pi) exp(2 C0 lambda+2 delta).
+    N <= (2 log(lambda)/pi) (r+1) exp(r+1),   r=C0 lambda+delta.
 
 The high compression of the Weil operator satisfies
 `D=Q QW_lambda Q >= delta I` by Lemma 8.13. Its low/high off-diagonal is
@@ -69,8 +74,8 @@ compression `A=P QW_lambda P`, gives
 
     Tr((QW_lambda)_-)
       <= Tr(A_-) + delta^(-1)||B||_HS^2
-      <= Tr(A_-) + (4 C1^2/pi) delta^(-1) lambda^2 log(lambda)
-                              exp(2 C0 lambda+2 delta).
+      <= Tr(A_-) + (2 C1^2/pi) delta^(-1) lambda^2 log(lambda)
+                              (r+1) exp(r+1).
 
 The same right side bounds `Tr(M (QW_lambda)_-)` for every positive
 contraction `M`. The bounded perturbation preserves compact resolvent, so
@@ -101,8 +106,9 @@ The full form's logarithmic Sobolev part is what supplies high-block
 coercivity here.
 
 The reduction is too large for the intended polynomial conditioning regime:
-the derived cutoff dimension is only bounded by `O(log(lambda) exp(2 C0
-lambda))`, and the coupling contribution carries the same exponential scale.
+the sharper cutoff dimension is bounded by `O(log(lambda) lambda
+exp(C0 lambda))`, and the coupling contribution carries the same exponential
+scale.
 This is a weakness of the coarse Lemma 8.13 route, not a lower bound on the
 true dimension. Moreover, `Tr(A_-)` for the low block is still unknown and
 may contain the entire positivity problem. The result neither proves

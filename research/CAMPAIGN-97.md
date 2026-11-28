@@ -1527,8 +1527,9 @@ scope: `research/operators/B3-56-coercive-block-negative-trace-bound.md`.
 
 B3-57 applies the coercive-block trace argument to the full windowed Weil
 form. Restricting the logarithmic Sobolev form `Lambda` to the log-window
-gives a compact-resolvent operator; a band-projection argument bounds its
-spectral subspace below `r` by `(4 log(lambda)/pi)exp(2r)`. ACG Lemma 8.13
+gives a compact-resolvent operator; a sharpened band-projection argument
+bounds its spectral subspace below `r` by
+`(2 log(lambda)/pi)(r+1)exp(r+1)`. ACG Lemma 8.13
 implies coercivity of the complementary Weil-form block once
 `r=C0 lambda+delta`. The remaining low/high coupling is bounded because the
 Weil form differs from `Lambda` by an `O(lambda)` bounded operator. The
@@ -1538,3 +1539,15 @@ This does not assume H2′, but yields only an exponential-dimensional bound;
 the low-block sign and sharper coupling remain unresolved. It neither proves
 positivity nor supplies a polynomial conditioning regime. Derivation:
 `research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.
+
+## XCVII PWPB-03.59 — Optimized low-mode count in the Schur cutoff (2026-11-28)
+
+Refined the band-projection argument in B3-57. Taking `R=exp(r+1)` leaves
+at least `1/(r+1)` of each unit vector with logarithmic-form energy at most
+`r` in that Fourier band. The exact band-trace bound then gives
+`dim(E_r)<= (2 log(lambda)/pi)(r+1)exp(r+1)`, improving the earlier
+`O(log(lambda)exp(2r))` estimate to `O(log(lambda)r exp(r))`. The Schur
+coupling bound improves accordingly, but remains exponential when
+`r=C0 lambda+delta`; no polynomial-size reduction or positivity follows.
+This is an optimization of a coarse estimate, not a lower bound on the true
+dimension. Details: `research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.

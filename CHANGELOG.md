@@ -1627,8 +1627,19 @@ noncircularity remain open. Details:
 Applied the coercive-block trace argument to the full windowed Weil form,
 using ACG's logarithmic Sobolev lower bound. The complementary block becomes
 positive above a threshold `C0 lambda+delta`; a direct band-projection
-argument bounds the low block dimension by `O(log(lambda) exp(2C0 lambda))`.
-The result is an analytic finite-dimensional reduction without H2′, but its
-dimension is exponential, the low-block sign is unknown, and no positivity
+argument, optimized to retain only `1/(r+1)` of each low-mode vector in the
+band, bounds the low-block dimension by `O(log(lambda) lambda exp(C0 lambda))`.
+This improves the earlier `exp(2r)` estimate but remains exponential. The
+reduction does not assume H2′; the low-block sign is unknown and no positivity
 follows. Details and source assumptions:
+`research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.
+
+## XCVII PWPB-03.59 — Optimized low-mode count in the Schur cutoff (2026-11-28)
+
+Improved the logarithmic Sobolev band-count estimate in B3-57 by choosing
+bandwidth `exp(r+1)`: each unit vector of energy at most `r` has at least
+`1/(r+1)` of its Fourier mass in the band. This yields
+`dim(E_r)<=(2 log(lambda)/pi)(r+1)exp(r+1)`, improving the previous
+`exp(2r)` bound. The Schur reduction remains exponential and gives no
+positivity result. Details:
 `research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.

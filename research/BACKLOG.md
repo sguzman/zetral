@@ -252,8 +252,9 @@ control this weighted trace by itself.
   the windowed Weil form using ACG Lemma 8.13 and the restricted logarithmic
   Sobolev form. Its compact-resolvent spectral subspace below
   `r=C0 lambda+delta` has dimension at most
-  `(4 log(lambda)/pi) exp(2r)`, yielding a valid but exponential-size Schur
-  reduction without H2′. The low-block negative trace is still unknown and
+  `(2 log(lambda)/pi)(r+1)exp(r+1)` by choosing the cutoff just above
+  `exp(r)`, yielding a valid but exponential-size Schur reduction without
+  H2′. The low-block negative trace is still unknown and
   the coupling bound is coarse; this is not positivity. Next seek sharper
   relative-form/cross-block estimates and compare with the prolate route.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
