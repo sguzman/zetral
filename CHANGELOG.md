@@ -20,6 +20,18 @@ which member yields Suzuki's global Weyl measure; the boundary-triple ratio
 identification remains open. No novelty or formalization claim. Details:
 `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+## 2026-11-27 — PWPB-03.12 boundary line for the global Weyl function
+
+On the full half-line starting at zero, constructed boundary maps
+`Gamma_0=y1(0)`, `Gamma_1=-y2(0)` for the candidate operator. The finite
+right-end condition `y2(b)=0` gives the Weyl quotient `U12/U22`; its
+limit is Suzuki's `Q_xi`. Thus the self-adjoint line `y1(0)=0` has spectral
+measure `mu_xi` in boundary-triple normalization. The transfer and Green
+identities are direct; standard boundary-triple theory and the analytic
+source theorem are imported and not independently audited. Scalar masses
+remain weights, not eigenspace multiplicities. Details:
+`research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ## 2026-11-27 — HP-02.3–.4 fixed-low pencil bounds
 
 For `L_N=N^2+U` with one fixed uniform offset, period counting and

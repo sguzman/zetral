@@ -733,6 +733,29 @@ the boundary-triple Weyl function and exact source ratio orientation. No
 line selection or novelty claim is made. Full derivation and limits:
 `research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.11).
 
+### PWPB-03.12 — Boundary triple and the zeta Weyl measure
+
+Use the full half-line `(0,infinity)`, whose left endpoint is regular because
+both diagonal entries of `H` are integrable on `[0,R]`; infinity is limit
+point. For `T_H=-H^(-1)Jd/da`, the boundary maps
+`Gamma_0 y=y1(0)`, `Gamma_1 y=-y2(0)` satisfy the Green identity and form an
+ordinary boundary triple (using inner products conjugate-linear in the first
+slot). The self-adjoint extension `Gamma_0=0` has line
+`y1(0)=0`. For the finite truncation with right-end `y2(b)=0`, the row
+solution `r(b)=(1,0)` gives `r(0)=r(b)U(b)^(-1)=(U22,-U12)`, so its Weyl
+quotient `Gamma_1 r/Gamma_0 r=U12/U22=U(b)·0`. Taking the limit using
+Suzuki's limit-point result yields `M(z)=Q_xi(z)`. Thus this explicit line
+has the source's Nevanlinna measure `mu_xi=sum m_gamma delta_gamma` in
+boundary-triple normalization. This realizes the distinct ordinates as
+spectral support; masses remain weights, not eigenspace dimensions.
+
+The tail at `a0>0` instead has Weyl function `Omega_a0`; transforming through
+the initial segment gives global `Q_xi`. The boundary algebra and Green
+identity are directly derived; regular-endpoint boundary-triple theory and
+the source's analytic Weyl theorem are imported, not formally composed or
+independently audited. No novelty claim. Full derivation and qualifications:
+`research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.12).
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

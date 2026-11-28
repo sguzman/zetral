@@ -105,13 +105,12 @@ measure level.
 
 ## Next investigation
 
-Independently audit the exact endpoint and operator statement in Suzuki's
-Proposition 7.2 and Theorem 6.2: derive the explicit left boundary line in
-the operator convention below, and verify the Hamiltonian reconstruction
-from prime-defined kernels. Then investigate whether a multiplicity-sensitive
-extension is compatible with the arithmetic form chain; the derivative-jet
-Jordan obstruction in MHS-03.4 rules out only Meyer's unchanged dilation
-action, not all alternatives.
+Independently audit the endpoint/operator theorem chain used in PWPB-03.12,
+including the standard boundary-triple spectral-measure normalization. Then
+investigate whether a multiplicity-sensitive extension is compatible with
+the arithmetic form chain; the derivative-jet Jordan obstruction in
+MHS-03.4 rules out only Meyer's unchanged dilation action, not all
+alternatives.
 
 ## PWPB-03.8 — Zero-independent input and operator realization audit
 
@@ -145,11 +144,14 @@ with maximal differential domain (locally absolutely continuous `y` and
 the regular left endpoint `a0`. At infinity the system is limit point:
 Theorem 6.2 gives `det H=1`, and the source obtains
 `integral_a^b tr H(c) dc >= 2(b-a)`. Hence there is no right-end boundary
-parameter. The source's Weyl normalization determines which left boundary
-parameter corresponds to `Q_xi`; translating that parameter into an explicit
-boundary line for this operator convention remains to be done. The domain
-description imports standard canonical-system operator theory and is not
-formally verified by Zetral.
+parameter. For the global function `Q_xi`, use the full half-line starting
+at `0`: Theorem 6.2 makes `H` integrable near zero, so that is a regular
+endpoint. PWPB-03.12 derives `Gamma_0=y1(0)`, `Gamma_1=-y2(0)` and identifies
+`y1(0)=0` as the line whose boundary-triple Weyl function is `Q_xi`. On a
+tail beginning at `a0>0`, the Weyl function is instead `Omega_a0`, related
+to `Q_xi` by the initial transfer matrix. This imports standard
+canonical-system/boundary-triple theory and is not formally verified by
+Zetral.
 
 The zero-side identity independently checks the spectral measure. Under RH,
 the even Hadamard product and `sum_(gamma>0) m_gamma/gamma^2 < infinity` give
@@ -262,7 +264,9 @@ Fix `a0>0`, take `H=diag(eta^(-1),eta)` as in Theorem 6.2, and use the
 operator expression `T_H y=-H^(-1)J y'` in `L2_H`. At `a0`, both `H` and
 `H^(-1)` are locally essentially bounded by the source's local regularity
 statement for `eta` and `eta^(-1)`, so this is a regular endpoint. For
-locally absolutely continuous maximal-domain vectors `y,z`, direct
+this operator calculation use the Hilbert inner product conjugate-linear in
+the first slot. For locally absolutely continuous maximal-domain vectors
+`y,z`, direct
 integration by parts gives
 
     <T_H y,z>_(L2_H) - <y,T_H z>_(L2_H)
@@ -285,9 +289,81 @@ the boundary triple's Weyl function to Suzuki's projective convention,
 including the transpose and ratio orientation. No formalization or
 independent source-theorem audit is claimed.
 
-**Classification.** Direct operator calculation completed; boundary-line
-selection for `Q_xi` remains open. This is a standard structural lemma, not
-a novelty claim.
+**Classification at this stage.** The direct Green-form calculation is
+complete; the line matching `Q_xi` is resolved in PWPB-03.12 below. This is a
+standard structural lemma, not a novelty claim.
 
 Primary source for local regularity, `det H=1`, and limit-point facts:
 [Suzuki, arXiv:2611.33001v1, Theorem 6.2 and Proposition 7.2](https://arxiv.org/html/2611.33001).
+
+## PWPB-03.12 — Boundary triple selects the global Weyl measure
+
+**Question.** Which self-adjoint left boundary line of the arithmetic
+canonical operator has the Weyl function `Q_xi`?
+
+**Endpoint choice.** Use the full half-line `(0,infinity)`, not a tail
+`(a0,infinity)` with arbitrary `a0>0`. Theorem 6.2 gives
+`H=diag(eta^(-1),eta)` with both diagonal entries integrable on each
+`[0,R]`. Thus zero is a regular canonical endpoint. For a maximal-domain
+vector, put `f=T_H y`; then `y'=JHf` and
+`integral_0^R |y'| <= (integral_0^R tr H)^(1/2)||f||_(L2_H(0,R))`, so the
+finite trace `y(0)` exists. Constant vectors near zero, cut off later where
+`H` and `H^(-1)` are locally bounded, show the joint trace map is onto
+`C^2`. Infinity is limit point. Use the maximal
+domain realization
+
+    T_H y = -H^(-1) J y',
+    L2_H = L2((0,infinity), H(a) da).
+
+Use inner products conjugate-linear in the first slot and define the
+boundary maps
+
+    Gamma_0 y = y_1(0),       Gamma_1 y = -y_2(0).
+
+The Green identity is
+`<T_Hy,z>-<y,T_Hz> = <Gamma_1 y,Gamma_0 z>_C - <Gamma_0 y,Gamma_1 z>_C`:
+the endpoint contribution is
+`-[y(0)^*Jz(0)] = -(-conj(y1)z2+conj(y2)z1)`, exactly the right-hand
+side. These maps therefore form an ordinary boundary triple for the maximal
+operator, and the extension
+`A_0=T_H|ker Gamma_0` is self-adjoint with the explicit line
+
+    y_1(0)=0.
+
+**Weyl-function calculation.** Write `U(b)` for the source fundamental
+matrix normalized by `U(0)=I`, whose rows are fundamental row solutions.
+On the truncated interval impose the right-end condition `y_2(b)=0` and
+take the nonzero row solution `r(b)=(1,0)`. Its value at zero is
+
+    r(0)=r(b) U(b)^(-1) = (U_22(b), -U_12(b)),
+
+since `det U(b)=1`. Therefore, whenever `U_22(b) != 0`,
+
+    Gamma_1 r / Gamma_0 r = -r_2(0)/r_1(0) = U_12(b)/U_22(b).
+
+The last ratio is precisely `U(b)·0` in source equation (4.3), and is
+`q_b` in Proposition 8.1. At poles the identity is interpreted
+projectively. Limit point at infinity and Proposition 7.2 (or Proposition
+8.1) give locally uniform convergence to `Q_xi` on `C_+`. Thus the boundary
+triple Weyl function of this full-line operator is `M(z)=Q_xi(z)`, and its
+Nevanlinna measure is `mu_xi=sum_gamma m_gamma delta_gamma`. The spectral
+measure statement is in the boundary-triple normalization; it establishes
+the zero ordinates as spectral support, with weights `m_gamma`, not
+eigenspace multiplicities.
+
+This also clarifies the tail distinction: for a fixed `a0>0`, Proposition
+7.2's quotient is the Weyl function of the restricted tail and is generally
+`Omega_a0`, not the global `Q_xi`; the global function is recovered after
+the segment `[0,a0]` by its fractional transformation.
+
+**Verification status and limits.** The boundary algebra, Green identity,
+and transfer-matrix inversion are derived directly. Regular-endpoint
+boundary-triple facts and the canonical-system Weyl spectral theorem are
+imported standard results, not formalized or independently reproved in
+Zetral. The source's analytic hypotheses behind Proposition 7.2 also remain
+un-audited. No novelty claim is made. This closes the explicit boundary-line
+translation at source-theorem level; next audit the endpoint/operator theorem
+chain and investigate whether a scalar multiplicity-one model can be
+upgraded without losing the arithmetic form realization.
+
+Primary source: [Suzuki, arXiv:2611.33001v1, Theorem 6.2, §§4.2–4.3, Propositions 7.2 and 8.1](https://arxiv.org/html/2611.33001).

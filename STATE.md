@@ -34,8 +34,14 @@ Proposition 7.2 takes the zero-parameter quotient on the truncated tail and
 limits to its Weyl function. This is not itself a separated left-end line
 for the chosen differential-operator domain; a Green-form/boundary-triple
 translation remains open. PWPB-03.11 derives the Green form and the full
-one-parameter family of separated self-adjoint endpoint lines; selection of
-the line corresponding to `mu_xi` remains open. The bounded audit is recorded in
+one-parameter family of separated self-adjoint endpoint lines. PWPB-03.12
+then uses the regular full endpoint at `0`, boundary maps
+`Gamma_0=y1(0)`, `Gamma_1=-y2(0)`, and the source's `U12/U22` cutoff quotient
+to identify `y1(0)=0` as the extension whose boundary-triple Weyl function
+is `Q_xi`. This matches `mu_xi` in boundary-triple normalization. Standard
+boundary-triple theory and Suzuki's analytic theorem are imported; the source
+chain remains unaudited and multiplicities remain spectral weights, not
+eigenspace dimensions. The bounded audit is recorded in
 `research/operators/B3-13-prime-defined-canonical-system.md` and
 `research/CAMPAIGN-97.md`.
 
