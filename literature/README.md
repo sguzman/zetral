@@ -10,6 +10,7 @@ Campaign I — spectral convergence. Access date: 2026-11-24 Mexico.
 
 - [Quantitative prior art](quantitative-prior-art.md)
 - [Theta-cardinal prior art](theta-prior-art.md)
+- [Suvlu 2026 Weil-operator series](suvlu-2026-weil-operator-series.md) — four author drafts dated 2026-09-24; Paper IV supplies a conditional finite-characteristic route, with its complete-mean premise open.
 
 The convergence source is pinned to v1 and its screw-function antecedent to v4. Other source limitations are documented in the antecedent audit. RH is externally certified; Zetral has not independently built that proof, and formal interfaces will retain explicit RH hypotheses until a checked import is feasible. The candidate bound is documented separately; no novelty or independent verification claimed.
 

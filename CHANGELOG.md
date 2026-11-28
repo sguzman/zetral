@@ -1,5 +1,25 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.50 finite filtered-energy audit
+
+Manually derived Suvlu Paper IV's finite constant-mode transfer, positive
+spectral-measure identity, sine-tail formula and cutoff-uniform Gaussian
+heat-difference bound, including a coarse arithmetic shifted-energy estimate.
+The result is conditional on the source's finite identities and open
+bounded-mean/simple-even family premises; the moving zero-retention argument
+remains unaudited. Details: `research/operators/B3-46-constant-mode-filtered-energy-audit.md`.
+
+## 2026-11-28 — PWPB-03.49 new Weil-operator literature and cutoff audit
+
+Added Suvlu's four September 2026 Weil-form operator drafts to the literature
+register. Independently derived Paper IV's consequence that a bounded
+complete characteristic mean forces `N >= L^2/(128 pi^2 M)` for sufficiently
+large `L`, using only the untouched Fourier lattice. Its selected-family and
+mean-bound premises remain open; the author's Lean map excludes the moving
+zero-retention theorem and RH. Details:
+`research/operators/B3-45-characteristic-mean-cutoff-audit.md` and
+`literature/suvlu-2026-weil-operator-series.md`.
+
 ## 2026-11-28 — PWPB-03.48 real modulation criterion for H2′ (partial)
 
 Derived an exact symmetric moving-average inequality for ACG's tail Mellin

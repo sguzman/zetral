@@ -359,11 +359,33 @@ imply all-window Weil positivity and hence RH; the source itself notes this.
 This is an evidence-scope audit, not RH progress or an operator transfer.
 Details: `research/operators/B3-43-finite-certificate-transfer-boundary.md`.
 
-Next: pursue a quantitative frequency-localized trace bound for ACG's
-semilocal high-index tail condition (H2′), especially its polynomial-rate
-localized estimate (66). Existing local trace-class convergence and
-operator-norm approximations do not imply this relative bound. See
-PWPB-03.48 in `research/BACKLOG.md`.
+PWPB-03.49 records a newly located September 2026 four-paper series by
+Dylan Suvlu on completed Weil operators, a causal Hankel range criterion,
+arithmetic response, and conditional finite-characteristic zero retention.
+The author states that the simple-even selected family and uniform complete
+characteristic-mean bound remain open; the Lean theorem map excludes the
+moving zero-retention conclusion and RH. Zetral did not build the external
+Lean snapshot. Independently derived only the elementary mean-to-cutoff
+consequence: `mu<=M` forces `N>=L^2/(128 pi^2 M)` for sufficiently large
+`L`, using the untouched Fourier lattice. Details:
+`research/operators/B3-45-characteristic-mean-cutoff-audit.md` and
+`literature/suvlu-2026-weil-operator-series.md`.
+
+PWPB-03.50 manually verifies Paper IV's finite constant-mode transfer,
+positive spectral-measure identity, sine-tail formula and cutoff-uniform
+Gaussian heat-difference bound, including its coarse arithmetic `H_00-E`
+estimate. The estimate has no spectral-gap denominator, but depends on the
+source's finite displacement/product identities. It gives vanishing filtered
+energy only conditionally on the open bounded-mean and simple-even family
+hypotheses. Appendix A's moving limit and zero-retention argument remain
+unaudited. Details: `research/operators/B3-46-constant-mode-filtered-energy-audit.md`.
+
+Next priority: independently audit Paper IV's arithmetic moving zero-retention
+argument (PWPB-03.51), tracking test classes, limits, normalization and the
+complex-zero pair isolation. The bounded-mean and selected-family existence
+premises remain distinct open problems.
+The ACG H2′ localization investigation (PWPB-03.48) remains open and
+resumable; its real-modulation necessary criterion is in B3-44.
 
 PWPB-03.48 first lemma: applying H2′ to the real tests
 `f(u)cos(T log u)` and `f(u)sin(T log u)` yields an exact necessary

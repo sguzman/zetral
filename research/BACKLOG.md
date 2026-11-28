@@ -217,6 +217,59 @@ control this weighted trace by itself.
   validate the operator ideal/density manipulations; check source and prior
   art. No large local data or computation is required.
 
+**PWPB-03.49 — New finite-characteristic literature and cutoff lemma (complete):**
+Targeted review found Suvlu's four September 2026 Weil-operator drafts and
+added them to the source register. Independently derived Paper IV's implication
+`complete mean <= M => N >= L^2/(128 pi^2 M)` for sufficiently large L from
+the untouched Fourier lattice alone. The mean bound and simple-even sequence
+remain open; the author's formalization map excludes the moving zero-retention
+theorem/RH conclusion. Details: `research/operators/B3-45-characteristic-mean-cutoff-audit.md`
+and `literature/suvlu-2026-weil-operator-series.md`.
+
+**PWPB-03.50 — Finite constant-mode filtered-energy estimate (complete):**
+Manually verified Paper IV's finite corrected-derivative transfer identity,
+spectral-measure energy formula, sine-tail representation, contour-shift
+Gaussian bound, and coarse arithmetic `H_00-E` estimate. The resulting
+heat-difference shifted energy bound is uniform in Fourier cutoff and has no
+spectral-gap denominator. The derivation assumes the source's finite
+displacement and characteristic product identities; it does not audit the
+Appendix A moving limit or establish the open mean/selection hypotheses.
+Details: `research/operators/B3-46-constant-mode-filtered-energy-audit.md`.
+
+**PWPB-03.51 — Audit the arithmetic moving zero-retention argument (active,
+prioritized):** Check whether Suvlu Paper IV's Appendix A genuinely carries
+the finite filtered-current identity through an unbounded selected arithmetic
+family and forces every zero of `Xi` to be retained in every normalized
+characteristic cluster.
+
+- **Question:** Under exactly the paper's complete-mean and simple-even
+  hypotheses, do the Gaussian finite residual, cutoff lower bound, whole-line
+  Weil-form continuity, and pair-isolating test functions establish
+  `F(gamma)=0` for every `Xi(gamma)=0`, including complex `gamma`?
+- **Hypothesis:** The argument may be sound but its quantifier/domain bridges
+  deserve independent scrutiny, especially the complete-mean-dependent
+  Fourier resolution and the zero-pair isolation under the source explicit
+  formula.
+- **Prerequisites:** Paper IV §§7 and Appendix A; its hypotheses and finite
+  estimate audited in B3-45/46; B3-24/25, and primary Weil explicit formula.
+- **Information gain:** Independent validation or a precise gap in an
+  alternative conditional route from finite real-zero characteristics to
+  RH-strength zero retention.
+- **Design / falsification:** Track every test-function class, compactness
+  limit, normalization, and convergence rate in Appendix A. Re-derive the
+  lattice cutoff bound (already B3-45), Gaussian current transfer and
+  final pair isolation. Attempt to falsify zero retention by checking what
+  happens if a zero pair is not simple or lies off the real line; do not
+  assume RH or import known zeros into construction.
+- **Dependencies:** Pinned 2026-09-24 Paper IV draft and its cited CCM
+  characteristic theorem; finite derivation B3-46.
+- **Acceptance:** Proof audit with all quantifiers/domains and clear
+  conditional status, or a concrete missing estimate/counterexample. The
+  complete-mean/selected-family existence remains a distinct open premise.
+- **Verification:** Manual independent argument, source equation references,
+  and exact statement of what the external Lean snapshot does not cover. No
+  local large computation or external build is required unless later useful.
+
 **PWPB-03.44 follow-up — global Weyl identification audit:** Suzuki's
 arithmetic canonical system has a complete scalar spectral representation
 once its Weyl function is `Q_xi`, but the global extension-parameter/Weyl

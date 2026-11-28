@@ -1345,6 +1345,19 @@ for the actual arithmetic density. Next derive the needed decay in `n0`
 uniformly over these frequency translates using the semilocal Hankel symbol;
 otherwise give a source-structured counterexample to the proposed bound.
 
+Literature pivot (2026-11-28): targeted search found Suvlu's four-paper
+*Weil form operators* draft series, including a separate conditional
+finite-characteristic zero-retention route. B3-45 independently checks only
+the elementary consequence that bounded complete characteristic mean forces
+`N >= L^2/(128 pi^2 M)` for sufficiently large `L`; it does not verify the
+series' main moving theorem. The ACG H2′ route remains active in the backlog,
+ but the finite constant-mode filtered-energy transfer is now audited as
+ PWPB-03.50 (B3-46). It yields a cutoff-uniform Gaussian bound without a
+ spectral-gap denominator, conditional on the source's finite identities and
+ the open bounded-mean/simple-even family premises. Next is PWPB-03.51: audit
+ Appendix A's arithmetic moving zero-retention argument. See
+`literature/suvlu-2026-weil-operator-series.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and
