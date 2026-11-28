@@ -140,9 +140,10 @@ analytic theorems and from any RH implication.
   transition/pole Schur-sign problem.
   PWPB-03.25 now gives an exact finite-prime Fourier expansion and
   Bohr-mean-square truncation, with a polynomial-in-X support bound at fixed
-  accuracy. Next determine whether this weaker norm controls the actual
-  trace pairing on a justified Gevrey/form-domain class; do not infer
-  operator-norm convergence or H2′ from it.
+  accuracy. PWPB-03.26 strengthens this to factored uniform
+  operator-norm approximation with O_epsilon(|S|) local terms. Next test
+  whether its residual can be upgraded to a trace/weighted-tail bound on a
+  justified Gevrey/form-domain class; neither norm alone controls H2′.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

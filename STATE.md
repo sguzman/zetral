@@ -144,6 +144,16 @@ Next test whether this norm controls the source trace pairing for a fixed
 test class; otherwise pivot to direct Hankel singular-vector localization.
 Full note: `research/operators/B3-21-finite-prime-symbol-expansion.md`.
 
+PWPB-03.26 strengthened that result to an operator-norm approximation:
+truncate each local factor separately and keep their product factored. For
+large primes, retaining modes `1,0,-1,-2` leaves summable error
+`p^(-3/2)+p^(-2)`; only finitely many small primes need longer truncations.
+Telescoping gives uniform Mellin-symbol and compressed-Hankel error below a
+chosen epsilon, with O_epsilon(number of primes) factor terms. It controls
+fixed approximation numbers, not the infinite tail/trace norm or H2′. Next
+investigate a resolvent or weighted trace estimate for the residual tail.
+Details: `research/operators/B3-22-uniform-finite-prime-operator-approximation.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

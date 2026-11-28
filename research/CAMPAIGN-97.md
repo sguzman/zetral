@@ -935,6 +935,20 @@ give uniform symbol or operator-norm control, nor H2′: log-dilation shift
 indices are not the source's Mellin-frequency scale. Full derivation:
 `research/operators/B3-21-finite-prime-symbol-expansion.md`.
 
+### PWPB-03.26 — Uniform finite-prime operator-norm truncation
+
+Improved the coefficient-level Bohr-mean-square approximation to a uniform
+symbol estimate by truncating each prime factor separately and retaining the
+product in factored form. For all sufficiently large primes, keeping modes
+`k=1,0,-1,-2` leaves a summable local sup-norm tail
+`p^(-3/2)+p^(-2)`. Only finitely many small primes need an
+epsilon-dependent longer truncation. Product telescoping yields error below
+epsilon uniformly in the Mellin variable, with O_epsilon(|S|) factor terms;
+the compressed Hankel operator has the same operator-norm error. This controls
+fixed approximation numbers but not the infinite singular-value tail or
+H2′. Full bound and caveats:
+`research/operators/B3-22-uniform-finite-prime-operator-approximation.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

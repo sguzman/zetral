@@ -97,10 +97,13 @@ prime square roots; no finite zero data or numerical fitting enters.
 
 ## Next experiment
 
-Determine whether the Bohr-mean-square truncation controls the trace pairing
-`Tr(theta(f) K theta(f)^*)` for a specified Gevrey or form-domain test class,
-with constants uniform in the finite prime set. If not, preserve the norm
-gap and move to direct localization of the singular vectors of
+PWPB-03.26 subsequently upgrades the symbol approximation to uniform
+operator-norm error by truncating and retaining each local factor. The
+remaining question is whether that residual bound can control
+`Tr(theta(f) K theta(f)^*)` or the infinite weighted singular-value tail
+uniformly in the finite prime set. It does not follow from either the Bohr
+`B²` bound here or the operator-norm bound in B3-22; if no trace estimate is
+available, move to direct localization of the singular vectors of
 `(1-P_{1/t})U P_t`.
 
 Primary sources: Connes–Consani,

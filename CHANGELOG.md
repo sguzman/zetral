@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.26 uniform operator-norm truncation
+
+Truncating each finite-prime factor separately gives a factorized
+O_epsilon(|S|)-term approximation to the multiplier with uniform error below
+epsilon; the high-prime local errors are summable. The compressed Hankel
+operator inherits the bound. This controls fixed approximation numbers, not
+the infinite trace tail or H2′. Details:
+`research/operators/B3-22-uniform-finite-prime-operator-approximation.md`.
+
 ## 2026-11-27 — PWPB-03.25 finite-prime multiplier expansion
 
 Derived exact local Fourier coefficients and a sparse finite-prime
