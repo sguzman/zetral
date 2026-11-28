@@ -1202,6 +1202,25 @@ prime-defined positive matrix-valued local Weil form that could encode
 multiplicity fibers without inserting zeros. Details:
 `research/operators/B3-37-suzuki-rate-audit.md`.
 
+### PWPB-03.42 — Scalar-observation rank obstruction
+
+For a scalar multiplicity-one self-adjoint model and any bounded map from
+finitely many observation channels, the induced matrix spectral atom is
+`V^*P_gamma V`, hence has rank at most one. Applied to Suzuki's scalar
+`L^2(mu_xi)` model, bounded finite-channel Gram constructions cannot turn
+the scalar atom mass `m_gamma` into geometric fiber rank. This generalizes
+the specific rank-one derivative-jet collapse in B3-16 to the full bounded
+observation class, while leaving genuinely new arithmetic matrix-valued
+forms open. The proof is elementary spectral-projection rank algebra and
+makes no novelty claim. Details:
+`research/operators/B3-38-scalar-observation-rank-obstruction.md`.
+
+Next: test whether a vector-valued prime-side local Weil form can introduce
+independent fibers before spectralization. Specify its core, involution,
+positive form, scalar compression, and why its matrix rank is arithmetic
+rather than zero-dependent. Reject direct scalar copies as constant-rank
+padding.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

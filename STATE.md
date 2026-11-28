@@ -290,6 +290,15 @@ direction is a prime-defined positive matrix-valued local Weil form with
 non-tautological multiplicity fibers. Details:
 `research/operators/B3-37-suzuki-rate-audit.md`.
 
+PWPB-03.42 proves a scoped obstruction: any finite matrix spectral measure
+obtained from bounded observations of Suzuki's scalar multiplicity-one
+operator has rank at most one at each ordinate, since its atom is
+`V^*P_gamma V`. This rules out creating geometric multiplicity by adding
+bounded channels to the existing scalar model; a genuinely larger
+arithmetic-defined space is needed. It does not rule out new matrix-valued
+Weil forms or multiplicity as spectral mass. Details:
+`research/operators/B3-38-scalar-observation-rank-obstruction.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

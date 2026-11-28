@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.42 bounded-channel rank obstruction
+
+Proved that bounded finite-channel observations of the scalar Suzuki
+multiplicity-one model have matrix spectral atoms of rank at most one,
+regardless of scalar atom weight. This rules out recovering geometric zero
+multiplicity by re-encoding the existing scalar space; new arithmetic
+degrees of freedom would be required. Scoped elementary obstruction, no
+novelty claim. Details:
+`research/operators/B3-38-scalar-observation-rank-obstruction.md`.
+
 ## 2026-11-27 — PWPB-03.41 Suzuki Weyl-rate source audit
 
 Inspected the specific asymptotic estimates in Suzuki arXiv:2611.33001v1.

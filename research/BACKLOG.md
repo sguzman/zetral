@@ -282,6 +282,12 @@ analytic theorems and from any RH implication.
   out an arithmetic rate. Next formulate a prime-defined positive
   matrix-valued local Weil form with non-tautological multiplicity fibers.
   Details: `research/operators/B3-37-suzuki-rate-audit.md`.
+- **PWPB-03.42 bounded-channel obstruction:** For any bounded finite-channel
+  observation of a scalar simple eigenspace, its matrix atom has rank at most
+  one. Thus re-encoding `L^2(mu_xi)` cannot make analytic multiplicity a
+  geometric fiber dimension. Next specify genuinely independent prime-side
+  vector-valued Weil data; scalar copies are only constant-rank padding.
+  Details: `research/operators/B3-38-scalar-observation-rank-obstruction.md`.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives
