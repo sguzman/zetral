@@ -112,6 +112,10 @@ analytic theorems and from any RH implication.
   system. This does not obstruct a scalar weighted-measure correspondence.
   Next investigate positive arithmetic-defined vector-valued local kernels;
   test derivative-kernel proposals for positivity and zero-independence.
+  PWPB-03.19 showed the direct normalized jet kernel collapses to rank at
+  most one. Next search for independent prime-defined feature families and
+  audit positivity/noncircularity, or pivot to an explicit quantitative
+  cutoff-Weyl rate with stated Hamiltonian bounds.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

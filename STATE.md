@@ -87,6 +87,13 @@ scalar Weyl atom weights, infinite-dimensional fibers, or simplicity remain
 distinct possibilities. No arithmetic matrix lift is established. Details:
 `research/operators/B3-15-finite-matrix-multiplicity-barrier.md`.
 
+PWPB-03.19 tested derivative jets of Suzuki's normalized local kernel. The
+local-uniform rank-one limit implies, by Cauchy estimates, that every fixed
+jet Gram matrix tends to an outer product of rank at most one. This excludes
+the direct normalized jet-kernel construction as a higher-multiplicity
+fiber lift, but not other normalizations or arithmetic feature families.
+Details: `research/operators/B3-16-jet-kernel-rank-collapse.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

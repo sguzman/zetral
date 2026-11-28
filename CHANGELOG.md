@@ -1,5 +1,12 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.19 normalized jet-kernel rank collapse
+
+Derived that fixed-order derivative Gram matrices of Suzuki's normalized
+local kernels converge to rank at most one. This rejects only the direct
+jet-kernel multiplicity lift; alternate feature families remain open.
+Details: `research/operators/B3-16-jet-kernel-rank-collapse.md`.
+
 ## 2026-11-27 — PWPB-03.18 finite matrix multiplicity barrier
 
 Derived the necessary matrix-size bound for geometric multiplicity matching

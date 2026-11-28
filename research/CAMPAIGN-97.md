@@ -841,6 +841,19 @@ weight-based correspondences remain possible. Matrix canonical systems are
 prior art; no arithmetic matrix lift was found. Full scope and tests:
 `research/operators/B3-15-finite-matrix-multiplicity-barrier.md`.
 
+### PWPB-03.19 — Derivative-kernel rank collapse
+
+Tested the direct matrix lift formed from fixed-order derivatives of the
+local RKHS kernel. Since Suzuki's normalized kernels converge locally
+uniformly to `conjugate(A_infinity(w))*A_infinity(z)`, Cauchy estimates give
+the same convergence for all fixed derivative orders. The limiting jet Gram
+matrix is an outer product and has rank at most one, including at a distinct
+zero ordinate if its analytic multiplicity exceeds one. Thus the
+direct normalized jet lift cannot encode higher geometric multiplicity.
+Finite-window positivity is preserved; the obstruction is only in the
+limiting rank. Other rescalings and independent arithmetic feature families
+remain open. Full derivation: `research/operators/B3-16-jet-kernel-rank-collapse.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a
