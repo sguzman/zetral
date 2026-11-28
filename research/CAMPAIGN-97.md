@@ -973,6 +973,21 @@ an abstract countermodel, not a counterexample about `QW_lambda`.
 
 ## Backlog, dependencies, and experiments
 
+### PWPB-03.28 — Fixed-window Galerkin limit and boundary-normalization gap
+
+For fixed `lambda`, CCM Proposition 3.4 states that the union of the Fourier
+spaces `E_N` is a form core, so the lowest restricted Weil-form eigenvalues
+decrease to the full form bottom. Compact resolvent then implies subsequential
+strong `L²` convergence of normalized finite-window minimizers to the ground
+eigenspace; if the full ground state is simple, their projective distance to
+it tends to zero. The argument is qualitative and fixed-window only. The
+varying Dirichlet boundary evaluation is not L²-continuous: the exact
+sequence `delta_N/||delta_N||²` tends to zero in L² while its represented
+endpoint value stays one. Thus the Galerkin limit does not control CCM's
+boundary normalization. No rate, simplicity/evenness result, or joint
+cutoff/window limit follows. Full derivation and limits:
+`research/operators/B3-24-fixed-window-galerkin-limit.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

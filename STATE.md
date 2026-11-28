@@ -163,6 +163,17 @@ Next seek localized Schatten bounds or direct singular-vector frequency
 localization. Details:
 `research/operators/B3-23-operator-norm-does-not-control-weighted-trace.md`.
 
+PWPB-03.28 independently derives a fixed-window consequence of CCM
+Proposition 3.4: since the Fourier spaces form a form core, their minimum
+Rayleigh values converge monotonically to the full Weil-form bottom; compact
+resolvent gives subsequential L2 convergence of normalized minimizers to the
+ground eigenspace, and simplicity would imply projective convergence. This
+does not give a rate, simplicity, evenness, a joint cutoff/window limit, or
+the boundary normalization needed by CCM. The endpoint evaluation is
+unbounded in L2, witnessed by `delta_N/||delta_N||^2 -> 0` in L2 with endpoint
+value one. This isolates a separate missing estimate in the finite-cutoff
+leg. Details: `research/operators/B3-24-fixed-window-galerkin-limit.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

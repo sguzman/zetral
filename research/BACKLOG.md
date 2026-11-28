@@ -44,6 +44,14 @@ analytic theorems and from any RH implication.
   available from the external checked Lean theorem. Independent audit of the
   full construction, boundary realization and multiplicity match remains
   open; this is not a Zetral novelty claim.
+- **PWPB-03.28 fixed-window cutoff:** CCM Proposition 3.4 gives qualitative
+  convergence of the Fourier-truncated minimum to the full Weil-form bottom
+  at each fixed `lambda`; compact resolvent yields subsequential minimizer
+  convergence to the ground eigenspace. It gives no rate or joint limit, and
+  L2 convergence does not control the Dirichlet boundary normalization.
+  Next derive a sequence-specific boundary estimate or a quantitative form
+  approximation and spectral-gap bound for the actual `QW_lambda` ground
+  state. See `research/operators/B3-24-fixed-window-galerkin-limit.md`.
 - **PWPB-03.5 source audit:** The pinned Lean development does contain a
   finite-dimensional positive comparison operator
   `U_vartheta = c_j glue_vartheta glue_vartheta*`. Its exact identity

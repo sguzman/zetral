@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.28 fixed-window Galerkin limit
+
+Derived the qualitative Rayleigh–Ritz limit for CCM Fourier cutoffs at fixed
+window and the compact-resolvent subsequence consequence for normalized
+minimizers. Recorded an exact obstruction to passing the changing endpoint
+normalization through L2 convergence: normalized Dirichlet kernels can have
+unit endpoint pairing while their L2 norm tends to zero. No rate, simple-even
+theorem, joint limit, determinant convergence, RH proof, or novelty claim.
+Details: `research/operators/B3-24-fixed-window-galerkin-limit.md`.
+
 ## 2026-11-27 — PWPB-03.27 weighted trace norm boundary
 
 Showed that operator-norm convergence alone does not control weighted trace
