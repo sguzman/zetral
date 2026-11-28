@@ -337,6 +337,22 @@ source growth condition exclude extra Nevanlinna affine terms. No mismatch
 was found; source transform/canonical-system theorems remain imported.
 Details: `research/operators/B3-41-global-weyl-extension-audit.md`.
 
+PWPB-03.46 independently derives Suzuki's 2023 one-sided transform identity
+directly from the displayed prime/archimedean formula. Termwise integration
+recovers the prime Dirichlet series, rational pole terms, digamma term and
+Hurwitz–Lerch correction with matching constants. Absolute convergence
+justifies the prime and Lerch interchanges for `Im(z)>1/2`; no boundary claim
+at equality is made. This is a manual audit of an existing source theorem,
+not a novel result, formal proof, operator reconstruction, spectral
+correspondence or RH proof. The canonical-system and spectral-transform
+theorems remain imported. Details:
+`research/operators/B3-42-explicit-transform-derivation.md`.
+
+Next: audit whether the hypotheses for ACG's low Weil-spectrum/prolate
+comparison follow from Zetral's existing finite positivity results, or state
+the exact missing full-space lower bound. Keep the ordinary Weil form
+operator distinct from Suzuki compression and theta-pencil models.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

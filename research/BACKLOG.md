@@ -163,35 +163,45 @@ analytic theorems and from any RH implication.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
-**PWPB-03.45 follow-up — independent explicit-transform derivation:** The
-source-to-source audit matched the prime-side triangular form to the global
-Weyl function, but Suzuki's 2023 transform theorem remains imported. Derive
-it directly from the explicit formula and prove the necessary convergence,
-so the operator link from primes to `Q_xi` has an independent analytic check.
+**PWPB-03.45 follow-up — independent explicit-transform derivation (complete):**
+The term-by-term calculation and all required absolute-convergence estimates
+are recorded in `research/operators/B3-42-explicit-transform-derivation.md`.
+This checks Suzuki's existing identity from the explicit formula; it is not a
+novel transform theorem or a proof of the operator/spectral correspondence.
 
-- **Hypothesis:** For `Im z>1/2`, integrating Suzuki's explicit
-  prime/archimedean formula for `Psi(t)` against `e^(izt)` yields
-  `-xi'(1/2-iz)/(z^2 xi(1/2-iz))` with all terms and constants accounted for.
-- **Prerequisites:** arXiv:2206.03682v4 equations (1.1),(1.2) and proof
-  in §2; arXiv:2611.33001v1 §5.2, Proposition 5.3; standard gamma,
-  Hurwitz–Lerch and Dirichlet-series identities.
-- **Information gain:** Independent verification of the last prime-side
-  analytic identity feeding the arithmetic Hilbert–Pólya Weyl function, or
-  a precise convergence/normalization gap.
-- **Design / falsification:** Transform prime terms term-by-term only after
-  absolute convergence; transform the archimedean gamma/Franel terms
-  independently; compare every pole term and constant with the completed
-  xi logarithmic derivative. Check the boundary `Im z=1/2` is not claimed,
-  and use numerical spot checks only as diagnostics, not proof.
-- **Dependencies:** Primary versions above, exact transform convention,
-  accepted B3-40/41 notes.
-- **Acceptance:** A complete derivation on the stated half-plane with
-  justified sum/integral exchanges and all constants, or an explicit
-  missing hypothesis/correction.
-- **Verification:** Re-derive independently from the prime formula;
-  check asymptotic bounds on each integral and compare against the source
-  formula symbolically. No local heavy computation, RH inference, or
-  novelty claim.
+**PWPB-03.46 — audit the low-spectrum hypotheses in the Weil/prolate bridge:**
+Determine whether the hypotheses in Andrews–Connes–La Gatta's comparison of
+the low Weil spectrum with the Fuchs/prolate ladder can be obtained from
+Zetral's existing exact positivity/cutoff results, or identify a precise
+missing lower bound. Keep the ordinary `L^2` Weil operator distinct from the
+Suzuki inverse-compression and theta-pencil operators.
+
+- **Question:** For the exact `QW_lambda` family and pinned parameter
+  conventions in Campaign XCVII, do the proved estimates imply the needed
+  lower comparison for the low even and odd eigenvalues and the sector
+  simplicity/evenness assumptions, uniformly in the asymptotic regime?
+- **Hypothesis:** Existing finite positivity certificates plus published
+  prolate asymptotics do not by themselves imply these full-space spectral
+  lower bounds; a residual/gap or form-domain comparison remains necessary.
+- **Prerequisites:** Campaign XCVII source normalization; ACG Hypothesis 3.4
+  and its exact eigenvalue conventions; Zetral positivity notes/certificates;
+  min-max and parity-sector variational principles.
+- **Information gain:** Either a valid bridge from existing certificates to
+  the candidate operator's low spectrum, or a rigorous identification of the
+  unbridged inequality and its scaling.
+- **Design / falsification:** Translate each cited estimate into the same
+  `lambda` and sector normalization; check whether each is an upper or lower
+  bound and whether it concerns the full operator or a compression. Attempt a
+  finite-dimensional parity-crossing countermodel to any inference from an
+  upper ladder alone. Do not use zeros as inputs.
+- **Dependencies:** Campaign XCVII and its cited primary sources; exact
+  positivity certificates already in the repository.
+- **Acceptance:** A source-pinned implication proof with all hypotheses, or a
+  counterexample / quantified missing bound; record independent review and
+  formal status honestly.
+- **Verification:** Re-derive min-max implications separately, compare exact
+  operator definitions and parameter maps, and search prior literature
+  before any novelty claim. No large local computation is required.
 
 **PWPB-03.44 follow-up — global Weyl identification audit:** Suzuki's
 arithmetic canonical system has a complete scalar spectral representation

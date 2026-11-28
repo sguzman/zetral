@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.46 direct prime-side transform derivation
+
+Derived Suzuki's explicit prime/archimedean transform term by term and
+justified the prime and Hurwitz–Lerch sum/integral exchanges on
+`Im(z)>1/2`. All pole, gamma and zeta logarithmic-derivative terms match.
+This verifies an existing identity; it is not a novel theorem or a proof of
+the canonical-system spectral correspondence. Details:
+`research/operators/B3-42-explicit-transform-derivation.md`.
+
 ## 2026-11-28 — PWPB-03.45 global Weyl normalization audit
 
 Checked the prime triangular test, screw-function Fourier transform signs,

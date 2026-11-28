@@ -1284,9 +1284,29 @@ audit, not an independent proof of the explicit transform or the source's
 canonical-system theorems. Full note:
 `research/operators/B3-41-global-weyl-extension-audit.md`.
 
-Next: derive Suzuki 2023 Theorem 1.1's transform directly from its explicit
-prime and archimedean formula, including convergence/interchange details,
-to independently audit the final analytic link from primes to `Q_xi`.
+Completed next as PWPB-03.46: the explicit transform is derived term by
+term, with sum/integral exchanges justified for `Im(z)>1/2`. See
+`research/operators/B3-42-explicit-transform-derivation.md`. This remains a
+manual audit of an existing theorem; it does not establish the source's
+canonical-system or spectral-transform results.
+
+Next: audit whether the low Weil-spectrum/prolate comparison hypotheses in
+Andrews–Connes–La Gatta follow from Zetral's existing finite positivity
+results, or isolate the exact missing full-space lower bound. Preserve the
+distinction between the ordinary Weil form and Suzuki's inverse-compression
+or theta-pencil operators.
+
+### PWPB-03.46 — Direct prime/archimedean transform derivation
+
+The explicit formula's prime term transforms to `-z^(-2) zeta'(s)/zeta(s)`;
+the rational/exponential term supplies `-z^(-2)(1/s+1/(s-1))`; and the
+linear gamma plus Hurwitz–Lerch terms combine to
+`-z^(-2)(psi(s/2)-log(pi))/2`, where `s=1/2-iz`. Together these are exactly
+`-z^(-2) xi'(s)/xi(s)`. The prime sum is absolutely integrable after
+termwise transform for `Im(z)>1/2`; the Lerch-series majorant is summable.
+This is a hand-checked derivation of Suzuki Theorem 1.1(1), not an independent
+new theorem or RH result. Full derivation and scope:
+`research/operators/B3-42-explicit-transform-derivation.md`.
 
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
