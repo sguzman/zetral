@@ -1,5 +1,13 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.17 growing-interval Weyl-limit audit
+
+Rechecked the determinant-one trace-length bound, boundary-triple quotient,
+and qualitative locally uniform convergence. Explicitly separated the
+growing interval `[0,a]` quotient from the tail quotient `[a,b]` in Suzuki
+Proposition 7.2. No mismatch or convergence rate was found. Details:
+`research/operators/B3-14-cutoff-weyl-convergence-audit.md`.
+
 ## 2026-11-27 — PWPB-03.16 exact certificate arithmetic audit
 
 Independently rederived the introductory Fejer-kernel least-squares

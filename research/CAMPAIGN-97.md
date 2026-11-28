@@ -813,6 +813,20 @@ inputs, endpoint limit, or the paper's main 71.2740668% certificate. It is a
 source audit, not a Zetral theorem or novelty claim. Full exact derivation
 and falsification checks: `research/operators/XU26-fejer-certificate-audit.md`.
 
+### PWPB-03.17 — Growing-interval Weyl convergence audit
+
+Independently checked the transfer convention and trace-length argument for
+the finite left-to-right quotient `U_a·0=U_a,12/U_a,22`. The determinant-one
+Hamiltonian gives `L_a=integral_0^a tr H >= 2a`, so trace normalization
+produces a half-line whose length tends to infinity. The cited limit-point
+theorem gives pointwise Weyl convergence, and a Cayley/Montel argument gives
+locally uniform convergence on compact subsets of the upper half-plane.
+This is the quotient used by the boundary triple. It is distinct from
+`(U_a^(-1)U_b)·0`, the tail quotient in Proposition 7.2. No sign mismatch
+was found. Standard canonical-system convergence and Suzuki's RH-conditional
+Weyl identification remain imported; no quantitative rate is established.
+Full audit: `research/operators/B3-14-cutoff-weyl-convergence-audit.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

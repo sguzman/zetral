@@ -101,6 +101,12 @@ analytic theorems and from any RH implication.
   independent audit of Suzuki's analytic cutoff-Weyl convergence, alongside
   the noncircular matrix-lift/no-go question; avoid extending the small
   certificate audit without a concrete discrepancy or new source evidence.
+  PWPB-03.17 independently checked the growing-interval quotient and its
+  qualitative locally uniform limit, while separating it from the tail
+  quotient in Proposition 7.2. Next investigate a noncircular
+  arithmetic-defined matrix-valued local Weil kernel and quantify the
+  finite-dimensional multiplicity barrier; also seek a quantitative Weyl
+  truncation error rather than repeating qualitative convergence.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

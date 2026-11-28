@@ -69,6 +69,15 @@ feasibility; analytic moments, endpoint limiting argument, and the main
 optimized theorem remain unaudited. Exact note:
 `research/operators/XU26-fejer-certificate-audit.md`.
 
+PWPB-03.17 audited the growing-interval quotient `U_a,12/U_a,22`: trace
+length satisfies `L_a >= 2a`, so canonical-system limit-point convergence
+applies, and a Cayley/Montel argument gives locally uniform convergence to
+the RH-conditional half-line Weyl function. This is the boundary-triple
+quotient and is distinct from Suzuki Proposition 7.2's tail quotient
+`(U_a^(-1)U_b)·0`. No quantitative rate or new source theorem was obtained;
+the standard limit-point and source identification remain imported. Full
+audit: `research/operators/B3-14-cutoff-weyl-convergence-audit.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
