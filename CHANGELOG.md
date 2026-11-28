@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.37 smoothed prolate operator residual
+
+Extended the exact radical-tail split to a weak operator identity. Sobolev
+control of the archimedean multiplier, pole integrals, and the complete
+prime-power shift sum give a normalized residual
+`O(lambda^-2 log(lambda+2))` for the N=24 smoothed family; its Rayleigh value
+is `O(lambda^-6)`. Compact resolvent places some eigenvalue nearby, without
+identifying the bottom or proving a gap or zero correspondence. Derivation:
+`research/operators/B3-33-smoothed-prolate-operator-residual.md`.
+
 ## 2026-11-27 — PWPB-03.36 smoothed prolate tail-energy bridge
 
 Constructed a growing, smooth, exact-moment prolate family and proved a

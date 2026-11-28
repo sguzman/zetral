@@ -242,6 +242,15 @@ analytic theorems and from any RH implication.
   ACG's existing exponential upper bound. Next estimate the compressed
   operator residual from the radical tail and separately obtain a lower
   spectral gap; Rayleigh energy does not imply ground-vector proximity.
+- **PWPB-03.37 residual bridge:** The exact weak radical identity plus the
+  tail Sobolev, pole, and full prime-power shift estimates gives a normalized
+  residual `O(lambda^-2 log lambda)` at Fourier order `N=24`; the Rayleigh
+  value is `O(lambda^-6)`. Compact resolvent locates some eigenvalue nearby,
+  not necessarily the bottom. Next independently audit the weak-form
+  representation and seek a lower spectral bound/gap that could identify the
+  eigenvalue. Imported source hypotheses remain; no spectral correspondence
+  follows. Full derivation:
+  `research/operators/B3-33-smoothed-prolate-operator-residual.md`.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

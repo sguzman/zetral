@@ -1105,6 +1105,28 @@ tail-transfer mechanism, not a novelty claim. Full construction, constants,
 domain audit, and limits:
 `research/operators/B3-32-smoothed-prolate-tail-energy.md`.
 
+### PWPB-03.37 — Smoothed trial operator residual
+
+The exact radical split now gives a weak window-operator identity. The lower
+tail's zero-extended `H^s` bound controls the logarithmic archimedean
+multiplier; direct exponential integrals control the rank-two pole term by
+`O(D_lambda lambda)`; paired prime-power translations sum to
+`O(D_lambda lambda log(lambda+2))`. For the B3-32 smoothing and Fourier order
+`N=24`, `D_lambda=O(lambda^-3)`, yielding normalized residual
+`O(lambda^-2 log(lambda+2))` and Rayleigh value `O(lambda^-6)`. Domain
+membership is checked against B3-27's explicit multiplier and bounded
+fixed-window perturbations. Compact resolvent puts some spectrum this close
+to the Rayleigh value, but there is no identification with the bottom, no
+gap, no positivity, and no spectral correspondence. Imported inputs are
+ACG's radical/prolate estimates and CCM's operator formula; component bounds
+are derived in Zetral. See
+`research/operators/B3-33-smoothed-prolate-operator-residual.md`.
+
+Next: independently audit the weighted shift tail and weak-form-to-operator
+step; then test whether any source-supported lower spectral bound or gap
+estimate can identify the nearby eigenvalue. Do not infer ground-state
+convergence from residual decay alone.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

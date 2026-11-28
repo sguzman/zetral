@@ -243,6 +243,18 @@ residual decay, or a gap. It supplies a source-class-checked tail-transfer
 mechanism. Details:
 `research/operators/B3-32-smoothed-prolate-tail-energy.md`.
 
+PWPB-03.37 turns the B3-32 exact radical split into an operator residual
+estimate. With smoothing `epsilon=lambda^(-3/4)` and Fourier seminorm order
+`N=24`, the archimedean, pole, and full prime-power shift components give
+`||(A_lambda-m_lambda)v_lambda||/||v_lambda|| = O(lambda^-2 log lambda)`;
+the Rayleigh value is `O(lambda^-6)`. By self-adjointness and compact
+resolvent, some eigenvalue lies within that residual scale of the Rayleigh
+value. This is not identified as the lowest eigenvalue, and gives no gap,
+ground-state overlap, or zeta-zero correspondence. It is a new bridge
+estimate conditional on the imported ACG/CCM source identities, not an
+operator construction. Derivation and scope:
+`research/operators/B3-33-smoothed-prolate-operator-residual.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
