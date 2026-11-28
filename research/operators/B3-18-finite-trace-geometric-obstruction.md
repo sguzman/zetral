@@ -58,15 +58,28 @@ trace moments for the unitary powers `F^n`.
 - No novelty claim is made; the result is the direct finite-trace test
   applied to Suzuki's published construction and the classical zero count.
 
-## Follow-up design criteria
+## Prior-art reconciliation: the global model already exists
 
-Any geometric number-field analogue must specify (i) an arithmetic-defined
-operator or correspondence replacing Frobenius, (ii) a semifinite or
-regularized positive pairing, (iii) its domain on which the Weil form is
-finite, and (iv) a trace identity recovering the prime-power and
-archimedean terms without inserting the zeros. The next bounded question is
-whether the explicit formula defines a positive trace weight on a natural
-prime-generated operator ideal under the externally verified RH theorem.
+Suzuki, *On the Hilbert space derived from the Weil distribution*,
+Canadian Journal of Mathematics (published online 2025-11-03), defines the
+Weil form on compactly supported smooth functions, proves it positive under
+RH, and constructs its global completion `H_W`. Under RH, Theorem 1.1
+identifies it with a de Branges/model space, and §6 transports the
+self-adjoint multiplication extension to `H_W`; its eigenvalues are exactly
+the distinct ordinates. The source explicitly states that each operator
+eigenspace is one-dimensional, so analytic zero multiplicity is not
+geometric multiplicity. The RH premise can be composed at theorem level
+with the separately kernel-checked Lean result, but Zetral has not
+independently audited Suzuki's full proof.
 
-Primary sources: [Suzuki, arXiv:2610.41115v1](https://arxiv.org/html/2610.41115v1);
+Thus the finite-trace test does not block a prime-side Hilbert–Pólya space:
+the existing completion permits infinite total spectral mass. It leaves the
+same key gap as the canonical-system route: a noncircular,
+multiplicity-sensitive operator correspondence. The direct derivative-kernel
+attempt in PWPB-03.19 collapses to rank one. Next seek independent arithmetic
+feature families or a rigorously delimited obstruction to that repair; do
+not repeat the already-published scalar global construction.
+
+Primary sources: [Suzuki, arXiv:2611.33001v1](https://arxiv.org/html/2611.33001v1);
+[Suzuki, *On the Hilbert space derived from the Weil distribution*](https://www.cambridge.org/core/journals/canadian-journal-of-mathematics/article/on-the-hilbert-space-derived-from-the-weil-distribution/FD33EBD117A6B448053450DD8D62ADB6);
 [Riemann–von Mangoldt formula in Conrey, J. reine angew. Math. 399 (1989)](https://aimath.org/~kaur/publications/24.pdf).

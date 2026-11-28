@@ -121,10 +121,13 @@ analytic theorems and from any RH implication.
   extract the function-field operator and geometric-pairing ingredients that
   do not require periodicity; test them against the number-field Weil form.
   PWPB-03.21 ruled out the literal finite-trace Rosati analogue because the
-  zeta zero measure has infinite mass. Next ask whether the prime-side Weil
-  distribution induces a positive semifinite weight on a natural operator
-  ideal; define the domain and test the trace identity on compactly
-  supported functions before attempting an operator construction.
+  zeta zero measure has infinite mass. PWPB-03.22 reconciled this with the
+  known Suzuki 2025 global Weil Hilbert space and self-adjoint operator under
+  RH, whose eigenspaces are one-dimensional. Prioritize independently
+  checking whether an arithmetic-defined feature family can give a
+  multiplicity-sensitive correspondence, or prove a scoped obstruction;
+  include the known infinite-mass scalar completion as prior art. Do not
+  pursue a semifinite trace absent a concrete trace identity/domain proposal.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

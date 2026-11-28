@@ -104,11 +104,15 @@ classes. This blocks only that direct endpoint transplant. Full comparison:
 
 PWPB-03.21 showed that a literal finite-trace Frobenius/Rosati model cannot
 represent the zeta zero counting measure: setting the test polynomial to
-one forces `tau(1)=sum_gamma m_gamma=infinity`. This leaves open semifinite,
-regularized, and test-domain pairings; the rapidly decaying Weil test sums
-can remain finite. The next design target is a prime-defined positive
-semifinite weight with an explicit domain and trace identity. Details:
-`research/operators/B3-18-finite-trace-geometric-obstruction.md`.
+one forces `tau(1)=sum_gamma m_gamma=infinity`. PWPB-03.22 reconciled this
+with prior art: Suzuki's 2025 global Weil completion already yields, under
+RH, a self-adjoint operator with the distinct zero ordinates as eigenvalues
+and one-dimensional eigenspaces. Thus finite trace is not needed for the
+known scalar model; unresolved issues are noncircular arithmetic
+construction and multiplicity-sensitive correspondence. This is a
+source-level synthesis, not an independent audit or new operator. Details:
+`research/operators/B3-18-finite-trace-geometric-obstruction.md` and
+`research/CAMPAIGN-97.md`.
 
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the

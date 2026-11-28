@@ -881,6 +881,20 @@ architecture requirement for any number-field geometric lift, not a global
 no-go. Full derivation and follow-up criteria:
 `research/operators/B3-18-finite-trace-geometric-obstruction.md`.
 
+### PWPB-03.22 — Reconcile finite trace with the global Weil model
+
+Prior-art check against Suzuki's 2025 paper shows that the prime-side global
+Weil completion and a self-adjoint operator with distinct zero ordinates as
+simple eigenvalues already exist under RH. Therefore PWPB-03.21 obstructs
+only representing the infinite zero-counting measure by a finite trace; it
+does not obstruct this infinite-mass Hilbert completion. The source explicitly
+does not encode analytic multiplicities as eigenspace dimensions. Zetral has
+not independently audited the full source proof. This is a corrected
+literature synthesis, not a new operator construction. Follow up on a
+noncircular arithmetic construction and a multiplicity-sensitive
+correspondence; do not repeat the known scalar model. Recorded in
+`research/operators/B3-18-finite-trace-geometric-obstruction.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

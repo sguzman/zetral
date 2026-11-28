@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.22 prior-art reconciliation
+
+Reconciled the finite-trace obstruction with Suzuki's known 2025 global Weil
+Hilbert space and self-adjoint operator under RH. The remaining gap is a
+noncircular arithmetic construction with multiplicity-sensitive spectral
+correspondence; the source model has simple eigenspaces. This is a literature
+synthesis, not a new construction or independent audit. See
+`research/operators/B3-18-finite-trace-geometric-obstruction.md`.
+
 ## 2026-11-27 — PWPB-03.21 finite-trace geometric obstruction
 
 Showed that the direct finite-trace Frobenius/Rosati construction cannot
