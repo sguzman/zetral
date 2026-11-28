@@ -755,6 +755,9 @@ identity are directly derived; regular-endpoint boundary-triple theory and
 the source's analytic Weyl theorem are imported, not formally composed or
 independently audited. No novelty claim. Full derivation and qualifications:
 `research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.12).
+An exact `H=I` sign check independently confirms the convention:
+`tan(bz)->i` in `C_+`, matching `-y2(0)/y1(0)=i` for the decaying defect
+solution. This checks signs only, not zeta-specific claims.
 
 ### Falsification check
 

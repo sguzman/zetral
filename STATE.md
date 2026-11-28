@@ -40,7 +40,8 @@ then uses the regular full endpoint at `0`, boundary maps
 to identify `y1(0)=0` as the extension whose boundary-triple Weyl function
 is `Q_xi`. This matches `mu_xi` in boundary-triple normalization. Standard
 boundary-triple theory and Suzuki's analytic theorem are imported; the source
-chain remains unaudited and multiplicities remain spectral weights, not
+chain remains unaudited. An independent `H=I` check confirms the boundary
+sign (`tan(bz)->i` and `-y2/y1=i`). Multiplicities remain spectral weights, not
 eigenspace dimensions. The bounded audit is recorded in
 `research/operators/B3-13-prime-defined-canonical-system.md` and
 `research/CAMPAIGN-97.md`.

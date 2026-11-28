@@ -351,6 +351,16 @@ measure statement is in the boundary-triple normalization; it establishes
 the zero ordinates as spectral support, with weights `m_gamma`, not
 eigenspace multiplicities.
 
+**Independent sign sanity check.** For the constant model `H=I`, the source
+normalization gives `U(b)=exp(-bzJ)`, so `U_12/U_22=tan(bz)` and
+`tan(bz)->i` as `b->infinity` for each `z` in `C_+`. For the same operator
+`T=-Jd/dx`, the `L2` defect solution is proportional to
+`e^(izx)(1,-i)`, and the proposed boundary maps give
+`Gamma_1/Gamma_0=-y_2(0)/y_1(0)=i`. The two independent calculations agree.
+If the sign in `Gamma_1` were reversed, the resulting value would be `-i`,
+which is not Nevanlinna on `C_+`; this catches the most immediate sign
+convention error. This is an exactly solvable model check, not zeta evidence.
+
 This also clarifies the tail distinction: for a fixed `a0>0`, Proposition
 7.2's quotient is the Weyl function of the restricted tail and is generally
 `Omega_a0`, not the global `Q_xi`; the global function is recovered after

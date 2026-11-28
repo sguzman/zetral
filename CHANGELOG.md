@@ -32,6 +32,11 @@ source theorem are imported and not independently audited. Scalar masses
 remain weights, not eigenspace multiplicities. Details:
 `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+An exact `H=I` check independently confirms the boundary sign:
+`tan(bz)->i` in `C_+`, matching the decaying defect-solution ratio
+`-y2(0)/y1(0)=i`; the opposite sign would fail the Nevanlinna condition.
+This is a convention check only, not zeta-specific evidence.
+
 ## 2026-11-27 — HP-02.3–.4 fixed-low pencil bounds
 
 For `L_N=N^2+U` with one fixed uniform offset, period counting and

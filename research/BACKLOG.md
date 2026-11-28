@@ -79,7 +79,8 @@ analytic theorems and from any RH implication.
   constructs the full-half-line boundary triple with line `y1(0)=0` and
   matches its Weyl function to `Q_xi` by the transfer quotient. This uses
   standard operator theory and Suzuki's source theorem, not an independent
-  proof audit. Next independently audit endpoint/Weyl hypotheses and
+  proof audit; an exact `H=I` check confirms the sign and ratio convention.
+  Next independently audit endpoint/Weyl hypotheses and
   investigate multiplicity-sensitive channels compatible with the form
   chain, or a precise obstruction for a natural class. Full record:
   `research/operators/B3-13-prime-defined-canonical-system.md`.
