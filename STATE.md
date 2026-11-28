@@ -440,6 +440,17 @@ profiles. Next derive a uniform Mellin-band estimate for these profiles and
 test stability under the finite-prime sum. No H2′ estimate or RH conclusion.
 Details: `research/operators/B3-51-single-prime-shift-prolate-scale.md`.
 
+Isolated-block localization transfer (2026-11-28): B3-52 strengthens the
+scale identity to an exact equality of Mellin-localized negative-pair traces
+for each isolated shift and the archimedean block at `T=t p^(m/2)`. The left
+and right singular vectors, and hence the normalized pair vector, all
+transform by the same Mellin multiplier unitary, which commutes with the
+Mellin-band cutoff. ACG §8.3 Remark 8.10 explicitly supplies the fixed-scale
+archimedean tail statement; it is imported, not independently reproved.
+Uniformity as `T` grows with `m`, summability over prime powers, and mixing
+under operator addition remain open. Details:
+`research/operators/B3-52-exact-single-shift-localization-transfer.md`.
+
 PWPB-03.48 first lemma: applying H2′ to the real tests
 `f(u)cos(T log u)` and `f(u)sin(T log u)` yields an exact necessary
 symmetric moving-average inequality for the semilocal tail Mellin density.

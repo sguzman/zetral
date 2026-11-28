@@ -211,6 +211,13 @@ control this weighted trace by itself.
   `T=t p^(m/2)`, with coefficient `~p^(-m/2)` and about `t^2 p^m` Slepian
   modes. Ordinary Fourier leakage of prolate profiles is not the Mellin
   localization in (66), and summing blocks may mix singular vectors.
+- **Exact localized-trace transfer:** B3-52 proves that for any individual
+  shift `tau`, the entire Mellin-localized negative-pair trace equals the
+  archimedean trace at `T=t exp(tau/2)`; its proof transports the left and
+  right singular vectors with the same Mellin-multiplier unitary. ACG
+  Remark 8.10 supplies the fixed-scale archimedean tail, but its dependence
+  on `T` is not quantified here. The isolated identity does not transfer
+  through addition of shifts.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
   frequency localization of the high-index near-self-dual modes, but local
   trace-class and global operator-norm estimates alone are insufficient.
@@ -220,13 +227,14 @@ control this weighted trace by itself.
 - **Information gain:** Either the quantitative analytic input for ACG's
   positive-complement theorem, or a precise obstruction to deriving it from
   currently known semilocal Hankel bounds.
-- **Design / falsification:** Derive a uniform Mellin-band estimate for the
-  radialized prolate profiles at `T=t p^(m/2)`; test it first in the regimes
-  `n/T^2` bounded away from zero and near the Slepian transition. Then
-  determine whether the total-shift expansion in B3-50 preserves the bound
-  for a finite prime product despite singular-vector mixing, with explicit
-  growth in `S`. Split bounded and dyadic-high Mellin frequencies; compare
-  exponents
+- **Design / falsification:** First extract a scale-explicit bound from
+  ACG's archimedean Mellin-tail argument at `T=t p^(m/2)`, testing both
+  `n/T^2` bounded away from zero and the Slepian transition. Then determine
+  whether the weighted bounds are summable over prime-power shifts. Finally
+  establish stability of the localized Schatten/trace quantity under
+  addition of blocks; do not infer it from operator-norm approximation or
+  singular-value counts alone. Split bounded and dyadic-high Mellin
+  frequencies; compare exponents
   with the Gevrey/Fourier tail. Test each proposed inference against the
   non-Hilbert–Schmidt countermodel B3-23 and slow-leakage model B3-48. Do not
   assert the transition/pole Schur block sign, which remains separate.

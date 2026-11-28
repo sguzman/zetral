@@ -1,5 +1,13 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.53 isolated-shift localization transfer
+
+Derived an exact equality between the Mellin-localized negative-pair trace
+of a single prime-shift block and that of the archimedean prolate block at
+the corresponding moving scale. Corrected B3-51 to record that ACG already
+states the fixed-scale archimedean Mellin-tail estimate. Uniform moving-scale
+constants and stability under summing shifts remain open; no RH conclusion.
+
 ## 2026-11-28 — PWPB-03.52 single-prime scale law
 
 Added B3-51, an exact unitary-scaling identity for each isolated prime-shift

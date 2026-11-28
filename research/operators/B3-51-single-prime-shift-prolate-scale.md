@@ -85,6 +85,14 @@ pinpoints the gap between the exact scale law and the source's expected
 frequency-localization heuristic without conflating ordinary Fourier,
 Mellin, and arithmetic-map transforms.
 
+Clarification from a direct rereading of ACG §8.3: Remark 8.10 does explicitly
+state the archimedean Mellin-tail estimate (66), with a super-exponential
+tail in the singular-vector index. B3-51's distinction above is only that
+ordinary Fourier leakage by itself is not that Mellin estimate. B3-52 proves
+an exact transfer of the archimedean localized pair trace to each isolated
+prime shift at scale `T_m`; the constants' dependence on `T_m` and stability
+under summing shifts are still unproved.
+
 ## Verification
 
 The scale identity follows by direct conjugation of the two support

@@ -1449,3 +1449,17 @@ question is to prove or falsify a uniform Mellin-band bound across the moving
 scale and then quantify stability under finite-prime summation. Details and
 transform conventions are in
 `research/operators/B3-51-single-prime-shift-prolate-scale.md`.
+
+## XCVII PWPB-03.53 — Exact isolated-shift localization transfer (2026-11-28)
+
+For one geometric shift, the Hankel block factors as
+`Gamma_(t,m)=L Gamma_infinity(T) R` with `T=t p^(m/2)` and both `L,R`
+unitary Mellin multipliers. The left and right singular vectors and the
+companion `U* g` vector transform so that the normalized negative-pair vector
+is carried by the same Mellin-multiplier unitary. It commutes with every
+Mellin-band cutoff, giving exact equality of the localized tail traces for
+all index cutoffs. This transfers ACG's explicitly stated fixed-scale
+archimedean Mellin-tail result to each isolated block. The source tail is
+imported; its dependence on the moving scale is not independently derived.
+Summability over shifts and stability under operator addition remain open.
+Full calculation: `research/operators/B3-52-exact-single-shift-localization-transfer.md`.
