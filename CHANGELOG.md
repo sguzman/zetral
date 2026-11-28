@@ -1,5 +1,13 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.20 function-field endpoint comparison
+
+Audited a recent function-field spectral construction and proved that its
+finite periodic-class endpoint cannot transfer directly to zeta: the
+distinct zeta ordinates grow as `Omega(T log T)`, versus `O(T)` for finitely
+many periodic classes. Other number-field geometric mechanisms remain open.
+Details: `research/operators/B3-17-function-field-endpoint-transfer.md`.
+
 ## 2026-11-27 — PWPB-03.19 normalized jet-kernel rank collapse
 
 Derived that fixed-order derivative Gram matrices of Suzuki's normalized

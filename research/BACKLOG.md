@@ -116,6 +116,10 @@ analytic theorems and from any RH implication.
   most one. Next search for independent prime-defined feature families and
   audit positivity/noncircularity, or pivot to an explicit quantitative
   cutoff-Weyl rate with stated Hamiltonian bounds.
+  PWPB-03.20 ruled out direct transfer of the function-field finite endpoint
+  through a finite periodic-class encoding, using zero-counting growth. Next
+  extract the function-field operator and geometric-pairing ingredients that
+  do not require periodicity; test them against the number-field Weil form.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

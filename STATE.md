@@ -94,6 +94,14 @@ the direct normalized jet-kernel construction as a higher-multiplicity
 fiber lift, but not other normalizations or arithmetic feature families.
 Details: `research/operators/B3-16-jet-kernel-rank-collapse.md`.
 
+PWPB-03.20 checked a recent function-field spectral construction. Its finite
+endpoint `a_*=d log(q)/2` uses finitely many periodic zero classes. For any
+fixed period, zeta ordinates cannot form finitely many classes: Conrey's
+unconditional positive proportion of simple zeros and Riemann–von Mangoldt
+give `Omega(T log T)` distinct ordinates versus `O(T)` for finitely many
+classes. This blocks only that direct endpoint transplant. Full comparison:
+`research/operators/B3-17-function-field-endpoint-transfer.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

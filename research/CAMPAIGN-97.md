@@ -854,6 +854,20 @@ Finite-window positivity is preserved; the obstruction is only in the
 limiting rank. Other rescalings and independent arithmetic feature families
 remain open. Full derivation: `research/operators/B3-16-jet-kernel-rank-collapse.md`.
 
+### PWPB-03.20 — Function-field finite-endpoint transfer obstruction
+
+Fresh literature review found Suzuki's October 2026 function-field spectral
+theory: for finitely many zero classes modulo `2 pi/log q`, it obtains an
+exact endpoint at `a_*=d log(q)/2`, with simple operator eigenvalues and
+analytic multiplicities in the sampling norm. A direct transfer to zeta
+cannot have finitely many periodic classes: a finite union modulo any fixed
+period has `O(T)` points, while Riemann–von Mangoldt plus Conrey's positive
+proportion of simple zeros gives `Omega(T log T)` distinct ordinates. Thus
+this specific endpoint formula becomes infinite for zeta. This is not a
+no-go for another finite-endpoint mechanism or for a number-field geometric
+pairing. Source and derivation:
+`research/operators/B3-17-function-field-endpoint-transfer.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a
