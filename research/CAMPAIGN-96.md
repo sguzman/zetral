@@ -487,6 +487,69 @@ claimed; the specific added link is density of the value-evaluation map from
 the compact source tests into the weighted atomic Hilbert space. A targeted
 prior-art review, formal proof and external independent audit remain undone.
 
+## MHS-03.4 — Dilation obstruction for multiplicity-sensitive jet fibers
+
+The external formal RH theorem checked in November 2026 discharges the RH
+hypothesis in MHS-03.2 at the level of ordinary mathematics, subject to
+trust in the independently audited Lean kernels and Mathlib semantics. The
+MHS-03.2 construction itself remains a manual derivation, not a Lean theorem;
+its Hilbert norm is defined using the zero ordinates. It therefore gives a
+zero-dependent self-adjoint model with the **distinct** ordinates as spectrum,
+not an independent prime-side construction, and it still fails to encode
+analytic multiplicity when a multiple zero occurs. Verification references:
+Rubinstein's independent checks of the [original](https://mrubinst.github.io/grh-lean-verification/)
+and [compact](https://mrubinst.github.io/grh-lean-compact-check/)
+formalizations. Zetral has not rerun these developments or formally composed
+their RH theorem with MHS-03.2.
+
+Test the simplest multiplicity repair. Let `s_gamma=1/2+i gamma` be a zero
+of multiplicity `m`, and use normalized jets
+
+    j_r(f) = (1/r!) * d^r/ds^r fhat(s_gamma),  0 <= r < m.
+
+Because `zeta(s)` vanishes to order `m`, these jets annihilate `zeta(s) ghat(s)`
+for every test `g`; hence they descend through Meyer's quotient by the zeta
+image. But the normalized dilation
+`rho_t f = exp(-t/2) lambda_(exp(t)) f` satisfies
+`(rho_t f)hat(s)=exp(t(s-1/2)) fhat(s)`. The Leibniz rule therefore gives
+
+    j_r(rho_t f) = exp(i gamma t) * sum_(k=0)^r
+                         t^(r-k)/(r-k)! * j_k(f).
+
+On the `m`-jet fiber this is `exp(i gamma t) exp(tN)`, where `N` is the
+nonzero nilpotent shift when `m>1`. No positive-definite inner product on
+that fiber makes this representation unitary: for a vector with `N^q v != 0`
+and `N^(q+1)v=0`, `||exp(tN)v||^2` is a nonconstant polynomial with positive
+leading coefficient, hence unbounded as `|t|` grows. Equivalently, the
+infinitesimal generator would have a nontrivial Jordan block, impossible for
+a skew-adjoint generator of a unitary group. Reweighting the jet coordinates
+cannot remove this obstruction.
+
+This falsifies only the direct plan to make the full derivative-jet map an
+equivariant dense map into positive Hilbert fibers while retaining Meyer's
+normalized dilation as a unitary group. It is conditional on the existence of
+a multiple zero; RH alone does not establish one. If all zeros are simple,
+the scalar MHS-03.2 fibers already have the correct eigenspace dimensions.
+Alternative Hilbert spaces, non-jet fibers, or a changed group action remain
+open. Meyer explicitly treats the Fréchet generator as having algebraic
+multiplicity equal to zero order, so this obstruction explains why that
+non-semisimple representation cannot in general be carried unchanged into a
+self-adjoint model. This is a hand derivation from the source action and
+finite-dimensional operator theory; it is not a novelty claim or a formal
+proof. Prior-art anchor: Meyer, arXiv:math/0412277v3, introduction and
+§§2–4.
+
+**Next question.** Can multiplicity be represented by a different fiber
+action that is unitary and still intertwines a prime-side or theta-lift
+operator, without importing zero locations or derivative jets? A candidate
+must supply an independent dense map, the correct fiber dimensions, and an
+explicit self-adjoint generator; merely duplicating scalar coordinates does
+not help because the old evaluation map lands in a one-dimensional diagonal
+subspace of each enlarged fiber (B3-01). The next active design should
+therefore search for a semisimple unitary representation from the arithmetic
+data themselves and state explicitly how it differs from Meyer's generalized
+eigenspace representation.
+
 ## MHS-03.3 — Reciprocal-xi positive kernel gives continuous spectrum
 
 ### Source result and precise question

@@ -73,9 +73,13 @@ weighted Mellin-evaluation seminorm on distinct zero ordinates has dense
 `M_gamma` with exactly those distinct ordinates as spectrum. This does not
 match unknown analytic multiplicities, prove RH, or provide an independent
 prime-side measure; Meyer Corollary 4.2 and repository B3-09/B5-07 are close
-prior art. Next investigate whether the positive atomic measure can be
-derived independently from prime-side data, taking care not to repackage the
-classical Lagarias/Weil RH-equivalent positivity criterion. MHS-03.3 applies
+prior art. The independently kernel-checked RH formalization now discharges
+MHS-03.2's RH premise at the theorem level, but the model remains
+zero-dependent and has one-dimensional fibers. New MHS-03.4 shows that,
+conditional on a multiple zero, derivative-jet fibers cannot be made unitary
+under Meyer's unchanged normalized dilation: their action is a nontrivial
+Jordan block. This rejects only that natural repair; other fibers/actions
+remain open. MHS-03.3 applies
 Sra's 2026 positive reciprocal-xi density to a cyclic GNS representation;
 the generator has purely absolutely continuous full-real spectrum and no
 eigenvalues, so this positive kernel is not a direct discrete zero operator.

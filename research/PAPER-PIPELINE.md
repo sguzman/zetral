@@ -237,3 +237,10 @@ art review remain prerequisites.
   admissible twist. This is useful negative evidence against interpreting
   that finite determinant directly as Xi, not a result about all limits or
   a paper claim.
+- **MHS-03.4 — Jet-fiber unitarity obstruction (conditional; not a paper
+  claim).** At a multiple zero, derivative-evaluation fibers transform by a
+  nontrivial Jordan block under normalized dilation and cannot carry a
+  positive invariant Hilbert norm. This only rejects the direct
+  multiplicity-sensitive completion of Meyer's quotient with its existing
+  dilation action; prior-art review and independent verification remain
+  necessary.

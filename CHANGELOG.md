@@ -1081,3 +1081,14 @@ parameter or Xi continuation in the construction. This rejects the direct
 claim that this determinant is a zeta-zero spectral determinant. It does not
 rule out a renormalized limit or a different operator. Next seek a common-space
 trace/transfer construction. See `research/CAMPAIGN-97.md`.
+
+## MHS-03.4 — Multiplicity-jet unitarity obstruction (2026-11-27)
+
+The checked external Lean RH theorem discharges the RH premise of Zetral's
+zero-defined MHS-03.2 scalar model, while leaving it zero-dependent and
+distinct-ordinate only. Derived that multiplicity-sensitive Mellin derivative
+jets transform under normalized dilation by `e^(i gamma t) exp(tN)` with a
+nonzero nilpotent Jordan block at a multiple zero. No positive Hilbert norm
+can make that action unitary, so the direct jet-fiber repair is ruled out if
+multiple zeros exist. This is a conditional, scoped obstruction, not a no-go
+for other constructions or a novelty claim. See `research/CAMPAIGN-96.md`.
