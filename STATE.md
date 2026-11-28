@@ -273,6 +273,14 @@ not geometric multiplicity matching or an independent RH proof. It
 reformulates Suzuki's stated root/weight limits; no novelty claim is made.
 Details: `research/operators/B3-35-vague-spectral-measure-limit.md`.
 
+PWPB-03.40 gives an exact two-atom Herglotz countermodel showing that
+qualitative local-uniform Weyl convergence, positivity, and simple finite
+atoms do not by themselves yield any universal power-rate for cluster
+convergence. The pole splitting may tend to zero arbitrarily slowly. This
+does not constrain Suzuki's arithmetic family if its Hamiltonian supplies
+additional estimates. Details:
+`research/operators/B3-36-no-universal-rate-for-qualitative-weyl-limits.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

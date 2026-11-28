@@ -268,6 +268,14 @@ analytic theorems and from any RH implication.
   bound supplies it; otherwise pivot to an arithmetic multiplicity-fiber
   construction with a non-tautological local form.
   Details: `research/operators/B3-35-vague-spectral-measure-limit.md`.
+- **PWPB-03.40 rate obstruction:** An explicit two-simple-atom Herglotz
+  sequence converges to one multiplicity-weighted atom at an arbitrarily
+  slow rate. Therefore qualitative Weyl convergence alone cannot give a
+  universal quantitative cluster rate. This is not a counterexample to the
+  arithmetic canonical system. Next inspect Suzuki's kernel/Hamiltonian
+  estimates for additional quantitative tail control; otherwise pivot to a
+  prime-defined multiplicity-sensitive operator lift. Details:
+  `research/operators/B3-36-no-universal-rate-for-qualitative-weyl-limits.md`.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

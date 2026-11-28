@@ -1171,6 +1171,23 @@ the rate obstruction and return to a multiplicity-sensitive arithmetic
 operator lift; do not identify the prolate-window residual with these
 canonical-system local eigenvalues without a proven intertwiner.
 
+### PWPB-03.40 — No rate from qualitative Weyl convergence alone
+
+The two-atom Herglotz model
+`mu_n=(m/2)(delta_(gamma+delta_n)+delta_(gamma-delta_n))` has simple finite
+atoms and locally uniform Weyl convergence to a mass-`m` atom, but the pole
+splitting `delta_n` can tend to zero arbitrarily slowly. The exact transform
+error is `m delta_n^2/(a(a^2-delta_n^2))`, `a=gamma-z`. Thus Montel/locally
+uniform convergence alone gives no universal power-law rate for local
+spectral clusters, even though the cluster mass is exactly `m`. This is an
+abstract obstruction only; arithmetic Hamiltonian estimates could improve
+it. Details: `research/operators/B3-36-no-universal-rate-for-qualitative-weyl-limits.md`.
+
+Next: inspect Suzuki's quantitative kernel/Hamiltonian estimates for a
+specific rate; if none control the tail Weyl error, record the limitation and
+select the arithmetic multiplicity-lift question as the next distinct
+operator investigation.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

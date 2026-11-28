@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.40 qualitative Weyl-rate obstruction
+
+Constructed a two-atom positive Herglotz model whose two simple poles
+converge locally uniformly to one mass-`m` pole at any prescribed slow
+splitting rate. This shows a universal quantitative cluster rate cannot
+follow from qualitative Weyl convergence alone; no claim is made about
+Suzuki's arithmetic system. Exact countermodel:
+`research/operators/B3-36-no-universal-rate-for-qualitative-weyl-limits.md`.
+
 ## 2026-11-27 — PWPB-03.39 local spectral mass and zero multiplicity
 
 Derived weak convergence of the weighted finite canonical-system spectral
