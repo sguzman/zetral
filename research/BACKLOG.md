@@ -224,6 +224,14 @@ control this weighted trace by itself.
   `T^2<=n0/(4 pi e)` by `O(t log_p(n0)2^(-n0))`. The remaining shifts are
   those whose Slepian bulk lies beyond the index cutoff, and separate bounds
   still do not control the operator sum.
+- **One-prime scale summability:** B3-54 combines ACG Lemma 8.9's
+  scale-uniform archimedean localized trace bound `C R^A` with the geometric
+  prime-shift coefficient. Splitting at `p^m=n0/(4 pi e t^2)` gives an
+  explicit `O(R^A t/sqrt(n0))` high-scale contribution plus the B3-53
+  exponentially small low-scale contribution. This sums all isolated shifts
+  of one prime, not the operator sum or a growing set of primes. Next derive
+  a trace/Schatten stability estimate for addition; separately determine
+  dependence on the finite prime set.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
   frequency localization of the high-index near-self-dual modes, but local
   trace-class and global operator-norm estimates alone are insufficient.

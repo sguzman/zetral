@@ -1477,3 +1477,21 @@ above `n0`, and separate block estimates do not control the operator sum.
 The Taylor bound is independently derived; its one-dimensional rectangle
 form also appears in Azimifard arXiv:2610.09406v1, Lemma 2.3. Full derivation:
 `research/operators/B3-53-scale-explicit-isolated-tail-bound.md`.
+## XCVII PWPB-03.55 — One-prime isolated-shift tails are summable (2026-11-28)
+
+B3-54 uses ACG Lemma 8.9/(65): the archimedean Mellin-localized negative
+tail at any scale `T` is bounded by `C R^A`, uniformly in index cutoff.
+Exact dilation conjugacy makes this bound independent of `T`; B3-52 transfers
+it to each isolated shift. For one fixed prime, split geometric shifts at
+`p^m=n0/(4 pi e t^2)`. B3-53 handles smaller scales with an exponentially
+small bound; the ACG estimate and coefficient `p^-m/2` sum the larger scales
+to `O(R^A t/sqrt(n0))`. The exceptional shift is exponentially small for
+large `n0`. Thus the sum of the individual localized traces for all shifts
+in one prime factor tends to zero with `n0`.
+
+This closes the isolated one-prime summability gap only. It does not estimate
+the negative trace of the sum of shifted blocks, because their singular
+subspaces can mix. The dependence on the number of primes is not summable
+uniformly from this estimate. Next seek a localized Schatten/trace stability
+bound under block addition, and quantify finite-prime dependence. Derivation
+and caveats: `research/operators/B3-54-prime-shift-tail-summability.md`.

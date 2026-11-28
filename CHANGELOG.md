@@ -1589,3 +1589,14 @@ Proposition 7.2. The integral itself is not claimed to converge throughout
 the upper half-plane. Source-to-source audit only, not an independent proof
 of either analytic theorem. The explicit left boundary line remains open;
 see B3-13 and Campaign XCVII.
+
+## XCVII PWPB-03.55 — One-prime isolated-shift tails are summable (2026-11-28)
+
+Combined ACG Lemma 8.9's uniform-in-scale archimedean localized trace bound
+with the exact single-shift transfer and the Taylor tail estimate. For each
+fixed prime, the sum of the separately localized geometric-shift tails now
+decays as `O(R^A t/sqrt(n0))` plus an exponentially small term. This resolves
+the isolated-block large-scale summation gap. Mixing under operator addition
+and dependence on the growing prime set remain open; this is not H2′ or an
+RH result. Full derivation and assumptions:
+`research/operators/B3-54-prime-shift-tail-summability.md`.
