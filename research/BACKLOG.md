@@ -213,6 +213,14 @@ analytic theorems and from any RH implication.
   Exact residual numerics must use `2 theta'`. Next derive a candidate-specific
   residual bound and independent ground gap; neither follows from the
   decomposition. Reconciliation: `research/operators/B3-28-archimedean-normalization-reconciliation.md`.
+- **PWPB-03.33 near-radical correction:** A third prolate mode can correct
+  the candidate's point-value defect while preserving its zero integral; the
+  exact coefficient and correction-norm identity are in B3-29. The cited
+  radical theorem applies only to Schwartz inputs, and the corrected
+  zero-extended prolate vector is not Schwartz; its arithmetic lower-window
+  tail is also uncontrolled. Next test whether a smooth, moment-corrected
+  approximation has small Weil-form error, including the boundary and lower
+  tail. Do not infer residual control from the global radical identity alone.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

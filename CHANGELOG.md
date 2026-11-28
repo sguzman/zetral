@@ -1,5 +1,16 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.33 exact radical-moment correction
+
+Derived a third-prolate-mode correction of the zero-integral candidate that
+enforces both moment constraints from the source's global Weil-radical lemma,
+with an exact coefficient and norm formula. The small-cost implication
+requires a lower bound on the selected mode's value at zero. The source lemma
+does not directly apply because the zero-extended prolate vector is not
+Schwartz; the arithmetic image also has an uncontrolled lower-window tail.
+No Weil residual or ground-state estimate follows. Details:
+`research/operators/B3-29-radical-moment-correction.md`.
+
 ## 2026-11-27 — PWPB-03.32 archimedean normalization reconciled
 
 Independently converted CCM equation (3.19) with the unitary Fourier

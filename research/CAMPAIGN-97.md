@@ -1042,6 +1042,21 @@ while exact residual calculations must use `2 theta'`. No residual decay,
 gap or ground-state convergence follows. Full calculation and source limits:
 `research/operators/B3-28-archimedean-normalization-reconciliation.md`.
 
+### PWPB-03.33 — Exact two-moment correction and its domain gap
+
+Using the prolate Fourier eigenrelation, the two-mode trial's exact integral
+zero, and a third even prolate mode with separated Fourier eigenvalue, solved
+the two linear moment constraints explicitly. The correction has exact
+`L2` cost `sqrt(|c_4|^2+|c_j|^2)` and is small if the selected mode's value at
+zero is bounded below; the source gives the uncorrected point value
+`O(delta_4)`. This does not yet yield a radical vector: ACG's global radical
+inclusion is stated for Schwartz inputs, while zero-extended prolate modes
+are not globally smooth, and their arithmetic images are not exactly
+supported in the finite Weil window. Smoothing and lower-window-tail control
+remain open. No residual or ground-state estimate follows. Exact algebra and
+the domain limits:
+`research/operators/B3-29-radical-moment-correction.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

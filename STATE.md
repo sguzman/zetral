@@ -206,6 +206,16 @@ shifted form norms with the `log|t|` weight. Exact residual calculations use
 Full factor calculation and source limits:
 `research/operators/B3-28-archimedean-normalization-reconciliation.md`.
 
+PWPB-03.33 derives an exact third-mode correction that makes the two-mode
+prolate trial satisfy both zero-moment constraints defining the global Weil
+radical on Schwartz inputs. Its correction cost is explicit and scales with
+the trial's `O(delta_4)` point-value defect, provided the selected third
+prolate mode has controlled value at zero. This is not yet an applicable
+radical vector: zero-extended prolate functions are not Schwartz, and the
+arithmetic image has an uncontrolled lower tail outside the finite window.
+Details and exact coefficient formulas:
+`research/operators/B3-29-radical-moment-correction.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
