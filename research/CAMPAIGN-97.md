@@ -1522,3 +1522,19 @@ positivity already assumes H2′. Infinite-dimensional domains and trace-class
 extension are also open. Next check whether the source's form decomposition
 can independently supply coercivity and coupling bounds. Full proof and
 scope: `research/operators/B3-56-coercive-block-negative-trace-bound.md`.
+
+## XCVII PWPB-03.58 — Coarse full-form Schur cutoff without H2′ (2026-11-28)
+
+B3-57 applies the coercive-block trace argument to the full windowed Weil
+form. Restricting the logarithmic Sobolev form `Lambda` to the log-window
+gives a compact-resolvent operator; a band-projection argument bounds its
+spectral subspace below `r` by `(4 log(lambda)/pi)exp(2r)`. ACG Lemma 8.13
+implies coercivity of the complementary Weil-form block once
+`r=C0 lambda+delta`. The remaining low/high coupling is bounded because the
+Weil form differs from `Lambda` by an `O(lambda)` bounded operator. The
+infinite-dimensional Schur trace argument then reduces the total negative
+trace to a finite low-block negative trace plus a weighted HS coupling term.
+This does not assume H2′, but yields only an exponential-dimensional bound;
+the low-block sign and sharper coupling remain unresolved. It neither proves
+positivity nor supplies a polynomial conditioning regime. Derivation:
+`research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.

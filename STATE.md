@@ -1243,3 +1243,16 @@ the actual semilocal form's coercivity, coupling bound, and infinite-dimensional
 domains are unresolved. ACG §8.6's Schur reduction is already conditional on
 H2′, so a useful deployment must avoid circularly assuming it. Artifact:
 `research/operators/B3-56-coercive-block-negative-trace-bound.md`.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.58 (2026-11-28)
+
+B3-57 applies a Schur trace bound to the full windowed Weil form without H2′,
+using ACG Lemma 8.13 and the compact-resolvent logarithmic Sobolev operator
+on the log-window. The low spectral subspace below `r=C0 lambda+delta` has
+dimension at most `(4 log(lambda)/pi)exp(2r)` by a band-projection argument;
+the complementary Weil block is at least `delta`, and the off-diagonal is
+bounded since `QW_lambda-Lambda` is an `O(lambda)` bounded perturbation. This
+gives a valid finite low-block reduction plus an explicit HS coupling bound,
+but only at exponential dimension. The low-block sign is unresolved; no
+positivity or H2′ result follows. Full derivation:
+`research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.

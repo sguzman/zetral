@@ -71,10 +71,12 @@ lemma supplies a separate abstract sufficient criterion, not a new proof of
 that source result. See Andrews, Connes, La Gatta, arXiv:2611.13129v1,
 §8.6, especially Theorem 8.14: https://arxiv.org/abs/2611.13129.
 
-The finite-dimensional theorem is fully proved above. An infinite-dimensional
-version would require domain control, a coercive self-adjoint high block,
-trace-class `A_-` and `D^(-1/2)B`, and justification of spectral truncation;
-none is claimed. In particular this does not prove H2′, positivity, a
-Hilbert–Pólya correspondence, or RH. No novelty claim is made; the Schur
-complement mechanism is standard, and the recorded contribution is the
-explicit trace bound and its required hypotheses for this research route.
+The finite-dimensional theorem is fully proved above. Its infinite-dimensional
+use requires domain control, a coercive self-adjoint high block, trace-class
+`A_-` and `D^(-1/2)B`, and justification of the negative spectral expansion.
+B3-57 proves one such extension for the compact-resolvent windowed Weil form
+with finite low block and bounded coupling. In particular, B3-56 alone does
+not prove H2′, positivity, a Hilbert–Pólya correspondence, or RH. No novelty
+claim is made; the Schur-complement mechanism is standard, and the recorded
+contribution is the explicit trace bound and its required hypotheses for
+this research route.

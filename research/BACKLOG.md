@@ -248,6 +248,14 @@ control this weighted trace by itself.
   actual form; neither is established. Infinite-dimensional domain issues
   remain open. Next test whether ACG's semilocal decomposition supplies these
   hypotheses without assuming H2′.
+- **Full-form coarse Schur cutoff:** B3-57 instantiates the criterion for
+  the windowed Weil form using ACG Lemma 8.13 and the restricted logarithmic
+  Sobolev form. Its compact-resolvent spectral subspace below
+  `r=C0 lambda+delta` has dimension at most
+  `(4 log(lambda)/pi) exp(2r)`, yielding a valid but exponential-size Schur
+  reduction without H2′. The low-block negative trace is still unknown and
+  the coupling bound is coarse; this is not positivity. Next seek sharper
+  relative-form/cross-block estimates and compare with the prolate route.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
   frequency localization of the high-index near-self-dual modes, but local
   trace-class and global operator-norm estimates alone are insufficient.

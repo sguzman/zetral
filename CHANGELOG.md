@@ -1621,3 +1621,14 @@ cross-frequency Hilbert–Schmidt estimate. The criterion has not been verified
 for the semilocal Weil form; its infinite-dimensional extension and
 noncircularity remain open. Details:
 `research/operators/B3-56-coercive-block-negative-trace-bound.md`.
+
+## XCVII PWPB-03.58 — Coarse full-form Schur cutoff without H2′ (2026-11-28)
+
+Applied the coercive-block trace argument to the full windowed Weil form,
+using ACG's logarithmic Sobolev lower bound. The complementary block becomes
+positive above a threshold `C0 lambda+delta`; a direct band-projection
+argument bounds the low block dimension by `O(log(lambda) exp(2C0 lambda))`.
+The result is an analytic finite-dimensional reduction without H2′, but its
+dimension is exponential, the low-block sign is unknown, and no positivity
+follows. Details and source assumptions:
+`research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.
