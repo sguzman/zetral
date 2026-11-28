@@ -377,13 +377,29 @@ Gaussian heat-difference bound, including its coarse arithmetic `H_00-E`
 estimate. The estimate has no spectral-gap denominator, but depends on the
 source's finite displacement/product identities. It gives vanishing filtered
 energy only conditionally on the open bounded-mean and simple-even family
-hypotheses. Appendix A's moving limit and zero-retention argument remain
-unaudited. Details: `research/operators/B3-46-constant-mode-filtered-energy-audit.md`.
+hypotheses. The moving limit and zero-retention argument were audited
+separately in PWPB-03.51. Details:
+`research/operators/B3-46-constant-mode-filtered-energy-audit.md`.
 
-Next priority: independently audit Paper IV's arithmetic moving zero-retention
-argument (PWPB-03.51), tracking test classes, limits, normalization and the
-complex-zero pair isolation. The bounded-mean and selected-family existence
-premises remain distinct open problems.
+PWPB-03.51 is now complete as a focused manual audit of Suvlu Paper IV §7
+and Appendix A.2–A.7. The lattice mean forces quadratic Fourier resolution;
+the Gaussian residual passes to the whole-line current; the residual's
+exponential growth is controlled by a Gaussian bilateral-Laplace uniqueness
+argument; dense theta-derived tests force the limiting energy to zero; and
+successive tail primitives isolate each complex or real zero pair, including
+multiplicity, in the explicit formula. The Fourier sign and complex-parameter
+tail bounds were checked. No gap was found in these bridges under the paper's
+hypotheses. This proves only conditional value retention, not multiplicity
+retention. The same unbounded simple-even selected family and uniform
+complete-mean bound remain open. Full audit:
+`research/operators/B3-47-paper-iv-moving-zero-retention-audit.md`.
+
+Next: resume PWPB-03.48, seeking a quantitative index/frequency-localized
+bound for ACG's actual semilocal H2′ tail density, or a source-structured
+counterexample. B3-44's real-modulation inequality is necessary evidence but
+does not establish the required arithmetic decay. The finite-characteristic
+branch is preserved as conditional prior art; it does not supply the missing
+H2′ estimate or an operator correspondence.
 The ACG H2′ localization investigation (PWPB-03.48) remains open and
 resumable; its real-modulation necessary criterion is in B3-44.
 

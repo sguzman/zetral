@@ -236,8 +236,8 @@ displacement and characteristic product identities; it does not audit the
 Appendix A moving limit or establish the open mean/selection hypotheses.
 Details: `research/operators/B3-46-constant-mode-filtered-energy-audit.md`.
 
-**PWPB-03.51 — Audit the arithmetic moving zero-retention argument (active,
-prioritized):** Check whether Suvlu Paper IV's Appendix A genuinely carries
+**PWPB-03.51 — Audit the arithmetic moving zero-retention argument (complete):**
+Checked whether Suvlu Paper IV's Appendix A genuinely carries
 the finite filtered-current identity through an unbounded selected arithmetic
 family and forces every zero of `Xi` to be retained in every normalized
 characteristic cluster.
@@ -263,12 +263,20 @@ characteristic cluster.
   assume RH or import known zeros into construction.
 - **Dependencies:** Pinned 2026-09-24 Paper IV draft and its cited CCM
   characteristic theorem; finite derivation B3-46.
-- **Acceptance:** Proof audit with all quantifiers/domains and clear
-  conditional status, or a concrete missing estimate/counterexample. The
-  complete-mean/selected-family existence remains a distinct open premise.
+- **Acceptance:** Focused proof audit with all quantifiers/domains and clear
+  conditional status, or a concrete missing estimate/counterexample. Met by
+  B3-47: no gap found in the audited moving implication; the complete-mean
+  and selected-family existence remain distinct open premises.
 - **Verification:** Manual independent argument, source equation references,
   and exact statement of what the external Lean snapshot does not cover. No
   local large computation or external build is required unless later useful.
+
+**Next selected investigation: resume PWPB-03.48, quantitative localization
+for ACG H2′.** The real-modulation probe in B3-44 gives a necessary symmetric
+moving-average bound but no estimate for the actual arithmetic tail. Seek an
+index/frequency-localized bound directly from the semilocal Hankel symbol, or
+construct a source-structured counterexample. Do not infer H2′ from
+fixed-window convergence or operator-norm approximation alone.
 
 **PWPB-03.44 follow-up — global Weyl identification audit:** Suzuki's
 arithmetic canonical system has a complete scalar spectral representation

@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.51 moving zero-retention proof audit
+
+Inspected Paper IV §7 and Appendix A.2–A.7 directly. The focused manual audit
+found the cutoff, current-limit, dense-test and complex-zero isolation bridges
+consistent under the paper's hypotheses. The result is conditional on an
+unbounded simple-even selected family with uniformly bounded complete mean;
+that family and bound remain open. Details:
+`research/operators/B3-47-paper-iv-moving-zero-retention-audit.md`.
+
 ## 2026-11-28 — PWPB-03.50 finite filtered-energy audit
 
 Manually derived Suvlu Paper IV's finite constant-mode transfer, positive

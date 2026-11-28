@@ -1351,11 +1351,14 @@ finite-characteristic zero-retention route. B3-45 independently checks only
 the elementary consequence that bounded complete characteristic mean forces
 `N >= L^2/(128 pi^2 M)` for sufficiently large `L`; it does not verify the
 series' main moving theorem. The ACG H2′ route remains active in the backlog,
- but the finite constant-mode filtered-energy transfer is now audited as
- PWPB-03.50 (B3-46). It yields a cutoff-uniform Gaussian bound without a
- spectral-gap denominator, conditional on the source's finite identities and
- the open bounded-mean/simple-even family premises. Next is PWPB-03.51: audit
- Appendix A's arithmetic moving zero-retention argument. See
+but the finite constant-mode filtered-energy transfer is now audited as
+PWPB-03.50 (B3-46). It yields a cutoff-uniform Gaussian bound without a
+spectral-gap denominator, conditional on the source's finite identities and
+the open bounded-mean/simple-even family premises. PWPB-03.51 (B3-47) then
+checked the moving zero-retention proof in §7 and Appendix A.2–A.7; no gap
+was found in the audited bridges, conditional on those same open premises.
+Next resume PWPB-03.48's quantitative H2′ localization from the actual
+semilocal tail. See
 `literature/suvlu-2026-weil-operator-series.md`.
 
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
