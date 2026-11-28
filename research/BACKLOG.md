@@ -205,12 +205,14 @@ analytic theorems and from any RH implication.
   bounded. The residual is merely finite, with no uniform decay. Next compute
   or bound `||(A_lambda-m_lambda)k_lambda||` and an independent ground gap.
   Derivation: `research/operators/B3-26-prolate-candidate-operator-domain.md`.
-- **PWPB-03.31 residual formula:** The restricted Weil operator is the
-  compressed archimedean multiplier plus an explicit rank-two pole term and
-  finite paired shifts; see B3-27. Reconcile the factor-of-two convention
-  between CCM equation (3.19) and its Theorem 3.6 compactness paragraph before
-  residual numerics, then bound the residual and the ground gap. No estimate
-  follows from the decomposition itself.
+- **PWPB-03.31/32 residual normalization:** The restricted Weil operator is
+  the compressed archimedean multiplier plus an explicit rank-two pole term
+  and finite paired shifts; see B3-27. Direct Plancherel confirms that (3.19)
+  gives the exact multiplier `2 theta'`; Theorem 3.6's isolated `theta'` is an
+  internal factor omission, harmless for compactness after a fixed shift.
+  Exact residual numerics must use `2 theta'`. Next derive a candidate-specific
+  residual bound and independent ground gap; neither follows from the
+  decomposition. Reconciliation: `research/operators/B3-28-archimedean-normalization-reconciliation.md`.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

@@ -1021,12 +1021,26 @@ Rewrote the CCM form as a compressed Fourier multiplier, a rank-two pole
 operator, and finitely many paired translations by `±log n` with coefficient
 `Lambda(n)/sqrt(n)`. This gives a fixed-normalization expression for the
 prolate candidate residual. Direct conversion of CCM equation (3.19) to the
-unitary Fourier transform gives multiplier `2 theta'(t)`, while the
-compactness paragraph in Theorem 3.6 names `theta'(t)`. The factor does not
-alter logarithmic-domain or compactness claims, but it remains an unresolved
-normalization discrepancy for exact residual calculations. No cancellation,
-decay estimate, or spectral gap has been established. Derivation:
+unitary Fourier transform gives multiplier `2 theta'(t)`. The discrepancy
+with the `theta'(t)` wording in Theorem 3.6 is reconciled in PWPB-03.32 below:
+it is an internal factor-of-two inconsistency, while the compactness argument
+survives by equivalent shifted form norms. Exact residuals use `2 theta'`.
+No cancellation, decay estimate, or spectral gap has been established. Derivation:
 `research/operators/B3-27-exact-restricted-Weil-operator-decomposition.md`.
+
+### PWPB-03.32 — Archimedean multiplier normalization reconciled
+
+Direct Plancherel conversion of CCM equation (3.19) gives the exact
+unitary-Fourier multiplier `2 theta'(t)`. This agrees with the displayed
+asymptotic and the proof's comparison multiplier `log|t|`; the isolated
+`theta'(t)` in the Theorem 3.6 prose is an internal factor-of-two
+inconsistency, most likely an omitted factor, not a confirmed author erratum.
+Because `2 theta'-ell` is bounded for `ell(t)=1` on `|t|<=e` and
+`ell(t)=log|t|` otherwise, the compact-form norms remain equivalent after a
+fixed lower-bound shift. The compact-resolvent conclusion is unaffected,
+while exact residual calculations must use `2 theta'`. No residual decay,
+gap or ground-state convergence follows. Full calculation and source limits:
+`research/operators/B3-28-archimedean-normalization-reconciliation.md`.
 
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin

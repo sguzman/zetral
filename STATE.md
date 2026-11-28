@@ -195,13 +195,16 @@ obtained, so eigenvector convergence remains open. Details:
 
 PWPB-03.31 writes the fixed-window operator explicitly as the compressed
 archimedean Fourier multiplier, a rank-two pole term and paired translations
-by `±log n`; the exact candidate residual is thereby specified. A
-normalization issue remains: CCM equation (3.19) converts to the unitary
-multiplier `2 theta'(t)`, whereas its Theorem 3.6 compactness paragraph names
-`theta'(t)`. This factor leaves the logarithmic domain unchanged but must be
-resolved before exact residual calculations. No residual decay or gap bound
-is proved. Details:
+by `±log n`; the exact candidate residual is thereby specified. PWPB-03.32
+reconciles the normalization discrepancy: equation (3.19) and Plancherel give
+the exact unitary multiplier `2 theta'(t)`; the isolated `theta'(t)` in
+Theorem 3.6 is inconsistent, while compactness survives by equivalence of
+shifted form norms with the `log|t|` weight. Exact residual calculations use
+`2 theta'`. No residual decay or gap bound is proved. Details:
 `research/operators/B3-27-exact-restricted-Weil-operator-decomposition.md`.
+
+Full factor calculation and source limits:
+`research/operators/B3-28-archimedean-normalization-reconciliation.md`.
 
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the

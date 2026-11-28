@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.32 archimedean normalization reconciled
+
+Independently converted CCM equation (3.19) with the unitary Fourier
+transform: the exact multiplier is `2 theta'(t)`. The isolated `theta'(t)`
+in the proof prose of Theorem 3.6 is internally inconsistent, but its
+compactness conclusion survives because the shifted form norm is equivalent
+to the `log|t|` comparison norm. This fixes the residual convention without
+providing a residual estimate, spectral gap, or ground-vector convergence.
+Details: `research/operators/B3-28-archimedean-normalization-reconciliation.md`.
+
 ## 2026-11-27 — PWPB-03.31 exact operator decomposition
 
 Derived the restricted Weil operator from the explicit form as a compressed
