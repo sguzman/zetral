@@ -107,6 +107,11 @@ analytic theorems and from any RH implication.
   arithmetic-defined matrix-valued local Weil kernel and quantify the
   finite-dimensional multiplicity barrier; also seek a quantitative Weyl
   truncation error rather than repeating qualitative convergence.
+  PWPB-03.18 proved the necessary finite-size condition `n >= sup m_gamma`
+  for geometric-multiplicity matching in a definite order-`2n` canonical
+  system. This does not obstruct a scalar weighted-measure correspondence.
+  Next investigate positive arithmetic-defined vector-valued local kernels;
+  test derivative-kernel proposals for positivity and zero-independence.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

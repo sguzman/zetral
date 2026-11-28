@@ -1,5 +1,13 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.18 finite matrix multiplicity barrier
+
+Derived the necessary matrix-size bound for geometric multiplicity matching
+in definite order-`2n` canonical systems. This does not rule out scalar
+weighted spectral measures or infinite-dimensional models and is not a
+global no-go. Details:
+`research/operators/B3-15-finite-matrix-multiplicity-barrier.md`.
+
 ## 2026-11-27 — PWPB-03.17 growing-interval Weyl-limit audit
 
 Rechecked the determinant-one trace-length bound, boundary-triple quotient,

@@ -827,6 +827,20 @@ was found. Standard canonical-system convergence and Suzuki's RH-conditional
 Weyl identification remain imported; no quantitative rate is established.
 Full audit: `research/operators/B3-14-cutoff-weyl-convergence-audit.md`.
 
+### PWPB-03.18 — Finite matrix multiplicity barrier
+
+For a definite order-`2n` canonical system with a separated self-adjoint
+left boundary condition, initial-value uniqueness injects each eigenspace
+into an `n`-dimensional Lagrangian initial-data subspace. Thus geometric
+multiplicity is at most `n`. A construction matching every analytic zero
+multiplicity geometrically requires `n >= sup_gamma m_gamma`; scalar Suzuki
+systems can match atom weights but not geometric multiplicities above one.
+This is a necessary condition, not a no-go: simplicity remains open, no
+uniform multiplicity bound is established here, and infinite-dimensional or
+weight-based correspondences remain possible. Matrix canonical systems are
+prior art; no arithmetic matrix lift was found. Full scope and tests:
+`research/operators/B3-15-finite-matrix-multiplicity-barrier.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

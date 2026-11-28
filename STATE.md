@@ -78,6 +78,15 @@ quotient and is distinct from Suzuki Proposition 7.2's tail quotient
 the standard limit-point and source identification remain imported. Full
 audit: `research/operators/B3-14-cutoff-weyl-convergence-audit.md`.
 
+PWPB-03.18 derived a finite-dimensional obstruction: for a definite
+order-`2n` canonical system with separated self-adjoint left boundary data,
+initial-value uniqueness gives eigenspace dimension at most `n`. Matching
+analytic zero multiplicities geometrically therefore requires
+`n >= sup_gamma m_gamma`. This is only a necessary condition, not a no-go;
+scalar Weyl atom weights, infinite-dimensional fibers, or simplicity remain
+distinct possibilities. No arithmetic matrix lift is established. Details:
+`research/operators/B3-15-finite-matrix-multiplicity-barrier.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
