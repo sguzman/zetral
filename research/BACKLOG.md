@@ -232,6 +232,13 @@ control this weighted trace by itself.
   of one prime, not the operator sum or a growing set of primes. Next derive
   a trace/Schatten stability estimate for addition; separately determine
   dependence on the finite prime set.
+- **Addition obstruction:** B3-55 gives exact `3x3` self-adjoint matrices
+  for which each input has zero negative trace on a rank-one observation
+  projection, while their sum has strictly positive localized negative
+  trace. Thus localized negative trace is not generically subadditive and
+  isolated block estimates cannot simply be added. This is not an arithmetic
+  counterexample. Next quantify cross-block Mellin couplings or a positive
+  high-frequency Schur complement for the actual prime-shift family.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
   frequency localization of the high-index near-self-dual modes, but local
   trace-class and global operator-norm estimates alone are insufficient.

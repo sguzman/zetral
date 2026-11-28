@@ -1495,3 +1495,15 @@ subspaces can mix. The dependence on the number of primes is not summable
 uniformly from this estimate. Next seek a localized Schatten/trace stability
 bound under block addition, and quantify finite-prime dependence. Derivation
 and caveats: `research/operators/B3-54-prime-shift-tail-summability.md`.
+
+## XCVII PWPB-03.56 — Localized negative trace can increase under addition (2026-11-28)
+
+B3-55 constructs exact rational `3x3` self-adjoint matrices `A,B` and a
+rank-one projection `M` such that `Tr(M A_-)=Tr(M B_-)=0`, but
+`Tr(M(A+B)_-)=2(sqrt(33)-3)/(33+5sqrt(33))>0`. This disproves generic
+subadditivity of localized negative trace, while ordinary unlocalized trace
+subadditivity remains valid. The example is not an arithmetic model and does
+not refute a special inequality for shared Mellin-shift structure. It shows
+why the isolated bounds in B3-54 do not control the sum. Next target
+cross-block low/high Mellin couplings or a verified positive Schur block.
+Exact derivation: `research/operators/B3-55-localized-negative-trace-not-subadditive.md`.

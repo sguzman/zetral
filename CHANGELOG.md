@@ -1600,3 +1600,13 @@ the isolated-block large-scale summation gap. Mixing under operator addition
 and dependence on the growing prime set remain open; this is not H2′ or an
 RH result. Full derivation and assumptions:
 `research/operators/B3-54-prime-shift-tail-summability.md`.
+
+## XCVII PWPB-03.56 — Localized negative trace can increase under addition (2026-11-28)
+
+An exact `3x3` matrix example shows that localized negative trace is not
+generically subadditive: each summand has zero negative trace on the observed
+rank-one subspace, but their sum has strictly positive localized negative
+trace. This explains why isolated-shift bounds do not automatically control
+their operator sum. The example is not arithmetic and does not rule out a
+structure-specific estimate. Details:
+`research/operators/B3-55-localized-negative-trace-not-subadditive.md`.

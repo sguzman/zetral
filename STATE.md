@@ -1217,3 +1217,16 @@ Source trace estimate is imported from ACG arXiv:2611.13129v1 §8.3 Lemma
 8.9/(65); the scale conjugacy and split-sum inequality are derived here.
 No H2′ proof, RH proof, Hilbert–Pólya correspondence, computation, or formal
 verification is claimed. Campaign XCVII remains active.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.56 (2026-11-28)
+
+B3-55 gives exact rational `3x3` matrices showing localized negative trace
+need not be subadditive: each summand has zero negative trace on a rank-one
+projection `M`, while their sum has localized negative trace
+`2(sqrt(33)-3)/(33+5sqrt(33))>0`. This blocks the generic inference from
+separate-shift trace bounds to the operator-sum trace. It does not model or
+rule out special arithmetic structure. Next investigate cross-block
+Mellin-frequency couplings or a positive high-frequency Schur complement.
+Artifact: `research/operators/B3-55-localized-negative-trace-not-subadditive.md`.
+Derivation is exact and finite-dimensional; no numerical/formal check,
+arithmetic counterexample, H2′ proof, or RH result is claimed.
