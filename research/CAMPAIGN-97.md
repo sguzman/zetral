@@ -773,6 +773,18 @@ compatible kernel embeddings, and a matrix Weyl/measure identity without
 zero multiplicities as input. The exact requirements and limits are in
 `research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.13).
 
+### PWPB-03.14 — Independent operator-side audit of the boundary triple
+
+Re-derived the endpoint trace estimate from `f=T_H y`, proving `y'=JHf`
+is integrable near zero by Cauchy–Schwarz and `integral tr H<infinity`.
+Compactly tapering constant vectors away from zero proves trace surjectivity.
+Direct integration by parts verifies the boundary-triple sign; row transfer
+`r(0)=r(b)U(b)^(-1)` independently reproduces `U12/U22`. No coordinate or
+sign error was found. Limit-point operator theory, ordinary boundary-triple
+theory, and Suzuki's cutoff convergence/spectral theorem remain imported;
+this is not an independent proof of Proposition 7.2. Full audit boundary:
+`research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.14).
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

@@ -416,3 +416,43 @@ lift has been found or proved. This is a structural obstruction and
 research specification, not a novel theorem claim.
 
 Primary framework source: [Sakhnovich, Documenta Mathematica 26 (2021), 583–615](https://ems.press/content/serial-article-files/26601?nt=1).
+
+## PWPB-03.14 — Independent operator-side audit of PWPB-03.12
+
+**Audit question.** Are the full-endpoint trace maps, Green identity, and
+finite-cutoff quotient in PWPB-03.12 mutually consistent for the specified
+operator, rather than merely copied from a projective Weyl convention?
+
+**Checks.** Write `f=T_H y`. From `T_H=-H^(-1)Jd/da`,
+`y'=JHf`. For positive `H`,
+`|Hf|^2 <= (tr H)(f^*Hf)` pointwise, hence
+
+    integral_0^R |y'| da
+      <= (integral_0^R tr H da)^(1/2) ||f||_(L2_H(0,R)).
+
+Theorem 6.2 makes the first factor finite and maximal-domain membership
+makes the second finite; therefore `y(0)` exists. For any prescribed
+`c in C^2`, choose `y=c` near zero and taper it to zero on a compact
+interval bounded away from zero. There `H` and `H^(-1)` are locally
+essentially bounded, so this vector lies in the maximal domain and has trace
+`c`. Thus the joint trace map is onto. Direct integration gives
+`<T_Hy,z>-<y,T_Hz>=[y^*Jz]_0^infinity`; the limit-point endpoint removes
+the infinity term, and `Gamma_0=y1(0)`, `Gamma_1=-y2(0)` give the stated
+ordinary-boundary-triple sign.
+
+For the cutoff relation, rows of `U` are fundamental solutions. Prescribing
+`r(b)=(1,0)` gives `r(0)=r(b)U(b)^(-1)=(U22,-U12)`, so
+`Gamma_1 r/Gamma_0 r=U12/U22`. This exactly agrees with the source's
+`U·0` quotient and with the constant-Hamiltonian sign check. No coordinate
+swap or sign discrepancy was found.
+
+**Audit boundary.** The argument independently verifies the operator-side
+algebra and endpoint regularity consequences of Theorem 6.2. It still imports
+the equivalence between canonical limit-point and the operator's vanishing
+boundary form at infinity, ordinary boundary-triple extension theory, and
+the source's convergence of cutoff quotients to `Q_xi`. It is not an
+independent proof of Suzuki Proposition 7.2 or of the canonical-system
+spectral theorem. The spectral measure `mu_xi` statement remains at that
+source-theorem level. No novelty claim.
+
+Primary source: [Suzuki, arXiv:2611.33001v1, Theorem 6.2, Propositions 4.2, 4.3, 7.2 and 8.1](https://arxiv.org/html/2611.33001).

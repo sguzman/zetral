@@ -45,7 +45,11 @@ sign (`tan(bz)->i` and `-y2/y1=i`). Multiplicities remain spectral weights, not
 eigenspace dimensions. PWPB-03.13 directly derives the scalar eigenspace
 dimension-at-most-one obstruction and states the requirements for an
 arithmetic-defined matrix lift; general matrix canonical systems are prior
-art, but no zeta/Weil matrix construction is established. The bounded audit is recorded in
+art, but no zeta/Weil matrix construction is established. PWPB-03.14
+independently rechecks the zero-end trace estimate, trace surjectivity, Green
+identity and transfer quotient; no algebraic mismatch was found. The
+limit-point/operator and source spectral theorems remain imported. The bounded
+audit is recorded in
 `research/operators/B3-13-prime-defined-canonical-system.md` and
 `research/CAMPAIGN-97.md`.
 

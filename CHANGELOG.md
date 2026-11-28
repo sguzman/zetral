@@ -47,6 +47,15 @@ arithmetic matrix lift is supplied; the requirements for a noncircular lift
 are recorded. No multiple zeta zero or novelty is claimed. Details:
 `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+## 2026-11-27 — PWPB-03.14 boundary-triple operator audit
+
+Independently derived the full-endpoint trace estimate, trace surjectivity,
+Green identity and transfer quotient for the arithmetic canonical operator.
+No sign or coordinate discrepancy was found. The limit-point operator
+theorem, abstract boundary-triple theory and Suzuki's analytic Weyl limit
+remain imported; no independent source-proof claim. Details:
+`research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ## 2026-11-27 — HP-02.3–.4 fixed-low pencil bounds
 
 For `L_N=N^2+U` with one fixed uniform offset, period counting and

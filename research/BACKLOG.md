@@ -81,9 +81,12 @@ analytic theorems and from any RH implication.
   standard operator theory and Suzuki's source theorem, not an independent
   proof audit; an exact `H=I` check confirms the sign and ratio convention.
   PWPB-03.13 proves the scalar eigenspace-dimension-at-most-one obstruction
-  and specifies noncircular matrix-lift requirements. Next independently
-  audit endpoint/Weyl hypotheses and formulate an arithmetic matrix local
-  form or a no-go theorem for a precisely defined lift class. Full record:
+  and specifies noncircular matrix-lift requirements. PWPB-03.14 independently
+  audits endpoint trace and transfer algebra, finding no mismatch while
+  isolating the imported limit-point and spectral theorems. Next independently
+  audit analytic cutoff-Weyl convergence and formulate an arithmetic matrix
+  local form or a no-go theorem for a precisely defined lift class. Full
+  record:
   `research/operators/B3-13-prime-defined-canonical-system.md`.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
