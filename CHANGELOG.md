@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.36 smoothed prolate tail-energy bridge
+
+Constructed a growing, smooth, exact-moment prolate family and proved a
+global-radical inside/outside energy identity. Differentiated Poisson bounds
+and explicit archimedean, pole, and prime estimates give an absolute
+`O(lambda^-2)` window Rayleigh quotient. The bound is weaker than ACG's
+published exponentially small upper estimate and gives no positivity,
+operator residual, or gap. Details:
+`research/operators/B3-32-smoothed-prolate-tail-energy.md`.
+
 ## 2026-11-27 — PWPB-03.35 Poisson lower-tail estimate
 
 For even Schwartz inputs with both radical moments zero, Poisson summation

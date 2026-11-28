@@ -233,6 +233,16 @@ a window-dependent smoothed family explicit; it does not bound the tail in
 the Weil-form norm or the operator residual. Details:
 `research/operators/B3-31-poisson-arithmetic-tail.md`.
 
+PWPB-03.36 constructs a growing smooth moment-corrected prolate family and
+uses the global Weil radical to identify its window energy exactly with its
+lower arithmetic-tail energy. Explicit differentiated-Poisson, logarithmic
+archimedean, pole, and prime-shift estimates give an absolute Rayleigh bound
+`O(lambda^-2)` for a window vector of norm bounded below. The bound is weaker
+than ACG's existing exponential upper estimate and is not positivity,
+residual decay, or a gap. It supplies a source-class-checked tail-transfer
+mechanism. Details:
+`research/operators/B3-32-smoothed-prolate-tail-energy.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

@@ -1085,6 +1085,26 @@ the constants for smoothed prolate inputs may grow with the smoothing and
 window parameters. Derivation and exact constants:
 `research/operators/B3-31-poisson-arithmetic-tail.md`.
 
+### PWPB-03.36 — Smoothed-family tail form and Rayleigh estimate
+
+Constructed an explicit growing family by compressing and mollifying the
+normalized two-mode prolate vector with `epsilon=lambda^(-3/4)`, then
+correcting its point moment with a fixed zero-integral bump. Both moments
+vanish exactly, and the family converges locally through the arithmetic map
+to the Hermite/Riemann kernel. ACG's global radical identity and CCM's Weil
+test class give an exact inside/outside identity
+`QW_lambda[v_lambda]=QW[w_lambda]`. Differentiated Poisson estimates, the
+archimedean logarithmic bound, pole estimates, and an absolutely convergent
+prime-shift sum yield
+`|QW_lambda(v_lambda)| <= C lambda^(-2)` for the explicit N=16 smoothing.
+The window vector norm stays bounded below, hence its Rayleigh quotient is
+`O(lambda^(-2))` in absolute value. This is weaker than ACG's published
+exponentially small eigenvalue upper bound and proves no positivity,
+operator-residual decay, or spectral gap. It is an independently derived
+tail-transfer mechanism, not a novelty claim. Full construction, constants,
+domain audit, and limits:
+`research/operators/B3-32-smoothed-prolate-tail-energy.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

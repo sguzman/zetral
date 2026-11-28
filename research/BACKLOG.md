@@ -235,6 +235,13 @@ analytic theorems and from any RH implication.
   strengthen `L2` to the global Weil-form topology and justify the split-form
   radical identity. The present estimate alone gives no windowed positivity
   or residual control.
+- **PWPB-03.36 tail-energy bridge:** A specific `epsilon=lambda^-3/4`
+  compressed/mollified prolate family has exact moments, polynomial Fourier
+  seminorm bounds, and an exact global-radical inside/outside split. Its
+  window Rayleigh quotient is `O(lambda^-2)` in absolute value, weaker than
+  ACG's existing exponential upper bound. Next estimate the compressed
+  operator residual from the radical tail and separately obtain a lower
+  spectral gap; Rayleigh energy does not imply ground-vector proximity.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives
