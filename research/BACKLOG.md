@@ -239,6 +239,15 @@ control this weighted trace by itself.
   isolated block estimates cannot simply be added. This is not an arithmetic
   counterexample. Next quantify cross-block Mellin couplings or a positive
   high-frequency Schur complement for the actual prime-shift family.
+- **Coercive-block criterion:** B3-56 proves in finite dimensions that for
+  `T=[[A,B*],[B,D]]` with `D>=delta I`,
+  `Tr(T_-)<=Tr(A_-)+||D^(-1/2)B||_HS^2`; localized low-block negative trace
+  is bounded by the same quantity. For `A>=0`, only the weighted cross-block
+  Hilbert–Schmidt term remains. This avoids the false subadditivity step but
+  requires proving high-block coercivity and a coupling estimate for the
+  actual form; neither is established. Infinite-dimensional domain issues
+  remain open. Next test whether ACG's semilocal decomposition supplies these
+  hypotheses without assuming H2′.
 - **Hypothesis:** The dyadic prime-power shift structure should yield
   frequency localization of the high-index near-self-dual modes, but local
   trace-class and global operator-norm estimates alone are insufficient.

@@ -1230,3 +1230,16 @@ Mellin-frequency couplings or a positive high-frequency Schur complement.
 Artifact: `research/operators/B3-55-localized-negative-trace-not-subadditive.md`.
 Derivation is exact and finite-dimensional; no numerical/formal check,
 arithmetic counterexample, H2′ proof, or RH result is claimed.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.57 (2026-11-28)
+
+B3-56 proves a finite-dimensional coercive-block criterion: for
+`T=[[A,B*],[B,D]]`, `D>=delta I`,
+`Tr(T_-)<=Tr(A_-)+||D^(-1/2)B||_HS^2`; the low-block localized negative
+trace is bounded by this total. This converts the interaction problem to
+high-block positivity and a weighted HS coupling estimate, while avoiding
+the false subadditivity from B3-55. It is conditional and finite-dimensional;
+the actual semilocal form's coercivity, coupling bound, and infinite-dimensional
+domains are unresolved. ACG §8.6's Schur reduction is already conditional on
+H2′, so a useful deployment must avoid circularly assuming it. Artifact:
+`research/operators/B3-56-coercive-block-negative-trace-bound.md`.

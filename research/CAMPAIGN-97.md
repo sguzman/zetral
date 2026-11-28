@@ -1507,3 +1507,18 @@ not refute a special inequality for shared Mellin-shift structure. It shows
 why the isolated bounds in B3-54 do not control the sum. Next target
 cross-block low/high Mellin couplings or a verified positive Schur block.
 Exact derivation: `research/operators/B3-55-localized-negative-trace-not-subadditive.md`.
+
+## XCVII PWPB-03.57 — Coercive-block cross-term bound (2026-11-28)
+
+B3-56 proves the finite-dimensional criterion
+`Tr(T_-) <= Tr(A_-) + ||D^(-1/2)B||_HS^2` for a self-adjoint block matrix
+`T=[[A,B*],[B,D]]` with `D>=delta I`. The low-block localized negative trace
+is no larger than the total negative trace. Thus a positive low block reduces
+the problem to a weighted Hilbert–Schmidt estimate on the low/high coupling,
+avoiding the false localized subadditivity exposed in B3-55. ACG §8.6 has a
+conditional Schur reduction under H2′; this criterion does not verify its
+hypotheses for the actual semilocal form and may be circular if high-block
+positivity already assumes H2′. Infinite-dimensional domains and trace-class
+extension are also open. Next check whether the source's form decomposition
+can independently supply coercivity and coupling bounds. Full proof and
+scope: `research/operators/B3-56-coercive-block-negative-trace-bound.md`.

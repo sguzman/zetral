@@ -1610,3 +1610,14 @@ trace. This explains why isolated-shift bounds do not automatically control
 their operator sum. The example is not arithmetic and does not rule out a
 structure-specific estimate. Details:
 `research/operators/B3-55-localized-negative-trace-not-subadditive.md`.
+
+## XCVII PWPB-03.57 — Coercive-block cross-term bound (2026-11-28)
+
+Proved a finite-dimensional sufficient criterion for control of negative
+trace after adding blocks: if the high block `D` is positive, then
+`Tr([[A,B*],[B,D]]_-) <= Tr(A_-) + ||D^(-1/2)B||_HS^2`. This gives a target
+for replacing false localized subadditivity with high-block coercivity and a
+cross-frequency Hilbert–Schmidt estimate. The criterion has not been verified
+for the semilocal Weil form; its infinite-dimensional extension and
+noncircularity remain open. Details:
+`research/operators/B3-56-coercive-block-negative-trace-bound.md`.
