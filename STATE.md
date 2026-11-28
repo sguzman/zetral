@@ -299,6 +299,21 @@ arithmetic-defined space is needed. It does not rule out new matrix-valued
 Weil forms or multiplicity as spectral mass. Details:
 `research/operators/B3-38-scalar-observation-rank-obstruction.md`.
 
+PWPB-03.43 audited a new finite arithmetic simplicity criterion after
+Suzuki. An independent trace-ideal derivation confirms its core defect
+identity and the limit detecting the first multiple zero. The source's
+Theorem 1 statement appears to have a typo: it prints `m_gamma` where its
+proof requires `m_gamma-1`; taken literally it contradicts `D_{N,k}<S_k`.
+With that correction the proof supports the criterion. This tests
+multiplicity excess by moments; it does not add geometric fibers to the
+scalar operator. The source-reported Arb certificate through 97.632 has not
+been reproduced in Zetral. Full audit and limitations:
+`research/operators/B3-39-trace-defect-multiplicity-audit.md`.
+The source's strict height test also requires dimension `d_N>=2n(T)`; for
+its dyadic spline dimensions this gives `N=log_2 T+O(1)` and a prime-power
+cutoff of order `T^(2/log 2)` at the necessary dimension scale. This is a
+cost-scaling estimate, not an impossibility result.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

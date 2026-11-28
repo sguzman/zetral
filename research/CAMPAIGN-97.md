@@ -1215,11 +1215,38 @@ forms open. The proof is elementary spectral-projection rank algebra and
 makes no novelty claim. Details:
 `research/operators/B3-38-scalar-observation-rank-obstruction.md`.
 
-Next: test whether a vector-valued prime-side local Weil form can introduce
-independent fibers before spectralization. Specify its core, involution,
-positive form, scalar compression, and why its matrix rank is arithmetic
-rather than zero-dependent. Reject direct scalar copies as constant-rank
-padding.
+### PWPB-03.43 — Recent trace-defect simplicity criterion audited
+
+A newly posted source (Alderliefste, Hexagon v1, 2026-11-24) compares
+multiplicity-weighted Taylor moments of `xi` with trace powers of Suzuki's
+finite compressions. The independent trace-ideal derivation confirms that
+the limiting defect is
+`2 sum_(gamma>0)(m_gamma-1) gamma^(-2k)`, and its `ell^(2k)` limit detects the
+first multiple ordinate. This is a simplicity criterion, not geometric
+multiplicity for the scalar operator. The source-reported Arb certificate
+through 97.632 has not been independently reproduced in Zetral.
+
+An apparent typographical error occurs in the displayed Theorem 1 statement:
+its first lower-bound sum is printed with `m_gamma`, while the proof derives
+`m_gamma-1`. As printed, it contradicts `D_(N,k)<S_k` and even the all-simple
+limit. Correcting that summand makes the displayed proof support the claimed
+criterion; no other contradiction was found in this bounded analytic audit.
+The finite explicit-formula matrices and the source's interval programs
+remain unaudited. Full note:
+`research/operators/B3-39-trace-defect-multiplicity-audit.md`.
+
+The same singular-value argument verifies the source's certificate-size
+barrier `d_N >= 2 n(T)` for its strict height test. Combining this with
+Riemann–von Mangoldt and `d_N=2N 2^N-2` gives `N=log_2 T+O(1)` at the
+necessary dimension scale, and a prime-power cutoff `e^(2N)` of order
+`T^(2/log 2)` for that spline family. This is a complexity lower scaling,
+not a no-go or sufficient cost estimate.
+
+Next investigate whether the trace-defect route admits an unbounded-height
+upper bound within the compression dimension forced by Proposition 8. In
+parallel as a distinct follow-up, test an arithmetic-defined vector-valued
+prime-side form for genuinely new fibers; scalar copies and bounded scalar
+observations remain excluded by B3-38.
 
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin

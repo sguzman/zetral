@@ -1,5 +1,19 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.43 trace-defect multiplicity audit
+
+Independently derived the trace-ideal inequality and limiting weighted
+multiplicity-excess identity behind a recent simplicity criterion for
+Suzuki's scalar Weil operator. Flagged an apparent `m_gamma` versus
+`m_gamma-1` typo in the source theorem statement; its proof uses the latter.
+The result detects simplicity but does not construct geometric multiplicity
+fibers. The reported Arb certificate through height 97.632 remains
+unreproduced in Zetral. Details:
+`research/operators/B3-39-trace-defect-multiplicity-audit.md`. The source's
+dimension necessity `d_N>=2n(T)` also implies a cutoff scale
+`T^(2/log 2)` for its dyadic spline family at minimum eligible dimension;
+this is not an impossibility theorem.
+
 ## 2026-11-27 — PWPB-03.42 bounded-channel rank obstruction
 
 Proved that bounded finite-channel observations of the scalar Suzuki

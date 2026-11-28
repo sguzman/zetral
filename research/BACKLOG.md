@@ -163,6 +163,44 @@ analytic theorems and from any RH implication.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
+**New literature follow-up (PWPB-03.43):** Alderliefste, *A finite
+arithmetic test for simplicity of the Riemann zeros, after Suzuki*, Hexagon
+v1 (2026-11-24), gives a trace-power defect for the scalar Suzuki
+compression and reports a zero-free-input interval certificate to height
+97.632. Zetral's independent trace-ideal derivation confirms the defect
+limit, but flags a likely `m_gamma`/`m_gamma-1` typo in the theorem statement;
+the proof uses `m_gamma-1`. A useful next question is whether a dimension-aware
+upper estimate can certify unbounded heights, or the certificate-size bound
+rules out this route at current scaling. This must remain distinct from
+constructing higher geometric multiplicity fibers.
+
+- **Hypothesis:** The reported defect criterion can be made effective at
+  increasing heights from arithmetic Taylor moments and finite Weil matrices
+  with a controlled dimension/cost envelope.
+- **Prerequisites:** Corrected theorem statement; source version and exact
+  definitions; Proposition 8 dimension lower bound; rigorous upper bounds
+  for the trace defect and interval errors.
+- **Information gain:** Either an effective simplicity route that would
+  remove the scalar operator's multiplicity mismatch, or a quantitative
+  scaling obstruction showing why it cannot currently close that gap.
+- **Experimental design / falsification:** Derive the necessary dimension
+  `d_N >= 2 n(T)` and compare the tail lower bound with achievable defect
+  upper bounds; test whether moments can be bounded from finite arithmetic
+  inputs without importing zero locations. Seek counterexamples in abstract
+  diagonal spectra to any claimed universal rate. Do not extrapolate the
+  height-97.632 certificate.
+- **Dependencies:** Primary source
+  `https://hexagonmath.org/2611.00996v1`, Suzuki arXiv:2610.32704v1,
+  Alpöge–Furman arXiv:2608.13637v2, and the accepted scalar-rank obstruction
+  B3-38.
+- **Acceptance:** A rigorous, dimension-aware unbounded-height estimate, or
+  a proved obstruction under explicitly stated inputs; source typo and
+  conditional RH status recorded accurately.
+- **Verification:** Independently audit the trace inequalities and all
+  normalizations; reproduce any numerical certificate only with its exact
+  source, interval code and parameters. Distinguish source-reported runs from
+  Zetral's runs. No zero-ordinate input or novelty claim.
+
 - **Precise question:** Can the prolate candidate `k_lambda` be shown close
   enough to the full restricted-Weil ground vector `theta_x`, and can the
   separate finite Fourier truncation `xi_{lambda,N}` be controlled strongly
