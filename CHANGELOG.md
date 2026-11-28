@@ -1,5 +1,16 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.44 canonical-system completeness audit
+
+Checked Suzuki's reported Hamiltonian definiteness, half-line limit-point
+conditions, and the boundary quotient against Zetral's independently
+derived boundary maps. Under the imported Weyl identity and canonical-system
+spectral-transform theorem, the measure accounts for the full operator with
+no hidden spectral summand; multiplicities remain atom weights rather than
+geometric dimensions. The global Weyl proof and spectral-transform theorem
+remain imported. Details:
+`research/operators/B3-40-canonical-system-completeness-audit.md`.
+
 ## 2026-11-28 — PWPB-03.43 trace-defect multiplicity audit
 
 Independently derived the trace-ideal inequality and limiting weighted

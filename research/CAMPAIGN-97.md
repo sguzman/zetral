@@ -1248,6 +1248,26 @@ parallel as a distinct follow-up, test an arithmetic-defined vector-valued
 prime-side form for genuinely new fibers; scalar copies and bounded scalar
 observations remain excluded by B3-38.
 
+### PWPB-03.44 — Hidden-spectrum concern checked against canonical-system hypotheses
+
+The Suzuki source data for the global operator are consistent with the
+standard simple canonical-system spectral representation: Theorem 6.2 gives
+`H=diag(gamma,gamma^(-1))` with `det H=1`; the trace-normalized length
+satisfies `L_a>=2a`; Proposition 4.2 gives the limit-point endpoint; and
+Proposition 4.3 identifies the system's spectral measure with the Weyl
+Nevanlinna measure. The independently derived PWPB-03.12/14 boundary maps
+match the selected `U_12/U_22` line. Under RH and the imported Proposition
+7.2, `Q_xi` has pure atomic measure with masses `m_gamma`, so the canonical
+operator has no hidden continuous summand in that spectral representation.
+Each fiber remains one-dimensional; weights are not geometric
+multiplicities. This is an assumption/normalization audit, not an
+independent proof of Proposition 7.2 or of the general spectral theorem.
+Details: `research/operators/B3-40-canonical-system-completeness-audit.md`.
+
+Next: independently audit the analytic extension-parameter and Weyl-limit
+step in Suzuki Proposition 7.2. Pin the global screw function to the
+prime-defined local forms and track all boundary/transfer conventions.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

@@ -314,6 +314,19 @@ its dyadic spline dimensions this gives `N=log_2 T+O(1)` and a prime-power
 cutoff of order `T^(2/log 2)` at the necessary dimension scale. This is a
 cost-scaling estimate, not an impossibility result.
 
+PWPB-03.44 checked the hypotheses connecting Suzuki's prime-defined
+canonical system to its scalar spectral measure: the source Hamiltonian is
+positive definite a.e. (`det H=1`), its normalized half-line has infinite
+length, and the selected boundary line agrees with the source transfer
+quotient under the independently derived boundary maps. By the imported
+canonical-system spectral-transform theorem, the Weyl measure accounts for
+the full self-adjoint operator, so the pure atomic `mu_xi` has no hidden
+continuous or reducing spectral summand. This still gives simple
+eigenspaces with analytic multiplicities as spectral weights; Suzuki's
+analytic Weyl identification and the general spectral-transform theorem
+remain imported. Audit:
+`research/operators/B3-40-canonical-system-completeness-audit.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

@@ -163,6 +163,39 @@ analytic theorems and from any RH implication.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
+**PWPB-03.44 follow-up — global Weyl identification audit:** Suzuki's
+arithmetic canonical system has a complete scalar spectral representation
+once its Weyl function is `Q_xi`, but the global extension-parameter/Weyl
+identity in Proposition 7.2 remains imported. Audit whether that identity
+follows from the prime-defined local screw data with all normalization and
+domain hypotheses made explicit.
+
+- **Hypothesis:** The source's local Weil screw functions determine the
+  global extension parameter uniquely, and the resulting limit-point Weyl
+  function is exactly `i xi'/xi` with no omitted affine Nevanlinna term.
+- **Prerequisites:** Suzuki arXiv:2611.33001v1 Proposition 7.2, §§4.4 and
+  7.2; arXiv:2206.03682v4 Theorem 1.2 and equations (1.7)–(1.8); accepted
+  PWPB-03.9 and B3-40 boundary/spectral-measure audits.
+- **Information gain:** Either independently close the analytic
+  prime-defined-to-global Weyl link, or isolate the exact imported theorem
+  that still carries it. This directly tests the strongest current
+  arithmetic operator route.
+- **Design / falsification:** Re-derive the screw-function extension
+  parameter and transfer fractional-linear transformation; verify signs,
+  endpoint convention, Weyl uniqueness, and local-uniform convergence.
+  Test the claimed identity on the source's initial convergence half-plane
+  and check analytic continuation/pole residues. Look for a possible real
+  constant or linear Nevanlinna term and pin the condition excluding it.
+- **Dependencies:** Primary source versions above and standard
+  Krein–Langer/canonical-system theory; no large computation is required.
+- **Acceptance:** A self-contained conditional derivation with explicit
+  RH dependency and exact Weyl normalization, or a precise gap/countermodel
+  to the claimed implication. No claim of an independent proof of RH.
+- **Verification:** Independent equation-by-equation derivation from the
+  cited primary texts; check transfer conventions against the accepted
+  `H=I` boundary sign calculation. State which classical theorems remain
+  imported and do not claim formal verification.
+
 **New literature follow-up (PWPB-03.43):** Alderliefste, *A finite
 arithmetic test for simplicity of the Riemann zeros, after Suzuki*, Hexagon
 v1 (2026-11-24), gives a trace-power defect for the scalar Suzuki
