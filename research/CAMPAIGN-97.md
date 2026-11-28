@@ -801,6 +801,18 @@ multiplicity weights. Zetral has not audited Xu's proofs or certificates;
 this is an external preprint result, not a Zetral discovery. Source and
 scope: `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+### PWPB-03.16 — Exact audit of Xu's introductory certificate
+
+Independently recomputed the exact covariance regression and constrained
+least-squares arithmetic in Xu §1.4. The residual variance is
+`115519/8755200 > 0`, the regression gap is `31/1920 > 0`, and the optimizer
+is feasible with `t=141360/392159`. The resulting toy simple-zero bound is
+`276640/392159 = 0.70542815...`, matching the displayed certificate. This
+audits only the rational arithmetic and feasibility, not the analytic moment
+inputs, endpoint limit, or the paper's main 71.2740668% certificate. It is a
+source audit, not a Zetral theorem or novelty claim. Full exact derivation
+and falsification checks: `research/operators/XU26-fejer-certificate-audit.md`.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

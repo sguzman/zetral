@@ -92,6 +92,16 @@ analytic theorems and from any RH implication.
   lift class. Full record:
   `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+- **PWPB-03.16 bounded source arithmetic audit:** Recomputed Xu §1.4's
+  introductory Fejer-kernel least-squares certificate exactly, including
+  positive residual variance, optimizer feasibility, and final fraction
+  `276640/392159`. This does not verify analytic moment estimates or the
+  paper's stronger main certificates. Record:
+  `research/operators/XU26-fejer-certificate-audit.md`. Next, prioritize an
+  independent audit of Suzuki's analytic cutoff-Weyl convergence, alongside
+  the noncircular matrix-lift/no-go question; avoid extending the small
+  certificate audit without a concrete discrepancy or new source evidence.
+
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
 - **Precise question:** Can the prolate candidate `k_lambda` be shown close

@@ -1,5 +1,13 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.16 exact certificate arithmetic audit
+
+Independently rederived the introductory Fejer-kernel least-squares
+certificate in Xu, arXiv:2611.34546v1, using exact rational arithmetic. The
+optimizer is feasible and reproduces `276640/392159`. The analytic moment
+inputs and main optimized certificate remain unaudited. Details:
+`research/operators/XU26-fejer-certificate-audit.md`.
+
 ## 2026-11-27 — PWPB-03.10 canonical-system endpoint convention
 
 Re-read Suzuki arXiv:2611.33001v1 §§4.2–4.3 and Proposition 7.2. Recorded

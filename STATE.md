@@ -61,6 +61,14 @@ level; Zetral has not independently audited Xu's proof/certificates. This
 refines the scalar multiplicity discussion but does not establish simplicity
 of every zero. See PWPB-03.15 in Campaign XCVII and B3-13.
 
+PWPB-03.16 independently recomputed the exact rational covariance regression
+in Xu §1.4: residual variance `115519/8755200`, positive optimizer
+`141360/392159`, and resulting introductory lower bound `276640/392159`.
+This verifies only the displayed least-squares arithmetic and `t>=0`
+feasibility; analytic moments, endpoint limiting argument, and the main
+optimized theorem remain unaudited. Exact note:
+`research/operators/XU26-fejer-certificate-audit.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
