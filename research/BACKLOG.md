@@ -1193,6 +1193,32 @@ Campaign file: `research/CAMPAIGN-94.md`.
 - **Verification:** Independent proof review, primary-source comparison, and
   formal verification for compact lemmas where feasible.
 
+### B9 — Intrinsic multiplicity-sensitive arithmetic operator
+
+- **Question / hypothesis:** Can prime-side local Weil data define a
+  multiplicity-sensitive self-adjoint realization whose Weyl/spectral
+  correspondence is proved without inserting zero ordinates or assuming RH?
+- **Evidence / limits:** B3-13 gives the scalar eigenspace-dimension-at-most-one
+  obstruction. B3-58 lifts Suzuki's RH-conditional integer-weighted global
+  Weyl measure to a standard direct-sum multiplication operator and recovers
+  Xi by `det_2`; this resolves geometric multiplicities only after the
+  spectral measure is known. It is not a local extension and has no novelty
+  claim.
+- **Prerequisites / dependencies:** Audit the Suzuki global Weyl and spectral
+  theorems; identify an arithmetic matrix/local datum with integer atomic
+  ranks and controlled Herglotz integrability.
+- **Design / falsification:** Compare matrix canonical-system ranks,
+  boundary multiplicity, and the scalar obstruction. Reject constructions
+  that insert `m_gamma` or zero locations by hand or that define the Weyl
+  function from Xi itself. Test self-adjointness, compact resolvent, and
+  determinant normalization independently.
+- **Information gain / acceptance:** Either provide an explicit local
+  arithmetic operator and rigorous spectral identity, or delimit a genuine
+  obstruction to such a lift. Any source-conditional result must state the
+  premise and cannot be advertised as an independent RH proof.
+- **Verification:** Independent audit of the analytic source chain, exact
+  operator-domain argument, and prior-art search before novelty claims.
+
 ## Selection rule
 
 Finish the current bounded investigation in `STATE.md`, persist and verify its

@@ -1551,3 +1551,20 @@ coupling bound improves accordingly, but remains exponential when
 `r=C0 lambda+delta`; no polynomial-size reduction or positivity follows.
 This is an optimization of a coarse estimate, not a lower bound on the true
 dimension. Details: `research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.
+
+## XCVII PWPB-03.60 — Multiplicity lift from the arithmetic Weyl measure (2026-11-28)
+
+For a positive discrete atomic measure with positive integer masses and
+`sum_x w_x/(1+x^2)<infinity`, the direct sum of fibers `C^(w_x)` with
+multiplication by `x` is self-adjoint with compact resolvent and geometric
+multiplicities `w_x`. Applying this standard construction to Suzuki's
+RH-conditional arithmetic Weyl measure gives a multiplicity-sensitive
+operator and `det_2(I-z H_xi^(-1))=xi(1/2-iz)/xi(1/2)`; the zero-free
+center and convergence follow from the eta identity and the cited Herglotz
+integrability. This resolves the scalar measure-weight/eigenspace-multiplicity
+mismatch only by post-processing an already identified spectral measure. It
+does not give a local differential extension, prove RH, independently audit
+Suzuki's analytic chain, or establish novelty. The next operator question is
+an intrinsic arithmetic multiplicity lift with a noncircular Weyl/spectral
+correspondence. Detailed proof, assumptions, and scope:
+`research/operators/B3-58-arithmetic-measure-multiplicity-lift.md`.

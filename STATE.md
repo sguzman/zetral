@@ -1267,3 +1267,23 @@ bandwidth `R=exp(r+1)`: each unit vector below energy `r` has at least
 `O(log(lambda)exp(2r))`. This sharpens the Schur coupling bound but remains
 exponential for `r=C0 lambda+delta`; no positivity or polynomial-size
 reduction follows. Artifact: `research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.
+
+## Latest continuation checkpoint — XCVII / PWPB-03.60 (2026-11-28)
+
+B3-58 constructs the canonical multiplicity lift of a positive discrete
+integer-weighted measure: `H_mu` acts as multiplication by each atom on a
+fiber whose dimension is its mass. It is self-adjoint with compact
+resolvent, reproduces atom masses as geometric multiplicities, and, for
+Suzuki's RH-conditional measure `mu_xi=sum_gamma m_gamma delta_gamma`, its
+second regularized determinant is `xi(1/2-iz)/xi(1/2)`. The proof of the
+abstract lift and determinant is direct; the identification with zeta data
+imports Suzuki's global Weyl identity and canonical-system spectral theorem.
+This closes the scalar spectral-weight/geometric-multiplicity gap at the
+measure-post-processing level, not at the level of a local arithmetic
+differential operator. No RH proof, source-chain audit, formalization, or
+novelty claim. Full result, assumptions, and falsification checks:
+`research/operators/B3-58-arithmetic-measure-multiplicity-lift.md`.
+Next investigate whether a multiplicity-sensitive realization can be
+obtained intrinsically from prime-side local data with a proved spectral
+correspondence; in parallel continue the full-form positivity/generalization
+campaign rather than treating this conditional lift as the endpoint.

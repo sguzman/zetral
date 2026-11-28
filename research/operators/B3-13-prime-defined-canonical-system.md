@@ -378,6 +378,20 @@ upgraded without losing the arithmetic form realization.
 
 Primary source: [Suzuki, arXiv:2611.33001v1, Theorem 6.2, §§4.2–4.3, Propositions 7.2 and 8.1](https://arxiv.org/html/2611.33001).
 
+**PWPB-03.60 follow-up — measure-level multiplicity lift.** The scalar
+realization's one-dimensional eigenspaces still cannot carry a multiple
+zero geometrically. However, its RH-conditional global Weyl measure can be
+post-processed by the standard direct-sum multiplication operator with fiber
+dimension equal to each integer atom mass. B3-58 proves this operator is
+self-adjoint with compact resolvent and the same exact zero multiplicities;
+its `det_2` recovers `xi(1/2-iz)/xi(1/2)`. This is a measure-theoretic
+Hilbert–Pólya realization conditional on the source's Weyl identity, not a
+local canonical-system extension or a novel construction. The genuinely
+open next operator question is whether any such multiplicity-sensitive
+realization can be obtained intrinsically from arithmetic local data, with
+its Weyl/spectral correspondence proved rather than supplied by assuming
+RH. See `B3-58-arithmetic-measure-multiplicity-lift.md`.
+
 ## PWPB-03.13 — Scalar multiplicity obstruction and matrix-lift target
 
 **Question.** Does the selected scalar self-adjoint realization encode

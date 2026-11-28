@@ -1643,3 +1643,16 @@ bandwidth `exp(r+1)`: each unit vector of energy at most `r` has at least
 `exp(2r)` bound. The Schur reduction remains exponential and gives no
 positivity result. Details:
 `research/operators/B3-57-windowed-form-coarse-schur-cutoff.md`.
+
+## XCVII PWPB-03.60 — Multiplicity lift from the arithmetic Weyl measure (2026-11-28)
+
+Proved the standard direct-sum realization of a discrete integer-weighted
+measure is self-adjoint with compact resolvent and has geometric eigenspace
+multiplicity equal to each atom mass. Under Suzuki's RH-conditional global
+Weyl identity, the arithmetic measure yields zero ordinates with analytic
+multiplicities and a `det_2` equal to normalized Xi. The measure-to-operator
+construction is exact; its arithmetic identification imports the source's
+Weyl and spectral theorems. It is a measure-level post-processing, not a
+local differential operator, RH proof, independent source audit, or novelty
+claim. Full assumptions and limits:
+`research/operators/B3-58-arithmetic-measure-multiplicity-lift.md`.
