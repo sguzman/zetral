@@ -228,6 +228,13 @@ analytic theorems and from any RH implication.
   and justify the radical bilinear identity across the inside/outside split.
   Constants in the approximation are window-dependent, so no growing-window
   conclusion is available.
+- **PWPB-03.35 lower tail:** For exact-moment Schwartz inputs, Poisson
+  summation bounds the arithmetic lower-tail `L2` norm by a weighted Fourier
+  seminorm divided by `lambda^(N-1/2)`. The upper tail vanishes by compact
+  support. Obtain a uniform seminorm bound for a smoothed prolate family, then
+  strengthen `L2` to the global Weil-form topology and justify the split-form
+  radical identity. The present estimate alone gives no windowed positivity
+  or residual control.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

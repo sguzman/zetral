@@ -225,6 +225,14 @@ converge in form norm. This does not transfer the global radical through
 window projection or control the lower arithmetic tail; no residual follows.
 Details: `research/operators/B3-30-smooth-radical-approximation.md`.
 
+PWPB-03.35 applies Poisson summation to an even Schwartz input with both
+radical moments zero and obtains an exact lower-tail estimate for its
+arithmetic image in `L2(du/u)`, with explicit dependence on the weighted
+Fourier seminorm `M_N(f)`. The result makes the required growth condition for
+a window-dependent smoothed family explicit; it does not bound the tail in
+the Weil-form norm or the operator residual. Details:
+`research/operators/B3-31-poisson-arithmetic-tail.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.35 Poisson lower-tail estimate
+
+For even Schwartz inputs with both radical moments zero, Poisson summation
+gives an exact formula for the arithmetic image below `1/lambda`. Its L2 tail
+is bounded by `zeta(N) M_N(f)/(sqrt(2N-1) lambda^(N-1/2))`, where `M_N` is a
+weighted Fourier supremum seminorm. Compact support eliminates the upper
+tail. This supplies a family-level seminorm condition, but no uniform bound
+for smoothed prolate inputs and no Weil-form tail or residual estimate.
+Details: `research/operators/B3-31-poisson-arithmetic-tail.md`.
+
 ## 2026-11-27 — PWPB-03.34 fixed-window smooth radical approximation
 
 Proved that the two-moment-corrected piecewise-smooth prolate vector is, at

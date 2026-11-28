@@ -1072,6 +1072,19 @@ global-form cross terms remain uncontrolled, and all constants may depend on
 `lambda`. Proof and precise limits:
 `research/operators/B3-30-smooth-radical-approximation.md`.
 
+### PWPB-03.35 — Explicit Schwartz lower-tail estimate
+
+Poisson summation and both exact moments give
+`E(f)(u)=(2 sqrt(u))^-1 sum_(k!=0) hat f(k/u)` for even Schwartz `f`.
+If `M_N(f)=sup_y (1+|y|)^N |hat f(y)|` and `N>1`, then
+`||1_(0,lambda^-1) E(f)||_2 <= zeta(N)M_N(f)/(sqrt(2N-1) lambda^(N-1/2))`.
+The upper tail is identically zero for support in `[-lambda,lambda]`.
+This gives an explicit family-level condition on Fourier seminorm growth for
+the lower **L2** tail to vanish. It gives no global Weil-form tail estimate;
+the constants for smoothed prolate inputs may grow with the smoothing and
+window parameters. Derivation and exact constants:
+`research/operators/B3-31-poisson-arithmetic-tail.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and
