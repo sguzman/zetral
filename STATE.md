@@ -174,6 +174,16 @@ unbounded in L2, witnessed by `delta_N/||delta_N||^2 -> 0` in L2 with endpoint
 value one. This isolates a separate missing estimate in the finite-cutoff
 leg. Details: `research/operators/B3-24-fixed-window-galerkin-limit.md`.
 
+PWPB-03.29 strengthens this boundary obstruction: for each fixed window the
+same normalized Dirichlet kernels tend to zero even in the closed Weil form
+norm. The proof bounds their zero-extended `H^s(R)` norm by
+`O(N^(2s-1)log^2 N)` for any `s<1/2`, then uses the logarithmic archimedean
+multiplier and bounded fixed-window prime/pole terms in the explicit form.
+Thus endpoint evaluation is not form-norm continuous on the Fourier core.
+This excludes only a general norm-based normalization argument, not the
+actual minimizer sequence. Details:
+`research/operators/B3-25-boundary-trace-not-form-continuous.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

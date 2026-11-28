@@ -52,6 +52,12 @@ analytic theorems and from any RH implication.
   Next derive a sequence-specific boundary estimate or a quantitative form
   approximation and spectral-gap bound for the actual `QW_lambda` ground
   state. See `research/operators/B3-24-fixed-window-galerkin-limit.md`.
+- **PWPB-03.29 boundary functional:** The fixed-window endpoint evaluation
+  is unbounded even in the Weil form norm: normalized Dirichlet kernels have
+  endpoint value one but form norm tending to zero. The minimizing-vector
+  sequence may have additional regularity; derive a sequence-specific trace
+  or endpoint lower bound rather than relying on general form convergence.
+  Proof: `research/operators/B3-25-boundary-trace-not-form-continuous.md`.
 - **PWPB-03.5 source audit:** The pinned Lean development does contain a
   finite-dimensional positive comparison operator
   `U_vartheta = c_j glue_vartheta glue_vartheta*`. Its exact identity

@@ -988,6 +988,21 @@ boundary normalization. No rate, simplicity/evenness result, or joint
 cutoff/window limit follows. Full derivation and limits:
 `research/operators/B3-24-fixed-window-galerkin-limit.md`.
 
+### PWPB-03.29 — Endpoint evaluation is unbounded in the Weil form norm
+
+Strengthened the previous L2 obstruction at each fixed window. The normalized
+Dirichlet kernel `g_N=delta_N/||delta_N||²` has endpoint value one, while its
+zero extension has `H^s(R)` norm squared
+`O_{L,s}(N^(2s-1) log²N)` for every `0<s<1/2`. From the explicit CCM form,
+the archimedean multiplier grows logarithmically and the fixed-window pole
+and prime contributions are bounded, so the shifted Weil form norm of
+`g_N` tends to zero. Thus endpoint evaluation has no continuous extension
+from the Fourier core in the Weil form norm. This rules out a general
+form-norm-only normalization argument, but says nothing adverse about the
+special sequence of minimizing vectors; a sequence-specific trace estimate
+could still hold. Details and proof:
+`research/operators/B3-25-boundary-trace-not-form-continuous.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

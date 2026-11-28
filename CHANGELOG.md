@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.29 form-norm boundary obstruction
+
+Strengthened the fixed-window endpoint-normalization limitation: the
+Dirichlet-kernel sequence has endpoint value one while tending to zero in
+the Weil form norm. The proof uses an explicit bounded-variation Fourier
+tail estimate and the logarithmic growth of CCM's archimedean multiplier.
+This rules out a general form-norm-only boundary argument, not estimates for
+the actual minimizing vectors. Details:
+`research/operators/B3-25-boundary-trace-not-form-continuous.md`.
+
 ## 2026-11-27 — PWPB-03.28 fixed-window Galerkin limit
 
 Derived the qualitative Rayleigh–Ritz limit for CCM Fourier cutoffs at fixed
