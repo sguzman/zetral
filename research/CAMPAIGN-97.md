@@ -510,6 +510,60 @@ and theta-lift definitions at source level, identify which data could form a
 canonical Hilbert space/operator, and compare that object with PWPB and the
 existing Suzuki/Weil constructions.
 
+### PWPB-03.5 — Exact scope of the proof's comparison operator
+
+At the pinned compact-source revision
+`lsernau/grh-lean@72fead102f663d5c7a407964a13dc0cf9d977207`, the file
+`grh/src/New/OneLift/LiftVolumeHeight.lean` defines, for each lift index
+`j` and twist `vartheta`,
+
+    U_vartheta = c_j B_vartheta B_vartheta*,
+    c_j = chosenGroupOrder * hookNumberMinus(j)^2,
+
+where `B_vartheta = glue j vartheta` maps tuples of forms on a smaller
+definite space into forms on the finite-dimensional definite space `V_j`.
+Thus `U_vartheta` is positive semidefinite and self-adjoint:
+`<x,U_vartheta x> = c_j ||B_vartheta* x||^2`. The source proves the exact
+lift-space identity
+
+    <Theta_vartheta y', U_vartheta Theta_vartheta y>
+      = c_j / |twistFactor(j,vartheta)|^2
+        * <periodLift(j)y', periodLift(j)y>.
+
+It also proves a rank-one-frame expansion and orthogonality of its image to
+the false-lift subspace. Separately, `MainInequality.lean` compares a
+covolume upper bound plus an index cost against a lower bound from long
+integral forms; cancelling the common main amount yields
+`m * totalRemainder <= f * a * logB^5`. These exact source statements
+clarify the operator's role: it is a finite arithmetic comparison and
+Gram-determinant device, not an operator whose eigenvalues are asserted to
+be zeta-zero ordinates. The determinant product's twist dependence enters
+through Hecke values, a potentially useful spectral-determinant lead, but a
+scalar determinant identity alone does not give a zero divisor.
+
+**Falsification / boundary.** A single `U_vartheta` cannot be the desired
+Hilbert–Pólya operator: it acts on a finite-dimensional space and is positive
+semidefinite, whereas the target is the unbounded two-sided set of zero
+ordinates (or its Xi spectral determinant). Positivity itself is not a
+global obstruction, since one could transform or take a limit of positive
+operators. A family limit would require specified embeddings of the changing
+`FormV` spaces into a common Hilbert space, normalization, a self-adjoint
+limit, and a theorem identifying its spectral measure/eigenvalues with the
+zero divisor. The proof source provides none of these correspondences. This
+rules out only the literal individual comparison operator as an HP operator;
+it does not rule out a limit or another construction from the theta-lift
+data.
+
+**Next experiment.** Audit the exact identity for
+`Z_j(vartheta) det(pr U_vartheta)` and determine whether its Hecke-value twist
+factor can be upgraded from a finite determinant ratio to a locally uniform
+entire function whose zeros are the zeta zeros. First record the parameters,
+finite-dimensional spaces and determinant normalization across `j` and
+`D`; test two-scale compatibility. Acceptance requires a compatible
+common-space family and an actual spectral/determinant identity, or a proof
+that this specific determinant family has the wrong zero set. This is a
+candidate audit, not a no-go for all theta-lift operators or a novelty claim.
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

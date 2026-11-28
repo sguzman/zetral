@@ -1057,3 +1057,15 @@ operator construction. Opened a source-level investigation into whether its
 theta-lift/arithmetic Gram mechanism yields a self-adjoint zero-spectrum
 operator. No Zetral reproduction of the Lean computations or operator result
 is claimed. Sources and scope: `research/CAMPAIGN-97.md`.
+
+## XCVII PWPB-03.5 — Comparison-operator source audit (2026-11-27)
+
+Inspected the exact pinned compact Lean definitions of `comparisonOp` and
+`star_inequality`. The former is a positive finite-dimensional operator
+`c_j glue glue*`, with an exact lifted-subspace inner-product identity; the
+latter is a covolume/index comparison yielding a prime-sum remainder bound.
+This is a genuine arithmetic operator ingredient, but the source supplies no
+zero-spectrum correspondence or common-space limit. Next audit whether its
+finite determinant/Hecke-value identity admits a compatible zero-encoding
+limit. Not a no-go for limits and not a novelty claim; see
+`research/CAMPAIGN-97.md`.

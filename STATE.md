@@ -125,7 +125,15 @@ PWPB-03.4 responds to the independently kernel-checked Alpöge–Claude RH
 formalization. It records its exact theorem/axiom checks, distinguishes
 formal proof from operator construction, and pivots the next investigation
 to the classical content of the main inequality and possible spectral
-extraction. No Zetral operator has been derived from it yet.
+extraction. PWPB-03.5 independently inspected the pinned compact Lean source:
+its comparison operator is exactly a positive finite-dimensional map
+`c_j glue_vartheta glue_vartheta*`, and its restriction identity compares
+twisted theta lifts to an untwisted period lift. The main inequality is a
+covolume/index comparison giving a prime-power remainder bound. This is a
+real operator-like arithmetic construction but not an HP operator: no
+zero-spectrum identification or common-Hilbert-space limit is supplied.
+Next test whether the finite determinant product involving this operator
+can encode the zero divisor. See `research/CAMPAIGN-97.md`.
 Mori's
 unconditional test-vector upper bounds, including a Lean formalization of
 an upper estimate, do not supply the lower gap. PWPB-02's candidate-side

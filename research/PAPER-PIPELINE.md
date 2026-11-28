@@ -225,3 +225,10 @@ art review remain prerequisites.
   residual, or pole estimate; the semilocal identification is itself open.
   It is a useful derivation to retain in campaign notes, not standalone
   paper material.
+- **PWPB-03.5 — Comparison operator in the formal RH proof (not Zetral
+  novelty).** The pinned Lean source defines a positive finite-dimensional
+  operator from a theta-lift gluing map and proves its lifted-subspace Gram
+  identity. Its role is arithmetic determinant comparison; no zeta-zero
+  spectral correspondence is stated. This is a source-audit milestone, not
+  standalone paper material. A compatible limiting determinant family would
+  need independent mathematical development and verification.

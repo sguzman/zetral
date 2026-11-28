@@ -37,6 +37,15 @@ analytic theorems and from any RH implication.
   inspect the compact source selectively.
 - **Status:** Activated as PWPB-03.4; investigation has not yet extracted an
   operator or established a new spectral correspondence.
+- **PWPB-03.5 source audit:** The pinned Lean development does contain a
+  finite-dimensional positive comparison operator
+  `U_vartheta = c_j glue_vartheta glue_vartheta*`. Its exact identity
+  compares twisted lifts with an untwisted period lift, and its determinants
+  control Hecke-value ratios. A single such operator cannot be HP; a limit
+  family remains conceivable but lacks common-space embeddings and any zero
+  spectral identification. Next inspect the determinant product
+  `Z_j(vartheta) det(pr U_vartheta)` for an entire zero-encoding identity.
+  Exact source derivation and scope: `research/CAMPAIGN-97.md`.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
