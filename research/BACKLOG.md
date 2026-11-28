@@ -259,6 +259,15 @@ analytic theorems and from any RH implication.
   external review. Next test whether an available low-spectrum lower bound
   is RH-equivalent, then pivot to Suzuki source-chain/multiplicity audit.
   Details: `research/operators/B3-34-residual-estimate-audit.md`.
+- **PWPB-03.39 local spectral mass:** Under RH, Suzuki's finite Weyl measures
+  converge on bounded zero clusters to analytic multiplicity mass. The
+  weighted-measure compactness derivation uses locally uniform Weyl
+  convergence and absence of escape mass. Prior art already gives selected
+  root/weight convergence; this is a measure-level aggregation, no novelty
+  claim. Next seek a quantitative rate only if a source-proved Weyl-tail
+  bound supplies it; otherwise pivot to an arithmetic multiplicity-fiber
+  construction with a non-tautological local form.
+  Details: `research/operators/B3-35-vague-spectral-measure-limit.md`.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

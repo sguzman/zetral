@@ -1146,6 +1146,31 @@ this approximate spectral point from the bottom is equivalent to Weil
 positivity/RH. If so, record the circularity obstruction and pivot to the
 Suzuki operator/multiplicity correspondence audit.
 
+### PWPB-03.39 — Local spectral measures recover multiplicity by cluster mass
+
+For Suzuki's arithmetic-defined canonical-system family under RH, the
+finite-end Weyl functions `q_a` converge locally uniformly to
+`Q_xi=i xi'/xi`, and their spectral measures have atoms
+`J_a(gamma_a,gamma_a)^(-1)` at simple local eigenvalues. Weighting these
+measures by `(1+t^2)^(-1)`, convergence at `z=i` fixes their total mass;
+weak compactness on the one-point compactification and the absence of a
+linear term in the limit Weyl representation rule out mass escaping to
+infinity. Uniqueness of the Poisson representation gives weak convergence
+of the weighted measures, hence vague convergence of the original measures.
+For any bounded interval with zero-free endpoints, its spectral mass tends
+to the sum of analytic zero multiplicities inside. This is a measure-level
+multiplicity correspondence, not geometric eigenspace multiplicity. Suzuki
+already states convergence of selected local roots and their weights to each
+zero and multiplicity; this result repackages and aggregates that source
+theorem rather than claiming novelty. Details:
+`research/operators/B3-35-vague-spectral-measure-limit.md`.
+
+Next: determine whether the same argument yields a quantitative cluster-mass
+rate from any source-proved Hamiltonian/Weyl tail estimate. If not, preserve
+the rate obstruction and return to a multiplicity-sensitive arithmetic
+operator lift; do not identify the prolate-window residual with these
+canonical-system local eigenvalues without a proven intertwiner.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

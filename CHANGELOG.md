@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.39 local spectral mass and zero multiplicity
+
+Derived weak convergence of the weighted finite canonical-system spectral
+measures from Suzuki's local-uniform Weyl limit, total weighted mass at
+`z=i`, and the vanishing linear coefficient. Bounded spectral clusters
+therefore converge to the analytic zero multiplicities as measure mass,
+while finite eigenspaces remain simple. This aggregates source-stated
+root/weight limits and makes no novelty claim. Details:
+`research/operators/B3-35-vague-spectral-measure-limit.md`.
+
 ## 2026-11-27 — PWPB-03.38 direct residual audit
 
 Rechecked the tail jump's fractional Sobolev regularity, both pole scalings,

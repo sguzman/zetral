@@ -263,6 +263,16 @@ internal independent derivation, not outside review; imported ACG/CCM source
 results remain unaudited. Details:
 `research/operators/B3-34-residual-estimate-audit.md`.
 
+PWPB-03.39 formalizes a measure-level multiplicity correspondence for the
+Suzuki arithmetic-defined canonical-system route under RH. The weighted
+finite local spectral measures converge weakly by local uniform Weyl-function
+convergence, total weighted mass at `z=i`, and the zero linear coefficient
+of the limit; bounded clusters then recover analytic multiplicity as
+spectral mass. Finite operators still have simple eigenspaces, so this is
+not geometric multiplicity matching or an independent RH proof. It
+reformulates Suzuki's stated root/weight limits; no novelty claim is made.
+Details: `research/operators/B3-35-vague-spectral-measure-limit.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
