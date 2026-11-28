@@ -1057,6 +1057,21 @@ remain open. No residual or ground-state estimate follows. Exact algebra and
 the domain limits:
 `research/operators/B3-29-radical-moment-correction.md`.
 
+### PWPB-03.34 — Smooth radical approximation in a fixed window
+
+For fixed `lambda` and any `0<s<1/2`, constructed exact-moment even
+`C_c^infinity((-lambda,lambda))` approximants to the B3-33
+piecewise-smooth corrected prolate vector, converging in `H^s`. The finite
+windowed arithmetic map is bounded on this Sobolev space, and `H^s` controls
+the logarithmic Weil-form norm at fixed window. Thus the projected arithmetic
+images of genuine Schwartz-radical vectors converge to the projected
+piecewise-smooth candidate in the fixed-window form topology. This removes
+the Schwartz-regularity gap only for approximation. Projection need not
+preserve the global radical identity; the lower arithmetic tail and
+global-form cross terms remain uncontrolled, and all constants may depend on
+`lambda`. Proof and precise limits:
+`research/operators/B3-30-smooth-radical-approximation.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

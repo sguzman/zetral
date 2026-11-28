@@ -221,6 +221,13 @@ analytic theorems and from any RH implication.
   tail is also uncontrolled. Next test whether a smooth, moment-corrected
   approximation has small Weil-form error, including the boundary and lower
   tail. Do not infer residual control from the global radical identity alone.
+- **PWPB-03.34 smooth approximation:** The fixed-window Schwartz/moment
+  approximation is now proved in `H^s`, `s<1/2`, and its finite arithmetic
+  images converge in the window Weil-form norm. The remaining bridge is
+  global: control the lower arithmetic tail in a global Weil-form topology
+  and justify the radical bilinear identity across the inside/outside split.
+  Constants in the approximation are window-dependent, so no growing-window
+  conclusion is available.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

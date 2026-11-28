@@ -1,5 +1,17 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.34 fixed-window smooth radical approximation
+
+Proved that the two-moment-corrected piecewise-smooth prolate vector is, at
+each fixed window, approximable in `H^s` for every `s<1/2` by even smooth
+compactly supported functions satisfying both moments exactly. The finite
+arithmetic map preserves convergence in that Sobolev topology, which
+dominates the fixed-window logarithmic Weil-form topology. Their global
+arithmetic images lie in the cited radical, but window projection need not
+preserve it; the lower tail and global cross-form transfer remain open. No
+uniform-in-window estimate or residual bound. Details:
+`research/operators/B3-30-smooth-radical-approximation.md`.
+
 ## 2026-11-27 — PWPB-03.33 exact radical-moment correction
 
 Derived a third-prolate-mode correction of the zero-integral candidate that

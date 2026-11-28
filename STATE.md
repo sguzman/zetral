@@ -216,6 +216,15 @@ arithmetic image has an uncontrolled lower tail outside the finite window.
 Details and exact coefficient formulas:
 `research/operators/B3-29-radical-moment-correction.md`.
 
+PWPB-03.34 closes the fixed-window smooth-approximation part: for each fixed
+window and `s<1/2`, the corrected piecewise-smooth prolate function is
+approximable in `H^s` by even compactly supported smooth functions satisfying
+both moments exactly. The finite arithmetic map is bounded on this space,
+and the logarithmic Weil-form norm is weaker, so their window projections
+converge in form norm. This does not transfer the global radical through
+window projection or control the lower arithmetic tail; no residual follows.
+Details: `research/operators/B3-30-smooth-radical-approximation.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the
