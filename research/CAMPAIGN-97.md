@@ -720,6 +720,19 @@ boundary-triple derivation, including the row/column and sign conversion.
 No boundary line is claimed. Detailed audit and exact next step are in
 `research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.10).
 
+### PWPB-03.11 — Green boundary form for the candidate operator
+
+For `T_H=-H^(-1)Jd/da` in `L2_H` on `(a0,infinity)`, `a0>0`, direct
+integration by parts yields the boundary form `[y*Jz]_(a0)^infinity`.
+The left trace is `-conj(y1)z2+conj(y2)z1`; its maximal isotropic lines are
+`cos(theta)y1(a0)+sin(theta)y2(a0)=0`, `theta mod pi`. Since `a0` is regular
+and infinity is limit point, these give the separated self-adjoint endpoint
+family under standard first-order system theory. This computes the operator
+side but does not identify which line has Suzuki's `mu_xi`; matching requires
+the boundary-triple Weyl function and exact source ratio orientation. No
+line selection or novelty claim is made. Full derivation and limits:
+`research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.11).
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

@@ -10,6 +10,16 @@ of the open proof obligation and specified the Green-form/boundary-triple
 derivation needed next. No explicit boundary condition or new operator
 theorem is claimed. Details: `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+## 2026-11-27 — PWPB-03.11 candidate operator Green form
+
+Derived the Green boundary form for `T_H=-H^{-1}Jd/da` on a tail and
+classified its separated self-adjoint left-end lines as
+`cos(theta)y1+sin(theta)y2=0`. The limit-point endpoint at infinity needs no
+additional condition. This determines the operator-side family but not
+which member yields Suzuki's global Weyl measure; the boundary-triple ratio
+identification remains open. No novelty or formalization claim. Details:
+`research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ## 2026-11-27 — HP-02.3–.4 fixed-low pencil bounds
 
 For `L_N=N^2+U` with one fixed uniform offset, period counting and

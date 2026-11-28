@@ -75,8 +75,9 @@ analytic theorems and from any RH implication.
   transform sign and normalization across Suzuki's 2023 and 2026 sources.
   PWPB-03.10 pinned the source's finite-end ratio convention and clarified
   that Proposition 7.2 does not itself identify a line in the chosen
-  differential-operator domain. Next build the Green boundary form and an
-  explicit boundary triple, then derive the line and compare its spectral
+  differential-operator domain. PWPB-03.11 derives the Green form and full
+  separated line family. Next build an explicit boundary triple, derive
+  which line corresponds to the Weyl measure, and compare its spectral
   measure with `mu_xi`; in parallel, investigate multiplicity-sensitive
   channels compatible with the form chain or a precise obstruction for a
   natural class. Full record:

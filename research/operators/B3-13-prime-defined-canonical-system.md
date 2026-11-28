@@ -255,3 +255,39 @@ correction and a precise next proof obligation, not a new operator theorem or
 novelty claim.
 
 Primary source: [Suzuki, arXiv:2611.33001v1, §§4.2–4.3 and Proposition 7.2](https://arxiv.org/html/2611.33001).
+
+## PWPB-03.11 — Green form and separated endpoint family
+
+Fix `a0>0`, take `H=diag(eta^(-1),eta)` as in Theorem 6.2, and use the
+operator expression `T_H y=-H^(-1)J y'` in `L2_H`. At `a0`, both `H` and
+`H^(-1)` are locally essentially bounded by the source's local regularity
+statement for `eta` and `eta^(-1)`, so this is a regular endpoint. For
+locally absolutely continuous maximal-domain vectors `y,z`, direct
+integration by parts gives
+
+    <T_H y,z>_(L2_H) - <y,T_H z>_(L2_H)
+       = [y(x)^* J z(x)]_(a0)^infinity.
+
+Indeed, the two integrands reduce respectively to `y'^*Jz` and
+`-y^*Jz'`, and `(y^*Jz)'=y'^*Jz+y^*Jz'`. With
+`J=[[0,-1],[1,0]]`, the left endpoint form is
+`y(a0)^*Jz(a0)=-conj(y1)z2+conj(y2)z1`. Its one-dimensional maximal
+isotropic subspaces are exactly the real separated lines
+
+    cos(theta) y1(a0) + sin(theta) y2(a0) = 0,  theta mod pi.
+
+Under the standard limit-point hypothesis at infinity, the right endpoint
+contributes no independent boundary condition; these lines give the
+self-adjoint separated realizations. This is the operator-side Green-form
+calculation, using standard first-order system theory. It does **not** yet
+identify which `theta` has Weyl measure `mu_xi`: that still requires matching
+the boundary triple's Weyl function to Suzuki's projective convention,
+including the transpose and ratio orientation. No formalization or
+independent source-theorem audit is claimed.
+
+**Classification.** Direct operator calculation completed; boundary-line
+selection for `Q_xi` remains open. This is a standard structural lemma, not
+a novelty claim.
+
+Primary source for local regularity, `det H=1`, and limit-point facts:
+[Suzuki, arXiv:2611.33001v1, Theorem 6.2 and Proposition 7.2](https://arxiv.org/html/2611.33001).

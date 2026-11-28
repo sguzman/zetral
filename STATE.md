@@ -33,7 +33,9 @@ papers. PWPB-03.10 pinned Suzuki's finite-end fractional-transform convention:
 Proposition 7.2 takes the zero-parameter quotient on the truncated tail and
 limits to its Weyl function. This is not itself a separated left-end line
 for the chosen differential-operator domain; a Green-form/boundary-triple
-translation remains open. The bounded audit is recorded in
+translation remains open. PWPB-03.11 derives the Green form and the full
+one-parameter family of separated self-adjoint endpoint lines; selection of
+the line corresponding to `mu_xi` remains open. The bounded audit is recorded in
 `research/operators/B3-13-prime-defined-canonical-system.md` and
 `research/CAMPAIGN-97.md`.
 
