@@ -531,13 +531,14 @@ normalized dilation as a unitary group. It is conditional on the existence of
 a multiple zero; RH alone does not establish one. If all zeros are simple,
 the scalar MHS-03.2 fibers already have the correct eigenspace dimensions.
 Alternative Hilbert spaces, non-jet fibers, or a changed group action remain
-open. Meyer explicitly treats the Fréchet generator as having algebraic
-multiplicity equal to zero order, so this obstruction explains why that
-non-semisimple representation cannot in general be carried unchanged into a
-self-adjoint model. This is a hand derivation from the source action and
+open. Meyer identifies the transpose's generalized eigenspace using
+derivative-evaluation functionals and states that its dimension is the zero
+order (Corollary 4.2). The jet calculation here shows why that generalized
+eigenspace structure cannot be carried unchanged into a unitary Hilbert
+representation. This is a hand derivation from the source action and
 finite-dimensional operator theory; it is not a novelty claim or a formal
 proof. Prior-art anchor: Meyer, arXiv:math/0412277v3, introduction and
-§§2–4.
+Corollary 4.2.
 
 **Next question.** Can multiplicity be represented by a different fiber
 action that is unitary and still intertwines a prime-side or theta-lift
