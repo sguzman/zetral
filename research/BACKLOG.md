@@ -198,6 +198,13 @@ analytic theorems and from any RH implication.
   normalization for the determinant remains an extra requirement. Full
   derivation and a degenerating-gap countermodel are in
   `research/CAMPAIGN-97.md`.
+- **PWPB-03.30 candidate domain:** The prolate candidate `k_lambda` lies in
+  `Dom(A_lambda)` for every fixed window: it is piecewise smooth with finitely
+  many cutoff jumps, so its Fourier transform decays like `1/|t|`, enough for
+  the logarithmic archimedean multiplier; finite prime and pole terms are
+  bounded. The residual is merely finite, with no uniform decay. Next compute
+  or bound `||(A_lambda-m_lambda)k_lambda||` and an independent ground gap.
+  Derivation: `research/operators/B3-26-prolate-candidate-operator-domain.md`.
 - **PWPB-02 candidate-side progress:** Using Connes's stated uniform
   `O(lambda^-2)` prolate-to-Hermite approximation, split the divisor sum at
   `nu=lambda` and explicitly bound the omitted Gaussian tail. This gives

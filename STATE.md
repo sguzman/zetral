@@ -184,6 +184,15 @@ This excludes only a general norm-based normalization argument, not the
 actual minimizer sequence. Details:
 `research/operators/B3-25-boundary-trace-not-form-continuous.md`.
 
+PWPB-03.30 verifies a necessary domain condition for the full-space leg:
+for every fixed window, `k_lambda=E(h_lambda)` is piecewise smooth with
+finitely many jumps, so its Fourier transform decays as `O_lambda(1/|t|)`.
+This is enough for the logarithmic archimedean multiplier to lie in L2; the
+fixed-window prime and pole contributions are bounded perturbations. Hence
+`k_lambda in Dom(A_lambda)`. No asymptotic residual or ground-gap bound is
+obtained, so eigenvector convergence remains open. Details:
+`research/operators/B3-26-prolate-candidate-operator-domain.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

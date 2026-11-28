@@ -1003,6 +1003,18 @@ special sequence of minimizing vectors; a sequence-specific trace estimate
 could still hold. Details and proof:
 `research/operators/B3-25-boundary-trace-not-form-continuous.md`.
 
+### PWPB-03.30 — Candidate domain membership, residual still open
+
+For each fixed window, `k_lambda=E(h_lambda)` is piecewise smooth with
+finitely many cutoff jumps. Its zero extension has Fourier decay `O_lambda`
+`(1+|t|)^(-1)`, so the logarithmic archimedean multiplier sends it to L2.
+The finitely many prime and pole terms are bounded for that fixed window;
+therefore `k_lambda` lies in `Dom(A_lambda)`. This settles a domain
+prerequisite for the residual criterion only. No estimate tending to zero
+for `||(A_lambda-m_lambda)k_lambda||`, and no ground-state gap bound, follows.
+Detailed argument and limits:
+`research/operators/B3-26-prolate-candidate-operator-domain.md`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and

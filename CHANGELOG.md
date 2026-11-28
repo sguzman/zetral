@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.30 prolate candidate domain
+
+Verified that the prolate-derived vector belongs to the restricted Weil
+operator domain at each fixed window: finite cutoff jumps give `1/|t|`
+Fourier decay, sufficient for the logarithmic archimedean multiplier, while
+the fixed-window prime and pole terms are bounded. The asymptotic residual
+and spectral gap remain open. Details:
+`research/operators/B3-26-prolate-candidate-operator-domain.md`.
+
 ## 2026-11-27 — PWPB-03.29 form-norm boundary obstruction
 
 Strengthened the fixed-window endpoint-normalization limitation: the
