@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.45 global Weyl normalization audit
+
+Checked the prime triangular test, screw-function Fourier transform signs,
+and projective transfer from a finite initial segment to the half-line tail.
+The chain identifies the unique global Weyl function with `Q_xi` under RH;
+no extra affine Nevanlinna term or normalization mismatch was found. The
+transform and canonical-system limit theorems remain imported. Details:
+`research/operators/B3-41-global-weyl-extension-audit.md`.
+
 ## 2026-11-28 — PWPB-03.44 canonical-system completeness audit
 
 Checked Suzuki's reported Hamiltonian definiteness, half-line limit-point

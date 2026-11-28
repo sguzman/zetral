@@ -327,6 +327,16 @@ analytic Weyl identification and the general spectral-transform theorem
 remain imported. Audit:
 `research/operators/B3-40-canonical-system-completeness-audit.md`.
 
+PWPB-03.45 audited the normalization chain from the prime-defined
+triangular test to the global canonical-system Weyl function. Both Suzuki
+papers give `g=-Psi=-W(Delta_t)` with the same half-width; the 2023 transform
+then gives `integral g(t)e^(izt)dt=-i Q_xi(z)/z^2`. The 2026 transfer rule
+inverts via `U(a)^(-1) dot Q_xi`, and its finite-tail quotient converges to
+that parameter in the limit-point case. Paired Hadamard terms and the
+source growth condition exclude extra Nevanlinna affine terms. No mismatch
+was found; source transform/canonical-system theorems remain imported.
+Details: `research/operators/B3-41-global-weyl-extension-audit.md`.
+
 Campaign XCIV/HP-02 closed within its fixed-low audit scope; no arithmetic
 spectral transfer was proved. Campaign XCV/HP-03 is now closed within the
 tested theta-pencil classes. HP-03.1–.2 rule out formal pair symmetry on the

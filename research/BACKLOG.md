@@ -163,6 +163,36 @@ analytic theorems and from any RH implication.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 
+**PWPB-03.45 follow-up — independent explicit-transform derivation:** The
+source-to-source audit matched the prime-side triangular form to the global
+Weyl function, but Suzuki's 2023 transform theorem remains imported. Derive
+it directly from the explicit formula and prove the necessary convergence,
+so the operator link from primes to `Q_xi` has an independent analytic check.
+
+- **Hypothesis:** For `Im z>1/2`, integrating Suzuki's explicit
+  prime/archimedean formula for `Psi(t)` against `e^(izt)` yields
+  `-xi'(1/2-iz)/(z^2 xi(1/2-iz))` with all terms and constants accounted for.
+- **Prerequisites:** arXiv:2206.03682v4 equations (1.1),(1.2) and proof
+  in §2; arXiv:2611.33001v1 §5.2, Proposition 5.3; standard gamma,
+  Hurwitz–Lerch and Dirichlet-series identities.
+- **Information gain:** Independent verification of the last prime-side
+  analytic identity feeding the arithmetic Hilbert–Pólya Weyl function, or
+  a precise convergence/normalization gap.
+- **Design / falsification:** Transform prime terms term-by-term only after
+  absolute convergence; transform the archimedean gamma/Franel terms
+  independently; compare every pole term and constant with the completed
+  xi logarithmic derivative. Check the boundary `Im z=1/2` is not claimed,
+  and use numerical spot checks only as diagnostics, not proof.
+- **Dependencies:** Primary versions above, exact transform convention,
+  accepted B3-40/41 notes.
+- **Acceptance:** A complete derivation on the stated half-plane with
+  justified sum/integral exchanges and all constants, or an explicit
+  missing hypothesis/correction.
+- **Verification:** Re-derive independently from the prime formula;
+  check asymptotic bounds on each integral and compare against the source
+  formula symbolically. No local heavy computation, RH inference, or
+  novelty claim.
+
 **PWPB-03.44 follow-up — global Weyl identification audit:** Suzuki's
 arithmetic canonical system has a complete scalar spectral representation
 once its Weyl function is `Q_xi`, but the global extension-parameter/Weyl

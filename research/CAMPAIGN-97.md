@@ -1268,6 +1268,26 @@ Next: independently audit the analytic extension-parameter and Weyl-limit
 step in Suzuki Proposition 7.2. Pin the global screw function to the
 prime-defined local forms and track all boundary/transfer conventions.
 
+### PWPB-03.45 — Prime-side screw function and global Weyl normalization
+
+The source-to-source equation audit confirms that the triangular profile
+`Delta_t` is exactly the correlation of both papers' half-width rectangular
+test. The prime functional gives `W(Delta_t)=Psi(t)`, hence the global
+function is `g=-Psi`; Suzuki's transform formula gives
+`integral g(t)e^(izt)dt=-i Q_xi(z)/z^2` for `Im z>1/2`. In the 2026
+canonical system, concatenation gives `q=U(a) dot Omega_a`; determinant one
+inverts this to `Omega_a=U(a)^(-1) dot Q_xi`, and finite-tail quotients
+converge to `Omega_a` by limit-point theory. Symmetric Hadamard pairing and
+the growth condition leave no unrecorded real or linear Nevanlinna term.
+No normalization mismatch was found. This is a source-chain and algebra
+audit, not an independent proof of the explicit transform or the source's
+canonical-system theorems. Full note:
+`research/operators/B3-41-global-weyl-extension-audit.md`.
+
+Next: derive Suzuki 2023 Theorem 1.1's transform directly from its explicit
+prime and archimedean formula, including convergence/interchange details,
+to independently audit the final analytic link from primes to `Q_xi`.
+
 1. Pin and normalize the exact definition of `QW_lambda`, `A_lambda`,
    `theta_x`, `QW_lambda^N`, `xi_{lambda,N}`, `k_lambda`, and the Mellin
    transform in Connes §§6–7 and CCM Theorem 1.1. Check source version and
