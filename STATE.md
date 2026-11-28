@@ -132,8 +132,16 @@ twisted theta lifts to an untwisted period lift. The main inequality is a
 covolume/index comparison giving a prime-power remainder bound. This is a
 real operator-like arithmetic construction but not an HP operator: no
 zero-spectrum identification or common-Hilbert-space limit is supplied.
-Next test whether the finite determinant product involving this operator
-can encode the zero divisor. See `research/CAMPAIGN-97.md`.
+The finite determinant product involving this operator was then audited.
+PWPB-03.6 falsifies the direct zero-encoding proposal:
+the source's exact identity `Z_j(vartheta) Delta_vartheta = C rho_vartheta^d`
+proves the compression determinant `Delta_vartheta` is nonzero for every
+admissible twist, with Hecke values only at integer parameters and no
+complex spectral parameter. This is a scoped negative finding; analytic
+continuations or renormalized limits are not ruled out. Next seek an
+independent common-space trace/transfer operator from the arithmetic
+construction or a different HP framework. Details in
+`research/CAMPAIGN-97.md`.
 Mori's
 unconditional test-vector upper bounds, including a Lean formalization of
 an upper estimate, do not supply the lower gap. PWPB-02's candidate-side

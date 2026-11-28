@@ -232,3 +232,8 @@ art review remain prerequisites.
   spectral correspondence is stated. This is a source-audit milestone, not
   standalone paper material. A compatible limiting determinant family would
   need independent mathematical development and verification.
+- **PWPB-03.6 — Determinant route falsification.** The exact source identity
+  forces its comparison-compression determinant to be nonzero on every
+  admissible twist. This is useful negative evidence against interpreting
+  that finite determinant directly as Xi, not a result about all limits or
+  a paper claim.

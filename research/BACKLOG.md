@@ -35,17 +35,25 @@ analytic theorems and from any RH implication.
   RH theorem from an operator construction. No Zetral rerun of the massive
   Lean verification is planned; rely on the external independent audit and
   inspect the compact source selectively.
-- **Status:** Activated as PWPB-03.4; investigation has not yet extracted an
-  operator or established a new spectral correspondence.
+- **Status:** Activated as PWPB-03.4. PWPB-03.5 extracted the proof's
+  finite-dimensional comparison operator; PWPB-03.6 ruled out its direct
+  compression determinant as a zeta-zero spectral determinant. No HP
+  operator or new zero-spectrum correspondence has been established.
 - **PWPB-03.5 source audit:** The pinned Lean development does contain a
   finite-dimensional positive comparison operator
   `U_vartheta = c_j glue_vartheta glue_vartheta*`. Its exact identity
   compares twisted lifts with an untwisted period lift, and its determinants
   control Hecke-value ratios. A single such operator cannot be HP; a limit
   family remains conceivable but lacks common-space embeddings and any zero
-  spectral identification. Next inspect the determinant product
-  `Z_j(vartheta) det(pr U_vartheta)` for an entire zero-encoding identity.
-  Exact source derivation and scope: `research/CAMPAIGN-97.md`.
+  spectral identification.
+- **PWPB-03.6 determinant falsification:** Its exact identity is
+  `Z_j(vartheta) Delta_vartheta = C rho_vartheta^d`, and the formal proof
+  explicitly shows `Delta_vartheta != 0` for every admissible twist. The
+  Hecke factors are evaluated at integer parameters; no complex spectral
+  parameter or entire continuation is defined. This rules out the direct
+  compression determinant as Xi, while leaving renormalized limits open.
+  Next seek a separate common-space trace/transfer operator. Full exact
+  statement, derivation, and qualification: `research/CAMPAIGN-97.md`.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)
 

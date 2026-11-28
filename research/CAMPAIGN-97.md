@@ -554,15 +554,57 @@ rules out only the literal individual comparison operator as an HP operator;
 it does not rule out a limit or another construction from the theta-lift
 data.
 
-**Next experiment.** Audit the exact identity for
-`Z_j(vartheta) det(pr U_vartheta)` and determine whether its Hecke-value twist
-factor can be upgraded from a finite determinant ratio to a locally uniform
-entire function whose zeros are the zeta zeros. First record the parameters,
-finite-dimensional spaces and determinant normalization across `j` and
-`D`; test two-scale compatibility. Acceptance requires a compatible
-common-space family and an actual spectral/determinant identity, or a proof
-that this specific determinant family has the wrong zero set. This is a
-candidate audit, not a no-go for all theta-lift operators or a novelty claim.
+The planned direct determinant test is completed in PWPB-03.6 below; it
+falsifies the proposed zero encoding on the admissible twist set.
+
+### PWPB-03.6 — Falsify direct zero encoding by the comparison determinant
+
+The pinned `LiftVolumeHeight.lean` states and proves
+
+    Z_j(vartheta) * Delta_vartheta = C * rho_vartheta^d,
+
+where `Z_j(vartheta)` is the Gram determinant of the twisted lift,
+`Delta_vartheta = det(liftCompression (comparisonOp j) vartheta)`,
+`rho_vartheta = heckeValueProd(j,vartheta)/heckeValueProd(j,1)`,
+`d = finrank(goodForms)`, and `C != 0` is twist-independent. The source
+proves `rho_vartheta != 0`, then explicitly derives
+`Delta_vartheta != 0` for every admissible twist. Its header identifies the
+Hecke product as three factors of partial Hecke L-values at integer
+parameters. The variable is an automorphic twist; this identity supplies no
+complex spectral parameter and no entire interpolation.
+
+Independent algebra check: on lifted vectors, `B_vartheta* Theta_vartheta`
+is `twistFactor(j,vartheta)^(-1)` times `periodLift(j)`. Therefore
+`Theta_vartheta* U_vartheta Theta_vartheta` is the ratio
+`rho_vartheta` times a fixed positive definite form `U_0`. The finite
+dimensional compression identity
+`det(Theta)^2 det(P_range U|_range)=det(Theta* U Theta)` gives the displayed
+formula with `C=det(U_0) != 0`. Since `Theta` is injective, its Gram
+determinant is nonzero; since `rho_vartheta != 0`, the compression determinant
+is nonzero as well. This independently reproduces the algebraic reason for
+`hDelta_ne` rather than treating the Lean determinant conclusion as a black
+box.
+
+Thus the direct proposal that `Delta_vartheta` itself is a spectral
+determinant with zeta zeros is falsified on the admissible twist set: it is
+proved nonzero there. The identity instead converts between a lift Gram
+determinant, a compression determinant and Hecke-value ratios. A continuation
+outside the admissible family could in principle have zeros, but no such
+family, topology, normalization, continuation, or relation to Xi is in this
+source. This is a precise negative finding for the direct construction, not
+a no-go for a renormalized limit or other operator built from the lifts.
+
+**Next direction.** Pivot from using this determinant as Xi to testing
+whether the prime-sum endgame or the theta-lift family admits a common
+Hilbert-space realization through a separate trace/transfer operator. First
+pin the exact arithmetic parameter scales and identify a candidate family
+whose resolvent or trace has a complex spectral variable. Acceptance needs a
+proved explicit-formula/trace identity linking that variable to zeta zeros;
+if no canonical common space or trace appears, preserve that obstruction and
+move to an independent HP route. Source anchor:
+`LiftVolumeHeight.lean`, theorem
+`IsComparisonOperator.exists_normDet_sq_mul_det_eq` and its use in
+`heightLe_liftDeterminant_ratio` at the pinned compact revision above.
 
 ### Falsification check
 

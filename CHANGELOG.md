@@ -1069,3 +1069,15 @@ zero-spectrum correspondence or common-space limit. Next audit whether its
 finite determinant/Hecke-value identity admits a compatible zero-encoding
 limit. Not a no-go for limits and not a novelty claim; see
 `research/CAMPAIGN-97.md`.
+
+## XCVII PWPB-03.6 — Direct determinant route falsified (2026-11-27)
+
+The pinned source proves the exact relation
+`Z_j(vartheta) det(pr U_vartheta) = C rho_vartheta^d`, with nonzero constant
+and nonzero Hecke ratio; it consequently proves the comparison compression
+determinant is nonzero for every admissible twist. The factors are partial
+Hecke L-values at integer parameters, and there is no complex spectral
+parameter or Xi continuation in the construction. This rejects the direct
+claim that this determinant is a zeta-zero spectral determinant. It does not
+rule out a renormalized limit or a different operator. Next seek a common-space
+trace/transfer construction. See `research/CAMPAIGN-97.md`.
