@@ -29,8 +29,11 @@ formal RH result discharges that premise at theorem level. Matching analytic
 multiplicity as eigenspace dimension and independently auditing the source
 operator chain remain open. PWPB-03.9 checked the imported global
 screw/Weyl transform sign and normalization across Suzuki's 2023 and 2026
-papers. The explicit left boundary line remains to derive. The bounded audit
-is recorded in
+papers. PWPB-03.10 pinned Suzuki's finite-end fractional-transform convention:
+Proposition 7.2 takes the zero-parameter quotient on the truncated tail and
+limits to its Weyl function. This is not itself a separated left-end line
+for the chosen differential-operator domain; a Green-form/boundary-triple
+translation remains open. The bounded audit is recorded in
 `research/operators/B3-13-prime-defined-canonical-system.md` and
 `research/CAMPAIGN-97.md`.
 

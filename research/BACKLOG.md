@@ -73,9 +73,13 @@ analytic theorems and from any RH implication.
   support at theorem level. PWPB-03.8 pins the arithmetic input and standard
   operator realization. PWPB-03.9 checked the imported global screw/Weyl
   transform sign and normalization across Suzuki's 2023 and 2026 sources.
-  Next derive the explicit left boundary line and investigate
-  multiplicity-sensitive channels compatible with the form chain, or a
-  precise obstruction for a natural class. Full record:
+  PWPB-03.10 pinned the source's finite-end ratio convention and clarified
+  that Proposition 7.2 does not itself identify a line in the chosen
+  differential-operator domain. Next build the Green boundary form and an
+  explicit boundary triple, then derive the line and compare its spectral
+  measure with `mu_xi`; in parallel, investigate multiplicity-sensitive
+  channels compatible with the form chain or a precise obstruction for a
+  natural class. Full record:
   `research/operators/B3-13-prime-defined-canonical-system.md`.
 
 ### XCVII / PWPB — Prolate-to-Weil eigenvector bridge (active; highest HP priority)

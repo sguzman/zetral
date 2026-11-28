@@ -1,5 +1,15 @@
 # Research history
 
+## 2026-11-27 — PWPB-03.10 canonical-system endpoint convention
+
+Re-read Suzuki arXiv:2611.33001v1 §§4.2–4.3 and Proposition 7.2. Recorded
+that the source's `Omega=0` transfer quotient converges to the tail Weyl
+function but is not, without a boundary-triple conversion, an explicit left
+boundary line for Zetral's chosen operator convention. Corrected the scope
+of the open proof obligation and specified the Green-form/boundary-triple
+derivation needed next. No explicit boundary condition or new operator
+theorem is claimed. Details: `research/operators/B3-13-prime-defined-canonical-system.md`.
+
 ## 2026-11-27 — HP-02.3–.4 fixed-low pencil bounds
 
 For `L_N=N^2+U` with one fixed uniform offset, period counting and

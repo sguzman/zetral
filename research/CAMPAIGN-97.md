@@ -705,6 +705,21 @@ Next derive the explicit left-boundary line for the canonical operator and
 investigate multiplicity-sensitive arithmetic channels. Details in
 `research/operators/B3-13-prime-defined-canonical-system.md`.
 
+### PWPB-03.10 — Exact endpoint scope of the Weyl-limit formula
+
+Re-read Suzuki arXiv:2611.33001v1 §§4.2–4.3 and Proposition 7.2. The source
+defines `U·Omega=(U11 Omega+U12)/(U21 Omega+U22)`; `Omega=0` gives `U12/U22`
+and `Omega=infinity` gives `U11/U21`. Proposition 7.2 takes the `Omega=0`
+quotient of the transfer matrix `U_a^{-1}U_b` and lets `b` tend to infinity,
+obtaining the Weyl function of the tail normalized at `a`. This is an exact
+source-convention result. It does not itself translate that tail quotient to
+a separated left-end boundary line for `T_H=-H^{-1}Jd/da`; the `Omega` there
+is the remaining-tail Weyl function, not a constant left-boundary angle.
+Thus the boundary-line task requires an explicit Green boundary form and
+boundary-triple derivation, including the row/column and sign conversion.
+No boundary line is claimed. Detailed audit and exact next step are in
+`research/operators/B3-13-prime-defined-canonical-system.md` (PWPB-03.10).
+
 ### Falsification check
 
 Small Rayleigh energy error does not imply eigenvector convergence without a

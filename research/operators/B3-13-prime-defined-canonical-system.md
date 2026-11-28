@@ -211,3 +211,47 @@ Primary source: [Suzuki, arXiv:2611.33001v1](https://arxiv.org/html/2611.33001).
 Formal RH verification scope is summarized in `STATE.md`; no novelty or
 human-review claim is made here. Screw-function source:
 [Suzuki, arXiv:2206.03682v4](https://arxiv.org/html/2206.03682).
+
+## PWPB-03.10 — What Proposition 7.2 does and does not specify about endpoints
+
+**Question.** Does Suzuki's explicit Weyl-limit formula directly give the
+separated left-end boundary line for the differential operator
+`T_H=-H^{-1}J d/da` in the convention recorded above?
+
+**Source check.** Re-read §§4.2–4.3 and Proposition 7.2 of
+arXiv:2611.33001v1. The source defines its canonical system by
+`JY'=-zHY`, with fundamental matrix satisfying `U'J=zUH`, and defines the
+fractional action
+`U·Omega=(U11 Omega+U12)/(U21 Omega+U22)`. For a finite right endpoint,
+`Omega=0` therefore gives `U12/U22`; `Omega=infinity` gives `U11/U21`.
+Proposition 7.2 applies exactly the former convention to the transfer matrix
+`U_a^{-1}U_b`, then sends `b` to infinity. Its limit is the Weyl function of
+the tail system normalized to identity at `a`.
+
+**Finding / correction to the open question.** This pins the source's
+right-end approximant convention and the normalized tail Weyl function. It
+does not itself state a boundary trace map for the operator domain
+`T_H=-H^{-1}J y'`, nor translate the quotient convention into a concrete
+line in the `y(a0)` coordinates of that operator. In particular, the
+parameter `Omega` in Proposition 7.2 is the Weyl function of the remaining
+tail, not a constant separated left-boundary angle. The previous shorthand
+that the source's Weyl normalization alone “determines” the left line should
+be read as requiring an additional boundary-triple / operator-convention
+identification; that step is not in the quoted proposition. No explicit line
+is claimed here.
+
+**Falsification / next step.** A sign or coordinate swap in passing from
+the source's row-fundamental-matrix convention to the column operator can
+exchange the two endpoint lines. The next defensible step is to construct the
+Green boundary form for this exact `T_H`, state a boundary triple, and derive
+its Weyl function from the canonical-system transfer formula. Then compare
+that triple's spectral measure with the source's `mu_xi`. Until this is done,
+the source-level Weyl/spectral-measure correspondence is established, but an
+explicit operator-domain boundary line in Zetral's chosen convention is not.
+
+**Classification.** Source formula and endpoint-ratio algebra checked;
+operator boundary-line translation remains unresolved. This is a scope
+correction and a precise next proof obligation, not a new operator theorem or
+novelty claim.
+
+Primary source: [Suzuki, arXiv:2611.33001v1, §§4.2–4.3 and Proposition 7.2](https://arxiv.org/html/2611.33001).
