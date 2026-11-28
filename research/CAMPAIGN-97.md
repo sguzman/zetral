@@ -1433,3 +1433,19 @@ the source version and use of the semilocal trace formula; preserve a compact
 failure certificate if an implication is false. No Lean theorem, external
 expert review, or independent reproduction of source numerics is claimed at
 campaign opening.
+
+## XCVII PWPB-03.52 — Exact scale law for one prime shift (2026-11-28)
+
+For the `m`-th geometric mode of one local prime factor, exact support-
+projection conjugation shows that the shifted archimedean Hankel block is
+unitarily equivalent to the unshifted prolate block at scale
+`T=t p^(m/2)`. The coefficient scales its singular values by
+`(1-p^(-1))p^(-m/2)`, giving about `4t^2p^m` Slepian modes, consistent with
+the source's isolated-block heuristic. This is a direct derivation, not a
+new spectral correspondence. It does not control singular-vector mixing in
+the sum over shifts, nor does ordinary Fourier concentration imply the
+Mellin-band estimate required by H2′ for radialized profiles. The next
+question is to prove or falsify a uniform Mellin-band bound across the moving
+scale and then quantify stability under finite-prime summation. Details and
+transform conventions are in
+`research/operators/B3-51-single-prime-shift-prolate-scale.md`.

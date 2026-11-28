@@ -428,6 +428,18 @@ Details: `research/operators/B3-50-total-log-shift-tail-bound.md`.
 The ACG H2′ localization investigation (PWPB-03.48) remains open and
 resumable; its real-modulation necessary criterion is in B3-44.
 
+Single-prime scale identity (2026-11-28): B3-51 proves by exact support-
+projection conjugation that the `m`-th geometric shift block at prime `p` is
+unitarily equivalent to the archimedean prolate block at scale
+`T=t p^(m/2)`, with singular values multiplied by
+`(1-p^(-1))p^(-m/2)`. Its Slepian mode count is therefore about `4t^2p^m`,
+matching the source's isolated-block scale heuristic. The unitary equivalence
+does not identify singular vectors of the sum of blocks. Ordinary Fourier
+Slepian leakage is not the required Mellin-band leakage of radialized
+profiles. Next derive a uniform Mellin-band estimate for these profiles and
+test stability under the finite-prime sum. No H2′ estimate or RH conclusion.
+Details: `research/operators/B3-51-single-prime-shift-prolate-scale.md`.
+
 PWPB-03.48 first lemma: applying H2′ to the real tests
 `f(u)cos(T log u)` and `f(u)sin(T log u)` yields an exact necessary
 symmetric moving-average inequality for the semilocal tail Mellin density.

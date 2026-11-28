@@ -1,5 +1,14 @@
 # Research history
 
+## 2026-11-28 — PWPB-03.52 single-prime scale law
+
+Added B3-51, an exact unitary-scaling identity for each isolated prime-shift
+block, identifying its effective prolate scale and singular-value weight.
+Updated the H2′ backlog and Campaign XCVII state. No Mellin-band leakage
+estimate, finite-product stability, Hilbert–Pólya spectral correspondence,
+or RH result follows yet. Verification was direct algebraic conjugation; no
+numerical or formal check.
+
 ## 2026-11-28 — PWPB-03.48 total log-shift truncation
 
 Derived an exact exponential moment for the absolute Fourier coefficients of
